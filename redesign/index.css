@@ -1,0 +1,104 @@
+.gameButton {
+    border: 3px solid #f75dfc;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.text-fade {
+    font-family: 'Rubik', sans-serif;
+    font-size: 33px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#sections section{
+    padding-top: 15%;
+}
+
+
+#scientists p{
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 50px;
+}
+
+#scientists div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#scientists div div {
+    display: inline-block;
+    height: 100%;
+    width: 25%;
+    margin-right: 5%;
+}
+
+#scientists div div p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 33px;
+}
+#scientists div div p2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+}
+
+#follow p{
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 50px;
+}
+
+#follow div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#follow div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    margin-right: 5%;
+}
+
+#viewer p{
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 50px;
+}
+
+#scrollb {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: 3px solid #f75dfc;
+    outline: none;
+    background-color: transparent;
+    color: #f75dfc;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}

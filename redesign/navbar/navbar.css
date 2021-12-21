@@ -16,36 +16,45 @@
 
 .nav-button{
     float: left;
-    background-color:aqua;
-    padding-right: 2%;
+    padding-right: 3%;
     height: 100%;
+    display: inline-flex;
+    align-items: center; 
+    
 }
 
 .nav-button a{
-    line-height: 375%;
-    display: inline-block;
     text-decoration: none;
-    height: 100%;
     color: black;
     font-family: 'Rubik', sans-serif;
     font-size: 17px;
+    line-height: 40px;
+    letter-spacing: .1rem;
+}
+
+.selected a {
+    border-bottom: 2px solid #000;
 }
 
 #leftbar{
     display: flex; 
     justify-content: left;
-    background-color: bisque;
     width: 100%;
     height: 100%;
     padding-left: 2%;
 }
 #middlebar{
-    background-color: rebeccapurple;
     display: flex; 
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    
+}
+
+#middlebar p{
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 30px;
 }
 
 #rightbar{
@@ -53,8 +62,12 @@
     justify-content: right;
     align-items: center;
     text-align: right;
-    background-color: saddlebrown;
     width: 100%;
     height: 100%;
     padding-right: 2%;
+}
+
+#rightbar p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
 }
