@@ -1,4 +1,9 @@
 <html>
+
+    <head>
+        <title>Totally Science</title>
+    </head>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
@@ -6,10 +11,11 @@
         #navbar{
             position: fixed;
             width: 100%;
-            height: 8%;
+            height: 10%;
             top: 0;
             left: 0;
             background-color: white;
+            z-index: 1;
         }
 
         #pageselection{
@@ -86,6 +92,36 @@
             font-size: 17px;
         }
 
+        .gameButton {
+  				border: 3px solid #f75dfc;
+  				color: white;
+  				padding: 15px 32px;
+ 				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 48px;
+  				margin: 4px 2px;
+  				cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.7);
+            	border-radius: 8px;
+                z-index: 0;
+                
+
+			}
+        .hidden {
+            opacity: 0;
+        }
+        .text-fade {
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+
+        p {
+            color: black;
+            font-family: 'Rubik', sans-serif;
+            font-size: 30px;
+        }
+
     </style>
     <body>
         <div id="navbar">
@@ -108,15 +144,20 @@
         <div align="center">
             <div style="border: 3px solid #f75dfc; width: 95%; height: 90%; display: flex; align-items: center;
             justify-content: center;">
-                <p>
-                    Featured Games
-                </p>
+                <img style="z-index: -2; opacity: 0.7;" height="100%" src="https://i2.wp.com/sequentialplanet.com/wp-content/uploads/2020/02/87271370_474378070111481_7709515490875408384_n.png?fit=2048%2C970&ssl=1">
+                <button class="gameButton" style="position: absolute;"><a style="text-decoration: none; color: #f75dfc;" href="#about">Retro Bowl</a></button>
+                
             </div>
         </div>
         <div align="center" style="padding-top: 5%; font-size: 40px;">
-            <p>Totally Science is the best place for "learning science!"</p>
-            <p>To go to Google Classroom, press the tilda!</p>
+            <section>
+                <p class="hidden" id="first-heading">Totally Science is the best place for "learning science!"
+                    To go to Google Classroom, press the tilda!
+                </p>
+            </section>
+            <br><br><br><br>
+            
         </div>
     </body>
-    
+    <script src="index.js"></script>
 </html>
