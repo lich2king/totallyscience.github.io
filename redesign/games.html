@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Totally Science</title>
@@ -111,8 +110,8 @@
                 transition: all 0.2s ease;
             }
             
-            #unsortedGames{
-                visibility: show;
+            .hideUnsorted{
+                visibility: hidden;
             }
 
         </style>
@@ -166,12 +165,12 @@
             </div>
         </section>
         <div align="center">
-            <button name="all" onclick="switchGame('all');" class="selectedbutton selectable">All Games</button>
-            <button name="new" onclick="switchGame('new');" class="selectbutton selectable">New Games</button>
-            <button name="2" onclick="switchGame('2');" class="selectbutton selectable">2 Player</button>
-            <button name="car" onclick="switchGame('car');" class="selectbutton selectable">Car Games</button>
-            <button name="card" onclick="switchGame('card');" class="selectbutton selectable">Card Games</button>
-            <button name="sport" onclick="switchGame('sport');" class="selectbutton selectable">Sport Games</button>
+            <button name="all" onclick="" class="selectedbutton selectable">All Games</button>
+            <button name="new" onclick="" class="selectbutton selectable">New Games</button>
+            <button name="2" onclick="" class="selectbutton selectable">2 Player</button>
+            <button name="car" onclick="" class="selectbutton selectable">Car Games</button>
+            <button name="card" onclick="" class="selectbutton selectable">Card Games</button>
+            <button name="sport" onclick="" class="selectbutton selectable">Sport Games</button>
         </div>
         <div class="search-bar" style="margin-top: 25px" align="center">
             <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search">
@@ -207,6 +206,7 @@
                     </div>
                 </button>
             </div>
+
             <div align="center" id="sortedGames">
 
             </div>
@@ -238,7 +238,8 @@
                 insideDiv.appendChild(insideP)
                 insideDiv.appendChild(insideP2)
             });
-            
+            var unsortedGames = document.getElementById("unsortedGames")
+            unsortedGames.parentNode.removeChild(unsortedGames);
 
         </script>
     </body>
