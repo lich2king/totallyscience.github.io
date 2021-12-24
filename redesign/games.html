@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Totally Science</title>
+        <link rel="stylesheet" href="navbar/navbar.css">
+        <link rel="icon" href="http://zachattack.oyosite.com/totallyscience/ef953f87fe2b81cdf8433c1d5b8e0626.png">
+
+        <style>
+            .selectedButton {
+  				border: none;
+  				color: white;
+  				padding: 8px 15px;
+ 				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 24px;
+  				margin: 4px 2px;
+  				cursor: pointer;
+                background-color: #f75dfc;
+            	border-radius: 8px;
+			}
+            
+            .selectButton {
+  				border: none;
+  				color: white;
+  				padding: 8px 15px;
+ 				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 24px;
+  				margin: 4px 2px;
+  				cursor: pointer;
+                background-color: #fbc0fc;
+            	border-radius: 8px;
+			}
+
+            input[type=text] {
+  				width: 15%;
+  				box-sizing: border-box;
+  				border: 2px solid rgb(0, 0, 0);
+  				border-radius: 4px;
+  				font-size: 16px;
+  				background-color: white;
+  				background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+  				background-position: 10px 10px; 
+  				background-repeat: no-repeat;
+  				padding: 12px 20px 12px 40px;
+  				transition: width 0.4s ease-in-out;
+			}
+
+			input[type=text]:focus {
+  				width: 25%;
+			}
+
+            #games{
+                
+            }
+            #games div div{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                width: 40%;
+                height: 15%;
+                background-color: #f75dfc;
+                border: 4px solid #f75dfc;
+            }
+            #games div div img{
+                height: 100%;
+                width: 30%;
+            }
+            #games div div div{
+
+                display: inline-table;
+                width: 100%;
+            }
+            #games div div div p{
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                font-size: 40px;
+                margin-bottom: 3%;
+            }
+            #games div div div p2{
+                color: white;
+                font-family: 'Rubik', sans-serif;
+                font-size: 13px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            <div id="leftbar">
+                <div class="nav-button"><a href="index.html">Home</a></div>
+                <div class="nav-button selected"><a href="#games">Games</a></div>
+                <div class="nav-button"><a href="#leaderboard">Leaderboard</a></div>
+                <div class="nav-button"><a href="#browser">Browser</a></div>
+            </div>  
+            <div id="middlebar">
+                <p>Totally Science</p>
+            </div>
+            <div id="rightbar">
+                <p>A Zach Yadegari Production &trade;</p>
+            </div>
+        </div>
+        <div style="padding-top: 7.5%;"></div>
+        <div align="center">
+            <button name="all" onclick="switchGame('all');" class="selectedbutton selectable">All Games</button>
+            <button name="new" onclick="switchGame('new');" class="selectbutton selectable">New Games</button>
+            <button name="2" onclick="switchGame('2');" class="selectbutton selectable">2 Player</button>
+            <button name="car" onclick="switchGame('car');" class="selectbutton selectable">Car Games</button>
+            <button name="card" onclick="switchGame('card');" class="selectbutton selectable">Card Games</button>
+            <button name="sport" onclick="switchGame('sport');" class="selectbutton selectable">Sport Games</button>
+        </div>
+        <div class="search-bar" style="margin-top: 25px" align="center">
+            <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search">
+            <br><br><br>
+        </div>
+        <section id="games">
+            <!--<div align="center">
+                <div>
+                    <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                    <div>
+                        <p>Retro Bowl</p>
+                        <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                    </div>
+                </div>
+            </div>-->
+            
+        </section>
+    </body>
+</html>
