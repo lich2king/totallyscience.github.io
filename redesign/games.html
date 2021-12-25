@@ -1,246 +1,187 @@
 <html>
-    <head>
-        <title>Totally Science</title>
-        <link rel="stylesheet" href="navbar/navbar.css">
-        <link rel="icon" href="http://zachattack.oyosite.com/totallyscience/ef953f87fe2b81cdf8433c1d5b8e0626.png">
 
-        <style>
-            .selectedButton {
-  				border: none;
-  				color: white;
-  				padding: 8px 15px;
- 				text-align: center;
-  				text-decoration: none;
-  				display: inline-block;
-  				font-size: 24px;
-  				margin: 4px 2px;
-  				cursor: pointer;
-                background-color: #f75dfc;
-            	border-radius: 8px;
-			}
-            
-            .selectButton {
-  				border: none;
-  				color: white;
-  				padding: 8px 15px;
- 				text-align: center;
-  				text-decoration: none;
-  				display: inline-block;
-  				font-size: 24px;
-  				margin: 4px 2px;
-  				cursor: pointer;
-                background-color: #fbc0fc;
-            	border-radius: 8px;
-			}
+<head>
+    <title>Totally Science</title>
+    <link rel="stylesheet" href="navbar/navbar.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="icon" href="http://zachattack.oyosite.com/totallyscience/ef953f87fe2b81cdf8433c1d5b8e0626.png">
 
-            input[type=text] {
-  				width: 15%;
-  				box-sizing: border-box;
-  				border: 2px solid rgb(0, 0, 0);
-  				border-radius: 4px;
-  				font-size: 16px;
-  				background-color: white;
-  				background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
-  				background-position: 10px 10px; 
-  				background-repeat: no-repeat;
-  				padding: 12px 20px 12px 40px;
-  				transition: width 0.4s ease-in-out;
-                margin-bottom: 3%;
-			}
+</head>
 
-			input[type=text]:focus {
-  				width: 25%;
-			}
-
-            #games div{
-                
-            }
-            #games div button{
-                display: flex;
-                align-items: center;
-                justify-content: left;
-                width: 35%;
-                height: 15%;
-                background-color: #f75dfc;
-                border: 6px solid #f75dfc;
-                border-radius: 10px;
-                margin-bottom: 2%;
-                cursor: pointer;
-            }
-            #games div button img{
-                height: 100%;
-                width: 30%;
-            }
-            #games div button div{
-
-                display: inline-table;
-                width: 100%;
-            }
-            #games div button div p{
-                color: white;
-                font-family: 'Rubik', sans-serif;
-                font-size: 40px;
-                margin-bottom: 3%;
-            }
-            #games div button div p2{
-                color: white;
-                font-family: 'Rubik', sans-serif;
-                font-size: 13px;
-                margin-left: 3%;
-            }
-
-            #abc{
-                color: black;
-                font-family: 'Rubik', sans-serif;
-                font-size: 18px;
-            }
-            #abc div div p{
-                cursor: pointer;
-                margin-top: 0%;
-                margin-bottom: 0%;
-                padding-right: 500%;
-                padding-left: 100%;
-            }
-            #abc div div p:hover{
-                margin-left: -10px;
-                transition: all 0.2s ease;
-            }
-            #abc div div p{
-                margin-left: 0px;
-                transition: all 0.2s ease;
-            }
-            
-            .hideUnsorted{
-                visibility: hidden;
-            }
-
-        </style>
-    </head>
-    <body>
-        <div id="navbar">
-            <div id="leftbar">
-                <div class="nav-button"><a href="index.html">Home</a></div>
-                <div class="nav-button selected"><a href="#games">Games</a></div>
-                <div class="nav-button"><a href="#leaderboard">Leaderboard</a></div>
-                <div class="nav-button"><a href="#browser">Browser</a></div>
-            </div>  
-            <div id="middlebar">
-                <p>Totally Science</p>
-            </div>
-            <div id="rightbar">
-                <p>A Zach Yadegari Production &trade;</p>
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button selected"><a href="#games">Games</a></div>
+            <div class="nav-button"><a href="#leaderboard">Leaderboard</a></div>
+            <div class="nav-button"><a href="#browser">Browser</a></div>
+        </div>
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+        <div id="rightbar">
+            <p>A Zach Yadegari Production &trade;</p>
+        </div>
+    </div>
+    <div style="padding-top: 7.5%;"></div>
+    <section id="abc">
+        <div style="float: right; width: 4%;">
+            <div style="position: fixed;">
+                <p class="letter">A</p>
+                <p class="letter">B</p>
+                <p class="letter">C</p>
+                <p class="letter">D</p>
+                <p class="letter">E</p>
+                <p class="letter">F</p>
+                <p class="letter">G</p>
+                <p class="letter">H</p>
+                <p class="letter">I</p>
+                <p class="letter">J</p>
+                <p class="letter">K</p>
+                <p class="letter">L</p>
+                <p class="letter">M</p>
+                <p class="letter">N</p>
+                <p class="letter">O</p>
+                <p class="letter">P</p>
+                <p class="letter">Q</p>
+                <p class="letter">R</p>
+                <p class="letter">S</p>
+                <p class="letter">T</p>
+                <p class="letter">U</p>
+                <p class="letter">V</p>
+                <p class="letter">W</p>
+                <p class="letter">X</p>
+                <p class="letter">Y</p>
+                <p class="letter">Z</p>
             </div>
         </div>
-        <div style="padding-top: 7.5%;"></div>
-        <section id="abc">
-            <div style="float: right; width: 4%;">
-                <div style="position: fixed;">
-                    <p onclick="window.open('#a', '_self')">A</p>
-                    <p onclick="window.open('#b', '_self')">B</p>
-                    <p onclick="window.open('#c', '_self')">C</p>
-                    <p onclick="window.open('#d', '_self')">D</p>
-                    <p onclick="window.open('#e', '_self')">E</p>
-                    <p onclick="window.open('#f', '_self')">F</p>
-                    <p onclick="window.open('#g', '_self')">G</p>
-                    <p onclick="window.open('#h', '_self')">H</p>
-                    <p onclick="window.open('#i', '_self')">I</p>
-                    <p onclick="window.open('#j', '_self')">J</p>
-                    <p onclick="window.open('#k', '_self')">K</p>
-                    <p onclick="window.open('#l', '_self')">L</p>
-                    <p onclick="window.open('#m', '_self')">M</p>
-                    <p onclick="window.open('#n', '_self')">N</p>
-                    <p onclick="window.open('#o', '_self')">O</p>
-                    <p onclick="window.open('#p', '_self')">P</p>
-                    <p onclick="window.open('#q', '_self')">Q</p>
-                    <p onclick="window.open('#r', '_self')">R</p>
-                    <p onclick="window.open('#s', '_self')">S</p>
-                    <p onclick="window.open('#t', '_self')">T</p>
-                    <p onclick="window.open('#u', '_self')">U</p>
-                    <p onclick="window.open('#v', '_self')">V</p>
-                    <p onclick="window.open('#w', '_self')">W</p>
-                    <p onclick="window.open('#x', '_self')">X</p>
-                    <p onclick="window.open('#y', '_self')">Y</p>
-                    <p onclick="window.open('#z', '_self')">Z</p>
+    </section>
+    <div align="center">
+        <button name="all" onclick="" class="selectedbutton categoryButton">All Games</button>
+        <button name="new" onclick="" class="selectbutton categoryButton">New Games</button>
+        <button name="2" onclick="" class="selectbutton categoryButton">2 Player</button>
+        <button name="car" onclick="" class="selectbutton categoryButton">Car Games</button>
+        <button name="card" onclick="" class="selectbutton categoryButton">Card Games</button>
+        <button name="sport" onclick="" class="selectbutton categoryButton">Sport Games</button>
+    </div>
+    <div class="search-bar" style="margin-top: 25px" align="center">
+        <input type="text" name="search" value="" autocomplete="off" id="searchBar" onkeyup="searchFunction()" placeholder="Search">
+    </div>
+    <section id="games">
+        <div align="center" id="unsortedGames">
+            <button class="sortGame all" name="Retro Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Retro Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
                 </div>
-            </div>
-        </section>
-        <div align="center">
-            <button name="all" onclick="" class="selectedbutton selectable">All Games</button>
-            <button name="new" onclick="" class="selectbutton selectable">New Games</button>
-            <button name="2" onclick="" class="selectbutton selectable">2 Player</button>
-            <button name="car" onclick="" class="selectbutton selectable">Car Games</button>
-            <button name="card" onclick="" class="selectbutton selectable">Card Games</button>
-            <button name="sport" onclick="" class="selectbutton selectable">Sport Games</button>
+            </button>
+            <button class="sortGame all" name="Tanuki Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Tanuki Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame all" name="Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                </div>
+            </button>
+            <button class="sortGame all" name="Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Retro Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Retro Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Tanuki Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Tanuki Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Retro Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Retro Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Tanuki Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Tanuki Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Retro Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Retro Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Tanuki Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Tanuki Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Bowl">
+                <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
+                <div>
+                    <p>Bowl</p>
+                    <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
+                </div>
+            </button>
+            <button class="sortGame" name="Sunset" nclick="window.open('http://google.com')">
+                <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
+                <div>
+                    <p>Sunset</p>
+                    <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
+                </div>
+            </button>
         </div>
-        <div class="search-bar" style="margin-top: 25px" align="center">
-            <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search">
+
+        <div align="center" id="sortedGames">
+
         </div>
-        <section id="games">
-            <div align="center" id="unsortedGames">
-                <button class="sortGame" name="Retro Bowl">
-                    <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
-                    <div>
-                        <p>Retro Bowl</p>
-                        <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
-                    </div>
-                </button>
-                <button class="sortGame" name="Tanuki Sunset" nclick="window.open('http://google.com')">
-                    <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
-                    <div>
-                        <p>Tanuki Sunset</p>
-                        <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
-                    </div>
-                </button>
-                <button class="sortGame" name="Bowl">
-                    <img src="https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg">
-                    <div>
-                        <p>Bowl</p>
-                        <p2>This is a football game where your goal is to win the Retro Bowl! Good luck and have fun!</p2>
-                    </div>
-                </button>
-                <button class="sortGame" name="Sunset" nclick="window.open('http://google.com')">
-                    <img src="https://i.ytimg.com/vi/AOAYVgm_V_4/maxresdefault.jpg">
-                    <div>
-                        <p>Sunset</p>
-                        <p2>Play as a racoon who skateboards. Avoid obstacles and collect coins.</p2>
-                    </div>
-                </button>
-            </div>
+    </section>
 
-            <div align="center" id="sortedGames">
+    <script src="games.js"></script>
+</body>
 
-            </div>
-        </section>
-        
-        <script>
-            var names = document.getElementsByClassName("sortGame")
-            var namesSorted = []
-            for(i=0; i<names.length; i++)
-            {
-                namesSorted.push(names[i].getAttribute("name"))
-            }
-            namesSorted.sort()
-            namesSorted.forEach(element => {
-                var mainDiv = document.getElementById('sortedGames')
-                var b = document.createElement('button')
-                var oldButton = document.getElementsByName(element)[0]
-                var image = document.createElement('img')
-                image.src = oldButton.getElementsByTagName('img')[0].src
-                var insideDiv = document.createElement('div')
-                var insideP = document.createElement('p')
-                var insideP2 = document.createElement('p2')
-                insideP.innerText = oldButton.getElementsByTagName('p')[0].innerText
-                insideP2.innerText = oldButton.getElementsByTagName('p2')[0].innerText
-
-                mainDiv.appendChild(b)
-                b.appendChild(image)
-                b.appendChild(insideDiv)
-                insideDiv.appendChild(insideP)
-                insideDiv.appendChild(insideP2)
-            });
-            var unsortedGames = document.getElementById("unsortedGames")
-            unsortedGames.parentNode.removeChild(unsortedGames);
-
-        </script>
-    </body>
 </html>
