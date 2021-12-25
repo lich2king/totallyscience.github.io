@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
 
+body {
+    margin: 0;
+    padding: 0;
+}
 
 #navbar{
     position: fixed;
@@ -15,13 +19,12 @@
     z-index: 99;
 }
 
-.nav-button{
+.nav-button {
     float: left;
-    padding-right: 3%;
+    margin-left: 3%;
     height: 100%;
     display: inline-flex;
     align-items: center; 
-    
 }
 
 .nav-button a{
@@ -65,7 +68,7 @@
     text-align: right;
     width: 100%;
     height: 100%;
-    padding-right: 2%;
+    padding-right: 2px;
 }
 
 #rightbar p{

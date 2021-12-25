@@ -49,8 +49,6 @@ input[type=text]:focus {
     width: 25%;
 }
 
-#games div {}
-
 #games div button {
     display: flex;
     align-items: center;
