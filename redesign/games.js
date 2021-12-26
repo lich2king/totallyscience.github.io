@@ -7,14 +7,14 @@ for (i = 0; i < names.length; i++) {
 }
 //Sort list
 namesSorted.sort()
-//For each name in list:
-//Find div by name element
-//Create new div with values from div with name element
-//append new div to larger div
+    //For each name in list:
+    //Find div by name element
+    //Create new div with values from div with name element
+    //append new div to larger div
 namesSorted.forEach(element => {
     //get first letter of string (element is the name of the game)
     var sectionId = element[0].toLowerCase()
-    //check if there is already a section with the id
+        //check if there is already a section with the id
     var possibleSection = document.getElementById(sectionId)
     if (possibleSection != null) {
         //add to an existing section
@@ -40,8 +40,7 @@ namesSorted.forEach(element => {
         b.appendChild(insideDiv)
         insideDiv.appendChild(insideP)
         insideDiv.appendChild(insideP2)
-    }
-    else {
+    } else {
         //create a new section
         var mainDiv = document.getElementById('sortedGames')
         var mainSection = document.createElement('section')
@@ -77,7 +76,7 @@ unsortedGames.parentNode.removeChild(unsortedGames);
 window.addEventListener('DOMContentLoaded', (event) => {
     //add event listener to every element in the document with the class "letter"
     document.querySelectorAll(".letter").forEach(letter => {
-        letter.addEventListener('click', function (e) {
+        letter.addEventListener('click', function(e) {
             var letter = e.target.innerText.toLowerCase()
             var section = document.getElementById(letter)
             var sectionBox = section.getBoundingClientRect();
@@ -96,7 +95,7 @@ var selectedTopic = "all"
 window.addEventListener('DOMContentLoaded', (event) => {
     //add event listener to every element in the document with the class "categoryButton"
     document.querySelectorAll(".categoryButton").forEach(button => {
-        button.addEventListener('click', function (e) {
+        button.addEventListener('click', function(e) {
             selectedTopic = e.target.name
             var buttons = document.getElementsByClassName('categoryButton');
             var games = document.getElementsByClassName('gameButton');
@@ -104,19 +103,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
             for (i = 0; i < buttons.length; i++) {
                 var name = buttons[i].getAttribute("name");
                 if (selectedTopic == name) {
-                    buttons[i].classList.add('selectedbutton');
-                    buttons[i].classList.remove('selectbutton');
-                }
-                else {
-                    buttons[i].classList.remove('selectedbutton');
-                    buttons[i].classList.add('selectbutton');
+                    buttons[i].classList.add('selectedCategory');
+                    buttons[i].classList.remove('unselectedCategory');
+                } else {
+                    buttons[i].classList.remove('selectedCategory');
+                    buttons[i].classList.add('unselectedCategory');
                 }
             }
             for (i = 0; i < games.length; i++) {
                 if (games[i].classList.contains(selectedTopic)) {
                     games[i].style.display = "";
-                }
-                else {
+                } else {
                     games[i].style.display = 'none';
                 }
             }
@@ -134,13 +131,10 @@ function searchFunction() {
         if (gameName.toUpperCase().indexOf(input) > -1) {
             if (gameButtons[i].classList.contains(selectedTopic)) {
                 gameButtons[i].style.display = "";
-            }
-            else {
+            } else {
                 gameButtons[i].style.display = 'none';
             }
-        }
-
-        else {
+        } else {
             gameButtons[i].style.display = 'none';
         }
     }
