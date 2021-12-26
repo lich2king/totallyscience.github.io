@@ -131,9 +131,23 @@
                 <button>Play Now!</button>
             </div>
         </div>
+        <div class="featuredSlide">
+            <img src="https://i2.wp.com/sequentialplanet.com/wp-content/uploads/2020/02/87271370_474378070111481_7709515490875408384_n.png?fit=2048%2C970&ssl=1">
+            <div class="slide">
+                <p>RETRO</p>
+                <button>Play Now!</button>
+            </div>
+        </div>
+        <div class="featuredSlide">
+            <img src="https://i2.wp.com/sequentialplanet.com/wp-content/uploads/2020/02/87271370_474378070111481_7709515490875408384_n.png?fit=2048%2C970&ssl=1">
+            <div class="slide">
+                <p>BOWL</p>
+                <button>Play Now!</button>
+            </div>
+        </div>
         <div class="slideButtons">
-            <button class="slidePrev"><img width="50%" src="images/left-arrow.png"></button>
-            <button class="slideNext"><img width="50%" src="images/right-arrow.png"></button>
+            <button class="slidePrev" onclick="plusSlides(-1)"><img width="50%" src="images/left-arrow.png"></button>
+            <button class="slideNext" onclick="plusSlides(1)"><img width="50%" src="images/right-arrow.png"></button>
         </div>
     </section>
 
@@ -217,6 +231,28 @@
         </section>
 
     </div>
+    <script>
+        var slideIndex = 1;
+        switchSlide(slideIndex);
+
+        function plusSlides(n) {
+            switchSlide(slideIndex += n);
+        }
+
+        function switchSlide(n) {
+            var slides = document.getElementsByClassName("featuredSlide");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "";
+        }
+    </script>
 </body>
 <!--Script for text fade in _.throttle() function {ORDER MATTERS FOR SCRIPTS!}-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
