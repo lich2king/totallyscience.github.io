@@ -10,35 +10,98 @@
 <style>
     #featured {
         width: 100%;
-        display: flex;
         margin-top: 80px;
         margin-bottom: 10%;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
     
-    #featured img {
-        position: relative;
+    .featuredSlide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .featuredSlide img {
         width: 90%;
         border-radius: 80px;
         z-index: -2;
         opacity: 0.7;
-        border: 2px solid #f75dfc;
+        border: 3px solid #f75dfc;
     }
     
-    #featured div {
+    .featuredSlide div {
         position: absolute;
+        text-align: center;
     }
     
-    #featured div p {
+    .featuredSlide div p {
         color: white;
         height: 100%;
         width: 100%;
         z-index: -1;
         opacity: 1;
         font-family: 'Spline Sans', sans-serif;
-        font-size: 15vw;
+        font-size: 13vw;
         text-shadow: -3px -3px 0 #f75dfc, 3px -3px 0 #f75dfc, -3px 3px 0 #f75dfc, 3px 3px 0 #f75dfc;
+        margin-bottom: 5%;
+        margin-top: 0%;
+    }
+    
+    .featuredSlide div button {
+        cursor: pointer;
+        color: white;
+        background-color: #f75dfc;
+        height: 100%;
+        width: 30%;
+        z-index: -1;
+        opacity: 1;
+        font-family: 'Spline Sans', sans-serif;
+        font-size: 4vw;
+        border-color: transparent;
+        border-radius: 10px;
+    }
+    
+    .slideButtons {
+        position: absolute;
+        width: 100%;
+    }
+    
+    .slidePrev,
+    .slideNext {
+        position: absolute;
+        padding: 0px;
+        width: 10%;
+        cursor: pointer;
+        z-index: 0;
+        background-color: transparent;
+        border: 0px;
+        top: 50%;
+        transform: translate(0, -50%);
+        opacity: 0.8;
+        transition: opacity 0.15s ease;
+    }
+    
+    .slidePrev:hover,
+    .slideNext:hover {
+        opacity: 1;
+        transition: opacity 0.15s ease;
+    }
+    
+    .slidePrev button img,
+    .slideNext button img {
+        padding: 0%;
+        margin: 0%;
+    }
+    
+    .slideNext {
+        right: 0;
+        margin-right: 0%;
+    }
+    
+    .slidePrev {
+        margin-left: 0%;
     }
 </style>
 
@@ -61,10 +124,17 @@
     <button id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});'><img width="100%" src="https://icons.veryicon.com/png/o/miscellaneous/line-icon/up-arrow-10.png"></button>
 
     <section id="featured">
+        <div class="featuredSlide">
             <img src="https://i2.wp.com/sequentialplanet.com/wp-content/uploads/2020/02/87271370_474378070111481_7709515490875408384_n.png?fit=2048%2C970&ssl=1">
-            <div>
+            <div class="slide">
                 <p>RETRO BOWL</p>
+                <button>Play Now!</button>
             </div>
+        </div>
+        <div class="slideButtons">
+            <button class="slidePrev"><img width="50%" src="images/left-arrow.png"></button>
+            <button class="slideNext"><img width="50%" src="images/right-arrow.png"></button>
+        </div>
     </section>
 
     <div id="sections" align="center" style="font-size: 40px;">
