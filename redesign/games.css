@@ -13,7 +13,9 @@ html {
     margin: 4px 2px;
     cursor: pointer;
     background-color: #f75dfc;
+    opacity: 1;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
 .unselectedCategory {
@@ -26,8 +28,10 @@ html {
     font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #fbc0fc;
+    background-color: #f75dfc;
+    opacity: 0.4;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
 input[type=text] {
