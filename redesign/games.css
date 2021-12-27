@@ -91,6 +91,10 @@ input[type=text]:focus {
     margin-left: 3%;
 }
 
+.hideUnsorted {
+    visibility: hidden;
+}
+
 #abc {
     color: black;
     font-family: 'Rubik', sans-serif;
