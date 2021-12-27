@@ -30,7 +30,7 @@
         border-radius: 80px;
         z-index: -2;
         opacity: 0.7;
-        border: 3px solid #f75dfc;
+        border: 4px solid #f75dfc;
     }
     
     .featuredSlide div {
@@ -107,11 +107,30 @@
     .slidePrev {
         margin-left: 0%;
     }
-    /* On smaller screens, decrease text size */
+    /* Fading animation */
     
-    @media only screen and (max-width: 300px) {
-        .featuredSlide div p {
-            font-size: 9px
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.25s;
+        animation-name: fade;
+        animation-duration: 1.25s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
         }
     }
 </style>
@@ -135,21 +154,21 @@
     <button id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});'><img width="100%" src="https://icons.veryicon.com/png/o/miscellaneous/line-icon/up-arrow-10.png"></button>
 
     <section id="featured">
-        <div class="featuredSlide">
+        <div class="featuredSlide fade">
             <img src="https://i2.wp.com/sequentialplanet.com/wp-content/uploads/2020/02/87271370_474378070111481_7709515490875408384_n.png?fit=2048%2C970&ssl=1">
             <div class="slide">
                 <p>RETRO BOWL</p>
                 <button>Play Now!</button>
             </div>
         </div>
-        <div class="featuredSlide">
+        <div class="featuredSlide fade">
             <img src="https://www.coolmathgames.com/sites/default/files/papas-pizzeria.jpg">
             <div class="slide">
                 <p>PAPA'S PIZZERIA</p>
                 <button>Play Now!</button>
             </div>
         </div>
-        <div class="featuredSlide">
+        <div class="featuredSlide fade">
             <img src="https://play-lh.googleusercontent.com/jBnTGS7l4afkXN7wImx-4aNu9O7jvjRyAHQdMH1now697W6uve-GieDBGeiBRhsfv7eD">
             <div class="slide">
                 <p>HAPPY WHEELS</p>
@@ -243,10 +262,17 @@
 
     </div>
     <script>
+        var shouldAutoSwitch = true;
         var slideIndex = 1;
         switchSlide(slideIndex);
+        autoSwitch();
 
         function plusSlides(n) {
+            shouldAutoSwitch = false;
+            switchSlide(slideIndex += n);
+        }
+
+        function autoPlusSlides(n) {
             switchSlide(slideIndex += n);
         }
 
@@ -262,6 +288,17 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "";
+        }
+
+        function autoSwitch() {
+            if (shouldAutoSwitch) {
+                setTimeout(function() {
+                    if (shouldAutoSwitch) {
+                        autoPlusSlides(1)
+                        autoSwitch()
+                    }
+                }, 2500);
+            }
         }
     </script>
 </body>
