@@ -91,40 +91,6 @@ input[type=text]:focus {
     margin-left: 3%;
 }
 
-#abc {
-    color: black;
-    font-family: 'Rubik', sans-serif;
-    float: right;
-    width: 4%;
-    height: 100%;
-}
-
-#abc div {
-    font-size: 18px;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: brown;
-}
-
-#abc div p {
-    cursor: pointer;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding-right: 15px;
-    padding-left: 25px;
-}
-
-#abc div p:hover {
-    margin-left: -10px;
-    transition: all 0.2s ease;
-}
-
-#abc div p {
-    margin-left: 0px;
-    transition: all 0.2s ease;
-}
-
 .hideUnsorted {
     visibility: hidden;
 }
