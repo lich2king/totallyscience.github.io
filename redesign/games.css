@@ -105,8 +105,8 @@ input[type=text]:focus {
     cursor: pointer;
     margin-top: 0%;
     margin-bottom: 0%;
-    padding-right: 500%;
-    padding-left: 100%;
+    padding-right: 15px;
+    padding-left: 25px;
 }
 
 #abc div div p:hover {
