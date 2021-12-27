@@ -1,4 +1,4 @@
-html {
+<style>html {
     scroll-behavior: smooth;
 }
 
@@ -127,3 +127,5 @@ input[type=text]:focus {
     margin-left: 0px;
     transition: all 0.2s ease;
 }
+
+</style>
