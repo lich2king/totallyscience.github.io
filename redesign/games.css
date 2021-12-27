@@ -94,14 +94,20 @@ input[type=text]:focus {
 #abc {
     color: black;
     font-family: 'Rubik', sans-serif;
+    float: right;
+    width: 4%;
+    height: 100%;
+}
+
+#abc div {
     font-size: 18px;
-}
-
-#abc div div {
     position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: brown;
 }
 
-#abc div div p {
+#abc div p {
     cursor: pointer;
     margin-top: 0%;
     margin-bottom: 0%;
@@ -109,12 +115,12 @@ input[type=text]:focus {
     padding-left: 25px;
 }
 
-#abc div div p:hover {
+#abc div p:hover {
     margin-left: -10px;
     transition: all 0.2s ease;
 }
 
-#abc div div p {
+#abc div p {
     margin-left: 0px;
     transition: all 0.2s ease;
 }
