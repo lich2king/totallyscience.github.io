@@ -48,7 +48,7 @@
         opacity: 1;
         font-family: 'Spline Sans', sans-serif;
         font-size: 11vw;
-        text-shadow: -3px -3px 0 #f75dfc, 3px -3px 0 #f75dfc, -3px 3px 0 #f75dfc, 3px 3px 0 #f75dfc;
+        text-shadow: -6px -6px 0 #f75dfc, 6px -6px 0 #f75dfc, -6px 6px 0 #f75dfc, 6px 6px 0 #f75dfc;
         margin-bottom: 5%;
         margin-top: 0%;
     }
@@ -106,6 +106,13 @@
     
     .slidePrev {
         margin-left: 0%;
+    }
+    /* On smaller screens, decrease text size */
+    
+    @media only screen and (max-width: 300px) {
+        .featuredSlide div p {
+            font-size: 9px
+        }
     }
 </style>
 
