@@ -79,6 +79,7 @@ input[type=text]:focus {
     font-family: 'Rubik', sans-serif;
     font-size: 40px;
     margin-bottom: 10%;
+    margin-top: 10%;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 0px;
 }
@@ -94,6 +95,11 @@ input[type=text]:focus {
     color: black;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    height: 100%;
+}
+
+#abc div div {
+    position: fixed;
 }
 
 #abc div div p {
