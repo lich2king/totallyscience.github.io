@@ -59,7 +59,7 @@ input[type=text]:focus {
     display: flex;
     align-items: center;
     justify-content: left;
-    width: 40%;
+    width: 37.5%;
     height: 15%;
     background-color: #f75dfc;
     border: 6px solid #f75dfc;
