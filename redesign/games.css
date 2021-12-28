@@ -61,7 +61,7 @@ input[type=text]:focus {
     height: 15%;
     background-color: #f75dfc;
     border: 6px solid #f75dfc;
-    border-radius: 10px;
+    border-radius: 50%;
     margin-bottom: 2%;
     cursor: pointer;
 }
