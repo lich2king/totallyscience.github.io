@@ -9,6 +9,9 @@ const mk = (type) => {
     return document.createElement(type)
 }
 
+const weekAgo = new Date()
+weekAgo.setDate(weekAgo.getDate() - 7)
+
 const gamesDiv = $("games-div")
 
 fetch("./games.json").then(response => response.json()).then(games => {
@@ -26,6 +29,11 @@ fetch("./games.json").then(response => response.json()).then(games => {
 
         const gameBtn = mk("button")
         gameBtn.classList = data.tags.join(" ")
+        const gameDate = new Date(data.date_added)
+        console.log(gameDate)
+        if(gameDate > weekAgo) {
+            gameBtn.classList.add("new")
+        }
         gameBtn.addEventListener("click", () => {
             window.location.href = `./game.html?game=${name}`
         })
