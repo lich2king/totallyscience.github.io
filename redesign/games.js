@@ -1,8 +1,8 @@
 // Thank you stack overflow.
 const sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {})
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {})
 
 const $ = (id) => {
     return document.getElementById(id)
@@ -79,7 +79,7 @@ fetch('./games.json')
 //selected topic variable is used both in the button category changer and the search bar function
 let selectedTopic = 'all'
 const buttons = $qsa('.categoryButton')
-//add event listener to every element in the document with the class "categoryButton"
+    //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         selectedTopic = e.target.name
@@ -109,6 +109,7 @@ const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
     const input = searchBar.value.toUpperCase()
     $qsa('.gameButton').forEach((button) => {
+        console.log(button)
         const gameName = button.getAttribute('name')
         if (gameName.toUpperCase().indexOf(input) > -1) {
             if (button.classList.contains(selectedTopic)) {
