@@ -95,6 +95,7 @@ input[type=text]:focus {
 }
 
 #games div button div p2 {
+    text-align: left;
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 13px;
