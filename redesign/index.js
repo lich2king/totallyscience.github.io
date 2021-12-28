@@ -24,7 +24,7 @@ function scanDocument() {
         }
     })
 
-    console.log(numberOfScans)
+    //console.log(numberOfScans)
     numberOfScans++
 }
 
