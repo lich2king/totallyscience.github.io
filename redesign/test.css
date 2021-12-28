@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.selectedCategory {
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #f75dfc;
+    border-radius: 8px;
+}
+
+.unselectedCategory {
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #fbc0fc;
+    border-radius: 8px;
+}
+
+input[type=text] {
+    width: 15%;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3%;
+}
+
+input[type=text]:focus {
+    width: 25%;
+}
+
+#games div {}
+
+#games div button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 35%;
+    height: 15%;
+    background-color: #f75dfc;
+    border: 6px solid #f75dfc;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+#games div button img {
+    height: 100%;
+    width: 30%;
+}
+
+#games div button div {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#games div button div p {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    /* Not sure why but changing line height fixes text not being centered issue.*/
+    line-height: 0px;
+}
+
+#games div button div p2 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 13px;
+    margin-left: 3%;
+}
+
+.hideUnsorted {
+    visibility: hidden;
+}
+
+#abc {
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    float: right;
+    width: 4%;
+    height: 100%;
+}
+
+#abc div {
+    font-size: 1.25vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#abc div p {
+    cursor: pointer;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-right: 15px;
+    padding-left: 25px;
+}
+
+#abc div p:hover {
+    margin-left: -10px;
+    transition: all 0.2s ease;
+}
+
+#abc div p {
+    margin-left: 0px;
+    transition: all 0.2s ease;
+}

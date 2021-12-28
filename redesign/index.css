@@ -24,17 +24,16 @@
     transition: opacity 1s ease;
 }
 
-#sections section{
+#sections section {
     padding-top: 15%;
 }
 
-
-#scientists p{
+#scientists p {
     font-family: 'Spline Sans', sans-serif;
     font-size: 50px;
 }
 
-#scientists div{
+#scientists div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,21 +49,22 @@
     margin-right: 5%;
 }
 
-#scientists div div p{
+#scientists div div p {
     font-family: 'Rubik', sans-serif;
     font-size: 33px;
 }
-#scientists div div p2{
+
+#scientists div div p2 {
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
 }
 
-#follow p{
+#follow p {
     font-family: 'Spline Sans', sans-serif;
     font-size: 50px;
 }
 
-#follow div{
+#follow div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@
     margin-right: 5%;
 }
 
-#viewer p{
+#viewer p {
     font-family: 'Spline Sans', sans-serif;
     font-size: 50px;
 }
@@ -108,46 +108,175 @@
     background-color: rgb(51, 51, 51);
     width: 100%;
     height: 30%;
+    padding-bottom: 1%;
 }
 
-#top-footer{
+#top-footer {
     display: flex;
     align-items: top;
     justify-content: center;
 }
 
-#top-footer div{
+#top-footer div {
     display: inline-block;
     color: white;
     font-family: 'Spline Sans', sans-serif;
     font-size: 40px;
 }
 
-#left-footer a{
+#left-footer a {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
 }
 
-#middle-footer p{
+#middle-footer p {
     visibility: hidden;
 }
 
-#right-footer div{
+#right-footer div {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-#right-footer div div{
+#right-footer div div {
     width: 10%;
     margin-right: 5%;
 }
 
-#right-footer div div img{
+#right-footer div div img {
     border: 2px solid #f75dfc;
     padding: 6px;
     border-radius: 50%;
     width: 80%;
+}
+
+#featured {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featuredSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.featuredSlide img {
+    width: 90%;
+    height: 600px;
+    border-radius: 80px;
+    z-index: -2;
+    opacity: 0.7;
+    border: 4px solid #f75dfc;
+}
+
+.featuredSlide div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: -10%;
+}
+
+.featuredSlide div p {
+    color: white;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 11vw;
+    text-shadow: -6px -6px 0 #f75dfc, 6px -6px 0 #f75dfc, -6px 6px 0 #f75dfc, 6px 6px 0 #f75dfc;
+    margin-bottom: 5%;
+    margin-top: 0%;
+}
+
+.featuredSlide div button {
+    cursor: pointer;
+    color: white;
+    background-color: #f75dfc;
+    height: 100%;
+    width: 25%;
+    z-index: -1;
+    opacity: 1;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 4vw;
+    border-color: transparent;
+    border-radius: 10px;
+}
+
+.slideButtons {
+    position: absolute;
+    width: 100%;
+}
+
+.slidePrev,
+.slideNext {
+    position: absolute;
+    padding: 0px;
+    width: 10%;
+    cursor: pointer;
+    z-index: 0;
+    background-color: transparent;
+    border: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+}
+
+.slidePrev:hover,
+.slideNext:hover {
+    opacity: 1;
+    transition: opacity 0.15s ease;
+}
+
+.slidePrev button img,
+.slideNext button img {
+    padding: 0%;
+    margin: 0%;
+}
+
+.slideNext {
+    right: 0;
+    margin-right: 0%;
+}
+
+.slidePrev {
+    margin-left: 0%;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.25s;
+    animation-name: fade;
+    animation-duration: 1.25s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }

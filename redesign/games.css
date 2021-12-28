@@ -13,7 +13,9 @@ html {
     margin: 4px 2px;
     cursor: pointer;
     background-color: #f75dfc;
+    opacity: 1;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
 .unselectedCategory {
@@ -26,8 +28,10 @@ html {
     font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #fbc0fc;
+    background-color: #f75dfc;
+    opacity: 0.4;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
 input[type=text] {
@@ -79,6 +83,7 @@ input[type=text]:focus {
     font-family: 'Rubik', sans-serif;
     font-size: 40px;
     margin-bottom: 10%;
+    margin-top: 10%;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 0px;
 }
@@ -90,30 +95,39 @@ input[type=text]:focus {
     margin-left: 3%;
 }
 
+.hideUnsorted {
+    visibility: hidden;
+}
+
 #abc {
     color: black;
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
+    float: right;
+    width: 4%;
+    height: 100%;
 }
 
-#abc div div p {
+#abc div {
+    font-size: 1.25vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#abc div p {
     cursor: pointer;
     margin-top: 0%;
     margin-bottom: 0%;
-    padding-right: 500%;
-    padding-left: 100%;
+    padding-right: 15px;
+    padding-left: 25px;
 }
 
-#abc div div p:hover {
+#abc div p:hover {
     margin-left: -10px;
     transition: all 0.2s ease;
 }
 
-#abc div div p {
+#abc div p {
     margin-left: 0px;
     transition: all 0.2s ease;
-}
-
-.hideUnsorted {
-    visibility: hidden;
 }
