@@ -53,8 +53,6 @@ input[type=text]:focus {
     width: 25%;
 }
 
-#games div {}
-
 #games div button {
     display: flex;
     align-items: center;
@@ -82,15 +80,11 @@ input[type=text]:focus {
 #games div button div p {
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-size: 40px;
+    font-size: 3vw;
     margin-bottom: 10%;
     margin-top: 10%;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 0px;
-}
-
-.new div p::after {
-    content: " \26A1"
 }
 
 #games div button div p2 {
@@ -108,12 +102,13 @@ input[type=text]:focus {
     color: black;
     font-family: 'Rubik', sans-serif;
     float: right;
+    margin-right: 1%;
     width: 4%;
     height: 100%;
 }
 
 #abc div {
-    font-size: 1.25vw;
+    font-size: 10pt;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -135,4 +130,15 @@ input[type=text]:focus {
 #abc div p {
     margin-left: 0px;
     transition: all 0.2s ease;
+}
+
+.categories {
+    text-align: center;
+    margin-top: 80px;
+}
+
+@media (max-width: 600px) {
+    .categories {
+        margin-top: 100px;
+    }
 }
