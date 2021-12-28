@@ -68,11 +68,6 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
-#games div button::after {
-    content: " \26A1";
-    font-size: 40px;
-}
-
 #games div button img {
     height: 100%;
     width: 30%;
