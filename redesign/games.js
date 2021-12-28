@@ -109,7 +109,6 @@ const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
     const input = searchBar.value.toUpperCase()
     $qsa('.gameButton').forEach((button) => {
-        console.log(button)
         const gameName = button.getAttribute('name')
         if (gameName.toUpperCase().indexOf(input) > -1) {
             if (button.classList.contains(selectedTopic)) {
