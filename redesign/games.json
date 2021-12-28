@@ -16,5 +16,14 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Flipline Studios",
         "iframe_url": "./ruffle_test.html"
+    },
+    "Drift Boss": {
+        "description": "Car go vroom vroom!",
+        "image": "https://driftboss.io/upload/imgs/options/drift-boss.jpg",
+        "controls": "Click space to turn",
+        "tags": ["car"],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Math Playground",
+        "iframe_url": "https://www.mathplayground.com/drift-boss/index.html"
     }
 }
