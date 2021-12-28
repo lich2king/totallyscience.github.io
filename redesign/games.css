@@ -88,6 +88,10 @@ input[type=text]:focus {
     line-height: 0px;
 }
 
+.new div p::after {
+    content: " \26A1"
+}
+
 #games div button div p2 {
     color: white;
     font-family: 'Rubik', sans-serif;
