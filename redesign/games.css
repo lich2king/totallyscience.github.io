@@ -75,6 +75,8 @@ input[type=text]:focus {
 #games div button div {
     width: 100%;
     margin-bottom: 2%;
+    float: left;
+
 }
 
 #games div button div p {
@@ -88,7 +90,6 @@ input[type=text]:focus {
 }
 
 #games div button div p2 {
-    float: left;
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 13px;
