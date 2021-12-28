@@ -1,0 +1,10 @@
+{
+    "Retro Bowl": {
+       "description": "Win the retro bowl in football or you are bad!",
+       "image": "",
+       "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
+       "tags": ["new", "featured"],
+       "developer": "Henry Langmack",
+       "iframe_url": "./games/retrobowl/index.html"
+    }
+}
