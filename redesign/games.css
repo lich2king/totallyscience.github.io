@@ -53,10 +53,6 @@ input[type=text]:focus {
     width: 25%;
 }
 
-.new div p::after {
-    content: " \26A1"
-}
-
 #games div button {
     display: flex;
     align-items: center;
@@ -65,7 +61,7 @@ input[type=text]:focus {
     height: 15%;
     background-color: #f75dfc;
     border: 6px solid #f75dfc;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-bottom: 2%;
     cursor: pointer;
 }
