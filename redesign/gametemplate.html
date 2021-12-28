@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Totally Science</title>
+    <link rel="stylesheet" href="navbar/navbar.css">
+    <link rel="icon" href="http://zachattack.oyosite.com/totallyscience/ef953f87fe2b81cdf8433c1d5b8e0626.png">
+
+    <style>
+        #game {
+            width: 100%;
+            height: 550px;
+            margin-bottom: 5%;
+        }
+        
+        #gameDiv {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        
+        #gameDiv iframe {
+            width: 75%;
+            height: 100%;
+            border: 4px solid #f75dfc;
+            border-radius: 20px;
+            margin-bottom: 0%;
+        }
+        
+        #description {
+            width: 100%;
+            height: 50%;
+        }
+        
+        .descriptionDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .descriptionDiv div {
+            text-align: center;
+            width: 50%;
+        }
+        
+        .descriptionDiv p {
+            font-family: 'Spline Sans', sans-serif;
+            font-size: 4vw;
+            margin-bottom: 1%;
+        }
+        
+        .descriptionDiv p2 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 2vw;
+            margin-left: 2%;
+        }
+        
+        #report {
+            margin-top: 15%;
+            font-family: 'Rubik', sans-serif;
+            font-size: 2vw;
+            margin-left: 2%;
+            text-align: center;
+        }
+        
+        #report button {
+            font-size: 2vw;
+            width: 15%;
+            height: 60px;
+            color: white;
+            background-color: #f75dfc;
+            border: 0px;
+            border-radius: 10px;
+            margin-bottom: 2%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button selected"><a href="games.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="#browser">Browser</a></div>
+        </div>
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+        <div id="rightbar">
+            <p>A Zach Yadegari Production &trade;</p>
+        </div>
+    </div>
+    <div style="padding-top: 6%;"></div>
+    <section id="game">
+        <div id="gameDiv">
+            <iframe frameBorder="0" src="https://www.mathplayground.com/drift-boss/index.html"></iframe>
+        </div>
+    </section>
+    <section id="description">
+        <div class="descriptionDiv">
+            <div>
+                <p>Controls:</p>
+                <p2>...</p2>
+            </div>
+            <div>
+                <p>Developer:</p>
+                <p2>This game was created by ...</p2>
+            </div>
+        </div>
+    </section>
+    <section id="report">
+        <p>Is this game not working? Let us know!</p>
+        <button>Report</button>
+    </section>
+
+</body>
+
+</html>
