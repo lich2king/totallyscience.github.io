@@ -1,0 +1,10 @@
+{
+    "Test Game": {
+       "description": "A test game.",
+       "image": "https://example.com",
+       "controls": "",
+       "tags": ["new", "featured"],
+       "developer": "Henry Langmack",
+       "iframe_url": "./test-game.html"
+    }
+}
