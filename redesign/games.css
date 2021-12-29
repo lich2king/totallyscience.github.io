@@ -141,3 +141,7 @@ input[type=text]:focus {
         margin-top: 100px;
     }
 }
+
+.new div p::after {
+    content: " \26A1"
+}
