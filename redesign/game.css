@@ -19,31 +19,7 @@
     margin-bottom: 0%;
 }
 
-#description {
-    width: 100%;
-    height: 50%;
-}
 
-.descriptionDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.descriptionDiv div {
-    width: 50%;
-}
-
-.descriptionDiv p {
-    font-family: 'Spline Sans', sans-serif;
-    font-size: 4vw;
-    margin-bottom: 1%;
-}
-
-.descriptionDiv p2 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 2vw;
-}
 
 #report {
     margin-top: 15%;
@@ -69,6 +45,10 @@
     #game {
         margin-top: 100px;
     }
+}
+
+#desc{
+  margin-top: 10%;
 }
 
 .grid-container {
