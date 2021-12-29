@@ -61,5 +61,33 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Codethislab",
         "iframe_url": "https://www.hoodamath.com/mobile/games/connect-4/game.html?nocheckorient=1"
+    },
+    "Cupcake2048": {
+        "description": "The cupcake edition of the classic 2048 game. Mix cupcakes together to create new ones!",
+        "image": "./gamePics/cupcake2048.png",
+        "controls": "Arrow keys to slide tiles",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Gabriele Cirulli",
+        "iframe_url": "https://0x0800.github.io/2048-CUPCAKES/"
+    },
+    "Ducklife":{
+        "description": "The future of the farm is in your hands! Train your duck to run, fly and swim its way to victory so you can save the farm.",
+        "image": "./gamePics/ducklife.jpeg",
+        "controls": "Arrow keys to move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Wix Games",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
+    },
+    "Ducklife 2":{
+        "description": "Your mission in Duck Life 2 is the same as in the original Duck Life: increase your skills via the mini games and win all the races to become the  world champion.",
+        "image": "./gamePics/ducklife2.jpeg",
+        "controls": "Arrow keys to move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Wix Games",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
     }
+
 }
