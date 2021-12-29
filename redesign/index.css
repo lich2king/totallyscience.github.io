@@ -119,7 +119,7 @@ footer {
 }
 #center-image {
     position: absolute;
-    left: calc(50% + 30px);
+    left: calc(50%);
     transform: translate(-50%);
     height: 15%;
 }
