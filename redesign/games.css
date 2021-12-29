@@ -69,7 +69,7 @@ input[type=text]:focus {
 }
 
 #games div button::after {
-    font-size: 1vw;
+    font-size: 2vw;
     content: " \26A1"
 }
 
