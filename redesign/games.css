@@ -87,7 +87,7 @@ input[type=text]:focus {
     margin-bottom: 20px;
     margin-top: 15px;
     /* Not sure why but changing line height fixes text not being centered issue.*/
-    line-height: 5px;
+    line-height: 10efpx;
 }
 
 #games div button div p2 {
