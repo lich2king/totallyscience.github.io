@@ -1,6 +1,6 @@
 {
     "Retro Bowl": {
-        "description": "This is a 2-D football game where your goal is to win the Retro Bowl!",
+        "description": "This is a 2D football game where your goal is to win the Retro Bowl!",
         "image": "https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg",
         "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
         "tags": ["featured", "sport"],
@@ -25,5 +25,14 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/drift-boss/index.html"
+    },
+    "Chess": {
+        "description": "Online board game where your could play against a friend or the computer.",
+        "image": "./gamePics/chess-icon.png",
+        "controls": "Use your mouse to drag the piece you want to move",
+        "tags": ["2"],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Hooda Math",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/chess/game.html?nocheckorient=1"
     }
 }
