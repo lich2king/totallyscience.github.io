@@ -65,7 +65,7 @@ input[type=text]:focus {
     border-radius: 10px;
     margin-bottom: 2%;
     cursor: pointer;
-    border-left: 0px;
+    border-left: 2px;
 }
 
 #games div button img {
