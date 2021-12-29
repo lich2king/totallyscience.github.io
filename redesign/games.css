@@ -55,10 +55,11 @@ input[type=text]:focus {
 
 #games div button {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: left;
     width: 37.5%;
     height: 15%;
+    text-align: left;
     background-color: #f75dfc;
     border: 6px solid hsl(298, 96%, 68%);
     border-radius: 10px;
@@ -67,9 +68,10 @@ input[type=text]:focus {
 }
 
 #games div button img {
-    border-radius: 15px;
+    border-radius: 10px;
     height: 100%;
     width: 30%;
+    margin-right: 15px;
 }
 
 #games div button div {
@@ -81,8 +83,8 @@ input[type=text]:focus {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 3vw;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 20px;
+    margin-top: 15px;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 0px;
 }
@@ -91,7 +93,6 @@ input[type=text]:focus {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 13px;
-    margin-left: 3%;
 }
 
 .hideUnsorted {

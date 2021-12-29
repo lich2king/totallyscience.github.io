@@ -117,9 +117,11 @@ footer {
     float: right;
     margin-top: -30px;
 }
-#center-footer {
-    float: center;
-    margin-top: -30px;
+#center-image {
+    position: absolute;
+    left: calc(50% + 30px);
+    transform: translate(-50%);
+    height: 15%;
 }
 #left-footer {
     margin-top: -30px;
@@ -135,12 +137,6 @@ footer {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-}
-#center-footer img{
-    margin: 0; 
-    margin-top: 15px;
-    width: 8%;
-    height: 15%;
 }
 
 #featured {
@@ -274,5 +270,10 @@ footer {
 @media (max-width: 600px) {
     #featured {
         margin-top: 110px;
+    }
+}
+@media (max-width: 750px) {
+    #center-image {
+        display: none;
     }
 }

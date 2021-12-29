@@ -31,8 +31,8 @@
 }
 
 .descriptionDiv div {
-  text-align: center;
   width: 50%;
+  text-align: center;
 }
 
 .descriptionDiv p {
@@ -44,7 +44,6 @@
 .descriptionDiv p2 {
   font-family: "Rubik", sans-serif;
   font-size: 2vw;
-  margin-left: 2%;
 }
 
 #report {
