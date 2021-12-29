@@ -9,7 +9,7 @@ html {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 2.5vw;
     margin: 4px 2px;
     cursor: pointer;
     background-color: #f75dfc;
@@ -25,7 +25,7 @@ html {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 2.5vw;
     margin: 4px 2px;
     cursor: pointer;
     background-color: #f75dfc;
@@ -102,13 +102,12 @@ input[type=text]:focus {
     color: black;
     font-family: 'Rubik', sans-serif;
     float: right;
-    margin-right: 1%;
-    width: 4%;
+    margin-right: 40px;
     height: 100%;
 }
 
 #abc div {
-    font-size: 10pt;
+    font-size: 12pt;
     position: fixed;
     height: 100%;
     width: 100%;

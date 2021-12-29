@@ -3,7 +3,7 @@
 <head>
 
     <body>
-        <div id="ruffle" width="900" height="600"></div>
+        <div id="ruffle" width="100%" height="100%"></div>
         <script src="./assets/ruffle/ruffle.js"></script>
         <script>
             window.RufflePlayer = window.RufflePlayer || {};
@@ -12,10 +12,10 @@
 			    const player = ruffle.createPlayer();
 			    const container = document.getElementById("ruffle");
 			    player.id = "player";
-			    player.style.width = "900px"; 
-			    player.style.height = "600px";
+			    player.style.width = "100%"; 
+			    player.style.height = "100%";
 			    container.appendChild(player);
-                player.load("./assets/papaspizzeria_v2.swf");
+                player.load("./assets/flash-games/papaspizzeria_v2.swf");
 		    });
         </script>
     </body>
