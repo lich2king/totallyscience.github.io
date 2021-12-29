@@ -13,5 +13,10 @@ fetch('./stats/counter.php')
     .then((response) => response.text())
     .then((visits) => {
         const display = document.getElementById("visits-count")
+
+        if (visits.includes('<?php')) {
+            display.innerText = '(cannot access locally)';
+            return;
+        }
         display.innerText = addSuffix(visits)
     })
