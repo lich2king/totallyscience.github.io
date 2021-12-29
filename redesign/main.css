@@ -114,3 +114,15 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
+#scrollb {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    outline: none;
+    background-color: transparent;
+    color: #f75dfc;
+    cursor: pointer;
+}
