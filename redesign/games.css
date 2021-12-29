@@ -75,6 +75,7 @@ input[type=text]:focus {
 }
 
 #games div button div {
+    top: 50%;
     width: 100%;
     margin-bottom: 2%;
 }
