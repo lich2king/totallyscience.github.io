@@ -88,6 +88,25 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
+    },
+    "Ducklife 3":{
+        "description": "Third in the great Duck Life series! Collect coins and purchase upgrades to help your duck become world champion.",
+        "image": "./gamePics/ducklife3.jpeg",
+        "controls": "Arrow keys to move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Wix Games",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-3-evolution/game.html?nocheckorient=1"
+    },
+    "Ducklife 4":{
+        "description": "Raise a duck to become a professional racer! You can choose an egg to hatch, and customize its appearance.",
+        "image": "./gamePics/ducklife4.jpeg",
+        "controls": "Arrow keys to move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Wix Games",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1"
     }
+    
 
 }
