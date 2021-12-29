@@ -68,6 +68,10 @@ input[type=text]:focus {
     border-left: 4px;
 }
 
+#games div button::after {
+    content: " \26A1"
+}
+
 #games div button img {
     border-radius: 10px;
     height: 100%;
