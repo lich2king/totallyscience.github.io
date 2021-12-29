@@ -60,7 +60,7 @@ input[type=text]:focus {
     width: 37.5%;
     height: 15%;
     background-color: #f75dfc;
-    border: 6px solid #f75dfc;
+    border: 6px solid hsl(298, 96%, 68%);
     border-radius: 10px;
     margin-bottom: 2%;
     cursor: pointer;
