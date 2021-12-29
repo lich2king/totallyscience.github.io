@@ -84,7 +84,7 @@ input[type=text]:focus {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 3vw;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-top: 15px;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 6px;
