@@ -36,7 +36,6 @@
 #scientists div {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 50%;
     margin-right: 5%;
     margin-left: 5%;
@@ -51,12 +50,18 @@
 
 #scientists div div p {
     font-family: 'Rubik', sans-serif;
-    font-size: 33px;
+    font-size: 3vw;
+    margin-bottom: 0px;
 }
 
 #scientists div div p2 {
     font-family: 'Rubik', sans-serif;
-    font-size: 20px;
+    font-size: 2vw;
+    margin-top: 0px;
+}
+
+.scientist-image {
+    width: 20vw;
 }
 
 #follow p {
@@ -84,73 +89,47 @@
 
 #viewer p {
     font-family: 'Spline Sans', sans-serif;
-    font-size: 50px;
+    font-size: 8vw;
 }
 
 #scrollb {
-    width: 4%;
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     z-index: 99;
-    font-size: 18px;
-    border: 3px solid #f75dfc;
     outline: none;
     background-color: transparent;
-    border-radius: 50%;
     color: #f75dfc;
     cursor: pointer;
-    padding: 15px;
 }
 
-#footer div {
+footer {
     background-color: rgb(51, 51, 51);
-    width: 100%;
-    height: 30%;
-    padding-bottom: 5px;
-}
-
-#top-footer {
-    display: flex;
-    align-items: top;
-    justify-content: center;
-}
-
-#top-footer div {
-    display: inline-block;
-    color: white;
+    padding: 30px;
+    width: calc(100% - 60px);
     font-family: 'Spline Sans', sans-serif;
-    font-size: 40px;
-}
-
-#left-footer a {
+    height: 80px;
     color: white;
-    font-family: 'Rubik', sans-serif;
-    font-size: 20px;
 }
-
-#middle-footer p {
-    visibility: hidden;
+#right-footer {
+    float: right;
+    margin-top: -30px;
 }
-
+#left-footer {
+    margin-top: -30px;
+    float: left;
+}
 #right-footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    display: inline-block;
+    margin-top: 10px;
 }
-
-#right-footer div div {
-    width: 10%;
-    margin-right: 5%;
-}
-
-#right-footer div div img {
-    border: 2px solid #f75dfc;
+#right-footer img {
+    border: 2px solid white;
     padding: 6px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    width: 80%;
 }
 
 #featured {
