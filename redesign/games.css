@@ -150,6 +150,6 @@ input[type=text]:focus {
     }
 }
 
-.new div p::after {
+/*.new div p::after {
     content: " \26A1"
-}
+}*/
