@@ -9,7 +9,7 @@ html {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 2.5vw;
     margin: 4px 2px;
     cursor: pointer;
     background-color: #f75dfc;
@@ -25,7 +25,7 @@ html {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 2.5vw;
     margin: 4px 2px;
     cursor: pointer;
     background-color: #f75dfc;
@@ -55,21 +55,23 @@ input[type=text]:focus {
 
 #games div button {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: left;
     width: 37.5%;
     height: 15%;
+    text-align: left;
     background-color: #f75dfc;
-    border: 6px solid #f75dfc;
+    border: 6px solid hsl(298, 96%, 68%);
     border-radius: 10px;
     margin-bottom: 2%;
     cursor: pointer;
 }
 
 #games div button img {
-    border-radius: 15px;
+    border-radius: 10px;
     height: 100%;
     width: 30%;
+    margin-right: 15px;
 }
 
 #games div button div {
@@ -81,8 +83,8 @@ input[type=text]:focus {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 3vw;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 20px;
+    margin-top: 15px;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 0px;
 }
@@ -91,7 +93,6 @@ input[type=text]:focus {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 13px;
-    margin-left: 3%;
 }
 
 .hideUnsorted {
@@ -102,13 +103,12 @@ input[type=text]:focus {
     color: black;
     font-family: 'Rubik', sans-serif;
     float: right;
-    margin-right: 1%;
-    width: 4%;
+    margin-right: 40px;
     height: 100%;
 }
 
 #abc div {
-    font-size: 10pt;
+    font-size: 12pt;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -141,4 +141,8 @@ input[type=text]:focus {
     .categories {
         margin-top: 100px;
     }
+}
+
+.new div p::after {
+    content: " \26A1"
 }

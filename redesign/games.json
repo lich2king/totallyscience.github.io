@@ -1,15 +1,15 @@
 {
     "Retro Bowl": {
-        "description": "Win the retro bowl in football or you are bad!",
+        "description": "This is a 2-D football game where your goal is to win the Retro Bowl!",
         "image": "https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg",
         "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
-        "tags": ["featured"],
+        "tags": ["featured", "sport"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "New Star Games",
         "iframe_url": "./games/retrobowl/index.html"
     },
     "Papa's Pizzeria": {
-        "description": "Make pizzas or you are legally bad!",
+        "description": "Ever wanted to have your own pizza restraunt? Here you go!",
         "image": "https://media-cdn.tripadvisor.com/media/photo-s/19/68/9d/2d/fachada-da-nossa-pizzeria.jpg",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
         "tags": ["featured"],
@@ -18,7 +18,7 @@
         "iframe_url": "./ruffle_test.html"
     },
     "Drift Boss": {
-        "description": "Car go vroom vroom!",
+        "description": "Simple but addictive car drifting game. Collect coins and upgrade your car.",
         "image": "https://driftboss.io/upload/imgs/options/drift-boss.jpg",
         "controls": "Click space to turn",
         "tags": ["car"],
