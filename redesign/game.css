@@ -1,72 +1,100 @@
 #game {
-  margin-top: 80px;
-  width: 100%;
-  height: 550px;
-  margin-bottom: 5%;
+    margin-top: 80px;
+    width: 100%;
+    height: 550px;
+    margin-bottom: 5%;
 }
 
 #gameDiv {
-  width: 100%;
-  height: 100%;
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 #gameDiv iframe {
-  width: 75%;
-  height: 100%;
-  border: 4px solid #f75dfc;
-  border-radius: 20px;
-  margin-bottom: 0%;
+    width: 75%;
+    height: 100%;
+    border: 4px solid #f75dfc;
+    border-radius: 20px;
+    margin-bottom: 0%;
 }
 
 #description {
-  width: 100%;
-  height: 50%;
+    width: 100%;
+    height: 50%;
 }
 
 .descriptionDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .descriptionDiv div {
-  width: 50%;
+    width: 50%;
 }
 
 .descriptionDiv p {
-  font-family: "Spline Sans", sans-serif;
-  font-size: 4vw;
-  margin-bottom: 1%;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 4vw;
+    margin-bottom: 1%;
 }
 
 .descriptionDiv p2 {
-  font-family: "Rubik", sans-serif;
-  font-size: 2vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
 }
 
 #report {
-  margin-top: 15%;
-  font-family: "Rubik", sans-serif;
-  font-size: 2vw;
-  margin-left: 2%;
-  text-align: center;
+    margin-top: 15%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
+    margin-left: 2%;
+    text-align: center;
 }
 
 #report button {
-  font-size: 2vw;
-  width: 15%;
-  height: 60px;
-  color: white;
-  background-color: #f75dfc;
-  border: 0px;
-  border-radius: 10px;
-  margin-bottom: 2%;
-  cursor: pointer;
+    font-size: 2vw;
+    width: 15%;
+    height: 60px;
+    color: white;
+    background-color: #f75dfc;
+    border: 0px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
-  #game {
-    margin-top: 100px;
-  }
+    #game {
+        margin-top: 100px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 80px 200px;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container > div {
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.grid-container .mainText {
+    text-align: center;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 4vw;
+    margin-bottom: 1%;
+    margin-top: 0%;
+}
+
+.grid-container .subText {
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
+    margin-left: 15%;
 }
