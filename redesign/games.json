@@ -90,7 +90,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
     },
     "Ducklife 3":{
-        "description": "Third in the great Duck Life series! Collect coins and purchase upgrades to help your duck become world champion.",
+        "description": "Collect coins and purchase upgrades to help your duck become world champion.",
         "image": "./gamePics/ducklife3.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
