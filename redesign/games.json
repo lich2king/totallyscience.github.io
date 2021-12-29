@@ -72,7 +72,7 @@
         "iframe_url": "https://0x0800.github.io/2048-CUPCAKES/"
     },
     "Ducklife":{
-        "description": "The future of the farm is in your hands! Train your duck to run, fly and swim its way to victory so you can save the farm.",
+        "description": "The future of the farm is in your hands! Train your duck then compete in challenges to save the farm.",
         "image": "./gamePics/ducklife.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
@@ -81,7 +81,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
     },
     "Ducklife 2":{
-        "description": "Your mission in Duck Life 2 is the same as in the original Duck Life: increase your skills via the mini games and win all the races to become the  world champion.",
+        "description": "Increase your skills via the mini games and win all the races to become the  world champion.",
         "image": "./gamePics/ducklife2.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
