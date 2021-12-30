@@ -10,7 +10,7 @@
     },
     "Papa's Pizzeria": {
         "description": "Ever wanted to have your own pizza restraunt? Here you go!",
-        "image": "https://media-cdn.tripadvisor.com/media/photo-s/19/68/9d/2d/fachada-da-nossa-pizzeria.jpg",
+        "image": "./gamePics/papaspizza.png",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
         "tags": ["featured"],
         "date_added": "2021-12-28T04:56:36.982Z",
