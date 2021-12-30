@@ -313,8 +313,34 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "CBC Kids",
         "iframe_url": "https://www.cbc.ca/kidscbc2/content/games/box-tower/index.html"
+    },
+    "Tetris":{
+        "description": "Rotate the shapes to fit them perfectly together. Don't let them reach the top.",
+        "image": "./gamePics/tetris.jpeg",
+        "controls": "[Arrow Keys] - rotate shape",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Mathisfun",
+        "iframe_url": "https://www.mathsisfun.com/games/a/mimstris/index.html"
+    },
+    "UNO":{
+        "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
+        "image": "./gamePics/uno.jpeg",
+        "controls": "Click and drag with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Hooda Math",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
+    },
+    "World's Hardest Game":{
+        "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
+        "image": "./gamePics/whg.jpeg",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "vinmannie",
+        "iframe_url": "https://vinmannie.github.io/WorldsHardestGame/"
     }
-
     
 
 }
