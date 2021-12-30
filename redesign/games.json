@@ -200,7 +200,7 @@
     "Paper Minecraft":{
         "description": "The amazing world of minecraft but 2D!",
         "image": "./gamePics/papermc.jpeg",
-        "controls": "",
+        "controls": "[WASD] - Move / Jump\n [E] - Open/Close Inventory \n [Click] - Place or Mine\n[1 to 9] - Select Item",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "griffpatch",
