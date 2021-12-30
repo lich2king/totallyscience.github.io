@@ -178,6 +178,24 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "DarkLava",
         "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
+    },
+    "Minigolf":{
+        "description": "Line up your putt for a hole-in-one! Watch our for hills and water traps.",
+        "image": "./gamePics/minigolf.jpeg",
+        "controls": "Use mouse to direct hits",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "01smile",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/mini-golf/game.html?nocheckorient=1"
+    },
+    "Orcs VS Elves":{
+        "description": "Blast away the orcs and elves! Knock them out to get more balls and power up your damage multiplier.",
+        "image": "./gamePics/orcsvselves.jpeg",
+        "controls": "Use mouse to aim\nClick to shoot",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Fountainhead Entertainment",
+        "iframe_url": "https://priceless-easley-1cae17.netlify.com/"
     }
     
     
