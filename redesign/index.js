@@ -1,7 +1,5 @@
 let numberOfScans = 1
 
-//let firstHeading = document.getElementById("first-heading");
-
 //console.log(firstHeading.getBoundingClientRect());
 
 function isVisible(element) {
@@ -40,19 +38,57 @@ document.addEventListener('scroll', _.throttle(scanDocument, 250))
 //     }
 //   }
 
-//Code for scroll button
-//Get the button
+
+// When the user scrolls down 20px from the top of the document, show the scroll button
 var mybutton = document.getElementById('scrollb')
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction()
 }
-
 function scrollFunction() {
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         mybutton.style.display = 'block'
     } else {
         mybutton.style.display = 'none'
+    }
+}
+
+// featured games slideshow
+var shouldAutoSwitch = true;
+var slideIndex = 1;
+switchSlide(slideIndex);
+autoSwitch();
+
+function plusSlides(n) {
+    shouldAutoSwitch = false;
+    switchSlide(slideIndex += n);
+}
+
+function autoPlusSlides(n) {
+    switchSlide(slideIndex += n);
+}
+
+function switchSlide(n) {
+    var slides = document.getElementsByClassName("featuredSlide");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "";
+}
+
+function autoSwitch() {
+    if (shouldAutoSwitch) {
+        setTimeout(function() {
+            if (shouldAutoSwitch) {
+                autoPlusSlides(1)
+                autoSwitch()
+            }
+        }, 2500);
     }
 }

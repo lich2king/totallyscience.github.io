@@ -111,7 +111,7 @@
             <footer>
                 <div id="left-footer">
                     <p style="font-size: 4vw; margin: 0; margin-top: 15px;">Contact Us</p>
-                    <a style="font-size: 20px; color: white;" href="#email">help@totallyscience.co</a>
+                    <a style="font-size: 16px; color: white;" href="#email">help@totallyscience.co</a>
                 </div>
 
                 <img id="center-image" src="http://zachattack.oyosite.com/totallyscience/ef953f87fe2b81cdf8433c1d5b8e0626.png">
@@ -134,47 +134,7 @@
                 </div>
             </footer>
         </div>
-
-        <script>
-            var shouldAutoSwitch = true;
-            var slideIndex = 1;
-            switchSlide(slideIndex);
-            autoSwitch();
-
-            function plusSlides(n) {
-                shouldAutoSwitch = false;
-                switchSlide(slideIndex += n);
-            }
-
-            function autoPlusSlides(n) {
-                switchSlide(slideIndex += n);
-            }
-
-            function switchSlide(n) {
-                var slides = document.getElementsByClassName("featuredSlide");
-                if (n > slides.length) {
-                    slideIndex = 1
-                }
-                if (n < 1) {
-                    slideIndex = slides.length
-                }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slides[slideIndex - 1].style.display = "";
-            }
-
-            function autoSwitch() {
-                if (shouldAutoSwitch) {
-                    setTimeout(function() {
-                        if (shouldAutoSwitch) {
-                            autoPlusSlides(1)
-                            autoSwitch()
-                        }
-                    }, 2500);
-                }
-            }
-        </script>
+        
         <!--Script for text fade in _.throttle() function {ORDER MATTERS FOR SCRIPTS!}-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
         <script src="index.js"></script>

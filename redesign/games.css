@@ -2,38 +2,41 @@ html {
     scroll-behavior: smooth;
 }
 
+/* category selection */
+.categoryButton {
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5vw;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #f75dfc;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+.categoryButton span {
+    font-size: 2vw;
+}
 .selectedCategory {
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2.5vw;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #f75dfc;
     opacity: 1;
-    border-radius: 8px;
-    transition: opacity 0.3s ease;
 }
-
 .unselectedCategory {
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2.5vw;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #f75dfc;
     opacity: 0.4;
-    border-radius: 8px;
-    transition: opacity 0.3s ease;
+}
+.categories {
+    text-align: center;
+    margin-top: 80px;
+}
+@media (max-width: 600px) {
+    .categories {
+        margin-top: 100px;
+    }
 }
 
+/* searchbar */
 input[type=text] {
     width: 15%;
     box-sizing: border-box;
@@ -48,11 +51,11 @@ input[type=text] {
     transition: width 0.4s ease-in-out;
     margin-bottom: 3%;
 }
-
 input[type=text]:focus {
     width: 25%;
 }
 
+/* games */
 #games div button {
     display: flex;
     align-items: left;
@@ -67,45 +70,40 @@ input[type=text]:focus {
     cursor: pointer;
     border-left: 4px;
 }
-
 .new::after {
     font-size: 2vw;
     content: " \26A1"
 }
-
 #games div button img {
     border-radius: 10px;
     height: 100px;
     width: 30%;
     margin-right: 15px;
 }
-
 #games div button div {
     margin-top: 1.5%;
     width: 100%;
     margin-bottom: 2%;
 }
-
 #games div button div p {
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-size: 3vw;
+    font-size: 2vw;
     margin-bottom: 30px;
     margin-top: 15px;
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 6px;
 }
-
 #games div button div p2 {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 13px;
 }
-
 .hideUnsorted {
     visibility: hidden;
 }
 
+/* find game by letter */
 #abc {
     color: black;
     font-family: 'Rubik', sans-serif;
@@ -113,14 +111,12 @@ input[type=text]:focus {
     margin-right: 40px;
     height: 100%;
 }
-
 #abc div {
     font-size: 12pt;
     position: fixed;
     height: 100%;
     width: 100%;
 }
-
 #abc div p {
     cursor: pointer;
     margin-top: 0%;
@@ -128,28 +124,11 @@ input[type=text]:focus {
     padding-right: 15px;
     padding-left: 25px;
 }
-
 #abc div p:hover {
     margin-left: -10px;
     transition: all 0.2s ease;
 }
-
 #abc div p {
     margin-left: 0px;
     transition: all 0.2s ease;
 }
-
-.categories {
-    text-align: center;
-    margin-top: 80px;
-}
-
-@media (max-width: 600px) {
-    .categories {
-        margin-top: 100px;
-    }
-}
-
-/*.new div p::after {
-    content: " \26A1"
-}*/
