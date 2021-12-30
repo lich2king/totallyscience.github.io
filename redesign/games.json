@@ -182,7 +182,7 @@
     "Minigolf":{
         "description": "Line up your putt for a hole-in-one! Watch our for hills and water traps.",
         "image": "./gamePics/minigolf.jpeg",
-        "controls": "Use mouse to direct hits",
+        "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "01smile",
@@ -209,7 +209,7 @@
     "Pizza Party":{
         "description": "Run a pizza shop that has lots of customers coming in. Quickly make their pizza and serve them in a timely fashion.",
         "image": "./gamePics/pizzaparty.jpeg",
-        "controls": "Drag and click with the mouse",
+        "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Hooda Math",
@@ -218,7 +218,7 @@
     "Pool":{
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./gamePics/pool.jpeg",
-        "controls": "Drag and click with the mouse",
+        "controls": "Click and drag with the mouse",
         "tags": ["2"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "isgames",
@@ -227,7 +227,7 @@
     "Restaurant Simulator":{
         "description": "Ever wondered what it's like running a restaurant? Now you can try it out!",
         "image": "./gamePics/restaurant.jpeg",
-        "controls": "Drag and click with the mouse",
+        "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Hooda Math",
@@ -259,6 +259,24 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "ouroboroz",
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#sims2"
+    },
+    "Slope":{
+        "description": "An endless space run game where you need to avoid red obstacles at all costs.",
+        "image": "./gamePics/slope.png",
+        "controls": "[Arrow Keys] - Move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Rob Kay",
+        "iframe_url": "https://web.archive.org/web/20181213135805id_/https://storage-cf.y8.com/y8-studio/unity/joll/slope/"
+    },
+    "Soccer Free Kicks":{
+        "description": "Train your freekick shooting skills through 15 levels of increasing difficulty!",
+        "image": "./gamePics/soccer.jpeg",
+        "controls": "Click and drag with the mouse",
+        "tags": ["sport"],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Hooda Math",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/freekick-training/game.html?nocheckorient=1"
     }
     
     
