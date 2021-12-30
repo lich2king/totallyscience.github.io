@@ -11,7 +11,7 @@
 
     "Papa's Pizzeria": {
         "description": "Ever wanted to have your own pizza restraunt? Here you go!",
-        "image": "./gamePics/papaspizza.png",
+        "image": "./assets/game_images/papaspizza.png",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
         "tags": ["featured"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -31,7 +31,7 @@
     
     "Chess": {
         "description": "Online board game where your could play against a friend or the computer.",
-        "image": "./gamePics/chess-icon.png",
+        "image": "./assets/game_images/chess-icon.png",
         "controls": "Use your mouse to drag the piece you want to move",
         "tags": ["2"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -41,7 +41,7 @@
 
     "2048": {
         "description": "2048 is an easy and fun puzzle game. Join the numbers and get to the 2048 tile.",
-        "image": "./gamePics/2048.png",
+        "image": "./assets/game_images/2048.png",
         "controls": "Arrow keys to slide tiles",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -51,7 +51,7 @@
 
     "College 2048": {
         "description": "The college edition of the classic 2048 game. Try to get to the MIT tile.",
-        "image": "./gamePics/college2048.png",
+        "image": "./assets/game_images/college2048.png",
         "controls": "Arrow keys to slide tiles",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -61,7 +61,7 @@
 
     "Connect 4": {
         "description": "Get 4 pieces in a row to win. Play against a friend or the computer.",
-        "image": "./gamePics/connect4.jpeg",
+        "image": "./assets/game_images/connect4.jpeg",
         "controls": "Click where your want to place your piece",
         "tags": ["2"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -71,7 +71,7 @@
     
     "Cupcake2048": {
         "description": "The cupcake edition of the classic 2048 game. Mix cupcakes together to create new ones!",
-        "image": "./gamePics/cupcake2048.png",
+        "image": "./assets/game_images/cupcake2048.png",
         "controls": "Arrow keys to slide tiles",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -81,7 +81,7 @@
 
     "Ducklife":{
         "description": "The future of the farm is in your hands! Train your duck then compete in challenges to save the farm.",
-        "image": "./gamePics/ducklife.jpeg",
+        "image": "./assets/game_images/ducklife.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -91,7 +91,7 @@
 
     "Ducklife 2":{
         "description": "Increase your skills via the mini games and win all the races to become the  world champion.",
-        "image": "./gamePics/ducklife2.jpeg",
+        "image": "./assets/game_images/ducklife2.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -101,7 +101,7 @@
 
     "Ducklife 3":{
         "description": "Collect coins and purchase upgrades to help your duck become world champion.",
-        "image": "./gamePics/ducklife3.jpeg",
+        "image": "./assets/game_images/ducklife3.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -111,7 +111,7 @@
 
     "Ducklife 4":{
         "description": "Raise a duck to become a professional racer! You can choose an egg to hatch, and customize its appearance.",
-        "image": "./gamePics/ducklife4.jpeg",
+        "image": "./assets/game_images/ducklife4.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -121,7 +121,7 @@
 
     "Elastic Man":{
         "description": "Satisfying game where you can squish, pull, and distort Morty's head.",
-        "image": "./gamePics/elasticman.jpeg",
+        "image": "./assets/game_images/elasticman.jpeg",
         "controls": "Drag features with mouse or touch-screen",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -131,7 +131,7 @@
 
     "Factory Balls":{
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
-        "image": "./gamePics/factoryballsforever.jpeg",
+        "image": "./assets/game_images/factoryballsforever.jpeg",
         "controls": "Drag balls with mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -141,7 +141,7 @@
 
     "Flappy Bird":{
         "description": "Dodge the tubes and try to beat the high score!",
-        "image": "./gamePics/Flappy_Bird_icon.png",
+        "image": "./assets/game_images/Flappy_Bird_icon.png",
         "controls": "Click space to fly higher",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -151,7 +151,7 @@
     
     "FNF":{
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
-        "image": "./gamePics/fridaynightfunkin.png",
+        "image": "./assets/game_images/fridaynightfunkin.png",
         "controls": "Use the arrow keys to play notes",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -161,7 +161,7 @@
     
     "FNF 2":{
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
-        "image": "./gamePics/Fnf.jpeg",
+        "image": "./assets/game_images/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -171,7 +171,7 @@
     
     "Galactic Wars":{
         "description": "Fight in the space war between the Sith Empire and the Galactic Republic.",
-        "image": "./gamePics/galacticwars.png",
+        "image": "./assets/game_images/galacticwars.png",
         "controls": "Arrow keys to move\nClick 'n' to fire",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -181,7 +181,7 @@
     
     "Geometry Dash":{
         "description": "Dodge spikes and don't die!",
-        "image": "./gamePics/geometrydash.png",
+        "image": "./assets/game_images/geometrydash.png",
         "controls": "Click space to jump",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -191,7 +191,7 @@
     
     "Jetpack Joyride":{
         "description": "Dodge fire and missiles, while collecting coins through all the havoc.",
-        "image": "./gamePics/jetpackjoyride.png",
+        "image": "./assets/game_images/jetpackjoyride.png",
         "controls": "Hold space to go up",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -201,7 +201,7 @@
     
     "Minigolf":{
         "description": "Line up your putt for a hole-in-one! Watch our for hills and water traps.",
-        "image": "./gamePics/minigolf.jpeg",
+        "image": "./assets/game_images/minigolf.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -211,7 +211,7 @@
     
     "Orcs VS Elves":{
         "description": "Blast away the orcs and elves! Knock them out to get more balls and power up your damage multiplier.",
-        "image": "./gamePics/orcsvselves.jpeg",
+        "image": "./assets/game_images/orcsvselves.jpeg",
         "controls": "Use mouse to aim\nClick to shoot",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -221,7 +221,7 @@
     
     "Paper Minecraft":{
         "description": "The amazing world of minecraft but 2D!",
-        "image": "./gamePics/papermc.jpeg",
+        "image": "./assets/game_images/papermc.jpeg",
         "controls": "[WASD] - Move / Jump\n [E] - Open/Close Inventory \n [Click] - Place or Mine\n[1 to 9] - Select Item\n[E+hover] - Open / Close Chest, Crafting Table, Door\n[Space] - Drop single tile from a stack while dragging.\n[F] - Eat food\n[N] - Label a sign or chest\n[Q] - Drop item\n[P] - Pause / Unpause\n[T] - Talk / Command\n[O] - Save your game\n[Shift] - Sprint\n[M] - Music / Sounds",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -231,7 +231,7 @@
     
     "Pizza Party":{
         "description": "Run a pizza shop that has lots of customers coming in. Quickly make their pizza and serve them in a timely fashion.",
-        "image": "./gamePics/pizzaparty.jpeg",
+        "image": "./assets/game_images/pizzaparty.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -241,7 +241,7 @@
     
     "Pool":{
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
-        "image": "./gamePics/pool.jpeg",
+        "image": "./assets/game_images/pool.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": ["2"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -251,7 +251,7 @@
     
     "Restaurant Simulator":{
         "description": "Ever wondered what it's like running a restaurant? Now you can try it out!",
-        "image": "./gamePics/restaurant.jpeg",
+        "image": "./assets/game_images/restaurant.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -261,7 +261,7 @@
     
     "Robots No Wheels":{
         "description": "Puzzle game where your have limited moves to put each robot on a button.",
-        "image": "./gamePics/robots.jpeg",
+        "image": "./assets/game_images/robots.jpeg",
         "controls": "[Tab] - Switch Robot\n[Arrow Keys] - Move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -271,7 +271,7 @@
     
     "Rolling Vortex":{
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
-        "image": "./gamePics/rollingvortex.jpeg",
+        "image": "./assets/game_images/rollingvortex.jpeg",
         "controls": "[Arrow Keys] - Move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -281,7 +281,7 @@
     
     "The Sims 2":{
         "description": "Follow the story or just live your own life. In here you could do and be whatever you want.",
-        "image": "./gamePics/sims.jpeg",
+        "image": "./assets/game_images/sims.jpeg",
         "controls": "[Arrow Keys] - Move\n[x]+[z] - interact",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -291,7 +291,7 @@
     
     "Slope":{
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
-        "image": "./gamePics/slope.png",
+        "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -301,7 +301,7 @@
     
     "Soccer Free Kicks":{
         "description": "Train your freekick shooting skills through 15 levels of increasing difficulty!",
-        "image": "./gamePics/soccer.jpeg",
+        "image": "./assets/game_images/soccer.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": ["sport"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -311,7 +311,7 @@
     
     "Street Fighter":{
         "description": "A classic fighting game. You will engage in one-on-one close quarter combat against your opponent.",
-        "image": "./gamePics/streetfighter.png",
+        "image": "./assets/game_images/streetfighter.png",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -321,7 +321,7 @@
     
     "Solitaire":{
         "description": "Fun and easy to pick up on card game.",
-        "image": "./gamePics/solitaire.png",
+        "image": "./assets/game_images/solitaire.png",
         "controls": "Click and drag with the mouse",
         "tags": ["card"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -331,7 +331,7 @@
     
     "Tanuki Sunset":{
         "description": "Play as a racoon on a skateboard. Drift at turns and collect coins. Try to beat the highscore!",
-        "image": "./gamePics/tanukisunset.jpeg",
+        "image": "./assets/game_images/tanukisunset.jpeg",
         "controls": "[Arrow Keys] - turn\n[Space] - drift",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -341,7 +341,7 @@
     
     "Stack":{
         "description": "Stack the blocks as high as you can. Try to beat the highscore!",
-        "image": "./gamePics/stack.jpeg",
+        "image": "./assets/game_images/stack.jpeg",
         "controls": "[Space] - Place block",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -351,7 +351,7 @@
     
     "Tetris":{
         "description": "Rotate the shapes to fit them perfectly together. Don't let them reach the top.",
-        "image": "./gamePics/tetris.png",
+        "image": "./assets/game_images/tetris.png",
         "controls": "[Arrow Keys] - rotate shape",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -361,7 +361,7 @@
     
     "UNO":{
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
-        "image": "./gamePics/uno.jpeg",
+        "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -371,7 +371,7 @@
     
     "World's Hardest Game":{
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
-        "image": "./gamePics/whg.jpeg",
+        "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
