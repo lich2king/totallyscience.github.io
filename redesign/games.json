@@ -205,6 +205,24 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/10128407/embed"
+    },
+    "Pizza Party":{
+        "description": "Run a pizza shop that has lots of customers coming in. Quickly make their pizza and serve them in a timely fashion.",
+        "image": "./gamePics/pizzaparty.jpeg",
+        "controls": "Drag and click with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Hooda Math",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
+    },
+    "Pool":{
+        "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8-ball in!",
+        "image": "./gamePics/pool.jpeg",
+        "controls": "Drag and click with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "isgames",
+        "iframe_url": "https://isgames.github.io/8ball/"
     }
     
     
