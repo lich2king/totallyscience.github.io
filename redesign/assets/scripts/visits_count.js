@@ -1,9 +1,9 @@
-const addSuffix = num => {
-    if(num.endsWith('1')) {
+const addSuffix = (num) => {
+    if (num.endsWith('1')) {
         return num + 'st'
-    } else if(num.endsWith('2')) {
+    } else if (num.endsWith('2')) {
         return num + 'nd'
-    } else if(num.endsWith('3')) {
+    } else if (num.endsWith('3')) {
         return num + 'rd'
     }
     return num + 'th'
@@ -12,11 +12,11 @@ const addSuffix = num => {
 fetch('./stats/counter.php')
     .then((response) => response.text())
     .then((visits) => {
-        const display = document.getElementById("visits-count")
+        const display = $('visits-count')
 
         if (visits.includes('<?php')) {
-            display.innerText = '(cannot access locally)';
-            return;
+            display.innerText = '(cannot access locally)'
+            return
         }
         display.innerText = addSuffix(visits)
     })

@@ -1,75 +1,39 @@
-let numberOfScans = 1
+const numberOfScans = 1
 
-//console.log(firstHeading.getBoundingClientRect());
-
-function isVisible(element) {
-    let elementBox = element.getBoundingClientRect()
-    let distanceFromTop = -100
+const isVisible = (element) => {
+    const elementBox = element.getBoundingClientRect()
+    const distanceFromTop = -100
 
     if (elementBox.top - window.innerHeight < distanceFromTop) {
         return true
-    } else {
-        return false
     }
+    return false
 }
 
-function scanDocument() {
-    let sectionList = document.querySelectorAll('.hidden')
-    sectionList.forEach(function (section) {
+const scanDocument = () => {
+    const sectionList = $qsa('.hidden')
+    sectionList.forEach((section) => {
         if (isVisible(section)) {
             section.classList.remove('hidden')
             section.classList.add('text-fade')
         }
     })
 
-    //console.log(numberOfScans)
     numberOfScans++
 }
 
 document.addEventListener('scroll', _.throttle(scanDocument, 250))
 
-// function throttle(fn, wait) {
-//     var time = Date.now();
-//     return function() {
-//       if ((time + wait - Date.now()) < 0) {
-//         fn();
-//         time = Date.now();
-//       }
-//     }
-//   }
+const mybutton = document.getElementById('scrollb')
 
+const shouldAutoSwitch = true
+const slideIndex = 1
 
-// When the user scrolls down 20px from the top of the document, show the scroll button
-var mybutton = document.getElementById('scrollb')
+switchSlide(slideIndex)
+autoSwitch()
 
-window.onscroll = function () {
-    scrollFunction()
-}
-function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        mybutton.style.display = 'block'
-    } else {
-        mybutton.style.display = 'none'
-    }
-}
-
-// featured games slideshow
-var shouldAutoSwitch = true;
-var slideIndex = 1;
-switchSlide(slideIndex);
-autoSwitch();
-
-function plusSlides(n) {
-    shouldAutoSwitch = false;
-    switchSlide(slideIndex += n);
-}
-
-function autoPlusSlides(n) {
-    switchSlide(slideIndex += n);
-}
-
-function switchSlide(n) {
-    var slides = document.getElementsByClassName("featuredSlide");
+const switchSlide = (n) => {
+    const slides = $c('featuredSlide')
     if (n > slides.length) {
         slideIndex = 1
     }
@@ -77,18 +41,27 @@ function switchSlide(n) {
         slideIndex = slides.length
     }
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].style.display = 'none'
     }
-    slides[slideIndex - 1].style.display = "";
+    slides[slideIndex - 1].style.display = ''
 }
 
-function autoSwitch() {
+const plusSlides = (n) => {
+    shouldAutoSwitch = false
+    switchSlide((slideIndex += n))
+}
+
+const autoPlusSlides = (n) => {
+    switchSlide((slideIndex += n))
+}
+
+const autoSwitch = () => {
     if (shouldAutoSwitch) {
-        setTimeout(function() {
+        setTimeout(() => {
             if (shouldAutoSwitch) {
                 autoPlusSlides(1)
                 autoSwitch()
             }
-        }, 2500);
+        }, 2500)
     }
 }

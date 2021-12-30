@@ -4,26 +4,6 @@ const sortObject = (obj) =>
         .sort()
         .reduce((res, key) => ((res[key] = obj[key]), res), {})
 
-const $ = (id) => {
-    return document.getElementById(id)
-}
-
-const $c = (className) => {
-    return document.getElementsByClassName(className)
-}
-
-const $qsa = (query) => {
-    return document.querySelectorAll(query)
-}
-
-const $n = (name) => {
-    return document.getElementsByName(name)
-}
-
-const mk = (type) => {
-    return document.createElement(type)
-}
-
 const weekAgo = new Date()
 weekAgo.setDate(weekAgo.getDate() - 7)
 
@@ -48,7 +28,7 @@ fetch('./assets/games.json')
             gameBtn.name = name
             gameBtn.classList = data.tags.join(' ')
             const gameDate = new Date(data.date_added)
-            console.log(gameDate)
+
             if (gameDate > weekAgo) {
                 gameBtn.classList.add('new')
             }
@@ -127,30 +107,14 @@ searchBar.addEventListener('keyup', () => {
 //add event listener to every element in the document with the class "letter"
 const letters = $qsa('.letter')
 letters.forEach((letter) => {
-    letter.addEventListener('click', function (e) {
-        var letter = e.target.innerText.toLowerCase()
-        var section = document.getElementById(letter)
-        var sectionBox = section.getBoundingClientRect()
+    letter.addEventListener('click', (e) => {
+        const letter = e.target.innerText.toLowerCase()
+        const section = $(letter)
+        if (section == null) return
+        const sectionBox = section.getBoundingClientRect()
         //-90 acts as an offsett so the top button isn't off screen
-        var scroll = window.scrollY + sectionBox.top - 90
+        const scroll = window.scrollY + sectionBox.top - 90
+
         window.scrollTo({top: scroll, behavior: 'smooth'})
     })
 })
-
-
-//Code for scroll button
-//Get the button
-var mybutton = document.getElementById('scrollb')
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    scrollFunction()
-}
-
-function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        mybutton.style.display = 'block'
-    } else {
-        mybutton.style.display = 'none'
-    }
-}
