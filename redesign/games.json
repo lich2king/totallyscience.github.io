@@ -241,6 +241,24 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/mobile_slydrs/index.html"
+    },
+    "Rolling Vortex":{
+        "description": "Dodge the rings and collect coins. Try to beat the highscore!",
+        "image": "./gamePics/rollingvortex.jpeg",
+        "controls": "[Arrow Keys] - Move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Voodoo",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
+    },
+    "Sims":{
+        "description": "Follow the story or just live your own life. In here you could do and be whatever you want.",
+        "image": "./gamePics/sims.jpeg",
+        "controls": "[Arrow Keys] - Move\n[x] and [z] - interact",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "ouroboroz",
+        "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#sims2"
     }
     
     
