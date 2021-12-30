@@ -304,7 +304,17 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Rewind Games",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1756009/WebGL/index.html"
+    },
+    "Stack":{
+        "description": "Stack the blocks as high as you can. Try to beat the highscore!",
+        "image": "./gamePics/stack.jpeg",
+        "controls": "[Space] - Place block",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "CBC Kids",
+        "iframe_url": "https://www.cbc.ca/kidscbc2/content/games/box-tower/index.html"
     }
+
     
 
 }
