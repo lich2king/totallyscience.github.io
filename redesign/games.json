@@ -153,14 +153,33 @@
         "iframe_url": "https://scratch.mit.edu/projects/466964675/embed"
     },
     "Galactic Wars":{
-        "description": "Fight in the space war between the Sith Empire and the Galactic Republic..",
+        "description": "Fight in the space war between the Sith Empire and the Galactic Republic.",
         "image": "./gamePics/galacticwars.png",
         "controls": "Arrow keys to move\nClick 'n' to fire",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Shotaro_Ishinomori",
         "iframe_url": "./games/galacticwars/index.html"
+    },
+    "Geometry Dash":{
+        "description": "Dodge spikes and don't die!",
+        "image": "./gamePics/geometrydash.png",
+        "controls": "Click space to jump",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "griffpatch",
+        "iframe_url": "https://scratch.mit.edu/projects/105500895/embed"
+    },
+    "Jetpack Joyride":{
+        "description": "Dodge fire and missiles, while collecting coins through all the havoc.",
+        "image": "./gamePics/jetpackjoyride.png",
+        "controls": "Hold space to go up",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "DarkLava",
+        "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
     }
+    
     
 
 }
