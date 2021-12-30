@@ -37,11 +37,13 @@ window.addEventListener(
 //Get the button
 const scrollButton = $('scrollb')
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.addEventListener('scroll', () => {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        scrollButton.style.display = 'block'
-    } else {
-        scrollButton.style.display = 'none'
-    }
-})
+if (scrollButton) {
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            scrollButton.style.display = 'block'
+        } else {
+            scrollButton.style.display = 'none'
+        }
+    })
+}

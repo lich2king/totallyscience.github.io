@@ -2,10 +2,6 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('game')
 
-const $ = (id) => {
-    return document.getElementById(id)
-}
-
 fetch('./assets/games.json')
     .then((response) => response.json())
     .then((games) => {

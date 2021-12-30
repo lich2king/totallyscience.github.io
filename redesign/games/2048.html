@@ -19,15 +19,6 @@ body {
   display: block;
   clear: both; }
 
-h1.title {
-  font-size: 80px;
-  font-weight: bold;
-  margin: 0;
-  display: block;
-  float: left; }
-  h1.title a {
-    text-decoration: none; }
-
 @-webkit-keyframes move-up {
   0% {
     top: 25px;
@@ -56,8 +47,8 @@ h1.title {
     opacity: 0; } }
 
 .scores-container {
-  float: right;
-  text-align: right; }
+  margin-top: 50px;  
+}
 
 .score-container, .best-container {
   position: relative;
@@ -150,7 +141,6 @@ hr {
     opacity: 1; } }
 
 .game-container {
-  margin-top: 40px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -500,22 +490,28 @@ hr {
   clear: both; }
 
 .game-intro {
-  float: left;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%);
   line-height: 42px;
   margin-bottom: 0; }
 
 .restart-button {
+  transform: translate(0, -12px);
+  position: relative;
   display: inline-block;
   background: #8f7a66;
   border-radius: 3px;
-  padding: 0 20px;
+  margin: 10px;
   text-decoration: none;
   color: #f9f6f2;
+  padding: 8px;
+  width: 100px;
   height: 40px;
   line-height: 42px;
-  display: block;
   text-align: center;
-  float: right; }
+}
 
 .game-explanation {
   margin-top: 50px; }
@@ -528,10 +524,7 @@ hr {
     margin: 20px 0;
     padding: 0 20px; }
 
-  h1.title {
-    font-size: 27px;
-    margin-top: 15px; }
-
+ 
   .container {
     width: 280px;
     margin: 0 auto; }
@@ -550,15 +543,8 @@ hr {
     box-sizing: border-box;
     line-height: 1.65; }
 
-  .restart-button {
-    width: 42%;
-    padding: 0;
-    display: block;
-    box-sizing: border-box;
-    margin-top: 2px; }
 
   .game-container {
-    margin-top: 17px;
     position: relative;
     padding: 10px;
     cursor: default;
@@ -792,9 +778,6 @@ p {
     text-transform: uppercase;
     font-size: 10px; }
 
-.game-container {
-  margin-top: 25px; }
-
 .grammarly-box {
   padding: 20px;
   background: #fff;
@@ -962,7 +945,7 @@ h1.title-internal {
 .shop-list .item-link img {
   width: 195px;
   height: 195px; }
-.shop-list .item-link .title {
+.shop-list .item-link {
   margin: 5px 0; }
 
 .quotes .quote {
@@ -1049,16 +1032,12 @@ footer {
 
   .mobile-top {
     display: block; }
-
-  body {
-    padding: 0px; } }
+  }
 @media screen and (min-width: 481px) {
   .tile .tile-inner {
     line-height: 107px; }
 
-  h1.title {
-    font-size: 74px;
-    line-height: 66px; } }
+}
 @media screen and (max-height: 768px) and (min-width: 481px) {
   .heading {
     margin-bottom: 15px; }
@@ -1071,7 +1050,7 @@ footer {
     width: 450px; }
 
   .game-container {
-    margin-top: 40px;
+    margin-top: 10px;
     position: relative;
     padding: 12px;
     cursor: default;
@@ -1243,11 +1222,9 @@ footer {
   .game-intro {
     font-size: 17px; }
 
-  .restart-button {
-    padding: 0 14px; }
 
   .game-container {
-    margin-top: 10px; }
+    margin-top: 0px; }
 
   .tips-and-tricks li a {
     width: 218px; }
@@ -1264,8 +1241,6 @@ footer {
   #flappy-thirds-wrapper canvas {
     width: 100%; }
 
-  .restart-button {
-    width: 35%; }
 
   .game-container {
     margin-top: 10px; }
@@ -1310,19 +1285,18 @@ footer {
 </style>
 <center>
   <div class="heading">
-  <h1 class="title"><a href="/">2048</a></h1>
-  <div class="scores-container">
-    <div class="score-container">0</div>
-    <div class="best-container">2960</div>
+    <div class="scores-container">
+      <div class="score-container">0</div>
+      <a class="restart-button">New Game</a>
+      <div class="best-container">2960</div>
+    </div>
   </div>
-</div>
-<div class="game-intro">
-  <a class="restart-button">New Game</a>
-  <h2 class="subtitle">Play <strong>2048 Game</strong> Online</h2>
-  <div class="above-game">
-    <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
+  <div class="game-intro">
+    <h2 class="subtitle">Play <strong>2048 Game</strong> Online</h2>
+    <div class="above-game">
+      <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
+    </div>
   </div>
-</div>
 
 <div class="game-container">
   <div class="game-message">
