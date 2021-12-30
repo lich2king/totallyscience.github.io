@@ -200,14 +200,7 @@
     "Paper Minecraft":{
         "description": "The amazing world of minecraft but 2D!",
         "image": "./gamePics/papermc.jpeg",
-        "controls": "[1 to 9] - Select Item\n[Click] - Place or Mine\n
-        [WASD] - Move / Jump\n[E] - Open/Close Inventory\n
-        [E+hover] - Open / Close Chest, Crafting Table, Door\n
-        [Space] - Drop single tile from a stack while dragging.\n
-        [F] - Eat food\n[N] - Label a sign or chest\n
-        [Q] - Drop item\nP] - Pause / Unpause\n
-        [T] - Talk / Command\n[O] - Save your game\n
-        [M] - Music / Sounds\n[Shift] - Sprint",
+        "controls": "",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "griffpatch",
