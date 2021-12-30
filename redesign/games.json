@@ -288,13 +288,22 @@
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#super_street_fighter_3_alpha"
     },
     "Solitaire":{
-        "description": "Fun and easy to pick up card game.",
+        "description": "Fun and easy to pick up on card game.",
         "image": "./gamePics/solitaire.png",
         "controls": "Click and drag with the mouse",
         "tags": ["card"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Google",
         "iframe_url": "https://www.google.com/logos/fnbx/solitaire/standalone.html"
+    },
+    "Tanuki Sunset":{
+        "description": "Play as a racoon on a skateboard. Drift at turns and collect coins. Try to beat the highscore!",
+        "image": "./gamePics/tanukisunset.jpeg",
+        "controls": "[Arrow Keys] - turn\n[Space] - drift",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Rewind Games",
+        "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1756009/WebGL/index.html"
     }
     
 
