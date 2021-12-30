@@ -134,7 +134,7 @@
         "developer": "HyperPixel",
         "iframe_url": "https://scratch.mit.edu/projects/17828009/embed"
     },
-    "FNF'":{
+    "FNF":{
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./gamePics/fridaynightfunkin.png",
         "controls": "Use the arrow keys to play notes",
@@ -143,7 +143,7 @@
         "developer": "Cameron Taylor",
         "iframe_url": "https://cookieduck.com/games/fnf/week7/week7/"
     },
-    "FNF 2'":{
+    "FNF 2":{
         "description": "A horror game in which you work as a newly hired security guard for the night shift at a fast food restaurant.",
         "image": "./gamePics/fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
