@@ -251,7 +251,7 @@
         "developer": "Voodoo",
         "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
     },
-    "Sims":{
+    "The Sims 2":{
         "description": "Follow the story or just live your own life. In here you could do and be whatever you want.",
         "image": "./gamePics/sims.jpeg",
         "controls": "[Arrow Keys] - Move\n[x] and [z] - interact",
