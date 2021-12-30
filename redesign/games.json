@@ -254,7 +254,7 @@
     "The Sims 2":{
         "description": "Follow the story or just live your own life. In here you could do and be whatever you want.",
         "image": "./gamePics/sims.jpeg",
-        "controls": "[Arrow Keys] - Move\n[x] and [z] - interact",
+        "controls": "[Arrow Keys] - Move\n[x]+[z] - interact",
         "tags": [""],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "ouroboroz",
@@ -277,8 +277,25 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/freekick-training/game.html?nocheckorient=1"
+    },
+    "Street Fighter":{
+        "description": "A classic fighting game. You will engage in straight-up one-on-one close quarter fighting / combat against your opponent.",
+        "image": "./gamePics/streetfighter.png",
+        "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "ouroboroz",
+        "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#super_street_fighter_3_alpha"
+    },
+    "Solitaire":{
+        "description": "Fun and easy to pick up card game.",
+        "image": "./gamePics/solitaire.png",
+        "controls": "Click and drag with the mouse",
+        "tags": ["card"],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Google",
+        "iframe_url": "https://www.google.com/logos/fnbx/solitaire/standalone.html"
     }
-    
     
 
 }
