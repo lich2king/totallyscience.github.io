@@ -279,7 +279,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/freekick-training/game.html?nocheckorient=1"
     },
     "Street Fighter":{
-        "description": "A classic fighting game. You will engage in straight-up one-on-one close quarter fighting / combat against your opponent.",
+        "description": "A classic fighting game. You will engage in one-on-one close quarter combat against your opponent.",
         "image": "./gamePics/streetfighter.png",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
         "tags": [""],
