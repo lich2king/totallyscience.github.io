@@ -144,7 +144,7 @@
         "iframe_url": "https://cookieduck.com/games/fnf/week7/week7/"
     },
     "FNF 2":{
-        "description": "A horror game in which you work as a newly hired security guard for the night shift at a fast food restaurant.",
+        "description": "A horror game in which you work as a newly hired security guard for the night shift at a restaurant.",
         "image": "./gamePics/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
         "tags": [""],
