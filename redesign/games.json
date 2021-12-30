@@ -216,13 +216,31 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
     },
     "Pool":{
-        "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8-ball in!",
+        "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./gamePics/pool.jpeg",
         "controls": "Drag and click with the mouse",
-        "tags": [""],
+        "tags": ["2"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "isgames",
         "iframe_url": "https://isgames.github.io/8ball/"
+    },
+    "Restaurant Simulator":{
+        "description": "Ever wondered what it's like running a restaurant? Now you can try it out!",
+        "image": "./gamePics/restaurant.jpeg",
+        "controls": "Drag and click with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Hooda Math",
+        "iframe_url": "https://www.hoodamath.com/mobile/games/open-restaurant/game.html?nocheckorient=1"
+    },
+    "Robots No Wheels":{
+        "description": "Puzzle game where your have limited moves to put each robot on a button.",
+        "image": "./gamePics/robots.jpeg",
+        "controls": "[Tab] - Switch Robot\n[Arrow Keys] - Move",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Math Playground",
+        "iframe_url": "https://www.mathplayground.com/mobile_slydrs/index.html"
     }
     
     
