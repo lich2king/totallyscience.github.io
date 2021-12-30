@@ -6,7 +6,7 @@ const $ = (id) => {
     return document.getElementById(id)
 }
 
-fetch('./games.json')
+fetch('./assets/games.json')
     .then((response) => response.json())
     .then((games) => {
         const gameData = games[gameName]
