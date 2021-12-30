@@ -1,4 +1,4 @@
-const numberOfScans = 1
+let numberOfScans = 1
 
 const isVisible = (element) => {
     const elementBox = element.getBoundingClientRect()
@@ -26,12 +26,10 @@ document.addEventListener('scroll', _.throttle(scanDocument, 250))
 
 const mybutton = document.getElementById('scrollb')
 
-const shouldAutoSwitch = true
-const slideIndex = 1
 
-switchSlide(slideIndex)
-autoSwitch()
-
+// featured games slides code
+let shouldAutoSwitch = true
+let slideIndex = 1
 const switchSlide = (n) => {
     const slides = $c('featuredSlide')
     if (n > slides.length) {
@@ -45,16 +43,13 @@ const switchSlide = (n) => {
     }
     slides[slideIndex - 1].style.display = ''
 }
-
 const plusSlides = (n) => {
     shouldAutoSwitch = false
     switchSlide((slideIndex += n))
 }
-
 const autoPlusSlides = (n) => {
     switchSlide((slideIndex += n))
 }
-
 const autoSwitch = () => {
     if (shouldAutoSwitch) {
         setTimeout(() => {
@@ -65,3 +60,6 @@ const autoSwitch = () => {
         }, 2500)
     }
 }
+
+switchSlide(slideIndex)
+autoSwitch()
