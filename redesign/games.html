@@ -2,7 +2,25 @@
 <html>
 
 <head>
+    <title>Totally Science</title>
+    
     <!--Cache Killer-->
+    <script>
+        const html = document.getElementsByTagName('head')[0].innerHTML;
+        const title = document.getElementsByTagName('title')[0];
+            const indexCss = `<link rel='stylesheet' href='assets/styles/games.css?${new Date().getTime()}'>`;
+        // main.js
+        let mainJS = document.createElement("script");
+        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+        title.insertAdjacentElement('afterend', mainJS);
+
+        // games.js
+        let gamesJS = document.createElement("script");
+        gamesJS.src = `assets/scripts/games.js?${new Date().getTime()}`;
+        title.insertAdjacentElement('afterend', gamesJS);
+
+        document.getElementsByTagName('head')[0].innerHTML += indexCss;
+    </script>
     
     
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -10,19 +28,8 @@
     <meta http-equiv="Expires" content="0" />
     <!--End Cache Killer-->
     
-    <title>Totally Science</title>
     <link rel="stylesheet" href="assets/styles/main.css">
-    <!--<link rel="stylesheet" href="assets/styles/games.css">-->
     <link rel="icon" href="assets/images/logo.png">
-    <script src="assets/scripts/main.js" async defer></script>
-    <script src="assets/scripts/games.js" async defer></script>
-    <script>
-        const html = document.getElementsByTagName('head')[0].innerHTML;
-        const gameCss = `<link rel='stylesheet' href='assets/styles/games.css?${new Date().getTime()}'>`
-        const mainJS = `<script src='assets/scripts/main.js' async defer><\/script>`;
-        const gamesJS = `<script src='assets/scripts/games.js' async defer><\/script>`;
-        document.getElementsByTagName('head')[0].innerHTML=gameCss+html;
-    </script>
 </head>
 
 <body>

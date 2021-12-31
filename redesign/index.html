@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Totally Science</title>
+
         <!--Cache Killer-->
         <script>
             const html = document.getElementsByTagName('head')[0].innerHTML;
+            const title = document.getElementsByTagName('title')[0];
             const indexCss = `<link rel='stylesheet' href='assets/styles/index.css?${new Date().getTime()}'>`;
-            const mainJS = `<script src='assets/scripts/main.js?${new Date().getTime()}' async defer><\/script>`;
-            const indexJS = `<script src='assets/scripts/index.js?${new Date().getTime()}' async defer><\/script>`;
-            document.getElementsByTagName('head')[0].innerHTML=mainJS+indexJS+indexCss+html;
+            // main.js
+            let mainJS = document.createElement("script");
+            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+            title.insertAdjacentElement('afterend', mainJS);
+            // index.js
+            let indexJS = document.createElement("script");
+            indexJS.src = `assets/scripts/index.js?${new Date().getTime()}`;
+            title.insertAdjacentElement('afterend', indexJS);
+
+            document.getElementsByTagName('head')[0].innerHTML += indexCss;
         </script>
         
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         <!--End Cache Killer-->
-
-        <title>Totally Science</title>
         
         <link rel="stylesheet" href="assets/styles/main.css">
-        <!--<link rel="stylesheet" href="assets/styles/index.css">-->
         <link rel="icon" href="assets/images/logo.png">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
-
-        <!--<script src="assets/scripts/main.js" async defer></script>
-        <script src="assets/scripts/index.js" async defer></script>-->
         <script src="assets/scripts/visits_count.js" async defer></script>
-        
-        
     </head>
 
     <body>
