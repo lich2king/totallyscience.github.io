@@ -5,7 +5,7 @@ html {
 /* category selection */
 .categoryButton {
     border: none;
-    color: white;
+    color: var(--light-color);
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
@@ -13,23 +13,28 @@ html {
     font-size: 2.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #f75dfc;
+    background-color: var(--accent-color);
     border-radius: 8px;
     transition: opacity 0.3s ease;
 }
+
 .categoryButton span {
     font-size: 2vw;
 }
+
 .selectedCategory {
     opacity: 1;
 }
+
 .unselectedCategory {
     opacity: 0.4;
 }
+
 .categories {
     text-align: center;
     margin-top: 80px;
 }
+
 @media (max-width: 600px) {
     .categories {
         margin-top: 100px;
@@ -37,13 +42,13 @@ html {
 }
 
 /* searchbar */
-input[type=text] {
+input[type='text'] {
     width: 15%;
     box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid var(--dark-color);
     border-radius: 4px;
     font-size: 16px;
-    background-color: white;
+    background-color: var(--light-color);
     background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
@@ -51,7 +56,8 @@ input[type=text] {
     transition: width 0.4s ease-in-out;
     margin-bottom: 3%;
 }
-input[type=text]:focus {
+
+input[type='text']:focus {
     width: 25%;
 }
 
@@ -63,30 +69,34 @@ input[type=text]:focus {
     width: 37.5%;
     height: 15%;
     text-align: left;
-    background-color: #f75dfc;
-    border: 6px solid hsl(298, 96%, 68%);
+    background-color: var(--accent-color);
+    border: 6px solid var(--accent-color);
     border-radius: 10px;
     margin-bottom: 2%;
     cursor: pointer;
     border-left: 4px;
 }
+
 .new::after {
     font-size: 2vw;
-    content: " \26A1"
+    content: ' \26A1';
 }
+
 #games div button img {
     border-radius: 10px;
     height: 100px;
     width: 30%;
     margin-right: 15px;
 }
+
 #games div button div {
     margin-top: 1.5%;
     width: 100%;
     margin-bottom: 2%;
 }
+
 #games div button div p {
-    color: white;
+    color: var(--light-color);
     font-family: 'Rubik', sans-serif;
     font-size: 2vw;
     margin-bottom: 30px;
@@ -94,29 +104,33 @@ input[type=text]:focus {
     /* Not sure why but changing line height fixes text not being centered issue.*/
     line-height: 6px;
 }
+
 #games div button div p2 {
-    color: white;
+    color: var(--light-color);
     font-family: 'Rubik', sans-serif;
     font-size: 13px;
 }
+
 .hideUnsorted {
     visibility: hidden;
 }
 
 /* find game by letter */
 #abc {
-    color: black;
+    color: var(--dark-color);
     font-family: 'Rubik', sans-serif;
     float: right;
     margin-right: 40px;
     height: 100%;
 }
+
 #abc div {
     font-size: 12pt;
     position: fixed;
     height: 100%;
     width: 100%;
 }
+
 #abc div p {
     cursor: pointer;
     margin-top: 0%;
@@ -124,10 +138,12 @@ input[type=text]:focus {
     padding-right: 15px;
     padding-left: 25px;
 }
+
 #abc div p:hover {
     margin-left: -10px;
     transition: all 0.2s ease;
 }
+
 #abc div p {
     margin-left: 0px;
     transition: all 0.2s ease;

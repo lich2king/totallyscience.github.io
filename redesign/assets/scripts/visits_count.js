@@ -9,7 +9,7 @@ const addSuffix = (num) => {
     return num + 'th'
 }
 
-fetch('./stats/counter.php')
+fetch('./php/counter.php')
     .then((response) => response.text())
     .then((visits) => {
         const display = $('visits-count')
