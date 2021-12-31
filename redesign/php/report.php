@@ -3,7 +3,7 @@ $pdo = require "connect.php";
 
 $name = htmlspecialchars($_GET["name"]);
 if(!$name) {
-    die("You must specify a game to report.");
+    die("?");
 }
 
 $select = $pdo->prepare("select * from reports where name=?");
