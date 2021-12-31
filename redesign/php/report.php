@@ -17,5 +17,5 @@ if(!$report) {
     $pdo->prepare("update reports set count=? where id=?")->execute([$count, $report["id"]]);
 }
 
-echo("Success! Thank you for reporting.");
+echo("Success!");
 ?>
