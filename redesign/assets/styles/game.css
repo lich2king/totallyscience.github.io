@@ -14,12 +14,10 @@
 #gameDiv iframe {
     width: 75%;
     height: 100%;
-    border: 4px solid #f75dfc;
+    border: 4px solid var(--accent-color);
     border-radius: 20px;
     margin-bottom: 0%;
 }
-
-
 
 #report {
     margin-top: 15%;
@@ -33,8 +31,8 @@
     font-size: 2vw;
     width: 15%;
     height: 60px;
-    color: white;
-    background-color: #f75dfc;
+    color: var(--light-color);
+    background-color: var(--accent-color);
     border: 0px;
     border-radius: 10px;
     margin-bottom: 2%;
@@ -47,7 +45,7 @@
     }
 }
 
-#desc{
+#desc {
   margin-top: 10%;
 }
 

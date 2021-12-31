@@ -13,10 +13,12 @@
 #sections section {
     padding-top: 15%;
 }
+
 #scientists p {
     font-family: 'Spline Sans', sans-serif;
     font-size: 12vw;
 }
+
 #scientists div {
     display: flex;
     justify-content: center;
@@ -24,22 +26,26 @@
     margin-right: 5%;
     margin-left: 5%;
 }
+
 #scientists div div {
     display: inline-block;
     height: 100%;
     width: 25%;
     margin-right: 5%;
 }
+
 #scientists div div p {
     font-family: 'Rubik', sans-serif;
     font-size: 3vw;
     margin-bottom: 0px;
 }
+
 #scientists div div p2 {
     font-family: 'Rubik', sans-serif;
     font-size: 2vw;
     margin-top: 0px;
 }
+
 .scientist-image {
     width: 20vw;
 }
@@ -49,6 +55,7 @@
     font-family: 'Spline Sans', sans-serif;
     font-size: 4vw;
 }
+
 #follow div {
     display: flex;
     justify-content: center;
@@ -57,6 +64,7 @@
     margin-right: 5%;
     margin-left: 5%;
 }
+
 #follow div div {
     display: flex;
     justify-content: center;
@@ -65,27 +73,29 @@
     width: 25%;
     margin-right: 5%;
 }
+
 #viewer p {
     font-family: 'Spline Sans', sans-serif;
     font-size: 4vw;
 }
 
-
 /* footer */
 footer {
-    background-color: rgb(51, 51, 51);
+    background-color: var(--dark-color);
     padding: 30px;
     padding-bottom: 75px;
     width: calc(100% - 60px);
     font-family: 'Spline Sans', sans-serif;
     height: 80px;
-    color: white;
+    color: var(--light-color);
 }
+
 #left-footer {
     margin-top: -30px;
     width: 30%;
     float: left;
 }
+
 #center-image {
     position: absolute;
     left: calc(50%);
@@ -93,45 +103,54 @@ footer {
     height: 15vw;
     max-height: 125px;
 }
+
 #right-footer {
     float: right;
     width: 30%;
     margin-top: -30px;
 }
+
 #right-footer div {
     display: inline-block;
     margin-top: 10px;
 }
+
 #right-footer img {
-    border: 2px solid white;
+    border: 2px solid var(--light-color);
     padding: 6px;
     height: 30px;
     width: 30px;
     border-radius: 50%;
 }
+
 @media (max-width: 750px) {
     footer {
         height: 150px;
     }
+
     #left-footer {
         width: 100%;
         float: none;
     }
+
     #left-footer p {
         font-size: 25px !important;
     }
+
     #left-footer a {
         font-size: 15px !important;
     }
+
     #center-image {
         display: none;
     }
-    
+
     #right-footer {
         float: none;
         width: 100%;
         margin-top: 35px;
     }
+
     #right-footer p {
         font-size: 25px !important;
     }
@@ -147,6 +166,7 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 .featuredSlide {
     display: flex;
     align-items: center;
@@ -154,36 +174,41 @@ footer {
     width: 100%;
     height: 100%;
 }
+
 .featuredSlide img {
     width: 90%;
     height: 90vh;
     border-radius: 80px;
     z-index: -2;
     opacity: 0.7;
-    border: 4px solid #f75dfc;
+    border: 4px solid var(--accent-color);
 }
+
 .featuredSlide div {
     position: absolute;
     text-align: center;
     width: 100%;
     margin-top: -5%;
 }
+
 .featuredSlide div p {
-    color: white;
+    color: var(--light-color);
     height: 100%;
     width: 100%;
     z-index: -1;
     opacity: 1;
     font-family: 'Spline Sans', sans-serif;
     font-size: 11vw;
-    text-shadow: -6px -6px 0 #f75dfc, 6px -6px 0 #f75dfc, -6px 6px 0 #f75dfc, 6px 6px 0 #f75dfc;
+    text-shadow: -6px -6px 0 var(--accent-color), 6px -6px 0 var(--accent-color),
+        -6px 6px 0 var(--accent-color), 6px 6px 0 var(--accent-color);
     margin-bottom: 5%;
     margin-top: 0%;
 }
+
 .featuredSlide div button {
     cursor: pointer;
     color: white;
-    background-color: #f75dfc;
+    background-color: var(--accent-color);
     height: 100%;
     width: 25%;
     z-index: -1;
@@ -193,10 +218,12 @@ footer {
     border-color: transparent;
     border-radius: 10px;
 }
+
 .slideButtons {
     position: absolute;
     width: 100%;
 }
+
 .slidePrev,
 .slideNext {
     position: absolute;
@@ -211,6 +238,7 @@ footer {
     opacity: 0.8;
     transition: opacity 0.15s ease;
 }
+
 .slidePrev:hover,
 .slideNext:hover {
     opacity: 1;
@@ -243,17 +271,17 @@ footer {
 }
 @-webkit-keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.4;
     }
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.4;
     }
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
