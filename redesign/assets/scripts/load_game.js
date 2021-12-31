@@ -18,7 +18,7 @@ const reportBtn = $('report-btn')
 reportBtn.addEventListener('click', () => {
     if (hasReported) return
     hasReported = true
-    fetch(`./php/report.php/?name={gameName}`)
+    fetch(`./php/report.php/?name=${gameName}`)
         .then((response) => response.text())
         .then((text) => {
             if (text.includes('<?php')) {
