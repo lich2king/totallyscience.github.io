@@ -4,9 +4,8 @@
         <!--Cache Killer-->
         <script>
             const html = document.getElementsByTagName('head')[0].innerHTML;
-            const mainCss = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
             const gameCss = `<link rel='stylesheet' href='assets/styles/game.css?${new Date().getTime()}'>`
-            document.getElementsByTagName('head')[0].innerHTML=gameCss+mainCss+html;
+            document.getElementsByTagName('head')[0].innerHTML=gameCss+html;
         </script>
     
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -16,7 +15,7 @@
         
         <title>Totally Science</title>
         <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="stylesheet" href="assets/styles/game.css">
+        <!--<link rel="stylesheet" href="assets/styles/game.css">-->
         <link rel="icon" href="assets/images/logo.png">
         <script src="assets/scripts/main.js" async defer></script>
         <script src="assets/scripts/load_game.js" async defer></script>
