@@ -2,12 +2,19 @@
 <html>
     <head>
         <!--Cache Killer-->
+        <script>
+            const html = document.getElementsByTagName('head')[0].innerHTML;
+            const mainCss = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+            document.getElementsByTagName('head')[0].innerHTML=mainCss+html;
+        </script>
+    
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         <!--End Cache Killer-->
+        
         <title>Totally Science</title>
-        <link rel="stylesheet" href="assets/styles/main.css">
+        <!--<link rel="stylesheet" href="assets/styles/main.css">-->
         <link rel="icon" href="assets/images/logo.png">
         <script src="assets/scripts/main.js"></script>
 
