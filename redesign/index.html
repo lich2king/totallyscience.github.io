@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            const html = document.getElementsByTagName('head')[0].innerHTML;
+            const str = `<link rel='stylesheet' href='assets/styles/main.css'?{Date.date()}>`
+            document.getElementsByTagName('head')[0].innerHTML=str+html;
+        </script>
         <!--Cache Killer-->
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
@@ -8,7 +13,7 @@
         <!--End Cache Killer-->
         <title>Totally Science</title>
         
-        <link rel="stylesheet" href="assets/styles/main.css">
+        <!--<link rel="stylesheet" href="assets/styles/main.css">-->
         <link rel="stylesheet" href="assets/styles/index.css">
         <link rel="icon" href="assets/images/logo.png">
 
@@ -17,6 +22,8 @@
         <script src="assets/scripts/main.js" async defer></script>
         <script src="assets/scripts/index.js" async defer></script>
         <script src="assets/scripts/visits_count.js" async defer></script>
+        
+        
     </head>
 
     <body>
