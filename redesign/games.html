@@ -8,7 +8,7 @@
         const gameCss = `<link rel='stylesheet' href='assets/styles/games.css?${new Date().getTime()}'>`
         const mainJS = `<script src='assets/scripts/main.js?${new Date().getTime()}' async defer><\/script>`;
         const gamesJS = `<script src='assets/scripts/games.js?${new Date().getTime()}' async defer><\/script>`;
-        document.getElementsByTagName('head')[0].innerHTML=mainJS+gamesJS+gameCss+html;
+        document.getElementsByTagName('head')[0].innerHTML=gameCss+html+mainJS+gamesJS;
     </script>
     
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
