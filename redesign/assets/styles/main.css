@@ -129,6 +129,5 @@ body {
     z-index: 99;
     outline: none;
     background-color: transparent;
-    color: var(--accent-color);
     cursor: pointer;
 }
