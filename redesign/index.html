@@ -5,7 +5,9 @@
         <script>
             const html = document.getElementsByTagName('head')[0].innerHTML;
             const indexCss = `<link rel='stylesheet' href='assets/styles/index.css?${new Date().getTime()}'>`
-            document.getElementsByTagName('head')[0].innerHTML=indexCss+html;
+            const mainJS = `<script src='assets/scripts/main.js?${Date.date()}' async defer></script>`
+            const indexJS = `<script src='assets/scripts/index.js?${Date.date()}' async defer></script>`
+            document.getElementsByTagName('head')[0].innerHTML=mainJS+indexJS+gameCss+html;
         </script>
         
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -21,8 +23,8 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
 
-        <script src="assets/scripts/main.js" async defer></script>
-        <script src="assets/scripts/index.js" async defer></script>
+        <!--<script src="assets/scripts/main.js" async defer></script>
+        <script src="assets/scripts/index.js" async defer></script>-->
         <script src="assets/scripts/visits_count.js" async defer></script>
         
         
