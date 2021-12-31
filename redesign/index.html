@@ -3,7 +3,7 @@
     <head>
         <script>
             const html = document.getElementsByTagName('head')[0].innerHTML;
-            const str = `<link rel='stylesheet' href='assets/styles/main.css'?{Date.date()}>`
+            const str = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
             document.getElementsByTagName('head')[0].innerHTML=str+html;
         </script>
         <!--Cache Killer-->
