@@ -4,7 +4,7 @@
         <!--Cache Killer-->
         <script>
             const html = document.getElementsByTagName('head')[0].innerHTML;
-            const mainJS = `<script src='assets/scripts/main.js?${Date.date()}' async defer></script>`
+            const mainJS = `<script src='assets/scripts/main.js?${new Date().getTime()}' async defer><\/script>`;
             document.getElementsByTagName('head')[0].innerHTML=mainJS+html;
         </script>
 
