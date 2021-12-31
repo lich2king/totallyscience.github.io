@@ -6,9 +6,8 @@
     <script>
         const html = document.getElementsByTagName('head')[0].innerHTML;
         const mainCss = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
-        document.getElementsByTagName('head')[0].innerHTML=mainCss+html;
         const gameCss = `<link rel='stylesheet' href='assets/styles/games.css?${new Date().getTime()}'>`
-        document.getElementsByTagName('head')[0].innerHTML=gameCss+html;
+        document.getElementsByTagName('head')[0].innerHTML=mainCss+gameCss+html;
     </script>
     
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
