@@ -15,12 +15,12 @@
     <!--<link rel="stylesheet" href="assets/styles/games.css">-->
     <link rel="icon" href="assets/images/logo.png">
     <script src="assets/scripts/main.js" async defer></script>
-    <script src="assets/scripts/games.js" async defer></script>
+    <script src="assets/scripts/games.js?fwef" async defer></script>
     <script>
         const html = document.getElementsByTagName('head')[0].innerHTML;
         const gameCss = `<link rel='stylesheet' href='assets/styles/games.css?${new Date().getTime()}'>`
         const mainJS = `<script src='assets/scripts/main.js' async defer><\/script>`;
-        const gamesJS = `<script src='assets/scripts/games.js?fwef' async defer><\/script>`;
+        const gamesJS = `<script src='assets/scripts/games.js' async defer><\/script>`;
         document.getElementsByTagName('head')[0].innerHTML=gameCss+html;
     </script>
 </head>
