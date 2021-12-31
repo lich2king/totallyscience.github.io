@@ -18,5 +18,4 @@ if(!$report) {
 }
 
 echo("Success! Thank you for reporting.");
-
 ?>

@@ -12,3 +12,19 @@ fetch('./assets/games.json')
         $('developer').innerText = `This game was created by ${gameData.developer}.`
         $('game-iframe').src = gameData.iframe_url
     })
+
+let hasReported = false
+const reportBtn = $('report-btn')
+reportBtn.addEventListener('click', () => {
+    if (hasReported) return
+    hasReported = true
+    fetch(`./php/report.php/?name={gameName}`)
+        .then((response) => response.text())
+        .then((text) => {
+            if (text.includes('<?php')) {
+                reportBtn.innerText = '?'
+                return
+            }
+            reportBtn.innerText = text
+        })
+})
