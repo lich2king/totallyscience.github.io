@@ -73,7 +73,7 @@
         
         <div style="padding-top: 90px;"></div>
         
-        <form id="survey" onsubmit="savePreferences()">
+        <form id="survey" onsubmit="savePreferences(this)">
             <div>
                 <label for="website">What's your school website?</label><br>
                 <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
@@ -85,19 +85,25 @@
                     <option value="dark">Dark</option>
                 </select>
             </div>
-            <button>Save</button>
+            <button id="saveButton">Save</button>
         </form>
 
         <script>
             document.getElementById('website').value = localStorage.getItem('redirectLink')
             document.getElementById('theme').value = localStorage.getItem('theme')
-            function savePreferences()
+            function savePreferences(e)
             {
                 const link = document.getElementById("website").value
                 const themePick = document.getElementById("theme").value
                 localStorage.setItem("redirectLink", link);
                 localStorage.setItem("theme", themePick)
+                document.getElementById('saveButton').innerHTML = "Saved."
+                setTimeout(function(){
+                    document.getElementById('saveButton').innerHTML = "Save"
+                }, 500)
+                e.preventDefault()
             }
+            document.getElementById('survey').addEventListener('submit', savePreferences);
         </script>
     </body>
 </html>
