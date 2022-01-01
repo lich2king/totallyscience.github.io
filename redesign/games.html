@@ -11,7 +11,7 @@
             // main.js
             let mainJS = document.createElement("script");
             mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-            title.insertAdjacentElement('afterend', mainJS);
+            
 
             // games.js
             let gamesJS = document.createElement("script");
@@ -19,6 +19,7 @@
             gamesJS.defer = true;
             gamesJS.async = true;
             title.insertAdjacentElement('afterend', gamesJS);
+            title.insertAdjacentElement('afterend', mainJS);
 
             document.getElementsByTagName('head')[0].innerHTML += indexCss;
         </script>
