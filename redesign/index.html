@@ -6,17 +6,21 @@
         <!--Cache Killer-->
         <script>
             window.addEventListener('DOMContentLoaded', () => {
-                const html = document.getElementsByTagName('head')[0].innerHTML;
-                const title = document.getElementsByTagName('title')[0];
+                const html = document.getElementsByTagName('head')[0].innerHTML
+                const title = document.getElementsByTagName('title')[0]
                 const indexCss = `<link rel='stylesheet' href='assets/styles/index.css?${new Date().getTime()}'>`;
                 // main.js
-                let mainJS = document.createElement("script");
-                mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-                title.insertAdjacentElement('afterend', mainJS);
+                const mainJS = document.createElement("script")
+                mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
+                title.insertAdjacentElement('afterend', mainJS)
                 // index.js
-                let indexJS = document.createElement("script");
-                indexJS.src = `assets/scripts/index.js?${new Date().getTime()}`;
-                title.insertAdjacentElement('afterend', indexJS);
+                const indexJS = document.createElement("script")
+                indexJS.src = `assets/scripts/index.js?${new Date().getTime()}`
+                title.insertAdjacentElement('afterend', indexJS)
+                
+                const visitsCountJS = document.createElement("script")
+                visitsCountJS.src = `assets/scripts/visits_count.js?${new Date().getTime()}`
+                title.insertAdjacentElement('afterend', visitsCountJS)
 
                 document.getElementsByTagName('head')[0].innerHTML += indexCss;
             })
@@ -31,7 +35,6 @@
         <link rel="icon" href="assets/images/logo.png">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
-        <script src="assets/scripts/visits_count.js" async defer></script>
     </head>
 
     <body>
