@@ -96,11 +96,12 @@
         </section>
 
         <script>
+            const gameSection = document.getElementsByTagName('section')[1];
             let gamesJS = document.createElement("script");
             gamesJS.src = `assets/scripts/games.js?${new Date().getTime()}`;
             gamesJS.defer = true;
             gamesJS.async = true;
-            title.insertAdjacentElement('afterend', gamesJS);
+            title.insertAdjacentElement('afterend', gameSection);
         </script>
     </body>
 </html>
