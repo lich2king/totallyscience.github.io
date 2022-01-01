@@ -62,7 +62,12 @@ const buttons = $qsa('.categoryButton')
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        selectedTopic = e.target.name
+        if (e.target.innerHTML == '⚡') {
+            selectedTopic = e.target.parentNode.name
+        } else {
+            selectedTopic = e.target.name
+        }
+
         const buttons = $qsa('.categoryButton')
         const games = $qsa('.gameButton')
 
@@ -72,6 +77,13 @@ buttons.forEach((button) => {
         })
 
         const selected = $n(selectedTopic)[0]
+        if (e.target.innerHTML == '⚡') {
+            selected.parentNode.classList.add('selectedCategory')
+            selected.parentNode.classList.remove('unselectedCategory')
+        } else {
+            selected.classList.add('selectedCategory')
+            selected.classList.remove('unselectedCategory')
+        }
         selected.classList.add('selectedCategory')
         selected.classList.remove('unselectedCategory')
 
