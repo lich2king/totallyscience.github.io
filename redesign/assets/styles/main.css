@@ -42,6 +42,11 @@ body {
     letter-spacing: 0.1rem;
 }
 
+#settingIcon a{
+    display: flex;
+    align-items: center;
+}
+
 .selected a {
     border-bottom: 2px solid var(--dark-color);
 }
