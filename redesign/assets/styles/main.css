@@ -42,6 +42,11 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.nav-button a svg {
+    position: absolute;
+    top: 10px;
+}
+
 .selected a {
     border-bottom: 2px solid var(--dark-color);
 }
