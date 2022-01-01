@@ -59,7 +59,6 @@ fetch('./assets/games.json')
 //selected topic variable is used both in the button category changer and the search bar function
 let selectedTopic = 'all'
 const buttons = $qsa('.categoryButton, #bolt')
-console.log(buttons)
 //buttons.appendChild(document.getElementById('bolt'))
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
