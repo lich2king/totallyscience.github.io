@@ -18,7 +18,7 @@ body {
     background-color: var(--light-color);
 }
 
-h1, p, p2, a, label {
+h1, h2, h3, h4, p, p2, a, label {
     color: var(--dark-color);
     font-family: 'Rubik', sans-serif;
 }
