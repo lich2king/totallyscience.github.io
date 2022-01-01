@@ -21,7 +21,7 @@
             gamesJS.defer = true;
             gamesJS.async = true;
             title.insertAdjacentElement('beforebegin', mainJS);
-            title.insertAdjacentElement('beforebegin', gamesJS);
+            //title.insertAdjacentElement('beforebegin', gamesJS);
 
             document.getElementsByTagName('head')[0].innerHTML += indexCss;
         </script>
@@ -97,5 +97,12 @@
         <section id="games">
             <div align="center" id="games-div"></div>
         </section>
+        <script>
+            let gamesJS = document.createElement("script");
+            gamesJS.src = `assets/scripts/games.js?${new Date().getTime()}`;
+            gamesJS.defer = true;
+            gamesJS.async = true;
+            title.insertAdjacentElement('beforebegin', gamesJS);
+        </script>
     </body>
 </html>
