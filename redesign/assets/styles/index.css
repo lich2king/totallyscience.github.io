@@ -85,7 +85,7 @@
 
 /* footer */
 footer {
-    background-color: var(--dark-color);
+    background-color: rgb(40, 40, 40);
     padding: 30px;
     padding-bottom: 75px;
     width: calc(100% - 60px);

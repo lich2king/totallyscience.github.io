@@ -28,7 +28,7 @@ window.addEventListener(
     function (e) {
         if (e.key == '`') {
             window.open(
-                'https://classroom.google.com/u/0/h',
+                this.localStorage.getItem("redirectLink"),
                 '_blank',
                 'fullscreen=yes resizable=yes'
             )

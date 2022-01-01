@@ -73,7 +73,7 @@
         
         <div style="padding-top: 90px;"></div>
         
-        <form id="survey">
+        <form id="survey" onsubmit="savePreferences()">
             <div>
                 <label for="website">What's your school website?</label><br>
                 <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
@@ -87,5 +87,17 @@
             </div>
             <button>Save</button>
         </form>
+
+        <script>
+            document.getElementById('website').value = localStorage.getItem('redirectLink')
+            document.getElementById('theme').value = localStorage.getItem('theme')
+            function savePreferences()
+            {
+                const link = document.getElementById("website").value
+                const themePick = document.getElementById("theme").value
+                localStorage.setItem("redirectLink", link);
+                localStorage.setItem("theme", themePick)
+            }
+        </script>
     </body>
 </html>
