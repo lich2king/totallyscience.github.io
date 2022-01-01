@@ -99,7 +99,7 @@
         <script>
             document.getElementsByTagName('body')[0].innerHTML += `<script src='assets/scripts/main.js?${new Date().getTime()}'><\/script>`;
             document.getElementsByTagName('body')[0].innerHTML += `<script src='assets/scripts/games.js?${new Date().getTime()}'><\/script>`;
-            nodeScriptReplace(document.getElementsByTagName("body")[0])
+            executeScriptElements(document.getElementsByTagName("body")[0])
         </script>
     </body>
 </html>
