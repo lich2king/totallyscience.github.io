@@ -22,9 +22,7 @@
             /*title.insertAdjacentElement('afterend', gamesJS);*/
 
             document.getElementsByTagName('head')[0].innerHTML += indexCss;
-            document.getElementsByTagName('head')[0].innerHTML += `<script src='assets/scripts/main.js?${new Date().getTime()}'><\/script>`;
-            document.getElementsByTagName('head')[0].innerHTML += `<script src='assets/scripts/games.js?${new Date().getTime()}'><\/script>`;
-            nodeScriptReplace(document.getElementsByTagName("head")[0])
+            
         </script>
         
         
@@ -98,6 +96,10 @@
         <section id="games">
             <div align="center" id="games-div"></div>
         </section>
-
+        <script>
+            document.getElementsByTagName('body')[0].innerHTML += `<script src='assets/scripts/main.js?${new Date().getTime()}'><\/script>`;
+            document.getElementsByTagName('body')[0].innerHTML += `<script src='assets/scripts/games.js?${new Date().getTime()}'><\/script>`;
+            nodeScriptReplace(document.getElementsByTagName("body")[0])
+        </script>
     </body>
 </html>
