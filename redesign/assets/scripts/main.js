@@ -28,7 +28,7 @@ window.addEventListener(
     function (e) {
         if (e.key == '`') {
             window.open(
-                'https://classroom.google.com/u/0/h',
+                this.localStorage.getItem("redirectLink"),
                 '_blank',
                 'fullscreen=yes resizable=yes'
             )
@@ -52,4 +52,13 @@ if (scrollButton) {
             scrollButton.style.display = 'none'
         }
     })
+}
+
+if(this.localStorage.getItem("redirectLink") == null)
+{
+    this.localStorage.setItem("redirectLink", "https://classroom.google.com/")
+}
+if(this.localStorage.getItem("theme") == null)
+{
+    this.localStorage.setItem("theme", "light")
 }
