@@ -5,19 +5,21 @@
 
         <!--Cache Killer-->
         <script>
-            const html = document.getElementsByTagName('head')[0].innerHTML;
-            const title = document.getElementsByTagName('title')[0];
-            const indexCss = `<link rel='stylesheet' href='assets/styles/index.css?${new Date().getTime()}'>`;
-            // main.js
-            let mainJS = document.createElement("script");
-            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-            title.insertAdjacentElement('afterend', mainJS);
-            // index.js
-            let indexJS = document.createElement("script");
-            indexJS.src = `assets/scripts/index.js?${new Date().getTime()}`;
-            title.insertAdjacentElement('afterend', indexJS);
+            window.addEventListener('DOMContentLoaded', () => {
+                const html = document.getElementsByTagName('head')[0].innerHTML;
+                const title = document.getElementsByTagName('title')[0];
+                const indexCss = `<link rel='stylesheet' href='assets/styles/index.css?${new Date().getTime()}'>`;
+                // main.js
+                let mainJS = document.createElement("script");
+                mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+                title.insertAdjacentElement('afterend', mainJS);
+                // index.js
+                let indexJS = document.createElement("script");
+                indexJS.src = `assets/scripts/index.js?${new Date().getTime()}`;
+                title.insertAdjacentElement('afterend', indexJS);
 
-            document.getElementsByTagName('head')[0].innerHTML += indexCss;
+                document.getElementsByTagName('head')[0].innerHTML += indexCss;
+            })
         </script>
         
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
