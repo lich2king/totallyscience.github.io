@@ -7,9 +7,20 @@
     --accent-color: #f75dfc;
 }
 
+[theme = dark] {
+    --light-color: #000000;
+    --dark-color: #ffffff;
+}
+
 body {
     padding: 0;
     margin: 0;
+    background-color: var(--light-color);
+}
+
+h1, p, p2, a, label {
+    color: var(--dark-color);
+    font-family: 'Rubik', sans-serif;
 }
 
 #navbar {
@@ -35,8 +46,6 @@ body {
 
 .nav-button a {
     text-decoration: none;
-    color: var(--dark-color);
-    font-family: 'Rubik', sans-serif;
     font-size: 17px;
     line-height: 40px;
     letter-spacing: 0.1rem;
@@ -82,7 +91,6 @@ body {
 }
 
 #rightbar p {
-    font-family: 'Rubik', sans-serif;
     font-size: 17px;
 }
 

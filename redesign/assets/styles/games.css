@@ -97,7 +97,6 @@ input[type='text']:focus {
 
 #games div button div p {
     color: var(--light-color);
-    font-family: 'Rubik', sans-serif;
     font-size: 2vw;
     margin-bottom: 30px;
     margin-top: 15px;
@@ -107,7 +106,6 @@ input[type='text']:focus {
 
 #games div button div p2 {
     color: var(--light-color);
-    font-family: 'Rubik', sans-serif;
     font-size: 13px;
 }
 
@@ -118,7 +116,6 @@ input[type='text']:focus {
 /* find game by letter */
 #abc {
     color: var(--dark-color);
-    font-family: 'Rubik', sans-serif;
     float: right;
     margin-right: 40px;
     height: 100%;

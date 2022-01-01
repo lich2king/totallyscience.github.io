@@ -54,11 +54,12 @@ if (scrollButton) {
     })
 }
 
-if(this.localStorage.getItem("redirectLink") == null)
-{
-    this.localStorage.setItem("redirectLink", "https://classroom.google.com/")
+if(localStorage.getItem("website") == null) {
+    localStorage.setItem("website", "https://classroom.google.com/")
 }
-if(this.localStorage.getItem("theme") == null)
-{
-    this.localStorage.setItem("theme", "light")
+
+if(localStorage.getItem("theme") == null) {
+    localStorage.setItem("theme", "light")
 }
+
+document.body.setAttribute("theme", localStorage.getItem("theme"))

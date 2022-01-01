@@ -6,9 +6,20 @@
         <script>
             const html = document.getElementsByTagName('head')[0].innerHTML;
             const title = document.getElementsByTagName('title')[0];
-            const indexCss = `<link rel='stylesheet' href='assets/styles/game.css?${new Date().getTime()}'>`;
 
-            document.getElementsByTagName('head')[0].innerHTML += indexCss;
+
+            const mainJS = document.createElement("script")
+            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
+            title.insertAdjacentElement('afterend', mainJS)
+
+            const preferencesJS = document.createElement("script")
+            preferencesJS.src = `assets/scripts/preferences.js?${new Date().getTime()}`
+            title.insertAdjacentElement('afterend', preferencesJS)
+
+            const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+            const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
+
+            document.getElementsByTagName('head')[0].innerHTML += mainCSS + preferencesCSS
         </script>
     
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -16,43 +27,7 @@
         <meta http-equiv="Expires" content="0" />
         <!--End Cache Killer-->
         
-        <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="icon" href="assets/images/logo.png">
-
-        <style>
-            #survey {
-                text-align: center;
-            }
-            #survey div{
-                padding-bottom: 5vh;
-            }
-            #survey label {
-                font-family: 'Rubik', sans-serif;
-                font-size: 2vw;
-            }
-            #survey input, #survey select{
-                width: 21vw;
-                padding: 12px 20px;
-                margin: 8px 0;
-                display: inline-block;
-                border: 2px solid var(--accent-color);;
-                border-radius: 4px;
-                box-sizing: border-box;
-                font-family: 'Rubik', sans-serif;
-                font-size: 1vw;
-            }
-            #survey button {
-                font-size: 2vw;
-                width: 10vw;
-                height: 8vh;
-                color: var(--light-color);
-                background-color: var(--accent-color);
-                border: 0px;
-                border-radius: 10px;
-                margin-bottom: 2%;
-                cursor: pointer;
-            }
-        </style>
     </head>
 
     <body>
@@ -73,7 +48,7 @@
         
         <div style="padding-top: 90px;"></div>
         
-        <form id="survey" onsubmit="savePreferences(this)">
+        <form id="survey">
             <div>
                 <label for="website">What's your school website?</label><br>
                 <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
@@ -85,30 +60,7 @@
                     <option value="dark">Dark</option>
                 </select>
             </div>
-            <button id="saveButton">Save</button>
+            <button id="save-button">Save</button>
         </form>
-
-        <script>
-            document.getElementById('website').value = localStorage.getItem('redirectLink')
-            document.getElementById('theme').value = localStorage.getItem('theme')
-            function savePreferences(e)
-            {
-                let link = document.getElementById("website").value
-                const themePick = document.getElementById("theme").value
-
-                if(!(link.toLowerCase().includes("http")))
-                {
-                    link = `http://${link}`
-                }
-                localStorage.setItem("redirectLink", link);
-                localStorage.setItem("theme", themePick)
-                document.getElementById('saveButton').innerHTML = "Saved."
-                setTimeout(function(){
-                    document.getElementById('saveButton').innerHTML = "Save"
-                }, 500)
-                e.preventDefault()
-            }
-            document.getElementById('survey').addEventListener('submit', savePreferences);
-        </script>
     </body>
 </html>

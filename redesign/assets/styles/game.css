@@ -21,7 +21,6 @@
 
 #report {
     margin-top: 15%;
-    font-family: 'Rubik', sans-serif;
     font-size: 2vw;
     margin-left: 2%;
     text-align: center;
@@ -72,7 +71,6 @@
 
 .grid-container .subText {
     text-align: left;
-    font-family: 'Rubik', sans-serif;
     font-size: 2vw;
     margin-left: 15%;
 }

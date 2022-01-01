@@ -3,7 +3,6 @@
 }
 
 .text-fade {
-    font-family: 'Rubik', sans-serif;
     font-size: 33px;
     opacity: 1;
     transition: opacity 1s ease;
@@ -39,13 +38,11 @@
 }
 
 #scientists div div p {
-    font-family: 'Rubik', sans-serif;
     font-size: 3vw;
     margin-bottom: 0px;
 }
 
 #scientists div div p2 {
-    font-family: 'Rubik', sans-serif;
     font-size: 2vw;
     margin-top: 0px;
 }
@@ -286,6 +283,7 @@ footer {
     animation-name: fade;
     animation-duration: 1.25s;
 }
+
 @-webkit-keyframes fade {
     from {
         opacity: 0.4;
@@ -294,6 +292,7 @@ footer {
         opacity: 1;
     }
 }
+
 @keyframes fade {
     from {
         opacity: 0.4;
