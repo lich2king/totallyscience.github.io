@@ -87,8 +87,8 @@ footer {
     padding-bottom: 75px;
     width: calc(100% - 60px);
     font-family: 'Spline Sans', sans-serif;
-    height: 80px;
-    color: var(--light-color);
+    height: 90px;
+    color: white;
 }
 
 #left-footer {
@@ -99,7 +99,7 @@ footer {
 
 #left-footer a {
     font-size: 16px;
-    color: var(--dark-color);
+    color: white;
 }
 
 #center-image {
@@ -108,6 +108,14 @@ footer {
     transform: translate(-50%);
     height: 15vw;
     max-height: 125px;
+}
+
+#center-text {
+    color: white;
+    position: absolute;
+    left: calc(50%);
+    transform: translate(-50%);
+    margin-top: 135px;
 }
 
 #right-footer {
@@ -122,7 +130,7 @@ footer {
 }
 
 #right-footer img {
-    border: 2px solid var(--light-color);
+    border: 2px solid white;
     padding: 8px;
     margin: 3px;
     height: 30px;
@@ -132,6 +140,7 @@ footer {
 }
 
 .footer-title {
+    color: white;
     font-size: 4vw;
     margin: 0;
     margin-top: 15px;
@@ -157,6 +166,10 @@ footer {
 
     #center-image {
         display: none;
+    }
+
+    #center-text {
+        margin-top: 150px;
     }
 
     #right-footer {

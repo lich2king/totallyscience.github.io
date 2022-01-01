@@ -54,12 +54,13 @@ if (scrollButton) {
     })
 }
 
-if(localStorage.getItem("website") == null) {
+if (localStorage.getItem("website") == null) {
     localStorage.setItem("website", "https://classroom.google.com/")
 }
 
-if(localStorage.getItem("theme") == null) {
+if (localStorage.getItem("theme") == null) {
     localStorage.setItem("theme", "light")
 }
 
 document.body.setAttribute("theme", localStorage.getItem("theme"))
+document.getElementById('settings').children[0].src = `./assets/images/settings-${localStorage.getItem("theme")}.svg`
