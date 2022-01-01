@@ -1,15 +1,27 @@
-function executeScriptElements(containerElement) {
-  const scriptElements = containerElement.querySelectorAll("script");
+function nodeScriptReplace(node) {
+  if ( nodeScriptIs(node) === true ) {
+          node.parentNode.replaceChild( nodeScriptClone(node) , node );
+  }
+  else {
+          var i = -1, children = node.childNodes;
+          while ( ++i < children.length ) {
+                nodeScriptReplace( children[i] );
+          }
+  }
 
-  Array.from(scriptElements).forEach((scriptElement) => {
-    const clonedElement = document.createElement("script");
+  return node;
+}
+function nodeScriptClone(node){
+  var script  = document.createElement("script");
+  script.text = node.innerHTML;
 
-    Array.from(scriptElement.attributes).forEach((attribute) => {
-      clonedElement.setAttribute(attribute.name, attribute.value);
-    });
-    
-    clonedElement.text = scriptElement.text;
+  var i = -1, attrs = node.attributes, attr;
+  while ( ++i < attrs.length ) {                                    
+        script.setAttribute( (attr = attrs[i]).name, attr.value );
+  }
+  return script;
+}
 
-    scriptElement.parentNode.replaceChild(clonedElement, scriptElement);
-  });
+function nodeScriptIs(node) {
+  return node.tagName === 'SCRIPT';
 }
