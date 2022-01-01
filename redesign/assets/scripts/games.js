@@ -7,7 +7,7 @@ const sortObject = (obj) =>
 const weekAgo = new Date()
 weekAgo.setDate(weekAgo.getDate() - 7)
 
-const gamesDiv = document.getElementById('games-div')
+const gamesDiv = $('games-div')
 
 fetch('./assets/games.json')
     .then((response) => response.json())
