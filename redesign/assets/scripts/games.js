@@ -1,5 +1,5 @@
 // Thank you stack overflow.
-const sortObject = (obj) =>
+let sortObject = (obj) =>
     Object.keys(obj)
         .sort()
         .reduce((res, key) => ((res[key] = obj[key]), res), {})
