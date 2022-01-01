@@ -20,8 +20,7 @@
             gamesJS.src = `assets/scripts/games.js?${new Date().getTime()}`;
             gamesJS.defer = true;
             gamesJS.async = true;
-            title.insertAdjacentElement('beforebegin', mainJS);
-            title.insertAdjacentElement('beforebegin', gamesJS);
+            
 
             document.getElementsByTagName('head')[0].innerHTML += indexCss;
         </script>
