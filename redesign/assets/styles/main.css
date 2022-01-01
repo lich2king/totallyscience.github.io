@@ -42,9 +42,9 @@ body {
     letter-spacing: 0.1rem;
 }
 
-.nav-button a svg {
-    position: absolute;
-    top: 10px;
+#settingIcon a{
+    display: flex;
+    align-items: center;
 }
 
 .selected a {
