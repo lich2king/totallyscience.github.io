@@ -93,8 +93,13 @@
             document.getElementById('theme').value = localStorage.getItem('theme')
             function savePreferences(e)
             {
-                const link = document.getElementById("website").value
+                let link = document.getElementById("website").value
                 const themePick = document.getElementById("theme").value
+
+                if(!(link.toLowerCase().includes("http")))
+                {
+                    link = `http://${link}`
+                }
                 localStorage.setItem("redirectLink", link);
                 localStorage.setItem("theme", themePick)
                 document.getElementById('saveButton').innerHTML = "Saved."
