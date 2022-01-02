@@ -131,3 +131,5 @@ letters.forEach((letter) => {
         window.scrollTo({top: scroll, behavior: 'smooth'})
     })
 })
+
+document.getElementById('searchBar').style.backgroundImage = `url(./assets/images/magnifying-${localStorage.getItem("theme")}.svg)`
