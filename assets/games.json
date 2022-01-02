@@ -397,7 +397,7 @@
         "iframe_url": "./games/gunmayhem.html"
     },
     "Escaping The Prison":{
-        "description": "Stick figure game where you... Well, escape the prison! You must use anything and everything at your disposal to escape!",
+        "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
         "image": "./assets/game_images/escapingtheprison.jpeg",
         "controls": "Click with the mouse",
         "tags": [""],
