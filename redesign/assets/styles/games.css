@@ -55,6 +55,7 @@ input[type='text'] {
     padding: 12px 20px 12px 40px;
     transition: width 0.4s ease-in-out;
     margin-bottom: 3%;
+    color: var(--dark-color);
 }
 
 input[type='text']:focus {
