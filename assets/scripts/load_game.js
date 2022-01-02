@@ -2,6 +2,8 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('game')
 
+fetch(`./php/game_stats.php/?type=views&name=${gameName}`)
+
 fetch(`./assets/games.json?date=${new Date().getTime()}`)
     .then((response) => response.json())
     .then((games) => {
@@ -18,7 +20,7 @@ const reportBtn = $('report-btn')
 reportBtn.addEventListener('click', () => {
     if (hasReported) return
     hasReported = true
-    fetch(`./php/report.php/?name=${gameName}`)
+    fetch(`./php/game_stats.php/?type=reports&name=${gameName}`)
         .then((response) => response.text())
         .then((text) => {
             if (text.includes('<?php')) {
