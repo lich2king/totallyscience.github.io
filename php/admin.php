@@ -24,7 +24,7 @@ if(!$pass || $pass != "Totally_admin4321") {
 }
 
 echo("<h1>Reports</h1><table><tr><th>Game</th><th>Count</th></tr>");
-$select = $pdo->query("select name, count from reports");
+$select = $pdo->query("select name, count from reports order by count desc");
 
 while($report = $select->fetch()) {
     echo("<tr><td>" . $report["name"] . "</td><td>" . $report["count"] . "</td></tr>");
