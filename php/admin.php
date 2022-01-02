@@ -37,7 +37,7 @@ $datedata = "";
 while($day = $select->fetch()) {
     $datedata = "<tr><td>" . $day["day"] . "</td><td>" . $day["count"] . "</td></tr>" . $datedata;
 }
+$datedata = "<tr><td>Total</td><td>" . $total["total"] . "</td></tr>") . $datedata;
 echo($datedata);
-echo("<tr><td>Total</td><td>" . $total["total"] . "</td></tr>");
 echo("</table>");
 ?>
