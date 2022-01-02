@@ -33,10 +33,11 @@ while($report = $select->fetch()) {
 echo("</table><h1>Page Views</h1><table><tr><th>Day</th><th>Count</th></tr>");
 $select = $pdo->query("select day, count from stats");
 $total = $pdo->query("select sum(count) as total from stats")->fetch();
-$datedata = "<tr><td>Total</td><td>" . $total["total"] . "</td></tr>";
+$datedata = "";
 while($day = $select->fetch()) {
     $datedata = "<tr><td>" . $day["day"] . "</td><td>" . $day["count"] . "</td></tr>" . $datedata;
 }
+$datedata = "<tr><td>Total</td><td>" . $total["total"] . "</td></tr>" . $datedata;
 echo($datedata);
 echo("</table>");
 ?>
