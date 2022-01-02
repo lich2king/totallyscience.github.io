@@ -9,6 +9,7 @@ $newqueries = array(
 
 $name = htmlspecialchars($_GET["name"]);
 $type = htmlspecialchars($_GET["type"]);
+echo($name . " " . $type);
 if(!$name || !$type || !array_key_exists($type, $newqueries)) {
     die("?");
 }
