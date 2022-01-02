@@ -6,6 +6,11 @@ $newqueries = array(
     "reports" => "insert into games (name, views, reports) values (?, 0, 1)"
 );
 
+$updatequeries = array(
+    "views"   => "update games set views=? where id=?",
+    "reports" => "update games set reports=? where id=?"
+);
+
 $name = htmlspecialchars($_GET["name"]);
 $type = htmlspecialchars($_GET["type"]);
 
@@ -21,8 +26,7 @@ if(!$data) {
     $pdo->prepare($newqueries[$type])->execute([$name]);
 } else {
     $count = $data[$type] + 1;
-    echo($type . " " . $count . " " . $data["id"]);
-    $pdo->prepare("update games set ?=? where id=?")->execute([$type, $count, $data["id"]]);
+    $pdo->prepare($updatequeries[$type])->execute([$count, $data["id"]]);
 }
 
 echo("Success!");
