@@ -2,7 +2,7 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('game')
 
-fetch('./assets/games.json')
+fetch(`./assets/games.json/?${new Date().getTime()}`)
     .then((response) => response.json())
     .then((games) => {
         const gameData = games[gameName]
