@@ -395,5 +395,14 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Armor Games",
         "iframe_url": "./games/gunmayhem.html"
+    },
+    "Escaping The Prison":{
+        "description": "Stick figure game where you... Well, escape the prison! You must use anything and everything at your disposal to escape!",
+        "image": "./assets/game_images/escapingtheprison.jpeg",
+        "controls": "Click with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Puffballs United",
+        "iframe_url": "./games/escapingtheprison.html"
     }
 }
