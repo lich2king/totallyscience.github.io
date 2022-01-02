@@ -24,7 +24,7 @@
         "image": "https://driftboss.io/upload/imgs/options/drift-boss.jpg",
         "controls": "Click space to turn",
         "tags": ["car"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/drift-boss/index.html"
     },
@@ -44,7 +44,7 @@
         "image": "./assets/game_images/2048.png",
         "controls": "Arrow keys to slide tiles",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Gabriele Cirulli",
         "iframe_url": "./games/2048.html"
     },
@@ -54,7 +54,7 @@
         "image": "./assets/game_images/college2048.png",
         "controls": "Arrow keys to slide tiles",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Mitchell Gu",
         "iframe_url": "https://mitchgu.github.io/GetMIT/"
     },
@@ -64,7 +64,7 @@
         "image": "./assets/game_images/connect4.jpeg",
         "controls": "Click where your want to place your piece",
         "tags": ["2"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Codethislab",
         "iframe_url": "https://www.hoodamath.com/mobile/games/connect-4/game.html?nocheckorient=1"
     },
@@ -74,7 +74,7 @@
         "image": "./assets/game_images/cupcake2048.png",
         "controls": "Arrow keys to slide tiles",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Gabriele Cirulli",
         "iframe_url": "https://0x0800.github.io/2048-CUPCAKES/"
     },
@@ -84,7 +84,7 @@
         "image": "./assets/game_images/ducklife.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
     },
@@ -94,7 +94,7 @@
         "image": "./assets/game_images/ducklife2.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
     },
@@ -104,7 +104,7 @@
         "image": "./assets/game_images/ducklife3.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-3-evolution/game.html?nocheckorient=1"
     },
@@ -114,7 +114,7 @@
         "image": "./assets/game_images/ducklife4.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1"
     },
@@ -124,7 +124,7 @@
         "image": "./assets/game_images/elasticman.jpeg",
         "controls": "Drag features with mouse or touch-screen",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Adult Swim",
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
     },
@@ -134,7 +134,7 @@
         "image": "./assets/game_images/factoryballsforever.jpeg",
         "controls": "Drag balls with mouse",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Bontegames",
         "iframe_url": "https://www.hoodamath.com/mobile/games/factory-balls-forever/game.html?nocheckorient=1"
     },
@@ -144,7 +144,7 @@
         "image": "./assets/game_images/Flappy_Bird_icon.png",
         "controls": "Click space to fly higher",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "HyperPixel",
         "iframe_url": "https://scratch.mit.edu/projects/17828009/embed"
     },
@@ -154,7 +154,7 @@
         "image": "./assets/game_images/fridaynightfunkin.png",
         "controls": "Use the arrow keys to play notes",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "iframe_url": "https://cookieduck.com/games/fnf/week7/week7/"
     },
@@ -164,7 +164,7 @@
         "image": "./assets/game_images/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
         "iframe_url": "https://scratch.mit.edu/projects/466964675/embed"
     },
@@ -174,7 +174,7 @@
         "image": "./assets/game_images/galacticwars.png",
         "controls": "Arrow keys to move\nClick 'n' to fire",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Shotaro_Ishinomori",
         "iframe_url": "./games/galacticwars/index.html"
     },
@@ -184,7 +184,7 @@
         "image": "./assets/game_images/geometrydash.png",
         "controls": "Click space to jump",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/105500895/embed"
     },
@@ -194,7 +194,7 @@
         "image": "./assets/game_images/jetpackjoyride.png",
         "controls": "Hold space to go up",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "DarkLava",
         "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
     },
@@ -204,7 +204,7 @@
         "image": "./assets/game_images/minigolf.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "01smile",
         "iframe_url": "https://www.hoodamath.com/mobile/games/mini-golf/game.html?nocheckorient=1"
     },
@@ -214,7 +214,7 @@
         "image": "./assets/game_images/orcsvselves.jpeg",
         "controls": "Use mouse to aim\nClick to shoot",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Fountainhead Entertainment",
         "iframe_url": "https://priceless-easley-1cae17.netlify.com/"
     },
@@ -224,7 +224,7 @@
         "image": "./assets/game_images/papermc.jpeg",
         "controls": "[WASD] - Move / Jump\n [E] - Open/Close Inventory \n [Click] - Place or Mine\n[1 to 9] - Select Item\n[E+hover] - Open / Close Chest, Crafting Table, Door\n[Space] - Drop single tile from a stack while dragging.\n[F] - Eat food\n[N] - Label a sign or chest\n[Q] - Drop item\n[P] - Pause / Unpause\n[T] - Talk / Command\n[O] - Save your game\n[Shift] - Sprint\n[M] - Music / Sounds",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/10128407/embed"
     },
@@ -234,7 +234,7 @@
         "image": "./assets/game_images/pizzaparty.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
     },
@@ -244,7 +244,7 @@
         "image": "./assets/game_images/pool.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": ["2"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "isgames",
         "iframe_url": "https://isgames.github.io/8ball/"
     },
@@ -254,7 +254,7 @@
         "image": "./assets/game_images/restaurant.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/open-restaurant/game.html?nocheckorient=1"
     },
@@ -264,7 +264,7 @@
         "image": "./assets/game_images/robots.jpeg",
         "controls": "[Tab] - Switch Robot\n[Arrow Keys] - Move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/mobile_slydrs/index.html"
     },
@@ -274,7 +274,7 @@
         "image": "./assets/game_images/rollingvortex.jpeg",
         "controls": "[Arrow Keys] - Move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Voodoo",
         "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
     },
@@ -284,7 +284,7 @@
         "image": "./assets/game_images/sims.jpeg",
         "controls": "[Arrow Keys] - Move\n[x]+[z] - interact",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "ouroboroz",
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#sims2"
     },
@@ -294,7 +294,7 @@
         "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Rob Kay",
         "iframe_url": "https://web.archive.org/web/20181213135805id_/https://storage-cf.y8.com/y8-studio/unity/joll/slope/"
     },
@@ -304,7 +304,7 @@
         "image": "./assets/game_images/soccer.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": ["sport"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/freekick-training/game.html?nocheckorient=1"
     },
@@ -314,7 +314,7 @@
         "image": "./assets/game_images/streetfighter.png",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "ouroboroz",
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#super_street_fighter_3_alpha"
     },
@@ -324,7 +324,7 @@
         "image": "./assets/game_images/solitaire.png",
         "controls": "Click and drag with the mouse",
         "tags": ["card"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Google",
         "iframe_url": "https://www.google.com/logos/fnbx/solitaire/standalone.html"
     },
@@ -334,7 +334,7 @@
         "image": "./assets/game_images/tanukisunset.jpeg",
         "controls": "[Arrow Keys] - turn\n[Space] - drift",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Rewind Games",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1756009/WebGL/index.html"
     },
@@ -344,7 +344,7 @@
         "image": "./assets/game_images/stack.jpeg",
         "controls": "[Space] - Place block",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "CBC Kids",
         "iframe_url": "https://www.cbc.ca/kidscbc2/content/games/box-tower/index.html"
     },
@@ -354,7 +354,7 @@
         "image": "./assets/game_images/tetris.png",
         "controls": "[Arrow Keys] - rotate shape",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Mathisfun",
         "iframe_url": "https://www.mathsisfun.com/games/a/mimstris/index.html"
     },
@@ -364,7 +364,7 @@
         "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
     },
@@ -374,7 +374,7 @@
         "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "vinmannie",
         "iframe_url": "https://vinmannie.github.io/WorldsHardestGame/"
     },
