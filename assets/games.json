@@ -388,10 +388,10 @@
         "iframe_url": "./games/impossiblequiz.html"
     },
     "Gun Mayhem 2":{
-        "description": "More explosive arena style action! Battle against the AI or with friends in this cartoony platform shooter. Up to 4 players can play at once!",
+        "description": "More explosive arena style action! Battle against the AI or with friends in this cartoony platform shooter.",
         "image": "./assets/game_images/gunmayhem.jpeg",
         "controls": "[Arrow Keys] - move\n[z] - shoot\n[x] - bomb",
-        "tags": [""],
+        "tags": ["2"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Armor Games",
         "iframe_url": "./games/gunmayhem.html"
