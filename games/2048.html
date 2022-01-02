@@ -1,59 +1,6 @@
 <!DOCTYPE html>
 <!--The HTML, CSS, and JS is not offical. Source: http://2048game.com/ -->
 
-<title>Game</title>
-        <link rel="icon" href="http://zachattack.oyosite.com/totallyscience/ef953f87fe2b81cdf8433c1d5b8e0626.png">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
-        <style>
-			ul {
-  				list-style-type: none;
-  				margin: 0;
-  				padding: 0;
-  				overflow: hidden;
- 				background-color: #333;
-				}	
-
-			li {
-  				float: left;
-				}
-			
-			li a {
-  				display: block;
-  				color: white;
-  				text-align: center;
-  				padding: 14px 16px;
-  				text-decoration: none;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 18px;
-				}
-
-			li a:hover {
- 				 background-color: #111;
-				}
-			p{
-          		padding: 0px 16px;
-          		color: white;
-          		font-family: 'Helvetica', sans-serif;
-          		letter-spacing: 2px;
-      		}
-        </style>
-    <body>
-        <ul>
-          	<li><a href="/index.html">Home</a></li>
-  			    <li><a href="/games.html">Games</a></li>
-  			    <li><a href="/contact.html">Contact</a></li>
-  			    <li><a href="/about.html">About</a></li>
-            <li><a href="/highscore.html">Highscores</a></li>
-        	  <p align="right">
-                A Zach Yadegari Production  &trade;
-            </p>
-        </ul>
-        
-        
-         
-    </body>
-
 <style>
 	@import url(fonts/clear-sans.css);
 html, body {
@@ -71,15 +18,6 @@ body {
   content: "";
   display: block;
   clear: both; }
-
-h1.title {
-  font-size: 80px;
-  font-weight: bold;
-  margin: 0;
-  display: block;
-  float: left; }
-  h1.title a {
-    text-decoration: none; }
 
 @-webkit-keyframes move-up {
   0% {
@@ -109,8 +47,8 @@ h1.title {
     opacity: 0; } }
 
 .scores-container {
-  float: right;
-  text-align: right; }
+  margin-top: 50px;  
+}
 
 .score-container, .best-container {
   position: relative;
@@ -203,7 +141,6 @@ hr {
     opacity: 1; } }
 
 .game-container {
-  margin-top: 40px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -553,22 +490,28 @@ hr {
   clear: both; }
 
 .game-intro {
-  float: left;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%);
   line-height: 42px;
   margin-bottom: 0; }
 
 .restart-button {
+  transform: translate(0, -12px);
+  position: relative;
   display: inline-block;
   background: #8f7a66;
   border-radius: 3px;
-  padding: 0 20px;
+  margin: 10px;
   text-decoration: none;
   color: #f9f6f2;
+  padding: 8px;
+  width: 100px;
   height: 40px;
   line-height: 42px;
-  display: block;
   text-align: center;
-  float: right; }
+}
 
 .game-explanation {
   margin-top: 50px; }
@@ -581,10 +524,7 @@ hr {
     margin: 20px 0;
     padding: 0 20px; }
 
-  h1.title {
-    font-size: 27px;
-    margin-top: 15px; }
-
+ 
   .container {
     width: 280px;
     margin: 0 auto; }
@@ -603,15 +543,8 @@ hr {
     box-sizing: border-box;
     line-height: 1.65; }
 
-  .restart-button {
-    width: 42%;
-    padding: 0;
-    display: block;
-    box-sizing: border-box;
-    margin-top: 2px; }
 
   .game-container {
-    margin-top: 17px;
     position: relative;
     padding: 10px;
     cursor: default;
@@ -845,9 +778,6 @@ p {
     text-transform: uppercase;
     font-size: 10px; }
 
-.game-container {
-  margin-top: 25px; }
-
 .grammarly-box {
   padding: 20px;
   background: #fff;
@@ -1015,7 +945,7 @@ h1.title-internal {
 .shop-list .item-link img {
   width: 195px;
   height: 195px; }
-.shop-list .item-link .title {
+.shop-list .item-link {
   margin: 5px 0; }
 
 .quotes .quote {
@@ -1102,16 +1032,12 @@ footer {
 
   .mobile-top {
     display: block; }
-
-  body {
-    padding: 0px; } }
+  }
 @media screen and (min-width: 481px) {
   .tile .tile-inner {
     line-height: 107px; }
 
-  h1.title {
-    font-size: 74px;
-    line-height: 66px; } }
+}
 @media screen and (max-height: 768px) and (min-width: 481px) {
   .heading {
     margin-bottom: 15px; }
@@ -1124,7 +1050,7 @@ footer {
     width: 450px; }
 
   .game-container {
-    margin-top: 40px;
+    margin-top: 10px;
     position: relative;
     padding: 12px;
     cursor: default;
@@ -1296,11 +1222,9 @@ footer {
   .game-intro {
     font-size: 17px; }
 
-  .restart-button {
-    padding: 0 14px; }
 
   .game-container {
-    margin-top: 10px; }
+    margin-top: 0px; }
 
   .tips-and-tricks li a {
     width: 218px; }
@@ -1312,16 +1236,14 @@ footer {
     font-size: 15px; }
 
   body {
-    margin: 0 0 20px 0; }
+    margin: 0 0 0px 0; }
 
   #flappy-thirds-wrapper canvas {
     width: 100%; }
 
-  .restart-button {
-    width: 35%; }
 
   .game-container {
-    margin-top: 10px; }
+    margin-top: px; }
 
   .score-container:after, .best-container:after {
     font-size: 11px; }
@@ -1355,7 +1277,7 @@ footer {
     font-size: 15px; }
 
   .ads-bellow-game {
-    margin-top: 30px;
+    margin-top: 0px;
     text-align: center;
     float: none;
     width: 100%; } }
@@ -1363,19 +1285,14 @@ footer {
 </style>
 <center>
   <div class="heading">
-  <h1 class="title"><a href="/">2048</a></h1>
-  <div class="scores-container">
-    <div class="score-container">0</div>
-    <div class="best-container">2960</div>
+    <div class="scores-container">
+      <div class="score-container">0</div>
+      <a class="restart-button">New Game</a>
+      <div class="best-container">2960</div>
+    </div>
   </div>
-</div>
-<div class="game-intro">
-  <a class="restart-button">New Game</a>
-  <h2 class="subtitle">Play <strong>2048 Game</strong> Online</h2>
-  <div class="above-game">
-    <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
+  <div class="game-intro">
   </div>
-</div>
 
 <div class="game-container">
   <div class="game-message">
@@ -2068,4 +1985,4 @@ window.requestAnimationFrame(function() {
 				window.open('https://classroom.google.com/u/0/h', '_blank');
             }
 		}, false);
-    </script>
+</script>
