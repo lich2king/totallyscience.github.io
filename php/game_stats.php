@@ -21,7 +21,7 @@ if(!$data) {
     $pdo->prepare($newqueries[$type])->execute([$name]);
 } else {
     $count = $data[$type] + 1;
-    echo($count);
+    echo($type . " " . $count . " " . $data["id"]);
     $pdo->prepare("update games set ?=? where id=?")->execute([$type, $count, $data["id"]]);
 }
 
