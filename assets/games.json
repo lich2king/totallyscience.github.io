@@ -440,6 +440,14 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/infiltrateairship.html"
+    },
+    "Fleeing The Complex":{
+        "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
+        "image": "./assets/game_images/fleeingcomplex.jpg",
+        "controls": "Click with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Puffballs United",
+        "iframe_url": "./games/fleecomplex.html"
     }
-    
 }
