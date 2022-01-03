@@ -9,7 +9,7 @@ const addSuffix = (num) => {
     return num + 'th'
 }
 
-fetch('https://96.248.67.70/totallyscience-backend/counter.php')
+fetch('http://96.248.67.70/totallyscience-backend/counter.php')
     .then((response) => response.text())
     .then((visits) => {
         const display = $('visits-count')
