@@ -404,5 +404,15 @@
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/escapingtheprison.html"
+    },
+    "Krunker.io":{
+        "description": "Free-to-play arena-style browser-based tactical fps.",
+        "image": "./assets/game_images/krunker.png",
+        "controls": "[WASD] - move\n[Click] - shoot\n[Drag Mouse] - aim",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Yendis Entertainment",
+        "iframe_url": "https://browserfps.com/"
     }
+    
 }
