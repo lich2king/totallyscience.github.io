@@ -400,7 +400,7 @@
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
         "image": "./assets/game_images/escapingtheprison.jpeg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["stickmin"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/escapingtheprison.html"
@@ -418,7 +418,7 @@
         "description": "Attempt to break into a bank, built in the middle of a desert.",
         "image": "./assets/game_images/breakingthebank.jpeg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["stickmin"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/breakinbank.html"
@@ -427,7 +427,7 @@
         "description": "Help Henry Stickmin break into a museum and execute a diamond heist.",
         "image": "./assets/game_images/stealdiamond.jpeg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["stickmin"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/stealdiamond.html"
@@ -436,7 +436,7 @@
         "description": "Try not to fail during a deadly mission in the sky! Infiltrating the Airship dares you to make risky decisions.",
         "image": "./assets/game_images/infiltratingairship.jpeg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["stickmin"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/infiltrateairship.html"
@@ -445,7 +445,7 @@
         "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
         "image": "./assets/game_images/fleeingcomplex.jpg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["stickmin"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/fleecomplex.html"
