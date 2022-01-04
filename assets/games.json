@@ -494,5 +494,14 @@
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Joseph Cloutier",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/run3/"
+    },
+    "Snake":{
+        "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
+        "image": "./assets/game_images/snake.png",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2021-12-30T04:56:36.982Z",
+        "developer": "Google",
+        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/snake/"
     }
 }
