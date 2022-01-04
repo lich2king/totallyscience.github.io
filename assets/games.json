@@ -480,7 +480,7 @@
     "Paper.io":{
         "description": "Invade as many lands as possible and become the biggest on the server!",
         "image": "./assets/game_images/paperio.jpeg",
-        "controls": "[Arrow Keys] - move",
+        "controls": "[Move Mouse] - move\nor\n[Arrow Keys] - move",
         "tags": [""],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Voodoo",
