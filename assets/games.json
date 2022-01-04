@@ -467,5 +467,14 @@
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Jakub Koziol",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9saXR0bGVhbGNoZW15Mi5jb20=/"
+    },
+    "Appel Platformer":{
+        "description": "Simple and fun platformer game. Try to beat levels in record breaking times!",
+        "image": "./assets/game_images/appelplatformer.png",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2021-12-30T04:56:36.982Z",
+        "developer": "Griffpatch",
+        "iframe_url": "https://ubgames.web.app/appel"
     }
 }
