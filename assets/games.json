@@ -485,5 +485,14 @@
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Voodoo",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9wYXBlci1pby5jb20=/"
+    },
+    "Run 3":{
+        "description": "Run through an endless tunnel, diverting from the holes and pieces of ground that break.",
+        "image": "./assets/game_images/run3.jpeg",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2021-12-30T04:56:36.982Z",
+        "developer": "Joseph Cloutier",
+        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/run3/"
     }
 }
