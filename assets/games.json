@@ -539,5 +539,14 @@
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Total Jerk Face",
         "iframe_url": "https://games-online.io/game/HappyWheels/"
+    },
+    "Among Us":{
+        "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
+        "image": "./assets/game_images/amongus.jpg",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2022-01-04T15:15:33.894Z",
+        "developer": "Klopity",
+        "iframe_url": "https://gefile.github.io/among-us-sp/"
     }
 }
