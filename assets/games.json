@@ -530,5 +530,14 @@
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Gamedistribution",
         "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/3f20410dc7e440c2869b0d1d502ae828/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwOi8vZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20vIiwicGFyZW50RG9tYWluIjoiZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20iLCJ0b3BEb21haW4iOiJmbGFzaGdhbWVzMjQ3LmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjQifQ%253D%253D"
+    },
+    "Happy Wheels":{
+        "description": "Side-scrolling, physics-based, obstacle course game. Try to get to the end without dying!",
+        "image": "./assets/game_images/happywheels.png",
+        "controls": "[Arrow Keys] - move\n[Space] - grab/boost/jump\n[z] - exit vehicle\n[",
+        "tags": [""],
+        "date_added": "2022-01-04T15:15:33.894Z",
+        "developer": "Total Jerk Face",
+        "iframe_url": "https://games-online.io/game/HappyWheels/"
     }
 }
