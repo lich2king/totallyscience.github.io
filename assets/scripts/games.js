@@ -66,10 +66,11 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 const adIns = document.createElement("ins")
                 adIns.setAttribute("class", "adsbygoogle")
                 adIns.setAttribute("style", "display:block")
-                adIns.setAttribute("data-ad-format", "fluid")
+                adIns.setAttribute("data-ad-format", "auto")
                 adIns.setAttribute("data-ad-layout-key", "-gs+3s+5e-7t-2r")
                 adIns.setAttribute("data-ad-client", "ca-pub-3486863589051210")
-                adIns.setAttribute("data-ad-slot", "5342360438")
+                adIns.setAttribute("data-ad-slot", "2075384482")
+                adIns.setAttribute("data-full-width-responsive", "true")
 
                 const adScriptEnd = document.createElement("script")
                 adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
