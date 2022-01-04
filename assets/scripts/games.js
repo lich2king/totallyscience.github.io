@@ -1,3 +1,5 @@
+//const { format } = require("express/lib/response")
+
 // Thank you stack overflow.
 let sortObject = (obj) =>
     Object.keys(obj)
@@ -13,7 +15,9 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
     .then((response) => response.json())
     .then((games) => {
         let sorted = sortObject(games)
+        let gamesInRow = 0
         for (const [name, data] of Object.entries(sorted)) {
+            gamesInRow++
             const sectionLetter = name[0].toLowerCase()
             let existingSection = $(sectionLetter)
 
@@ -52,6 +56,29 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
 
             gameBtn.appendChild(gameText)
             existingSection.appendChild(gameBtn)
+            if(gamesInRow >= 9)
+            {
+                const adScript = document.createElement("script")
+                adScript.async = true
+                adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+                adScript.crossOrigin = "anonymous"
+                
+                const adIns = document.createElement("ins")
+                adIns.setAttribute("class", "adsbygoogle")
+                adIns.setAttribute("style", "display:block")
+                adIns.setAttribute("data-ad-format", "fluid")
+                adIns.setAttribute("data-ad-layout-key", "-h1-i-v-c3+y5")
+                adIns.setAttribute("data-ad-client", "ca-pub-3486863589051210")
+                adIns.setAttribute("data-ad-slot", "2905266330")
+
+                const adScriptEnd = document.createElement("script")
+                adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
+                
+                existingSection.insertAdjacentElement('afterend', adScript);
+                existingSection.insertAdjacentElement('afterend', adIns);
+                existingSection.insertAdjacentElement('afterend', adScriptEnd);
+                gamesInRow = 0
+            }
         }
     })
 
