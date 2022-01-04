@@ -4,7 +4,7 @@
         "image": "https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg",
         "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
         "tags": ["featured", "sport"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "New Star Games",
         "iframe_url": "./games/retrobowl/index.html"
     },
@@ -14,7 +14,7 @@
         "image": "./assets/game_images/papaspizza.png",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
         "tags": ["featured"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Flipline Studios",
         "iframe_url": "./games/papaspizzeria.html"
     },
@@ -383,7 +383,7 @@
         "image": "./assets/game_images/the-impossible-quiz.jpg",
         "controls": "Click and drag with the mouse",
         "tags": ["featured"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Splapp-me-do Games",
         "iframe_url": "./games/impossiblequiz.html"
     },
@@ -392,7 +392,7 @@
         "image": "./assets/game_images/gunmayhem.jpeg",
         "controls": "[Arrow Keys] - move\n[z] - shoot\n[x] - bomb",
         "tags": ["2"],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Armor Games",
         "iframe_url": "./games/gunmayhem.html"
     },
@@ -410,7 +410,7 @@
         "image": "./assets/game_images/krunker.png",
         "controls": "[WASD] - move\n[Click] - shoot\n[Drag Mouse] - aim",
         "tags": [""],
-        "date_added": "2021-12-28T04:56:36.982Z",
+        "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Yendis Entertainment",
         "iframe_url": "https://browserfps.com/"
     },
