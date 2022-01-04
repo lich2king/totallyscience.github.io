@@ -503,5 +503,14 @@
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Google",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/snake/"
+    },
+    "Pac Man":{
+        "description": "Action maze chase game where you run from ghosts while eating dots.",
+        "image": "./assets/game_images/pacman.png",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2021-12-30T04:56:36.982Z",
+        "developer": "Toshio Kai",
+        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/pacman/"
     }
 }
