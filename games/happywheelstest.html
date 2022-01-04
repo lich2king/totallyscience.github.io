@@ -112,7 +112,7 @@
 </body>
 <script src="https://games-online.io/game/HappyWheels/Build/UnityLoader.js"></script>
 <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "https://games-online.io/game/HappyWheels/Build/UnityLoader.json", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/HappyWheels.json", {onProgress: UnityProgress});
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
