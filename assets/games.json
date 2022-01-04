@@ -521,5 +521,14 @@
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Markus Persson",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/minecraft/"
+    },
+    "Golf Blast":{
+        "description": "Get the ball in the hole in as little swings possible.",
+        "image": "./assets/game_images/golfblast.jpeg",
+        "controls": "Drag and click with mouse",
+        "tags": [""],
+        "date_added": "2022-01-04T15:15:33.894Z",
+        "developer": "Gamedistribution",
+        "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/3f20410dc7e440c2869b0d1d502ae828/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwOi8vZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20vIiwicGFyZW50RG9tYWluIjoiZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20iLCJ0b3BEb21haW4iOiJmbGFzaGdhbWVzMjQ3LmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjQifQ%253D%253D"
     }
 }
