@@ -77,9 +77,9 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 const adDivCushion = document.createElement("div")
                 adDivCushion.style = "padding-bottom: 100vh"
                 
-                existingSection.insertAdjacentElement('afterend', adScript);
-                existingSection.insertAdjacentElement('afterend', adIns);
-                existingSection.insertAdjacentElement('afterend', adScriptEnd);
+                gameBtn.insertAdjacentElement('afterend', adScript);
+                gameBtn.insertAdjacentElement('afterend', adIns);
+                gameBtn.insertAdjacentElement('afterend', adScriptEnd);
                 gamesInRow = 0
             }
         }
