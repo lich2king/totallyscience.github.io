@@ -65,7 +65,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 
                 const adIns = document.createElement("ins")
                 adIns.setAttribute("class", "adsbygoogle")
-                adIns.setAttribute("style", "display:inline-block;width:600px;height:120px")
+                adIns.setAttribute("style", "display:inline-block;width:500px;height:100px")
                 //adIns.setAttribute("data-ad-format", "auto")
                 //adIns.setAttribute("data-ad-layout-key", "-gs+3s+5e-7t-2r")
                 adIns.setAttribute("data-ad-client", "ca-pub-3486863589051210")
@@ -73,6 +73,9 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
 
                 const adScriptEnd = document.createElement("script")
                 adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
+
+                const adDivCushion = document.createElement("div")
+                adDivCushion.style = "padding-bottom: 15px"
                 
                 existingSection.insertAdjacentElement('afterend', adScript);
                 existingSection.insertAdjacentElement('afterend', adIns);
