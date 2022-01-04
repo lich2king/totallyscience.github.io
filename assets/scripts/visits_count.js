@@ -9,7 +9,7 @@ const addSuffix = (num) => {
     return num + 'th'
 }
 
-fetch('https://soundbites.xyz/totallyscience-backend/counter.php')
+fetch('https://moovally.com/totallyscience-backend/counter.php')
     .then((response) => response.text())
     .then((visits) => {
         const display = $('visits-count')
