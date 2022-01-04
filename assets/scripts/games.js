@@ -75,7 +75,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
 
                 const adDivCushion = document.createElement("div")
-                adDivCushion.style = "padding-bottom: 10%"
+                adDivCushion.style = "padding-bottom: 10vh"
                 
                 existingSection.insertAdjacentElement('afterend', adScript);
                 existingSection.insertAdjacentElement('afterend', adIns);
