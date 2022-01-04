@@ -534,7 +534,7 @@
     "Happy Wheels":{
         "description": "Side-scrolling, physics-based, obstacle course game. Try to get to the end without dying!",
         "image": "./assets/game_images/happywheels.png",
-        "controls": "[Arrow Keys] - move\n[Space] - grab/boost/jump\n[z] - exit vehicle\n[",
+        "controls": "[Arrow Keys] - move\n[Space] - grab/boost/jump\n[z] - exit vehicle",
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Total Jerk Face",
