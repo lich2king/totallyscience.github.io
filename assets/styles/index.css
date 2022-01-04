@@ -145,6 +145,15 @@ footer {
     margin: 0;
     margin-top: 15px;
 }
+@media (min-width: 1500px) {
+    #left-footer p {
+        font-size: 50px;
+    }
+
+    #right-footer p {
+        font-size: 50px;
+    }
+}
 
 @media (max-width: 750px) {
     footer {

@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Totally Science</title>
-        <!--Cache Killer-->
+
+<head>
+    <title>Totally Science</title>
+    <!--Cache Killer-->
+    <script>
+        const html = document.getElementsByTagName('head')[0].innerHTML;
+        const title = document.getElementsByTagName('title')[0];
+        const indexCss = `<link rel='stylesheet' href='assets/styles/game.css?${new Date().getTime()}'>`;
+        // main.js
+        let mainJS = document.createElement("script");
+        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+        title.insertAdjacentElement('afterend', mainJS);
+
+        // game.js
+        let gameJS = document.createElement("script");
+        gameJS.src = `assets/scripts/load_game.js?${new Date().getTime()}`;
+        title.insertAdjacentElement('afterend', gameJS);
+
+        document.getElementsByTagName('head')[0].innerHTML += indexCss;
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="icon" href="assets/images/logo.png">
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button selected"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="browser.html">Browser</a></div>
+        </div>
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+        <div id="rightbar">
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
+        </div>
+    </div>
+
+
+    <section id="game">
+        <div id="gameDiv">
+            <!--<iframe scrolling="no" frameBorder="0" id="game-iframe"></iframe> -->
+            <iframe src="" width="80%" height="80%" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
+        </div>
+    </section>
+
+    <div align="center">
+        <!--Ad-->
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+            crossorigin="anonymous"></script>
+        <!-- Horizontal Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
-            const html = document.getElementsByTagName('head')[0].innerHTML;
-            const title = document.getElementsByTagName('title')[0];
-                const indexCss = `<link rel='stylesheet' href='assets/styles/game.css?${new Date().getTime()}'>`;
-            // main.js
-            let mainJS = document.createElement("script");
-            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-            title.insertAdjacentElement('afterend', mainJS);
-
-            // game.js
-            let gameJS = document.createElement("script");
-            gameJS.src = `assets/scripts/load_game.js?${new Date().getTime()}`;
-            title.insertAdjacentElement('afterend', gameJS);
-
-            document.getElementsByTagName('head')[0].innerHTML += indexCss;
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-    
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
-        <!--End Cache Killer-->
-        
-        <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="icon" href="assets/images/logo.png">
-        <!--Google Adsense-->
-        <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
+        <!--End Ad-->
+    </div>
 
-    <body>
-        <div id="navbar">
-            <div id="leftbar">
-                <div class="nav-button"><a href="index.html">Home</a></div>
-                <div class="nav-button selected"><a href="classes.html">Games</a></div>
-                <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
-                <div class="nav-button"><a href="browser.html">Browser</a></div>
+    <section id="desc">
+        <div class="grid-container">
+            <div>
+                <p class="mainText">Controls:</p>
             </div>
-            <div id="middlebar">
-                <p>Totally Science</p>
+            <div>
+                <p class="mainText">Developer:</p>
             </div>
-            <div id="rightbar">
-                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
+            <div>
+                <p id="controls" class="subText">...</p>
+            </div>
+            <div>
+                <p id="developer" class="subText">This game was created by...</p>
             </div>
         </div>
-        
-        
-        <section id="game">
-            <div id="gameDiv">
-                <!--<iframe scrolling="no" frameBorder="0" id="game-iframe"></iframe> -->
-                <iframe src="" width="80%" height="80%" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
-            </div>
-        </section>
+    </section>
 
-        
-        <section id="desc">
-            <div class="grid-container">
-                <div><p class="mainText">Controls:</p></div>
-                <div><p class="mainText">Developer:</p></div>
-                <div><p id="controls" class="subText">...</p></div>
-                <div><p id="developer" class="subText">This game was created by...</p></div>
-              </div>
-        </section>
-        
-        <section id="report">
-            <p>Is this game not working? Let us know!</p>
-            <button id="report-btn">Report</button>
-        </section>
-    </body>
+    <section id="report">
+        <p>Is this game not working? Let us know!</p>
+        <button id="report-btn">Report</button>
+    </section>
+</body>
+
 </html>
