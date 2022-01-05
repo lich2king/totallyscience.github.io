@@ -81,8 +81,8 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 const adScriptEnd = document.createElement("script")
                 adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
 
-                const adDivCushion = document.createElement("div")
-                adDivCushion.style = "padding-bottom: 100vh"
+                //const adDivCushion = document.createElement("div")
+                //adDivCushion.style = "padding-bottom: 100vh"
                 
                 innerAdDiv.insertAdjacentElement('afterend', adScript);
                 innerAdDiv.insertAdjacentElement('afterend', adIns);
