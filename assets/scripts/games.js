@@ -101,16 +101,16 @@ const adDivs = $qsa('.adDiv')
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        console.log("here")
+        
         if (e.target.id == 'bolt') {
             selectedTopic = e.target.parentNode.name
         } else {
             selectedTopic = e.target.name
         }
-
+        
         const buttons = $qsa('.categoryButton')
         const games = $qsa('.gameButton')
-
+        console.log("here")
         buttons.forEach((btn) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
