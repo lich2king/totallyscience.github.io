@@ -156,7 +156,7 @@ const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
     const adDivs = $qsa('.adDiv')
     console.log(adDivs)
-    if(selectedTopic != 'all')
+    if(searchBar.value != '')
     {
         adDivs.forEach((d) => {
             d.style = "display:none"
@@ -171,7 +171,6 @@ searchBar.addEventListener('keyup', () => {
     }
     const input = searchBar.value.toUpperCase()
     $qsa('.gameButton').forEach((button) => {
-        console.log(button)
         const gameName = button.getAttribute('name')
         if (gameName.toUpperCase().indexOf(input) > -1) {
             if (button.classList.contains(selectedTopic)) {
