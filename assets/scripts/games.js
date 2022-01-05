@@ -154,6 +154,20 @@ buttons.forEach((button) => {
 
 const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
+    const adDivs = $qsa('.adDiv')
+    if(selectedTopic != 'all')
+    {
+        adDivs.forEach((d) => {
+            d.style = "display:none"
+        })
+    }
+    else
+    {
+        adDivs.forEach((d) => {
+            d.style = "display:"
+            console.log(d)
+        })
+    }
     const input = searchBar.value.toUpperCase()
     $qsa('.gameButton').forEach((button) => {
         console.log(button)
