@@ -96,6 +96,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
 //selected topic variable is used both in the button category changer and the search bar function
 let selectedTopic = 'all'
 const buttons = $qsa('.categoryButton, #bolt')
+const adDivs = $qsa('.adDiv')
 //buttons.appendChild(document.getElementById('bolt'))
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
@@ -113,6 +114,19 @@ buttons.forEach((button) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
         })
+        if(selectedTopic != 'all')
+        {
+            adDivs.forEach((d) => {
+                d.style = "display:none"
+            })
+        }
+        else
+        {
+            adDivs.forEach((d) => {
+                d.style = "display:"
+            })
+        }
+
 
         const selected = $n(selectedTopic)[0]
         if (e.target.innerHTML == '⚡') {
