@@ -110,12 +110,12 @@ buttons.forEach((button) => {
         
         const buttons = $qsa('.categoryButton')
         const games = $qsa('.gameButton')
-        console.log("here")
+        
         buttons.forEach((btn) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
         })
-        
+        console.log("here")
         if(selectedTopic != 'all')
         {
             
