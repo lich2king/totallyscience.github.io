@@ -114,10 +114,10 @@ buttons.forEach((button) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
         })
-        
+        console.log("here")
         if(selectedTopic != 'all')
         {
-            console.log("here")
+            
             adDivs.forEach((d) => {
                 d.style = "display:none"
             })
