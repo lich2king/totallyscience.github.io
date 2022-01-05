@@ -126,7 +126,6 @@ buttons.forEach((button) => {
         {
             adDivs.forEach((d) => {
                 d.style = "display:"
-                console.log(d)
             })
         }
 
