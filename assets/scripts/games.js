@@ -115,14 +115,17 @@ buttons.forEach((button) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
         })
-        console.log("here")
         const adDivs = $qsa('.adDiv')
         if(selectedTopic != 'all')
         {
-            console.log("here2")
-            console.log(adDivs)
             adDivs.forEach((d) => {
                 d.style = "display:none"
+            })
+        }
+        else
+        {
+            adDivs.forEach((d) => {
+                d.style = "display:"
                 console.log(d)
             })
         }
