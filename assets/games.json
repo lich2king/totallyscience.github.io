@@ -239,7 +239,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
     },
     
-    "Pool":{
+    "8-Ball Pool":{
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./assets/game_images/pool.jpeg",
         "controls": "Click and drag with the mouse",
