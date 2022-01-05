@@ -155,7 +155,6 @@ buttons.forEach((button) => {
 const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
     const adDivs = $qsa('.adDiv')
-    console.log(adDivs)
     if(searchBar.value != '')
     {
         adDivs.forEach((d) => {
