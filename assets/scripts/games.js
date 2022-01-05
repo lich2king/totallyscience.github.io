@@ -119,6 +119,7 @@ buttons.forEach((button) => {
         if(selectedTopic != 'all')
         {
             console.log("here2")
+            console.log(adDivs)
             adDivs.forEach((d) => {
                 d.style = "display:none"
                 console.log(d)
