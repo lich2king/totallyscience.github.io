@@ -164,7 +164,6 @@ searchBar.addEventListener('keyup', () => {
     {
         adDivs.forEach((d) => {
             d.style = "display:"
-            console.log(d)
         })
     }
     const input = searchBar.value.toUpperCase()
