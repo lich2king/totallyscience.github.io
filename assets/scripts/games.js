@@ -121,6 +121,7 @@ buttons.forEach((button) => {
             console.log("here2")
             adDivs.forEach((d) => {
                 d.style = "display:none"
+                console.log(d)
             })
         }
 
