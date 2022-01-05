@@ -548,5 +548,14 @@
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Klopity",
         "iframe_url": "https://gefile.github.io/among-us-sp/"
+    },
+    "The Impossible Quiz 2":{
+        "description": "The second edition of the impossible quiz. Think you can beat it?",
+        "image": "./assets/game_images/impquiz2.jpeg",
+        "controls": "Click with the mouse",
+        "tags": [""],
+        "date_added": "2021-12-28T04:56:36.982Z",
+        "developer": "Splapp-Me-Do Games",
+        "iframe_url": "./games/TheImpossibleQuiz2.html"
     }
 }
