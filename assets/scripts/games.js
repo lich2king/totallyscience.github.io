@@ -58,6 +58,13 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
             existingSection.appendChild(gameBtn)
             if(gamesInRow >= 9)
             {
+                const adDiv = document.createElement("div")
+                adDiv.classList.add("adDiv")
+                const innerAdDiv = document.createElement("div")
+                adDiv.appendChild(innerAdDiv)
+                existingSection.appendChild(adDiv)
+
+
                 const adScript = document.createElement("script")
                 adScript.async = true
                 adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
@@ -77,9 +84,9 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 const adDivCushion = document.createElement("div")
                 adDivCushion.style = "padding-bottom: 100vh"
                 
-                gameBtn.insertAdjacentElement('afterend', adScript);
-                gameBtn.insertAdjacentElement('afterend', adIns);
-                gameBtn.insertAdjacentElement('afterend', adScriptEnd);
+                innerAdDiv.insertAdjacentElement('afterend', adScript);
+                innerAdDiv.insertAdjacentElement('afterend', adIns);
+                innerAdDiv.insertAdjacentElement('afterend', adScriptEnd);
                 gamesInRow = 0
             }
         }
