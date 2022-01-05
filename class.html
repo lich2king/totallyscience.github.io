@@ -16,6 +16,8 @@
         // game.js
         let gameJS = document.createElement("script");
         gameJS.src = `assets/scripts/load_game.js?${new Date().getTime()}`;
+        gameJS.defer = true;
+        gameJS.async = true;
         title.insertAdjacentElement('afterend', gameJS);
 
         document.getElementsByTagName('head')[0].innerHTML += indexCss;

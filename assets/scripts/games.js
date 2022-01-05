@@ -1,3 +1,5 @@
+//const { format } = require("express/lib/response")
+
 // Thank you stack overflow.
 let sortObject = (obj) =>
     Object.keys(obj)
@@ -13,7 +15,9 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
     .then((response) => response.json())
     .then((games) => {
         let sorted = sortObject(games)
+        let gamesInRow = 0
         for (const [name, data] of Object.entries(sorted)) {
+            gamesInRow++
             const sectionLetter = name[0].toLowerCase()
             let existingSection = $(sectionLetter)
 
@@ -52,6 +56,39 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
 
             gameBtn.appendChild(gameText)
             existingSection.appendChild(gameBtn)
+            if(gamesInRow >= 9)
+            {
+                const adDiv = document.createElement("div")
+                adDiv.classList.add("adDiv")
+                const innerAdDiv = document.createElement("div")
+                adDiv.appendChild(innerAdDiv)
+                existingSection.appendChild(adDiv)
+
+
+                const adScript = document.createElement("script")
+                adScript.async = true
+                adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+                adScript.crossOrigin = "anonymous"
+                
+                const adIns = document.createElement("ins")
+                adIns.setAttribute("class", "adsbygoogle")
+                adIns.setAttribute("style", "display:inline-block;width:525px;height:105px")
+                //adIns.setAttribute("data-ad-format", "auto")
+                //adIns.setAttribute("data-ad-layout-key", "-gs+3s+5e-7t-2r")
+                adIns.setAttribute("data-ad-client", "ca-pub-3486863589051210")
+                adIns.setAttribute("data-ad-slot", "2075384482")
+
+                const adScriptEnd = document.createElement("script")
+                adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
+
+                const adDivCushion = document.createElement("div")
+                adDivCushion.style = "padding-bottom: 100vh"
+                
+                innerAdDiv.insertAdjacentElement('afterend', adScript);
+                innerAdDiv.insertAdjacentElement('afterend', adIns);
+                innerAdDiv.insertAdjacentElement('afterend', adScriptEnd);
+                gamesInRow = 0
+            }
         }
     })
 
@@ -59,23 +96,39 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
 //selected topic variable is used both in the button category changer and the search bar function
 let selectedTopic = 'all'
 const buttons = $qsa('.categoryButton, #bolt')
+
 //buttons.appendChild(document.getElementById('bolt'))
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
+        
         if (e.target.id == 'bolt') {
             selectedTopic = e.target.parentNode.name
         } else {
             selectedTopic = e.target.name
         }
-
+        
         const buttons = $qsa('.categoryButton')
         const games = $qsa('.gameButton')
-
+        
         buttons.forEach((btn) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
         })
+        const adDivs = $qsa('.adDiv')
+        if(selectedTopic != 'all')
+        {
+            adDivs.forEach((d) => {
+                d.style = "display:none"
+            })
+        }
+        else
+        {
+            adDivs.forEach((d) => {
+                d.style = "display:"
+            })
+        }
+
 
         const selected = $n(selectedTopic)[0]
         if (e.target.innerHTML == '⚡') {
@@ -100,9 +153,21 @@ buttons.forEach((button) => {
 
 const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
+    const adDivs = $qsa('.adDiv')
+    if(searchBar.value != '')
+    {
+        adDivs.forEach((d) => {
+            d.style = "display:none"
+        })
+    }
+    else
+    {
+        adDivs.forEach((d) => {
+            d.style = "display:"
+        })
+    }
     const input = searchBar.value.toUpperCase()
     $qsa('.gameButton').forEach((button) => {
-        console.log(button)
         const gameName = button.getAttribute('name')
         if (gameName.toUpperCase().indexOf(input) > -1) {
             if (button.classList.contains(selectedTopic)) {
