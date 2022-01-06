@@ -588,7 +588,7 @@
     "Drift Hunters":{
         "description": "An awesome 3D car driving game in which you score points by drifting various cars.",
         "image": "./assets/game_images/drifthunters.png",
-        "controls": "[WASD] - drive\n[Space] - handbrake\n[c] - change camera\n[LShift] - shift up gear\n[LCntrl] - shift down gear",
+        "controls": "[WASD] - drive\n[Space] - handbrake\n[c] - change camera\n[LShift] - shift up gear\n[LCtrl] - shift down gear",
         "tags": ["car"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Ilya.kaminetsky",
