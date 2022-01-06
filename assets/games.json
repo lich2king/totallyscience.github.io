@@ -584,5 +584,14 @@
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
+    },
+    "Drift Hunters":{
+        "description": "An awesome 3D car driving game in which you score points by drifting various cars.",
+        "image": "./assets/game_images/drifthunters.png",
+        "controls": "[WASD] - drive",
+        "tags": ["car"],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "Ilya.kaminetsky",
+        "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1792221/ItchIO/index.html"
     }
 }
