@@ -23,6 +23,9 @@ function joinRoom(isNewRoom) {
 
                         messageList.innerHTML = '';
 
+                        let ele = document.createElement('li');
+                        ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
+                        messageList.appendChild(ele);
                         for (msg in messages) {
                             if (messages[msg] == 'success') continue;
 
@@ -69,6 +72,9 @@ function joinRoom(isNewRoom) {
             if (res.startsWith('success')) {
                 const messages = res.split(',');
 
+                let ele = document.createElement('li');
+                ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
+                messageList.appendChild(ele);
                 for (msg in messages) {
                     if (messages[msg] == 'success') continue;
 
@@ -102,6 +108,9 @@ function joinRoom(isNewRoom) {
 
                                 messageList.innerHTML = '';
 
+                                let ele = document.createElement('li');
+                                ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
+                                messageList.appendChild(ele);
                                 for (msg in messages) {
                                     if (messages[msg] == 'success') continue;
 
