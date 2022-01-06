@@ -10,7 +10,7 @@ function joinRoom(isNewRoom) {
     const leavebtn = document.getElementById('leavebtn');
     const scrollb = document.getElementById('scrollb');
 
-    if (isNewRoom && isNum(roominput.value)) {
+    if (isNewRoom && roominput.value.match(/^[0-9]+$/) != null) {
         alert("Please include a letter in your code")
     } else {
         alert("LEtter")
