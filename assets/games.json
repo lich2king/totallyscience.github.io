@@ -566,5 +566,14 @@
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "GamingRaccoon44",
         "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
+    },
+    "FNAF 3":{
+        "description": "30 years after the events that took place in 5 Nights at Freddy's.",
+        "image": "./assets/game_images/fnaf3.png",
+        "controls": "[Space] - close vents\n[Click] - interact",
+        "tags": [""],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "Fnafphoneguy123",
+        "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
     }
 }
