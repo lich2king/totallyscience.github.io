@@ -13,6 +13,7 @@ function joinRoom(isNewRoom) {
     if (isNewRoom && messageinput.value.match(/^[0-9]+$/) != null) {
         alert("Please include a letter in your code")
     } else {
+        alert("LEtter")
         messageinput.addEventListener("keyup", function(event) {
             if (event.key === 'Enter') {
                 event.preventDefault();
