@@ -17,7 +17,7 @@ function joinRoom(isNewRoom) {
             messageinput.value = ''
 
             try {
-                fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}&v=1`).then((response) => response.text()).then((res) => {
+                fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
                     const jsonRes = JSON.parse(res);
                     
                     if (jsonRes) {
@@ -68,7 +68,7 @@ function joinRoom(isNewRoom) {
     }
 
     try {
-        fetch(`${url}?id=${roominput.value}&name=${nameinput.value}&v=1`).then((response) => response.text()).then((res) => {
+        fetch(`${url}?id=${roominput.value}&name=${nameinput.value}`).then((response) => response.text()).then((res) => {
             const jsonRes = JSON.parse(res);
                     
             if (jsonRes) {
@@ -106,7 +106,7 @@ function joinRoom(isNewRoom) {
 
                 setInterval(() => {
                     try {
-                        fetch(`https://moovally.com/totallyscience-backend/get_chat.php?id=${localStorage.getItem('chatRoom')}&v=1`).then((response) => response.text()).then((res) => {
+                        fetch(`https://moovally.com/totallyscience-backend/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
                             const jsonRes = JSON.parse(res);
                     
                             if (jsonRes) {
@@ -145,7 +145,7 @@ function joinRoom(isNewRoom) {
 
                 window.addEventListener('beforeunload', function() {
                     try {
-                        fetch(`https://moovally.com/totallyscience-backend/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&v=1`).then((response) => response.text());
+                        fetch(`https://moovally.com/totallyscience-backend/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
                     } catch(err) {
                         console.log(err);
                     }
