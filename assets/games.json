@@ -239,7 +239,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
     },
     
-    "Pool":{
+    "8Ball Pool":{
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./assets/game_images/pool.jpeg",
         "controls": "Click and drag with the mouse",
@@ -545,16 +545,43 @@
         "image": "./assets/game_images/amongus.jpg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
-        "date_added": "2022-01-04T15:15:33.894Z",
+        "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Klopity",
         "iframe_url": "https://gefile.github.io/among-us-sp/"
+    },
+    "The Impossible Quiz 2":{
+        "description": "The second edition of the impossible quiz. Think you can beat it?",
+        "image": "./assets/game_images/impquiz2.jpeg",
+        "controls": "Click with the mouse",
+        "tags": [""],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "Splapp-Me-Do Games",
+        "iframe_url": "./games/TheImpossibleQuiz2.html"
+    },
+    "FNAF World":{
+        "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
+        "image": "./assets/game_images/fnafworld.jpg",
+        "controls": "[WASD] - move\n[Click] - interact",
+        "tags": [""],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "GamingRaccoon44",
+        "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
+    },
+    "FNAF 3":{
+        "description": "30 years after the events that took place in 5 Nights at Freddy's.",
+        "image": "./assets/game_images/fnaf3.png",
+        "controls": "[Space] - close vents\n[Click] - interact",
+        "tags": [""],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "Fnafphoneguy123",
+        "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
     },
     "Getting Over It":{
         "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
         "image": "./assets/game_images/gettingoverit.jpeg",
         "controls": "Use mouse to control sledgehammer",
         "tags": [""],
-        "date_added": "2022-01-04T15:15:33.894Z",
+        "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
     }

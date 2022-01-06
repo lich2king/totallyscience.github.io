@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Totally Science</title>
 
@@ -9,7 +9,7 @@
                 const html = document.getElementsByTagName('head')[0].innerHTML
                 const indexCss = `<link rel='stylesheet' href='assets/styles/index.css?${new Date().getTime()}'>`;
                 const title = document.getElementsByTagName('title')[0];
-                
+
                 const visitsCountJS = document.createElement("script")
                 visitsCountJS.src = `assets/scripts/visits_count.js?${new Date().getTime()}`
                 title.insertAdjacentElement('afterend', visitsCountJS)
@@ -17,12 +17,12 @@
                 document.getElementsByTagName('head')[0].innerHTML += indexCss;
             })
         </script>
-        
+
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         <!--End Cache Killer-->
-        
+
         <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="icon" href="assets/images/logo.png">
 
@@ -38,14 +38,16 @@
                 <div class="nav-button"><a href="classes.html">Games</a></div>
                 <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
                 <div class="nav-button"><a href="browser.html">Browser</a></div>
+                <div class="nav-button"><a href="chat.html">Chat</a></div>
             </div>
 
             <div id="middlebar">
                 <p>Totally Science</p>
             </div>
-            
+
             <div id="rightbar">
-                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
+                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+                </a>
             </div>
         </div>
 
@@ -76,14 +78,14 @@
             </div>
 
             <!--
-            <div style="display:none;" class="featuredSlide fade">
-                <img src="https://play-lh.googleusercontent.com/jBnTGS7l4afkXN7wImx-4aNu9O7jvjRyAHQdMH1now697W6uve-GieDBGeiBRhsfv7eD">
-                <div class="slide">
-                    <p>HAPPY WHEELS</p>
-                    <button onclick="location.assign();">Play Now!</button>
+                <div style="display:none;" class="featuredSlide fade">
+                    <img src="https://play-lh.googleusercontent.com/jBnTGS7l4afkXN7wImx-4aNu9O7jvjRyAHQdMH1now697W6uve-GieDBGeiBRhsfv7eD">
+                    <div class="slide">
+                        <p>HAPPY WHEELS</p>
+                        <button onclick="location.assign();">Play Now!</button>
+                    </div>
                 </div>
-            </div>
-            -->
+                -->
 
             <div class="slideButtons">
                 <button class="slidePrev" onclick="plusSlides(-1)"><img width="50%" src="assets/images/left-arrow.png"></button>
