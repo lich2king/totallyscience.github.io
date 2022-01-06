@@ -29,13 +29,15 @@ function joinRoom(isNewRoom) {
                         for (msg in messages) {
                             if (messages[msg] == 'success') continue;
 
-                            const msgf = messages[msg].split('/');
+                            let msgf = messages[msg].split('/');
 
                             let ele = document.createElement('li');
                             ele.innerText = msgf[0];
+                            msgf.splice(0, 1);
+                            msgf = msgf.join('/');
 
                             let span = document.createElement('span');
-                            span.innerText = msgf[1];
+                            span.innerText = msgf;
                             ele.append(span);
 
                             messageList.appendChild(ele);
@@ -78,13 +80,15 @@ function joinRoom(isNewRoom) {
                 for (msg in messages) {
                     if (messages[msg] == 'success') continue;
 
-                    const msgf = messages[msg].split('/');
+                    let msgf = messages[msg].split('/');
 
                     let ele = document.createElement('li');
                     ele.innerText = msgf[0];
+                    msgf.splice(0, 1);
+                    msgf = msgf.join('/');
 
                     let span = document.createElement('span');
-                    span.innerText = msgf[1];
+                    span.innerText = msgf;
                     ele.append(span);
 
                     messageList.appendChild(ele);
@@ -113,16 +117,18 @@ function joinRoom(isNewRoom) {
                                 messageList.appendChild(ele);
                                 for (msg in messages) {
                                     if (messages[msg] == 'success') continue;
-
-                                    const msgf = messages[msg].split('/');
-
+        
+                                    let msgf = messages[msg].split('/');
+        
                                     let ele = document.createElement('li');
                                     ele.innerText = msgf[0];
-
+                                    msgf.splice(0, 1);
+                                    msgf = msgf.join('/');
+        
                                     let span = document.createElement('span');
-                                    span.innerText = msgf[1];
+                                    span.innerText = msgf;
                                     ele.append(span);
-
+        
                                     messageList.appendChild(ele);
                                 }
 
