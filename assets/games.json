@@ -557,5 +557,14 @@
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Splapp-Me-Do Games",
         "iframe_url": "./games/TheImpossibleQuiz2.html"
+    },
+    "FNAF World":{
+        "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
+        "image": "./assets/game_images/fnafworld.jpeg",
+        "controls": "[WASD] - move\n[Click] - interact",
+        "tags": [""],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "GamingRaccoon44",
+        "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
     }
 }
