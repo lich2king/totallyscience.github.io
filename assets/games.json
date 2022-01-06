@@ -560,7 +560,7 @@
     },
     "FNAF World":{
         "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
-        "image": "./assets/game_images/fnafworld.jpeg",
+        "image": "./assets/game_images/fnafworld.jpg",
         "controls": "[WASD] - move\n[Click] - interact",
         "tags": [""],
         "date_added": "2022-01-05T23:45:35.270Z",
