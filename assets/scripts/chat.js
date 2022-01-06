@@ -13,43 +13,47 @@ function joinRoom(isNewRoom) {
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            messageinp = messageinput.value;
-            messageinput.value = ''
+            if (messageinput.value.match(/^[0-9]+$/) != null) {
+                alert("Please include a letter in your code")
+            } else {
+                messageinp = messageinput.value;
+                messageinput.value = ''
 
-            try {
-                fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
-                    if (res.startsWith('success')) {
-                        const messages = res.split(',');
+                try {
+                    fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
+                        if (res.startsWith('success')) {
+                            const messages = res.split(',');
 
-                        messageList.innerHTML = '';
-        
-                        for (msg in messages) {
-                            if (messages[msg] == 'success') continue;
-                            
-                            const msgf = messages[msg].split('/');
-        
-                            let ele = document.createElement('li');
-                            ele.innerText =  msgf[0];
-        
-                            let span = document.createElement('span');
-                            span.innerText =  msgf[1];
-                            ele.append(span);
-        
-                            messageList.appendChild(ele);
+                            messageList.innerHTML = '';
+
+                            for (msg in messages) {
+                                if (messages[msg] == 'success') continue;
+
+                                const msgf = messages[msg].split('/');
+
+                                let ele = document.createElement('li');
+                                ele.innerText = msgf[0];
+
+                                let span = document.createElement('span');
+                                span.innerText = msgf[1];
+                                ele.append(span);
+
+                                messageList.appendChild(ele);
+                            }
+
+                            if (doscroll) {
+                                window.scrollTo(0, document.body.scrollHeight);
+                            }
+
+                        } else {
+                            //alert(res);
                         }
-
-                        if (doscroll) {
-                            window.scrollTo(0,document.body.scrollHeight);
-                        }
-        
-                    }
-                    else {
-                        alert(res);
-                    }
-                });
-            } catch(err) {
-                console.log(err);
+                    });
+                } catch (err) {
+                    console.log(err);
+                }
             }
+
         }
     });
 
@@ -65,7 +69,7 @@ function joinRoom(isNewRoom) {
     } else {
         url = 'https://moovally.com/totallyscience-backend/join_room.php';
     }
-    
+
     try {
         fetch(`${url}?id=${roominput.value}&name=${nameinput.value}`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
@@ -73,14 +77,14 @@ function joinRoom(isNewRoom) {
 
                 for (msg in messages) {
                     if (messages[msg] == 'success') continue;
-                    
+
                     const msgf = messages[msg].split('/');
 
                     let ele = document.createElement('li');
-                    ele.innerText =  msgf[0];
+                    ele.innerText = msgf[0];
 
                     let span = document.createElement('span');
-                    span.innerText =  msgf[1];
+                    span.innerText = msgf[1];
                     ele.append(span);
 
                     messageList.appendChild(ele);
@@ -90,7 +94,7 @@ function joinRoom(isNewRoom) {
                 leavebtn.style = ''
                 scrollb.style.display = 'block'
                 if (doscroll) {
-                    window.scrollTo(0,document.body.scrollHeight);
+                    window.scrollTo(0, document.body.scrollHeight);
                 }
 
                 localStorage.setItem('chatName', nameinput.value);
@@ -101,38 +105,36 @@ function joinRoom(isNewRoom) {
                         fetch(`https://moovally.com/totallyscience-backend/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
                             if (res.startsWith('success')) {
                                 const messages = res.split(',');
-            
+
                                 messageList.innerHTML = '';
-                
+
                                 for (msg in messages) {
                                     if (messages[msg] == 'success') continue;
-                                    
+
                                     const msgf = messages[msg].split('/');
-                
+
                                     let ele = document.createElement('li');
-                                    ele.innerText =  msgf[0];
-                
+                                    ele.innerText = msgf[0];
+
                                     let span = document.createElement('span');
-                                    span.innerText =  msgf[1];
+                                    span.innerText = msgf[1];
                                     ele.append(span);
-                
+
                                     messageList.appendChild(ele);
                                 }
 
                                 if (doscroll) {
                                     window.scrollTo(0, document.body.scrollHeight);
                                 }
-                            }
-                            else {
+                            } else {
                                 alert(res);
                             }
                         });
-                    } catch(err) {
+                    } catch (err) {
                         console.log(err);
                     }
                 }, 2000);
-            }
-            else {
+            } else {
                 alert(res);
 
                 createButton.style = '';
@@ -141,7 +143,7 @@ function joinRoom(isNewRoom) {
                 nameinput.style = '';
             }
         });
-    } catch(err) {
+    } catch (err) {
         console.log(err)
 
         createButton.style = '';
@@ -181,7 +183,7 @@ window.addEventListener('scroll', () => {
 });
 window.addEventListener(
     'keydown',
-    function (e) {
+    function(e) {
         if (e.key == '`') {
             window.open(
                 this.localStorage.getItem("website"),
