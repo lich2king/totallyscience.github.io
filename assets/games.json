@@ -548,5 +548,14 @@
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Klopity",
         "iframe_url": "https://gefile.github.io/among-us-sp/"
+    },
+    "Getting Over It":{
+        "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
+        "image": "./assets/game_images/gettingoverit.jpeg",
+        "controls": "Use mouse to control sledgehammer",
+        "tags": [""],
+        "date_added": "2022-01-04T15:15:33.894Z",
+        "developer": "Griffpatch",
+        "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
     }
 }
