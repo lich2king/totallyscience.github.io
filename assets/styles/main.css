@@ -103,7 +103,7 @@ h1, h2, h3, h4, p, p2, a, label {
         margin-right: 20px;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 675px) {
     #middlebar {
         position: absolute;
         top: 0px;

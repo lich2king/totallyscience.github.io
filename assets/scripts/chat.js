@@ -13,42 +13,40 @@ function joinRoom(isNewRoom) {
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            messageinp = messageinput.value;
+            messageinp = messageinput.value.replace("'", '"');;
             messageinput.value = ''
 
             try {
-                fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
-                    if (res.startsWith('success')) {
-                        const messages = res.split(',');
-
+                fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}&v=1`).then((response) => response.text()).then((res) => {
+                    const jsonRes = JSON.parse(res);
+                    
+                    if (jsonRes) {
                         messageList.innerHTML = '';
 
+                        //display chatroom id
                         let ele = document.createElement('li');
                         ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
                         messageList.appendChild(ele);
-                        for (msg in messages) {
-                            if (messages[msg] == 'success') continue;
 
-                            let msgf = messages[msg].split('/');
-
+                        //display messages
+                        for (msg in jsonRes) {
+                            let curmsg = jsonRes[msg];
+                            
                             let ele = document.createElement('li');
-                            ele.innerText = msgf[0];
-                            msgf.splice(0, 1);
-                            msgf = msgf.join('/');
-
+                            ele.innerText = curmsg[0];
+        
                             let span = document.createElement('span');
-                            span.innerText = msgf;
+                            span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                             ele.append(span);
-
+        
                             messageList.appendChild(ele);
                         }
 
                         if (doscroll) {
                             window.scrollTo(0, document.body.scrollHeight);
                         }
-
                     } else {
-                        //alert(res);
+                        console.log(res)
                     }
                 });
             } catch (err) {
@@ -70,25 +68,26 @@ function joinRoom(isNewRoom) {
     }
 
     try {
-        fetch(`${url}?id=${roominput.value}&name=${nameinput.value}`).then((response) => response.text()).then((res) => {
-            if (res.startsWith('success')) {
-                const messages = res.split(',');
+        fetch(`${url}?id=${roominput.value}&name=${nameinput.value}&v=1`).then((response) => response.text()).then((res) => {
+            const jsonRes = JSON.parse(res);
+                    
+            if (jsonRes) {
+                messageList.innerHTML = '';
 
+                //display chatroom id
                 let ele = document.createElement('li');
                 ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
                 messageList.appendChild(ele);
-                for (msg in messages) {
-                    if (messages[msg] == 'success') continue;
 
-                    let msgf = messages[msg].split('/');
-
+                //display messages
+                for (msg in jsonRes) {
+                    let curmsg = jsonRes[msg];
+                    
                     let ele = document.createElement('li');
-                    ele.innerText = msgf[0];
-                    msgf.splice(0, 1);
-                    msgf = msgf.join('/');
+                    ele.innerText = curmsg[0];
 
                     let span = document.createElement('span');
-                    span.innerText = msgf;
+                    span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                     ele.append(span);
 
                     messageList.appendChild(ele);
@@ -97,38 +96,38 @@ function joinRoom(isNewRoom) {
                 messageinput.style = ''
                 leavebtn.style = ''
                 scrollb.style.display = 'block'
-                if (doscroll) {
-                    window.scrollTo(0, document.body.scrollHeight);
-                }
 
                 localStorage.setItem('chatName', nameinput.value);
                 localStorage.setItem('chatRoom', roominput.value);
 
+                if (doscroll) {
+                    window.scrollTo(0, document.body.scrollHeight);
+                }
+
                 setInterval(() => {
                     try {
-                        fetch(`https://moovally.com/totallyscience-backend/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
-                            if (res.startsWith('success')) {
-                                const messages = res.split(',');
-
+                        fetch(`https://moovally.com/totallyscience-backend/get_chat.php?id=${localStorage.getItem('chatRoom')}&v=1`).then((response) => response.text()).then((res) => {
+                            const jsonRes = JSON.parse(res);
+                    
+                            if (jsonRes) {
                                 messageList.innerHTML = '';
 
+                                //display chatroom id
                                 let ele = document.createElement('li');
                                 ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
                                 messageList.appendChild(ele);
-                                for (msg in messages) {
-                                    if (messages[msg] == 'success') continue;
-        
-                                    let msgf = messages[msg].split('/');
-        
+
+                                //display messages
+                                for (msg in jsonRes) {
+                                    let curmsg = jsonRes[msg];
+                                    
                                     let ele = document.createElement('li');
-                                    ele.innerText = msgf[0];
-                                    msgf.splice(0, 1);
-                                    msgf = msgf.join('/');
-        
+                                    ele.innerText = curmsg[0];
+                
                                     let span = document.createElement('span');
-                                    span.innerText = msgf;
+                                    span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                     ele.append(span);
-        
+                
                                     messageList.appendChild(ele);
                                 }
 
@@ -136,7 +135,7 @@ function joinRoom(isNewRoom) {
                                     window.scrollTo(0, document.body.scrollHeight);
                                 }
                             } else {
-                                alert(res);
+                                console.log(res)
                             }
                         });
                     } catch (err) {
@@ -146,13 +145,13 @@ function joinRoom(isNewRoom) {
 
                 window.addEventListener('beforeunload', function() {
                     try {
-                        fetch(`https://moovally.com/totallyscience-backend/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
+                        fetch(`https://moovally.com/totallyscience-backend/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&v=1`).then((response) => response.text());
                     } catch(err) {
                         console.log(err);
                     }
                 });
             } else {
-                alert(res);
+                console.log(res)
 
                 createButton.style = '';
                 joinButton.style = '';
@@ -169,6 +168,23 @@ function joinRoom(isNewRoom) {
         nameinput.style = '';
     }
 }
+
+var HTMLUtils = new function() {
+    var rules = [
+        { replacement: '&', expression: /&amp;/g  },
+        { replacement: '<', expression: /&lt;/g   },
+        { replacement: '>', expression: /&gt;/g   },
+        { replacement: '"', expression: /&quot;/g },
+    ];
+    this.escape = function(html) {
+        var result = html;
+        for (var i = 0; i < rules.length; ++i) {
+            var rule = rules[i];
+            result = result.replace(rule.expression, rule.replacement);
+        }
+        return result;
+    }
+};
 
 window.addEventListener('load', function() {
     const nameinput = document.getElementById('username');
