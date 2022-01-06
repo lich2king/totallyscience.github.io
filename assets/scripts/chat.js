@@ -16,6 +16,7 @@ function joinRoom(isNewRoom) {
             if (messageinput.value.match(/^[0-9]+$/) != null) {
                 alert("Please include a letter in your code")
             } else {
+                alert("NoNUMB")
                 messageinp = messageinput.value;
                 messageinput.value = ''
 
