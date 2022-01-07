@@ -13,8 +13,8 @@ function joinRoom(isNewRoom) {
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            messageinp = messageinput.value.replace("'", '"');;
-            messageinput.value = ''
+            messageinp = messageinput.value.replace("'", '"');
+            messageinput.value = '';
 
             try {
                 fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
