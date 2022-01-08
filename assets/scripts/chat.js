@@ -28,8 +28,8 @@ function joinRoom(isNewRoom) {
                             //joinButton.style = '';
                             //roominput.style = '';
                             //nameinput.style = '';
-                            errorText.innerText = res;
-                            //return alert(res)
+                            //errorText.innerText = res;
+                            return alert(res)
                         }
                     }
 
@@ -91,7 +91,7 @@ function joinRoom(isNewRoom) {
                     joinButton.style = '';
                     roominput.style = '';
                     nameinput.style = '';
-                    return alert(res)
+                    return (errorText.innerText = ("*" + res))
                 }
             }
 
