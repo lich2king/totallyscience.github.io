@@ -28,7 +28,7 @@
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/drift-boss/index.html"
     },
-    
+
     "Chess": {
         "description": "Online board game where your could play against a friend or the computer.",
         "image": "./assets/game_images/chess-icon.png",
@@ -68,7 +68,7 @@
         "developer": "Codethislab",
         "iframe_url": "https://www.hoodamath.com/mobile/games/connect-4/game.html?nocheckorient=1"
     },
-    
+
     "Cupcake2048": {
         "description": "The cupcake edition of the classic 2048 game. Mix cupcakes together to create new ones!",
         "image": "./assets/game_images/cupcake2048.png",
@@ -79,7 +79,7 @@
         "iframe_url": "https://0x0800.github.io/2048-CUPCAKES/"
     },
 
-    "Ducklife":{
+    "Ducklife": {
         "description": "The future of the farm is in your hands! Train your duck then compete in challenges to save the farm.",
         "image": "./assets/game_images/ducklife.jpeg",
         "controls": "Arrow keys to move",
@@ -89,7 +89,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
     },
 
-    "Ducklife 2":{
+    "Ducklife 2": {
         "description": "Increase your skills via the mini games and win all the races to become the  world champion.",
         "image": "./assets/game_images/ducklife2.jpeg",
         "controls": "Arrow keys to move",
@@ -99,7 +99,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
     },
 
-    "Ducklife 3":{
+    "Ducklife 3": {
         "description": "Collect coins and purchase upgrades to help your duck become world champion.",
         "image": "./assets/game_images/ducklife3.jpeg",
         "controls": "Arrow keys to move",
@@ -109,7 +109,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-3-evolution/game.html?nocheckorient=1"
     },
 
-    "Ducklife 4":{
+    "Ducklife 4": {
         "description": "Raise a duck to become a professional racer! You can choose an egg to hatch, and customize its appearance.",
         "image": "./assets/game_images/ducklife4.jpeg",
         "controls": "Arrow keys to move",
@@ -119,7 +119,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1"
     },
 
-    "Elastic Man":{
+    "Elastic Man": {
         "description": "Satisfying game where you can squish, pull, and distort Morty's head.",
         "image": "./assets/game_images/elasticman.jpeg",
         "controls": "Drag features with mouse or touch-screen",
@@ -129,7 +129,7 @@
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
     },
 
-    "Factory Balls":{
+    "Factory Balls": {
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
         "image": "./assets/game_images/factoryballsforever.jpeg",
         "controls": "Drag balls with mouse",
@@ -139,7 +139,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/factory-balls-forever/game.html?nocheckorient=1"
     },
 
-    "Flappy Bird":{
+    "Flappy Bird": {
         "description": "Dodge the tubes and try to beat the high score!",
         "image": "./assets/game_images/Flappy_Bird_icon.png",
         "controls": "Click space to fly higher",
@@ -148,8 +148,8 @@
         "developer": "HyperPixel",
         "iframe_url": "https://scratch.mit.edu/projects/17828009/embed"
     },
-    
-    "FNF":{
+
+    "FNF": {
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fridaynightfunkin.png",
         "controls": "Use the arrow keys to play notes",
@@ -158,8 +158,8 @@
         "developer": "Cameron Taylor",
         "iframe_url": "https://cookieduck.com/games/fnf/week7/week7/"
     },
-    
-    "FNAF 2":{
+
+    "FNAF 2": {
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
         "image": "./assets/game_images/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
@@ -168,8 +168,8 @@
         "developer": "FOXY_203",
         "iframe_url": "https://scratch.mit.edu/projects/466964675/embed"
     },
-    
-    "Galactic Wars":{
+
+    "Galactic Wars": {
         "description": "Fight in the space war between the Sith Empire and the Galactic Republic.",
         "image": "./assets/game_images/galacticwars.png",
         "controls": "Arrow keys to move\nClick 'n' to fire",
@@ -178,8 +178,8 @@
         "developer": "Shotaro_Ishinomori",
         "iframe_url": "./games/galacticwars/index.html"
     },
-    
-    "Geometry Dash":{
+
+    "Geometry Dash": {
         "description": "Dodge spikes and don't die!",
         "image": "./assets/game_images/geometrydash.png",
         "controls": "Click space to jump",
@@ -188,8 +188,8 @@
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/105500895/embed"
     },
-    
-    "Jetpack Joyride":{
+
+    "Jetpack Joyride": {
         "description": "Dodge fire and missiles, while collecting coins through all the havoc.",
         "image": "./assets/game_images/jetpackjoyride.png",
         "controls": "Hold space to go up",
@@ -198,8 +198,8 @@
         "developer": "DarkLava",
         "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
     },
-    
-    "Minigolf":{
+
+    "Minigolf": {
         "description": "Line up your putt for a hole-in-one! Watch our for hills and water traps.",
         "image": "./assets/game_images/minigolf.jpeg",
         "controls": "Click and drag with the mouse",
@@ -208,8 +208,8 @@
         "developer": "01smile",
         "iframe_url": "https://www.hoodamath.com/mobile/games/mini-golf/game.html?nocheckorient=1"
     },
-    
-    "Orcs VS Elves":{
+
+    "Orcs VS Elves": {
         "description": "Blast away the orcs and elves! Knock them out to get more balls and power up your damage multiplier.",
         "image": "./assets/game_images/orcsvselves.jpeg",
         "controls": "Use mouse to aim\nClick to shoot",
@@ -218,8 +218,8 @@
         "developer": "Fountainhead Entertainment",
         "iframe_url": "https://priceless-easley-1cae17.netlify.com/"
     },
-    
-    "Paper Minecraft":{
+
+    "Paper Minecraft": {
         "description": "The amazing world of minecraft but 2D!",
         "image": "./assets/game_images/papermc.jpeg",
         "controls": "[WASD] - Move / Jump\n [E] - Open/Close Inventory \n [Click] - Place or Mine\n[1 to 9] - Select Item\n[E+hover] - Open / Close Chest, Crafting Table, Door\n[Space] - Drop single tile from a stack while dragging.\n[F] - Eat food\n[N] - Label a sign or chest\n[Q] - Drop item\n[P] - Pause / Unpause\n[T] - Talk / Command\n[O] - Save your game\n[Shift] - Sprint\n[M] - Music / Sounds",
@@ -228,8 +228,8 @@
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/10128407/embed"
     },
-    
-    "Pizza Party":{
+
+    "Pizza Party": {
         "description": "Run a pizza shop that has lots of customers coming in. Quickly make their pizza and serve them in a timely fashion.",
         "image": "./assets/game_images/pizzaparty.jpeg",
         "controls": "Click and drag with the mouse",
@@ -238,8 +238,8 @@
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
     },
-    
-    "8Ball Pool":{
+
+    "8Ball Pool": {
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./assets/game_images/pool.jpeg",
         "controls": "Click and drag with the mouse",
@@ -248,8 +248,8 @@
         "developer": "isgames",
         "iframe_url": "https://isgames.github.io/8ball/"
     },
-    
-    "Restaurant Simulator":{
+
+    "Restaurant Simulator": {
         "description": "Ever wondered what it's like running a restaurant? Now you can try it out!",
         "image": "./assets/game_images/restaurant.jpeg",
         "controls": "Click and drag with the mouse",
@@ -258,8 +258,8 @@
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/open-restaurant/game.html?nocheckorient=1"
     },
-    
-    "Robots No Wheels":{
+
+    "Robots No Wheels": {
         "description": "Puzzle game where your have limited moves to put each robot on a button.",
         "image": "./assets/game_images/robots.jpeg",
         "controls": "[Tab] - Switch Robot\n[Arrow Keys] - Move",
@@ -268,8 +268,8 @@
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/mobile_slydrs/index.html"
     },
-    
-    "Rolling Vortex":{
+
+    "Rolling Vortex": {
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/rollingvortex.jpeg",
         "controls": "[Arrow Keys] - Move",
@@ -278,8 +278,8 @@
         "developer": "Voodoo",
         "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
     },
-    
-    "The Sims 2":{
+
+    "The Sims 2": {
         "description": "Follow the story or just live your own life. In here you could do and be whatever you want.",
         "image": "./assets/game_images/sims.jpeg",
         "controls": "[Arrow Keys] - Move\n[x]+[z] - interact",
@@ -288,8 +288,8 @@
         "developer": "ouroboroz",
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#sims2"
     },
-    
-    "Slope":{
+
+    "Slope": {
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
         "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
@@ -298,8 +298,8 @@
         "developer": "Rob Kay",
         "iframe_url": "https://sloped.yodacode.repl.co/ubgo/aHR0cHM6Ly9yYXdjZG4uZ2l0aGFjay5jb20=/scheng123321/tmm-html5-cdn1/master/slope/index.html"
     },
-    
-    "Soccer Free Kicks":{
+
+    "Soccer Free Kicks": {
         "description": "Train your freekick shooting skills through 15 levels of increasing difficulty!",
         "image": "./assets/game_images/soccer.jpeg",
         "controls": "Click and drag with the mouse",
@@ -308,8 +308,8 @@
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/freekick-training/game.html?nocheckorient=1"
     },
-    
-    "Street Fighter":{
+
+    "Street Fighter": {
         "description": "A classic fighting game. You will engage in one-on-one close quarter combat against your opponent.",
         "image": "./assets/game_images/streetfighter.png",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
@@ -318,8 +318,8 @@
         "developer": "ouroboroz",
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#super_street_fighter_3_alpha"
     },
-    
-    "Solitaire":{
+
+    "Solitaire": {
         "description": "Fun and easy to pick up on card game.",
         "image": "./assets/game_images/solitaire.png",
         "controls": "Click and drag with the mouse",
@@ -328,8 +328,8 @@
         "developer": "Google",
         "iframe_url": "https://www.google.com/logos/fnbx/solitaire/standalone.html"
     },
-    
-    "Tanuki Sunset":{
+
+    "Tanuki Sunset": {
         "description": "Play as a racoon on a skateboard. Drift at turns and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/tanukisunset.jpeg",
         "controls": "[Arrow Keys] - turn\n[Space] - drift",
@@ -338,8 +338,8 @@
         "developer": "Rewind Games",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1756009/WebGL/index.html"
     },
-    
-    "Stack":{
+
+    "Stack": {
         "description": "Stack the blocks as high as you can. Try to beat the highscore!",
         "image": "./assets/game_images/stack.jpeg",
         "controls": "[Space] - Place block",
@@ -348,8 +348,8 @@
         "developer": "CBC Kids",
         "iframe_url": "https://www.cbc.ca/kidscbc2/content/games/box-tower/index.html"
     },
-    
-    "Tetris":{
+
+    "Tetris": {
         "description": "Rotate the shapes to fit them perfectly together. Don't let them reach the top.",
         "image": "./assets/game_images/tetris.png",
         "controls": "[Arrow Keys] - rotate shape",
@@ -358,8 +358,8 @@
         "developer": "Mathisfun",
         "iframe_url": "https://www.mathsisfun.com/games/a/mimstris/index.html"
     },
-    
-    "UNO":{
+
+    "UNO": {
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
         "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
@@ -368,8 +368,8 @@
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
     },
-    
-    "World's Hardest Game":{
+
+    "World's Hardest Game": {
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
         "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
@@ -378,7 +378,7 @@
         "developer": "vinmannie",
         "iframe_url": "https://vinmannie.github.io/WorldsHardestGame/"
     },
-    "The Impossible Quiz":{
+    "The Impossible Quiz": {
         "description": "It really is impossible. Don't even bother trying to beat it.",
         "image": "./assets/game_images/the-impossible-quiz.jpg",
         "controls": "Click and drag with the mouse",
@@ -387,7 +387,7 @@
         "developer": "Splapp-me-do Games",
         "iframe_url": "./games/impossiblequiz.html"
     },
-    "Gun Mayhem 2":{
+    "Gun Mayhem 2": {
         "description": "More explosive arena style action! Battle against the AI or with friends in this cartoony platform shooter.",
         "image": "./assets/game_images/gunmayhem.jpeg",
         "controls": "[Arrow Keys] - move\n[z] - shoot\n[x] - bomb",
@@ -396,7 +396,7 @@
         "developer": "Armor Games",
         "iframe_url": "./games/gunmayhem.html"
     },
-    "Escaping The Prison":{
+    "Escaping The Prison": {
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
         "image": "./assets/game_images/escapingtheprison.jpeg",
         "controls": "Click with the mouse",
@@ -405,7 +405,7 @@
         "developer": "Puffballs United",
         "iframe_url": "./games/escapingtheprison.html"
     },
-    "Krunker.io":{
+    "Krunker.io": {
         "description": "Free-to-play arena-style browser-based tactical fps.",
         "image": "./assets/game_images/krunker.png",
         "controls": "[WASD] - move\n[Click] - shoot\n[Drag Mouse] - aim",
@@ -414,7 +414,7 @@
         "developer": "Yendis Entertainment",
         "iframe_url": "https://browserfps.com/"
     },
-    "Breaking The Bank":{
+    "Breaking The Bank": {
         "description": "Attempt to break into a bank, built in the middle of a desert.",
         "image": "./assets/game_images/breakingthebank.jpeg",
         "controls": "Click with the mouse",
@@ -423,7 +423,7 @@
         "developer": "Puffballs United",
         "iframe_url": "./games/breakinbank.html"
     },
-    "Stealing The Diamond":{
+    "Stealing The Diamond": {
         "description": "Help Henry Stickmin break into a museum and execute a diamond heist.",
         "image": "./assets/game_images/stealdiamond.jpeg",
         "controls": "Click with the mouse",
@@ -432,7 +432,7 @@
         "developer": "Puffballs United",
         "iframe_url": "./games/stealdiamond.html"
     },
-    "Infiltrating The Airship":{
+    "Infiltrating The Airship": {
         "description": "Try not to fail during a deadly mission in the sky! Infiltrating the Airship dares you to make risky decisions.",
         "image": "./assets/game_images/infiltratingairship.jpeg",
         "controls": "Click with the mouse",
@@ -441,7 +441,7 @@
         "developer": "Puffballs United",
         "iframe_url": "./games/infiltrateairship.html"
     },
-    "Fleeing The Complex":{
+    "Fleeing The Complex": {
         "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
         "image": "./assets/game_images/fleeingcomplex.jpg",
         "controls": "Click with the mouse",
@@ -450,7 +450,7 @@
         "developer": "Puffballs United",
         "iframe_url": "./games/fleecomplex.html"
     },
-    "Cookie Clicker":{
+    "Cookie Clicker": {
         "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
         "image": "./assets/game_images/cookieclicker.jpeg",
         "controls": "Click with the mouse",
@@ -459,7 +459,7 @@
         "developer": "Julien Thiennot",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/cookieclicker/"
     },
-    "Little Alchemy 2":{
+    "Little Alchemy 2": {
         "description": "Simple crafting game. Start with four basic items and use them to find dinosaurs, unicorns and spaceships!",
         "image": "./assets/game_images/littlealchemy.png",
         "controls": "Click and drag with the mouse",
@@ -468,7 +468,7 @@
         "developer": "Jakub Koziol",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9saXR0bGVhbGNoZW15Mi5jb20=/"
     },
-    "Appel Platformer":{
+    "Appel Platformer": {
         "description": "Simple and fun platformer game. Try to beat levels in record breaking times!",
         "image": "./assets/game_images/appelplatformer.png",
         "controls": "[Arrow Keys] - move",
@@ -477,7 +477,7 @@
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/60917032/embed"
     },
-    "Paper.io":{
+    "Paper.io": {
         "description": "Invade as many lands as possible and become the biggest on the server!",
         "image": "./assets/game_images/paperio.jpeg",
         "controls": "[Move Mouse] - move\nor\n[Arrow Keys] - move",
@@ -486,16 +486,16 @@
         "developer": "Voodoo",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9wYXBlci1pby5jb20=/"
     },
-    "Run 3":{
+    "Run 3": {
         "description": "Run through an endless tunnel, diverting from the holes and pieces of ground that break.",
         "image": "./assets/game_images/run3.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Joseph Cloutier",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/run3/"
+        "iframe_url": "./games/run3/index.html"
     },
-    "Snake":{
+    "Snake": {
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
         "image": "./assets/game_images/snake.png",
         "controls": "[Arrow Keys] - move",
@@ -504,7 +504,7 @@
         "developer": "Google",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/snake/"
     },
-    "Pac Man":{
+    "Pac Man": {
         "description": "Action maze chase game where you run from ghosts while eating dots.",
         "image": "./assets/game_images/pacman.png",
         "controls": "[Arrow Keys] - move",
@@ -513,7 +513,7 @@
         "developer": "Toshio Kai",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/pacman/"
     },
-    "Minecraft":{
+    "Minecraft": {
         "description": "Build whatever you can imagine in this open world game.",
         "image": "./assets/game_images/minecraft.png",
         "controls": "[WASD] - move\n[Move Mouse] - look around",
@@ -522,7 +522,7 @@
         "developer": "Markus Persson",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/minecraft/"
     },
-    "Golf Blast":{
+    "Golf Blast": {
         "description": "Get the ball in the hole in as little swings possible.",
         "image": "./assets/game_images/golfblast.jpeg",
         "controls": "Drag and click with mouse",
@@ -531,7 +531,7 @@
         "developer": "Gamedistribution",
         "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/3f20410dc7e440c2869b0d1d502ae828/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwOi8vZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20vIiwicGFyZW50RG9tYWluIjoiZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20iLCJ0b3BEb21haW4iOiJmbGFzaGdhbWVzMjQ3LmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjQifQ%253D%253D"
     },
-    "Happy Wheels":{
+    "Happy Wheels": {
         "description": "Side-scrolling, physics-based, obstacle course game. Try to get to the end without dying!",
         "image": "./assets/game_images/happywheels.png",
         "controls": "[Arrow Keys] - move\n[Space] - grab/boost/jump\n[z] - exit vehicle",
@@ -540,7 +540,7 @@
         "developer": "Total Jerk Face",
         "iframe_url": "https://games-online.io/game/HappyWheels/"
     },
-    "Among Us":{
+    "Among Us": {
         "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
         "image": "./assets/game_images/amongus.jpg",
         "controls": "[Arrow Keys] - move",
@@ -549,7 +549,7 @@
         "developer": "Klopity",
         "iframe_url": "https://gefile.github.io/among-us-sp/"
     },
-    "The Impossible Quiz 2":{
+    "The Impossible Quiz 2": {
         "description": "The second edition of the impossible quiz. Think you can beat it?",
         "image": "./assets/game_images/impquiz2.jpeg",
         "controls": "Click with the mouse",
@@ -558,7 +558,7 @@
         "developer": "Splapp-Me-Do Games",
         "iframe_url": "./games/TheImpossibleQuiz2.html"
     },
-    "FNAF World":{
+    "FNAF World": {
         "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
         "image": "./assets/game_images/fnafworld.jpg",
         "controls": "[WASD] - move\n[Click] - interact",
@@ -567,7 +567,7 @@
         "developer": "GamingRaccoon44",
         "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
     },
-    "FNAF 3":{
+    "FNAF 3": {
         "description": "30 years after the events that took place in 5 Nights at Freddy's.",
         "image": "./assets/game_images/fnaf3.png",
         "controls": "[Space] - close vents\n[Click] - interact",
@@ -576,7 +576,7 @@
         "developer": "Fnafphoneguy123",
         "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
     },
-    "Getting Over It":{
+    "Getting Over It": {
         "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
         "image": "./assets/game_images/gettingoverit.jpeg",
         "controls": "Use mouse to control sledgehammer",
@@ -585,7 +585,7 @@
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
     },
-    "Drift Hunters":{
+    "Drift Hunters": {
         "description": "An awesome 3D car driving game in which you score points by drifting various cars.",
         "image": "./assets/game_images/drifthunters.png",
         "controls": "[WASD] - drive\n[Space] - handbrake\n[c] - change camera\n[LShift] - shift up gear\n[LCtrl] - shift down gear",
