@@ -14,6 +14,7 @@ html {
     display: inline-block;
     font-size: 2.5vw;
     margin: 4px 2px;
+    font-family: 'Rubik';
     cursor: pointer;
     background-color: var(--accent-color);
     border-radius: 8px;
@@ -22,6 +23,15 @@ html {
 
 .categoryButton span {
     font-size: 1.7vw;
+}
+
+@media (min-width: 1200px) {
+    .categoryButton {
+        font-size: 20pt;
+    }
+    .categoryButton span {
+        font-size: 17pt;
+    }
 }
 
 .selectedCategory {
@@ -53,6 +63,7 @@ input[type='text'] {
     border-radius: 4px;
     font-size: 16px;
     background-color: var(--light-color);
+    outline: none;
     background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
     background-size: 20px;
     background-position: 10px 10px;

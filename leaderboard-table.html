@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <style>
             body {
@@ -8,21 +8,40 @@
                 height: 100%;
                 overflow: hidden;
             }
+            body[theme = dark] {
+                background-color: #000;
+            }
+            #footer {
+                background-color: #000 !important;
+            }
             iframe {
-                height: calc(100% + 50px);
+                height: calc(100% + 95px);
                 overflow: hidden;
                 border: none;
                 position: fixed;
                 top: 0;
-                width: 690px;
-                margin-left: 50%;
+                width: 674px;
+                left: 50%;
+                left: 50%;
                 transform: translate(-50%);
-                margin-top: -25px;
+                top: -55px;
+                right: -10px;
             }
         </style>
     </head>
 
     <body>
-        <iframe frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRv1osA_j7hjkpQqjsAc3gOIk34wzG4gZrMmaxm1_Mg2rqmixxW7gGnjsCIGB98LG-6gObNYXSJ4GRz/pubhtml?widget=true&amp;headers=false"></iframe>
+        <iframe id="frame" frameborder="0" src=""></iframe>
+
+        <script>
+            document.body.setAttribute("theme", localStorage.getItem("theme"))
+            
+            const frame = document.getElementById('frame');
+            if (localStorage.getItem("theme") == 'dark') {
+                frame.src = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRv1osA_j7hjkpQqjsAc3gOIk34wzG4gZrMmaxm1_Mg2rqmixxW7gGnjsCIGB98LG-6gObNYXSJ4GRz/pubhtml?gid=345486692&amp;single=true&amp;widget=true&amp;headers=false';
+            } else {
+                frame.src = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRv1osA_j7hjkpQqjsAc3gOIk34wzG4gZrMmaxm1_Mg2rqmixxW7gGnjsCIGB98LG-6gObNYXSJ4GRz/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false';
+            }
+        </script>
     </body>
 </html>

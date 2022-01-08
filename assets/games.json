@@ -373,7 +373,7 @@
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
         "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["hard"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "vinmannie",
         "iframe_url": "https://vinmannie.github.io/WorldsHardestGame/"
@@ -382,7 +382,7 @@
         "description": "It really is impossible. Don't even bother trying to beat it.",
         "image": "./assets/game_images/the-impossible-quiz.jpg",
         "controls": "Click and drag with the mouse",
-        "tags": ["featured"],
+        "tags": ["featured", "hard"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Splapp-me-do Games",
         "iframe_url": "./games/impossiblequiz.html"
@@ -553,7 +553,7 @@
         "description": "The second edition of the impossible quiz. Think you can beat it?",
         "image": "./assets/game_images/impquiz2.jpeg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["hard"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Splapp-Me-Do Games",
         "iframe_url": "./games/TheImpossibleQuiz2.html"
@@ -575,5 +575,23 @@
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Fnafphoneguy123",
         "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
+    },
+    "Getting Over It":{
+        "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
+        "image": "./assets/game_images/gettingoverit.jpeg",
+        "controls": "Use mouse to control sledgehammer",
+        "tags": ["hard"],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "Griffpatch",
+        "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
+    },
+    "Drift Hunters":{
+        "description": "An awesome 3D car driving game in which you score points by drifting various cars.",
+        "image": "./assets/game_images/drifthunters.png",
+        "controls": "[WASD] - drive\n[Space] - handbrake\n[c] - change camera\n[LShift] - shift up gear\n[LCtrl] - shift down gear",
+        "tags": ["car"],
+        "date_added": "2022-01-05T23:45:35.270Z",
+        "developer": "Ilya.kaminetsky",
+        "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1792221/ItchIO/index.html"
     }
 }

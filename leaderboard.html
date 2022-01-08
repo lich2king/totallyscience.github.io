@@ -1,80 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <title>Totally Science</title>
 
-<head>
-    <title>Totally Science</title>
+        <!--Cache Killer-->
+        <script>
+            const title = document.getElementsByTagName('title')[0];
+            // main.js
+            let mainJS = document.createElement("script");
+            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+            title.insertAdjacentElement('afterend', mainJS);
+        </script>
 
-    <!--Cache Killer-->
-    <script>
-        const title = document.getElementsByTagName('title')[0];
-        // main.js
-        let mainJS = document.createElement("script");
-        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-        title.insertAdjacentElement('afterend', mainJS);
-    </script>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <!--End Cache Killer-->
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <!--End Cache Killer-->
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="icon" href="assets/images/logo.png">
 
-    <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="icon" href="assets/images/logo.png">
-
-    <style>
-        button {
-            cursor: pointer;
-            background-color: var(--accent-color);
-            color: var(--light-color);
-            border: 2px;
-            border-radius: 10px;
-            font-family: 'Spline Sans', sans-serif;
-            font-size: 30px;
-            padding-right: 2%;
-            padding-left: 2%;
-            padding-top: 1%;
-            margin-top: 80px;
-            padding-bottom: 1%;
-        }
-        
-        #highscores {
-            border: none;
-            width: 100%;
-            margin-top: 10px;
-            height: 800px;
-        }
-        
-        @media (max-width: 600px) {
+        <style>
             button {
-                margin-top: 110px;
+                cursor: pointer;
+                background-color: var(--accent-color);
+                color: var(--light-color);
+                border: 2px;
+                border-radius: 10px;
+                font-family: 'Spline Sans', sans-serif;
+                font-size: 30px;
+                padding-right: 2%;
+                padding-left: 2%;
+                padding-top: 1%;
+                margin-top: 80px;
+                padding-bottom: 1%;
             }
-        }
-    </style>
-    <!--Google Adsense-->
-    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
+            
+            #highscores {
+                border: none;
+                width: 100%;
+                margin-top: 10px;
+                height: 620px;
+            }
+            
+            @media (max-width: 600px) {
+                button {
+                    margin-top: 110px;
+                }
+            }
+        </style>
+        <!--Google Adsense-->
+        <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
 
-<body>
-    <div id="navbar">
-        <div id="leftbar">
-            <div class="nav-button"><a href="index.html">Home</a></div>
-            <div class="nav-button"><a href="classes.html">Games</a></div>
-            <div class="nav-button selected"><a href="">Leaderboard</a></div>
-            <div class="nav-button"><a href="browser.html">Browser</a></div>
-            <div class="nav-button"><a href="chat.html">Chat</a></div>
+    <body>
+        <div id="navbar">
+            <div id="leftbar">
+                <div class="nav-button"><a href="index.html">Home</a></div>
+                <div class="nav-button"><a href="classes.html">Games</a></div>
+                <div class="nav-button selected"><a href="">Leaderboard</a></div>
+                <div class="nav-button"><a href="browser.html">Browser</a></div>
+                <div class="nav-button"><a href="chat.html">Chat</a></div>
+            </div>
+            <div id="middlebar">
+                <p>Totally Science</p>
+            </div>
+            <div id="rightbar">
+                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+                </a>
+            </div>
         </div>
-        <div id="middlebar">
-            <p>Totally Science</p>
+        <div width="100%" style="text-align: center;">
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfxzuusvWg0CSONtXP_8-tQ0J6vofG4EXHFNmZAmBlCojPdhA/viewform');">Submit a Highscore</button>
+            <iframe id="highscores" src="leaderboard-table.html"></iframe>
         </div>
-        <div id="rightbar">
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
-        </div>
-    </div>
-    <div width="100%" style="text-align: center;">
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfxzuusvWg0CSONtXP_8-tQ0J6vofG4EXHFNmZAmBlCojPdhA/viewform');">Submit a Highscore</button>
-        <iframe id="highscores" src="leaderboard-table.html"></iframe>
-    </div>
-</body>
-
+    </body>
 </html>

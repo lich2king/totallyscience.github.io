@@ -6,6 +6,8 @@ websiteInput.value = localStorage.getItem('website')
 themeInput.value = localStorage.getItem('theme')
 
 $('survey').addEventListener('submit', (e) => {
+    e.preventDefault();
+
     let websiteEntered = websiteInput.value
     const themeEntered = themeInput.value
 
@@ -16,6 +18,4 @@ $('survey').addEventListener('submit', (e) => {
     setTimeout(() => {
         saveBtn.innerHTML = "Save"
     }, 500)
-
-    e.preventDefault()
 })
