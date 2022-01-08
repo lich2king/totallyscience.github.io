@@ -9,6 +9,7 @@ function joinRoom(isNewRoom) {
     const messageinput = document.getElementById('messageinput');
     const leavebtn = document.getElementById('leavebtn');
     const scrollb = document.getElementById('scrollb');
+    const errorText = document.getElementById('errorText')
 
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
@@ -23,14 +24,15 @@ function joinRoom(isNewRoom) {
                         jsonRes = JSON.parse(res);
                     } catch (error) {
                         if (error) {
-                            createButton.style = '';
-                            joinButton.style = '';
-                            roominput.style = '';
-                            nameinput.style = '';
-                            return alert(res)
+                            //createButton.style = '';
+                            //joinButton.style = '';
+                            //roominput.style = '';
+                            //nameinput.style = '';
+                            errorText.innerText = res;
+                            //return alert(res)
                         }
                     }
-                    
+
                     if (jsonRes) {
                         messageList.innerHTML = '';
 
@@ -42,14 +44,14 @@ function joinRoom(isNewRoom) {
                         //display messages
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
-                            
+
                             let ele = document.createElement('li');
                             ele.innerText = curmsg[0];
-        
+
                             let span = document.createElement('span');
                             span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                             ele.append(span);
-        
+
                             messageList.appendChild(ele);
                         }
 
@@ -92,7 +94,7 @@ function joinRoom(isNewRoom) {
                     return alert(res)
                 }
             }
-                    
+
             if (jsonRes) {
                 messageList.innerHTML = '';
 
@@ -104,7 +106,7 @@ function joinRoom(isNewRoom) {
                 //display messages
                 for (msg in jsonRes) {
                     let curmsg = jsonRes[msg];
-                    
+
                     let ele = document.createElement('li');
                     ele.innerText = curmsg[0];
 
@@ -141,7 +143,7 @@ function joinRoom(isNewRoom) {
                                     return alert(res)
                                 }
                             }
-                    
+
                             if (jsonRes) {
                                 messageList.innerHTML = '';
 
@@ -153,14 +155,14 @@ function joinRoom(isNewRoom) {
                                 //display messages
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
-                                    
+
                                     let ele = document.createElement('li');
                                     ele.innerText = curmsg[0];
-                
+
                                     let span = document.createElement('span');
                                     span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                     ele.append(span);
-                
+
                                     messageList.appendChild(ele);
                                 }
 
@@ -177,7 +179,7 @@ function joinRoom(isNewRoom) {
                 window.addEventListener('beforeunload', function() {
                     try {
                         fetch(`https://moovally.com/totallyscience-backend/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
-                    } catch(err) {
+                    } catch (err) {
                         console.log(err);
                     }
                 });
@@ -202,9 +204,9 @@ function joinRoom(isNewRoom) {
 
 var HTMLUtils = new function() {
     var rules = [
-        { replacement: '&', expression: /&amp;/g  },
-        { replacement: '<', expression: /&lt;/g   },
-        { replacement: '>', expression: /&gt;/g   },
+        { replacement: '&', expression: /&amp;/g },
+        { replacement: '<', expression: /&lt;/g },
+        { replacement: '>', expression: /&gt;/g },
         { replacement: '"', expression: /&quot;/g },
     ];
     this.escape = function(html) {
