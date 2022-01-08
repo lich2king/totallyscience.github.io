@@ -24,11 +24,6 @@ function joinRoom(isNewRoom) {
                         jsonRes = JSON.parse(res);
                     } catch (error) {
                         if (error) {
-                            //createButton.style = '';
-                            //joinButton.style = '';
-                            //roominput.style = '';
-                            //nameinput.style = '';
-                            //errorText.innerText = res;
                             return alert(res)
                         }
                     }
@@ -136,10 +131,6 @@ function joinRoom(isNewRoom) {
                                 jsonRes = JSON.parse(res);
                             } catch (error) {
                                 if (error) {
-                                    createButton.style = '';
-                                    joinButton.style = '';
-                                    roominput.style = '';
-                                    nameinput.style = '';
                                     return alert(res)
                                 }
                             }
