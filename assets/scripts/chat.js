@@ -18,7 +18,18 @@ function joinRoom(isNewRoom) {
 
             try {
                 fetch(`https://moovally.com/totallyscience-backend/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
-                    const jsonRes = JSON.parse(res);
+                    let jsonRes;
+                    try {
+                        jsonRes = JSON.parse(res);
+                    } catch (error) {
+                        if (error) {
+                            createButton.style = '';
+                            joinButton.style = '';
+                            roominput.style = '';
+                            nameinput.style = '';
+                            return alert(res)
+                        }
+                    }
                     
                     if (jsonRes) {
                         messageList.innerHTML = '';
@@ -46,7 +57,7 @@ function joinRoom(isNewRoom) {
                             window.scrollTo(0, document.body.scrollHeight);
                         }
                     } else {
-                        console.log(res)
+                        alert(res)
                     }
                 });
             } catch (err) {
@@ -69,7 +80,18 @@ function joinRoom(isNewRoom) {
 
     try {
         fetch(`${url}?id=${roominput.value}&name=${nameinput.value}`).then((response) => response.text()).then((res) => {
-            const jsonRes = JSON.parse(res);
+            let jsonRes;
+            try {
+                jsonRes = JSON.parse(res);
+            } catch (error) {
+                if (error) {
+                    createButton.style = '';
+                    joinButton.style = '';
+                    roominput.style = '';
+                    nameinput.style = '';
+                    return alert(res)
+                }
+            }
                     
             if (jsonRes) {
                 messageList.innerHTML = '';
@@ -107,7 +129,18 @@ function joinRoom(isNewRoom) {
                 setInterval(() => {
                     try {
                         fetch(`https://moovally.com/totallyscience-backend/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
-                            const jsonRes = JSON.parse(res);
+                            let jsonRes;
+                            try {
+                                jsonRes = JSON.parse(res);
+                            } catch (error) {
+                                if (error) {
+                                    createButton.style = '';
+                                    joinButton.style = '';
+                                    roominput.style = '';
+                                    nameinput.style = '';
+                                    return alert(res)
+                                }
+                            }
                     
                             if (jsonRes) {
                                 messageList.innerHTML = '';
@@ -134,8 +167,6 @@ function joinRoom(isNewRoom) {
                                 if (doscroll) {
                                     window.scrollTo(0, document.body.scrollHeight);
                                 }
-                            } else {
-                                console.log(res)
                             }
                         });
                     } catch (err) {
@@ -151,7 +182,7 @@ function joinRoom(isNewRoom) {
                     }
                 });
             } else {
-                console.log(res)
+                alert(res)
 
                 createButton.style = '';
                 joinButton.style = '';
