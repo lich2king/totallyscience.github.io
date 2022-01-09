@@ -620,5 +620,14 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "D O P I",
         "iframe_url": "./games/webswinger.html"
+    },
+    "Sniper": {
+        "description": "Find your target and eliminate him as quickly as possible.",
+        "image": "./assets/game_images/sniper.jpg",
+        "controls": "[Click] - shoot",
+        "tags": [""],
+        "date_added": "2022-01-09T18:11:41.637Z",
+        "developer": "Crazy Monkey Games",
+        "iframe_url": "./games/sniper.html"
     }
 }
