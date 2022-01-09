@@ -593,5 +593,14 @@
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Ilya.kaminetsky",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1792221/ItchIO/index.html"
+    },
+    "Cube Dodge": {
+        "description": "An endless obstacle running game. This game trains visual perception, and reaction time.",
+        "image": "./assets/game_images/cubefield.jpg",
+        "controls": "[WASD] - move",
+        "tags": [""],
+        "date_added": "2022-01-09T18:11:41.637Z",
+        "developer": "YoArcade",
+        "iframe_url": "./games/cubedodge.html"
     }
 }
