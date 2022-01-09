@@ -634,7 +634,7 @@
         "description": "a free tower defense game. Those pesky stickfigures are at it again! Defend your castle!",
         "image": "./assets/game_images/stormthehouse2.jpg",
         "controls": "[Click] - shoot\n[Space] - reload",
-        "tags": [""],
+        "tags": ["stickmin"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Ivory",
         "iframe_url": "./games/stormthehouse2.html"
