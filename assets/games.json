@@ -622,7 +622,7 @@
         "iframe_url": "./games/webswinger.html"
     },
     "Sniper": {
-        "description": "Find your target and eliminate him as quickly as possible.",
+        "description": "Find your target and eliminate them as quickly as possible.",
         "image": "./assets/game_images/sniper.jpg",
         "controls": "[Click] - shoot",
         "tags": [""],
