@@ -647,5 +647,14 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "MiniClip",
         "iframe_url": "./games/pingpong.html"
+    },
+    "Tunnel Rush": {
+        "description": "Dodge the objects coming toward you in this endless tunnel. Beat your highscore!",
+        "image": "./assets/game_images/tunnelrush.jpg",
+        "controls": "[Arrow Keys] - turn",
+        "tags": [""],
+        "date_added": "2022-01-09T18:11:41.637Z",
+        "developer": "Deer Cat",
+        "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/b067ade7a13a4d50bc3f65e2401b55c8/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy5nYW1lZmxhcmUuY29tLyIsInBhcmVudERvbWFpbiI6ImdhbWVmbGFyZS5jb20iLCJ0b3BEb21haW4iOiJnYW1lZmxhcmUuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuNCJ9"
     }
 }
