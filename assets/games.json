@@ -611,5 +611,14 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Iwin",
         "iframe_url": "./games/dealornodeal.html"
+    },
+    "Web Swinger": {
+        "description": "Swing from object to object with your webs. Try to get as far as you can and beat your highscore!",
+        "image": "./assets/game_images/webswinger.jpg",
+        "controls": "[Click] - shoot web",
+        "tags": [""],
+        "date_added": "2022-01-09T18:11:41.637Z",
+        "developer": "D O P I",
+        "iframe_url": "./games/webswinger.html"
     }
 }
