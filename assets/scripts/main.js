@@ -1,4 +1,3 @@
-// henrylang's bootleg jquery
 const $ = (id) => {
     return document.getElementById(id)
 }
