@@ -642,7 +642,7 @@
     "Ping Pong": {
         "description": "See how many times you can bounce the ball in the air without dropping it!",
         "image": "./assets/game_images/pingpong.jpg",
-        "controls": "Drag mouse to move paddle",
+        "controls": "Drag mouse to move paddle\n[Click] - drop ball",
         "tags": [""],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "MiniClip",
