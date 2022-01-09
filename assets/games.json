@@ -602,5 +602,14 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "YoArcade",
         "iframe_url": "./games/cubedodge.html"
+    },
+    "Deal or No Deal": {
+        "description": "Deal or no Deal. Try your luck in finding the $1,000,000 briefcase in this game based on the hit TV game show!",
+        "image": "./assets/game_images/dealornodeal.jpeg",
+        "controls": "[WASD] - move",
+        "tags": [""],
+        "date_added": "2022-01-09T18:11:41.637Z",
+        "developer": "Iwin",
+        "iframe_url": "./games/dealornodeal.html"
     }
 }
