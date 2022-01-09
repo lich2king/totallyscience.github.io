@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Totally Science</title>
-        <!--Cache Killer-->
-        <script>
-            const html = document.getElementsByTagName('head')[0].innerHTML;
-            const title = document.getElementsByTagName('title')[0];
+
+<head>
+    <title>Totally Science</title>
+    <!--Cache Killer-->
+    <script>
+        const html = document.getElementsByTagName('head')[0].innerHTML;
+        const title = document.getElementsByTagName('title')[0];
 
 
-            const mainJS = document.createElement("script")
-            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
-            title.insertAdjacentElement('afterend', mainJS)
+        const mainJS = document.createElement("script")
+        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
+        title.insertAdjacentElement('afterend', mainJS)
 
-            const preferencesJS = document.createElement("script")
-            preferencesJS.src = `assets/scripts/preferences.js?${new Date().getTime()}`
-            title.insertAdjacentElement('afterend', preferencesJS)
+        const preferencesJS = document.createElement("script")
+        preferencesJS.src = `assets/scripts/preferences.js?${new Date().getTime()}`
+        title.insertAdjacentElement('afterend', preferencesJS)
 
-            const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
-            const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
+        const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+        const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
 
-            document.getElementsByTagName('head')[0].innerHTML += mainCSS + preferencesCSS
-        </script>
-    
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
-        <!--End Cache Killer-->
-        
-        <link rel="icon" href="assets/images/logo.png">
-        <!--Google Adsense-->
-        <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
+        document.getElementsByTagName('head')[0].innerHTML += mainCSS + preferencesCSS
+    </script>
 
-    <body>
-        <div id="navbar">
-            <div id="leftbar">
-                <div class="nav-button"><a href="index.html">Home</a></div>
-                <div class="nav-button"><a href="classes.html">Games</a></div>
-                <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
-                <div class="nav-button"><a href="browser.html">Browser</a></div>
-                <div class="nav-button"><a href="chat.html">Chat</a></div>
-            </div>
-            <div id="middlebar">
-                <p>Totally Science</p>
-            </div>
-            <div id="rightbar">
-                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
-            </div>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="icon" href="assets/images/logo.png">
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="browser.html">Browser</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
         </div>
-        
-        <div style="padding-top: 90px;"></div>
-        
-        <form id="survey">
-            <div>
-                <label for="website">What's your school website?</label><br>
-                <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
-            </div>  
-            <div>
-                <label for="theme">Choose a theme</label><br>
-                <select name="theme" id="theme">
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+        <div id="rightbar">
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+    <div style="padding-top: 90px;"></div>
+
+    <form id="survey">
+        <div>
+            <label for="website">What's your school website?</label><br>
+            <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
+        </div>
+        <div>
+            <label for="theme">Choose a theme</label><br>
+            <select name="theme" id="theme">
                     <option value="light">Light</option>
                     <option value="dark">Dark</option>
                 </select>
-            </div>
-            <button id="save-button">Save</button>
-        </form>
-    </body>
+        </div>
+        <div>
+            <label for="disguise">Disguise tab</label><br>
+            <select name="disguise" id="disguise">
+                    <option value="none">None</option>
+                    <option value="gc">Google Classroom</option>
+                    <option value="gd">Google Docs</option>
+                    <option value="canvas">Canvas</option>
+                </select>
+        </div>
+        <button id="save-button">Save</button>
+    </form>
+</body>
+
 </html>
