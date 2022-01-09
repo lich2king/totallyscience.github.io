@@ -9,9 +9,9 @@
         const title = document.getElementsByTagName('title')[0];
 
 
-        const mainJS = document.createElement("script")
+        /*const mainJS = document.createElement("script")
         mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
-        title.insertAdjacentElement('afterend', mainJS)
+        title.insertAdjacentElement('afterend', mainJS)*/
 
         const preferencesJS = document.createElement("script")
         preferencesJS.src = `assets/scripts/preferences.js?${new Date().getTime()}`
@@ -76,6 +76,7 @@
         </div>
         <button id="save-button">Save</button>
     </form>
+    <script src="assets/scripts/main.js?v2"></script>
 </body>
 
 </html>
