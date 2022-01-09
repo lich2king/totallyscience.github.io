@@ -656,5 +656,14 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Deer Cat",
         "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/b067ade7a13a4d50bc3f65e2401b55c8/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy5nYW1lZmxhcmUuY29tLyIsInBhcmVudERvbWFpbiI6ImdhbWVmbGFyZS5jb20iLCJ0b3BEb21haW4iOiJnYW1lZmxhcmUuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuNCJ9"
+    },
+    "Squid Games": {
+        "description": "Complete the following challenges inspired by the popular show Squid Games.",
+        "image": "./assets/game_images/squidgames.png",
+        "controls": "Click and drag based on the directions given",
+        "tags": [""],
+        "date_added": "2022-01-09T18:11:41.637Z",
+        "developer": "Vakhtangi1980",
+        "iframe_url": "https://squid-games-2.vakhtangi1980.repl.co/"
     }
 }
