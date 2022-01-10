@@ -1,7 +1,7 @@
 {
     "Retro Bowl": {
         "description": "This is a 2D retro-style football game where your goal is to win the Retro Bowl!",
-        "image": "https://www1.minijuegosgratis.com/v3/games/thumbnails/232347_1.jpg",
+        "image": "./assets/game_images/retrobowl.jpg",
         "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
         "tags": ["featured", "sport"],
         "date_added": "2021-12-30T04:56:36.982Z",
