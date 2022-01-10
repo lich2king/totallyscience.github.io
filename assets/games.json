@@ -692,5 +692,14 @@
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/222972802/embed"
+    },
+    "Happy Room": {
+        "description": "Here tests are taken upon highly durable robots using newest weapon technologies.",
+        "image": "./assets/game_images/happyroom.png",
+        "controls": "[Click] - interact",
+        "tags": [""],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "Mana Potion Studios",
+        "iframe_url": "https://happy-room.vakhtangi1980.repl.co/"
     }
 }
