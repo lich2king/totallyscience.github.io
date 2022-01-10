@@ -674,14 +674,5 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
         "iframe_url": "https://scratch.mit.edu/projects/472077983/embed"
-    },
-    "Stickman Hook": {
-        "description": "Swing from hook to hook! Try to beat all 20 levels!",
-        "image": "./assets/game_images/stickmanhook.png",
-        "controls": "[Click] - attach to hook",
-        "tags": [""],
-        "date_added": "2022-01-09T18:11:41.637Z",
-        "developer": "Madbox",
-        "iframe_url": "https://script.google.com/macros/s/AKfycbxsvv2ALgmeppf4vpgJuIUsU_bkI6vf2q_A9MshwPWV6vxrVms/exec"
     }
 }
