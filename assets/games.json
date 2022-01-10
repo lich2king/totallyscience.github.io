@@ -13,7 +13,7 @@
         "description": "Ever wanted to have your own pizza restraunt? Here you go!",
         "image": "./assets/game_images/papaspizza.png",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
-        "tags": ["featured"],
+        "tags": ["featured", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Flipline Studios",
         "iframe_url": "./games/papaspizzeria.html"
@@ -373,7 +373,7 @@
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
         "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["hard"],
+        "tags": ["hard", "flash"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "vinmannie",
         "iframe_url": "https://vinmannie.github.io/WorldsHardestGame/"
@@ -382,7 +382,7 @@
         "description": "It really is impossible. Don't even bother trying to beat it.",
         "image": "./assets/game_images/the-impossible-quiz.jpg",
         "controls": "Click and drag with the mouse",
-        "tags": ["featured", "hard"],
+        "tags": ["featured", "hard", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Splapp-me-do Games",
         "iframe_url": "./games/impossiblequiz.html"
@@ -391,7 +391,7 @@
         "description": "More explosive arena style action! Battle against the AI or with friends in this cartoony platform shooter.",
         "image": "./assets/game_images/gunmayhem.jpeg",
         "controls": "[Arrow Keys] - move\n[z] - shoot\n[x] - bomb",
-        "tags": ["2"],
+        "tags": ["2", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Armor Games",
         "iframe_url": "./games/gunmayhem.html"
@@ -400,7 +400,7 @@
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
         "image": "./assets/game_images/escapingtheprison.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/escapingtheprison.html"
@@ -418,7 +418,7 @@
         "description": "Attempt to break into a bank, built in the middle of a desert.",
         "image": "./assets/game_images/breakingthebank.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/breakinbank.html"
@@ -427,7 +427,7 @@
         "description": "Help Henry Stickmin break into a museum and execute a diamond heist.",
         "image": "./assets/game_images/stealdiamond.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/stealdiamond.html"
@@ -436,7 +436,7 @@
         "description": "Try not to fail during a deadly mission in the sky! Infiltrating the Airship dares you to make risky decisions.",
         "image": "./assets/game_images/infiltratingairship.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/infiltrateairship.html"
@@ -445,7 +445,7 @@
         "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
         "image": "./assets/game_images/fleeingcomplex.jpg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "./games/fleecomplex.html"
@@ -553,7 +553,7 @@
         "description": "The second edition of the impossible quiz. Think you can beat it?",
         "image": "./assets/game_images/impquiz2.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["hard"],
+        "tags": ["hard", "flash"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Splapp-Me-Do Games",
         "iframe_url": "./games/TheImpossibleQuiz2.html"
@@ -598,7 +598,7 @@
         "description": "An endless obstacle running game. This game trains visual perception, and reaction time.",
         "image": "./assets/game_images/cubefield.jpg",
         "controls": "[WASD] - move",
-        "tags": [""],
+        "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "YoArcade",
         "iframe_url": "./games/cubedodge.html"
@@ -607,7 +607,7 @@
         "description": "Deal or no Deal. Try your luck in finding the $1,000,000 briefcase in this game based on the hit TV game show!",
         "image": "./assets/game_images/dealornodeal.jpg",
         "controls": "[WASD] - move",
-        "tags": [""],
+        "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Iwin",
         "iframe_url": "./games/dealornodeal.html"
@@ -616,7 +616,7 @@
         "description": "Swing from object to object with your webs. Try to get as far as you can and beat your highscore!",
         "image": "./assets/game_images/webswinger.jpg",
         "controls": "[Click] - shoot web",
-        "tags": [""],
+        "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "D O P I",
         "iframe_url": "./games/webswinger.html"
@@ -625,7 +625,7 @@
         "description": "Find your target and eliminate them as quickly as possible.",
         "image": "./assets/game_images/sniper.jpg",
         "controls": "[Click] - shoot",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Crazy Monkey Games",
         "iframe_url": "./games/sniper.html"
@@ -634,7 +634,7 @@
         "description": "A free tower defense game. Those pesky stickfigures are at it again! Defend your castle!",
         "image": "./assets/game_images/stormthehouse2.jpg",
         "controls": "[Click] - shoot\n[Space] - reload",
-        "tags": ["stickmin"],
+        "tags": ["stickmin", "flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Ivory",
         "iframe_url": "./games/stormthehouse2.html"
@@ -643,7 +643,7 @@
         "description": "See how many times you can bounce the ball in the air without dropping it!",
         "image": "./assets/game_images/pingpong.jpg",
         "controls": "Drag mouse to move paddle\n[Click] - drop ball",
-        "tags": [""],
+        "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "MiniClip",
         "iframe_url": "./games/pingpong.html"
