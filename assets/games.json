@@ -674,5 +674,14 @@
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
         "iframe_url": "https://scratch.mit.edu/projects/472077983/embed"
+    },
+    "Car Parking Chaos": {
+        "description": "Park the car in the yellow parking spot as quick as possible!",
+        "image": "./assets/game_images/carparkingchaos.png",
+        "controls": "[Arrow Keys] - move\nTo park, drive inside a yellow parking spot\n(Must be very exact)",
+        "tags": ["car"],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "Reevo_56",
+        "iframe_url": "https://scratch.mit.edu/projects/618161013/embed"
     }
 }
