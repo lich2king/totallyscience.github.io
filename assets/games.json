@@ -683,5 +683,14 @@
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Reevo_56",
         "iframe_url": "https://scratch.mit.edu/projects/618161013/embed"
+    },
+    "Bubble Popper": {
+        "description": "Pop the bubbles by matching the correct colors. Try to beat all the levels!",
+        "image": "./assets/game_images/bubblepopper.png",
+        "controls": "[Click] - shoot bubble",
+        "tags": [""],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "Griffpatch",
+        "iframe_url": "https://scratch.mit.edu/projects/222972802/embed"
     }
 }
