@@ -29,7 +29,6 @@ window.addEventListener(
             window.open(
                 this.localStorage.getItem("website"),
                 '_blank',
-                'fullscreen=yes resizable=yes'
             )
         }
     },
