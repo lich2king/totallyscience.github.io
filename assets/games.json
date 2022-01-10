@@ -701,5 +701,14 @@
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Mana Potion Studios",
         "iframe_url": "https://happy-room.vakhtangi1980.repl.co/"
+    },
+    "Parking Fury 3D": {
+        "description": "Avoid cops, steal cars, and drive around in this beautiful beach scenery.",
+        "image": "./assets/game_images/parkingfury3d.jpeg",
+        "controls": "[WASD] - drive\n[CTRL] - steal car",
+        "tags": ["car"],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "BrainSoftware",
+        "iframe_url": "https://files.vitalitygames.com/games/webgl/2019/10/07/parking-fury-3d-beach-city/"
     }
 }
