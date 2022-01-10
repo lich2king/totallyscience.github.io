@@ -21,7 +21,7 @@
 
     "Drift Boss": {
         "description": "Simple but addictive car drifting game. Collect coins and upgrade your car.",
-        "image": "https://driftboss.io/upload/imgs/options/drift-boss.jpg",
+        "image": "./assets/game_images/driftboss.jpeg",
         "controls": "Click space to turn",
         "tags": ["car"],
         "date_added": "2021-12-22T04:56:36.982Z",
