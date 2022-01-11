@@ -728,5 +728,14 @@
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "MadPuffers",
         "iframe_url": "https://www-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s017q3e/moto-x3m.xml"
+    },
+    "Basketball Stars": {
+        "description": "You can play solo or with a friend as a variety of legendary basketball players.",
+        "image": "./assets/game_images/basketballstars.png",
+        "controls": "[Arrow Keys] - move\n[x] - attack",
+        "tags": ["sport"],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "Madpuffers",
+        "iframe_url": "https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/basketballlegendunblocked/basketball_stars.xml"
     }
 }
