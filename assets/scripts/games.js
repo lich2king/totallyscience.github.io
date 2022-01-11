@@ -37,7 +37,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 gameBtn.classList.add('new')
             }
             gameBtn.addEventListener('click', () => {
-                window.location.href = `./class.html?class=${name}`
+                window.location.href = `./class.html?game=${name}`
             })
             gameBtn.classList.add('gameButton', 'all')
 
