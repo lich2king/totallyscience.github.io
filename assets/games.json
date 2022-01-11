@@ -363,7 +363,7 @@
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
         "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
-        "tags": [""],
+        "tags": ["card"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
