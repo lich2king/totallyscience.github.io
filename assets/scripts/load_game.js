@@ -1,6 +1,6 @@
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-const gameName = urlParams.get('game')
+const gameName = urlParams.get('class')
 
 fetch(`https://moovally.com/totallyscience-backend/game_stats.php/?type=views&name=${gameName}`)
 
@@ -8,7 +8,7 @@ fetch(`./assets/games.json?date=${new Date().getTime()}`)
     .then((response) => response.json())
     .then((games) => {
         const gameData = games[gameName]
-        if (gameData == null) window.location.href = '../games.html'
+        if (gameData == null) window.location.href = '../classes.html'
 
         $('controls').innerText = gameData.controls
         $('developer').innerText = `This game was created by ${gameData.developer}.`
