@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "1035";
-$database = "chatrooms";
+$username = "u483325885_chatter";
+$password = "Totally_password4321";
+$database = "u483325885_chatrooms";
 
 $roomid = htmlspecialchars($_GET["id"]);
 if (!$roomid) {
