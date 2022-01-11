@@ -84,11 +84,19 @@
 footer {
     background-color: rgb(40, 40, 40);
     padding: 30px;
-    padding-bottom: 130px;
+    padding-bottom: 100px;
     width: calc(100% - 60px);
     font-family: 'Spline Sans', sans-serif;
     height: 90px;
     color: white;
+}
+
+footer .terms{
+    color: white;
+    text-decoration: none;
+}
+footer .terms:hover{
+    text-decoration: underline;
 }
 
 #left-footer {
@@ -159,6 +167,8 @@ footer {
     footer {
         height: 150px;
     }
+
+    
 
     #left-footer {
         width: 100%;
