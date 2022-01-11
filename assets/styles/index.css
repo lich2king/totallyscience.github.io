@@ -84,7 +84,7 @@
 footer {
     background-color: rgb(40, 40, 40);
     padding: 30px;
-    padding-bottom: 75px;
+    padding-bottom: 130px;
     width: calc(100% - 60px);
     font-family: 'Spline Sans', sans-serif;
     height: 90px;
@@ -180,6 +180,12 @@ footer {
     #center-text {
         margin-top: 150px;
     }
+    #center-text a{
+        color: white;
+        text-decoration: none;
+    }
+
+
 
     #right-footer {
         float: none;
