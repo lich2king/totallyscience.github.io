@@ -737,5 +737,15 @@
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Madpuffers",
         "iframe_url": "https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/basketballlegendunblocked/basketball_stars.xml"
+    },
+    "Fire Boy and Water Girl": {
+        "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
+        "image": "./assets/game_images/fireboywatergirl.jpeg",
+        "controls": "[Arrow Keys] - move fireboy\n[WASD] - move watergirl",
+        "tags": [""],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "Oslo Albet",
+        "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/a55c9cc9c21e4fc683c8c6857f3d0c75/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2dyeWZlay5wbC8iLCJwYXJlbnREb21haW4iOiJncnlmZWsucGwiLCJ0b3BEb21haW4iOiJncnlmZWsucGwiLCJoYXNJbXByZXNzaW9uIjpmYWxzZSwibG9hZGVyRW5hYmxlZCI6dHJ1ZSwiaG9zdCI6Imh0bWw1LmdhbWVkaXN0cmlidXRpb24uY29tIiwidmVyc2lvbiI6IjEuNS40In0%253D"
     }
+
 }
