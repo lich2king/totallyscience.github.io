@@ -1,6 +1,6 @@
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-const gameName = urlParams.get('game')
+const gameName = urlParams.get('class')
 
 fetch(`https://moovally.com/totallyscience-backend/game_stats.php/?type=views&name=${gameName}`)
 
