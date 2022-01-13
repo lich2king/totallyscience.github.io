@@ -764,6 +764,15 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Tazogogala27",
         "iframe_url": "https://tazogogala27.github.io/run-boys-and-girls/"
+    },
+    "Slither.io": {
+        "description": "Become the longest player in the game without exploding!",
+        "image": "./assets/game_images/slitherio.jpg",
+        "controls": "Snake follows the mouse",
+        "tags": ["multiplayer"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Dazaseal",
+        "iframe_url": "https://alloy-proxy.dazaseal.repl.co/web/_aHR0cDovL3NsaXRoZXIuaW8=_/"
     }
 
 }
