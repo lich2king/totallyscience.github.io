@@ -757,7 +757,7 @@
         "iframe_url": "https://rawcdn.githack.com/Abnumality/cdn/3db3fa1b2a3df7f266985f3a7557011ac9c4844f/fireboy-watergirl-in-the-forest-temple/index.html"
     },
     "Fall Guys": {
-        "description": "",
+        "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
         "image": "./assets/game_images/fallguys.png",
         "controls": "[WASD] - move\n[Space] - jump",
         "tags": ["multiplayer"],
