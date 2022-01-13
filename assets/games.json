@@ -481,7 +481,7 @@
         "description": "Invade as many lands as possible and become the biggest on the server!",
         "image": "./assets/game_images/paperio.jpeg",
         "controls": "[Move Mouse] - move\nor\n[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["multiplayer"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Voodoo",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9wYXBlci1pby5jb20=/"
@@ -794,6 +794,24 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Gotoanddie",
         "iframe_url": "https://gotoanddie.github.io/c2-sans-fight/"
+    },
+    "Rooftop Snipers": {
+        "description": "Dodge bullets and knock your opponent off the roof!",
+        "image": "./assets/game_images/rooftopsnipers.jpeg",
+        "controls": "[w] - jump\n[e] - shoot",
+        "tags": ["2", "multiplayer"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Michael Eichler",
+        "iframe_url": "https://3kh0.github.io/rooftop-snipers/"
+    },
+    "Stunt Cars 2": {
+        "description": "Drift, drive off ramps, and do a flip!",
+        "image": "./assets/game_images/stuntcars2.png",
+        "controls": "[WASD] - drive\n[Space] - brake",
+        "tags": ["car"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Madalin Games",
+        "iframe_url": "https://zayaruzostreetorgan.com/uploads/5/0/5/6/5056555/custom_themes/607463927942590340/madalinsc2.html"
     }
-
+    
 }
