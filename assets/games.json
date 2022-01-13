@@ -773,6 +773,15 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Dazaseal",
         "iframe_url": "https://alloy-proxy.dazaseal.repl.co/web/_aHR0cDovL3NsaXRoZXIuaW8=_/"
+    },
+    "Agar.io": {
+        "description": "Become the biggest player in the game before getting eaten!",
+        "image": "./assets/game_images/agario.png",
+        "controls": "Blob follows the mouse",
+        "tags": ["multiplayer"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Dazaseal",
+        "iframe_url": "https://alloy-proxy.dazaseal.repl.co/web/_aHR0cHM6Ly9hZ2FyaW8udHViZQ==_/"
     }
 
 }
