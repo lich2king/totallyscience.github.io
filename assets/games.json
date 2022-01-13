@@ -782,6 +782,15 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Dazaseal",
         "iframe_url": "https://alloy-proxy.dazaseal.repl.co/web/_aHR0cHM6Ly9hZ2FyaW8udHViZQ==_/"
+    },
+    "Sans Fight": {
+        "description": "Sans is the final boss of the Genocide Route in Undertale.",
+        "image": "./assets/game_images/sansfight.jpg",
+        "controls": "[WASD] - move\n[Space] - select",
+        "tags": ["hard"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Gotoanddie",
+        "iframe_url": "https://gotoanddie.github.io/c2-sans-fight/"
     }
 
 }
