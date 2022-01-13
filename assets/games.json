@@ -733,7 +733,7 @@
         "description": "You can play solo or with a friend as a variety of legendary basketball players.",
         "image": "./assets/game_images/basketballstars.png",
         "controls": "[Arrow Keys] - move\n[x] - attack",
-        "tags": ["sport"],
+        "tags": ["sport", "2"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Madpuffers",
         "iframe_url": "https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/basketballlegendunblocked/basketball_stars.xml"
@@ -742,7 +742,7 @@
         "description": "Eliminate all other opponents and become the last survivor!",
         "image": "./assets/game_images/1v1.jpg",
         "controls": "[WASD] - run\n[LShift] - crouch\n[Click] - shoot\n[Right-click] - aim",
-        "tags": [""],
+        "tags": ["multiplayer"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "JustPlay",
         "iframe_url": "https://degeneracy.dazaseal.repl.co/go/hvtrs8%2F-1t1%2Clml/"
@@ -755,6 +755,15 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "KiZi",
         "iframe_url": "https://rawcdn.githack.com/Abnumality/cdn/3db3fa1b2a3df7f266985f3a7557011ac9c4844f/fireboy-watergirl-in-the-forest-temple/index.html"
+    },
+    "Fall Guys": {
+        "description": "",
+        "image": "./assets/game_images/fallguys.png",
+        "controls": "[WASD] - move\n[Space] - jump",
+        "tags": ["multiplayer"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Tazogogala27",
+        "iframe_url": "https://tazogogala27.github.io/run-boys-and-girls/"
     }
 
 }
