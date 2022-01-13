@@ -747,9 +747,7 @@
         "developer": "JustPlay",
         "iframe_url": "https://rawcdn.githack.com/scheng123321/channeler-tam/main/index.html?t=tam-1v1-lol"
     },
-    //https://degeneracy.dazaseal.repl.co/go/hvtrs8%2F-1t1%2Clml/
-    //https://rawcdn.githack.com/scheng123321/channeler-tam/main/index.html?t=tam-1v1-lol
-    //https://ejvd3326248pklq0mtj313irgbc2vsrb-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s035r8h4/1v1.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=544c660bc8b16c1d&libs=core&mid=172&parent=https://sites.google.com/site/unblockedgames66ez/1v1-lol#st=e%3DAIHE3cBK9D0UGibwSQF2F64MR8cb4pzmPVFPpm9x2iU1OmvV3wfrHm9F2stu5dMRRYLHGsmiZQNreywjA%252F5m1pl9Ovr49lxTSbekq%252F58DGx8Fju5Kybmy15YlmhPX4edPMPIxnzqTss%252F%26c%3Denterprise&rpctoken=-1798097197484458310
+
     "Fireboy and Water Girl 1": {
         "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
         "image": "./assets/game_images/fireboyandwatergirl.jpeg",
@@ -813,5 +811,5 @@
         "developer": "Madalin Games",
         "iframe_url": "https://zayaruzostreetorgan.com/uploads/5/0/5/6/5056555/custom_themes/607463927942590340/madalinsc2.html"
     }
-    
+
 }
