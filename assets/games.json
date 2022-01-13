@@ -791,6 +791,16 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Gotoanddie",
         "iframe_url": "https://gotoanddie.github.io/c2-sans-fight/"
+    },
+    "Rooftop Snipers": {
+        "description": "Dodge bullets and knock your opponent off the roof!",
+        "image": "./assets/game_images/rooftopsnipers.jpeg",
+        "controls": "[w] - jump\n[e] - shoot",
+        "tags": ["2"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "Michael Eichler",
+        "iframe_url": "https://3kh0.github.io/rooftop-snipers/"
     }
+    
 
 }
