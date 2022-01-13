@@ -799,7 +799,7 @@
         "tags": ["2", "multiplayer"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Michael Eichler",
-        "iframe_url": "./games/rooftop-snipers-main/index.html"
+        "iframe_url": "https://3kh0.github.io/rooftop-snipers/"
     },
     "Stunt Cars 2": {
         "description": "Drift, drive off ramps, and do a flip!",
