@@ -33,7 +33,10 @@ function joinRoom(isNewRoom) {
 
                         //display chatroom id
                         let ele = document.createElement('li');
-                        ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
+                        let span = document.createElement('span');
+                        span.innerText = 'Room Code:'
+                        ele.innerText = localStorage.getItem('chatRoom');
+                        ele.append(span);
                         messageList.appendChild(ele);
 
                         //display messages
@@ -41,10 +44,10 @@ function joinRoom(isNewRoom) {
                             let curmsg = jsonRes[msg];
 
                             let ele = document.createElement('li');
-                            ele.innerText = curmsg[0];
-
                             let span = document.createElement('span');
-                            span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                            ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                            span.innerText = curmsg[0];
+
                             ele.append(span);
 
                             messageList.appendChild(ele);
@@ -95,7 +98,10 @@ function joinRoom(isNewRoom) {
 
                 //display chatroom id
                 let ele = document.createElement('li');
-                ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
+                let span = document.createElement('span');
+                span.innerText = 'Room Code:'
+                ele.innerText = localStorage.getItem('chatRoom');
+                ele.append(span);
                 messageList.appendChild(ele);
 
                 //display messages
@@ -103,10 +109,10 @@ function joinRoom(isNewRoom) {
                     let curmsg = jsonRes[msg];
 
                     let ele = document.createElement('li');
-                    ele.innerText = curmsg[0];
-
                     let span = document.createElement('span');
-                    span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                    ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                    span.innerText = curmsg[0];
+
                     ele.append(span);
 
                     messageList.appendChild(ele);
@@ -140,7 +146,10 @@ function joinRoom(isNewRoom) {
 
                                 //display chatroom id
                                 let ele = document.createElement('li');
-                                ele.innerText = 'Room Code: ' + localStorage.getItem('chatRoom');
+                                let span = document.createElement('span');
+                                span.innerText = 'Room Code:'
+                                ele.innerText = localStorage.getItem('chatRoom');
+                                ele.append(span);
                                 messageList.appendChild(ele);
 
                                 //display messages
@@ -148,10 +157,10 @@ function joinRoom(isNewRoom) {
                                     let curmsg = jsonRes[msg];
 
                                     let ele = document.createElement('li');
-                                    ele.innerText = curmsg[0];
-
                                     let span = document.createElement('span');
-                                    span.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                    ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                    span.innerText = curmsg[0];
+
                                     ele.append(span);
 
                                     messageList.appendChild(ele);
