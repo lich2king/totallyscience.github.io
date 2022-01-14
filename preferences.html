@@ -17,11 +17,14 @@
         preferencesJS.src = `assets/scripts/preferences.js?${new Date().getTime()}`
         title.insertAdjacentElement('afterend', preferencesJS)
 
-        const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
-        const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
+        //const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+        //const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
 
         document.getElementsByTagName('head')[0].innerHTML += mainCSS + preferencesCSS
     </script>
+
+    <link rel='stylesheet' href='assets/styles/preferences.css'>
+    <link rel='stylesheet' href='assets/styles/main.css'>
 
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
