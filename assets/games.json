@@ -791,6 +791,15 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Gotoanddie",
         "iframe_url": "https://gotoanddie.github.io/c2-sans-fight/"
+    },
+    "Rooftop Snipers": {
+        "description": "A pixel-style shooting game. Shoot famous characters off the roof.",
+        "image": "./assets/game_images/rooftopsnipers.jpeg",
+        "controls": "[w] - jump\n[e] - shoot",
+        "tags": ["multiplayer", "2"],
+        "date_added": "2022-01-13T03:19:02.226Z",
+        "developer": "New Eich Games",
+        "iframe_url": "./games/rooftop-snipers-main/index.html"
     }
 
 }
