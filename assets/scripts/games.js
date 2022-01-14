@@ -10,7 +10,7 @@ const weekAgo = new Date()
 weekAgo.setDate(weekAgo.getDate() - 7)
 
 const gamesDiv = $('games-div')
-
+//su
 fetch(`./assets/classes.json?${new Date().getTime()}`)
     .then((response) => response.json())
     .then((games) => {
