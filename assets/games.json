@@ -23,7 +23,7 @@
         "description": "Simple but addictive car drifting game. Collect coins and upgrade your car.",
         "image": "./assets/game_images/driftboss.jpeg",
         "controls": "Click space to turn",
-        "tags": ["car"],
+        "tags": ["car", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/drift-boss/index.html"
@@ -33,7 +33,7 @@
         "description": "Online board game where your could play against a friend or the computer.",
         "image": "./assets/game_images/chess-icon.png",
         "controls": "Use your mouse to drag the piece you want to move",
-        "tags": ["2"],
+        "tags": ["2", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/chess/game.html?nocheckorient=1"
@@ -63,7 +63,7 @@
         "description": "Get 4 pieces in a row to win. Play against a friend or the computer.",
         "image": "./assets/game_images/connect4.jpeg",
         "controls": "Click where your want to place your piece",
-        "tags": ["2"],
+        "tags": ["2", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Codethislab",
         "iframe_url": "https://www.hoodamath.com/mobile/games/connect-4/game.html?nocheckorient=1"
@@ -123,7 +123,7 @@
         "description": "Satisfying game where you can squish, pull, and distort Morty's head.",
         "image": "./assets/game_images/elasticman.jpeg",
         "controls": "Drag features with mouse or touch-screen",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Adult Swim",
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
@@ -143,7 +143,7 @@
         "description": "Dodge the tubes and try to beat the high score!",
         "image": "./assets/game_images/Flappy_Bird_icon.png",
         "controls": "Click space to fly higher",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "HyperPixel",
         "iframe_url": "https://scratch.mit.edu/projects/17828009/embed"
@@ -183,7 +183,7 @@
         "description": "Dodge spikes and don't die!",
         "image": "./assets/game_images/geometrydash.png",
         "controls": "Click space to jump",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/105500895/embed"
@@ -203,7 +203,7 @@
         "description": "Line up your putt for a hole-in-one! Watch our for hills and water traps.",
         "image": "./assets/game_images/minigolf.jpeg",
         "controls": "Click and drag with the mouse",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "01smile",
         "iframe_url": "https://www.hoodamath.com/mobile/games/mini-golf/game.html?nocheckorient=1"
@@ -243,7 +243,7 @@
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./assets/game_images/pool.jpeg",
         "controls": "Click and drag with the mouse",
-        "tags": ["2"],
+        "tags": ["2", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "isgames",
         "iframe_url": "https://isgames.github.io/8ball/"
@@ -273,7 +273,7 @@
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/rollingvortex.jpeg",
         "controls": "[Arrow Keys] - Move",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Voodoo",
         "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
@@ -323,7 +323,7 @@
         "description": "Fun and easy to pick up on card game.",
         "image": "./assets/game_images/solitaire.png",
         "controls": "Click and drag with the mouse",
-        "tags": ["card"],
+        "tags": ["card", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Google",
         "iframe_url": "https://www.google.com/logos/fnbx/solitaire/standalone.html"
@@ -343,7 +343,7 @@
         "description": "Stack the blocks as high as you can. Try to beat the highscore!",
         "image": "./assets/game_images/stack.jpeg",
         "controls": "[Space] - Place block",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "CBC Kids",
         "iframe_url": "https://www.cbc.ca/kidscbc2/content/games/box-tower/index.html"
@@ -363,7 +363,7 @@
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
         "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
-        "tags": ["card"],
+        "tags": ["card", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
@@ -454,7 +454,7 @@
         "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
         "image": "./assets/game_images/cookieclicker.jpeg",
         "controls": "Click with the mouse",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Julien Thiennot",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/cookieclicker/"
@@ -463,7 +463,7 @@
         "description": "Simple crafting game. Start with four basic items and use them to find dinosaurs, unicorns and spaceships!",
         "image": "./assets/game_images/littlealchemy.png",
         "controls": "Click and drag with the mouse",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Jakub Koziol",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9saXR0bGVhbGNoZW15Mi5jb20=/"
@@ -499,7 +499,7 @@
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
         "image": "./assets/game_images/snake.png",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Google",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/snake/"
@@ -508,7 +508,7 @@
         "description": "Action maze chase game where you run from ghosts while eating dots.",
         "image": "./assets/game_images/pacman.png",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Toshio Kai",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/pacman/"
@@ -526,7 +526,7 @@
         "description": "Get the ball in the hole in as little swings possible.",
         "image": "./assets/game_images/golfblast.jpeg",
         "controls": "Drag and click with mouse",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Gamedistribution",
         "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/3f20410dc7e440c2869b0d1d502ae828/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwOi8vZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20vIiwicGFyZW50RG9tYWluIjoiZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20iLCJ0b3BEb21haW4iOiJmbGFzaGdhbWVzMjQ3LmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjQifQ%253D%253D"
@@ -544,7 +544,7 @@
         "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
         "image": "./assets/game_images/amongus.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Klopity",
         "iframe_url": "https://gefile.github.io/among-us-sp/"
@@ -580,7 +580,7 @@
         "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
         "image": "./assets/game_images/gettingoverit.jpeg",
         "controls": "Use mouse to control sledgehammer",
-        "tags": ["hard"],
+        "tags": ["hard", "mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
@@ -652,7 +652,7 @@
         "description": "Dodge the objects coming toward you in this endless tunnel. Beat your highscore!",
         "image": "./assets/game_images/tunnelrush.jpg",
         "controls": "[Arrow Keys] - turn",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Deer Cat",
         "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/b067ade7a13a4d50bc3f65e2401b55c8/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy5nYW1lZmxhcmUuY29tLyIsInBhcmVudERvbWFpbiI6ImdhbWVmbGFyZS5jb20iLCJ0b3BEb21haW4iOiJnYW1lZmxhcmUuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuNCJ9"
@@ -661,7 +661,7 @@
         "description": "Complete the following challenges inspired by the popular show Squid Games.",
         "image": "./assets/game_images/squidgames.png",
         "controls": "Click and drag based on the directions given",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Vakhtangi1980",
         "iframe_url": "https://squid-games-2.vakhtangi1980.repl.co/"
@@ -670,7 +670,7 @@
         "description": "Shoot the balls and upgrade your cannon, how long can you survive?",
         "image": "./assets/game_images/ballblast.png",
         "controls": "[Drag] - move\n[Click] - shoot",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
         "iframe_url": "https://scratch.mit.edu/projects/472077983/embed"
@@ -688,7 +688,7 @@
         "description": "Pop the bubbles by matching the correct colors. Try to beat all the levels!",
         "image": "./assets/game_images/bubblepopper.png",
         "controls": "[Click] - shoot bubble",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/222972802/embed"
@@ -733,7 +733,7 @@
         "description": "You can play solo or with a friend as a variety of legendary basketball players.",
         "image": "./assets/game_images/basketballstars.png",
         "controls": "[Arrow Keys] - move\n[x] - attack",
-        "tags": ["sport", "2"],
+        "tags": ["sport", "2", "mobile"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Madpuffers",
         "iframe_url": "https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/basketballlegendunblocked/basketball_stars.xml"

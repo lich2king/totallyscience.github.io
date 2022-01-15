@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
-
 :root {
     --light-color: #ffffff;
     --dark-color: #000000;
     --accent-color: #f75dfc;
 }
 
-[theme = dark] {
+[theme=dark] {
     --light-color: #000000;
     --dark-color: #ffffff;
 }
@@ -18,7 +17,14 @@ body {
     background-color: var(--light-color);
 }
 
-h1, h2, h3, h4, p, p2, a, label {
+h1,
+h2,
+h3,
+h4,
+p,
+p2,
+a,
+label {
     color: var(--dark-color);
     font-family: 'Rubik', sans-serif;
 }
@@ -103,6 +109,7 @@ h1, h2, h3, h4, p, p2, a, label {
         margin-right: 20px;
     }
 }
+
 @media (max-width: 675px) {
     #middlebar {
         position: absolute;
@@ -114,7 +121,6 @@ h1, h2, h3, h4, p, p2, a, label {
     #navbar {
         height: 100px;
     }
-
     #leftbar {
         margin-top: 45px;
         display: flex;

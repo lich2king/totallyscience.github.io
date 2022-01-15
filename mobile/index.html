@@ -2,20 +2,50 @@
 <html>
 
 <head>
+    <title>Totally Science</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
 
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
-    <p>This device is mobile?</p>
-    <p id="mobile">...</p>
+    <section id="categories">
+        <div class="categories">
+            <button name="all" onclick="" class="selectedCategory categoryButton">All</button>
+            <button name="new" onclick="" class="unselectedCategory categoryButton">New<span
+                    id="bolt">&#x26A1;</span></button>
+            <button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button>
+            <button name="car" onclick="" class="unselectedCategory categoryButton">Car</button>
+            <button name="card" onclick="" class="unselectedCategory categoryButton">Card</button>
+            <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
+            <button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button>
+        </div>
+    </section>
+
+    <section id="searchBarSection">
+        <div class="search-bar" style="margin-top: 25px" align="center">
+            <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
+        </div>
+    </section>
+
+    <section id="games">
+        <div align="center" id="games-div"></div>
+    </section>
+
+    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/mobile.js"></script>
 </body>
 
 <script>
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.getElementById("mobile").innerText = "YESSIR"
+        console.log("mobile")
     } else {
-        document.getElementById("mobile").innerText = "NOSSIR"
+        console.log("notmobile")
     }
+    document.getElementById('searchBar').style.backgroundImage = `url(../assets/images/magnifying-${localStorage.getItem("theme")}.svg)`
 </script>
 
 </html>
