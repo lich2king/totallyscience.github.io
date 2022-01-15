@@ -192,6 +192,7 @@ input[type='text']:focus {
 }
 
 #fixedElements button {
+    z-index: 99;
     position: fixed;
     width: 12vh;
     height: 12vh;
