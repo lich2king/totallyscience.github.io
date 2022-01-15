@@ -144,7 +144,7 @@ input[type='text']:focus {
     display: inline-block;
     text-align: center;
     border: 6px solid var(--accent-color);
-    background-color: none;
+    background-color: transparent;
     border-radius: 60px;
     margin-bottom: 2%;
     cursor: pointer;
@@ -175,4 +175,38 @@ input[type='text']:focus {
 #games div button img {
     height: 100%;
     width: 100%;
+}
+
+
+/* Fixed elements */
+
+#scrollOriginial {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#fixedElements button {
+    position: fixed;
+    width: 12vh;
+    height: 12vh;
+    background-color: var(--accent-color);
+    border: 0px;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#fixedElements button img {
+    width: 8vh;
+    height: 8vh;
+}
+
+#alert {
+    margin-top: 12.5vh;
 }
