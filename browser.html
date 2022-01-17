@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Totally Science</title>
-        <!--Cache Killer-->
-        <script>
-            const html = document.getElementsByTagName('head')[0].innerHTML;
-            const title = document.getElementsByTagName('title')[0];
-            const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`;
 
-            const mainJS = document.createElement("script")
-            mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
-            title.insertAdjacentElement('afterend', mainJS)
-            
-            document.getElementsByTagName('head')[0].innerHTML += mainCSS;
-        </script>
-    
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
-        <!--End Cache Killer-->
-        
-        <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="icon" href="assets/images/logo.png">
-        <!--Google Adsense-->
-        <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
+<head>
+    <title>Totally Science</title>
+    <!--Cache Killer-->
+    <script>
+        const html = document.getElementsByTagName('head')[0].innerHTML;
+        const title = document.getElementsByTagName('title')[0];
+        const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`;
 
-    <body>
-        <div id="navbar">
-            <div id="leftbar">
-                <div class="nav-button"><a href="index.html">Home</a></div>
-                <div class="nav-button"><a href="classes.html">Games</a></div>
-                <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
-                <div class="nav-button selected"><a href="">Browser</a></div>
-                <div class="nav-button"><a href="chat.html">Chat</a></div>
-            </div>
-            <div id="middlebar">
-                <p>Totally Science</p>
-            </div>
-            <div id="rightbar">
-                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
-            </div>
+        const mainJS = document.createElement("script")
+        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
+        title.insertAdjacentElement('afterend', mainJS)
+
+        document.getElementsByTagName('head')[0].innerHTML += mainCSS;
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="icon" href="assets/images/logo.png">
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button selected"><a href="">Browser</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
         </div>
-        <!--<div style="margin-top: 150px;" align="center">
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+        <div id="rightbar">
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+    <!--<div style="margin-top: 150px;" align="center">
             <h3 style="font-family: 'Rubik', sans-serif; font-size: 20pt;">Coming soon...</h3>
         </div>-->
-        <section id="browser">
-            <div id="browserDiv" style="margin-top: 100px; margin-left: 50%; transform: translate(-50%); width: 80vw;">
-                <iframe style="border-radius: 50px;" src="https://ffx.yodacode.repl.co/fx-us-2?url=https%3A%2F%2Fubgames.web.app" width="100%" height="700px" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
-            </div>
-        </section>
-    </body>
+    <section id="browser">
+        <div id="browserDiv" style="margin-top: 100px; margin-left: 50%; transform: translate(-50%); width: 80vw;">
+            <iframe style="border-radius: 50px;" src="https://ffx.yodacode.repl.co/fx-us-2?url=https%3A%2F%2Fubgames.web.app" width="100%" height="700px" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
+        </div>
+    </section>
+</body>
+
 </html>
