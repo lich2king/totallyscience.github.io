@@ -79,3 +79,13 @@ if (localStorage.getItem("disguise") == null) {
 
 document.body.setAttribute("theme", localStorage.getItem("theme"))
 document.getElementById('settings').children[0].src = `./assets/images/settings-${localStorage.getItem("theme")}.svg`
+
+
+
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //they are mobile redirect to mobile site
+    window.open("/mobile/index.html", "_self")
+} else {
+    //they are not mobile
+}
