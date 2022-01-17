@@ -28,8 +28,8 @@
 
 #survey button {
     font-size: 10vw;
-    width: 50vw;
-    height: 20vw;
+    width: 40vw;
+    height: 15vw;
     color: var(--light-color);
     background-color: var(--accent-color);
     border: 0px;

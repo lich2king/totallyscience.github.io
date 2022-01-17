@@ -11,10 +11,18 @@
 
     <link rel="icon" href="assets/images/logo.png">
     <!--Google Adsense-->
-    <!--<script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
+
+    <section id="fixedElementsSection">
+        <div id="fixedElements">
+            <button onclick="window.open('index.html', '_self')" id="setting"><img src="../assets/images/backarrow-light.svg"></button>
+            <button onclick="openSchoolSite()" id="alert"><img src="../assets/images/exclamation-light.svg"></button>
+        </div>
+    </section>
+
 
     <form id="survey">
         <div>
@@ -22,6 +30,7 @@
             <select name="website" id="website">
                     <option value="gc">Google Classroom</option>
                     <option value="canvas">Canvas</option>
+                    <option value="newtab">Google</option>
                 </select>
         </div>
         <div>

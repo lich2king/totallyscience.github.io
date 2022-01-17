@@ -15,7 +15,7 @@
 
     <section id="fixedElementsSection">
         <div id="fixedElements">
-            <button id="setting"><img src="../assets/images/settings-dark.svg"></button>
+            <button onclick="window.open('settings.html', '_self')" id="setting"><img src="../assets/images/settings-dark.svg"></button>
             <button onclick="openSchoolSite()" id="alert"><img src="../assets/images/exclamation-light.svg"></button>
         </div>
     </section>
@@ -50,11 +50,6 @@
 </body>
 
 <script>
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        console.log("mobile")
-    } else {
-        console.log("notmobile")
-    }
     document.getElementById('searchBar').style.backgroundImage = `url(../assets/images/magnifying-${localStorage.getItem("theme")}.svg)`
 </script>
 

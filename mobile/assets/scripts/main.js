@@ -36,10 +36,23 @@ window.addEventListener(
 )
 
 function openSchoolSite() {
-    window.open(
-        this.localStorage.getItem("website"),
-        '_blank',
-    )
+    if (this.localStorage.getItem("website") == "gc") {
+        window.open(
+            "https://classroom.google.com/",
+            '_blank',
+        )
+    } else if (this.localStorage.getItem("website") == "canvas") {
+        window.open(
+            "https://canvas.fau.edu/",
+            '_blank',
+        )
+    } else if (this.localStorage.getItem("website") == "newtab") {
+        window.open(
+            "https://google.com",
+            '_blank',
+        )
+    }
+
 }
 
 
@@ -61,7 +74,7 @@ if (scrollButton) {
 }
 
 if (localStorage.getItem("website") == null) {
-    localStorage.setItem("website", "https://classroom.google.com/")
+    localStorage.setItem("website", "gc")
 }
 
 if (localStorage.getItem("theme") == null) {
@@ -87,3 +100,11 @@ if (localStorage.getItem("disguise") == null) {
 
 document.body.setAttribute("theme", localStorage.getItem("theme"))
     //document.getElementById('settings').children[0].src = `./assets/images/settings-${localStorage.getItem("theme")}.svg`
+
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //they are mobile
+} else {
+    //if they are not mobile redirect back to main site
+    window.open("/", "_self")
+}
