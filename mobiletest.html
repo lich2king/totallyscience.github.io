@@ -1,0 +1,19 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="n"></p>
+</body>
+
+<script>
+    if (typeof screen.orientation !== 'undefined') {
+        document.getElementById('n').innerText = "mobile"
+    } else {
+        document.getElementById('n').innerText = "!mobile"
+    }
+</script>
+
+</html>
