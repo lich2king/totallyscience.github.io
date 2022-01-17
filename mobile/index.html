@@ -15,8 +15,8 @@
 
     <section id="fixedElementsSection">
         <div id="fixedElements">
-            <button onclick="window.open('settings.html', '_self')" id="setting"><img src="../assets/images/settings-dark.svg"></button>
-            <button onclick="openSchoolSite()" id="alert"><img src="../assets/images/exclamation-light.svg"></button>
+            <button onclick="window.open('settings.html', '_self')" id="setting"><img id="settingsIcon" src="../assets/images/settings-dark.svg"></button>
+            <button onclick="openSchoolSite()" id="alert"><img id="alertIcon" src="../assets/images/exclamation-light.svg"></button>
         </div>
     </section>
 
@@ -49,8 +49,5 @@
     <script src="assets/scripts/mobile.js"></script>
 </body>
 
-<script>
-    document.getElementById('searchBar').style.backgroundImage = `url(../assets/images/magnifying-${localStorage.getItem("theme")}.svg)`
-</script>
 
 </html>

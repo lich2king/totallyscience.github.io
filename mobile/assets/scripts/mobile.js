@@ -160,4 +160,6 @@ searchBar.addEventListener('keyup', () => {
 })
 
 
-document.getElementById('searchBar').style.backgroundImage = `url(./assets/images/magnifying-${localStorage.getItem("theme")}.svg)`
+document.getElementById('searchBar').style.backgroundImage = `url(../assets/images/magnifying-${localStorage.getItem("theme")}.svg)`
+document.getElementById('settingsIcon').src = `../assets/images/mobile-settings-${localStorage.getItem("theme")}.svg`
+document.getElementById('alertIcon').src = `../assets/images/exclamation-${localStorage.getItem("theme")}.svg`

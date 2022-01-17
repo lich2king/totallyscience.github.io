@@ -19,3 +19,6 @@ $('survey').addEventListener('submit', (e) => {
         saveBtn.innerHTML = "Save"
     }, 500)
 })
+
+document.getElementById('alertIcon').src = `../assets/images/exclamation-${localStorage.getItem("theme")}.svg`
+document.getElementById('backarrowLogo').src = `../assets/images/backarrow-${localStorage.getItem("theme")}.svg`
