@@ -38,7 +38,7 @@ window.addEventListener(
 function openSchoolSite() {
     if (this.localStorage.getItem("website") == "gc") {
         window.open(
-            "https://classroom.google.com/",
+            "https://classroom.google.com/u/0/h",
             '_blank',
         )
     } else if (this.localStorage.getItem("website") == "canvas") {
@@ -74,7 +74,7 @@ if (scrollButton) {
 }
 
 if (localStorage.getItem("website") == null) {
-    localStorage.setItem("website", "gc")
+    localStorage.setItem("website", "newtab")
 }
 
 if (localStorage.getItem("theme") == null) {
