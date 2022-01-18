@@ -36,17 +36,17 @@ window.addEventListener(
 )
 
 function openSchoolSite() {
-    if (this.localStorage.getItem("website") == "gc") {
+    if (this.localStorage.getItem("mobwebsite") == "gc") {
         window.open(
             "https://classroom.google.com/u/0/h",
             '_blank',
         )
-    } else if (this.localStorage.getItem("website") == "canvas") {
+    } else if (this.localStorage.getItem("mobwebsite") == "canvas") {
         window.open(
             "https://canvas.fau.edu/",
             '_blank',
         )
-    } else if (this.localStorage.getItem("website") == "newtab") {
+    } else if (this.localStorage.getItem("mobwebsite") == "newtab") {
         window.open(
             "https://google.com",
             '_blank',
