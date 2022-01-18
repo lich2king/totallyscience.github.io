@@ -91,7 +91,7 @@ function joinRoom(isNewRoom) {
                     joinButton.style = '';
                     roominput.style = '';
                     nameinput.style = '';
-                    ad.style = '';
+                    ad.style = 'margin-top: 20vh;';
                     return (errorText.innerText = ("*" + res))
                 }
             }
