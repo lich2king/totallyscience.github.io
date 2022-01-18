@@ -818,7 +818,16 @@
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Kk32423",
         "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
+    },
+    "Pokemon Fire Red": {
+        "description": "Start your journey in Pallet Town where you choose your Pokemon. Take down Team Rocket!",
+        "image": "./assets/game_images/pokemonfirered.png",
+        "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Shift] - select\n[Arrow keys] - move\n[z] [x] [a] [s] [q] [e] [r] [t] - interact",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "Game Freak",
+        "iframe_url": "./games/pokemonfirered.html"
     }
-    
+
 
 }
