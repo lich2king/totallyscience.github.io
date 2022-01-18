@@ -46,7 +46,7 @@
 }
 
 #desc {
-  margin-top: 10%;
+    margin-top: 10%;
 }
 
 .grid-container {
@@ -57,7 +57,7 @@
     padding: 10px;
 }
 
-.grid-container > div {
+.grid-container>div {
     padding: 20px 0;
     font-size: 30px;
 }
@@ -74,4 +74,9 @@
     text-align: left;
     font-size: 2vw;
     margin-left: 15%;
+}
+
+.iframeloader {
+    background: url(../images/loadinggif.gif) center center no-repeat;
+    background-size: 5vw;
 }
