@@ -10,6 +10,7 @@ function joinRoom(isNewRoom) {
     const leavebtn = document.getElementById('leavebtn');
     const scrollb = document.getElementById('scrollb');
     const errorText = document.getElementById('errorText')
+    const ad = document.getElementById('ad')
 
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
@@ -70,6 +71,7 @@ function joinRoom(isNewRoom) {
     joinButton.style = 'display: none';
     roominput.style = 'display: none';
     nameinput.style = 'display: none';
+    ad.style = 'display: none';
 
     let url;
     if (isNewRoom) {
@@ -89,6 +91,7 @@ function joinRoom(isNewRoom) {
                     joinButton.style = '';
                     roominput.style = '';
                     nameinput.style = '';
+                    ad.style = '';
                     return (errorText.innerText = ("*" + res))
                 }
             }
