@@ -2,7 +2,7 @@ const websiteInput = $('website')
 const themeInput = $('theme')
 const saveBtn = $('save-button')
 
-websiteInput.value = localStorage.getItem('website')
+websiteInput.value = localStorage.getItem('mobwebsite')
 themeInput.value = localStorage.getItem('theme')
 
 $('survey').addEventListener('submit', (e) => {
@@ -11,7 +11,7 @@ $('survey').addEventListener('submit', (e) => {
     let websiteEntered = websiteInput.value
     let themeEntered = themeInput.value
 
-    localStorage.setItem("website", websiteEntered)
+    localStorage.setItem("mobwebsite", websiteEntered)
     localStorage.setItem("theme", themeEntered)
 
     saveBtn.innerHTML = "Saved."

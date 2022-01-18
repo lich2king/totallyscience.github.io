@@ -73,8 +73,8 @@ if (scrollButton) {
     })
 }
 
-if (localStorage.getItem("website") == null) {
-    localStorage.setItem("website", "newtab")
+if (localStorage.getItem("mobwebsite") == null) {
+    localStorage.setItem("mobwebsite", "newtab")
 }
 
 if (localStorage.getItem("theme") == null) {
