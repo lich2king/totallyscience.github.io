@@ -818,7 +818,43 @@
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Kk32423",
         "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
+    },
+    "Pokemon Fire Red": {
+        "description": "Start your journey in Pallet Town where you choose your Pokemon. Take down Team Rocket!",
+        "image": "./assets/game_images/pokemonfirered.png",
+        "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Shift] - select\n[Arrow keys] - move\n[z] - a\n[x] - b",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "Game Freak",
+        "iframe_url": "./games/pokemonfirered.html"
+    },
+    "Pokemon Leaf Green": {
+        "description": "Your mission is to collect all 150 Pokémon. Go catch em all!",
+        "image": "./assets/game_images/pokemonleafgreen.jpg",
+        "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Shift] - select\n[Arrow keys] - move\n[z] - a\n[x] - b",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "Game Freak",
+        "iframe_url": "./games/pokemonleafgreen.html"
+    },
+    "Kirby The Amazing Mirror": {
+        "description": "The Kingdom of Mirrors has been invaded and Kirby's going to need to call for backup.",
+        "image": "./assets/game_images/kirbymirror.jpg",
+        "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Arrow keys] - move\n[z] - jump\n[x] - suck/release air",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "HAL Laboratory",
+        "iframe_url": "./games/kirbytheamazingmirror.html"
+    },
+    "Super Mario Bros 3": {
+        "description": "A platoformer action-adventure game of the classic Mario franchise.",
+        "image": "./assets/game_images/supermariobros3.jpg",
+        "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Arrow keys] - move\n[z] - select/jump\n[x] - back/attack",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "Nintendo",
+        "iframe_url": "./games/supermarioadvanced.html"
     }
-    
+
 
 }
