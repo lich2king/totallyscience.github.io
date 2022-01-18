@@ -845,6 +845,15 @@
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "HAL Laboratory",
         "iframe_url": "./games/kirbytheamazingmirror.html"
+    },
+    "Super Mario Bros 3": {
+        "description": "A platoformer action-adventure game of the classic Mario franchise.",
+        "image": "./assets/game_images/supermariobros3.jpg",
+        "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Arrow keys] - move\n[z] - select/jump\n[x] - back/attack",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "Nintendo",
+        "iframe_url": "./games/supermariobros3.html"
     }
 
 
