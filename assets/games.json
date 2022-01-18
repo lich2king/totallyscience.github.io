@@ -838,7 +838,7 @@
         "iframe_url": "./games/pokemonleafgreen.html"
     },
     "Kirby The Amazing Mirror": {
-        "description": "The Kingdom of Mirrors has been invaded by a dark shadow and Kirby's going to need to call in for some backup this time.",
+        "description": "The Kingdom of Mirrors has been invaded and Kirby's going to need to call for backup.",
         "image": "./assets/game_images/kirbymirror.jpg",
         "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Arrow keys] - move\n[z] - jump\n[x] - suck/release air",
         "tags": [""],
