@@ -481,7 +481,7 @@
         "description": "Invade as many lands as possible and become the biggest on the server!",
         "image": "./assets/game_images/paperio.jpeg",
         "controls": "[Move Mouse] - move\nor\n[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["multiplayer"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Voodoo",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9wYXBlci1pby5jb20=/"
@@ -809,6 +809,15 @@
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Gotoanddie",
         "iframe_url": "https://gotoanddie.github.io/c2-sans-fight/"
+    },
+    "FNAF 4": {
+        "description": "The final chapter of FNAF radically changes its location and gameplay while upping the level of thrill even further.",
+        "image": "./assets/game_images/fnaf4.jpeg",
+        "controls": "Use mouse to interact\n[Space] - flashlight\nFlick mouse down to look behind you\n[Click] - close/open door\n[x] - hide tips",
+        "tags": [""],
+        "date_added": "2022-01-18T01:09:58.739Z",
+        "developer": "Kk32423",
+        "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
     }
     
 
