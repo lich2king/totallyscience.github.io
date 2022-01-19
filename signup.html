@@ -97,8 +97,10 @@
         try {
             fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid='0'&emailvalid='0'`).then((response) => response.text()).then((res) => {
                 if (res == "found") {
+                    alert(true)
                     return (true);
                 } {
+                    alert(false)
                     return (false);
                 }
 
@@ -130,7 +132,7 @@
             errorText.innerText = "*Passwords don't match"
         } else if (!validateEmail(email)) {
             errorText.innerText = "*Email is not valid"
-        } else if (!userTaken(user, email, pass)) {
+        } else if (userTaken(user, email, pass)) {
             errorText.innerText = "*Username is taken"
         } else {
             //alert(userTaken(user, email, pass))
