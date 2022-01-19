@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 
 if($uservalid == '0')
 {
-    $userresult = $mysqli->query("SELECT id FROM AccountsTable WHERE Username = '$user'");
+    $userresult = $mysqli->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
     if($userresult->num_rows == 0) {
         // row not found, do stuff...
         echo("not found");
