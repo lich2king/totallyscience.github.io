@@ -97,10 +97,9 @@
         try {
             fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
                 if (res == "found") {
-                    alert(res)
+                    alert("FUCKING TRUE")
                     return (true);
                 } {
-                    alert(res)
                     return (false);
                 }
 
@@ -109,7 +108,6 @@
         } catch (err) {
             console.log(err);
         }
-        alert()
     }
 
 
