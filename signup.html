@@ -133,7 +133,7 @@
         } else if (userTaken(user, email, pass)) {
             errorText.innerText = "*Username is taken"
         } else {
-            alert("Made it ma")
+            alert(userTaken(user, email, pass))
             errorText.innerText = ""
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
