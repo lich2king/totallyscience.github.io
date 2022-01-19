@@ -859,7 +859,7 @@
         "description": "Command your Vikings and destroy the enemy's base in Clash of Vikings. The base is guarded by two towers.",
         "image": "./assets/game_images/clashroyale.jpg",
         "controls": "Click and drag",
-        "tags": [""],
+        "tags": ["mobile", "multiplayer"],
         "date_added": "2022-01-19T03:06:46.159Z",
         "developer": "Anthony Rubbo",
         "iframe_url": "https://cdn-factory.marketjs.com/en/clash-of-vikings/index.html"
