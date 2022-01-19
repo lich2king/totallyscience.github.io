@@ -97,10 +97,10 @@
         try {
             fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid='0'&emailvalid='0'`).then((response) => response.text()).then((res) => {
                 if (res == "found") {
-                    alert(true)
+                    alert(res)
                     return (true);
                 } {
-                    alert(false)
+                    alert(res)
                     return (false);
                 }
 
