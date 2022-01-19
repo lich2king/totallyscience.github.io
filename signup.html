@@ -131,6 +131,7 @@
         } else if (!validateEmail(email)) {
             errorText.innerText = "*Email is not valid"
         } else if (userTaken(user, email, pass)) {
+            alert('m')
             errorText.innerText = "*Username is taken"
         } else {
             errorText.innerText = ""
