@@ -26,15 +26,15 @@
         //document.getElementsByTagName('head')[0].innerHTML += mainCSS + preferencesCSS
     </script>
 
-    <link rel='stylesheet' href='../assets/styles/account.css'>
-    <link rel='stylesheet' href='../assets/styles/main.css'>
+    <link rel='stylesheet' href='./assets/styles/account.css'>
+    <link rel='stylesheet' href='./assets/styles/main.css'>
 
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <!--End Cache Killer-->
 
-    <link rel="icon" href="../assets/images/logo.png">
+    <link rel="icon" href="./assets/images/logo.png">
     <!--Google Adsense-->
     <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -52,7 +52,7 @@
             <p>Totally Science</p>
         </div>
         <div id="rightbar">
-            <a id="settings" href="preferences.html"><img src="../assets/images/settings-light.svg"></img>
+            <a id="settings" href=""><img src="./assets/images/settings-light.svg"></img>
             </a>
         </div>
     </div>
@@ -76,10 +76,40 @@
             <label for="confirmpassword">Confirm Password</label><br>
             <input type='password' id='confirmpassword' name='confirmpassword' placeholder='**********'><br>
         </div>
-        <button id="save-button">Sign Up</button>
+        <button onclick="SubmitSignUp()" id="save-button">Sign Up</button>
     </form>
     <p style="text-align: center;">Already have an account? <a href="login.html">Login instead</a></p>
-    <script src="../assets/scripts/main.js?v6"></script>
+    <script src="./assets/scripts/main.js?v6"></script>
 </body>
 
+
+    <script>
+        SubmitSignUp()
+        function SubmitSignUp()
+        {
+            console.log("here")
+            const user = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+
+            try {
+                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}`).then((response) => response.text()).then((res) => {
+                    let user;
+                    try {
+                        jsonRes = JSON.parse(res);
+                    } catch (error) {
+                        if (error) {
+                            return alert(res)
+                        }
+                    }
+
+                    
+                });
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        
+    </script>
 </html>
