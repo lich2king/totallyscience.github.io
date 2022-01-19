@@ -20,7 +20,7 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-if($uservalid == '0')
+if($uservalid == 0)
 {
     $userresult = $mysqli->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
     if($userresult->num_rows == 0) {
