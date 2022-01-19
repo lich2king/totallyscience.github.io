@@ -20,7 +20,6 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-die("BITCH");
 if($uservalid == '0')
 {
     $userresult = $mysqli->query("SELECT id FROM AccountsTable WHERE Username = '$user'");
