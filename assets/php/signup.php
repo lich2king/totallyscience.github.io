@@ -9,7 +9,6 @@ $email = htmlspecialchars($_GET["email"]);
 $password = htmlspecialchars($_GET["password"]);
 
 
-die("connect");
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
   
