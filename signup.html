@@ -93,7 +93,7 @@
             );
     };
 
-    function userTaken(user, email, pass) {
+    const userTaken = (user, email, pass) => {
         try {
             fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
                 if (res == "found") {
@@ -108,7 +108,7 @@
         } catch (err) {
             console.log(err);
         }
-    }
+    };
 
 
     function SubmitSignUp() {
