@@ -8,9 +8,8 @@ $user = htmlspecialchars($_GET["username"]);
 $email = htmlspecialchars($_GET["email"]);
 $pass = htmlspecialchars($_GET["password"]);
 
-die(password_hash($password, PASSWORD_DEFAULT));
+$pass = password_hash($pass, PASSWORD_DEFAULT);
 
-print("yeet");
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
   
