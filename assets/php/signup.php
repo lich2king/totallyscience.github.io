@@ -36,7 +36,6 @@ if($uservalid == 0)
 }
 else
 {
-
     die("Why");
     $sql = "INSERT INTO AccountsTable (Username, Email, Password)
     VALUES ('$user', '$email', '$pass')";
