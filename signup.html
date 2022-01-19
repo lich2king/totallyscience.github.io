@@ -93,16 +93,13 @@
             );
     };
 
-    function userTaken(username) {
+    function userTaken(user, email, pass) {
         try {
             fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid='0'&emailvalid='0'`).then((response) => response.text()).then((res) => {
-                let user;
-                try {
-                    jsonRes = JSON.parse(res);
-                } catch (error) {
-                    if (error) {
-                        return alert(res)
-                    }
+                if (res == "found") {
+                    return (true);
+                } {
+                    return (false);
                 }
 
 
@@ -110,6 +107,7 @@
         } catch (err) {
             console.log(err);
         }
+        alert()
     }
 
 
@@ -132,7 +130,7 @@
             errorText.innerText = "*Passwords don't match"
         } else if (!validateEmail(email)) {
             errorText.innerText = "*Email is not valid"
-        } else if (userTaken(user)) {
+        } else if (userTaken(user, email, pass)) {
             errorText.innerText = "*Username is taken"
         } else {
             errorText.innerText = ""
@@ -141,7 +139,7 @@
             const pass = document.getElementById('password').value;
 
             try {
-                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid='1'&emailvalid='1'`).then((response) => response.text()).then((res) => {
                     let user;
                     try {
                         jsonRes = JSON.parse(res);

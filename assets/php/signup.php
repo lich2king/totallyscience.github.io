@@ -20,17 +20,18 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-if($uservalid == 0)
+die("BITCH");
+if($uservalid == '0')
 {
     $userresult = $mysqli->query("SELECT id FROM AccountsTable WHERE Username = '$user'");
     if($userresult->num_rows == 0) {
         // row not found, do stuff...
-        die("user not found");
+        echo("not found");
     } else {
         // do other stuff...
-        die("user found");
+        echo("found");
     }
-} elseif($emailvalid == 0)
+} elseif($emailvalid == '0')
 {
 
 }
