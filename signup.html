@@ -18,7 +18,7 @@
 
         const accountJS = document.createElement("script")
         accountJS.src = `assets/scripts/account.js?${new Date().getTime()}`
-        //title.insertAdjacentElement('afterend', accountJS)
+            //title.insertAdjacentElement('afterend', accountJS)
 
         //const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
         //const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
@@ -78,21 +78,70 @@
         </div>
         <button id="save-button">Sign Up</button>
     </form>
+    <p style="text-align: center; color: red;" id="errorText"></p>
     <p style="text-align: center;">Already have an account? <a href="login.html">Login instead</a></p>
     <script src="./assets/scripts/main.js?v6"></script>
 </body>
 
 
-    <script>
-        function SubmitSignUp()
-        {
-            console.log("here")
+<script>
+    const validateEmail = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+    };
+
+    function userTaken(username) {
+        try {
+            fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
+                let user;
+                try {
+                    jsonRes = JSON.parse(res);
+                } catch (error) {
+                    if (error) {
+                        return alert(res)
+                    }
+                }
+
+
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    function SubmitSignUp() {
+        const user = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('password').value;
+        const confirmpass = document.getElementById('confirmpassword').value;
+        const errorText = document.getElementById('errorText');
+
+        if (user == '') {
+            errorText.innerText = "*Missing username"
+        } else if (email == '') {
+            errorText.innerText = "*Missing email"
+        } else if (pass == '') {
+            errorText.innerText = "*Missing password"
+        } else if (confirmpass == '') {
+            errorText.innerText = "*Missing password confirmation"
+        } else if (confirmpass != pass) {
+            errorText.innerText = "*Passwords don't match"
+        } else if (!validateEmail(email)) {
+            errorText.innerText = "*Email is not valid"
+        } else if (userTaken(user)) {
+            errorText.innerText = "*Username is taken"
+        } else {
+            errorText.innerText = ""
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const pass = document.getElementById('password').value;
 
             try {
-                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}`).then((response) => response.text()).then((res) => {
+                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
                     let user;
                     try {
                         jsonRes = JSON.parse(res);
@@ -102,13 +151,14 @@
                         }
                     }
 
-                    
+
                 });
             } catch (err) {
                 console.log(err);
             }
         }
 
-        
-    </script>
+    }
+</script>
+
 </html>
