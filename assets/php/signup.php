@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 
 if($uservalid == '0')
 {
-
+    die('we in');
     $userresult = $mysqli->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
     if($userresult->num_rows == 0) {
         // row not found, do stuff...
