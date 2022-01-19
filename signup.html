@@ -59,7 +59,7 @@
 
     <div style="padding-top: 90px;"></div>
 
-    <form id="survey">
+    <form id="survey" action="javascript:SubmitSignUp()">
         <div>
             <label for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
@@ -76,7 +76,7 @@
             <label for="confirmpassword">Confirm Password</label><br>
             <input type='password' id='confirmpassword' name='confirmpassword' placeholder='**********'><br>
         </div>
-        <button onclick="SubmitSignUp()" id="save-button">Sign Up</button>
+        <button id="save-button">Sign Up</button>
     </form>
     <p style="text-align: center;">Already have an account? <a href="login.html">Login instead</a></p>
     <script src="./assets/scripts/main.js?v6"></script>
