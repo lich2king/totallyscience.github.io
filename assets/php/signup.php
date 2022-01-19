@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 if($uservalid == '0')
 {
     $userresult = $conn->query("SELECT id FROM AccountsTable WHERE Username = '$user'");
-    die($userresult);
+    //die($userresult);
     if($userresult->num_rows == 0) {
         // row not found, do stuff...
         echo("not found");
