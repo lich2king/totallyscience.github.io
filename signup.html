@@ -108,6 +108,21 @@
         return (response)
     };
 
+    async function emailTaken() {
+        user = document.getElementById('username').value;
+        email = document.getElementById('email').value;
+        pass = document.getElementById('password').value;
+
+        const response = await fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1&emailvalid=0`).then((response) => response.text()).then((res) => {
+            if (res == "found") {
+                return (true);
+            } {
+                return (false);
+            }
+        });
+        return (response)
+    };
+
 
 
     async function SubmitSignUp() {
@@ -131,6 +146,8 @@
             errorText.innerText = "*Email is not valid"
         } else if (await userTaken()) {
             errorText.innerText = "*Username is taken"
+        } else if (await emailTaken()) {
+            errorText.innerText = "*Email is taken"
         } else {
             console.log(await userTaken())
                 /*errorText.innerText = ""
