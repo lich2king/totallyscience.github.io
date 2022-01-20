@@ -31,7 +31,7 @@ if($uservalid != '1')
         // do other stuff...
         echo("found");
     }
-} elseif($emailvalid != '1')
+} else if($emailvalid != '1')
 {
     die("NICE KNOWING YA");
     $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Email = '$email'");
