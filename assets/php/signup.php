@@ -20,9 +20,6 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-print($emailvalid);
-print($uservalid);
-
 if($uservalid != '1')
 {
     $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
