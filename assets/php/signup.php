@@ -34,10 +34,20 @@ if($uservalid == '0')
     }
 } elseif($emailvalid == '0')
 {
-
+    die("NICE KNOWING YA");
+    $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Email = '$email'");
+    //die($userresult);
+    if($userresult->num_rows == 0) {
+        // row not found, do stuff...
+        echo("not found");
+    } else {
+        // do other stuff...
+        echo("found");
+    }
 }
 else
 {
+    die("Hickery Dickery Dock");
     $sql = "INSERT INTO AccountsTable (Username, Email, Password)
     VALUES ('$user', '$email', '$pass')";
     
