@@ -163,7 +163,7 @@
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
         "image": "./assets/game_images/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
         "iframe_url": "https://scratch.mit.edu/projects/469219637/embed/"
