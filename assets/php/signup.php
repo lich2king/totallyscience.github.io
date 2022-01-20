@@ -24,7 +24,7 @@ print("maybe");
 print($emailvalid);
 print("maybe");
 
-die($emailvalid);
+die("JI");
 if($uservalid == '0')
 {
     $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
