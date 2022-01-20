@@ -93,25 +93,24 @@
             );
     };
 
-    const userTaken = (user, email, pass) => {
-        try {
-            fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
-                if (res == "found") {
-                    alert("FUCKING TRUE")
-                    return (true);
-                } {
-                    return (false);
-                }
+    async function userTaken() {
+        user = document.getElementById('username').value;
+        email = document.getElementById('email').value;
+        pass = document.getElementById('password').value;
 
-
-            });
-        } catch (err) {
-            console.log(err);
-        }
+        const response = await fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
+            if (res == "found") {
+                return (true);
+            } {
+                return (false);
+            }
+        });
+        return (response)
     };
 
 
-    function SubmitSignUp() {
+
+    async function SubmitSignUp() {
         const user = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const pass = document.getElementById('password').value;
@@ -130,11 +129,10 @@
             errorText.innerText = "*Passwords don't match"
         } else if (!validateEmail(email)) {
             errorText.innerText = "*Email is not valid"
-        } else if (userTaken(user, email, pass)) {
-            alert('m')
+        } else if (await userTaken()) {
             errorText.innerText = "*Username is taken"
         } else {
-            console.log(userTaken(user, email, pass))
+            console.log(await userTaken())
             errorText.innerText = ""
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
