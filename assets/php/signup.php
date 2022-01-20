@@ -47,7 +47,7 @@ if($uservalid == '0')
 }
 else
 {
-    die("Hickery Dickery Dock");
+    die($emailvalid);
     $sql = "INSERT INTO AccountsTable (Username, Email, Password)
     VALUES ('$user', '$email', '$pass')";
     
