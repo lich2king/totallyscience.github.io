@@ -20,7 +20,7 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-print("maybe");
+print("gaugey");
 print($emailvalid);
 print($uservalid);
 
