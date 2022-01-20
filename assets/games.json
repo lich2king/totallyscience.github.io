@@ -863,7 +863,18 @@
         "date_added": "2022-01-19T03:06:46.159Z",
         "developer": "Anthony Rubbo",
         "iframe_url": "https://lagged.com/api/play/clash-of-vikings3/"
+    },
+    "Cat Miner 2": {
+        "description": "A side-view Minecraft-inspired game with a Scratch cat character! Mine, mine, mine!",
+        "image": "./assets/game_images/minercat.png",
+        "controls": "[Arrow keys] - move\n[Click] - mine",
+        "tags": [""],
+        "date_added": "2022-01-20T20:31:34.561Z",
+        "developer": "Coltroc",
+        "iframe_url": "https://scratch.mit.edu/projects/351793769/embed"
     }
+
+
 
 
 }
