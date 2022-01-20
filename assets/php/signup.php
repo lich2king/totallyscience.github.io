@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 
 print("maybe");
 print($emailvalid);
-print("maybe");
+print($uservalid);
 
 die("JI");
 if($uservalid == '0')
