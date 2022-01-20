@@ -156,7 +156,7 @@
             const pass = document.getElementById('password').value;
 
             try {
-                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1f&emailvalid=1f`).then((response) => response.text()).then((res) => {
                     let user;
                     try {
                         jsonRes = JSON.parse(res);
