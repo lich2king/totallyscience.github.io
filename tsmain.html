@@ -110,13 +110,8 @@
 
     function enterNewLink() {
         if (localStorage.getItem("bookmark") == null) {
-            let text = "Make sure you bookmarked this page before clicking ok.";
-            if (confirm(text) == true) {
-                localStorage.setItem("bookmark", "true")
-                window.open("http://totallyscience.co", "_self")
-            } else {
-
-            }
+            openInfoModal('Make sure you bookmark the page!');
+            localStorage.setItem("bookmark", "true")
         } else {
             window.open("http://totallyscience.co", "_self")
         }
@@ -128,8 +123,6 @@
             document.getElementById("bookmarkText").innerText = "Make sure you bookmark this tab by pressing CMD + D"
         }
     }
-
-    openInfoModal('Hello World');
 </script>
 
 </html>
