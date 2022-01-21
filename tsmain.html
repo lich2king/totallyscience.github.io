@@ -108,11 +108,12 @@
         if (localStorage.getItem("bookmark") == null) {
             let text = "Make sure you bookmarked this page before clicking ok.";
             if (confirm(text) == true) {
-                localStorage.setItem("boomark", true)
-            } else {
+                localStorage.setItem("boomark", "bookmarked")
                 window.open("http://totallyscience.co")
+            } else {
+
             }
-        } else if (localStorage.getItem("bookmark") == true) {
+        } else {
             window.open("http://totallyscience.co")
         }
 
