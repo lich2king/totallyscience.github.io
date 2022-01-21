@@ -194,9 +194,9 @@
 
     <script>
         window.addEventListener('yo', event => {
-            document.getElementById("leftbar").style = 'display:none'
-                // IMPORTANT: check the origin of the data! 
-            if (event.origin.startsWith('http://your-first-site.com')) {
+            //document.getElementById("leftbar").style = 'display:none'
+            // IMPORTANT: check the origin of the data! 
+            if (event.origin.startsWith('https://totallyscience.co/tsmain.html')) {
                 // The data was sent from your site.
                 // Data sent with postMessage is stored in event.data:
                 console.log(event.data);
