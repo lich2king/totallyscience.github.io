@@ -87,7 +87,7 @@
     <div style="padding-top: 90px;"></div>
 
     <div id="headerText">
-        <h1>Make sure you bookmark this tab by pressing CTRL + D</h1>
+        <h1 id="bookmarkText">Make sure you bookmark this tab by pressing CTRL + D</h1>
         <h2>This website will be updated with new links whenever they are created so <span style="color: var(--accent-color);"><b>Totally Science</b> never gets blocked</span>.</h2>
     </div>
 
@@ -104,6 +104,8 @@
 
 
 <script>
+    bookmarkKeys();
+
     function enterNewLink() {
         if (localStorage.getItem("bookmark") == null) {
             let text = "Make sure you bookmarked this page before clicking ok.";
@@ -117,6 +119,12 @@
             window.open("http://totallyscience.co", "_self")
         }
 
+    }
+
+    function bookmarkKeys() {
+        if (navigator.platform.indexOf('Mac') > -1) {
+            document.getElementById("bookmarkText").innerText = "Make sure you bookmark this tab by pressing CMD + D"
+        }
     }
 </script>
 
