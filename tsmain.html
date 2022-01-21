@@ -74,7 +74,7 @@
     </style>
 </head>
 
-<body>
+<body id="body">
     <div id="navbar">
         <div id="leftbar">
         </div>
@@ -122,6 +122,67 @@
         if (navigator.platform.indexOf('Mac') > -1) {
             document.getElementById("bookmarkText").innerText = "Make sure you bookmark this tab by pressing CMD + D"
         }
+    }
+
+    var _errtimer, link, href;
+
+    function clickHandler() {
+        //var frame = <iframe id='testframe' style='visibility:hidden;' src='https://totallyscience.co'></iframe>;
+        var frame = document.createElement('iframe')
+        frame.id = 'testframe'
+        frame.src = 'https://totallyscience.co'
+        frame.onload = 'console.log("Fuck you")'
+
+        document.getElementById("body").append(frame);
+
+        _errtimer = setTimeout(canAccessIFrame, 1000);
+
+        //console.log(canAccessIFrame(frame))
+        /*document.getElementById("testframe").on('load', function() {
+            clearTimeout(_errtimer);
+            console.log('frame loaded successfuly');
+            location.href = href;
+        });*/
+    }
+
+    function checkIframeLoaded() {
+        // Get a handle to the iframe element
+        var iframe = document.getElementById('testframe');
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Check if loading is complete
+        if (iframeDoc.readyState == 'complete') {
+            //iframe.contentWindow.alert("Hello");
+            iframe.contentWindow.onload = function() {
+                alert("I am loaded");
+            };
+            // The loading is complete, call the function we want executed once the iframe is loaded
+            //alert("I am loaded");
+            //afterLoading();
+            return;
+        }
+
+        // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+        window.setTimeout(checkIframeLoaded, 100);
+    }
+
+    function afterLoading() {
+        alert("I am here");
+    }
+
+    function frameError() {
+        alert('error in frame');
+    }
+
+    clickHandler();
+
+    function canAccessIFrame() {
+        /*if (document.getElementById("testframe").contentWindow.document.getElementById('sections') != null) {
+            console.log(true)
+        } else {
+            console.log(false)
+        }*/
+        document.getElementById("testframe").contentWindow.postMessage("yo", 'https://totallyscience.co');
     }
 </script>
 
