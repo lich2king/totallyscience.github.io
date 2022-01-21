@@ -36,7 +36,7 @@
     <!--Google Adsense-->
     <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-    <link rel="stylesheet" href="./popups/modal.js">
+    <link rel="stylesheet" href="./popups/modal.css">
 
     <style>
         #headerText {
@@ -130,17 +130,6 @@
     }
 
     openInfoModal('Hello World');
-
-
-
-    openInputModal('Enter you name', 'unnamed', (modal, input) => {
-        if (input.value != null && input.value != '') {
-            openInfoModal('Welcome ' + input.value);
-        } else {
-            openInfoModal('Name cannot be empty');
-        }
-        modal.parentNode.removeChild(modal);
-    });
 </script>
 
 </html>
