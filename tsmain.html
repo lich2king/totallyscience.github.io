@@ -105,12 +105,17 @@
 
 <script>
     function enterNewLink() {
-        let text = "Make sure you bookmarked this page before clicking ok.";
-        if (confirm(text) == true) {
-            text = "You pressed OK!";
-        } else {
-            text = "You canceled!";
+        if (localStorage.getItem("bookmark") == null) {
+            let text = "Make sure you bookmarked this page before clicking ok.";
+            if (confirm(text) == true) {
+                localStorage.setItem("boomark", true)
+            } else {
+                window.open("http://totallyscience.co")
+            }
+        } else if (localStorage.getItem("bookmark") == true) {
+            window.open("http://totallyscience.co")
         }
+
     }
 </script>
 
