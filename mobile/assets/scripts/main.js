@@ -57,7 +57,7 @@ function openSchoolSite() {
 
 
 mkHtml(`
-        <svg id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});' xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#f75dfc" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+        <svg id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});' xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#f75dfc" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
         </svg>`)
 const scrollButton = $('scrollb')
@@ -99,15 +99,6 @@ if (localStorage.getItem("disguise") == null) {
 }
 
 document.body.setAttribute("theme", localStorage.getItem("theme"))
-    //document.getElementById('settings').children[0].src = `./assets/images/settings-${localStorage.getItem("theme")}.svg`
-
-
-/*if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //they are mobile
-} else {
-    //if they are not mobile redirect back to main site
-    window.open("/", "_self")
-}*/
 
 if (typeof screen.orientation !== 'undefined') {
     //not mobile
