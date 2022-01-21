@@ -872,7 +872,17 @@
         "date_added": "2022-01-20T20:31:34.561Z",
         "developer": "Coltroc",
         "iframe_url": "https://scratch.mit.edu/projects/351793769/embed"
+    },
+    "CSGO Surf": {
+        "description": "A popular game mode in CSGO. You'll be gliding along slopes and flying off of surfaces.",
+        "image": "./assets/game_images/csgosurf.jpeg",
+        "controls": "[WASD] - move\n[1] - use primary weapon\n[2] - use secondary weapon\n[3] - use Knife\n[r] to reload a weapon\n[f] - inspect a weapon\n[Click] - shoot/attack",
+        "tags": [""],
+        "date_added": "2022-01-21T14:05:26.922Z",
+        "developer": "Yoshi_studios32",
+        "iframe_url": "https://scratch.mit.edu/projects/212654640/embed"
     }
+
 
 
 
