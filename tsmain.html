@@ -130,7 +130,7 @@
         //var frame = <iframe id='testframe' style='visibility:hidden;' src='https://totallyscience.co'></iframe>;
         var frame = document.createElement('iframe')
         frame.id = 'testframe'
-        frame.src = 'https://totallyscfience.co'
+        frame.src = 'https://totallyscience.co'
         frame.onload = 'console.log("Fuck you")'
 
         document.getElementById("body").append(frame);
@@ -184,6 +184,21 @@
         }
         //document.getElementById("testframe").contentWindow.postMessage("yo", 'https://totallyscience.co');
     }
+    window.addEventListener('message', event => {
+        alert("m")
+            // IMPORTANT: check the origin of the data! 
+        if (event.origin.startsWith('https://totallyscience.co')) {
+            // The data was sent from your site.
+            // Data sent with postMessage is stored in event.data:
+            console.log(event.data);
+        } else {
+            console.log("notmywebsite");
+            // The data was NOT sent from your site! 
+            // Be careful! Do not use it. This else branch is
+            // here just for clarity, you usually shouldn't need it.
+            return;
+        }
+    });
 </script>
 
 </html>
