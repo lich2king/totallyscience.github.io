@@ -200,6 +200,7 @@
             if (event.origin.startsWith('https://totallyscience.co/tsmain.html')) {
                 // The data was sent from your site.
                 // Data sent with postMessage is stored in event.data:
+                alert("here")
                 console.log(event.data);
             } else {
                 // The data was NOT sent from your site! 
@@ -208,8 +209,6 @@
                 return;
             }
         });
-
-        //window.contentWindow.postMessage("yoy", 'https://totallyscience.co/tsmain.html');
     </script>
 </body>
 
