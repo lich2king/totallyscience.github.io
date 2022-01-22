@@ -186,9 +186,9 @@
     }
 
     window.addEventListener('message', event => {
-        //alert(event.data)
-        //document.getElementById("leftbar").style = 'display:none'
-        // IMPORTANT: check the origin of the data! 
+        alert(event.data)
+            //document.getElementById("leftbar").style = 'display:none'
+            // IMPORTANT: check the origin of the data! 
         if (event.origin.startsWith('https://totallyscience.co')) {
             // The data was sent from your site.
             // Data sent with postMessage is stored in event.data:
