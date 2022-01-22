@@ -39,7 +39,7 @@ function canAccessIFrame(elm) {
     image.onload = function() {
         elm.classList.add("check")
     };
-    image.src = 'http://totallymath.org/assets/images/logo.png';
+    image.src = `${url}/assets/images/logo.png`;
 }
 
 
