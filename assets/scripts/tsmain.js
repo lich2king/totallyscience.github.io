@@ -39,7 +39,7 @@ function canAccessIFrame(elm) {
     image.onload = function() {
         elm.classList.add("check")
     };
-    image.src = `${url}/assets/images/logo.png`;
+    image.src = `http://${url}/assets/images/logo.png`;
 }
 
 
