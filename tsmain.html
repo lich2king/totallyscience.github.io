@@ -184,21 +184,6 @@
         }
         //document.getElementById("testframe").contentWindow.postMessage("yo", 'https://totallyscience.co');
     }
-    window.addEventListener('message', event => {
-        alert(event)
-            // IMPORTANT: check the origin of the data! 
-        if (event.origin.startsWith('https://totallyscience.co')) {
-            // The data was sent from your site.
-            // Data sent with postMessage is stored in event.data:
-            console.log(event.data);
-        } else {
-            console.log("notmywebsite");
-            // The data was NOT sent from your site! 
-            // Be careful! Do not use it. This else branch is
-            // here just for clarity, you usually shouldn't need it.
-            return;
-        }
-    });
 </script>
 
 </html>
