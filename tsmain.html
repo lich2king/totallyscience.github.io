@@ -185,7 +185,7 @@
         //document.getElementById("testframe").contentWindow.postMessage("yo", 'https://totallyscience.co');
     }
     window.addEventListener('message', event => {
-        alert("m")
+        alert(event)
             // IMPORTANT: check the origin of the data! 
         if (event.origin.startsWith('https://totallyscience.co')) {
             // The data was sent from your site.
