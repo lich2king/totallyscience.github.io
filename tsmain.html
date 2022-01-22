@@ -177,12 +177,12 @@
     clickHandler();
 
     function canAccessIFrame() {
-        /*if (document.getElementById("testframe").contentWindow.document.getElementById('sections') != null) {
+        if (document.getElementById("testframe").contentWindow.document.getElementById('sections') != null) {
             console.log(true)
         } else {
             console.log(false)
-        }*/
-        document.getElementById("testframe").contentWindow.postMessage("yo", 'https://totallyscience.co');
+        }
+        //document.getElementById("testframe").contentWindow.postMessage("yo", 'https://totallyscience.co');
     }
 </script>
 
