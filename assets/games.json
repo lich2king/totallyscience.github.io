@@ -899,7 +899,17 @@
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
         "iframe_url": "./games/death-run-3d-main/death-run-3d-main/index.html"
+    },
+    "Stack Bump 3D": {
+        "description": "Shoot the tower to make it disappear until the last block while avoiding the black area.",
+        "image": "./assets/game_images/stackbump.png",
+        "controls": "[Click] - shoot",
+        "tags": [""],
+        "date_added": "2022-01-23T17:31:14.954Z",
+        "developer": "3kh0",
+        "iframe_url": "./games/stack-bump-3d-main/stack-bump-3d-main/index.html"
     }
+
 
 
 
