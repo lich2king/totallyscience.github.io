@@ -881,6 +881,15 @@
         "date_added": "2022-01-21T14:05:26.922Z",
         "developer": "Yoshi_studios32",
         "iframe_url": "https://scratch.mit.edu/projects/212654640/embed"
+    },
+    "Doge Miner": {
+        "description": "Your mission is to get to the moon! To get there cost 50,000,000,000 dogecoin. Goodluck!",
+        "image": "./assets/game_images/dogeminer.jpg",
+        "controls": "Click",
+        "tags": [""],
+        "date_added": "2022-01-23T17:31:14.954Z",
+        "developer": "Rkn_dev",
+        "iframe_url": "./games/DogeMiner-main/DogeMiner-main/index.html"
     }
 
 
