@@ -652,7 +652,7 @@
         "description": "Dodge the objects coming toward you in this endless tunnel. Beat your highscore!",
         "image": "./assets/game_images/tunnelrush.jpg",
         "controls": "[Arrow Keys] - turn",
-        "tags": ["mobile"],
+        "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Deer Cat",
         "iframe_url": "./games/tunnel-rush/index.html"
