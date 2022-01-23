@@ -97,8 +97,7 @@ if (typeof screen.orientation !== 'undefined') {
 }
 
 const prevLink = document.referrer
-alert(prevLink.includes("tsmain"))
-if (localStorage.getItem("mainsiteshown") == null) {
+if (localStorage.getItem("mainsiteshown") == null && !prevLink.includes("tsmain")) {
     localStorage.setItem("mainsiteshown", "true")
     window.open("https://tsmain.co/", "_self")
 }
