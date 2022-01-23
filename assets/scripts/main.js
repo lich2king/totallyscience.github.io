@@ -96,7 +96,7 @@ if (typeof screen.orientation !== 'undefined') {
     window.open("/mobile/index.html", "_self")
 }
 
-
+alert(document.referrer)
 if (localStorage.getItem("mainsiteshown") == null) {
     localStorage.setItem("mainsiteshown", "true")
     window.open("https://tsmain.co/", "_self")
