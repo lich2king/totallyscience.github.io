@@ -356,7 +356,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Mathisfun",
-        "iframe_url": "https://www.mathsisfun.com/games/a/mimstris/index.html"
+        "iframe_url": "./games/Tetris-main/Tetris-main/index.html"
     },
 
     "UNO": {
