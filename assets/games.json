@@ -457,7 +457,7 @@
         "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Julien Thiennot",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/cookieclicker/"
+        "iframe_url": "./games/cookie-clicker-main/cookie-clicker-main/index.html"
     },
     "Little Alchemy 2": {
         "description": "Simple crafting game. Start with four basic items and use them to find dinosaurs, unicorns and spaceships!",
