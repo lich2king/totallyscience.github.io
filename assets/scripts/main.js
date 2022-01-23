@@ -96,10 +96,8 @@ if (typeof screen.orientation !== 'undefined') {
     window.open("/mobile/index.html", "_self")
 }
 
-var url_string = window.location.href; //window.location.href
-var url = new URL(url_string);
-var ts = url.searchParams.get("ts");
-if (localStorage.getItem("mainsiteshown") == null && ts == null) {
+
+if (localStorage.getItem("mainsiteshown") == null) {
     localStorage.setItem("mainsiteshown", "true")
     window.open("https://tsmain.co/", "_self")
 }
