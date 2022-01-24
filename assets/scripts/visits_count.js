@@ -1,3 +1,6 @@
+var getUrl = window.location;
+var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+
 const addSuffix = (num) => {
     if (num.endsWith('1')) {
         return num + 'st'
@@ -9,7 +12,7 @@ const addSuffix = (num) => {
     return num + 'th'
 }
 
-fetch('https://totallyscience.co/assets/php/counter.php')
+fetch(`https://${baseUrl}/assets/php/counter.php`)
     .then((response) => response.text())
     .then((visits) => {
         const display = $('visits-count')
