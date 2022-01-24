@@ -352,7 +352,7 @@
     "Tetris": {
         "description": "Rotate the shapes to fit them perfectly together. Don't let them reach the top.",
         "image": "./assets/game_images/tetris.png",
-        "controls": "[Arrow Keys] - rotate shape",
+        "controls": "[Arrow Keys] - rotate shape\n[Space] - instant place",
         "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
