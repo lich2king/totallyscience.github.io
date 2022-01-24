@@ -354,7 +354,7 @@
         "image": "./assets/game_images/tetris.png",
         "controls": "[Arrow Keys] - rotate shape",
         "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
+        "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
         "iframe_url": "./games/Tetris-main/Tetris-main/index.html"
     },
