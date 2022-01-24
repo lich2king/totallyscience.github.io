@@ -3,6 +3,9 @@ const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('class')
 var getUrl = window.location;
 var baseUrl = getUrl.host;
+if (baseUrl.includes("github")) {
+    baseUrl = 'totallyscience.co'
+}
 
 fetch(`https://${baseUrl}/assets/php/game_stats.php/?type=views&name=${gameName}`)
 

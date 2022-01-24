@@ -1,5 +1,8 @@
 var getUrl = window.location;
 var baseUrl = getUrl.host;
+if (baseUrl.includes("github")) {
+    baseUrl = 'totallyscience.co'
+}
 
 const addSuffix = (num) => {
     if (num.endsWith('1')) {

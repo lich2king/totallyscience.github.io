@@ -13,6 +13,9 @@ function joinRoom(isNewRoom) {
     const ad = document.getElementById('ad')
     var getUrl = window.location;
     var baseUrl = getUrl.host;
+    if (baseUrl.includes("github")) {
+        baseUrl = 'totallyscience.co'
+    }
 
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
