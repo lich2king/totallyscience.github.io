@@ -96,10 +96,25 @@ if (typeof screen.orientation !== 'undefined') {
     window.open("/mobile/index.html", "_self")
 }
 
-const prevLink = document.referrer
-if (localStorage.getItem("mainsiteshown") == null && !prevLink.includes("tsmain")) {
-    localStorage.setItem("mainsiteshown", "true")
-    window.open("https://tsmain.co/", "_self")
-} else {
-    localStorage.setItem("mainsiteshown", "true")
+
+
+
+function canAccessLink() {
+    var image = new Image();
+
+    image.onerror = function() {
+        console.log("can't access tsmain.co")
+    };
+    image.onload = function() {
+        const prevLink = document.referrer
+        if (localStorage.getItem("mainsiteshown") == null && !prevLink.includes("tsmain")) {
+            localStorage.setItem("mainsiteshown", "true")
+            window.open("https://tsmain.co/", "_self")
+        } else {
+            localStorage.setItem("mainsiteshown", "true")
+        }
+    };
+    image.src = `https://tsmain.co/assets/logo.png`;
 }
+
+canAccessLink()
