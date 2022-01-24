@@ -2,7 +2,7 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('class')
 var getUrl = window.location;
-var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+var baseUrl = getUrl.host;
 
 fetch(`https://${baseUrl}/assets/php/game_stats.php/?type=views&name=${gameName}`)
 

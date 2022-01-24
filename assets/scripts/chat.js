@@ -12,7 +12,7 @@ function joinRoom(isNewRoom) {
     const errorText = document.getElementById('errorText')
     const ad = document.getElementById('ad')
     var getUrl = window.location;
-    var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    var baseUrl = getUrl.host;
 
     messageinput.addEventListener("keyup", function(event) {
         if (event.key === 'Enter') {
