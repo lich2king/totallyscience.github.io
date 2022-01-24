@@ -9,9 +9,9 @@
         const title = document.getElementsByTagName('title')[0];
         const indexCss = `<link rel='stylesheet' href='assets/styles/game.css?${new Date().getTime()}'>`;
         // main.js
-        let mainJS = document.createElement("script");
-        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-        title.insertAdjacentElement('afterend', mainJS);
+        //let mainJS = document.createElement("script");
+        //mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+        //title.insertAdjacentElement('afterend', mainJS);
 
         // game.js
         let gameJS = document.createElement("script");
@@ -56,8 +56,9 @@
 
     <section id="game">
         <div id="gameDiv">
-            <iframe class="iframeloader" src="" width="80%" height="80%" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
+            <iframe class="iframeloader" src="" width="80vw" height="80vw" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
         </div>
+        <button onclick="EnterFullscreen()"><img id="fullscreenImg" src="./assets/images/fullscreen-light.svg"></button>
     </section>
 
     <div align="center">
@@ -92,6 +93,8 @@
         <p>Is this game not working? Let us know!</p>
         <button id="report-btn">Report</button>
     </section>
+
+    <script src="./assets/scripts/main.js"></script>
 </body>
 
 </html>

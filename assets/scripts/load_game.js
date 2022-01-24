@@ -53,3 +53,19 @@ function handleMute() {
     }
 }
 */
+
+function EnterFullscreen() {
+    var elem = document.getElementsByTagName("iframe")[0];
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+}
+
+document.getElementById('fullscreenImg').src = `./assets/images/fullscreen-${localStorage.getItem("theme")}.svg`
