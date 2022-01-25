@@ -1,4 +1,5 @@
 <?php
+die("Nrp");
 $servername = "localhost";
 $username = "u483325885_profile";
 $password = "Totally_password4321";
