@@ -72,7 +72,7 @@ if (localStorage.getItem("disguise") == null) {
         title.innerHTML = "Google Docs"
         favicon.href = "./assets/images/disguises/gdicon.png"
     } else if (localStorage.getItem("disguise") == "canvas") {
-        title.innerHTML = "Canvas"
+        title.innerHTML = "Dashboard"
         favicon.href = "./assets/images/disguises/canvasicon.jpg"
     }
 }
@@ -117,4 +117,8 @@ function canAccessLink() {
     image.src = `https://tsmain.co/assets/logo.png`;
 }
 
+
+if (document.referrer.includes("tsmain")) {
+    localStorage.setItem("mainsiteshown", "true")
+}
 canAccessLink()

@@ -20,6 +20,7 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
+
 if($uservalid != '1')
 {
     $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
@@ -33,7 +34,6 @@ if($uservalid != '1')
     }
 } else if($emailvalid != '1')
 {
-    die("NICE KNOWING YA");
     $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Email = '$email'");
     //die($userresult);
     if($userresult->num_rows == 0) {
@@ -46,7 +46,6 @@ if($uservalid != '1')
 }
 else
 {
-    die("motha");
     $sql = "INSERT INTO AccountsTable (Username, Email, Password)
     VALUES ('$user', '$email', '$pass')";
     
