@@ -20,8 +20,9 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-die($emailvalid);
 die($uservalid);
+
+die($emailvalid);
 
 if($uservalid != '1')
 {
