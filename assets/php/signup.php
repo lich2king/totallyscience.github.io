@@ -21,6 +21,7 @@ if ($conn->connect_error) {
 }
 
 die($emailvalid);
+die($uservalid);
 
 if($uservalid != '1')
 {
