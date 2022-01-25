@@ -117,4 +117,8 @@ function canAccessLink() {
     image.src = `https://tsmain.co/assets/logo.png`;
 }
 
+
+if (document.referrer.includes("tsmain")) {
+    localStorage.setItem("mainsiteshown", "true")
+}
 canAccessLink()
