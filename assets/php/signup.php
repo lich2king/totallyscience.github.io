@@ -20,12 +20,10 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-die($uservalid);
-
-die($emailvalid);
 
 if($uservalid != '1')
 {
+    die("USERVALID");
     $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
     //die($userresult);
     if($userresult->num_rows == 0) {
