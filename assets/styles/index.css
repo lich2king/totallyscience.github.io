@@ -12,7 +12,9 @@
     text-align: center;
 }
 
+
 /* team members */
+
 #sections section {
     padding-top: 15%;
 }
@@ -51,7 +53,9 @@
     width: 20vw;
 }
 
+
 /* social links */
+
 #follow p {
     font-family: 'Spline Sans', sans-serif;
     font-size: 8vw;
@@ -80,7 +84,9 @@
     font-size: 4vw;
 }
 
+
 /* footer */
+
 footer {
     background-color: rgb(40, 40, 40);
     padding: 30px;
@@ -91,11 +97,12 @@ footer {
     color: white;
 }
 
-footer .terms{
+footer .terms {
     color: white;
     text-decoration: none;
 }
-footer .terms:hover{
+
+footer .terms:hover {
     text-decoration: underline;
 }
 
@@ -148,11 +155,11 @@ footer .terms:hover{
     margin: 0;
     margin-top: 15px;
 }
+
 @media (min-width: 1500px) {
     #left-footer p {
         font-size: 50px;
     }
-
     #right-footer p {
         font-size: 50px;
     }
@@ -162,44 +169,39 @@ footer .terms:hover{
     footer {
         height: 160px;
     }
-
     #left-footer {
         width: 100%;
         float: none;
     }
-
     #left-footer p {
         font-size: 25px !important;
     }
-
     #left-footer a {
         font-size: 15px !important;
     }
-
     #center-image {
         display: none;
     }
-
     #center-text {
         margin-top: 120px;
     }
-    #center-text a{
+    #center-text a {
         color: white;
         text-decoration: none;
     }
-
     #right-footer {
         float: none;
         width: 100%;
         margin-top: 35px;
     }
-
     #right-footer p {
         font-size: 25px !important;
     }
 }
 
+
 /* featured games slides */
+
 #featured {
     width: 100%;
     height: 100%;
@@ -242,8 +244,7 @@ footer .terms:hover{
     opacity: 1;
     font-family: 'Spline Sans', sans-serif;
     font-size: 11vw;
-    text-shadow: -6px -6px 0 var(--accent-color), 6px -6px 0 var(--accent-color),
-        -6px 6px 0 var(--accent-color), 6px 6px 0 var(--accent-color);
+    text-shadow: -6px -6px 0 var(--accent-color), 6px -6px 0 var(--accent-color), -6px 6px 0 var(--accent-color), 6px 6px 0 var(--accent-color);
     margin-bottom: 5%;
     margin-top: 0%;
 }
@@ -287,25 +288,31 @@ footer .terms:hover{
     opacity: 1;
     transition: opacity 0.15s ease;
 }
+
 .slidePrev button img,
 .slideNext button img {
     padding: 0%;
     margin: 0%;
 }
+
 .slideNext {
     right: 0;
     margin-right: 0%;
 }
+
 .slidePrev {
     margin-left: 0%;
 }
+
 @media (max-width: 600px) {
     #featured {
         margin-top: 110px;
     }
 }
 
+
 /* Fading animation */
+
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.25s;
@@ -329,4 +336,8 @@ footer .terms:hover{
     to {
         opacity: 1;
     }
+}
+
+.socialDiv :hover {
+    fill: var(--accent-color);
 }
