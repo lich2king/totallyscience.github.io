@@ -13,7 +13,7 @@ fetch(`../assets/games.json?date=${new Date().getTime()}`)
         var theIframeUrl = gameData.iframe_url
         if (theIframeUrl[0] == '.') {
             var newUrl = theIframeUrl.split('.')[1];
-            theIframeUrl = `..${newUrl}`
+            theIframeUrl = `../../${newUrl}`
         }
         $('game-iframe').src = gameData.iframe_url
     })
