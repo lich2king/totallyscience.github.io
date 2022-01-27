@@ -10,6 +10,11 @@ fetch(`../assets/games.json?date=${new Date().getTime()}`)
         const gameData = games[gameName]
         if (gameData == null) window.location.href = 'index.html'
 
+        var theIframeUrl = gameData.iframe_url
+        if (theIframeUrl[0] == '.') {
+            var newUrl = theIframeUrl.split('.')[1];
+            theIframeUrl = `https://${newUrl}`
+        }
         $('game-iframe').src = gameData.iframe_url
     })
 
