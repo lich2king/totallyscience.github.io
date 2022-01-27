@@ -102,7 +102,7 @@ document.body.setAttribute("theme", localStorage.getItem("theme"))
 
 if (typeof screen.orientation !== 'undefined') {
     //not mobile
-    window.open("/", "_self")
+    //window.open("/", "_self")
 } else {
     //mobile
 }
