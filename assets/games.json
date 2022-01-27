@@ -3,7 +3,7 @@
         "description": "This is a 2D retro-style football game where your goal is to win the Retro Bowl!",
         "image": "./assets/game_images/retrobowl.jpg",
         "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
-        "tags": ["featured", "sport"],
+        "tags": ["featured", "sport", "mobile"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "New Star Games",
         "iframe_url": "./games/retrobowl/index.html"
