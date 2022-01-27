@@ -8,7 +8,7 @@ $roomid = htmlspecialchars($_GET["id"]);
 $name = htmlspecialchars($_GET["name"]);
 $message = htmlspecialchars($_GET["message"]);
 if (!$roomid || !$name || !$message) {
-    die("missing name, room id, or message");
+    //die("missing name, room id, or message");
 }
 
 if (strlen($name) > 20) {
