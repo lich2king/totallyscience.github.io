@@ -908,7 +908,17 @@
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
         "iframe_url": "./games/stack-bump-3d-main/stack-bump-3d-main/index.html"
+    },
+    "Wordle": {
+        "description": "You have limited attempts to find the word. Goodluck!",
+        "image": "./assets/game_images/wordle.png",
+        "controls": "Use the keyboard to type",
+        "tags": [""],
+        "date_added": "2022-01-27T15:05:28.200Z",
+        "developer": "Josh Wardle",
+        "iframe_url": "https://www.wordleunlimited.com/"
     }
+
 
 
 
