@@ -7,7 +7,7 @@ html {
 
 .categoryButton {
     border: none;
-    color: var(--light-color);
+    color: var(--dark-color);
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
@@ -59,7 +59,7 @@ html {
 input[type='text'] {
     width: 15%;
     box-sizing: border-box;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--accent-color);
     border-radius: 4px;
     font-size: 16px;
     background-color: var(--light-color);
@@ -115,7 +115,7 @@ input[type='text']:focus {
 }
 
 #games div button div p {
-    color: var(--light-color);
+    color: var(--dark-color);
     font-size: 2vw;
     margin-bottom: 30px;
     margin-top: 15px;
@@ -124,7 +124,7 @@ input[type='text']:focus {
 }
 
 #games div button div p2 {
-    color: var(--light-color);
+    color: var(--dark-color);
     font-size: 13px;
 }
 
@@ -172,9 +172,10 @@ input[type='text']:focus {
 }
 
 #requestButton button {
+    margin-bottom: 30px;
     cursor: pointer;
     background-color: var(--accent-color);
-    color: var(--light-color);
+    color: var(--dark-color);
     border: 2px;
     border-radius: 10px;
     font-family: 'Spline Sans', sans-serif;
