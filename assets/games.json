@@ -918,7 +918,7 @@
         "developer": "Josh Wardle",
         "iframe_url": "https://www.wordleunlimited.com/"
     },
-    "Kirk.io": {
+    "Kirka.io": {
         "description": "A multiplayer online slow-paced competitive FPS in the browser. Level-up, win skins & rewards!",
         "image": "./assets/game_images/kirka.jpg",
         "controls": "[WASD] - move\n[Click] - shoot",
