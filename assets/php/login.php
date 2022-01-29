@@ -1,4 +1,7 @@
 <?php
+
+die("hello World")
+
 $config = include "config.php";
 
 $dsn = "mysql:dbname=" . $config["account_database"] . ";host=" . $config["host"];
