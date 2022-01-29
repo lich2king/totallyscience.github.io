@@ -35,7 +35,7 @@ $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"
         die("not found");
     } else {
         // do other stuff...
-        $row = mysql_fetch_row($userresult);
+        //$row = mysql_fetch_row($userresult);
         die("yeah");
     }
 
