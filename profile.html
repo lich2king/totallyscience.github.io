@@ -93,6 +93,12 @@
 </body>
 
 <script>
+    fetch(`https://totallyscience.co/assets/php/sessdata.php?sessname=loggedin`).then((response) => response.text()).then((res) => {
+        if (res != "true") {
+            window.open('./signup.html', '_self')
+        }
+    });
+
     fetch(`https://totallyscience.co/assets/php/sessdata.php?sessname=username`).then((response) => response.text()).then((res) => {
         document.getElementById('usernameSpan').innerText = res
     });
