@@ -28,7 +28,7 @@ $row = mysql_fetch_row($result);
 die($row[0]); // 42
 echo $row[1]; // the email value*/
 
-$userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
+/*$userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
 
 if($userresult->num_rows == 0) {
     // row not found, do stuff...
@@ -38,9 +38,23 @@ if($userresult->num_rows == 0) {
     //while ($row = $userresult -> fetch_row()) {
       //  die("%s (%s)\n", $row[0], $row[1]);
     //}
-    $row = mysql_fetch_row($userresult);
+    //$row = mysql_fetch_row($userresult);
+
     die("jife");
         
+}*/
+if(!$username || !$password) {
+    die("Incorrect args.");
+}
+
+$query = $pdo->prepare("select * from AccountsTable where Username=?");
+$select->execute([$name]);
+$data = $select->fetch();
+
+if(!$data) {
+    die("Incorrect username or password");
+} else {
+    // Do stuff with $data["Username"] and $data["Password"]
 }
 
 
