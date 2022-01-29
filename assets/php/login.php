@@ -1,6 +1,5 @@
 <?php
 
-die("Hello Henrico");
 $config = include "config.php";
 
 $dsn = "mysql:dbname=" . $config["account_database"] . ";host=" . $config["host"];
