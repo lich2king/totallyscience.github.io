@@ -935,7 +935,17 @@
         "date_added": "2022-01-29T22:13:58.428Z",
         "developer": "2PlayerGames",
         "iframe_url": "https: //grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/805200638580542612/pocket-league.html"
+    },
+    "Fall Boys": {
+        "description": "An online party game in a free-for-all. Struggle through round after round of escalating chaos.",
+        "image": "./assets/game_images/fallboys.png",
+        "controls": "[WASD] - move\n[Space] - jump",
+        "tags": ["multiplayer"],
+        "date_added": "2022-01-29T22:13:58.428Z",
+        "developer": "Grandcanyonshuttles",
+        "iframe_url": "https://grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html"
     }
+
 
 
 
