@@ -4,23 +4,6 @@ die("Hello Henrico")
 
 
 
-$user = htmlspecialchars($_GET["username"]);
-$pass = htmlspecialchars($_GET["password"]);
-
-
-
-$query = $pdo->prepare("select * from AccountsTable where Username=?");
-$select->execute(["Zach"]);
-$data = $select->fetch();
-
-if(!$data) {
-    die("Incorrect username or password");
-} else {
-    // Do stuff with $data["Username"] and $data["Password"]
-    die("success")
-}
-
-
 /*$result = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
 if (!$result) {
     die("error"); 
