@@ -27,7 +27,7 @@ if(!$data) {
     die("Incorrect username or password");
 } else {
     // Do stuff with $data["Username"] and $data["Password"]
-    die("success")
+    die("success");
 }
 
 
