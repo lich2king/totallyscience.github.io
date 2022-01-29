@@ -43,18 +43,19 @@ if($userresult->num_rows == 0) {
     die("jife");
         
 }*/
-if(!$username || !$password) {
+/*if(!$username || !$password) {
     die("Incorrect args.");
-}
+}*/
 
 $query = $pdo->prepare("select * from AccountsTable where Username=?");
-$select->execute([$name]);
+$select->execute(["Zach"]);
 $data = $select->fetch();
 
 if(!$data) {
     die("Incorrect username or password");
 } else {
     // Do stuff with $data["Username"] and $data["Password"]
+    die("success")
 }
 
 
