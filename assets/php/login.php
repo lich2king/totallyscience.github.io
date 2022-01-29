@@ -29,20 +29,20 @@ die($row[0]); // 42
 echo $row[1]; // the email value*/
 
 $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
-    //die($userresult);
-    if($userresult->num_rows == 0) {
-        // row not found, do stuff...
-        die("not found");
-    } else {
-        // do other stuff...
-        die("not eefound");
-        while ($row = $userresult -> fetch_row()) {
-            die("%s (%s)\n", $row[0], $row[1]);
-          }
-        //$row = mysql_fetch_row($userresult);
-        die("jife");
+//die($userresult);
+if($userresult->num_rows == 0) {
+    // row not found, do stuff...
+    die("not found");
+} else {
+    // do other stuff...
+    die("not eefound");
+    //while ($row = $userresult -> fetch_row()) {
+      //  die("%s (%s)\n", $row[0], $row[1]);
+    //}
+    //$row = mysql_fetch_row($userresult);
+    die("jife");
         
-    }
+}
 
 
 
