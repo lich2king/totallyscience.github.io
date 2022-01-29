@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 
-$result = $conn->query("SELECT *, Email FROM AccountsTable WHERE Username = 'Zach'");
+$result = $conn->query("SELECT Username, Email FROM AccountsTable WHERE Username = 'Zach'");
 if (!$result) {
     die("error"); 
     echo 'Could not run query: ' . mysql_error();
