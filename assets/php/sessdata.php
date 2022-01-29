@@ -1,5 +1,5 @@
 <?php
     $sessName = htmlspecialchars($_GET["sessname"]);
 
-    die($_SESSION[$sessName])
+    echo($_SESSION[$sessName])
 ?>
