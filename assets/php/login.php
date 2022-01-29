@@ -33,15 +33,15 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Za
     $usersPass = $row[2];
     if(password_verify($pass, $usersPass))
     {
-        echo("Success")
+        echo("Success");
     }
     else
     {
-        echo("Username or Password is Incorrect")
+        echo("Username or Password is Incorrect");
     }
 }
 else{
-    echo("Username or Password is Incorrect")
+    echo("Username or Password is Incorrect");
 }
 
 /*if($userresult->num_rows == 0) {
