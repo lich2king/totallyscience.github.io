@@ -18,7 +18,6 @@ if ($conn->connect_error) {
 
 
 $result = $conn->query("SELECT *,email FROM people WHERE * = '$user'");
-die("hello"); 
 if (!$result) {
     die("error"); 
     echo 'Could not run query: ' . mysql_error();
