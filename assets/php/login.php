@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+
+
 $servername = "localhost";
 $username = "u483325885_profile";
 $password = "Totally_password4321";
@@ -34,9 +38,7 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     if(password_verify($pass, $usersPass))
     {
         echo("Success");
-        $cookie_name = "logintoken";
-        $cookie_value = "loggedin_true.username_$user";
-        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+        $_SESSION["loggedin"] = "true";
     }
     else
     {
