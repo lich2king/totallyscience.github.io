@@ -28,9 +28,14 @@ $row = mysql_fetch_row($result);
 die($row[0]); // 42
 echo $row[1]; // the email value*/
 
-$userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
+if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"))
+{
+    while ($row = $userresult -> fetch_row()) {
+        printf ("%s (%s)\n", $row[0], $row[1]);
+      }
+}
 
-if($userresult->num_rows == 0) {
+/*if($userresult->num_rows == 0) {
     // row not found, do stuff...
     die("not found");
 } else {
@@ -42,9 +47,10 @@ if($userresult->num_rows == 0) {
     
     die("jife");
         
-}
+}*/
 
 
+$mysqli -> close();
 
 
 ?>
