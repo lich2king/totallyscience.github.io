@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 
-$result = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
+/*$result = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
 if (!$result) {
     die("error"); 
     echo 'Could not run query: ' . mysql_error();
@@ -26,7 +26,17 @@ if (!$result) {
 $row = mysql_fetch_row($result);
 
 die($row[0]); // 42
-echo $row[1]; // the email value
+echo $row[1]; // the email value*/
+
+$userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'");
+    //die($userresult);
+    if($userresult->num_rows == 0) {
+        // row not found, do stuff...
+        die("not found");
+    } else {
+        // do other stuff...
+        die("found");
+    }
 
 
 
