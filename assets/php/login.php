@@ -15,6 +15,7 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
+die("hello"); 
 
 $result = mysql_query("SELECT *,email FROM people WHERE * = '$user'");
 if (!$result) {
