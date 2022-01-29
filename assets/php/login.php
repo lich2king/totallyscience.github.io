@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 
-$result = mysql_query("SELECT *,email FROM people WHERE * = '$user'");
+//$result = mysql_query("SELECT *,email FROM people WHERE * = '$user'");
 die("he2llo"); 
 if (!$result) {
     die("error"); 
