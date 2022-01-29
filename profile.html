@@ -74,25 +74,9 @@
 </body>
 
 <script>
-    function getCookie(cname) {
-        let name = cname + "=";
-        let ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-
-    let username = getCookie('logintoken')
-    username = username.split('.')[1]
-    username = username.split('_')[1]
-    document.getElementById('usernameSpan').innerText = username
+    fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+        document.getElementById('usernameSpan')
+    });
 </script>
 
 </html>
