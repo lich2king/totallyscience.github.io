@@ -7,6 +7,7 @@ $database = "u483325885_accounts";
 $user = htmlspecialchars($_GET["username"]);
 $email = htmlspecialchars($_GET["email"]);
 $pass = htmlspecialchars($_GET["password"]);
+$grad = htmlspecialchars($_GET["gradyear"]);
 $uservalid = htmlspecialchars($_GET["uservalid"]);
 $emailvalid = htmlspecialchars($_GET["emailvalid"]);
 
@@ -19,7 +20,6 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
-
 
 if($uservalid != '1')
 {
@@ -46,8 +46,8 @@ if($uservalid != '1')
 }
 else
 {
-    $sql = "INSERT INTO AccountsTable (Username, Email, Password)
-    VALUES ('$user', '$email', '$pass')";
+    $sql = "INSERT INTO AccountsTable (Username, Email, Password, GradYear)
+    VALUES ('$user', '$email', '$pass', '$grad')";
     
     if ($conn->query($sql) === TRUE) {
       echo "New record created successfully";
