@@ -201,8 +201,8 @@
             const grad = document.getElementById('gradSelect').value;
 
             fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
-                alert(res)
                 if (res == "Success") {
+                    errorText.style = "color: green"
                     errorText.innerText = "*Account successfully created"
                 } else {
                     errorText.innerText = "*Error creating account"
