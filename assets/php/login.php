@@ -35,6 +35,7 @@ $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"
         die("not found");
     } else {
         // do other stuff...
+        die("not eefound");
         while ($row = $userresult -> fetch_row()) {
             die("%s (%s)\n", $row[0], $row[1]);
           }
