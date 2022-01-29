@@ -76,6 +76,27 @@
             <label for="confirmpassword">Confirm Password</label><br>
             <input type='password' id='confirmpassword' name='confirmpassword' placeholder='**********'><br>
         </div>
+        <div>
+            <label for="gradSelect">Graduation Year (Optional)</label><br>
+            <select name="gradSelect" id="gradSelect">
+                    <option value=""></option>
+                    <option value="22">2022</option>
+                    <option value="22">2022</option>
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    <option value="25">2025</option>
+                    <option value="26">2026</option>
+                    <option value="27">2027</option>
+                    <option value="28">2028</option>
+                    <option value="29">2029</option>
+                    <option value="30">2030</option>
+                    <option value="31">2031</option>
+                    <option value="32">2032</option>
+                    <option value="33">2033</option>
+                    <option value="34">2034</option>
+                    <option value="Other">Other</option>
+                </select>
+        </div>
         <button id="save-button">Sign Up</button>
     </form>
     <p style="text-align: center; color: red;" id="errorText"></p>
@@ -149,29 +170,29 @@
         } else if (await emailTaken()) {
             errorText.innerText = "*Email is taken"
         } else {
-            console.log(await emailTaken())
-                /*errorText.innerText = ""
-                const user = document.getElementById('username').value;
-                const email = document.getElementById('email').value;
-                const pass = document.getElementById('password').value;
+            //console.log(await emailTaken())
+            errorText.innerText = ""
+            const user = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
 
-                try {
-                    fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
-                        let user;
-                        try {
-                            jsonRes = JSON.parse(res);
-                        } catch (error) {
-                            if (error) {
-                                return alert(res)
-                            }
+            try {
+                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+                    let user;
+                    try {
+                        jsonRes = JSON.parse(res);
+                    } catch (error) {
+                        if (error) {
+                            return alert(res)
                         }
+                    }
 
 
-                    });
-                } catch (err) {
-                    console.log(err);
-                }*/
-            console.log("End")
+                });
+            } catch (err) {
+                console.log(err);
+            }
+            console.log("Account Created")
         }
 
     }
