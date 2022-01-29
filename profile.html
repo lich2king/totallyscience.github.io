@@ -90,7 +90,8 @@
     }
 
     let username = getCookie('logintoken')
-    username = username.split('.')
+    username = username.split('.')[1]
+    username = username.split('_')[1]
     document.getElementById('usernameSpan').innerText = username
 </script>
 
