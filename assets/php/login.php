@@ -31,7 +31,7 @@ echo $row[1]; // the email value*/
 if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"))
 {
     $row = $userresult -> fetch_row();
-    die($row[0]);
+    die($row[2]);
     while ($row = $userresult -> fetch_row()) {
         printf ($row[2]);
     }
