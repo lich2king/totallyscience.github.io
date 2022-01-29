@@ -27,7 +27,7 @@ $row = mysql_fetch_row($result);
 
 die($row[0]); // 42
 echo $row[1]; // the email value*/
-if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"))
+if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
 {
     $row = $userresult -> fetch_row();
     $usersPass = $row[2];
