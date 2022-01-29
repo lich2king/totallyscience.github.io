@@ -114,6 +114,22 @@
             );
     };
 
+    async function containsHash() {
+        user = document.getElementById('username').value;
+        email = document.getElementById('email').value;
+        pass = document.getElementById('password').value;
+
+        if (user.includes('#')) {
+            return (true)
+        } else if (email.includes('#')) {
+            return (true)
+        } else if (pass.includes('#')) {
+            return (true)
+        } else {
+            return (false)
+        }
+    };
+
     async function userTaken() {
         user = document.getElementById('username').value;
         email = document.getElementById('email').value;
@@ -168,6 +184,10 @@
             errorText.innerText = "*Passwords don't match"
         } else if (!validateEmail(email)) {
             errorText.innerText = "*Email is not valid"
+        } else if (await containsHash()) {
+            errorText.innerText = "*You cannot use a #"
+        } else if (pass.length < 5) {
+            errorText.innerText = "*Password must be at least 5 characters"
         } else if (await userTaken()) {
             errorText.innerText = "*Username is taken"
         } else if (await emailTaken()) {
