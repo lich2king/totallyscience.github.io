@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Totally Science</title>
+    <!--Cache Killer-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+        const html = document.getElementsByTagName('head')[0].innerHTML;
+        const title = document.getElementsByTagName('title')[0];
+
+
+        /*const mainJS = document.createElement("script")
+        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`
+        title.insertAdjacentElement('afterend', mainJS)*/
+
+        const accountJS = document.createElement("script")
+        accountJS.src = `assets/scripts/prfile.js?${new Date().getTime()}`
+            //title.insertAdjacentElement('afterend', accountJS)
+
+        //const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+        //const preferencesCSS = `<link rel='stylesheet' href='assets/styles/preferences.css?${new Date().getTime()}'>`
+
+        //document.getElementsByTagName('head')[0].innerHTML += mainCSS + preferencesCSS
+    </script>
+
+    <link rel='stylesheet' href='./assets/styles/main.css'>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="icon" href="./assets/images/logo.png">
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <style>
+        #welcomeHeader {
+            text-align: center;
+            font-size: 1.5vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="browser.html">Browser</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
+        </div>
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+        <div id="rightbar">
+            <a id="settings" href=""><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+    <div style="padding-top: 60px;"></div>
+
+    <div id="welcomeHeader">
+        <h1>Welcome <span id="usernameSpan">Zach</span>!</h1>
+    </div>
+
+
+    <script defer src="./assets/scripts/main.js?v12"></script>
+</body>
+
+<script>
+    function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    document.getElementById('usernameSpan').innerText = getCookie('logintoken')
+</script>
+
+</html>
