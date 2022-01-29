@@ -108,7 +108,7 @@
 <script>
     fetch(`https://totallyscience.co/assets/php/sessdata.php?sessname=loggedin`).then((response) => response.text()).then((res) => {
         if (res == "true") {
-            window.open('./profile.html')
+            window.open('./profile.html', '_self')
         }
     });
 
