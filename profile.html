@@ -75,7 +75,7 @@
 
 <script>
     fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
-        document.getElementById('usernameSpan')
+        document.getElementById('usernameSpan').innerText = res
     });
 </script>
 
