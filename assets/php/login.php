@@ -27,14 +27,21 @@ $row = mysql_fetch_row($result);
 
 die($row[0]); // 42
 echo $row[1]; // the email value*/
-
 if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"))
 {
     $row = $userresult -> fetch_row();
-    die($row[2]);
-    while ($row = $userresult -> fetch_row()) {
-        printf ($row[2]);
+    $usersPass = $row[2];
+    if(password_verify($pass, $usersPass))
+    {
+        echo("Success")
     }
+    else
+    {
+        echo("Username or Password is Incorrect")
+    }
+}
+else{
+    echo("Username or Password is Incorrect")
 }
 
 /*if($userresult->num_rows == 0) {
