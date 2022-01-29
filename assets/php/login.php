@@ -37,7 +37,7 @@ $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = 'Zach'"
         // do other stuff...
         $row = $userresult -> fetch_row()
         //$row = mysql_fetch_row($userresult);
-        die($row);
+        die("jife");
         
     }
 
