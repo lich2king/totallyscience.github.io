@@ -39,6 +39,7 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     {
         echo("Success");
         $_SESSION["loggedin"] = "true";
+        $_SESSION["username"] = $user;
     }
     else
     {
