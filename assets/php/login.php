@@ -1,19 +1,31 @@
 <?php
-$servername = "localhost";
-$username = "u483325885_profile";
-$password = "Totally_password4321";
-$database = "u483325885_accounts";
+$config = include "config.php";
+
+$dsn = "mysql:dbname=" . $config["account_database"] . ";host=" . $config["host"];
+
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+$pdo = new PDO($dsn, $config["account_username"], $config["password"], $options);
+
 
 $user = htmlspecialchars($_GET["username"]);
 $pass = htmlspecialchars($_GET["password"]);
 
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-  
-// Check connection
-if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
+
+$query = $pdo->prepare("select * from AccountsTable where Username=?");
+$select->execute(["Zach"]);
+$data = $select->fetch();
+
+if(!$data) {
+    die("Incorrect username or password");
+} else {
+    // Do stuff with $data["Username"] and $data["Password"]
+    die("success")
 }
 
 
@@ -47,16 +59,6 @@ if($userresult->num_rows == 0) {
     die("Incorrect args.");
 }*/
 
-$query = $pdo->prepare("select * from AccountsTable where Username=?");
-$select->execute(["Zach"]);
-$data = $select->fetch();
-
-if(!$data) {
-    die("Incorrect username or password");
-} else {
-    // Do stuff with $data["Username"] and $data["Password"]
-    die("success")
-}
 
 
 
