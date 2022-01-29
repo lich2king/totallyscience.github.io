@@ -50,9 +50,11 @@ else
     VALUES ('$user', '$email', '$pass', '$grad')";
     
     if ($conn->query($sql) === TRUE) {
+        echo "Success";
       //echo "New record created successfully";
     } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
+      //echo "Error";
     }
     
     $conn->close();

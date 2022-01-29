@@ -200,22 +200,14 @@
             const pass = document.getElementById('password').value;
             const grad = document.getElementById('gradSelect').value;
 
-            try {
-                fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
-                    let user;
-                    try {
-                        jsonRes = JSON.parse(res);
-                    } catch (error) {
-                        if (error) {
-                            return alert(res)
-                        }
-                    }
+            fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+                if (res == "Success") {
+                    errorText.innerText = "*Account successfully created"
+                } {
+                    errorText.innerText = "*Error creating account"
+                }
+            });
 
-
-                });
-            } catch (err) {
-                console.log(err);
-            }
             console.log("Account Created")
         }
 
