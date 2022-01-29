@@ -1,3 +1,5 @@
 <?php
-    die("yes")
+    $sessName = htmlspecialchars($_GET["sessname"]);
+
+    die($_SESSION[$sessName])
 ?>
