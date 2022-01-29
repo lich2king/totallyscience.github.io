@@ -34,6 +34,9 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     if(password_verify($pass, $usersPass))
     {
         echo("Success");
+        $cookie_name = "logintoken";
+        $cookie_value = "loggedin=true & username=$user";
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
     }
     else
     {
