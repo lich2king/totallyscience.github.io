@@ -1,7 +1,7 @@
 <?php
-    session_start()
-    
+    session_start();
+
     $sessName = htmlspecialchars($_GET["sessname"]);
 
-    die($_SESSION[$sessName])
+    die($_SESSION[$sessName]);
 ?>
