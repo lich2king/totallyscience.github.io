@@ -926,7 +926,17 @@
         "date_added": "2022-01-29T03:14:38.409Z",
         "developer": "Daza",
         "iframe_url": "https://degeneracy.dazaseal.repl.co/go/hvtr%3A-%2Fiipkc.ko-ngwq/"
+    },
+    "Rocket League": {
+        "description": "A fun car soccer 3D game that can be played 1 and 2 player.",
+        "image": "./assets/game_images/rocketleague.jpeg",
+        "controls": "[Arrow Keys] - move\n[Space] - jump",
+        "tags": ["2", "car"],
+        "date_added": "2022-01-29T22:13:58.428Z",
+        "developer": "2PlayerGames",
+        "iframe_url": "https: //grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/805200638580542612/pocket-league.html"
     }
+
 
 
 
