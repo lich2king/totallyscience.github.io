@@ -35,11 +35,10 @@ if($userresult->num_rows == 0) {
     die("not found");
 } else {
     // do other stuff...
-    die("not eefound");
     //while ($row = $userresult -> fetch_row()) {
       //  die("%s (%s)\n", $row[0], $row[1]);
     //}
-    //$row = mysql_fetch_row($userresult);
+    $row = mysql_fetch_row($userresult);
     die("jife");
         
 }
