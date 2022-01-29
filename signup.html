@@ -200,7 +200,7 @@
             const pass = document.getElementById('password').value;
             const grad = document.getElementById('gradSelect').value;
 
-            fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+            await fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
                 if (res == "Success") {
                     errorText.style.color = 'green'
                     errorText.innerText = "*Account successfully created"
@@ -209,7 +209,7 @@
                 }
             });
 
-            fetch(`https://totallyscience.co/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+            await fetch(`https://totallyscience.co/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                 if (res == "Success") {
                     window.open("./profile.html")
                 } else {
