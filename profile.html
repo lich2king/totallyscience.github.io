@@ -44,6 +44,10 @@
         }
         
         #logOutButton {
+            text-align: center;
+        }
+        
+        #logOutButton button {
             font-size: 2vw;
             width: 10vw;
             height: 8vh;
@@ -81,8 +85,8 @@
         <p>Welcome, <span id="usernameSpan"></span></p>
     </div>
 
-    <div>
-        <button id="logOutButton">Log Out</button>
+    <div id="logOutButton">
+        <button onclick="Logout()">Log Out</button>
     </div>
 
     <script defer src="./assets/scripts/main.js?v12"></script>
@@ -92,6 +96,11 @@
     fetch(`https://totallyscience.co/assets/php/sessdata.php?sessname=username`).then((response) => response.text()).then((res) => {
         document.getElementById('usernameSpan').innerText = res
     });
+
+    function Logout() {
+        fetch(`https://totallyscience.co/assets/php/logout.php`);
+        window.open('./login.html', '_self');
+    }
 </script>
 
 </html>
