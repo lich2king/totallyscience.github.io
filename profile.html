@@ -105,21 +105,17 @@
         res = JSON.parse(res)
         if (res != null) {
             const loggedIn = res["isLoggedIn"]
+            const name = res["username"]
             if (loggedIn != "true") {
                 window.open('./signup.html', '_self')
             }
+            document.getElementById('usernameSpan').innerText = name
         } else {
             window.open('./signup.html', '_self')
         }
 
 
 
-    });
-
-    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res)
-        const name = res["username"]
-        document.getElementById('usernameSpan').innerText = name
     });
 
     function Logout() {
