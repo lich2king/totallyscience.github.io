@@ -92,7 +92,13 @@
 
 
 <script>
-    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    var getUrl = window.location;
+    var baseUrl = getUrl.host;
+    if (baseUrl.includes("github")) {
+        baseUrl = 'totallyscience.co'
+    }
+
+    fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
         const loggedIn = 'false'
         if (res != null) {
@@ -109,7 +115,7 @@
         const pass = document.getElementById('password').value;
         const errorText = document.getElementById('errorText');
 
-        fetch(`https://totallyscience.co/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+        fetch(`https://${baseUrl}/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
             if (res == "Success") {
                 errorText.style = "text-align:center; color: green;"
                 errorText.innerText = ("*" + res)

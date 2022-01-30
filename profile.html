@@ -108,7 +108,13 @@
 </body>
 
 <script>
-    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    var getUrl = window.location;
+    var baseUrl = getUrl.host;
+    if (baseUrl.includes("github")) {
+        baseUrl = 'totallyscience.co'
+    }
+
+    fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
         if (res != null) {
             const loggedIn = res["isLoggedIn"]
@@ -126,7 +132,7 @@
     });
 
     function Logout() {
-        fetch(`https://totallyscience.co/assets/php/logout.php`).then(() => {
+        fetch(`https://${baseUrl}/assets/php/logout.php`).then(() => {
             window.open('./login.html', '_self');
         });
 

@@ -121,7 +121,13 @@
 
 
 <script>
-    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    var getUrl = window.location;
+    var baseUrl = getUrl.host;
+    if (baseUrl.includes("github")) {
+        baseUrl = 'totallyscience.co'
+    }
+
+    fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
         const loggedIn = 'false'
         if (res != null) {
@@ -162,7 +168,7 @@
         pass = document.getElementById('password').value;
         grad = document.getElementById('gradSelect').value;
 
-        const response = await fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
+        const response = await fetch(`https://${baseUrl}/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
             if (res == "found") {
                 return (true);
             } {
@@ -178,7 +184,7 @@
         pass = document.getElementById('password').value;
         grad = document.getElementById('gradSelect').value;
 
-        const response = await fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=0`).then((response) => response.text()).then((res) => {
+        const response = await fetch(`https://${baseUrl}/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=0`).then((response) => response.text()).then((res) => {
             if (res == "found") {
                 return (true);
             } {
@@ -226,7 +232,7 @@
             const pass = document.getElementById('password').value;
             const grad = document.getElementById('gradSelect').value;
 
-            await fetch(`https://totallyscience.co/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+            await fetch(`https://${baseUrl}/assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
                 if (res == "Success") {
                     errorText.style.color = 'green'
                     errorText.innerText = "*Account successfully created"
@@ -235,7 +241,7 @@
                 }
             });
 
-            await fetch(`https://totallyscience.co/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+            await fetch(`https://${baseUrl}/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                 if (res == "Success") {
                     window.open("./profile.html")
                 } else {
