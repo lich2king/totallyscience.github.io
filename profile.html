@@ -104,10 +104,10 @@
     loggy()
     async function loggy() {
         await fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-            res = JSON.parse(res)
+            res = await JSON.parse(res)
             const loggedIn = 'false'
             if (res != null) {
-                const loggedIn = res["isLoggedIn"]
+                const loggedIn = await res["isLoggedIn"]
             }
             if (loggedIn != "true") {
                 alert("SHUT THE FUCK UP")
