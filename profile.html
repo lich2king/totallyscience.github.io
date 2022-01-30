@@ -119,8 +119,10 @@
     });
 
     function Logout() {
-        fetch(`https://totallyscience.co/assets/php/logout.php`);
-        //window.open('./login.html', '_self');
+        fetch(`https://totallyscience.co/assets/php/logout.php`).then(() => {
+            window.open('./login.html', '_self');
+        });
+
     }
 </script>
 
