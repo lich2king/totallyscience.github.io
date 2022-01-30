@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 
 
@@ -38,8 +38,16 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     if(password_verify($pass, $usersPass))
     {
         echo("Success");
-        $_SESSION["loggedin"] = "true";
+        $data = array(
+            'isLoggedIn' => true,
+            'username' => $user
+        )
+        $cookie_name = 'logintoken';
+        $cookie_value = json_encode($data);
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+        /*$_SESSION["loggedin"] = "true";
         $_SESSION["username"] = $user;
+        */
     }
     else
     {
