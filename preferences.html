@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Totally Science</title>
 
-        <link rel='stylesheet' href='assets/styles/preferences.css'>
-        <link rel='stylesheet' href='assets/styles/main.css'>
+<head>
+    <meta property="og:title" content="Totally Science">
+    <meta property="og:site_name" content="Totally Science">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Play your favorite online gxmes free now!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
 
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
-        <!--End Cache Killer-->
+    <title>Totally Science</title>
 
-        <link rel="icon" href="assets/images/logo.png">
-        <!--Google Adsense-->
-        <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
+    <link rel='stylesheet' href='assets/styles/preferences.css'>
+    <link rel='stylesheet' href='assets/styles/main.css'>
 
-    <body>
-        <div id="navbar">
-            <div id="leftbar">
-                <div class="nav-button"><a href="index.html">Home</a></div>
-                <div class="nav-button"><a href="classes.html">Games</a></div>
-                <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
-                <div class="nav-button"><a href="browser.html">Browser</a></div>
-                <div class="nav-button"><a href="chat.html">Chat</a></div>
-            </div>
-            
-            <div id="middlebar">
-                <p>Totally Science</p>
-            </div>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
 
-            <div id="rightbar">
-                <a id="login" href="profile.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
-                </a>
-               
-                <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
-            </div>
+    <link rel="icon" href="assets/images/logo.png">
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="browser.html">Browser</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
         </div>
 
-        <div style="padding-top: 90px;"></div>
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
 
-        <form id="survey">
-            <div>
-                <label for="website">What's your school website?</label><br>
-                <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
-            </div>
+        <div id="rightbar">
+            <a id="login" href="profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+            </a>
 
-            <div>
-                <label for="theme">Choose a theme</label><br>
-                <select name="theme" id="theme">
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+    <div style="padding-top: 90px;"></div>
+
+    <form id="survey">
+        <div>
+            <label for="website">What's your school website?</label><br>
+            <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
+        </div>
+
+        <div>
+            <label for="theme">Choose a theme</label><br>
+            <select name="theme" id="theme">
                         <option value="light">Light</option>
                         <option value="dark">Dark</option>
                 </select>
-            </div>
+        </div>
 
-            <div>
-                <label for="disguise">Disguise tab</label><br>
-                <select name="disguise" id="disguise">
+        <div>
+            <label for="disguise">Disguise tab</label><br>
+            <select name="disguise" id="disguise">
                         <option value="none">None</option>
                         <option value="gc">Google Classroom</option>
                         <option value="gd">Google Docs</option>
                         <option value="canvas">Canvas</option>
                 </select>
-            </div>
+        </div>
 
-            <button id="save-button">Save</button>
-        </form>
+        <button id="save-button">Save</button>
+    </form>
 
-        <script defer src="assets/scripts/main.js?v12"></script>
-        <script defer src="assets/scripts/preferences.js"></script>
-    </body>
-    </html>
+    <script defer src="assets/scripts/main.js?v12"></script>
+    <script defer src="assets/scripts/preferences.js"></script>
+</body>
+
+</html>
