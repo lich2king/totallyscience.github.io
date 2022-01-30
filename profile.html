@@ -103,11 +103,17 @@
 <script>
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
-        const loggedIn = res["isLoggedIn"]
-        alert(res["isLoggedIn"])
-        if (loggedIn != "true") {
-            window.open('./signup.html', '_self')
+        if (res != null) {
+            const loggedIn = res["isLoggedIn"]
+            if (loggedIn != "true") {
+                window.open('./signup.html', '_self')
+            }
+        } else {
+            alert(res["isLoggedIn"])
         }
+
+
+
     });
 
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
