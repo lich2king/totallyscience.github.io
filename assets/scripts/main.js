@@ -22,6 +22,13 @@ const mkHtml = (code) => { // Unsafe, only use with trusted input.
     document.body.innerHTML += code
 }
 
+var getUrl = window.location;
+var baseUrl = getUrl.host;
+if (baseUrl.includes("github")) {
+    document.getElementById('login').style = "display: none;"
+}
+
+
 window.addEventListener(
     'keydown',
     function(e) {
