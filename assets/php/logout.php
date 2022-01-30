@@ -1,5 +1,4 @@
 <?php
-    die($_COOKIE('logintoken'));
+    die("hello");
     setcookie("logintoken", "", time() - 3600, "/");
-    
 ?>
