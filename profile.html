@@ -103,7 +103,10 @@
 <script>
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
-        const loggedIn = res["isLoggedIn"]
+        const loggedIn = 'false'
+        if (res["isLoggedIn"] != null) {
+            const loggedIn = res["isLoggedIn"]
+        }
         console.LOG(loggedIn);
         if (loggedIn != "true") {
             window.open('./signup.html', '_self')
