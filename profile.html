@@ -111,8 +111,8 @@
 
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
-        const loggedIn = res["username"]
-        document.getElementById('usernameSpan').innerText = res
+        const name = res["username"]
+        document.getElementById('usernameSpan').innerText = name
     });
 
     function Logout() {
