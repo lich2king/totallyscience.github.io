@@ -101,22 +101,18 @@
 </body>
 
 <script>
-    loggy()
-    async function loggy() {
-        const logged = await fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-            res = JSON.parse(res)
-            const loggedIn = 'false'
-            if (res != null) {
-                const loggedIn = res["isLoggedIn"]
-            }
-            if (loggedIn != "true") {
-                return (false)
-                    //window.open('./signup.html', '_self')
-            }
-            return (true)
-        });
-        alert(logged)
-    }
+    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res)
+        const loggedIn = 'false'
+        alert(res)
+        if (res != null) {
+            const loggedIn = res["isLoggedIn"]
+        }
+        if (loggedIn != "true") {
+            alert('bye')
+                //window.open('./signup.html', '_self')
+        }
+    });
 
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
