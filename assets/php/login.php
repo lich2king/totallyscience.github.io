@@ -39,7 +39,7 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     {
         echo("Success");
         $data = array(
-            'isLoggedIn' => true,
+            'isLoggedIn' => 'true',
             'username' => $user
         );
         $cookie_name = 'logintoken';

@@ -48,7 +48,7 @@
             <div class="nav-button"><a href="browser.html">Browser</a></div>
             <div class="nav-button"><a href="chat.html">Chat</a></div>
         </div>
-        
+
         <div id="middlebar">
             <p>Totally Science</p>
         </div>
@@ -59,8 +59,9 @@
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                 </svg>
             </a>
-           
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
+
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
         </div>
     </div>
 
@@ -84,8 +85,10 @@
 
 
 <script>
-    fetch(`https://totallyscience.co/assets/php/sessdata.php?sessname=loggedin`).then((response) => response.text()).then((res) => {
-        if (res == "true") {
+    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res)
+        const loggedIn = res["isLoggedIn"]
+        if (loggedIn == "true") {
             window.open('./profile.html', '_self')
         }
     });
