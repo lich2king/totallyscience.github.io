@@ -109,7 +109,9 @@
         }
     });
 
-    fetch(`https://totallyscience.co/assets/php/sessdata.php?sessname=username`).then((response) => response.text()).then((res) => {
+    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res)
+        const loggedIn = res["username"]
         document.getElementById('usernameSpan').innerText = res
     });
 
