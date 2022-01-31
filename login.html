@@ -101,9 +101,9 @@
 
     fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
-        const loggedIn = 'false'
+        let loggedIn = 'false'
         if (res != null) {
-            const loggedIn = res["isLoggedIn"]
+            loggedIn = res["isLoggedIn"]
         }
         if (loggedIn == "true") {
             window.open('./profile.html', '_self')
