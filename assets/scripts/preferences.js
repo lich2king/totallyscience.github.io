@@ -15,6 +15,7 @@ disguiseInput.value = localStorage.getItem('disguise')
 
 $('survey').addEventListener('submit', (e) => {
     e.preventDefault();
+    console.log("here")
     fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
         console.log(res)
