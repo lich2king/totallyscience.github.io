@@ -891,15 +891,6 @@
         "developer": "Rkn_dev",
         "iframe_url": "./games/DogeMiner-main/DogeMiner-main/index.html"
     },
-    "Death Run 3D": {
-        "description": "An extremely fast game for true skillers only. If you love hardcore games, this game is the right for you.",
-        "image": "./assets/game_images/deathrun3d.jpg",
-        "controls": "[Arrow keys] - move",
-        "tags": ["hard"],
-        "date_added": "2022-01-23T17:31:14.954Z",
-        "developer": "3kh0",
-        "iframe_url": "./games/death-run-3d-main/death-run-3d-main/index.html"
-    },
     "Stack Bump 3D": {
         "description": "Shoot the tower to make it disappear until the last block while avoiding the black area.",
         "image": "./assets/game_images/stackbump.png",
