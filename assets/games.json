@@ -944,6 +944,15 @@
         "date_added": "2022-01-29T22:13:58.428Z",
         "developer": "Grandcanyonshuttles",
         "iframe_url": "https://grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html"
+    },
+    "Getaway Shootout": {
+        "description": "Race three others to the extraction point. This is no ordinary race as you can only jump your way to the finish line.",
+        "image": "./assets/game_images/getawayshootout.jpg",
+        "controls": "PLAYER ONE\n[w] - jump left\n[r] - jump right\n[r] - power-up\nPLAYER TWO\n[i] - jump left\n[o] - jump right\n[p] - power-up",
+        "tags": ["2"],
+        "date_added": "2022-01-31T03:38:27.104Z",
+        "developer": "New Eich Games",
+        "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
     }
 
 
