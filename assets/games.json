@@ -953,15 +953,6 @@
         "date_added": "2022-01-31T03:38:27.104Z",
         "developer": "New Eich Games",
         "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
-    },
-    "Roblox": {
-        "description": "The ultimate virtual universe that lets you create, share experiences with friends, and be anything you can imagine.",
-        "image": "./assets/game_images/roblox.png",
-        "controls": "[WASD] - move",
-        "tags": ["multiplayer"],
-        "date_added": "2022-01-31T03:38:27.104Z",
-        "developer": "Roblox",
-        "iframe_url": "https://totallyunlocked.hackedzach.repl.co/go/hvtrs8%2F-nmw%2Cge%2Frlcy-rmbnoz-aoppmrctkol%2F7369-rmbnoz/"
     }
 
 
