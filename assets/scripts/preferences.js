@@ -24,7 +24,7 @@ $('survey').addEventListener('submit', (e) => {
         if (res != null) {
             loggedIn = res["isLoggedIn"]
         }
-
+        console.log(loggedIn)
         if (loggedIn == "true") {
             let websiteEntered = websiteInput.value
             let themeEntered = themeInput.value
