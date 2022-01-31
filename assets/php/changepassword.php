@@ -20,10 +20,20 @@ if ($conn->connect_error) {
 if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
 {
     $row = $userresult -> fetch_row();
-    echo $row;
-}
-else{
-    echo("Username or Password is Incorrect");
+
+    $from = "help@totallyscience.co";
+    $to = $row[1];
+    $subject = "Totally Science Change Password Confirmation";
+    $rand = rand(10000,99999);
+    $message = "Your confirmation code is " . $rand;
+    $headers = "From:" . $from;
+
+    if (mail($to, $subject, $message, $headers)) {
+        // email send client should show confirmation box
+        echo "Success The email message was sent!";
+    } else {
+        echo "The email message was not sent.";
+    }
 }
 
 $mysqli -> close();
