@@ -29,7 +29,7 @@ $('survey').addEventListener('submit', (e) => {
                 saveBtn.innerHTML = "Save"
             }, 500)
         } else {
-            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='./ profile.html'>Click here</a>"
+            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profile.html'>Click here</a>"
         }
     });
 
