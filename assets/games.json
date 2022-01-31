@@ -513,15 +513,6 @@
         "developer": "Toshio Kai",
         "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/pacman/"
     },
-    "Minecraft": {
-        "description": "Build whatever you can imagine in this open world game.",
-        "image": "./assets/game_images/minecraft.png",
-        "controls": "[WASD] - move\n[Move Mouse] - look around",
-        "tags": [""],
-        "date_added": "2022-01-31T03:38:27.104Z",
-        "developer": "Markus Persson",
-        "iframe_url": "https://minecraftts.hackedzach.repl.co/"
-    },
     "Golf Blast": {
         "description": "Get the ball in the hole in as little swings possible.",
         "image": "./assets/game_images/golfblast.jpeg",
