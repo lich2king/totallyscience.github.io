@@ -22,7 +22,7 @@ $('survey').addEventListener('submit', (e) => {
         const loggedIn = 'false'
         console.log(res)
         if (res != null) {
-            const loggedIn = res["isLoggedIn"]
+            loggedIn = res["isLoggedIn"]
         }
 
         if (loggedIn == "true") {
