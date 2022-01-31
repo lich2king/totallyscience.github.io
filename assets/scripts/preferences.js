@@ -31,6 +31,7 @@ $('survey').addEventListener('submit', (e) => {
         } else {
             document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profile.html'>Click here</a>"
         }
+        console.log(loggedIn)
     });
 
 })
