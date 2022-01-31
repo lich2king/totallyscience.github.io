@@ -22,7 +22,9 @@ $('survey').addEventListener('submit', (e) => {
         const loggedIn = 'false'
         console.log(res)
         if (res != null) {
+            console.log("into the void")
             loggedIn = res["isLoggedIn"]
+            console.log("outta the void")
         }
         console.log(loggedIn)
         if (loggedIn == "true") {
