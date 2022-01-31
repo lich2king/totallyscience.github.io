@@ -18,16 +18,12 @@ $('survey').addEventListener('submit', (e) => {
     console.log("here")
     fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
-        console.log(res["isLoggedIn"])
         let loggedIn = false
-        console.log(res)
         if (res != null) {
-            console.log("into the void")
-            console.log(res["isLoggedIn"])
             loggedIn = res["isLoggedIn"]
-            console.log("outta the void")
+        } else {
+            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profile.html'>Click here</a>"
         }
-        console.log(loggedIn)
         if (loggedIn == "true") {
             let websiteEntered = websiteInput.value
             let themeEntered = themeInput.value
