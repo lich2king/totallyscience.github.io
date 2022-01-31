@@ -3,6 +3,12 @@ const themeInput = $('theme')
 const saveBtn = $('save-button')
 const disguiseInput = $('disguise')
 
+var getUrl = window.location;
+var baseUrl = getUrl.host;
+if (baseUrl.includes("github")) {
+    baseUrl = 'totallyscience.co'
+}
+
 websiteInput.value = localStorage.getItem('website')
 themeInput.value = localStorage.getItem('theme')
 disguiseInput.value = localStorage.getItem('disguise')
