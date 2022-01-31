@@ -19,7 +19,7 @@ $('survey').addEventListener('submit', (e) => {
     fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
         console.log(res["isLoggedIn"])
-        const loggedIn = false
+        let loggedIn = false
         console.log(res)
         if (res != null) {
             console.log("into the void")
