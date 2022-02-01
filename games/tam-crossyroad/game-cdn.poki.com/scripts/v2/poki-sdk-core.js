@@ -5057,7 +5057,7 @@
                     message: JSON.stringify(t.reason)
                 })
             };
-        "bd6bdd9e-33a9-11ea-a08a-acde48001122" === kt.gameId && (["EventTarget", "Window", "Node", "ApplicationCache", "AudioTrackList", "ChannelMergerNode", "CryptoOperation", "EventSource", "FileReader", "HTMLUnknownElement", "IDBDatabase", "IDBRequest", "IDBTransaction", "KeyOperation", "MediaController", "MessagePort", "ModalWindow", "Notification", "SVGElementInstance", "Screen", "TextTrack", "TextTrackCue", "TextTrackList", "WebSocket", "WebSocketWorker", "Worker", "XMLHttpRequest", "XMLHttpRequestEventTarget", "XMLHttpRequestUpload"].forEach((function(t) {
+        "bd6bdd9e-33a9-11ea-a08a-acde48001122" === kt.gameId && (["EventTarget", "Window", "Node", "ApplicationCache", "AudioTrackList", "ChannelMergerNode", "CryptoOperation", "EventSource", "FileReader", "HTMLUnknownElement", "IDBDatabase", "IDBRequest", "IDBTransaction", "KeyOperation", "MediaController", "MessagePort", "ModalWindow", "Notification", "SVGElementInstance", "Screen", "TextTrack", "TextTrackCue", "TextTrackList", "Webket", "WebSocketWorker", "Worker", "XMLHttpRequest", "XMLHttpRequestEventTarget", "XMLHttpRequestUpload"].forEach((function(t) {
             return n = t, void((e = window[n] && window[n].prototype) && e.hasOwnProperty && e.hasOwnProperty("addEventListener") && (Bt(e, "addEventListener", (function(t) {
                 return function(n, e, i, r) {
                     try {
