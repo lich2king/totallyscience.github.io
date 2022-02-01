@@ -112,6 +112,8 @@
 
 
     function SubmitLogin() {
+        console.log("HI")
+        console.log(baseUrl.includes("github"))
         const user = document.getElementById('username').value;
         const pass = document.getElementById('password').value;
         const errorText = document.getElementById('errorText');
