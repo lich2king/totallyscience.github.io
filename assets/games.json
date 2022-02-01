@@ -944,7 +944,17 @@
         "date_added": "2022-01-31T03:38:27.104Z",
         "developer": "New Eich Games",
         "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
+    },
+    "Crossy Road": {
+        "description": "",
+        "image": "./assets/game_images/crossyroad.jpg",
+        "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
+        "tags": [""],
+        "date_added": "2022-02-01T13:53:02.135Z",
+        "developer": "Hipster Whale",
+        "iframe_url": "https://tooadvancedforsociety.gq/tam-crossyroad/"
     }
+
 
 
 
