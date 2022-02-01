@@ -175,7 +175,7 @@ input[type='text']:focus {
     margin-bottom: 30px;
     cursor: pointer;
     background-color: var(--accent-color);
-    color: var(--dark-color);
+    color: var(--light-color);
     border: 2px;
     border-radius: 10px;
     font-family: 'Spline Sans', sans-serif;

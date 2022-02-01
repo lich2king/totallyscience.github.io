@@ -518,9 +518,9 @@
         "image": "./assets/game_images/minecraft.png",
         "controls": "[WASD] - move\n[Move Mouse] - look around",
         "tags": [""],
-        "date_added": "2022-01-31T03:38:27.104Z",
+        "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Markus Persson",
-        "iframe_url": "https://minecraftts.hackedzach.repl.co/"
+        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/minecraft/"
     },
     "Golf Blast": {
         "description": "Get the ball in the hole in as little swings possible.",
@@ -891,15 +891,6 @@
         "developer": "Rkn_dev",
         "iframe_url": "./games/DogeMiner-main/DogeMiner-main/index.html"
     },
-    "Death Run 3D": {
-        "description": "An extremely fast game for true skillers only. If you love hardcore games, this game is the right for you.",
-        "image": "./assets/game_images/deathrun3d.jpg",
-        "controls": "[Arrow keys] - move",
-        "tags": ["hard"],
-        "date_added": "2022-01-23T17:31:14.954Z",
-        "developer": "3kh0",
-        "iframe_url": "./games/death-run-3d-main/death-run-3d-main/index.html"
-    },
     "Stack Bump 3D": {
         "description": "Shoot the tower to make it disappear until the last block while avoiding the black area.",
         "image": "./assets/game_images/stackbump.png",
@@ -934,7 +925,7 @@
         "tags": ["2", "car"],
         "date_added": "2022-01-29T22:13:58.428Z",
         "developer": "2PlayerGames",
-        "iframe_url": "https: //grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/805200638580542612/pocket-league.html"
+        "iframe_url": "https://grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/805200638580542612/pocket-league.html"
     },
     "Fall Boys": {
         "description": "An online party game in a free-for-all. Struggle through round after round of escalating chaos.",
@@ -954,6 +945,7 @@
         "developer": "New Eich Games",
         "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
     }
+
 
 
 
