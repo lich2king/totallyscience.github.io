@@ -30,9 +30,11 @@
 
     <style>
         button {
+            margin-left: 50%;
+            transform: translate(-50%);
             cursor: pointer;
             background-color: var(--accent-color);
-            color: var(--light-color);
+            color: var(--dark-color);
             border: 2px;
             border-radius: 10px;
             font-family: 'Spline Sans', sans-serif;
@@ -44,18 +46,33 @@
             padding-bottom: 1%;
         }
         
-        #highscores {
-            border: none;
-            width: 100%;
-            margin-top: 10px;
-            height: 812px;
-            padding-bottom: 5vh;
-        }
-        
-        @media (max-width: 600px) {
+        @media (max-width: 675px) {
             button {
                 margin-top: 110px;
             }
+            table {
+                width: 90% !important;
+                margin-left: 5% !important;
+            }
+        }
+
+        table {
+            font-family: 'Rubik';
+            border: 1px solid var(--dark-color);
+            width: 60%;
+            margin-top: 10px;
+            margin-left: 20%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid var(--dark-color);
+            color: var(--dark-color);
+        }
+        th {
+            border: 1px solid var(--dark-color);
+            color: var(--dark-color);
+            font-size: 20pt;
+            background-color: var(--accent-color);
         }
     </style>
     <!--Google Adsense-->
@@ -83,15 +100,64 @@
                     </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
-    <div width="100%" style="text-align: center;">
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfxzuusvWg0CSONtXP_8-tQ0J6vofG4EXHFNmZAmBlCojPdhA/viewform');">Submit a Highscore</button>
-        <iframe id="highscores" src="leaderboard-table.html"></iframe>
-    </div>
+    <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfxzuusvWg0CSONtXP_8-tQ0J6vofG4EXHFNmZAmBlCojPdhA/viewform');">Submit a Highscore</button>
+    <table id="scores">
+        <tr>
+            <th>Game</th>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+    </table>
+
+    <script>
+        const scoresDiv = document.getElementById('scores')
+        const scores = [
+            '<tr><td>Drift Boss</td><td>Elijah Karmenzind</td><td>43,331</td></tr>',
+            '<tr><td>Tanuki Sunset</td><td>Lincoln</td><td>1,266,800</td></tr>',
+            '<tr><td>Doodle Jump</td><td>Caleb Johnson</td><td>19,880</td></tr>',
+            '<tr><td>Rolling Vortex</td><td>Della</td><td>2,442</td></tr>',
+            '<tr><td>Stack</td><td>Vincent</td><td>691</td></tr>',
+            '<tr><td>Mini Golf</td><td>@PoogleFuzz aka Aiden Allen</td><td>114,888</td></tr>',
+            '<tr><td>Flappy Bird</td><td>@connorb460 aka Connor</td><td>116</td></tr>',
+            '<tr><td>Slope</td><td>Better than that kid</td><td>3,345</td></tr>',
+            '<tr><td>2048</td><td>dora the explorer</td><td>29,140</td></tr>',
+            '<tr><td>Orcs VS Elves</td><td>Nuh</td><td>6,667</td></tr>',
+            '<tr><td>Jetpack Joyride</td><td>Mr.Wolfe</td><td>5,651</td></tr>',
+            '<tr><td>Pac Man</td><td>Iamtrex1</td><td>47,920</td></tr>',
+            '<tr><td>Galactic Wars</td><td>JamyTheMan</td><td>5,255</td></tr>',
+            '<tr><td>Tetris</td><td>@AydenH87</td><td>215,490</td></tr>',
+            '<tr><td>Restaurant Simulator</td><td>dylan</td><td>26,240</td></tr>',
+            '<tr><td>Street fighter</td><td>Jack Erickson</td><td>2,058,000</td></tr>',
+            '<tr><td>Drift Hunters</td><td>Owen</td><td>10,009,630</td></tr>',
+            '<tr><td>Soccer Free Kicks</td><td>Jacob Schenning</td><td>4,500</td></tr>',
+            '<tr><td>Stunt Simulator</td><td>StinkyBoot10</td><td>321,121</td></tr>',
+            '<tr><td>Uno</td><td>Lex + Eso</td><td>100,000</td></tr>',
+            '<tr><td>Connect 4</td><td>G smith</td><td>40,966</td></tr>',
+            '<tr><td>Geometry Dash</td><td>@bangwanzwastaken</td><td>984</td></tr>',
+            '<tr><td>Reaction Time Test</td><td>cole</td><td>272</td></tr>',
+            '<tr><td>Void City</td><td>@sharkbait200060</td><td>1,124</td></tr>',
+            '<tr><td>Stack Ball</td><td>PeanutB</td><td>1,381</td></tr>',
+            '<tr><td>Friday Night Funkin</td><td>Jonas S</td><td>329,720</td></tr>',
+            '<tr><td>Worlds Hardest Game</td><td>Max shukat</td><td>99 deaths</td></tr>',
+            '<tr><td>College 2048</td><td>Noah</td><td>35,788</td></tr>',
+            '<tr><td>Paper.io</td><td>XS_Assass1N</td><td>507</td></tr>',
+            '<tr><td>Retro Bowl</td><td>Samuel scott</td><td>46</td></tr>',
+            '<tr><td>Cube Dodge</td><td>Jayce</td><td>503,550</td></tr>',
+            '<tr><td>FNAF 3</td><td>Trenton Schellinger</td><td>Night 6</td></tr>',
+            '<tr><td>Bubble Popper</td><td>Caden S</td><td>75,820</td></tr>',
+            '<tr><td>Ball Blast</td><td>RL Kore</td><td>188,868</td></tr>',
+            '<tr><td>Tunnel Rush</td><td>Lawson</td><td>7,121</td></tr>',
+            '<tr><td>Web Slinger</td><td>CLovich</td><td>227m</td></tr>'
+        ];
+
+        for (score in scores) {
+            scoresDiv.innerHTML += scores[score];
+        }
+    </script>
 </body>
 
 </html>
