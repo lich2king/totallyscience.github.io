@@ -491,9 +491,9 @@
         "image": "./assets/game_images/run3.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
-        "date_added": "2022-01-31T03:38:27.104Z",
+        "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Joseph Cloutier",
-        "iframe_url": "./games/run32/index.html"
+        "iframe_url": "./games/run3/index.html"
     },
     "Snake": {
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
