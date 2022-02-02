@@ -747,15 +747,6 @@
         "developer": "JustPlay",
         "iframe_url": "https://ejvd3326248pklq0mtj313irgbc2vsrb-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s035r8h4/1v1.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=544c660bc8b16c1d&libs=core&mid=172&parent=https://sites.google.com/site/unblockedgames66ez/1v1-lol#st=e%3DAIHE3cBK9D0UGibwSQF2F64MR8cb4pzmPVFPpm9x2iU1OmvV3wfrHm9F2stu5dMRRYLHGsmiZQNreywjA%252F5m1pl9Ovr49lxTSbekq%252F58DGx8Fju5Kybmy15YlmhPX4edPMPIxnzqTss%252F%26c%3Denterprise&rpctoken=-1798097197484458310"
     },
-    "Fireboy and Water Girl 1": {
-        "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
-        "image": "./assets/game_images/fireboyandwatergirl.jpeg",
-        "controls": "[Arrow Keys] - move fireboy\n[WASD] - move watergirl",
-        "tags": ["2"],
-        "date_added": "2022-01-13T03:19:02.226Z",
-        "developer": "KiZi",
-        "iframe_url": "https://rawcdn.githack.com/Abnumality/cdn/3db3fa1b2a3df7f266985f3a7557011ac9c4844f/fireboy-watergirl-in-the-forest-temple/index.html"
-    },
     "Fall Guys": {
         "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
         "image": "./assets/game_images/fallguys.png",
@@ -944,7 +935,17 @@
         "date_added": "2022-01-31T03:38:27.104Z",
         "developer": "New Eich Games",
         "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
+    },
+    "Crossy Road": {
+        "description": "8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
+        "image": "./assets/game_images/crossyroad.jpg",
+        "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
+        "tags": [""],
+        "date_added": "2022-02-02T01:28:28.388Z",
+        "developer": "Hipster Whale",
+        "iframe_url": "./games/tam-crossyroad/index.html"
     }
+
 
 
 
