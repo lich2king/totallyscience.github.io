@@ -5,7 +5,7 @@ $password = "Totally_accounts4321";
 $database = "u483325885_accounts";
 
 $user = htmlspecialchars($_GET["username"]);
-$pass = htmlspecialchars($_GET["password"]);
+$step = htmlspecialchars($_GET["step"]);
 
 
 // Create connection
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-function sendEmailConfirm() {
+if ($step == 1) {
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -35,7 +35,6 @@ function sendEmailConfirm() {
             echo "The email message was not sent.";
         }
     }
-    $mysqli -> close();
 }
 ?>
 
@@ -97,18 +96,18 @@ function sendEmailConfirm() {
 
     <div style="padding-top: 90px;"></div>
 
-    <form id="survey" action="javascript:submitNewPassword()">
+    <form id="survey" action="javascript:sendEmailConfirm()">
         <div>
             <label for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
         </div>
 
-        <div>
+        <div style="display: none;">
             <label for="password">New Password</label><br>
             <input type='password' id='password' name='password' placeholder='**********'><br>
         </div>
 
-        <div>
+        <div style="display: none;">
             <label for="password">Confirm New Password</label><br>
             <input type='password' id='confirmPassword' name='password' placeholder='**********'><br>
         </div>
@@ -134,9 +133,8 @@ function sendEmailConfirm() {
         }
     });
 
-    function submitNewPassword() {
+    function sendEmailConfirm() {
         const user = document.getElementById('username').value;
-        const pass = document.getElementById('password').value;
         const confirmPass = document.getElementById('confirmPassword').value;
         const errorText = document.getElementById('errorText');
 
@@ -153,7 +151,7 @@ function sendEmailConfirm() {
             return;
         }
 
-        fetch(`./changepassword.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+        fetch(`./changepassword.php?username=${user}&step=1`).then((response) => response.text()).then((res) => {
             if (res.includes('Success')) {
                 //success now show confirmation box
             }
