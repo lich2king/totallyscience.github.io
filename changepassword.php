@@ -1,3 +1,43 @@
+<?php
+$servername = "localhost";
+$username = "u483325885_profile";
+$password = "Totally_accounts4321";
+$database = "u483325885_accounts";
+
+$user = htmlspecialchars($_GET["username"]);
+$step = htmlspecialchars($_GET["step"]);
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+  
+// Check connection
+if ($conn->connect_error) {
+  die("connection failed"); //. $conn->connect_error);
+}
+
+if ($step == 1) {
+    if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
+    {
+        $row = $userresult -> fetch_row();
+    
+        $from = "help@totallyscience.co";
+        $to = $row[1];
+        $subject = "Totally Science Change Password Confirmation";
+        $rand = rand(10000,99999);
+        $message = "Your confirmation code is " . $rand;
+        $headers = "From:" . $from;
+    
+        if (mail($to, $subject, $message, $headers)) {
+            // email send client should show confirmation box
+            echo "Success The email message was sent!";
+        } else {
+            echo "The email message was not sent.";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,18 +96,18 @@
 
     <div style="padding-top: 90px;"></div>
 
-    <form id="survey" action="javascript:submitNewPassword()">
+    <form id="survey" action="javascript:sendEmailConfirm()">
         <div>
             <label for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
         </div>
 
-        <div>
+        <div style="display: none;">
             <label for="password">New Password</label><br>
             <input type='password' id='password' name='password' placeholder='**********'><br>
         </div>
 
-        <div>
+        <div style="display: none;">
             <label for="password">Confirm New Password</label><br>
             <input type='password' id='confirmPassword' name='password' placeholder='**********'><br>
         </div>
@@ -93,26 +133,16 @@
         }
     });
 
-    function submitNewPassword() {
+    function sendEmailConfirm() {
         const user = document.getElementById('username').value;
-        const pass = document.getElementById('password').value;
-        const confirmPass = document.getElementById('confirmPassword').value;
         const errorText = document.getElementById('errorText');
 
         if (user == null || user == '') {
             errorText.innerText = 'Username cannot be empty';
             return;
         }
-        if (pass == null || pass == '' || confirmPass == null || confirmPass == '') {
-            errorText.innerText = 'Password cannot be empty';
-            return;
-        }
-        if (confirmPass != pass) {
-            errorText.innerText = 'Passwords do not match';
-            return;
-        }
 
-        fetch(`https://totallyscience.co/assets/php/changepassword.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+        fetch(`./changepassword.php?username=${user}&step=1`).then((response) => response.text()).then((res) => {
             if (res.includes('Success')) {
                 //success now show confirmation box
             }
@@ -121,6 +151,17 @@
 
 
     /*
+        const confirmPass = document.getElementById('confirmPassword').value;
+        const pass = document.getElementById('password').value;
+
+    if (pass == null || pass == '' || confirmPass == null || confirmPass == '') {
+            errorText.innerText = 'Password cannot be empty';
+            return;
+        }
+        if (confirmPass != pass) {
+            errorText.innerText = 'Passwords do not match';
+            return;
+        }
 
     function SubmitLogin() {
         const user = document.getElementById('username').value;
