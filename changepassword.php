@@ -135,19 +135,10 @@ if ($step == 1) {
 
     function sendEmailConfirm() {
         const user = document.getElementById('username').value;
-        const confirmPass = document.getElementById('confirmPassword').value;
         const errorText = document.getElementById('errorText');
 
         if (user == null || user == '') {
             errorText.innerText = 'Username cannot be empty';
-            return;
-        }
-        if (pass == null || pass == '' || confirmPass == null || confirmPass == '') {
-            errorText.innerText = 'Password cannot be empty';
-            return;
-        }
-        if (confirmPass != pass) {
-            errorText.innerText = 'Passwords do not match';
             return;
         }
 
@@ -160,6 +151,17 @@ if ($step == 1) {
 
 
     /*
+        const confirmPass = document.getElementById('confirmPassword').value;
+        const pass = document.getElementById('password').value;
+
+    if (pass == null || pass == '' || confirmPass == null || confirmPass == '') {
+            errorText.innerText = 'Password cannot be empty';
+            return;
+        }
+        if (confirmPass != pass) {
+            errorText.innerText = 'Passwords do not match';
+            return;
+        }
 
     function SubmitLogin() {
         const user = document.getElementById('username').value;
