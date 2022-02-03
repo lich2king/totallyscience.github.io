@@ -229,16 +229,6 @@
         "iframe_url": "https://scratch.mit.edu/projects/10128407/embed"
     },
 
-    "Pizza Party": {
-        "description": "Run a pizza shop that has lots of customers coming in. Quickly make their pizza and serve them in a timely fashion.",
-        "image": "./assets/game_images/pizzaparty.jpeg",
-        "controls": "Click and drag with the mouse",
-        "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "Hooda Math",
-        "iframe_url": "https://www.hoodamath.com/mobile/games/pizza-party/game.html?nocheckorient=1"
-    },
-
     "8Ball Pool": {
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./assets/game_images/pool.jpeg",
@@ -248,27 +238,6 @@
         "developer": "isgames",
         "iframe_url": "https://isgames.github.io/8ball/"
     },
-
-    "Restaurant Simulator": {
-        "description": "Ever wondered what it's like running a restaurant? Now you can try it out!",
-        "image": "./assets/game_images/restaurant.jpeg",
-        "controls": "Click and drag with the mouse",
-        "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "Hooda Math",
-        "iframe_url": "https://www.hoodamath.com/mobile/games/open-restaurant/game.html?nocheckorient=1"
-    },
-
-    "Robots No Wheels": {
-        "description": "Puzzle game where your have limited moves to put each robot on a button.",
-        "image": "./assets/game_images/robots.jpeg",
-        "controls": "[Tab] - Switch Robot\n[Arrow Keys] - Move",
-        "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "Math Playground",
-        "iframe_url": "https://www.mathplayground.com/mobile_slydrs/index.html"
-    },
-
     "Rolling Vortex": {
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/rollingvortex.jpeg",
@@ -294,9 +263,9 @@
         "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
         "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
+        "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Rob Kay",
-        "iframe_url": "https://sloped.yodacode.repl.co/ubgo/aHR0cHM6Ly9yYXdjZG4uZ2l0aGFjay5jb20=/scheng123321/tmm-html5-cdn1/master/slope/index.html"
+        "iframe_url": "./games/slope/index.html"
     },
 
     "Soccer Free Kicks": {
@@ -502,16 +471,7 @@
         "tags": ["mobile"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Google",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/snake/"
-    },
-    "Pac Man": {
-        "description": "Action maze chase game where you run from ghosts while eating dots.",
-        "image": "./assets/game_images/pacman.png",
-        "controls": "[Arrow Keys] - move",
-        "tags": ["mobile"],
-        "date_added": "2022-01-04T15:15:33.894Z",
-        "developer": "Toshio Kai",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/pacman/"
+        "iframe_url": "https://ubcdn.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/snake/"
     },
     "Minecraft": {
         "description": "Build whatever you can imagine in this open world game.",
@@ -520,7 +480,7 @@
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Markus Persson",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/minecraft/"
+        "iframe_url": "https://ubcdn.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/minecraft/"
     },
     "Golf Blast": {
         "description": "Get the ball in the hole in as little swings possible.",
@@ -900,15 +860,6 @@
         "developer": "Josh Wardle",
         "iframe_url": "https://www.wordleunlimited.com/"
     },
-    "Kirka.io": {
-        "description": "A multiplayer online slow-paced competitive FPS in the browser. Level-up, win skins & rewards!",
-        "image": "./assets/game_images/kirka.jpg",
-        "controls": "[WASD] - move\n[Click] - shoot",
-        "tags": ["multiplayer"],
-        "date_added": "2022-01-29T03:14:38.409Z",
-        "developer": "Kirka",
-        "iframe_url": "https://totallyunlocked.hackedzach.repl.co/go/hvtr%3A-%2Fiipkc.ko-/"
-    },
     "Rocket League": {
         "description": "A fun car soccer 3D game that can be played 1 and 2 player.",
         "image": "./assets/game_images/rocketleague.jpeg",
@@ -944,19 +895,16 @@
         "date_added": "2022-02-02T01:28:28.388Z",
         "developer": "Hipster Whale",
         "iframe_url": "./games/tam-crossyroad/index.html?world=space"
+    },
+    "Subway Surfers": {
+        "description": "A classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.",
+        "image": "./assets/game_images/subwaysurfers.jpeg",
+        "controls": "[Arrow Keys] - move\n[Space] - use hoverboard",
+        "tags": [""],
+        "date_added": "2022-02-03T00:03:23.213Z",
+        "developer": "Skyflyer",
+        "iframe_url": "./games/surfers2/index.html"
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
