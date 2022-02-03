@@ -900,15 +900,6 @@
         "developer": "Josh Wardle",
         "iframe_url": "https://www.wordleunlimited.com/"
     },
-    "Kirka.io": {
-        "description": "A multiplayer online slow-paced competitive FPS in the browser. Level-up, win skins & rewards!",
-        "image": "./assets/game_images/kirka.jpg",
-        "controls": "[WASD] - move\n[Click] - shoot",
-        "tags": ["multiplayer"],
-        "date_added": "2022-01-29T03:14:38.409Z",
-        "developer": "Kirka",
-        "iframe_url": "https://totallyunlocked.hackedzach.repl.co/go/hvtr%3A-%2Fiipkc.ko-/"
-    },
     "Rocket League": {
         "description": "A fun car soccer 3D game that can be played 1 and 2 player.",
         "image": "./assets/game_images/rocketleague.jpeg",
