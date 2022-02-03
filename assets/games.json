@@ -263,9 +263,9 @@
         "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
         "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
+        "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Rob Kay",
-        "iframe_url": "https://web.archive.org/web/20181213135805id_/https://storage-cf.y8.com/y8-studio/unity/joll/slope/"
+        "iframe_url": "./games/slope/index.html"
     },
 
     "Soccer Free Kicks": {
