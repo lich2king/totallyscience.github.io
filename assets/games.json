@@ -948,7 +948,7 @@
     "Subway Surfers": {
         "description": "A classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.",
         "image": "./assets/game_images/subwaysurfers.jpeg",
-        "controls": "[Arrow Keys] - move",
+        "controls": "[Arrow Keys] - move\n[Space] - use hoverboard",
         "tags": [""],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Skyflyer",
