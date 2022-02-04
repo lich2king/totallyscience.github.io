@@ -10,6 +10,8 @@ $step = htmlspecialchars($_GET["step"]);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
+
+$code = null;
   
 // Check connection
 if ($conn->connect_error) {
@@ -24,8 +26,8 @@ if ($step == 1) {
         $from = "help@totallyscience.co";
         $to = $row[1];
         $subject = "Totally Science Change Password Confirmation";
-        $rand = rand(10000,99999);
-        $message = "Your confirmation code is " . $rand;
+        $code = rand(10000,99999);
+        $message = "Your confirmation code is " . $code;
         $headers = "From:" . $from;
     
         if (mail($to, $subject, $message, $headers)) {
@@ -98,7 +100,7 @@ if ($step == 1) {
 
     <form id="survey" action="javascript:sendEmailConfirm()">
         <div>
-            <label for="username">Username</label><br>
+            <label id="usertext" for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
         </div>
 
@@ -143,10 +145,16 @@ if ($step == 1) {
         }
 
         fetch(`./changepassword.php?username=${user}&step=1`).then((response) => response.text()).then((res) => {
+            console.log(res)
             if (res.includes('Success')) {
-                //success now show confirmation box
+                document.getElementById('usertext').innerText = 'Confirmation Code From Email';
+                document.getElementById('survey').action = 'javascript:submitConfirmCode()';
             }
         });
+    }
+
+    function submitConfirmCode() {
+        
     }
 
 
