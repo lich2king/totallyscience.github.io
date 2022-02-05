@@ -205,10 +205,10 @@ else if ($step == 3) {
         }
 
         fetch(`./changepassword.php?password=${pass}&step=3`).then((response) => response.text()).then((res) => {
+            console.log(res);
             if (res.includes('success')) {
-                location.href = '/profile.html'
+                //location.href = '/profile.html'
             } else {
-                console.log(res);
             }
         });
     }
