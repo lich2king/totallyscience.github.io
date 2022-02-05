@@ -174,7 +174,7 @@ else if ($step == 3) {
         const code = document.getElementById('username').value;
         const errorText = document.getElementById('errorText');
 
-        if (user == null || user == '') {
+        if (code == null || code == '') {
             errorText.innerText = 'Code cannot be empty';
             return;
         }
