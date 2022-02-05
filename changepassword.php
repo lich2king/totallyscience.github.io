@@ -165,6 +165,7 @@ else if ($step == 3) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
+                document.getElementById('username').placeholder = '*****';
             }
         });
     }
