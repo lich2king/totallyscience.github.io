@@ -55,7 +55,7 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     }
 }
 else{
-    echo("Username or Password is Incorrect");
+    echo("Username or Password is Incorrect.");
 }
 
 /*if($userresult->num_rows == 0) {
