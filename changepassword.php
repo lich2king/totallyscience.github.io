@@ -162,7 +162,7 @@ else if ($step == 3) {
         }
 
         fetch(`./changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
-            if (res.includes('success')) {
+            if (res.startsWith('success')) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
@@ -181,7 +181,7 @@ else if ($step == 3) {
         }
 
         fetch(`./changepassword.php?code=${code}&step=2`).then((response) => response.text()).then((res) => {
-            if (res.includes('success')) {
+            if (res.startsWith('success')) {
                 document.getElementById('usertext').style.display = 'none';
                 document.getElementById('username').style.display = 'none';
                 document.getElementById('div1').style.display = '';
@@ -208,9 +208,11 @@ else if ($step == 3) {
         }
 
         fetch(`./changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
-            console.log(res);
-            if (res.includes('success')) {
-                //location.href = '/profile.html';
+            if (res.startsWith('success')) {
+                location.href = '/profile.html';
+            } else {
+                errorText.innerText = 'error changing password';
+                location.reload();
             }
         });
     }
