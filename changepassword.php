@@ -153,7 +153,7 @@ else if ($step == 3) {
     });
 
     function sendEmailConfirm() {
-        const username = document.getElementById('username').value;
+        username = document.getElementById('username').value;
         const errorText = document.getElementById('errorText');
 
         if (username == null || username == '') {
