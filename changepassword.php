@@ -10,7 +10,6 @@ $step = htmlspecialchars($_GET["step"]);
 $conn = new mysqli($servername, $username, $password, $database);
 
 $code = null;
-$user = null;
   
 // Check connection
 if ($conn->connect_error) {
@@ -19,7 +18,7 @@ if ($conn->connect_error) {
 
 if ($step == 1) {
     $user = htmlspecialchars($_GET["username"]);
-    
+
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -47,6 +46,7 @@ else if ($step == 2) {
     }
 }
 else if ($step == 3) {
+    $user = htmlspecialchars($_GET["username"]);
     $pass = password_hash(htmlspecialchars($_GET["password"]), PASSWORD_DEFAULT);
 
     if ($conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
@@ -140,6 +140,7 @@ else if ($step == 3) {
 
 
 <script>
+    let username;
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)
         const loggedIn = 'false'
@@ -152,15 +153,15 @@ else if ($step == 3) {
     });
 
     function sendEmailConfirm() {
-        const user = document.getElementById('username').value;
+        const username = document.getElementById('username').value;
         const errorText = document.getElementById('errorText');
 
-        if (user == null || user == '') {
+        if (username == null || username == '') {
             errorText.innerText = 'Username cannot be empty';
             return;
         }
 
-        fetch(`./changepassword.php?username=${user}&step=1`).then((response) => response.text()).then((res) => {
+        fetch(`./changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
             if (res.includes('success')) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
@@ -206,10 +207,10 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`./changepassword.php?password=${pass}&step=3`).then((response) => response.text()).then((res) => {
+        fetch(`./changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             console.log(res);
             if (res.includes('success')) {
-                //location.href = '/profile.html'
+                //location.href = '/profile.html';
             }
         });
     }
