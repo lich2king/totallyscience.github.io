@@ -11,7 +11,6 @@ $user = htmlspecialchars($_GET["username"]);
 $conn = new mysqli($servername, $username, $password, $database);
 
 $code = null;
-$user = null;
   
 // Check connection
 if ($conn->connect_error) {
