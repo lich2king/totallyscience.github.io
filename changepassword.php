@@ -8,8 +8,6 @@ $step = htmlspecialchars($_GET["step"]);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
-
-$code = null;
   
 // Check connection
 if ($conn->connect_error) {
@@ -29,6 +27,8 @@ if ($step == 1) {
         $code = rand(10000,99999);
         $message = "Your confirmation code is " . $code;
         $headers = "From:" . $from;
+
+        $conn->query("UPDATE AccountsTable SET code = '$code' WHERE Username = '$user'");
     
         if (mail($to, $subject, $message, $headers)) {
             // email send client should show confirmation box
@@ -39,10 +39,17 @@ if ($step == 1) {
     }
 }
 else if ($step == 2) {
-    $subCode = htmlspecialchars($_GET["code"]);
+    if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
+    {
+        $row = $userresult -> fetch_row();
     
-    if ($code == $subCode) {
-        echo 'success';
+        $code = $row[4];
+
+        $subCode = htmlspecialchars($_GET["code"]);
+    
+        if ($code == $subCode) {
+            echo 'success';
+        }
     }
 }
 else if ($step == 3) {
