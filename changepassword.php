@@ -120,12 +120,12 @@ else if ($step == 3) {
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
         </div>
 
-        <div style="display: none;">
+        <div id="div2" style="display: none;">
             <label for="password">New Password</label><br>
             <input type='password' id='password' name='password' placeholder='**********'><br>
         </div>
 
-        <div style="display: none;">
+        <div id="div1" style="display: none;">
             <label for="password">Confirm New Password</label><br>
             <input type='password' id='confirmPassword' name='password' placeholder='**********'><br>
         </div>
@@ -181,8 +181,10 @@ else if ($step == 3) {
 
         fetch(`./changepassword.php?code=${code}&step=2`).then((response) => response.text()).then((res) => {
             if (res.includes('success')) {
-                document.getElementById('usertext').style.display = '';
-                document.getElementById('username').style.display = '';
+                document.getElementById('usertext').style.display = 'none';
+                document.getElementById('username').style.display = 'none';
+                document.getElementById('div1').style.display = '';
+                document.getElementById('div2').style.display = '';
                 document.getElementById('survey').action = 'javascript:submitNewPassword()';
             } else {
                 document.getElementById('errorText').innerText = 'Code is incorrect';
