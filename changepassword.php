@@ -5,12 +5,12 @@ $password = "Totally_accounts4321";
 $database = "u483325885_accounts";
 
 $step = htmlspecialchars($_GET["step"]);
-$user = htmlspecialchars($_GET["username"]);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 
 $code = null;
+$user = null;
   
 // Check connection
 if ($conn->connect_error) {
@@ -18,6 +18,8 @@ if ($conn->connect_error) {
 }
 
 if ($step == 1) {
+    $user = htmlspecialchars($_GET["username"]);
+    
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -208,7 +210,6 @@ else if ($step == 3) {
             console.log(res);
             if (res.includes('success')) {
                 //location.href = '/profile.html'
-            } else {
             }
         });
     }
