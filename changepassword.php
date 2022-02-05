@@ -4,14 +4,13 @@ $username = "u483325885_profile";
 $password = "Totally_accounts4321";
 $database = "u483325885_accounts";
 
-$user = htmlspecialchars($_GET["username"]);
 $step = htmlspecialchars($_GET["step"]);
-
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 
 $code = null;
+$user = null;
   
 // Check connection
 if ($conn->connect_error) {
@@ -19,6 +18,8 @@ if ($conn->connect_error) {
 }
 
 if ($step == 1) {
+    $user = htmlspecialchars($_GET["username"]);
+
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -32,10 +33,25 @@ if ($step == 1) {
     
         if (mail($to, $subject, $message, $headers)) {
             // email send client should show confirmation box
-            echo "Success The email message was sent!";
+            echo "success";
         } else {
             echo "The email message was not sent.";
         }
+    }
+}
+else if ($step == 2) {
+    $subCode = htmlspecialchars($_GET["code"]);
+    
+    if ($code == $subCode) {
+        echo 'success';
+    }
+}
+else if ($step == 3) {
+    $pass = htmlspecialchars($_GET["password"]);
+
+    if ($userresult = $conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
+    {
+        echo 'success';
     }
 }
 ?>
@@ -145,24 +161,40 @@ if ($step == 1) {
         }
 
         fetch(`./changepassword.php?username=${user}&step=1`).then((response) => response.text()).then((res) => {
-            console.log(res)
-            if (res.includes('Success')) {
+            if (res.includes('success')) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
+                document.getElementById('username').value = '';
             }
         });
     }
 
     function submitConfirmCode() {
-        
+        const code = document.getElementById('username').value;
+        const errorText = document.getElementById('errorText');
+
+        if (user == null || user == '') {
+            errorText.innerText = 'Code cannot be empty';
+            return;
+        }
+
+        fetch(`./changepassword.php?code=${code}&step=2`).then((response) => response.text()).then((res) => {
+            if (res.includes('success')) {
+                document.getElementById('usertext').style.display = 'none';
+                document.getElementById('username').style.display = 'none';
+                document.getElementById('survey').action = 'javascript:submitNewPassword()';
+            } else {
+                document.getElementById('errorText').innerText = 'Code is incorrect';
+            }
+        });
     }
 
-
-    /*
+    function submitNewPassword() {
+        const errorText = document.getElementById('errorText');
         const confirmPass = document.getElementById('confirmPassword').value;
         const pass = document.getElementById('password').value;
 
-    if (pass == null || pass == '' || confirmPass == null || confirmPass == '') {
+        if (pass == null || pass == '' || confirmPass == null || confirmPass == '') {
             errorText.innerText = 'Password cannot be empty';
             return;
         }
@@ -170,6 +202,21 @@ if ($step == 1) {
             errorText.innerText = 'Passwords do not match';
             return;
         }
+
+        fetch(`./changepassword.php?password=${pass}&step=3`).then((response) => response.text()).then((res) => {
+            if (res.includes('success')) {
+                location.href = '/profile.html'
+            } else {
+                // error
+            }
+        });
+    }
+
+
+    /*
+        
+
+    
 
     function SubmitLogin() {
         const user = document.getElementById('username').value;
