@@ -49,7 +49,7 @@ else if ($step == 3) {
 
     if ($conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
     {
-        echo 'success ' . $user;
+        echo $user;
     }
 }
 ?>
@@ -206,10 +206,9 @@ else if ($step == 3) {
 
         fetch(`./changepassword.php?password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.includes('success')) {
-                alert(res);
                 location.href = '/profile.html'
             } else {
-                
+                console.log(res);
             }
         });
     }
