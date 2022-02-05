@@ -49,7 +49,7 @@ else if ($step == 3) {
 
     if ($conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
     {
-        echo 'success';
+        echo 'success ' . $user;
     }
 }
 ?>
@@ -206,35 +206,13 @@ else if ($step == 3) {
 
         fetch(`./changepassword.php?password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.includes('success')) {
+                alert(res);
                 location.href = '/profile.html'
             } else {
-                // error
+                
             }
         });
     }
-
-
-    /*
-        
-
-    
-
-    function SubmitLogin() {
-        const user = document.getElementById('username').value;
-        const pass = document.getElementById('password').value;
-        const errorText = document.getElementById('errorText');
-
-        fetch(`https://totallyscience.co/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
-            if (res == "Success") {
-                errorText.style = "text-align:center; color: green;"
-                errorText.innerText = ("*" + res)
-                window.open('./profile.html', '_self')
-            } else {
-                errorText.innerText = ("*" + res)
-            }
-        });
-    }
-    */
 </script>
 
 </html>
