@@ -116,7 +116,7 @@ function canAccessLink() {
         const prevLink = document.referrer
         if (localStorage.getItem("mainsiteshown") == null && !prevLink.includes("tsmain")) {
             localStorage.setItem("mainsiteshown", "true")
-            window.open("https://tsmain.co/", "_self")
+                //window.open("https://tsmain.co/", "_self")
         } else {
             localStorage.setItem("mainsiteshown", "true")
         }
