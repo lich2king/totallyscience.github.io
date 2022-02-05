@@ -47,7 +47,7 @@ else if ($step == 2) {
     }
 }
 else if ($step == 3) {
-    $pass = htmlspecialchars($_GET["password"]);
+    $pass = password_hash(htmlspecialchars($_GET["password"]), PASSWORD_DEFAULT);
 
     if ($userresult = $conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
     {
