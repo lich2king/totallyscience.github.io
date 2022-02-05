@@ -181,8 +181,8 @@ else if ($step == 3) {
 
         fetch(`./changepassword.php?code=${code}&step=2`).then((response) => response.text()).then((res) => {
             if (res.includes('success')) {
-                document.getElementById('usertext').style.display = 'none';
-                document.getElementById('username').style.display = 'none';
+                document.getElementById('usertext').style.display = '';
+                document.getElementById('username').style.display = '';
                 document.getElementById('survey').action = 'javascript:submitNewPassword()';
             } else {
                 document.getElementById('errorText').innerText = 'Code is incorrect';
