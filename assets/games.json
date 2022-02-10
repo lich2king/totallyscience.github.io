@@ -868,6 +868,15 @@
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Skyflyer",
         "iframe_url": "./games/surfers2/index.html"
+    },
+    "Cookie Clicker": {
+        "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
+        "image": "./assets/game_images/cookieclicker.jpeg",
+        "controls": "Click with the mouse",
+        "tags": ["mobile"],
+        "date_added": "2022-02-10T14:51:17.859Z",
+        "developer": "Julien Thiennot",
+        "iframe_url": "./games/cookie-clicker-main/index.html"
     }
 
 
