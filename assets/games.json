@@ -419,24 +419,6 @@
         "developer": "Puffballs United",
         "iframe_url": "./games/fleecomplex.html"
     },
-    "Cookie Clicker": {
-        "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
-        "image": "./assets/game_images/cookieclicker.jpeg",
-        "controls": "Click with the mouse",
-        "tags": ["mobile"],
-        "date_added": "2022-01-04T15:15:33.894Z",
-        "developer": "Julien Thiennot",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/cookieclicker/"
-    },
-    "Little Alchemy 2": {
-        "description": "Simple crafting game. Start with four basic items and use them to find dinosaurs, unicorns and spaceships!",
-        "image": "./assets/game_images/littlealchemy.png",
-        "controls": "Click and drag with the mouse",
-        "tags": ["mobile"],
-        "date_added": "2022-01-04T15:15:33.894Z",
-        "developer": "Jakub Koziol",
-        "iframe_url": "https://ubgo.yodacode.repl.co/ubgo/aHR0cHM6Ly9saXR0bGVhbGNoZW15Mi5jb20=/"
-    },
     "Appel Platformer": {
         "description": "Simple and fun platformer game. Try to beat levels in record breaking times!",
         "image": "./assets/game_images/appelplatformer.png",
@@ -716,24 +698,6 @@
         "developer": "Tazogogala27",
         "iframe_url": "https://tazogogala27.github.io/run-boys-and-girls/"
     },
-    "Slither.io": {
-        "description": "Become the longest player in the game without exploding!",
-        "image": "./assets/game_images/slitherio.jpg",
-        "controls": "Snake follows the mouse",
-        "tags": ["multiplayer"],
-        "date_added": "2022-01-13T03:19:02.226Z",
-        "developer": "Dazaseal",
-        "iframe_url": "https://alloy-proxy.dazaseal.repl.co/web/_aHR0cDovL3NsaXRoZXIuaW8=_/"
-    },
-    "Agar.io": {
-        "description": "Become the biggest player in the game before getting eaten!",
-        "image": "./assets/game_images/agario.png",
-        "controls": "Blob follows the mouse",
-        "tags": ["multiplayer"],
-        "date_added": "2022-01-13T03:19:02.226Z",
-        "developer": "Dazaseal",
-        "iframe_url": "https://alloy-proxy.dazaseal.repl.co/web/_aHR0cHM6Ly9hZ2FyaW8udHViZQ==_/"
-    },
     "Rooftop Snipers": {
         "description": "A pixel-style shooting game. Shoot famous characters off the roof.",
         "image": "./assets/game_images/rooftopsnipers.jpeg",
@@ -882,7 +846,7 @@
         "description": "Race three others to the extraction point. This is no ordinary race as you can only jump your way to the finish line.",
         "image": "./assets/game_images/getawayshootout.jpg",
         "controls": "PLAYER ONE\n[w] - jump left\n[r] - jump right\n[r] - power-up\n\nPLAYER TWO\n[i] - jump left\n[o] - jump right\n[p] - power-up",
-        "tags": ["2"],
+        "tags": ["2", "multiplayer"],
         "date_added": "2022-01-31T03:38:27.104Z",
         "developer": "New Eich Games",
         "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
