@@ -877,5 +877,15 @@
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Julien Thiennot",
         "iframe_url": "./games/cookie-clicker-main/index.html"
+    },
+    "Vex 5": {
+        "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
+        "image": "./assets/game_images/vex5.jpg",
+        "controls": "[Arrow Keys] - move",
+        "tags": [""],
+        "date_added": "2022-02-10T14:51:17.859Z",
+        "developer": "Gogy Games",
+        "iframe_url": "./games/Vex5/index.html"
     }
+
 }
