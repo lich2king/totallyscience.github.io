@@ -77,5 +77,3 @@ function EnterFullscreen() {
         elem.msRequestFullscreen();
     }
 }
-
-document.getElementById('fullscreenImg').src = `./assets/images/fullscreen-${localStorage.getItem("theme")}.svg`
