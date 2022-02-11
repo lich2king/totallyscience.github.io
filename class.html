@@ -15,12 +15,7 @@
     <script>
         const html = document.getElementsByTagName('head')[0].innerHTML;
         const title = document.getElementsByTagName('title')[0];
-        const indexCss = `<link rel='stylesheet' href='assets/styles/game.css?${new Date().getTime()}'>`;
-        let gameJS = document.createElement("script");
-        gameJS.src = `assets/scripts/load_game.js?${new Date().getTime()}`;
-        gameJS.defer = true;
-        gameJS.async = true;
-        title.insertAdjacentElement('afterend', gameJS);
+        const indexCss = `<link rel='stylesheet' href='assets/styles/class.css?${new Date().getTime()}'>`;
 
         document.getElementsByTagName('head')[0].innerHTML += indexCss;
     </script>
@@ -55,11 +50,10 @@
             <a id="login" href="profile.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
+                </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
@@ -68,7 +62,7 @@
             <iframe class="iframeloader" src="" width="80vw" height="80vw" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
         </div>
 
-        <button onclick="EnterFullscreen()"><img id="fullscreenImg" src="./assets/images/fullscreen-light.svg"></button>
+        <button onclick="enterFullscreen()"><img id="fullscreenImg" src="./assets/images/fullscreen-light.svg"></button>
     </section>
 
     <div align="center">
@@ -105,9 +99,7 @@
     </section>
 
     <script defer src="./assets/scripts/main.js?4"></script>
-    <script>        
-        document.getElementById('fullscreenImg').src = `./assets/images/fullscreen-${localStorage.getItem("theme")}.svg`
-    </script>
+    <script defer src="./assets/scripts/class.js"></script>
 </body>
 
 </html>
