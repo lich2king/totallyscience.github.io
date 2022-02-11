@@ -117,6 +117,10 @@ footer .terms:hover {
     color: white;
 }
 
+#left-footer a:hover {
+    color: var(--accent-color);
+}
+
 #center-image {
     position: absolute;
     left: calc(50%);
