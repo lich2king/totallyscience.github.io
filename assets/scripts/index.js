@@ -63,12 +63,3 @@ const autoSwitch = () => {
 
 switchSlide(slideIndex)
 autoSwitch()
-
-window.addEventListener('load', () => {
-    fetch('./assets/games.json').then((response) => response.json())
-    .then((games) => {
-        const span = document.getElementById('gamescount');
-
-        span.innerHTML = 'We have ' + Object.keys(games).length + ' games and counting.'
-    });
-})
