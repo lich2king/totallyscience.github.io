@@ -1,6 +1,7 @@
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('class')
+const id = urlParams.get('id');
 var getUrl = window.location;
 var baseUrl = getUrl.host;
 if (baseUrl.includes("github")) {
@@ -18,6 +19,10 @@ fetch(`./assets/games.json?date=${new Date().getTime()}`)
         $('controls').innerText = gameData.controls
         $('developer').innerText = `This game was created by ${gameData.developer}.`
         $('game-iframe').src = gameData.iframe_url
+        if (id) {
+            $('game-iframe').src = gameData.iframe_url + '?id=' + id
+            console.log(gameData.iframe_url + '?id=' + id)
+        }
     })
 
 let hasReported = false
