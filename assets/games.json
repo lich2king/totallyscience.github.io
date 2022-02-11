@@ -877,6 +877,15 @@
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Julien Thiennot",
         "iframe_url": "./games/cookie-clicker-main/index.html"
+    },
+    "Scribble.io": {
+        "description": "A free multiplayer drawing and guessing game. Draw and guess words with your friends and people all around the world!",
+        "image": "./assets/game_images/scribbleio.jpg",
+        "controls": "Click and drag with the mouse",
+        "tags": ["2", "multiplayer"],
+        "date_added": "2022-02-11T00:29:57.411Z",
+        "developer": "Ticedev",
+        "iframe_url": "https://backend.moovally.com"
     }
 
 
