@@ -26,7 +26,7 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
             'isLoggedIn' => 'true',
             'username' => $user
         );
-        $cookie_name = 'logintoken';
+        $cookie_name = "logintoken";
         $cookie_value = json_encode($data);
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
         echo("Success");
