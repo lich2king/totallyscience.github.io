@@ -15,10 +15,10 @@ document.getElementById('report-btn').addEventListener('click', () => {
 
     fetch(`https://${baseurl}/assets/php/game_stats.php/?type=reports&name=${gameName}`).then((response) => response.text()).then((text) => {
         if (text.includes('<?php')) {
-            reportBtn.innerText = '?';
+            document.getElementById('report-btn').innerText = '?';
             return;
         }
-        reportBtn.innerText = text;
+        document.getElementById('report-btn').innerText = text;
         hasReported = true;
     })
 });
@@ -28,11 +28,10 @@ window.addEventListener('load', () => {
     fetch(`./assets/games.json?date=${new Date().getTime()}`).then((response) => {
         if (response.ok) {
             return response.json();
-        }
-        else {
+        } else {
             console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
         }
-      }).then((games) => {
+    }).then((games) => {
         const gameData = games[gameName];
         if (gameData == null) window.location.href = '../classes.html';
 
@@ -44,13 +43,13 @@ window.addEventListener('load', () => {
             $('game-iframe').src = gameData.iframe_url + '?id=' + id;
             console.log(gameData.iframe_url + '?id=' + id);
         }
-      }).catch((err) => {
+    }).catch((err) => {
         if (err) console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
     });
-    
+
     fetch(`https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`).then((response) => {
         if (!response.ok) console.log(`cannot fetch https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`);
-      }).catch((err) => {
+    }).catch((err) => {
         if (err) console.log(`cannot fetch https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`);
     });
 });
