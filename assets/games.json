@@ -886,6 +886,17 @@
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Gogy Games",
         "iframe_url": "./games/Vex5/index.html"
+    },
+    "FNAF Sister Location": {
+        "description": "A point-and-click survival horror video game created to fit in the FNAF series.",
+        "image": "./assets/game_images/sisterloco.jpg",
+        "controls": "[Click] - interact\n[w] - move in vent\nMUST TURN VOLUME ON TO HEAR TASKS",
+        "tags": ["horror"],
+        "date_added": "2022-02-10T14:51:17.859Z",
+        "developer": "Codyjax",
+        "iframe_url": "https://scratch.mit.edu/projects/125366612/embed"
     }
+
+
 
 }
