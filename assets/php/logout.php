@@ -1,3 +1,3 @@
 <?php
-    setcookie("logintoken", "", time() - 3600);
+    setcookie("logintoken", "", time() - 3600, "/");
 ?>
