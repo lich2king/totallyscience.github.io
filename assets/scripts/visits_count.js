@@ -1,6 +1,7 @@
 var getUrl = window.location;
 var baseUrl = getUrl.host;
-if (baseUrl.includes("github")) {
+
+if (baseUrl.includes('github') || baseUrl.includes('localhost')) {
     baseUrl = 'totallyscience.co'
 }
 
