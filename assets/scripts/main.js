@@ -26,6 +26,8 @@ var getUrl = window.location;
 var baseUrl = getUrl.host;
 if (baseUrl.includes("github")) {
     document.getElementById('login').style = "display: none;"
+} else if (baseUrl.includes('localhost')) {
+    baseUrl = 'totallyscience.co'
 }
 
 

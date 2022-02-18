@@ -1,5 +1,3 @@
-//const { format } = require("express/lib/response")
-
 // Thank you stack overflow.
 let sortObject = (obj) =>
     Object.keys(obj)
