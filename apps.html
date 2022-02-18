@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Totally Science">
+    <meta property="og:site_name" content="Totally Science">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="The best place for 'Learning Science!'">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
+
+    <title>Totally Science</title>
+
+    <!--Cache Killer-->
+    <script>
+        const title = document.getElementsByTagName('title')[0];
+        // main.js
+        let mainJS = document.createElement("script");
+        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
+        title.insertAdjacentElement('afterend', mainJS);
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="icon" href="assets/images/logo.png">
+
+
+
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            font-family: 'Rubik', sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        div.card {
+            width: 300px;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            position: relative;
+            padding: 20px;
+            transition: 0.2s all;
+        }
+        
+        div.card>h1 {
+            font-family: Rubik, sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-left: 30px;
+            margin-bottom: 5px;
+            text-align: left;
+            color: white;
+        }
+        
+        div.card>h2 {
+            font-family: Rubik, sans-serif;
+            font-size: 16px;
+            margin: 10px;
+            padding-left: 50px;
+            text-align: right;
+            color: white;
+        }
+        
+        button.launch {
+            width: 150px;
+            height: 35px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.2s all;
+            border: none;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 10px;
+            color: white;
+            font-family: Rubik, sans-serif;
+            font-size: 18px;
+            background: #f75dfc;
+            float: right;
+        }
+        
+        div.card.game {
+            height: 96px;
+            padding: 10px;
+            position: relative;
+            padding-left: 85px;
+            cursor: default;
+        }
+        
+        div.card.game>img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: 0.2s all;
+            transform: translate(-20px, -20px);
+            padding: 10px;
+            border-radius: 15px;
+            border: 5px solid #2a2a2a;
+            background: white;
+            width: 100px;
+            height: 100px;
+        }
+        
+        div.card>h1 {
+            margin-left: 0px;
+        }
+        
+        div.card.game:hover {
+            transform: scale(1.05);
+        }
+        
+        div.card.game>button:hover {
+            transform: scale(1.05);
+        }
+        
+        div.card.game>img:hover {
+            transform: translate(-20px, -20px) scale(1.05);
+        }
+        
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+        
+        div#games {
+            max-width: 1100px;
+            display: grid;
+            grid-template-rows: auto;
+            justify-items: center;
+            grid-template-columns: auto auto auto;
+        }
+        
+        div.card.game {
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 1200px) {
+            div#games {
+                max-width: 800px;
+                grid-template-columns: auto auto;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            div#games {
+                max-width: 400px;
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="">Leaderboard</a></div>
+            <div class="nav-button selected"><a href="browser.html">Apps</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
+        </div>
+
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+
+        <div id="rightbar">
+            <a id="login" href="profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+            </a>
+
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <div id="appContainer" align="center">
+        <div id="games">
+            <div class="card game">
+                <img img draggable="false" ondragstart="return false;" src="https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly93d3cudmVjdG9yaWNvLmNvbQ==/wp-content/uploads/2018/02/youtube-red-square.png">
+                <h1>Youtube</h1>
+                <button onclick="window.open('https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/', '_self')" class="launch">Launch</button>
+            </div>
+            <div class="card game">
+                <img img draggable="false" ondragstart="return false;" src="https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly93d3cuZnJlZXBuZ2xvZ29zLmNvbQ==/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png">
+                <h1>Google</h1>
+                <button class="launch">Launch</button>
+            </div>
+            <div class="card game">
+                <img img draggable="false" ondragstart="return false;" src="https://cdn2.iconfinder.com/data/icons/metro-ui-icon-set/512/Reddit.png">
+                <h1>Reddit</h1>
+                <button class="launch">Launch</button>
+            </div>
+            <div class="card game">
+                <img img draggable="false" ondragstart="return false;" src="https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly9leHRlcm5hbC1wcmV2aWV3LnJlZGQuaXQ=/t-S1-9YB32zPWpLqD8vKIWxZztdfJU4Th7BC0thvt3E.png?auto=webp&s=111df9d1901b55516567e2252b411b2f4c74a76f">
+                <h1>Firefox</h1>
+                <button class="launch">Launch</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
