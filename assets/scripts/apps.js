@@ -7,6 +7,9 @@ fetch(`./assets/apps.json?${new Date().getTime()}`)
 
             const appDiv = mk('div')
             appDiv.classList = "card game"
+            appDiv.addEventListener('click', () => {
+                window.location.href = `./app.html?app=${name}`
+            })
 
             const appImage = mk('img')
             appImage.draggable = "false"
