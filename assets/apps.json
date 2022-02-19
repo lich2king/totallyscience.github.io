@@ -2,16 +2,21 @@
     "Youtube": {
         "image": "./assets/images/app_icons/youtube-red-square.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-"
     },
     "Google": {
         "image": "./assets/images/app_icons/google.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F"
     },
     "Firefox": {
         "image": "./assets/images/app_icons/firefox.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "./apps/firefox.html"
+    },
+    "Reddit": {
+        "image": "./assets/images/app_icons/reddit.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Crgdfiv.aoo%2F"
     }
 }
