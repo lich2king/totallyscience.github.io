@@ -14,15 +14,13 @@
     <!--Cache Killer-->
     <script>
         const title = document.getElementsByTagName('title')[0];
-        // main.js
-        let mainJS = document.createElement("script");
-        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-        title.insertAdjacentElement('afterend', mainJS);
+        let appJS = document.createElement("script");
+        appJS.src = `assets/scripts/apps.js?${new Date().getTime()}`;
+        appJS.defer = true;
+        appJS.async = true;
+        title.insertAdjacentElement('beforebegin', appJS);
     </script>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <!--End Cache Killer-->
 
     <link rel="stylesheet" href="assets/styles/main.css">
@@ -143,7 +141,7 @@
             user-drag: none;
         }
         
-        div#games {
+        div#apps {
             max-width: 1100px;
             display: grid;
             grid-template-rows: auto;
@@ -156,14 +154,14 @@
         }
         
         @media (max-width: 1200px) {
-            div#games {
+            div#apps {
                 max-width: 800px;
                 grid-template-columns: auto auto;
             }
         }
         
         @media (max-width: 900px) {
-            div#games {
+            div#apps {
                 max-width: 400px;
                 grid-template-columns: auto;
             }
@@ -179,7 +177,7 @@
             <div class="nav-button"><a href="index.html">Home</a></div>
             <div class="nav-button"><a href="classes.html">Games</a></div>
             <div class="nav-button"><a href="">Leaderboard</a></div>
-            <div class="nav-button selected"><a href="browser.html">Apps</a></div>
+            <div class="nav-button selected"><a href="apps.html">Apps</a></div>
             <div class="nav-button"><a href="chat.html">Chat</a></div>
         </div>
 
@@ -202,29 +200,10 @@
     <br><br><br><br><br><br><br><br><br>
 
     <div id="appContainer" align="center">
-        <div id="games">
-            <div class="card game">
-                <img img draggable="false" ondragstart="return false;" src="https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly93d3cudmVjdG9yaWNvLmNvbQ==/wp-content/uploads/2018/02/youtube-red-square.png">
-                <h1>Youtube</h1>
-                <button onclick="window.open('https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/', '_self')" class="launch">Launch</button>
-            </div>
-            <div class="card game">
-                <img img draggable="false" ondragstart="return false;" src="https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly93d3cuZnJlZXBuZ2xvZ29zLmNvbQ==/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png">
-                <h1>Google</h1>
-                <button class="launch">Launch</button>
-            </div>
-            <div class="card game">
-                <img img draggable="false" ondragstart="return false;" src="https://cdn2.iconfinder.com/data/icons/metro-ui-icon-set/512/Reddit.png">
-                <h1>Reddit</h1>
-                <button class="launch">Launch</button>
-            </div>
-            <div class="card game">
-                <img img draggable="false" ondragstart="return false;" src="https://ubgo.ubgames.xyz/ubgo/aHR0cHM6Ly9leHRlcm5hbC1wcmV2aWV3LnJlZGQuaXQ=/t-S1-9YB32zPWpLqD8vKIWxZztdfJU4Th7BC0thvt3E.png?auto=webp&s=111df9d1901b55516567e2252b411b2f4c74a76f">
-                <h1>Firefox</h1>
-                <button class="launch">Launch</button>
-            </div>
-        </div>
+        <div id="apps"></div>
     </div>
+
+    <script defer src="assets/scripts/main.js?v12"></script>
 </body>
 
 </html>

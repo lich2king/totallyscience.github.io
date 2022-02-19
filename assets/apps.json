@@ -1,0 +1,22 @@
+{
+    "Youtube": {
+        "image": "./assets/images/app_icons/youtube-red-square.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
+    },
+    "Google": {
+        "image": "./assets/images/app_icons/google.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
+    },
+    "Reddit": {
+        "image": "./assets/images/app_icons/reddit.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cucmVkZGl0LmNvbQ==/"
+    },
+    "Firefox": {
+        "image": "./assets/images/app_icons/firefox.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "./apps/firefox.html"
+    }
+}

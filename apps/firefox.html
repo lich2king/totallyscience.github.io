@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta property="og:title" content="Totally Science">
+    <meta property="og:site_name" content="Totally Science">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="The best place for 'Learning Science!'">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
+</head>
+
+<body style="height:100vh; width:100vw; overflow: hidden;">
+    <section id="browser" scroll="no">
+        <div scroll="no" id="browserDiv" style="margin-left: 50%; transform: translate(-50%); width: 100vw; height: 100vh; overflow: hidden;">
+            <div scroll="no" style="width: 100%; height: 100%;">
+                <iframe scroll="no" style="overflow: hidden; position: absolute; top: 0px; left: 0px; width: 200%; height: 100vh; border-radius: 20px;" src="" frameBorder="0" id="game-iframe"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const frame = document.getElementById('game-iframe');
+        let randomNum = Math.floor(Math.random() * 8) + 1;;
+        frame.src = `https://replit.com/@YodaCode/fx-us-${randomNum}?lite=1&outputonly=1`
+    </script>
+</body>
+
+</html>

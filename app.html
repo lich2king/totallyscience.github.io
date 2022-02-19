@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Totally Science">
+    <meta property="og:site_name" content="Totally Science">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="The best place for 'Learning Science!'">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
+
+    <title>Totally Science</title>
+
+    <!--Cache Killer-->
+    <script>
+        const title = document.getElementsByTagName('title')[0];
+        let appJS = document.createElement("script");
+        appJS.src = `assets/scripts/load_app.js?${new Date().getTime()}`;
+        appJS.defer = true;
+        appJS.async = true;
+        title.insertAdjacentElement('beforebegin', appJS);
+    </script>
+    <!--End Cache Killer-->
+
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="icon" href="assets/images/logo.png">
+
+
+
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="">Leaderboard</a></div>
+            <div class="nav-button selected"><a href="apps.html">Apps</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
+        </div>
+
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+
+        <div id="rightbar">
+            <a id="login" href="profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+            </a>
+
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+
+    <div style="overflow: hidden; height: 100vh; width: 100vw;">
+        <iframe id="app_frame" style="overflow: hidden;" width=100% height=100% src=""></iframe>
+    </div>
+
+
+    <script defer src="assets/scripts/main.js?v12"></script>
+</body>
+
+</html>
