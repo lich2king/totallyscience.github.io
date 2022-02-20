@@ -33,5 +33,10 @@
         "image": "./assets/images/app_icons/twitch.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctuivcj.vv-"
+    },
+    "Discord": {
+        "image": "./assets/images/app_icons/discord.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-dksaopd%2Ccmm-arp"
     }
 }
