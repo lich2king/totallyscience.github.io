@@ -892,7 +892,7 @@
         "image": "./assets/game_images/vex4.jpg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
-        "date_added": "2022-02-10T14:51:17.859Z",
+        "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "./games/vex4/index.html"
     },
@@ -901,7 +901,7 @@
         "image": "./assets/game_images/vex3.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": [""],
-        "date_added": "2022-02-10T14:51:17.859Z",
+        "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "./games/vex3/index.html"
     }
