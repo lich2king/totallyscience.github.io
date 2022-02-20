@@ -913,6 +913,15 @@
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "./games/fireboy-and-watergirl-forest-temple/index.html"
+    },
+    "HexGL": {
+        "description": "A futuristic, fast-paced racing game where you control a hovercraft.",
+        "image": "./assets/game_images/hexgl.jpg",
+        "controls": "[Arrow Keys] - turn\n[Up Arrow] - accelerate\n[a] - left brake\n[d] - right brake",
+        "tags": [""],
+        "date_added": "2022-02-20T21:02:01.524Z",
+        "developer": "Kizi",
+        "iframe_url": "./games/hexgl/index.html"
     }
 
 
