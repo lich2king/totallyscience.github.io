@@ -34,7 +34,34 @@
             background: url(./assets/images/loadinggif.gif) center center no-repeat;
             background-size: 5vw;
         }
+        
+        #noCookies {
+            margin-top: 5vh;
+            padding-bottom: 20vh;
+            text-align: center;
+        }
+        
+        #noCookies p {
+            font-size: 2vw;
+            display: block;
+            margin: 0%;
+            padding: 0%;
+        }
+        
+        #noCookies p2 {
+            font-size: 1vw;
+            display: block;
+            padding-bottom: 3vh;
+        }
+        
+        #noCookies img {
+            margin-bottom: 2vh;
+            border: 3px solid var(--accent-color);
+            border-radius: 10px;
+        }
     </style>
+
+
 </head>
 
 <body style="overflow: hidden;">
@@ -65,12 +92,27 @@
 
     <div style="padding-top: 50px;"></div>
 
-    <div style="overflow: hidden; height: 95vh; width: 100vw;">
+    <div style="overflow: hidden; height: 95vh; width: 100vw;" id="yesCookies">
         <iframe class="iframeloader" id="app_frame" style="overflow: hidden;" width=100% height=100% src=""></iframe>
     </div>
 
     <div id="noCookies">
-
+        <p style="color: red; padding-bottom: 3.5vh;">You must enable cookies to proceed.</p>
+        <p>Step 1</p>
+        <p2>Click the site information button found next to the website address.</p2>
+        <img src="./assets/images/enablecookies/step1.png">
+        <p>Step 2</p>
+        <p2>Click Cookies.</p2>
+        <img src="./assets/images/enablecookies/step2.png">
+        <p>Step 3</p>
+        <p2>Click Blocked.</p2>
+        <img src="./assets/images/enablecookies/step3.png">
+        <p>Step 4</p>
+        <p2>Click each of the options then click Allow.</p2>
+        <img src="./assets/images/enablecookies/step4.png">
+        <p>Step 5</p>
+        <p2>Click done then refresh the page. Enjoy!</p2>
+        <img src="./assets/images/enablecookies/step5.png">
     </div>
 
 

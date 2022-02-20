@@ -6,6 +6,7 @@ const id = urlParams.get('id');
 window.addEventListener('load', () => {
 
     if (navigator.cookieEnabled) {
+        document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
             if (response.ok) {
                 return response.json();
@@ -24,5 +25,7 @@ window.addEventListener('load', () => {
         });
     } else {
         console.log("No cookies :(")
+        document.getElementsByTagName('body')[0].style = ""
+        $('yesCookies').style = "display: none"
     }
 });
