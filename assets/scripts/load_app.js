@@ -6,6 +6,7 @@ const id = urlParams.get('id');
 window.addEventListener('load', () => {
 
     if (navigator.cookieEnabled) {
+        $('noCookies').style = "display: none"
         document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
             if (response.ok) {
