@@ -5,21 +5,24 @@ const id = urlParams.get('id');
 
 window.addEventListener('load', () => {
 
-    fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
-        }
-    }).then((apps) => {
-        const appData = apps[appName];
-        if (appData == null) window.location.href = '../classes.html';
+    if (navigator.cookieEnabled) {
+        fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
+            }
+        }).then((apps) => {
+            const appData = apps[appName];
+            if (appData == null) window.location.href = '../apps.html';
 
 
-        document.getElementById('app_frame').src = appData.iframe_url;
+            document.getElementById('app_frame').src = appData.iframe_url;
 
-    }).catch((err) => {
-        if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
-    });
-
+        }).catch((err) => {
+            if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
+        });
+    } else {
+        console.log("No cookies :(")
+    }
 });
