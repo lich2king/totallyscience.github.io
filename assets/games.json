@@ -905,7 +905,7 @@
         "developer": "Kizi",
         "iframe_url": "./games/vex3/index.html"
     },
-    "Fireboy and Watergirl Forest Temple": {
+    "Fireboy and Watergirl": {
         "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
         "image": "./assets/game_images/fireboyandwatergirl.jpeg",
         "controls": "[Arrow Keys] - move FireBoy\n[WASD] - move WaterGirl",
