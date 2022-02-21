@@ -20,10 +20,7 @@ function getCookie(cname) {
 }
 
 window.addEventListener('load', () => {
-    console.log(document.cookie)
-    console.log(getCookie("__incog_prox"))
-
-    if (navigator.cookieEnabled) {
+    if (getCookie('thirdCookie') == '1') {
         $('noCookies').style = "display: none"
         document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
@@ -48,18 +45,3 @@ window.addEventListener('load', () => {
         $('yesCookies').style = "display: none"
     }
 });
-
-/*window.addEventListener('message', (event) => {
-    console.log(`Received message: ${event.data}`);
-});*/
-
-var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-var eventer = window[eventMethod];
-var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-
-// Listen to message from child window
-eventer(messageEvent, function(e) {
-    var key = e.message ? "message" : "data";
-    var data = e[key];
-    //run function//
-}, false);
