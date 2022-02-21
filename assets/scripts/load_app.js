@@ -49,6 +49,17 @@ window.addEventListener('load', () => {
     }
 });
 
-window.addEventListener('message', (event) => {
+/*window.addEventListener('message', (event) => {
     console.log(`Received message: ${event.data}`);
-});
+});*/
+
+var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+// Listen to message from child window
+eventer(messageEvent, function(e) {
+    var key = e.message ? "message" : "data";
+    var data = e[key];
+    //run function//
+}, false);
