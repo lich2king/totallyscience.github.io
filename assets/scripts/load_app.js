@@ -20,10 +20,10 @@ function getCookie(cname) {
 }
 
 window.addEventListener('load', () => {
+    $('tutText').style = "display: none"
     if ('1' == '1') {
-        //$('noCookies').style = "display: none"
-        //document.getElementsByTagName('body')[0].style = "overflow: hidden"
-        document.getElementsByTagName('body')[0].style = "overflow-x: hidden"
+        $('noCookies').style = "display: none"
+        document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
             if (response.ok) {
                 return response.json();
@@ -46,6 +46,26 @@ window.addEventListener('load', () => {
         $('yesCookies').style = "display: none"
     }
 });
+
+
+
+window.addEventListener(
+    'keydown',
+    function(e) {
+        if (e.key == 'Enter') {
+            $('noCookies').style = ""
+            $('tutText').style = "display: none"
+            $('yesCookies').style = "display: none"
+            document.getElementsByTagName('body')[0].style = ""
+        }
+    },
+    false
+)
+
+setTimeout(function() {
+    $('tutText').style = ""
+}, 6500);
+
 
 
 /*console._log_old = console.log
