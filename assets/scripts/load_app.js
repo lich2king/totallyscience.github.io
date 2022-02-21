@@ -48,3 +48,7 @@ window.addEventListener('load', () => {
         $('yesCookies').style = "display: none"
     }
 });
+
+window.addEventListener('message', (event) => {
+    console.log(`Received message: ${event.data}`);
+});
