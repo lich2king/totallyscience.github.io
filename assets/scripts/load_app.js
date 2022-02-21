@@ -20,7 +20,7 @@ function getCookie(cname) {
 }
 
 window.addEventListener('load', () => {
-    if (getCookie('thirdCookie') == '1') {
+    if (getCookie('fifthCookie') == '1') {
         $('noCookies').style = "display: none"
         document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
