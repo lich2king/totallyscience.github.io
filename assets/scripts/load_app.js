@@ -21,8 +21,9 @@ function getCookie(cname) {
 
 window.addEventListener('load', () => {
     if ('1' == '1') {
-        $('noCookies').style = "display: none"
-        document.getElementsByTagName('body')[0].style = "overflow: hidden"
+        //$('noCookies').style = "display: none"
+        //document.getElementsByTagName('body')[0].style = "overflow: hidden"
+        document.getElementsByTagName('body')[0].style = "overflow-x: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
             if (response.ok) {
                 return response.json();
