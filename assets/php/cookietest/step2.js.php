@@ -5,4 +5,6 @@
   // And clear it so the user can test it again 
   setcookie('third_party_c_t', '', time() - 3600*24);
 ?>
-window._3rd_party_test_step2_loaded(<?php echo ($cookie_received ? 'true' : 'false'); ?>);
+<script>
+    window._3rd_party_test_step2_loaded(<?php echo ($cookie_received ? 'true' : 'false'); ?>);
+</script>
