@@ -20,7 +20,7 @@ function getCookie(cname) {
 }
 
 window.addEventListener('load', () => {
-    if (getCookie('fifthCookie') == '1') {
+    if ('1' == '1') {
         $('noCookies').style = "display: none"
         document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
@@ -45,3 +45,10 @@ window.addEventListener('load', () => {
         $('yesCookies').style = "display: none"
     }
 });
+
+
+/*console._log_old = console.log
+console.log = function(msg) {
+    alert(msg);
+    console._log_old(msg);
+}*/
