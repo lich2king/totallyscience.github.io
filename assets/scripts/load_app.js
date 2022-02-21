@@ -63,7 +63,7 @@ window.addEventListener(
 )
 
 setTimeout(function() {
-    $('tutText').style = ""
+    $('tutText').style = "z-index: 1;"
 }, 6500);
 
 
