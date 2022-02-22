@@ -2,6 +2,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const appName = urlParams.get('app');
 const id = urlParams.get('id');
+let tutOpen = false
+
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -53,6 +55,7 @@ window.addEventListener(
     'keydown',
     function(e) {
         if (e.key == 'Enter') {
+            tutOpen = true
             $('noCookies').style = ""
             $('tutText').style = "display: none"
             $('yesCookies').style = "display: none"
@@ -63,7 +66,9 @@ window.addEventListener(
 )
 
 setTimeout(function() {
-    $('tutText').style = "z-index: 1;"
+    if (!tutOpen) {
+        $('tutText').style = "z-index: 1;"
+    }
 }, 6500);
 
 
