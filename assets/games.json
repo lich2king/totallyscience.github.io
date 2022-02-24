@@ -909,7 +909,7 @@
         "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
         "image": "./assets/game_images/fireboyandwatergirl.jpeg",
         "controls": "[Arrow Keys] - move FireBoy\n[WASD] - move WaterGirl",
-        "tags": [""],
+        "tags": ["2"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "./games/fireboy-and-watergirl-forest-temple/index.html"
