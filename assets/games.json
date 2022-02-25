@@ -146,7 +146,7 @@
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "HyperPixel",
-        "iframe_url": "https://scratch.mit.edu/projects/17828009/embed"
+        "iframe_url": "./games/scratch/flappybird.html"
     },
 
     "Friday Night Funkin'": {
@@ -186,7 +186,7 @@
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
-        "iframe_url": "https://scratch.mit.edu/projects/105500895/embed"
+        "iframe_url": "./games/scratch/geometrydash.html"
     },
 
     "Jetpack Joyride": {
@@ -196,7 +196,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "DarkLava",
-        "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
+        "iframe_url": "./games/scratch/jetpackjoyride.html"
     },
 
     "Minigolf": {
@@ -226,7 +226,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
-        "iframe_url": "https://scratch.mit.edu/projects/10128407/embed"
+        "iframe_url": "./games/scratch/paperminecraft.html"
     },
 
     "8Ball Pool": {
@@ -525,7 +525,7 @@
         "tags": ["hard", "mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Griffpatch",
-        "iframe_url": "https://scratch.mit.edu/projects/389464290/embed"
+        "iframe_url": "./games/scratch/gettingoverit.html"
     },
     "Drift Hunters": {
         "description": "An awesome 3D car driving game in which you score points by drifting various cars.",
