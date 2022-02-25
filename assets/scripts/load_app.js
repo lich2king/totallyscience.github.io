@@ -39,6 +39,17 @@ window.addEventListener('load', () => {
 
             document.getElementById('app_frame').src = appData.iframe_url;
 
+            if (appData.alt_url != "") {
+                fetch(appData.iframe_url).then(res => {
+                    if (!res.status) {
+                        document.getElementById('app_frame').src = appData.alt_url;
+                    }
+                    if (!(res.status + "").startsWith("2")) {
+                        document.getElementById('app_frame').src = appData.alt_url;
+                    }
+                }).catch(err => document.getElementById('app_frame').src = appData.alt_url);
+            }
+
         }).catch((err) => {
             if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
         });

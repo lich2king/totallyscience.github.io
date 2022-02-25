@@ -2,32 +2,38 @@
     "Youtube": {
         "image": "./assets/images/app_icons/youtube-red-square.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-",
+        "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
     },
     "Google": {
         "image": "./assets/images/app_icons/google.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F",
+        "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
     },
     "Firefox": {
         "image": "./assets/images/app_icons/firefox.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "./apps/firefox.html"
+        "iframe_url": "./apps/firefox.html",
+        "alt_url": ""
     },
     "Discord": {
         "image": "./assets/images/app_icons/discord.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-dksaopd%2Ccmm-arp"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-dksaopd%2Ccmm-arp",
+        "alt_url": ""
     },
     "Tik Tok": {
         "image": "./assets/images/app_icons/tiktok.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2Fdopymu%3Diq_aory%5Dupl%3F1%24iq_drmm%5Dwgbcpr%3Dt1"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2Fdopymu%3Diq_aory%5Dupl%3F1%24iq_drmm%5Dwgbcpr%3Dt1",
+        "alt_url": ""
     },
     "Twitch": {
         "image": "./assets/images/app_icons/twitch.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctuivcj.vv-"
+        "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctuivcj.vv-",
+        "alt_url": ""
     }
 
 }
