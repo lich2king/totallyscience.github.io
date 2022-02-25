@@ -922,8 +922,16 @@
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "BKcore",
         "iframe_url": "./games/hexgl/index.html"
+    },
+    "Mini Golf Online": {
+        "description": "Challenge other players to play golf! Get your golf ball into the hole before your opponent does!",
+        "image": "./assets/game_images/minigolfonline.png",
+        "controls": "Click and drag to aim and shoot",
+        "tags": ["multiplayer"],
+        "date_added": "2022-02-25T04:09:28.911Z",
+        "developer": "StratfordJames",
+        "iframe_url": "./games/scratch/minigolfonline.html"
     }
-
 
 
 }
