@@ -166,7 +166,7 @@
         "tags": ["mobile", "horror"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
-        "iframe_url": "https://scratch.mit.edu/projects/469219637/embed/"
+        "iframe_url": "./games/scratch/fnaf2.html"
     },
 
     "Galactic Wars": {
@@ -507,7 +507,7 @@
         "tags": ["horror"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "GamingRaccoon44",
-        "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
+        "iframe_url": "./games/scratch/fnafworld.html"
     },
     "FNAF 3": {
         "description": "30 years after the events that took place in 5 Nights at Freddy's.",
@@ -516,7 +516,7 @@
         "tags": ["horror"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Fnafphoneguy123",
-        "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
+        "iframe_url": "./games/scratch/fnaf3.html"
     },
     "Getting Over It": {
         "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
@@ -615,7 +615,7 @@
         "tags": ["mobile"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
-        "iframe_url": "https://scratch.mit.edu/projects/472077983/embed"
+        "iframe_url": "./games/scratch/ballblast.html"
     },
     "Car Parking Chaos": {
         "description": "Park the car in the yellow parking spot as quick as possible!",
@@ -624,7 +624,7 @@
         "tags": ["car"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Reevo_56",
-        "iframe_url": "https://scratch.mit.edu/projects/618161013/embed"
+        "iframe_url": "./games/scratch/carparkingchaos.html"
     },
     "Bubble Popper": {
         "description": "Pop the bubbles by matching the correct colors. Try to beat all the levels!",
@@ -633,7 +633,7 @@
         "tags": ["mobile"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Griffpatch",
-        "iframe_url": "https://scratch.mit.edu/projects/222972802/embed"
+        "iframe_url": "./games/scratch/bubblescratch.html"
     },
     "Happy Room": {
         "description": "Here tests are taken upon highly durable robots using the newest weapon technologies.",
@@ -732,7 +732,7 @@
         "tags": ["horror"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Kk32423",
-        "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
+        "iframe_url": "./games/scratch/fnaf4.html"
     },
     "Pokemon Fire Red": {
         "description": "Start your journey in Pallet Town where you choose your Pokemon. Take down Team Rocket!",
@@ -786,7 +786,7 @@
         "tags": [""],
         "date_added": "2022-01-20T20:31:34.561Z",
         "developer": "Coltroc",
-        "iframe_url": "https://scratch.mit.edu/projects/351793769/embed"
+        "iframe_url": "./games/scratch/minercat2.html"
     },
     "CSGO Surf": {
         "description": "A popular game mode in CSGO. You'll be gliding along slopes and flying off of surfaces.",
@@ -795,7 +795,7 @@
         "tags": [""],
         "date_added": "2022-01-21T14:05:26.922Z",
         "developer": "Yoshi_studios32",
-        "iframe_url": "https://scratch.mit.edu/projects/212654640/embed"
+        "iframe_url": "./games/scratch/csgosurf.html"
     },
     "Doge Miner": {
         "description": "Your mission is to get to the moon! To get there cost 50,000,000,000 dogecoin. Goodluck!",
@@ -885,7 +885,7 @@
         "tags": ["horror"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Codyjax",
-        "iframe_url": "https://scratch.mit.edu/projects/125366612/embed"
+        "iframe_url": "./games/scratch/fnafsister.html"
     },
     "Vex 4": {
         "description": "The fourth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
