@@ -146,7 +146,8 @@
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "HyperPixel",
-        "iframe_url": "./games/scratch/flappybird.html"
+        "iframe_url": "./games/scratch/flappybird.html",
+        "scratch_url": "https://scratch.mit.edu/projects/17828009/embed"
     },
 
     "Friday Night Funkin'": {
@@ -166,7 +167,8 @@
         "tags": ["mobile", "horror"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
-        "iframe_url": "./games/scratch/fnaf2.html"
+        "iframe_url": "./games/scratch/fnaf2.html",
+        "scratch_url": "https://scratch.mit.edu/projects/469219637/embed/"
     },
 
     "Galactic Wars": {
@@ -186,7 +188,8 @@
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
-        "iframe_url": "./games/scratch/geometrydash.html"
+        "iframe_url": "./games/scratch/geometrydash.html",
+        "scratch_url": "https://scratch.mit.edu/projects/105500895/embed"
     },
 
     "Jetpack Joyride": {
@@ -525,7 +528,8 @@
         "tags": ["hard", "mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Griffpatch",
-        "iframe_url": "./games/scratch/gettingoverit.html"
+        "iframe_url": "./games/scratch/gettingoverit.html",
+        "scratch_url": "https://scratch.mit.edu/projects/389464290/embed"
     },
     "Drift Hunters": {
         "description": "An awesome 3D car driving game in which you score points by drifting various cars.",
@@ -615,7 +619,8 @@
         "tags": ["mobile"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
-        "iframe_url": "./games/scratch/ballblast.html"
+        "iframe_url": "./games/scratch/ballblast.html",
+        "scratch_url": "https://scratch.mit.edu/projects/472077983/embed"
     },
     "Car Parking Chaos": {
         "description": "Park the car in the yellow parking spot as quick as possible!",
@@ -633,7 +638,8 @@
         "tags": ["mobile"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Griffpatch",
-        "iframe_url": "./games/scratch/bubblescratch.html"
+        "iframe_url": "./games/scratch/bubblescratch.html",
+        "scratch_url": "https://scratch.mit.edu/projects/222972802/embed"
     },
     "Happy Room": {
         "description": "Here tests are taken upon highly durable robots using the newest weapon technologies.",

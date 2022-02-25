@@ -11,6 +11,10 @@ fetch(`../assets/games.json?date=${new Date().getTime()}`)
         if (gameData == null) window.location.href = 'index.html'
 
         var theIframeUrl = gameData.iframe_url
+
+        if (theIframeUrl.includes("scratch")) {
+            theIframeUrl = gameData.scratch_url
+        }
         if (theIframeUrl[0] == '.') {
             var newUrl = theIframeUrl.split('.')[1];
             theIframeUrl = `../../..${newUrl}.html`
