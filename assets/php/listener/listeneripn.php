@@ -22,7 +22,7 @@
 			$from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = "Did payment go throught? Did it really?";
+            $message = $cEmail . $name . $price . $currency . $item . $paymentStatus;
             $headers = "From:" . $from;
 
 
@@ -38,7 +38,7 @@
             $from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = "Did payment go throught? No!";
+            $message = $cEmail . $name . $price . $currency . $item . $paymentStatus;
             $headers = "From:" . $from;
 
 
