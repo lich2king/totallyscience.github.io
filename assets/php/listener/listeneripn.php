@@ -1,6 +1,6 @@
 <?php
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr');
+	curl_setopt($ch, CURLOPT_URL, 'https://ipnpb.paypal.com/cgi-bin/webscr');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -18,12 +18,13 @@
 		$item = $_POST['item_number'];
 		$paymentStatus = $_POST['payment_status'];
         $payerId = $_POST['payer_id'];
+        $reccuringId = $_POST['recurring_payment_id'];
 
 		if ($paymentStatus == "Completed") {
 			$from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = $payerId . $paymentStatus . $cEmail . $name . $item . $price . $currency ;
+            $message = $reccuringId . $payerId . $paymentStatus . $cEmail . $name . $item . $price . $currency ;
             $headers = "From:" . $from;
 
 
@@ -39,7 +40,7 @@
             $from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = $payerId . $paymentStatus . $cEmail . $name . $paymentStatus . $price . $currency . $item;
+            $message = $reccuringId . $payerId . $paymentStatus . $cEmail . $name . $paymentStatus . $price . $currency . $item;
             $headers = "From:" . $from;
 
 
