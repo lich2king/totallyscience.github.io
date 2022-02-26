@@ -85,7 +85,19 @@ $fh = fsockopen ('ssl://www.paypal.com', 443, $errno, $errstr, 30);
 // STEP 5 - Nearly done.  Now send the data back to PayPal so it can tell us if the IPN notification was genuine
  
  if (!$fh) {
- 
+	$from = "help@totallyscience.co";
+	$to = "zay0106@icloud.com";
+	$subject = "YESSIRSKY";
+	$message = "Connection FAILED?";
+	$headers = "From:" . $from;
+
+
+	if (mail($to, $subject, $message, $headers)) {
+		// email send client should show confirmation box
+		echo "success";
+	} else {
+		echo "The email message was not sent.";
+	}
 // Uh oh. This means that we have not been able to get thru to the PayPal server.  It's an HTTP failure
 //
 // You need to handle this here according to your preferred business logic.  An email, a log message, a trip to the pub..
