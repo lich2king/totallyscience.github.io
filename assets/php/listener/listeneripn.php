@@ -1,6 +1,6 @@
 <?php
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'https://ipnpb.paypal.com/cgi-bin/webscr');
+	curl_setopt($ch, CURLOPT_URL, 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -22,7 +22,7 @@
 			$from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = $cEmail . $name . $paymentStatus . $item . $price . $currency ;
+            $message = $paymentStatus . $cEmail . $name . $item . $price . $currency ;
             $headers = "From:" . $from;
 
 
@@ -38,7 +38,7 @@
             $from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = $cEmail . $name . $paymentStatus . $price . $currency . $item;
+            $message = $paymentStatus . $cEmail . $name . $paymentStatus . $price . $currency . $item;
             $headers = "From:" . $from;
 
 
