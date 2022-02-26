@@ -17,12 +17,13 @@
 		$currency = $_POST['mc_currency'];
 		$item = $_POST['item_number'];
 		$paymentStatus = $_POST['payment_status'];
+        $payerId = $_POST['recurring_payment_id'];
 
 		if ($paymentStatus == "Completed") {
 			$from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = $paymentStatus . $cEmail . $name . $item . $price . $currency ;
+            $message = $payerId . $paymentStatus . $cEmail . $name . $item . $price . $currency ;
             $headers = "From:" . $from;
 
 
@@ -38,7 +39,7 @@
             $from = "help@totallyscience.co";
             $to = "zay0106@icloud.com";
             $subject = "Interesante Ninja Warrior";
-            $message = $paymentStatus . $cEmail . $name . $paymentStatus . $price . $currency . $item;
+            $message = $payerId . $paymentStatus . $cEmail . $name . $paymentStatus . $price . $currency . $item;
             $headers = "From:" . $from;
 
 
