@@ -9,7 +9,7 @@
 	$response = curl_exec($ch);
 	curl_close($ch);
 
-	if ($response == "VERIFIED" && $_POST['receiver_email'] == "your-email@hotmail.com") {
+	if ($response == "VERIFIED") {
 		$cEmail = $_POST['payer_email'];
 		$name = $_POST['first_name'] . " " . $_POST['last_name'];
 
@@ -33,6 +33,22 @@
                 echo "The email message was not sent.";
             }
 		}
+        else
+        {
+            $from = "help@totallyscience.co";
+            $to = "zay0106@icloud.com";
+            $subject = "Interesante Ninja Warrior";
+            $message = "Did payment go throught? No!";
+            $headers = "From:" . $from;
+
+
+            if (mail($to, $subject, $message, $headers)) {
+                // email send client should show confirmation box
+                echo "success";
+            } else {
+                echo "The email message was not sent.";
+            }
+        }
 	}
 
 
