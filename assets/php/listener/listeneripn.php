@@ -17,7 +17,7 @@
 		$currency = $_POST['mc_currency'];
 		$item = $_POST['item_number'];
 		$paymentStatus = $_POST['payment_status'];
-        $payerId = $_POST['recurring_payment_id'];
+        $payerId = $_POST['payer_id'];
 
 		if ($paymentStatus == "Completed") {
 			$from = "help@totallyscience.co";
