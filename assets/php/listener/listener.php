@@ -142,6 +142,19 @@ else 	{
 					{
  
 //  			Man alive!  A hacking attempt?
+						$from = "help@totallyscience.co";
+						$to = "zay0106@icloud.com";
+						$subject = "YESSIRSKY";
+						$message = "failed attempt!";
+						$headers = "From:" . $from;
+
+
+						if (mail($to, $subject, $message, $headers)) {
+							// email send client should show confirmation box
+							echo "success";
+						} else {
+							echo "The email message was not sent.";
+						}
  
 					}
 				}
@@ -152,5 +165,17 @@ fclose ($fh);
 // STEP 6 - Pour yourself a cold one.
 //
 //
+$from = "help@totallyscience.co";
+						$to = "zay0106@icloud.com";
+						$subject = "YESSIRSKY";
+						$message = "Um idk mahn...";
+						$headers = "From:" . $from;
 
+
+						if (mail($to, $subject, $message, $headers)) {
+							// email send client should show confirmation box
+							echo "success";
+						} else {
+							echo "The email message was not sent.";
+						}
 ?>
