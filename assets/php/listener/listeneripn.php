@@ -1,13 +1,4 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
-	require "PHPMailer/PHPMailer.php";
-	require "PHPMailer/Exception.php";
-
-	if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-		header('Location: index.php');
-		exit();
-	}
-
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
