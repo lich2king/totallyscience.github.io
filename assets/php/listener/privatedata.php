@@ -9,6 +9,7 @@
     $payerId = htmlspecialchars($_GET["payerId"]);
     $monthy = htmlspecialchars($_GET["monthly"]);
     $url = htmlspecialchars($_GET["url"]);
+    $pass = htmlspecialchars($_GET["password"]);
 
     $endDate = "";
 
@@ -36,8 +37,8 @@
     }
 
 
-    $sql = "INSERT INTO PersonalSites (Url, Taken, AccountEmail, PayerId, EndDate)
-    VALUES ('$url', '1', '$email', '$payerId', '$endDate')";
+    $sql = "INSERT INTO PersonalSites (Url, Taken, AccountEmail, Password, PayerId, EndDate)
+    VALUES ('$url', '1', '$email', '$pass', '$payerId', '$endDate')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Success";
