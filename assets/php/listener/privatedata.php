@@ -6,7 +6,7 @@
 
 
     $email = htmlspecialchars($_GET["email"]);
-    $payerId = htmlspecialchars($_GET["name"]);
+    $payerId = htmlspecialchars($_GET["payerId"]);
     $monthy = htmlspecialchars($_GET["monthly"]);
     $url = htmlspecialchars($_GET["url"]);
 
