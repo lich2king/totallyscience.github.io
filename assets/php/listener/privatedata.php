@@ -17,13 +17,13 @@
         date_default_timezone_set("America/New_York");
 
         $d=strtotime("+1 Months");
-        $endDate = date("Y-m-d", $d)
+        $endDate = date("Y-m-d", $d);
     }
     else
     {
         //User will pay yearly
         $d=strtotime("+1 Years");
-        $endDate = date("Y-m-d", $d)
+        $endDate = date("Y-m-d", $d);
     }
 
     // Create connection
