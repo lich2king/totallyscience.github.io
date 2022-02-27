@@ -13,6 +13,8 @@
 
     $endDate = "";
 
+    $pass = password_hash($pass, PASSWORD_DEFAULT);
+    
     if($monthy == 1)
     {
         //User will pay monthly
