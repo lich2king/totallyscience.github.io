@@ -1,25 +1,25 @@
-const appContainer = $('apps')
+const appContainer = document.getElementById('apps')
 
 fetch(`./assets/apps.json?${new Date().getTime()}`)
     .then((response) => response.json())
     .then((apps) => {
         for (const [name, data] of Object.entries(apps)) {
 
-            const appDiv = mk('div')
+            const appDiv = document.createElement('div')
             appDiv.classList = "card game"
             appDiv.addEventListener('click', () => {
                 window.location.href = `./app.html?app=${name}`
             })
 
-            const appImage = mk('img')
+            const appImage = document.createElement('img')
             appImage.draggable = "false"
             appImage.ondragstart = "return false;"
             appImage.src = data.image
 
-            const appName = mk('h1')
+            const appName = document.createElement('h1')
             appName.innerText = name
 
-            const appButton = mk('button')
+            const appButton = document.createElement('button')
             appButton.classList = "launch"
             appButton.innerText = "Launch"
             appButton.addEventListener('click', () => {
