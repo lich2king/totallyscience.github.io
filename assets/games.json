@@ -958,7 +958,7 @@
     },
     "Bloons TD 4": {
         "description": "A classic tower defense game initially released in Flash. Defend the path by placing various defenses tactically around the map.",
-        "image": "./assets/game_images/bloonstd.jpg",
+        "image": "./assets/game_images/bloonstd4.jpg",
         "controls": "[Click] - interact",
         "tags": [""],
         "date_added": "2022-03-03T02:19:54.536Z",
