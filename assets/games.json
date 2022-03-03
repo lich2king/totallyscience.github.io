@@ -946,6 +946,15 @@
         "date_added": "2022-02-27T17:05:02.924Z",
         "developer": "Llerah",
         "iframe_url": "./games/cattrap.html"
+    },
+    "Zombs Royale": {
+        "description": "100 player 2D real-time massive multiplayer Battle Royale game in your browser, inspired by PUBG/Fortnite.",
+        "image": "./assets/game_images/zombs-royale.jpg",
+        "controls": "[WASD] or [Arrow Keys] - move\n[Click] - attack\n[e] - interact\n[Space] - deploy",
+        "tags": [""],
+        "date_added": "2022-03-03T02:19:54.536Z",
+        "developer": "CraftedVRTX",
+        "iframe_url": "https://alloy.craftedvrtx.repl.co/go/_aHR0cHM6Ly96b21ic3JveWFsZS5pbw==_/"
     }
 
 
