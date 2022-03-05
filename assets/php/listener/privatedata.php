@@ -23,6 +23,7 @@
                 $endDate = date("Y-m-d", $d);
                 
                 $usersEndDate=strtotime($usersEndDate);
+                $endDate=strtotime($endDate);
                 if($usersEndDate < $endDate){
                     $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$payerId'";
 
