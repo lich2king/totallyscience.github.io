@@ -33,7 +33,9 @@
         }
         else
         {
-          echo "Did";
+          echo $usersEndDate;
+          echo " ";
+          echo $endDate;
         }
     }
     
