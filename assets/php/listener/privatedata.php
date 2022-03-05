@@ -31,6 +31,10 @@
                 //echo "Error: " . $sql . "<br>" . $conn->error;
             }
         }
+        else
+        {
+          echo "Did";
+        }
     }
     
     
