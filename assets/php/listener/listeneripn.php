@@ -43,7 +43,10 @@
                 $endDate = date("Y-m-d", $d);
                 
                 $expire = strtotime($usersEndDate)
-                if($expire < $endDate){
+
+                $today_dt = new DateTime($endDate);
+                $expire_dt = new DateTime($expire);
+                if($expire_dt < $today_dt){
                     $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$payerId'";
 
                     if ($conn->query($sql) === TRUE) {
