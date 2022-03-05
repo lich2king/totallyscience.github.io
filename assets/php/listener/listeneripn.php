@@ -40,8 +40,10 @@
                 $usersEndDate = $row[5];
                 date_default_timezone_set("America/New_York");
                 $d=strtotime("+1 Months");
-                $endDate = date("Y-m-d", $d);   
-                if($usersEndDate < $endDate){
+                $endDate = date("Y-m-d", $d);
+                
+                $expire = strtotime($usersEndDate)
+                if($expire < $endDate){
                     $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$payerId'";
 
                     if ($conn->query($sql) === TRUE) {
