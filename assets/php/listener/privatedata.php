@@ -22,7 +22,7 @@
       $d=strtotime("+1 Months");
       $endDate = date("Y-m-d", $d);
       
-      $expire = strtotime($usersEndDate)
+      $expire = strtotime($usersEndDate);
       if($expire < $endDate){
           $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$payerId'";
 
