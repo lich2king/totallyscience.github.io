@@ -42,7 +42,7 @@
                 $d=strtotime("+1 Months");
                 $endDate = date("Y-m-d", $d);   
                 if($usersEndDate < $endDate){
-                    $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$reccuringId'";
+                    $sql = "UPDATE PersonalSites SET EndDate='$endDate || $usersEndDate' WHERE PayerId='$reccuringId'";
     
                     if ($conn->query($sql) === TRUE) {
                         echo "Success";
