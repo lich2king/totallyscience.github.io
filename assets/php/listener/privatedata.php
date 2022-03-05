@@ -21,7 +21,7 @@
                 date_default_timezone_set("America/New_York");
                 $d=strtotime("+1 Months");
                 $endDate = date("Y-m-d", $d);
-                   
+                
                 if($usersEndDate < $endDate){
                     $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$payerId'";
 
@@ -31,6 +31,9 @@
                     } else {
                         //echo "Error: " . $sql . "<br>" . $conn->error;
                     }
+                }
+                else {
+                  echo("Here")
                 }
     }
     
