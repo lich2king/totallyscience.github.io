@@ -33,7 +33,9 @@
                     }
                 }
                 else {
+                  echo($usersEndDate)
                   echo("Here");
+                  echo($endDate)
                 }
     }
     
