@@ -1,4 +1,10 @@
 <?php
+    $servername = "localhost";
+    $username = "u483325885_client";
+    $password = "Totally_password4321";
+    $database = "u483325885_private";
+
+
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, 'https://ipnpb.paypal.com/cgi-bin/webscr');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -21,35 +27,29 @@
         $reccuringId = $_POST['recurring_payment_id'];
 
 		if ($paymentStatus == "Completed") {
-			$from = "help@totallyscience.co";
-            $to = "zay0106@icloud.com";
-            $subject = "Interesante Ninja Warrior";
-            $message = $reccuringId . $payerId . $paymentStatus . $cEmail . $name . $item . $price . $currency ;
-            $headers = "From:" . $from;
-
-
-            if (mail($to, $subject, $message, $headers)) {
-                // email send client should show confirmation box
-                echo "success";
-            } else {
-                echo "The email message was not sent.";
+            $conn = new mysqli($servername, $username, $password, $database);
+      
+            // Check connection
+            if ($conn->connect_error) {
+                die("connection failed"); //. $conn->connect_error);
             }
+
+
+            $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$reccuringId'";
+    
+            if ($conn->query($sql) === TRUE) {
+                echo "Success";
+                //echo "New record created successfully";
+            } else {
+                //echo "Error: " . $sql . "<br>" . $conn->error;
+                //echo "Error";
+            }
+    
+            $conn->close();
 		}
         else
         {
-            $from = "help@totallyscience.co";
-            $to = "zay0106@icloud.com";
-            $subject = "Interesante Ninja Warrior";
-            $message = $reccuringId . $payerId . $paymentStatus . $cEmail . $name . $paymentStatus . $price . $currency . $item;
-            $headers = "From:" . $from;
-
-
-            if (mail($to, $subject, $message, $headers)) {
-                // email send client should show confirmation box
-                echo "success";
-            } else {
-                echo "The email message was not sent.";
-            }
+            
         }
 	}
 

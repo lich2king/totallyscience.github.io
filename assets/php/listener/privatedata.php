@@ -7,28 +7,7 @@
 
     $email = htmlspecialchars($_GET["email"]);
     $payerId = htmlspecialchars($_GET["payerId"]);
-    $monthy = htmlspecialchars($_GET["monthly"]);
-    $url = htmlspecialchars($_GET["url"]);
-    $pass = htmlspecialchars($_GET["password"]);
 
-    $endDate = "";
-
-    $pass = password_hash($pass, PASSWORD_DEFAULT);
-    
-    if($monthy == 1)
-    {
-        //User will pay monthly
-        date_default_timezone_set("America/New_York");
-
-        $d=strtotime("+1 Months");
-        $endDate = date("Y-m-d", $d);
-    }
-    else
-    {
-        //User will pay yearly
-        $d=strtotime("+1 Years");
-        $endDate = date("Y-m-d", $d);
-    }
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
