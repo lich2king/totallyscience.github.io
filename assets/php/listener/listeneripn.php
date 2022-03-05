@@ -34,18 +34,28 @@
                 die("connection failed"); //. $conn->connect_error);
             }
 
-            date_default_timezone_set("America/New_York");
-            $d=strtotime("+1 Months");
-            $endDate = date("Y-m-d", $d);       
-
-            $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$reccuringId'";
+            if ($userresult = $conn->query("SELECT * FROM PersonalSites WHERE PayerId = '$payerId'"))
+            {
+                $row = $userresult -> fetch_row();
+                $usersEndDate = $row[2];
+                date_default_timezone_set("America/New_York");
+                $d=strtotime("+1 Months");
+                $endDate = date("Y-m-d", $d);   
+                if($usersEndDate > $endDate){
+                    $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$reccuringId'";
     
-            if ($conn->query($sql) === TRUE) {
-                echo "Success";
-                //echo "New record created successfully";
-            } else {
-                //echo "Error: " . $sql . "<br>" . $conn->error;
+                    if ($conn->query($sql) === TRUE) {
+                        echo "Success";
+                        //echo "New record created successfully";
+                    } else {
+                        //echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
+                }
             }
+
+               
+
+            
     
             $conn->close();
 		}
