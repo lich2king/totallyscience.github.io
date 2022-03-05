@@ -35,11 +35,6 @@
                         //echo "Error: " . $sql . "<br>" . $conn->error;
                     }
                 }
-                else {
-                  echo($usersEndDate);
-                  echo("Here");
-                  echo($endDate);
-                }
     }
     
     
