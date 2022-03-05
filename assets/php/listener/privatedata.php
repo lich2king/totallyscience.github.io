@@ -18,7 +18,7 @@
     {
         $row = $userresult -> fetch_row();
         $usersEndDate = $row[5];
-        die($usersEndDate)
+        die($usersEndDate);
         date_default_timezone_set("America/New_York");
         $d=strtotime("+1 Months");
         $endDate = date("Y-m-d", $d);   
