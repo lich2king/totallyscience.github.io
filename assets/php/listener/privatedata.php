@@ -18,12 +18,11 @@
     {
         $row = $userresult -> fetch_row();
         $usersEndDate = $row[5];
-        die($usersEndDate);
         date_default_timezone_set("America/New_York");
         $d=strtotime("+1 Months");
         $endDate = date("Y-m-d", $d);   
         if($usersEndDate < $endDate){
-            $sql = "UPDATE PersonalSites SET EndDate='$endDate || $usersEndDate' WHERE PayerId='$payerId'";
+            $sql = "UPDATE PersonalSites SET EndDate='$usersEndDate' WHERE PayerId='$payerId'";
 
             if ($conn->query($sql) === TRUE) {
                 echo "Success";
