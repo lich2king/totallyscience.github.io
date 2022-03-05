@@ -37,7 +37,7 @@
             if ($userresult = $conn->query("SELECT * FROM PersonalSites WHERE PayerId = '$payerId'"))
             {
                 $row = $userresult -> fetch_row();
-                $usersEndDate = $row[2];
+                $usersEndDate = $row[5];
                 date_default_timezone_set("America/New_York");
                 $d=strtotime("+1 Months");
                 $endDate = date("Y-m-d", $d);   
