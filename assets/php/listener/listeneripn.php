@@ -34,6 +34,9 @@
                 die("connection failed"); //. $conn->connect_error);
             }
 
+            date_default_timezone_set("America/New_York");
+            $d=strtotime("+1 Months");
+            $endDate = date("Y-m-d", $d);       
 
             $sql = "UPDATE PersonalSites SET EndDate='$endDate' WHERE PayerId='$reccuringId'";
     
