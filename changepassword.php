@@ -40,7 +40,7 @@ if ($step == 1) {
 }
 else if ($step == 2) {
     $user = htmlspecialchars($_GET["username"]);
-    
+
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -48,8 +48,6 @@ else if ($step == 2) {
         $code = $row[4];
 
         $subCode = htmlspecialchars($_GET["code"]);
-
-        echo implode(' ', $row) . " uu " . $user;
     
         if ($code == $subCode) {
             echo 'success';
