@@ -60,7 +60,7 @@ else if ($step == 3) {
 
     if ($conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
     {
-        echo $user;
+        echo 'success';
     }
 }
 ?>
@@ -197,7 +197,7 @@ else if ($step == 3) {
                 document.getElementById('div2').style.display = '';
                 document.getElementById('survey').action = 'javascript:submitNewPassword()';
             } else {
-                document.getElementById('errorText').innerText = res;//'Code is incorrect';
+                document.getElementById('errorText').innerText = 'Code is incorrect';
             }
         });
     }
