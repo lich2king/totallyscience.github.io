@@ -176,7 +176,7 @@ else if ($step == 3) {
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
                 document.getElementById('username').placeholder = '*****';
-                localstorage.setItem('tempusername', username);
+                localStorage.setItem('tempusername', username);
             }
         });
     }
@@ -190,7 +190,7 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`./changepassword.php?code=${code}&username=${localstorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
+        fetch(`./changepassword.php?code=${code}&username=${localStorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').style.display = 'none';
                 document.getElementById('username').style.display = 'none';
