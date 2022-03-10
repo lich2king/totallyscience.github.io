@@ -47,7 +47,7 @@ else if ($step == 2) {
 
         $subCode = htmlspecialchars($_GET["code"]);
 
-        echo $row[3] . " hi " . $subCode;
+        echo count($row) . " hy " . $subCode;
     
         if ($code == $subCode) {
             echo 'success';
