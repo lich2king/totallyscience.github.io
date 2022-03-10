@@ -197,7 +197,7 @@ else if ($step == 3) {
                 document.getElementById('div2').style.display = '';
                 document.getElementById('survey').action = 'javascript:submitNewPassword()';
             } else {
-                document.getElementById('errorText').innerText = 'Code is incorrect';
+                document.getElementById('errorText').innerText = res;//'Code is incorrect';
             }
         });
     }
