@@ -39,6 +39,8 @@ if ($step == 1) {
     }
 }
 else if ($step == 2) {
+    $user = htmlspecialchars($_GET["username"]);
+    
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -189,7 +191,6 @@ else if ($step == 3) {
             errorText.innerText = 'Code cannot be empty';
             return;
         }
-
         fetch(`./changepassword.php?code=${code}&username=${localStorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').style.display = 'none';
