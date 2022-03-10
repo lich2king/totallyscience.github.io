@@ -47,7 +47,7 @@ else if ($step == 2) {
 
         $subCode = htmlspecialchars($_GET["code"]);
 
-        echo implode(' ', $row) . " uu " . $subCode;
+        echo implode(' ', $row) . " uu " . $user;
     
         if ($code == $subCode) {
             echo 'success';
