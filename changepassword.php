@@ -39,6 +39,8 @@ if ($step == 1) {
     }
 }
 else if ($step == 2) {
+    $user = htmlspecialchars($_GET["username"]);
+
     if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
@@ -58,7 +60,7 @@ else if ($step == 3) {
 
     if ($conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
     {
-        echo $user;
+        echo 'success';
     }
 }
 ?>
@@ -174,6 +176,7 @@ else if ($step == 3) {
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
                 document.getElementById('username').placeholder = '*****';
+                localStorage.setItem('tempusername', username);
             }
         });
     }
@@ -186,8 +189,7 @@ else if ($step == 3) {
             errorText.innerText = 'Code cannot be empty';
             return;
         }
-
-        fetch(`./changepassword.php?code=${code}&step=2`).then((response) => response.text()).then((res) => {
+        fetch(`./changepassword.php?code=${code}&username=${localStorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').style.display = 'none';
                 document.getElementById('username').style.display = 'none';
