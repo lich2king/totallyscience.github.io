@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Totally Science">
+    <meta property="og:site_name" content="Totally Science">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="The best place for 'Learning Science!'">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
+
+    <title>Totally Science</title>
+    <meta charset="UTF-8">
+
+    <!--Cache Killer-->
+    <script>
+        const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+        document.getElementsByTagName('head')[0].innerHTML += mainCSS
+    </script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <style>
+        #privacyText {
+            color: var(--light-color);
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        
+        #privacyText h1 {
+            text-align: center;
+        }
+        
+        .partner {
+            text-align: center;
+            cursor: pointer;
+            border-radius: 15px;
+            margin-top: 10vh;
+        }
+        
+        .partner:hover {
+            width: 38vw;
+            height: 43vh;
+        }
+        
+        #mainText {
+            font-size: 2.5vw;
+            font-weight: 900;
+        }
+        
+        .partner p {
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-bottom: 2vh;
+        }
+        
+        .shadow {
+            -moz-box-shadow: 3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow: 3px 3px 5px 6px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="apps.html">Apps</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
+        </div>
+
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+
+        <div id="rightbar">
+            <a id="login" href="profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+            </a>
+
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+    <div style="padding-top: 90px;"></div>
+
+    <section id="privacyText">
+        <h1 id="mainText">Our Partners</h1>
+        <div class="partner shadow" onclick="window.open('https://ubg100.github.io/')">
+            <div>
+                <h1>UBG100</h1>
+                <img width="100vw" src="https://ubg100.gitlab.io/assets/img/socials/ubg100.png">
+                <p>We are an unblocked site that provides cool and fun games to the general population. I hate my life and wish I could fly to the moon and stay yhter. I am going to wirte thorugh my tpos so goodlucm reading this bozo.</p>
+            </div>
+        </div>
+        <br>
+        <div class="partner shadow" onclick="window.open('https://www.sealcentral.gq/')">
+            <h1>Seal Central</h1>
+            <img width="100vw" src="https://yt3.ggpht.com/dfI8DwQ4wXrGuS9o_y7fbotRskCuOPMCK6IWaPWreXK9SdxQf3hpQhhZ3FgayvfQBXgXQWho=s900-c-k-c0x00ffffff-no-rj">
+            <p>We are an unblocked site that provides cool and fun games to the general population. I hate my life and wish I could fly to the moon and stay yhter. I am going to wirte thorugh my tpos so goodlucm reading this bozo.</p>
+        </div>
+        <br><br><br>
+    </section>
+
+    <script defer src="assets/scripts/main.js?v13"></script>
+</body>
+
+</html>
