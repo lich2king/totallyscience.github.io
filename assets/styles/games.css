@@ -94,6 +94,11 @@ input[type='text']:focus {
     margin-bottom: 2%;
     cursor: pointer;
     border-left: 4px;
+    transition: 0.3s;
+}
+
+#games div button:hover {
+    transform: scale(1.02);
 }
 
 .new::after {
