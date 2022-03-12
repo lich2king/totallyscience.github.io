@@ -63,12 +63,16 @@
         .partner div {
             cursor: pointer;
             border-radius: 15px;
-            width: 65%;
-            height: 65%;
+            right: 50%;
+            transform: translateX(2.5%);
+            width: 95%;
+            height: 95%;
             transition: 0.2s;
         }
         
         .partner div:hover {
+            right: 0%;
+            transform: translateX(0%);
             width: 100%;
             height: 100%;
         }
@@ -80,10 +84,7 @@
         }
         
         #textDiv {
-            text-align: center;
-            position: absolute;
-            width: 95%;
-            padding-top: 22.5vh;
+            height: 100%;
         }
     </style>
 </head>
@@ -119,14 +120,13 @@
     <section id="privacyText">
         <h1 id="mainText">Our Partners</h1>
         <div class="partner" onclick="window.open('https://ubg100.github.io/')">
-            <div id="textDiv">
-                <p>We are an unblocked site that provides cool and fun games to the general population. I hate my life and wish I could fly to the moon and stay yhter. I am going to wirte thorugh my tpos so goodlucm reading this bozo.</p>
-            </div>
             <div class="shadow">
                 <h1>UBG100</h1>
                 <img width="100vw" src="https://ubg100.gitlab.io/assets/img/socials/ubg100.png">
+                <div id="textDiv">
+                    <p>We are an unblocked site that provides cool and fun games to the general population. I hate my life and wish I could fly to the moon and stay yhter. I am going to wirte thorugh my tpos so goodlucm reading this bozo.</p>
+                </div>
             </div>
-
         </div>
         <br>
         <div class="partner" onclick="window.open('https://ubg100.github.io/')">
