@@ -94,7 +94,7 @@ input[type='text']:focus {
     margin-bottom: 2%;
     cursor: pointer;
     border-left: 4px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 #games div button:hover {
