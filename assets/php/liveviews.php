@@ -12,7 +12,8 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-$currentTime = date("d-m-Y h:i:s");
+$d=strtotime("+1 Minutes");
+$currentTime = date("d-m-Y h:i:s", $d);
 die($currentTime)
 
 ?>
