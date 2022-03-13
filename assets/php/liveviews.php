@@ -18,7 +18,8 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
-if ($userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$user'"))
+
+/*if ($userresult = )
 {
     if($userresult != null)
     {
@@ -45,7 +46,7 @@ else
 {
     //add to db
     echo("No RESULTS OF USERNAME!");
-}
+}*/
 
 //After do the for loop to delete old ones
 
