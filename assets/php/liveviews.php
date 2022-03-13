@@ -26,7 +26,7 @@ if($currentTime > $otherTime)
     echo("Current is greater");
 }
 else {
-    echo("No, it's not!")
+    echo("No, it's not!");
 }
 
 
