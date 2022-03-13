@@ -21,7 +21,13 @@ echo($otherTime);
 echo("         ");
 $currentTime=strtotime($currentTime);
 $otherTime=strtotime($otherTime);
-echo($currentTime > $otherTime);
+if($currentTime > $otherTime)
+{
+    echo("Current is greater");
+}
+else {
+    echo("No, it's not!")
+}
 
 
 ?>
