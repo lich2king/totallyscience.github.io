@@ -14,7 +14,8 @@ if ($conn->connect_error) {
 
 date_default_timezone_set("America/New_York");
 $d=strtotime("+1 Minutes");
-$currentTime = date("d-m-Y h:i:s");
+$a=strtotime("+2 Minutes");
+$currentTime = date("d-m-Y h:i:s"), $a;
 $otherTime = date("d-m-Y h:i:s", $d);
 echo($currentTime);
 echo($otherTime);
