@@ -60,11 +60,10 @@ $query = "SELECT username FROM liveviews WHERE 1";
 $result = mysqli_query($conn, $query);
 $json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
 
-foreach($json as $value){
+foreach($json as $value){0
   echo $value . "<br>";
 }
 
-echo($json['Mark'][0]);
 
 //After do the for loop to delete old ones
 
