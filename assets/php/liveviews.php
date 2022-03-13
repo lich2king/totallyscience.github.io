@@ -20,21 +20,6 @@ date_default_timezone_set("America/New_York");
 
 $query = "SELECT * FROM liveviews WHERE find_in_set(`$user`, `username`)";
 if ($conn->query($query) === TRUE) {
-    echo "Database created successfully";
-   } else {
-    echo "Error creating database: " . $conn->error;
-}
-
-/*if ($userresult = )
-{
-    if($userresult != null)
-    {
-        die($userresult);
-    }
-    else{
-        die("HI");
-    }
-    
 
     $d=strtotime("+1 Minutes");
     $pingTime = date("d-m-Y h:i:s", $d);
@@ -47,12 +32,11 @@ if ($conn->query($query) === TRUE) {
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
     }
-}
-else
-{
-    //add to db
+
+} else {
     echo("No RESULTS OF USERNAME!");
-}*/
+}
+
 
 //After do the for loop to delete old ones
 
