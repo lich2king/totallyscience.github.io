@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
-$conn->query("SELECT * FROM liveviews WHERE username = '$user'");
+echo($conn->query("SELECT * FROM liveviews WHERE username = '$user'"));
 
 /*if ($userresult = )
 {
