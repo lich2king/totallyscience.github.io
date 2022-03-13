@@ -16,6 +16,6 @@ date_default_timezone_set("America/New_York");
 $d=strtotime("+1 Minutes");
 $currentTime = date("d-m-Y h:i:s");
 $otherTime = date("d-m-Y h:i:s", $d);
-die($currentTime, $otherTime)
+die($currentTime, $otherTime);
 
 ?>
