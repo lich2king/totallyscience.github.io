@@ -34,7 +34,18 @@ if ($conn->query($query) === TRUE) {
     }
 
 } else {
-    echo("No RESULTS OF USERNAME!");
+    $d=strtotime("+1 Minutes");
+    $pingTime = date("d-m-Y h:i:s", $d);
+    $sql = "INSERT INTO liveviews (Username, lastping)
+    VALUES ('$user', '$pingTime')";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Success";
+      //echo "New record created successfully";
+    } else {
+      //echo "Error: " . $sql . "<br>" . $conn->error;
+      //echo "Error";
+    }
 }
 
 
