@@ -19,7 +19,6 @@ date_default_timezone_set("America/New_York");
 
 
 $query = "SELECT * FROM liveviews WHERE username = `$user`";
-die($conn->query($query));
 
 if ($conn->query($query) != NULL) {
     $d=strtotime("+1 Minutes");
