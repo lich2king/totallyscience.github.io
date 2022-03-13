@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
-$query = "SELECT * FROM liveviews WHERE find_in_set(`$user`, `username`)";
+$query = "SELECT * FROM liveviews WHERE username = `$user`)";
 if ($conn->query($query) === TRUE) {
 
     $d=strtotime("+1 Minutes");
