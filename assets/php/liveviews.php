@@ -58,9 +58,9 @@ if($userresult->num_rows == 0) {
 
 $query = "SELECT * FROM liveviews WHERE 1";
 $result = mysqli_query($conn, $query);
-$json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
+$json = mysqli_fetch_all ($result, MYSQLI_ASSOC);
 
-echo($json);
+echo($json[0]);
 
 
 
