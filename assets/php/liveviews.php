@@ -18,24 +18,12 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
-$query = "SELECT EXISTS(SELECT * FROM liveviews WHERE username = 'Zach')";
 
-if ($conn->query($query) === '1') {
-    die("BAH");
-    $d=strtotime("+1 Minutes");
-    $pingTime = date("d-m-Y h:i:s", $d);
-
-    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Success";
-        //echo "New record created successfully";
-    } else {
-        //echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-} else {
-    die("YAHHH");
+$userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$user'");
+//die($userresult);
+if($userresult->num_rows == 0) {
+    // row not found, do stuff...
+    
     $d=strtotime("+1 Minutes");
     $pingTime = date("d-m-Y h:i:s", $d);
     $sql = "INSERT INTO liveviews (Username, lastping)
@@ -48,7 +36,28 @@ if ($conn->query($query) === '1') {
       //echo "Error: " . $sql . "<br>" . $conn->error;
       //echo "Error";
     }
+
+} else {
+    // do other stuff...
+    
+    $d=strtotime("+1 Minutes");
+    $pingTime = date("d-m-Y h:i:s", $d);
+
+    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Success";
+        //echo "New record created successfully";
+    } else {
+        //echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+
 }
+
+
+
+
 
 
 //After do the for loop to delete old ones
