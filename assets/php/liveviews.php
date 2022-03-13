@@ -21,6 +21,6 @@ echo($otherTime);
 echo("         ")
 $currentTime=strtotime($currentTime);
 $otherTime=strtotime($otherTime);
-echo($currentTime > $otherTime)
+echo($currentTime > $otherTime);
 
 ?>
