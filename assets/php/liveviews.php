@@ -56,7 +56,12 @@ if($userresult->num_rows == 0) {
 }
 
 
+$query = "SELECT * FROM liveviews WHERE 1";
+$result = mysqli_query($conn, $query);
 
+$json = mysqli_fetch_all ($result, MYSQLI_ASSOC);
+
+echo($json);
 
 
 
