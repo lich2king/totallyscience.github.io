@@ -18,27 +18,7 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
-if ($userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$user'"))
-{
-    die($userresult);
 
-    $d=strtotime("+1 Minutes");
-    $pingTime = date("d-m-Y h:i:s", $d);
-
-    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Success";
-        //echo "New record created successfully";
-    } else {
-        //echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-else
-{
-    //add to db
-    echo("No RESULTS OF USERNAME!");
-}
 
 //After do the for loop to delete old ones
 
