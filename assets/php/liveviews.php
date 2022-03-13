@@ -64,7 +64,7 @@ foreach($json as $value){
   echo $value . "<br>";
 }
 
-echo($json['Mark']);
+echo($json['Mark'][0]);
 
 //After do the for loop to delete old ones
 
