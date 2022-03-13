@@ -18,7 +18,12 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
-$conn->query("SELECT * FROM liveviews WHERE username = '$user' > 0");
+$query = "SELECT * FROM liveviews WHERE find_in_set(`$user`, `username`)";
+if ($conn->query($query) === TRUE) {
+    echo "Database created successfully";
+   } else {
+    echo "Error creating database: " . $conn->error;
+}
 
 /*if ($userresult = )
 {
