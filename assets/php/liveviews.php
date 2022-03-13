@@ -4,6 +4,9 @@ $username = "u483325885_user";
 $password = "Totally_password4321";
 $database = "u483325885_database";
 
+
+$user = htmlspecialchars($_GET["username"]);
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
   
@@ -13,22 +16,35 @@ if ($conn->connect_error) {
 }
 
 date_default_timezone_set("America/New_York");
-$d=strtotime("+1 Minutes");
-$a=strtotime("+2 Minutes");
-$currentTime = date("d-m-Y h:i:s", $a);
-$otherTime = date("d-m-Y h:i:s", $d);
-echo($currentTime);
-echo($otherTime);
-echo("         ");
-$currentTime=strtotime($currentTime);
-$otherTime=strtotime($otherTime);
-if($currentTime > $otherTime)
+
+
+if ($userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$user'"))
 {
-    echo("Current is greater");
+    die($userresult);
+
+    $d=strtotime("+1 Minutes");
+    $pingTime = date("d-m-Y h:i:s", $d);
+
+    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Success";
+        //echo "New record created successfully";
+    } else {
+        //echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
-else {
-    echo("No, it's not!");
+else
+{
+    //add to db
+    echo("No RESULTS OF USERNAME!");
 }
+
+//After do the for loop to delete old ones
+
+            
+    
+$conn->close();
 
 
 ?>
