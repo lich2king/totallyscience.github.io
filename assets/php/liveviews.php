@@ -20,7 +20,7 @@ date_default_timezone_set("America/New_York");
 
 $query = "SELECT EXISTS(SELECT * FROM liveviews WHERE username = 'Zach')";
 
-if ($conn->query($query) === 1) {
+if ($conn->query($query) === '1') {
     die("BAH");
     $d=strtotime("+1 Minutes");
     $pingTime = date("d-m-Y h:i:s", $d);
