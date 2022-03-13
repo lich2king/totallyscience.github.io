@@ -18,5 +18,9 @@ $currentTime = date("d-m-Y h:i:s");
 $otherTime = date("d-m-Y h:i:s", $d);
 echo($currentTime);
 echo($otherTime);
+echo("         ")
+$currentTime=strtotime($currentTime);
+$otherTime=strtotime($otherTime);
+echo($currentTime > $otherTime)
 
 ?>
