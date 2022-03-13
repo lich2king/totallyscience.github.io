@@ -19,39 +19,33 @@ date_default_timezone_set("America/New_York");
 
 
 $query = "SELECT * FROM liveviews WHERE username = '$user'";
-$getUser = $conn->query($query);
-if ($getUser === TRUE) {
-    if($getUser != NULL)
-    {
-        $d=strtotime("+1 Minutes");
-        $pingTime = date("d-m-Y h:i:s", $d);
 
-        $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
+if ($conn->query($query) != NULL) {
+    $d=strtotime("+1 Minutes");
+    $pingTime = date("d-m-Y h:i:s", $d);
 
-        if ($conn->query($sql) === TRUE) {
-            echo "Success";
-            //echo "New record created successfully";
-        } else {
-            //echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    }
-    else
-    {
-        $d=strtotime("+1 Minutes");
-        $pingTime = date("d-m-Y h:i:s", $d);
-        $sql = "INSERT INTO liveviews (Username, lastping)
-        VALUES ('$user', '$pingTime')";
-    
-        if ($conn->query($sql) === TRUE) {
-            echo "Success";
+    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Success";
         //echo "New record created successfully";
-        } else {
+    } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
-        //echo "Error";
-        }
     }
-    
 
+} else {
+    $d=strtotime("+1 Minutes");
+    $pingTime = date("d-m-Y h:i:s", $d);
+    $sql = "INSERT INTO liveviews (Username, lastping)
+    VALUES ('$user', '$pingTime')";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Success";
+      //echo "New record created successfully";
+    } else {
+      //echo "Error: " . $sql . "<br>" . $conn->error;
+      //echo "Error";
+    }
 }
 
 
