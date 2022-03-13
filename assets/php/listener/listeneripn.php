@@ -29,7 +29,6 @@
 		if ($paymentStatus == "Completed") {
             $conn = new mysqli($servername, $username, $password, $database);
       
-            // Check connection
             if ($conn->connect_error) {
                 die("connection failed"); //. $conn->connect_error);
             }
