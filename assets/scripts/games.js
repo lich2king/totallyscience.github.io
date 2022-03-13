@@ -37,7 +37,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
             gameBtn.addEventListener('click', () => {
                 window.location.href = `./class.html?class=${name}`
             })
-            gameBtn.classList.add('gameButton', 'all')
+            gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
             const gameImg = mk('img')
             gameImg.src = data.image
