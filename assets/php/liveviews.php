@@ -62,7 +62,7 @@ $json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
 
 foreach($json as $value => $item){
   echo($json);
-  echo($json[1][$value]);
+  echo($json[$value]);
   echo($value);
   echo($item[0]);
   echo $item;
