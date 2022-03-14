@@ -61,11 +61,12 @@ $result = mysqli_query($conn, $query);
 $json = mysqli_fetch_all ($result, MYSQLI_ASSOC);
 
 foreach($json as $value => $item){
-  echo($json[$value]);
+  echo($json);
 
 }
 
-
+//  echo($item[1]);
+//echo $item;
 //After do the for loop to delete old ones
 
             
