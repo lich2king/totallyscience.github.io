@@ -92,42 +92,14 @@ document.getElementById('settings').children[0].src = `./assets/images/settings-
 
 
 
-/*if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //they are mobile redirect to mobile site
-    window.open("/mobile/index.html", "_self")
-} else {
-    //they are not mobile
-}*/
-if (typeof screen.orientation !== 'undefined') {
+var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
     window.open("/mobile/index.html", "_self")
 }
 
-
-
-
-function canAccessLink() {
-    var image = new Image();
-
-    image.onerror = function() {
-        console.log("can't access tsmain.co")
-    };
-    image.onload = function() {
-        const prevLink = document.referrer
-        if (localStorage.getItem("mainsiteshown") == null && !prevLink.includes("tsmain")) {
-            localStorage.setItem("mainsiteshown", "true")
-                //window.open("https://tsmain.co/", "_self")
-        } else {
-            localStorage.setItem("mainsiteshown", "true")
-        }
-    };
-    image.src = `https://tsmain.co/assets/logo.png`;
-}
-
-
-if (document.referrer.includes("tsmain")) {
-    localStorage.setItem("mainsiteshown", "true")
-}
-canAccessLink()
+function uid() {
+    return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
+};
