@@ -5,7 +5,7 @@ $password = "Totally_password4321";
 $database = "u483325885_database";
 
 
-$user = htmlspecialchars($_GET["username"]);
+$uid = htmlspecialchars($_GET["uid"]);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -19,7 +19,7 @@ date_default_timezone_set("America/New_York");
 
 
 
-$userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$user'");
+$userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$uid'");
 //die($userresult);
 if($userresult->num_rows == 0) {
     // row not found, do stuff...
@@ -27,7 +27,7 @@ if($userresult->num_rows == 0) {
     $d=strtotime("+1 Minutes");
     $pingTime = date("d-m-Y h:i:s", $d);
     $sql = "INSERT INTO liveviews (Username, lastping)
-    VALUES ('$user', '$pingTime')";
+    VALUES ('$uid', '$pingTime')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Success";
@@ -43,7 +43,7 @@ if($userresult->num_rows == 0) {
     $d=strtotime("+1 Minutes");
     $pingTime = date("d-m-Y h:i:s", $d);
 
-    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$user'";
+    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$uid'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Success";
@@ -60,7 +60,7 @@ $query = "SELECT username FROM liveviews WHERE 1";
 $result = mysqli_query($conn, $query);
 $json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
 
-foreach($json as $value){0
+foreach($json as $value){
   echo $value . "<br>";
 }
 
