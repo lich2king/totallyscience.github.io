@@ -58,7 +58,7 @@ if($userresult->num_rows == 0) {
 
 $query = "SELECT username FROM liveviews WHERE 1";
 $result = mysqli_query($conn, $query);
-$json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
+$json = mysqli_fetch_array ($result);
 
 foreach($json as $value => $item){
   echo $item;
