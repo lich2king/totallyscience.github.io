@@ -60,8 +60,8 @@ $query = "SELECT username FROM liveviews WHERE 1";
 $result = mysqli_query($conn, $query);
 $json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
 
-foreach($json as $value){
-  echo $value . "<br>";
+foreach($json as $value => $item){
+  echo $item[$i]['filename'];
 }
 
 
