@@ -61,6 +61,7 @@ $result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_assoc($result))
 {
+  echo($row["username"]);
   $selectedUid = $row["username"];
 
   $presentTime = date("d-m-Y h:i:s");
