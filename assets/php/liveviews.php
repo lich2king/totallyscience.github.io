@@ -61,8 +61,16 @@ $result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_assoc($result))
 {
-  echo($row["username"]);
+  $presentTime = date("d-m-Y h:i:s");
+  $pingTime = $row["lastping"];
 
+  $presentTime=strtotime($presentTime);
+  $pingTime=strtotime($pingTime);
+
+  if($pingTime < $presentTime)
+  {
+    echo("Old, delete now!");
+  }
 }
 
 /*echo(join(" ", $json)); 
