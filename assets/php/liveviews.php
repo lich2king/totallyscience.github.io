@@ -61,7 +61,7 @@ $result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_assoc($result))
 {
-  $selectedUid = $row["username"]
+  $selectedUid = $row["username"];
 
   $presentTime = date("d-m-Y h:i:s");
   $pingTime = $row["lastping"];
@@ -71,7 +71,8 @@ while($row = mysqli_fetch_assoc($result))
 
   if($pingTime < $presentTime)
   {
-    echo("HEI");
+    $query = "DELETE FROM liveviews WHERE username='$selectedUid'";
+    $result = mysqli_query($conn, $query);
   }
 }
 
