@@ -106,3 +106,23 @@ if (typeof screen.orientation !== 'undefined') {
 } else {
     //mobile
 }
+
+function uid() {
+    return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
+};
+
+function updateLiveViews() {
+    console.log("Here");
+    if (localStorage.getItem('liveUID') == null) {
+        localStorage.setItem('liveUID', uid());
+    }
+    fetch(`../assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}`);
+
+    let second = 1000
+    let minute = 60 * second
+    setTimeout(updateLiveViews, minute);
+}
+
+
+
+updateLiveViews();
