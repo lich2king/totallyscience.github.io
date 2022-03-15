@@ -105,6 +105,7 @@ function uid() {
 };
 
 function updateLiveViews() {
+    console.log("Here");
     if (localStorage.getItem('liveUID') == null) {
         localStorage.setItem('liveUID', uid());
     }
