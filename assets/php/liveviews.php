@@ -59,7 +59,7 @@ if($userresult->num_rows == 0) {
 $query = "SELECT username FROM liveviews";
 $result = mysqli_query($conn, $query);
 
-while($row = mysqli_fetch_assoc($result, MYSQLI_ASSOC))
+while($row = mysqli_fetch_assoc($result))
 {
   echo $row["username"];
   echo ('\n');
