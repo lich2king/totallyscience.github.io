@@ -23,7 +23,7 @@ if(!$pass || $pass != "Totally_admin4321") {
     die("Incorrect password.");
 }
 
-echo("<h1>Live Viewers</h1><table><tr><th>Viewer Count</th></tr>");
+echo("<h1>Live Viewers</h1><table><tr><th>Live Viewer Count</th></tr>");
 $select = $pdo->query("select username, lastping from liveviews");
 
 $liveViewerCount = 0;
