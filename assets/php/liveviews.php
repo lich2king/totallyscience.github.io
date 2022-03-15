@@ -71,14 +71,7 @@ while($row = mysqli_fetch_assoc($result))
 
   if($pingTime < $presentTime)
   {
-    $sql = "DELETE FROM liveviews WHERE username='$selectedUid'";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Success";
-        //echo "New record created successfully";
-    } else {
-        //echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    echo("HEI");
   }
 }
 
