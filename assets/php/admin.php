@@ -23,12 +23,16 @@ if(!$pass || $pass != "Totally_admin4321") {
     die("Incorrect password.");
 }
 
-echo("<h1>Live Viewers</h1><table><tr><th>Viewer UID</th><th>Time since pinged</th></tr>");
+echo("<h1>Live Viewers</h1><table><tr><th>Viewer Count</th></tr>");
 $select = $pdo->query("select username, lastping from liveviews");
 
+$liveViewerCount = 0;
+
 while($live = $select->fetch()) {
-    echo("<tr><td>" . $live["username"] . "</td><td>" . $live["lastping"] . "</td></tr>");
+    $liveViewerCount += 1;
 }
+
+echo("<tr><td>" . $liveViewerCount . "</td></tr>");
 
 echo("</table><h1>Game Stats</h1><table><tr><th>Game Name</th><th>Views</th><th>Reports</th></tr>");
 $select = $pdo->query("select name, views, reports from games order by views desc");
