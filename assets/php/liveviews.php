@@ -56,7 +56,7 @@ if($userresult->num_rows == 0) {
 }
 
 
-$query = "SELECT username FROM liveviews WHERE 2";
+$query = "SELECT username FROM liveviews";
 $result = mysqli_query($conn, $query);
 $json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
 
