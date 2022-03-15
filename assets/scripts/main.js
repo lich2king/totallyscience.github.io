@@ -109,4 +109,12 @@ function updateLiveViews() {
         localStorage.setItem('liveUID', uid());
     }
     fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}`);
+
+    let second = 1000
+    let minute = 60 * second
+    setTimeout(updateLiveViews, minute);
 }
+
+
+
+updateLiveViews();
