@@ -103,3 +103,10 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
 function uid() {
     return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
 };
+
+function updateLiveViews() {
+    if (localStorage.getItem('liveUID') == null) {
+        localStorage.setItem('liveUID', uid());
+    }
+    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}`);
+}
