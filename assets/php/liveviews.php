@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $query);
 while($row = mysqli_fetch_assoc($result, MYSQLI_ASSOC))
 {
   echo $row["username"];
-  echo ('\n')
+  echo ('\n');
 }
 
 /*echo(join(" ", $json)); 
