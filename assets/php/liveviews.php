@@ -58,9 +58,14 @@ if($userresult->num_rows == 0) {
 
 $query = "SELECT username FROM liveviews";
 $result = mysqli_query($conn, $query);
-$json = mysqli_fetch_array ($result, MYSQLI_ASSOC);
 
-echo(join(" ", $json)); 
+while($row = mysqli_fetch_assoc($result, MYSQLI_ASSOC))
+{
+  echo $row["username"];
+  echo ('\n')
+}
+
+/*echo(join(" ", $json)); 
 
 echo(count($json));
 foreach($json as $value => $item){
@@ -69,7 +74,7 @@ foreach($json as $value => $item){
   echo($value);
   echo($item[0]);
   echo $item;
-}
+}*/
 
 
 //After do the for loop to delete old ones
