@@ -56,13 +56,13 @@ if($userresult->num_rows == 0) {
 }
 
 
-$query = "SELECT username FROM liveviews";
+$query = "SELECT * FROM liveviews";
 $result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_assoc($result))
 {
-  echo $row["username"];
-  echo ('\n');
+  $usersUid = $row["username"];
+
 }
 
 /*echo(join(" ", $json)); 
