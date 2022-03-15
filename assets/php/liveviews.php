@@ -61,7 +61,7 @@ $result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_assoc($result))
 {
-  $usersUid = $row["username"];
+  echo($row["username"]);
 
 }
 
