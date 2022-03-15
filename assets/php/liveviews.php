@@ -77,21 +77,6 @@ while($row = mysqli_fetch_assoc($result))
   }
 }
 
-/*echo(join(" ", $json)); 
-
-echo(count($json));
-foreach($json as $value => $item){
-  echo($json);
-  echo($json[$value]);
-  echo($value);
-  echo($item[0]);
-  echo $item;
-}*/
-
-
-//After do the for loop to delete old ones
-
-            
     
 $conn->close();
 
