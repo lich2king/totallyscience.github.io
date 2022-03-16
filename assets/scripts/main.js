@@ -118,4 +118,4 @@ function updateLiveViews() {
 
 
 
-updateLiveViews();
+//updateLiveViews();

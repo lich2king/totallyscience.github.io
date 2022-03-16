@@ -125,4 +125,4 @@ function updateLiveViews() {
 
 
 
-updateLiveViews();
+//updateLiveViews();
