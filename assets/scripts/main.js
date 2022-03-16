@@ -105,17 +105,30 @@ function uid() {
 };
 
 function updateLiveViews() {
-    console.log("Here");
     if (localStorage.getItem('liveUID') == null) {
         localStorage.setItem('liveUID', uid());
     }
-    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}`);
+    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=0`);
 
     let second = 1000
     let minute = 60 * second
-    setTimeout(updateLiveViews, minute);
+        //setTimeout(updateLiveViews, minute);
+}
+
+function userExitLiveViews() {
+    if (localStorage.getItem('liveUID') == null) {
+        return;
+    }
+    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=1`);
+
+    let second = 1000
+    let minute = 60 * second
+        //setTimeout(updateLiveViews, minute);
 }
 
 
+window.addEventListener("beforeunload", function(event) {
 
-//updateLiveViews();
+});
+
+updateLiveViews();

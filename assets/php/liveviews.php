@@ -6,6 +6,7 @@ $database = "u483325885_database";
 
 
 $uid = htmlspecialchars($_GET["uid"]);
+$leave = htmlspecialchars($_GET["leave"]);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -18,32 +19,40 @@ if ($conn->connect_error) {
 date_default_timezone_set("America/New_York");
 
 
+if($leave == '0')
+{
+    $userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$uid'");
+    //die($userresult);
+    if($userresult->num_rows == 0) {
+        // row not found, do stuff...
+    
+        $pingTime = date("d-m-Y h:i:s");
+        $sql = "INSERT INTO liveviews (Username, lastping)
+        VALUES ('$uid', '$pingTime')";
+    
+        if ($conn->query($sql) === TRUE) {
+            echo "Success";
+          //echo "New record created successfully";
+        } else {
+          //echo "Error: " . $sql . "<br>" . $conn->error;
+          //echo "Error";
+        }
 
-$userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$uid'");
-//die($userresult);
-if($userresult->num_rows == 0) {
-    // row not found, do stuff...
-    
-    $d=strtotime("+1 Minutes");
-    $pingTime = date("d-m-Y h:i:s", $d);
-    $sql = "INSERT INTO liveviews (Username, lastping)
-    VALUES ('$uid', '$pingTime')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Success";
-      //echo "New record created successfully";
     } else {
-      //echo "Error: " . $sql . "<br>" . $conn->error;
-      //echo "Error";
+        // do other stuff...
+        $pingTime = date("d-m-Y h:i:s");
+
+        $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$uid'";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Success";
+            //echo "New record created successfully";
+        } else {
+            //echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
-
 } else {
-    // do other stuff...
-    
-    $d=strtotime("+1 Minutes");
-    $pingTime = date("d-m-Y h:i:s", $d);
-
-    $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$uid'";
+    $sql = "DELETE FROM liveviews WHERE username='$uid'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Success";
@@ -51,12 +60,11 @@ if($userresult->num_rows == 0) {
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-
 }
 
 
-$query = "SELECT * FROM liveviews";
+
+/*$query = "SELECT * FROM liveviews";
 $result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_assoc($result))
@@ -65,7 +73,7 @@ while($row = mysqli_fetch_assoc($result))
   echo($row["username"]);
   $selectedUid = $row["username"];
 
-  $d=strtotime("-30 seconds");
+  $d=strtotime("-15 minutes");
   $presentTime = date("d-m-Y h:i:s", $d);
   $pingTime = $row["lastping"];
 
@@ -77,7 +85,7 @@ while($row = mysqli_fetch_assoc($result))
     $query = "DELETE FROM liveviews WHERE username='$selectedUid'";
     $newResult = mysqli_query($conn, $query);
   }
-}
+}*/
 
     
 $conn->close();
