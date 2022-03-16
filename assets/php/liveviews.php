@@ -21,7 +21,6 @@ date_default_timezone_set("America/New_York");
 
 if($leave == '0')
 {
-  die("AQUI");
     $userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$uid'");
     //die($userresult);
     if($userresult->num_rows == 0) {
@@ -53,7 +52,6 @@ if($leave == '0')
         }
     }
 } else {
-  die("ALLA");
     $sql = "DELETE FROM liveviews WHERE username='$uid'";
 
     if ($conn->query($sql) === TRUE) {
