@@ -65,7 +65,7 @@ while($row = mysqli_fetch_assoc($result))
   echo($row["username"]);
   $selectedUid = $row["username"];
 
-  $d=strtotime("+30 seconds");
+  $d=strtotime("-30 seconds");
   $presentTime = date("d-m-Y h:i:s", $d);
   $pingTime = $row["lastping"];
 
