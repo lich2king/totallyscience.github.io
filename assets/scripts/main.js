@@ -128,7 +128,7 @@ function userExitLiveViews() {
 
 
 window.addEventListener("beforeunload", function(event) {
-
+    userExitLiveViews();
 });
 
 updateLiveViews();
