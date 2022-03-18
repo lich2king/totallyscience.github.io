@@ -133,8 +133,8 @@ self.addEventListener("activate", (event) => {
         return Promise.all(
           cacheNames.map(function(cacheName) {
             if (CACHE_NAME + '_v' + OFFLINE_VERSION !== cacheName && cacheName.startsWith('ts_cache')) {
-                console.log(cacheName)
-              return caches.delete(cacheName);
+                console.log('SW: updated cache version');
+                return caches.delete(cacheName);
             }
           })
         );
@@ -149,7 +149,6 @@ self.addEventListener("activate", (event) => {
 self.addEventListener('fetch', (e) => {
   e.respondWith((async () => {
     const r = await caches.match(e.request);
-    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
     if (r) { return r; }
     const response = await fetch(e.request);
     return response;
