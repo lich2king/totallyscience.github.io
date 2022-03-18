@@ -57,7 +57,7 @@ html {
 /* searchbar */
 
 input[type='text'] {
-    width: 15%;
+    width: 15vw;
     box-sizing: border-box;
     border: 2px solid var(--dark-color);
     border-radius: 4px;
@@ -75,7 +75,7 @@ input[type='text'] {
 }
 
 input[type='text']:focus {
-    width: 25%;
+    width: 20vw;
 }
 
 
@@ -86,6 +86,7 @@ input[type='text']:focus {
     text-decoration: underline;
     cursor: pointer;
 }
+
 #load-games:hover {
     color: var(--accent-color);
 }
