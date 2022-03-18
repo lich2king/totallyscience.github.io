@@ -138,7 +138,7 @@ window.addEventListener('scroll', () => {
         setTimeout(() => {
             displayGames();
             hasLoaded = false;
-        }, 50);
+        }, 5);
     }
 });
 
