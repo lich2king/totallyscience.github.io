@@ -56,37 +56,6 @@
         </div>
     </div>
 
-    <section id="abc">
-        <div>
-            <p class="letter not-selectable">A</p>
-            <p class="letter not-selectable">B</p>
-            <p class="letter not-selectable">C</p>
-            <p class="letter not-selectable">D</p>
-            <p class="letter not-selectable">E</p>
-            <p class="letter not-selectable">F</p>
-            <p class="letter not-selectable">G</p>
-            <p class="letter not-selectable">H</p>
-            <p class="letter not-selectable">I</p>
-            <p class="letter not-selectable">J</p>
-            <p class="letter not-selectable">K</p>
-            <p class="letter not-selectable">L</p>
-            <p class="letter not-selectable">M</p>
-            <p class="letter not-selectable">N</p>
-            <p class="letter not-selectable">O</p>
-            <p class="letter not-selectable">P</p>
-            <p class="letter not-selectable">Q</p>
-            <p class="letter not-selectable">R</p>
-            <p class="letter not-selectable">S</p>
-            <p class="letter not-selectable">T</p>
-            <p class="letter not-selectable">U</p>
-            <p class="letter not-selectable">V</p>
-            <p class="letter not-selectable">W</p>
-            <p class="letter not-selectable">X</p>
-            <p class="letter not-selectable">Y</p>
-            <p class="letter not-selectable">Z</p>
-        </div>
-    </section>
-
     <div class="categories">
         <button name="all" onclick="" class="selectedCategory categoryButton not-selectable">All</button>
         <button name="new" onclick="" class="unselectedCategory categoryButton not-selectable">New<span><img id="bolt" src="./assets/images/boltcategory.svg"></span></button>
@@ -101,13 +70,15 @@
         <button name="horror" onclick="" class="unselectedCategory categoryButton not-selectable">Horror</button>
     </div>
 
-    <div class="search-bar" style="margin-top: 25px" align="center">
+    <div class="search-bar" style="margin-top: 25px; margin-left: 50%; transform: translate(-50%); text-align: center;">
         <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
     </div>
 
     <section id="games">
-        <div align="center" id="games-div"></div>
+
     </section>
+
+    <p id="load-games" onclick="displayGames();">load more games</p>
 
 
     <div id="requestButton">
@@ -140,7 +111,7 @@
     <script>
         const title = document.getElementsByTagName('title')[0];
         let gamesJS = document.createElement("script");
-        gamesJS.src = `assets/scripts/games.js?${new Date().getTime()}`;
+        gamesJS.src = `assets/scripts/classes.js?${new Date().getTime()}`;
         gamesJS.defer = true;
         gamesJS.async = true;
         document.getElementsByTagName('section')[0].insertAdjacentElement('beforebegin', gamesJS);

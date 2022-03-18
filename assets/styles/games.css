@@ -81,23 +81,38 @@ input[type='text']:focus {
 
 /* games */
 
-#games div button {
+#load-games {
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#load-games:hover {
+    color: var(--accent-color);
+}
+
+#games {
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 37.5%;
+}
+
+#games button {
     display: flex;
     align-items: left;
     justify-content: left;
-    width: 37.5%;
+    width: 100%;
     height: 15%;
     text-align: left;
     background-color: var(--accent-color);
     border: 6px solid var(--accent-color);
     border-radius: 10px;
-    margin-bottom: 2%;
+    margin-bottom: 15px;
     cursor: pointer;
     border-left: 4px;
     transition: 0.2s;
 }
 
-#games div button:hover {
+#games button:hover {
     transform: scale(1.02);
     -moz-box-shadow: 3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
@@ -109,20 +124,20 @@ input[type='text']:focus {
     content: url(../images/bolt.svg);
 }
 
-#games div button img {
+#games button img {
     border-radius: 10px;
     height: 100px;
     width: 30%;
     margin-right: 15px;
 }
 
-#games div button div {
+#games button div {
     margin-top: 1.5%;
     width: 100%;
     margin-bottom: 2%;
 }
 
-#games div button div p {
+#games button div p {
     color: var(--light-color);
     font-size: 2vw;
     margin-bottom: 30px;
@@ -131,48 +146,13 @@ input[type='text']:focus {
     line-height: 6px;
 }
 
-#games div button div p2 {
+#games button div p2 {
     color: var(--light-color);
     font-size: 13px;
 }
 
 .hideUnsorted {
     visibility: hidden;
-}
-
-
-/* find game by letter */
-
-#abc {
-    color: var(--dark-color);
-    float: right;
-    margin-right: 40px;
-    height: 100%;
-}
-
-#abc div {
-    font-size: 12pt;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-}
-
-#abc div p {
-    cursor: pointer;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding-right: 15px;
-    padding-left: 25px;
-}
-
-#abc div p:hover {
-    margin-left: -10px;
-    transition: all 0.2s ease;
-}
-
-#abc div p {
-    margin-left: 0px;
-    transition: all 0.2s ease;
 }
 
 #requestButton {
