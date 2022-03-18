@@ -110,11 +110,11 @@
             const loggedIn = res["isLoggedIn"]
             const name = res["username"]
             if (loggedIn != "true") {
-                window.open('./signup.html', '_self')
+                location.href = './signup.html';
             }
             document.getElementById('usernameSpan').innerText = name
         } else {
-            window.open('./signup.html', '_self')
+            location.href = './signup.html';
         }
     });
 
