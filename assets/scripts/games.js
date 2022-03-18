@@ -1,8 +1,8 @@
 // Thank you stack overflow.
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {})
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {})
 
 const weekAgo = new Date()
 weekAgo.setDate(weekAgo.getDate() - 7)
@@ -55,8 +55,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
             gameBtn.appendChild(gameText)
             existingSection.appendChild(gameBtn)
 
-            if (gamesInRow >= 9)
-            {
+            if (gamesInRow >= 9) {
                 const adDiv = document.createElement("div")
                 adDiv.classList.add("adDiv")
                 const innerAdDiv = document.createElement("div")
@@ -68,7 +67,7 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 adScript.async = true
                 adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
                 adScript.crossOrigin = "anonymous"
-                
+
                 const adIns = document.createElement("ins")
                 adIns.setAttribute("class", "adsbygoogle")
                 adIns.setAttribute("style", "display:inline-block;width:525px;height:105px")
@@ -76,8 +75,8 @@ fetch(`./assets/games.json?${new Date().getTime()}`)
                 adIns.setAttribute("data-ad-slot", "2075384482")
 
                 const adScriptEnd = document.createElement("script")
-                adScriptEnd.innerText="(adsbygoogle = window.adsbygoogle || []).push({});"
-                
+                adScriptEnd.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});"
+
                 innerAdDiv.insertAdjacentElement('afterend', adScript);
                 innerAdDiv.insertAdjacentElement('afterend', adIns);
                 innerAdDiv.insertAdjacentElement('afterend', adScriptEnd);
@@ -95,29 +94,26 @@ const buttons = $qsa('.categoryButton, #bolt')
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        
+
         if (e.target.id == 'bolt') {
-            selectedTopic = e.target.parentNode.name
+            selectedTopic = e.target.parentNode.parentNode.name
         } else {
             selectedTopic = e.target.name
         }
-        
+
         const buttons = $qsa('.categoryButton')
         const games = $qsa('.gameButton')
-        
+
         buttons.forEach((btn) => {
             btn.classList.add('unselectedCategory')
             btn.classList.remove('selectedCategory')
         })
         const adDivs = $qsa('.adDiv')
-        if(selectedTopic != 'all')
-        {
+        if (selectedTopic != 'all') {
             adDivs.forEach((d) => {
                 d.style = "display:none"
             })
-        }
-        else
-        {
+        } else {
             adDivs.forEach((d) => {
                 d.style = "display:"
             })
@@ -148,14 +144,11 @@ buttons.forEach((button) => {
 const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
     const adDivs = $qsa('.adDiv')
-    if(searchBar.value != '')
-    {
+    if (searchBar.value != '') {
         adDivs.forEach((d) => {
             d.style = "display:none"
         })
-    }
-    else
-    {
+    } else {
         adDivs.forEach((d) => {
             d.style = "display:"
         })
@@ -184,10 +177,10 @@ letters.forEach((letter) => {
         const section = $(letter)
         if (section == null) return
         const sectionBox = section.getBoundingClientRect()
-        //-90 acts as an offsett so the top button isn't off screen
+            //-90 acts as an offsett so the top button isn't off screen
         const scroll = window.scrollY + sectionBox.top - 90
 
-        window.scrollTo({top: scroll, behavior: 'smooth'})
+        window.scrollTo({ top: scroll, behavior: 'smooth' })
     })
 })
 

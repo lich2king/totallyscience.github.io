@@ -106,7 +106,7 @@ input[type='text']:focus {
 
 .new::after {
     font-size: 2vw;
-    content: ' \26A1';
+    content: url(../images/bolt.svg);
 }
 
 #games div button img {
