@@ -133,7 +133,7 @@ hasLoaded = false;
 window.addEventListener('scroll', () => {
     let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
     
-    if (window.scrollY + window.innerHeight >= _docHeight + - 50 && hasLoaded == false) {
+    if (window.scrollY + window.innerHeight >= _docHeight + - 100 && hasLoaded == false) {
         hasLoaded = true;
         setTimeout(() => {
             displayGames();
