@@ -120,7 +120,7 @@
 
     function Logout() {
         fetch(`https://${baseUrl}/assets/php/logout.php`).then(() => {
-            window.open('./login.html', '_self');
+            location.href = './login.html';
         });
 
     }

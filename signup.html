@@ -124,7 +124,7 @@
             loggedIn = res["isLoggedIn"]
         }
         if (loggedIn == "true") {
-            window.open('./profile.html', '_self')
+            location.href = './profile.html';
         }
     });
 
@@ -233,7 +233,7 @@
 
             await fetch(`https://${baseUrl}/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                 if (res == "Success") {
-                    window.open("./profile.html")
+                    location.href = './profile.html';
                 } else {
 
                 }

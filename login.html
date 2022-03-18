@@ -98,7 +98,7 @@
         }
 
         if (loggedIn == "true") {
-            window.open('./profile.html', '_self')
+            location.href = './profile.html';
         }
     });
 
@@ -114,7 +114,7 @@
                 if (res == "Success") {
                     errorText.style = "text-align:center; color: green;"
                     errorText.innerText = ("*" + res)
-                    window.open('./profile.html', '_self')
+                    location.href = './profile.html';
                 } else {
                     errorText.innerText = ("*" + res)
                 }
