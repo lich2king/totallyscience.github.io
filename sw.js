@@ -110,7 +110,7 @@ const URLS_TO_CACHE = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
-      const cache = await caches.open(CACHE_NAME);
+      const cache = await caches.open(CACHE_NAME + '_v' + OFFLINE_VERSION);
       // Setting {cache: 'reload'} in the new request will ensure that the
       // response isn't fulfilled from the HTTP cache; i.e., it will be from
       // the network.
@@ -128,6 +128,17 @@ self.addEventListener("activate", (event) => {
       if ("navigationPreload" in self.registration) {
         await self.registration.navigationPreload.enable();
       }
+
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.map(function(cacheName) {
+            if (CACHE_NAME + '_v' + OFFLINE_VERSION !== cacheName && cacheName.startsWith('ts_cache')) {
+                console.log(cacheName)
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
     })()
   );
 
@@ -141,9 +152,6 @@ self.addEventListener('fetch', (e) => {
     console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
     if (r) { return r; }
     const response = await fetch(e.request);
-    const cache = await caches.open(CACHE_NAME);
-    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-    cache.put(e.request, response.clone());
     return response;
   })());
 });
