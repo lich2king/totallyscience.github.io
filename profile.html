@@ -109,7 +109,6 @@
         if (res != null) {
             const loggedIn = res["isLoggedIn"]
             const name = res["username"]
-            alert(loggedIn)
             if (loggedIn != "true") {
                 location.href = './signup.html';
             }
