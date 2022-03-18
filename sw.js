@@ -147,6 +147,8 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener('fetch', (e) => {
+  if (e.request.url.startsWith('https://pagead')) return;
+
   e.respondWith((async () => {
     const r = await caches.match(e.request);
     if (r) { return r; }
