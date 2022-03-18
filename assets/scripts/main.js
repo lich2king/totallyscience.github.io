@@ -135,3 +135,10 @@ window.addEventListener("beforeunload", function(event) {
 });
 
 updateLiveViews();
+
+// register service worker
+window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+});
