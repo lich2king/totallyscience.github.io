@@ -2,6 +2,9 @@
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = "ts_cache";
 const URLS_TO_CACHE = [
+    //logo
+    '/assets/images/logo.png',
+    //game images
     '/assets/game_images/retrobowl.jpg',
     '/assets/game_images/papaspizza.png',
     '/assets/game_images/driftboss.jpeg',
