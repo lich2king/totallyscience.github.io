@@ -87,7 +87,7 @@ if (localStorage.getItem("disguise") == null) {
 }
 
 document.body.setAttribute("theme", localStorage.getItem("theme"))
-document.getElementById('settings').children[0].src = `./assets/images/settings-${localStorage.getItem("theme")}.svg`
+document.getElementById('settings').children[0].src = `/assets/images/settings-${localStorage.getItem("theme")}.svg`
 
 
 

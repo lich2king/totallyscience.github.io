@@ -42,5 +42,4 @@ $('survey').addEventListener('submit', (e) => {
         }
         console.log(loggedIn)
     });
-
 })
