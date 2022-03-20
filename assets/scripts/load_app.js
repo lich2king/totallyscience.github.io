@@ -62,7 +62,7 @@ window.addEventListener('load', () => {
 
 
 
-/*window.addEventListener(
+window.addEventListener(
     'keydown',
     function(e) {
         if (e.key == 'Enter') {
@@ -80,7 +80,7 @@ setTimeout(function() {
     if (!tutOpen) {
         $('tutText').style = "z-index: 1;"
     }
-}, 6500);*/
+}, 6500);
 
 
 
