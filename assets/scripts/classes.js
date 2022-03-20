@@ -15,10 +15,10 @@ let sorted;
 function displayGames() {
     for (let x = displayedGames; x < displayedGames + maxGames; x++) {
         let keys = Object.keys(sorted);
-        
+
         if (keys.length <= 6) {
             document.getElementById('load-games').style.display = 'none';
-            
+
             if (x >= keys.length) {
                 continue;
             }
@@ -70,7 +70,7 @@ function displayGames() {
 
         gameBtn.appendChild(gameText)
         existingSection.appendChild(gameBtn)
-        
+
         if (x + 1 == displayedGames + maxGames / 2) {
             const adDiv = document.createElement("div")
             adDiv.classList.add("adDiv")
@@ -125,8 +125,8 @@ function loadTopic() {
 hasLoaded = false;
 window.addEventListener('scroll', () => {
     let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-    
-    if (window.scrollY + window.innerHeight >= _docHeight + - 100 && hasLoaded == false) {
+
+    if (window.scrollY + window.innerHeight >= _docHeight + -300 && hasLoaded == false) {
         hasLoaded = true;
         setTimeout(() => {
             displayGames();
@@ -169,7 +169,7 @@ buttons.forEach((button) => {
         selected.classList.remove('unselectedCategory');
 
         document.getElementById('searchBar').value = '';
-        
+
         loadTopic();
     })
 })
@@ -177,12 +177,12 @@ buttons.forEach((button) => {
 const searchBar = $('searchBar')
 searchBar.addEventListener('keyup', () => {
     const input = searchBar.value.toUpperCase();
-    
+
     if (input == '' || input == null) {
         loadTopic();
         return;
     }
-    
+
     document.getElementById('load-games').style.display = 'none';
     gamesDiv.innerHTML = '';
 
@@ -192,22 +192,22 @@ searchBar.addEventListener('keyup', () => {
                 const data = games[game];
                 const sectionLetter = game[0].toLowerCase();
                 let existingSection = $(sectionLetter);
-        
+
                 if (existingSection == null) {
                     const section = mk('section')
                     section.id = sectionLetter
                     gamesDiv.appendChild(section)
                     existingSection = section
                 }
-        
+
                 const gameBtn = mk('button')
                 gameBtn.game = game
                 gameBtn.classList = data.tags.join(' ')
                 const gameDate = new Date(data.date_added)
-        
+
                 const weekAgo = new Date();
                 weekAgo.setDate(weekAgo.getDate() - 7);
-        
+
                 if (gameDate > weekAgo) {
                     gameBtn.classList.add('new')
                 }
@@ -215,42 +215,42 @@ searchBar.addEventListener('keyup', () => {
                     window.location.href = `./class.html?class=${game}`
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
-        
+
                 const gameImg = mk('img')
                 gameImg.src = data.image
                 gameBtn.appendChild(gameImg)
-        
+
                 const gameText = mk('div')
                 const gameTitle = mk('p')
                 gameTitle.innerText = game
                 gameText.appendChild(gameTitle)
-        
+
                 const gameDesc = mk('p2')
                 gameDesc.innerText = data.description
                 gameText.appendChild(gameDesc)
-        
+
                 gameBtn.appendChild(gameText)
                 existingSection.appendChild(gameBtn)
             } else if (games[game].tags.includes(selectedTopic)) {
                 const data = games[game];
                 const sectionLetter = game[0].toLowerCase();
                 let existingSection = $(sectionLetter);
-        
+
                 if (existingSection == null) {
                     const section = mk('section')
                     section.id = sectionLetter
                     gamesDiv.appendChild(section)
                     existingSection = section
                 }
-        
+
                 const gameBtn = mk('button')
                 gameBtn.game = game
                 gameBtn.classList = data.tags.join(' ')
                 const gameDate = new Date(data.date_added)
-        
+
                 const weekAgo = new Date();
                 weekAgo.setDate(weekAgo.getDate() - 7);
-        
+
                 if (gameDate > weekAgo) {
                     gameBtn.classList.add('new')
                 }
@@ -258,20 +258,20 @@ searchBar.addEventListener('keyup', () => {
                     window.location.href = `./class.html?class=${game}`
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
-        
+
                 const gameImg = mk('img')
                 gameImg.src = data.image
                 gameBtn.appendChild(gameImg)
-        
+
                 const gameText = mk('div')
                 const gameTitle = mk('p')
                 gameTitle.innerText = game
                 gameText.appendChild(gameTitle)
-        
+
                 const gameDesc = mk('p2')
                 gameDesc.innerText = data.description
                 gameText.appendChild(gameDesc)
-        
+
                 gameBtn.appendChild(gameText)
                 existingSection.appendChild(gameBtn)
             }
