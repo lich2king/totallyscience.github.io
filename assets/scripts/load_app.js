@@ -39,6 +39,10 @@ window.addEventListener('load', () => {
 
             document.getElementById('app_frame').src = appData.iframe_url;
 
+            if (location.hostname == 'actuallyhistory.com') {
+                document.getElementById('app_frame').src = appData.proxy_url;
+            }
+
             /*if (appData.alt_url != "") {
                 fetch(appData.iframe_url).then(res => {
                     if (!res.status) {

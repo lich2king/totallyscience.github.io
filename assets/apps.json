@@ -3,42 +3,49 @@
         "image": "./assets/images/app_icons/youtube-red-square.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-",
+        "proxy_url": "https://youtube.com",
         "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
     },
     "Google": {
         "image": "./assets/images/app_icons/google.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F",
+        "proxy_url": "https://google.com",
         "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
     },
     "Firefox": {
         "image": "./assets/images/app_icons/firefox.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "./apps/firefox.html",
+        "proxy_url": "./apps/firefox.html",
         "alt_url": ""
     },
     "Discord": {
         "image": "./assets/images/app_icons/discord.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-dksaopd%2Ccmm-arp",
+        "proxy_url": "https://discord.com",
         "alt_url": ""
     },
     "Tik Tok": {
         "image": "./assets/images/app_icons/tiktok.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2Fdopymu%3Diq_aory%5Dupl%3F1%24iq_drmm%5Dwgbcpr%3Dt1",
+        "proxy_url": "https://tiktok.com",
         "alt_url": ""
     },
     "Twitch": {
         "image": "./assets/images/app_icons/twitch.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Ctuivcj.vv-",
+        "proxy_url": "https://twitch.tv",
         "alt_url": ""
     },
     "Mathway": {
         "image": "./assets/images/app_icons/mathway.png",
         "date_added": "2022-02-25T23:48:32.617Z",
         "iframe_url": "https://totallygeometry.com/service/hvtrs8%2F-wuw%2Cmctjwcy%2Ccmm-Anggbpa",
+        "proxy_url": "https://www.mathway.com",
         "alt_url": ""
     }
 
