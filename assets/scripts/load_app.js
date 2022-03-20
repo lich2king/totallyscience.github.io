@@ -36,11 +36,10 @@ window.addEventListener('load', () => {
             const appData = apps[appName];
             if (appData == null) window.location.href = '../apps.html';
 
-
-            document.getElementById('app_frame').src = appData.iframe_url;
-
             if (location.hostname == 'actuallyhistory.com') {
                 document.getElementById('app_frame').src = appData.proxy_url;
+            } else {
+                document.getElementById('app_frame').src = appData.iframe_url;
             }
 
             /*if (appData.alt_url != "") {
