@@ -284,4 +284,4 @@ fetch(`./assets/games.json?${new Date().getTime()}`).then((response) => response
     loadTopic();
 });
 
-document.getElementById('searchBar').style.backgroundImage = `url(./assets/images/magnifying-${localStorage.getItem("theme")}.svg)`;
+document.getElementById('searchBar').style.backgroundImage = `url(/assets/images/magnifying-${localStorage.getItem("theme")}.svg)`;
