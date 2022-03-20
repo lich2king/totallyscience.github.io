@@ -936,7 +936,7 @@
         "tags": ["multiplayer"],
         "date_added": "2022-02-25T04:09:28.911Z",
         "developer": "StratfordJames",
-        "iframe_url": "https://scratch.mit.edu/projects/418924306/embed"
+        "iframe_url": "./games/scratch/minigolfonline.html"
     },
     "Cat Trap": {
         "description": "Try to out smart the cat! Don't let him escape.",
