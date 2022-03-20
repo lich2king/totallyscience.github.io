@@ -35,13 +35,9 @@ window.addEventListener('load', () => {
         }).then((apps) => {
             const appData = apps[appName];
             if (appData == null) window.location.href = '../apps.html';
-            console.log(location.hostname)
 
-            if (location.hostname == 'actuallyhistory.com') {
-                document.getElementById('app_frame').src = appData.proxy_url;
-            } else {
-                document.getElementById('app_frame').src = appData.iframe_url;
-            }
+
+            document.getElementById('app_frame').src = appData.iframe_url;
 
             /*if (appData.alt_url != "") {
                 fetch(appData.iframe_url).then(res => {
