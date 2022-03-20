@@ -3,7 +3,7 @@
 }
 
 .text-fade {
-    font-size: 33px;
+    font-size: 35px;
     opacity: 1;
     transition: opacity 1s ease;
 }
