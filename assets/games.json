@@ -146,7 +146,7 @@
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "HyperPixel",
-        "iframe_url": "./games/scratch/flappybird.html",
+        "iframe_url": "https://scratch.mit.edu/projects/17828009/embed",
         "scratch_url": "https://scratch.mit.edu/projects/17828009/embed"
     },
 
@@ -167,7 +167,7 @@
         "tags": ["mobile", "horror"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
-        "iframe_url": "./games/scratch/fnaf2.html",
+        "iframe_url": "https://scratch.mit.edu/projects/469219637/embed/",
         "scratch_url": "https://scratch.mit.edu/projects/469219637/embed/"
     },
 
@@ -188,7 +188,7 @@
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
-        "iframe_url": "./games/scratch/geometrydash.html",
+        "iframe_url": "https://scratch.mit.edu/projects/105500895/embed",
         "scratch_url": "https://scratch.mit.edu/projects/105500895/embed"
     },
 
@@ -199,7 +199,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "DarkLava",
-        "iframe_url": "./games/scratch/jetpackjoyride.html"
+        "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
     },
 
     "Minigolf": {
@@ -229,7 +229,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
-        "iframe_url": "./games/scratch/paperminecraft.html"
+        "iframe_url": "https://scratch.mit.edu/projects/10128407/embed"
     },
 
     "8Ball Pool": {
@@ -429,7 +429,7 @@
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Griffpatch",
-        "iframe_url": "./games/scratch/Appel%20v1.html"
+        "iframe_url": "https://scratch.mit.edu/projects/60917032/embed"
     },
     "Paper.io": {
         "description": "Invade as many lands as possible and become the biggest on the server!",
@@ -510,7 +510,7 @@
         "tags": ["horror"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "GamingRaccoon44",
-        "iframe_url": "./games/scratch/fnafworld.html"
+        "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
     },
     "FNAF 3": {
         "description": "30 years after the events that took place in 5 Nights at Freddy's.",
@@ -519,7 +519,7 @@
         "tags": ["horror"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Fnafphoneguy123",
-        "iframe_url": "./games/scratch/fnaf3.html"
+        "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
     },
     "Getting Over It": {
         "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
@@ -528,7 +528,7 @@
         "tags": ["hard", "mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Griffpatch",
-        "iframe_url": "./games/scratch/gettingoverit.html",
+        "iframe_url": "https://scratch.mit.edu/projects/389464290/embed",
         "scratch_url": "https://scratch.mit.edu/projects/389464290/embed"
     },
     "Drift Hunters": {
@@ -619,7 +619,7 @@
         "tags": ["mobile"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
-        "iframe_url": "./games/scratch/ballblast.html",
+        "iframe_url": "https://scratch.mit.edu/projects/472077983/embed",
         "scratch_url": "https://scratch.mit.edu/projects/472077983/embed"
     },
     "Car Parking Chaos": {
@@ -629,7 +629,7 @@
         "tags": ["car"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Reevo_56",
-        "iframe_url": "./games/scratch/carparkingchaos.html"
+        "iframe_url": "https://scratch.mit.edu/projects/618161013/embed"
     },
     "Bubble Popper": {
         "description": "Pop the bubbles by matching the correct colors. Try to beat all the levels!",
@@ -638,7 +638,7 @@
         "tags": ["mobile"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Griffpatch",
-        "iframe_url": "./games/scratch/bubblescratch.html",
+        "iframe_url": "https://scratch.mit.edu/projects/222972802/embed",
         "scratch_url": "https://scratch.mit.edu/projects/222972802/embed"
     },
     "Happy Room": {
@@ -738,7 +738,7 @@
         "tags": ["horror"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Kk32423",
-        "iframe_url": "./games/scratch/fnaf4.html"
+        "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
     },
     "Pokemon Fire Red": {
         "description": "Start your journey in Pallet Town where you choose your Pokemon. Take down Team Rocket!",
@@ -792,7 +792,7 @@
         "tags": [""],
         "date_added": "2022-01-20T20:31:34.561Z",
         "developer": "Coltroc",
-        "iframe_url": "./games/scratch/minercat2.html"
+        "iframe_url": "https://scratch.mit.edu/projects/351793769/embed"
     },
     "CSGO Surf": {
         "description": "A popular game mode in CSGO. You'll be gliding along slopes and flying off of surfaces.",
@@ -801,7 +801,7 @@
         "tags": [""],
         "date_added": "2022-01-21T14:05:26.922Z",
         "developer": "Yoshi_studios32",
-        "iframe_url": "./games/scratch/csgosurf.html"
+        "iframe_url": "https://scratch.mit.edu/projects/212654640/embed"
     },
     "Doge Miner": {
         "description": "Your mission is to get to the moon! To get there cost 50,000,000,000 dogecoin. Goodluck!",
@@ -891,7 +891,7 @@
         "tags": ["horror"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Codyjax",
-        "iframe_url": "./games/scratch/fnafsister.html"
+        "iframe_url": "https://scratch.mit.edu/projects/125366612/embed"
     },
     "Vex 4": {
         "description": "The fourth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
@@ -936,7 +936,7 @@
         "tags": ["multiplayer"],
         "date_added": "2022-02-25T04:09:28.911Z",
         "developer": "StratfordJames",
-        "iframe_url": "./games/scratch/minigolfonline.html"
+        "iframe_url": "https://scratch.mit.edu/projects/418924306/embed"
     },
     "Cat Trap": {
         "description": "Try to out smart the cat! Don't let him escape.",
