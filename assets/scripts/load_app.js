@@ -22,9 +22,9 @@ function getCookie(cname) {
 }
 
 window.addEventListener('load', () => {
-    $('tutText').style = "display: none"
+    //$('tutText').style = "display: none"
     if ('1' == '1') {
-        $('noCookies').style = "display: none"
+        //$('noCookies').style = "display: none"
         document.getElementsByTagName('body')[0].style = "overflow: hidden"
         fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
             if (response.ok) {
@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
 });
 
 
-
+/*
 window.addEventListener(
     'keydown',
     function(e) {
@@ -82,7 +82,7 @@ setTimeout(function() {
     }
 }, 6500);
 
-
+*/
 
 /*console._log_old = console.log
 console.log = function(msg) {
