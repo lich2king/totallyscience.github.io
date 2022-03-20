@@ -122,13 +122,6 @@ function loadTopic() {
     displayGames();
 }
 
-window.addEventListener('load', () => {
-    fetch(`./assets/games.json?${new Date().getTime()}`).then((response) => response.json()).then((retrievedGames) => {
-        games = retrievedGames;
-        loadTopic();
-    });
-});
-
 hasLoaded = false;
 window.addEventListener('scroll', () => {
     let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
@@ -285,5 +278,10 @@ searchBar.addEventListener('keyup', () => {
         }
     });
 })
+
+fetch(`./assets/games.json?${new Date().getTime()}`).then((response) => response.json()).then((retrievedGames) => {
+    games = retrievedGames;
+    loadTopic();
+});
 
 document.getElementById('searchBar').style.backgroundImage = `url(./assets/images/magnifying-${localStorage.getItem("theme")}.svg)`;
