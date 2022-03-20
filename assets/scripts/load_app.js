@@ -35,6 +35,7 @@ window.addEventListener('load', () => {
         }).then((apps) => {
             const appData = apps[appName];
             if (appData == null) window.location.href = '../apps.html';
+            console.log(location.hostname)
 
             if (location.hostname == 'actuallyhistory.com') {
                 document.getElementById('app_frame').src = appData.proxy_url;
