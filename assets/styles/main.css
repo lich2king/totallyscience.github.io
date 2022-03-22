@@ -4,11 +4,13 @@
     --light-color: #ffffff;
     --dark-color: #000000;
     --accent-color: #f75dfc;
+    --box-shadow-color: #ccc;
 }
 
 [theme=dark] {
     --light-color: #000000;
     --dark-color: #ffffff;
+    --box-shadow-color: #000000;
 }
 
 body {

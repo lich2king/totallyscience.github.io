@@ -115,9 +115,9 @@ input[type='text']:focus {
 
 #games button:hover {
     transform: scale(1.02);
-    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow: 3px 3px 5px 3px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
+    -webkit-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
+    box-shadow: 3px 3px 5px 3px var(--box-shadow-color);
 }
 
 .new::after {
@@ -170,10 +170,4 @@ input[type='text']:focus {
     font-family: 'Spline Sans', sans-serif;
     font-size: 30px;
     padding: 1%;
-}
-
-.shadow {
-    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow: 3px 3px 5px 6px #ccc;
 }
