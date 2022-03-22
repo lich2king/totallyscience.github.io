@@ -15,6 +15,7 @@ fetch(`./assets/apps.json?${new Date().getTime()}`)
             appImage.draggable = "false"
             appImage.ondragstart = "return false;"
             appImage.src = data.image
+            appImage.style.backgroundColor = '#ffffff';
 
             const appName = document.createElement('h1')
             appName.innerText = name
