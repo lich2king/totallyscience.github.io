@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
         appFrame.src = appData.iframe_url;
 
         setTimeout(() => {
-            if (appFrame.getAttribute('__uv-attr-src') != null) {
+            if (appFrame.getAttribute('__uv-attr-src') == null) {
                 alert('Error, failed to load. Apps do not work on some domains.');
                 location.href = '/apps.html';
             }
