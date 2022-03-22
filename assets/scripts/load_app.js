@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
                 alert('Error, failed to load. Apps do not work on some domains.');
                 location.href = '/apps.html';
             }
-        }, 5000);
+        }, 1000);
     }).catch((err) => {
         if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
     });
