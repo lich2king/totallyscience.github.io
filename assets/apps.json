@@ -46,5 +46,11 @@
         "date_added": "2022-02-25T23:48:32.617Z",
         "iframe_url": "https://www.mathway.com/",
         "alt_url": ""
+    },
+    "Netflix": {
+        "image": "./assets/images/app_icons/netflix.webp",
+        "date_added": "2022-02-25T23:48:32.617Z",
+        "iframe_url": "https://netflix.com/",
+        "alt_url": ""
     }
 }
