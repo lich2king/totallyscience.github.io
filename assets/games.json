@@ -6,7 +6,7 @@
         "tags": ["featured", "sport", "mobile"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "New Star Games",
-        "iframe_url": "./games/retrobowl/index.html"
+        "iframe_url": "assets/games/retrobowl/index.html"
     },
 
     "Papa's Pizzeria": {
@@ -16,7 +16,7 @@
         "tags": ["featured", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Flipline Studios",
-        "iframe_url": "./games/papaspizzeria.html"
+        "iframe_url": "assets/games/papaspizzeria.html"
     },
 
     "Drift Boss": {
@@ -46,7 +46,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Gabriele Cirulli",
-        "iframe_url": "./games/2048.html"
+        "iframe_url": "assets/games/2048.html"
     },
 
     "College 2048": {
@@ -178,7 +178,7 @@
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Shotaro_Ishinomori",
-        "iframe_url": "./games/galacticwars/index.html"
+        "iframe_url": "assets/games/galacticwars/index.html"
     },
 
     "Geometry Dash": {
@@ -268,7 +268,7 @@
         "tags": [""],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Rob Kay",
-        "iframe_url": "./games/slope/index.html"
+        "iframe_url": "assets/games/slope/index.html"
     },
 
     "Soccer Free Kicks": {
@@ -328,7 +328,7 @@
         "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
-        "iframe_url": "./games/Tetris-main/Tetris-main/index.html"
+        "iframe_url": "assets/games/Tetris-main/Tetris-main/index.html"
     },
 
     "UNO": {
@@ -357,7 +357,7 @@
         "tags": ["featured", "hard", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Splapp-me-do Games",
-        "iframe_url": "./games/impossiblequiz.html"
+        "iframe_url": "assets/games/impossiblequiz.html"
     },
     "Gun Mayhem 2": {
         "description": "More explosive arena style action! Battle against the AI or with friends in this cartoony platform shooter.",
@@ -366,7 +366,7 @@
         "tags": ["2", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Armor Games",
-        "iframe_url": "./games/gunmayhem.html"
+        "iframe_url": "assets/games/gunmayhem.html"
     },
     "Escaping The Prison": {
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
@@ -375,7 +375,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
-        "iframe_url": "./games/escapingtheprison.html"
+        "iframe_url": "assets/games/escapingtheprison.html"
     },
     "Krunker.io": {
         "description": "Free-to-play arena-style browser-based tactical fps.",
@@ -393,7 +393,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
-        "iframe_url": "./games/breakinbank.html"
+        "iframe_url": "assets/games/breakinbank.html"
     },
     "Stealing The Diamond": {
         "description": "Help Henry Stickmin break into a museum and execute a diamond heist.",
@@ -402,7 +402,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
-        "iframe_url": "./games/stealdiamond.html"
+        "iframe_url": "assets/games/stealdiamond.html"
     },
     "Infiltrating The Airship": {
         "description": "Try not to fail during a deadly mission in the sky! Infiltrating the Airship dares you to make risky decisions.",
@@ -411,7 +411,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
-        "iframe_url": "./games/infiltrateairship.html"
+        "iframe_url": "assets/games/infiltrateairship.html"
     },
     "Fleeing The Complex": {
         "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
@@ -420,7 +420,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
-        "iframe_url": "./games/fleecomplex.html"
+        "iframe_url": "assets/games/fleecomplex.html"
     },
     "Appel Platformer": {
         "description": "Simple and fun platformer game. Try to beat levels in record breaking times!",
@@ -447,7 +447,7 @@
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Joseph Cloutier",
-        "iframe_url": "./games/run3/index.html"
+        "iframe_url": "assets/games/run3/index.html"
     },
     "Snake": {
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
@@ -501,7 +501,7 @@
         "tags": ["hard", "flash"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Splapp-Me-Do Games",
-        "iframe_url": "./games/TheImpossibleQuiz2.html"
+        "iframe_url": "assets/games/TheImpossibleQuiz2.html"
     },
     "FNAF World": {
         "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
@@ -547,7 +547,7 @@
         "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "YoArcade",
-        "iframe_url": "./games/cubedodge.html"
+        "iframe_url": "assets/games/cubedodge.html"
     },
     "Deal or No Deal": {
         "description": "Deal or no Deal. Try your luck in finding the $1,000,000 briefcase in this game based on the hit TV game show!",
@@ -556,7 +556,7 @@
         "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Iwin",
-        "iframe_url": "./games/dealornodeal.html"
+        "iframe_url": "assets/games/dealornodeal.html"
     },
     "Web Swinger": {
         "description": "Swing from object to object with your webs. Try to get as far as you can and beat your highscore!",
@@ -565,7 +565,7 @@
         "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "D O P I",
-        "iframe_url": "./games/webswinger.html"
+        "iframe_url": "assets/games/webswinger.html"
     },
     "Sniper": {
         "description": "Find your target and eliminate them as quickly as possible.",
@@ -574,7 +574,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Crazy Monkey Games",
-        "iframe_url": "./games/sniper.html"
+        "iframe_url": "assets/games/sniper.html"
     },
     "Storm the House 2": {
         "description": "A free tower defense game. Those pesky stickfigures are at it again! Defend your castle!",
@@ -583,7 +583,7 @@
         "tags": ["stickmin", "flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Ivory",
-        "iframe_url": "./games/stormthehouse2.html"
+        "iframe_url": "assets/games/stormthehouse2.html"
     },
     "Ping Pong": {
         "description": "See how many times you can bounce the ball in the air without dropping it!",
@@ -592,7 +592,7 @@
         "tags": ["flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "MiniClip",
-        "iframe_url": "./games/pingpong.html"
+        "iframe_url": "assets/games/pingpong.html"
     },
     "Tunnel Rush": {
         "description": "Dodge the objects coming toward you in this endless tunnel. Beat your highscore!",
@@ -601,7 +601,7 @@
         "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Deer Cat",
-        "iframe_url": "./games/tunnel-rush/index.html"
+        "iframe_url": "assets/games/tunnel-rush/index.html"
     },
     "Squid Game": {
         "description": "Complete the following challenges inspired by the popular show Squid Games.",
@@ -711,7 +711,7 @@
         "tags": ["multiplayer", "2"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "New Eich Games",
-        "iframe_url": "./games/rooftop-snipers-main/index.html"
+        "iframe_url": "assets/games/rooftop-snipers-main/index.html"
     },
     "Stunt Cars 2": {
         "description": "Drift, drive off ramps, and do a flip!",
@@ -747,7 +747,7 @@
         "tags": [""],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Game Freak",
-        "iframe_url": "./games/pokemonfirered.html"
+        "iframe_url": "assets/games/pokemonfirered.html"
     },
     "Pokemon Leaf Green": {
         "description": "Your mission is to collect all 150 Pokémon. Go catch em all!",
@@ -756,7 +756,7 @@
         "tags": [""],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Game Freak",
-        "iframe_url": "./games/pokemonleafgreen.html"
+        "iframe_url": "assets/games/pokemonleafgreen.html"
     },
     "Kirby The Amazing Mirror": {
         "description": "The Kingdom of Mirrors has been invaded and Kirby's going to need to call for backup.",
@@ -765,7 +765,7 @@
         "tags": [""],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "HAL Laboratory",
-        "iframe_url": "./games/kirbytheamazingmirror.html"
+        "iframe_url": "assets/games/kirbytheamazingmirror.html"
     },
     "Super Mario Bros 3": {
         "description": "A platoformer action-adventure game of the classic Mario franchise.",
@@ -774,7 +774,7 @@
         "tags": [""],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Nintendo",
-        "iframe_url": "./games/supermarioadvanced.html"
+        "iframe_url": "assets/games/supermarioadvanced.html"
     },
     "Clash Royale": {
         "description": "Command your Vikings and destroy the enemy's base in Clash of Vikings. The base is guarded by two towers.",
@@ -810,7 +810,7 @@
         "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Rkn_dev",
-        "iframe_url": "./games/DogeMiner-main/DogeMiner-main/index.html"
+        "iframe_url": "assets/games/DogeMiner-main/DogeMiner-main/index.html"
     },
     "Stack Bump 3D": {
         "description": "Shoot the tower to make it disappear until the last block while avoiding the black area.",
@@ -819,7 +819,7 @@
         "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
-        "iframe_url": "./games/stack-bump-3d-main/stack-bump-3d-main/index.html"
+        "iframe_url": "assets/games/stack-bump-3d-main/stack-bump-3d-main/index.html"
     },
     "Wordle": {
         "description": "You have limited attempts to find the word. Goodluck!",
@@ -846,7 +846,7 @@
         "tags": ["2", "multiplayer"],
         "date_added": "2022-01-31T03:38:27.104Z",
         "developer": "New Eich Games",
-        "iframe_url": "./games/GetawayShootout-master/GetawayShootout-master/index.html"
+        "iframe_url": "assets/games/GetawayShootout-master/GetawayShootout-master/index.html"
     },
     "Crossy Road": {
         "description": "8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
@@ -855,7 +855,7 @@
         "tags": ["mobile"],
         "date_added": "2022-02-02T01:28:28.388Z",
         "developer": "Hipster Whale",
-        "iframe_url": "./games/tam-crossyroad/index.html?world=original"
+        "iframe_url": "assets/games/tam-crossyroad/index.html?world=original"
     },
     "Subway Surfers": {
         "description": "A classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.",
@@ -864,7 +864,7 @@
         "tags": ["mobile"],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Skyflyer",
-        "iframe_url": "./games/surfers2/index.html"
+        "iframe_url": "assets/games/surfers2/index.html"
     },
     "Cookie Clicker": {
         "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
@@ -873,7 +873,7 @@
         "tags": ["mobile"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Julien Thiennot",
-        "iframe_url": "./games/cookie-clicker-main/index.html"
+        "iframe_url": "assets/games/cookie-clicker-main/index.html"
     },
     "Vex 5": {
         "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
@@ -882,7 +882,7 @@
         "tags": [""],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Gogy Games",
-        "iframe_url": "./games/Vex5/index.html"
+        "iframe_url": "assets/games/Vex5/index.html"
     },
     "FNAF Sister Location": {
         "description": "A point-and-click survival horror video game created to fit in the FNAF series.",
@@ -900,7 +900,7 @@
         "tags": [""],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
-        "iframe_url": "./games/vex4/index.html"
+        "iframe_url": "assets/games/vex4/index.html"
     },
     "Vex 3": {
         "description": "The third platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
@@ -909,7 +909,7 @@
         "tags": [""],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
-        "iframe_url": "./games/vex3/index.html"
+        "iframe_url": "assets/games/vex3/index.html"
     },
     "Fireboy and Watergirl": {
         "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
@@ -918,7 +918,7 @@
         "tags": ["2"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
-        "iframe_url": "./games/fireboy-and-watergirl-forest-temple/index.html"
+        "iframe_url": "assets/games/fireboy-and-watergirl-forest-temple/index.html"
     },
     "HexGL": {
         "description": "A futuristic, fast-paced racing game where you control a hovercraft.",
@@ -927,7 +927,7 @@
         "tags": [""],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "BKcore",
-        "iframe_url": "./games/hexgl/index.html"
+        "iframe_url": "assets/games/hexgl/index.html"
     },
     "Mini Golf Online": {
         "description": "Challenge other players to play golf! Get your golf ball into the hole before your opponent does!",
@@ -936,7 +936,7 @@
         "tags": ["multiplayer"],
         "date_added": "2022-02-25T04:09:28.911Z",
         "developer": "StratfordJames",
-        "iframe_url": "./games/scratch/minigolfonline.html"
+        "iframe_url": "assets/games/scratch/minigolfonline.html"
     },
     "Cat Trap": {
         "description": "Try to out smart the cat! Don't let him escape.",
@@ -945,7 +945,7 @@
         "tags": [""],
         "date_added": "2022-02-27T17:05:02.924Z",
         "developer": "Llerah",
-        "iframe_url": "./games/cattrap.html"
+        "iframe_url": "assets/games/cattrap.html"
     },
     "Zombs Royale": {
         "description": "100 player 2D real-time massive multiplayer Battle Royale game in your browser, inspired by PUBG/Fortnite.",
@@ -963,7 +963,7 @@
         "tags": [""],
         "date_added": "2022-03-03T02:19:54.536Z",
         "developer": "AddictingGames",
-        "iframe_url": "./games/bloonstd5/index.html"
+        "iframe_url": "assets/games/bloonstd5/index.html"
     }
 
 
