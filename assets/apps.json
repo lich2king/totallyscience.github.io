@@ -34,5 +34,11 @@
         "date_added": "2022-03-22T23:48:32.617Z",
         "iframe_url": "https://www.spotify.com/",
         "alt_url": ""
+    },
+    "Firefox": {
+        "image": "./assets/images/app_icons/firefox.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "iframe_url": "./apps/firefox.html",
+        "alt_url": ""
     }
 }
