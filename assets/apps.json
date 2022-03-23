@@ -40,5 +40,11 @@
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "./apps/firefox.html",
         "alt_url": ""
+    },
+    "Mathway": {
+        "image": "./assets/images/app_icons/mathway.png",
+        "date_added": "2022-02-25T23:48:32.617Z",
+        "iframe_url": "https://www.mathway.com/",
+        "alt_url": ""
     }
 }
