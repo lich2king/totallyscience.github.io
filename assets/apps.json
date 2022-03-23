@@ -1,54 +1,54 @@
 {
     "Youtube": {
-        "image": "./assets/images/app_icons/youtube.svg",
+        "image": "assets/apps/icons/youtube.svg",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://www.youtube.com/",
         "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
     },
     "Google": {
-        "image": "./assets/images/app_icons/google.svg",
+        "image": "assets/apps/icons/google.svg",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://google.com/",
         "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
     },
     "Discord": {
-        "image": "./assets/images/app_icons/discord.svg",
+        "image": "assets/apps/icons/discord.svg",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://discord.com/",
         "alt_url": ""
     },
     "Tik Tok": {
-        "image": "./assets/images/app_icons/tiktok.svg",
+        "image": "assets/apps/icons/tiktok.svg",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://tiktok.com/",
         "alt_url": ""
     },
     "Twitch": {
-        "image": "./assets/images/app_icons/twitch.svg",
+        "image": "assets/apps/icons/twitch.svg",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://twitch.tv/",
         "alt_url": ""
     },
     "Spotify": {
-        "image": "./assets/images/app_icons/spotify.svg",
+        "image": "assets/apps/icons/spotify.svg",
         "date_added": "2022-03-22T23:48:32.617Z",
         "iframe_url": "https://www.spotify.com/",
         "alt_url": ""
     },
     "Firefox": {
-        "image": "./assets/images/app_icons/firefox.png",
+        "image": "assets/apps/icons/firefox.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "./apps/firefox.html",
+        "iframe_url": "assets/apps/firefox.html",
         "alt_url": ""
     },
     "Mathway": {
-        "image": "./assets/images/app_icons/mathway.png",
+        "image": "assets/apps/icons/mathway.png",
         "date_added": "2022-02-25T23:48:32.617Z",
         "iframe_url": "https://www.mathway.com/",
         "alt_url": ""
     },
     "Netflix": {
-        "image": "./assets/images/app_icons/netflix.webp",
+        "image": "assets/apps/icons/netflix.webp",
         "date_added": "2022-02-25T23:48:32.617Z",
         "iframe_url": "https://netflix.com/",
         "alt_url": ""
