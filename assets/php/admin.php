@@ -39,10 +39,10 @@ while ($live = $select->fetch()) {
       } else {
           //fail
       }
+      */
     } else {
       $liveViewerCount += 1;
     }
-    */
 }
 
 echo("<tr><td>" . $liveViewerCount . "</td></tr>");
