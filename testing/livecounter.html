@@ -76,7 +76,7 @@
         doThing();
 
         setInterval(function() {
-            fetch(`./assets/php/counterliveviews.php`).then((response) => response.text()).then((text) => {
+            fetch(`../assets/php/counterliveviews.php`).then((response) => response.text()).then((text) => {
                     counter.setAttribute("data-target", text);
                 }) //get live views and set attribute to it
             doThing();
