@@ -33,17 +33,7 @@ while ($live = $select->fetch()) {
       $uid = $live['username'];
       $sql = "DELETE FROM liveviews WHERE username='$uid'";
 
-      if ($liveViewerCount == 1) {
-        echo $sql;
-      }
-      /*
-    
-      if ($conn->query($sql) === TRUE) {
-          //success
-      } else {
-          //fail
-      }
-      */
+      $conn->query($sql);
     } else {
       $liveViewerCount += 1;
     }
