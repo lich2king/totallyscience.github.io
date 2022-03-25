@@ -36,7 +36,7 @@ while ($live = $select->fetch()) {
     $pingedDateSeconds = $pingedDate * 24 * 60 * 60 + date_format($pingedDate, "h:i:s") * 60 * 60 + date_format($pingedDate, "i:s") * 60 + date_format($pingedDate, "s");
 
     if ($liveViewerCount == 1) {
-      echo $currentDate - $pingedDate;
+      echo $currentDateSeconds - $pingedDateSeconds;
     }
     if (date_diff(date("d-m-Y h:i:s"), $live['lastping']) > 1800000) {
       $uid = $live['username'];
