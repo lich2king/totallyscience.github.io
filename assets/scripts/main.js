@@ -104,6 +104,15 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
 function uid() {
     return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
 };
+function pingCounter() {
+    if (localStorage.getItem('liveUID') == null) {
+        localStorage.setItem('liveUID', uid());
+    }
+    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=0`);
+
+    setTimeout(pingCounter, 1800000);
+};
+
 window.addEventListener('beforeunload', () => {
     if (localStorage.getItem('liveUID') == null) {
         return;
@@ -111,10 +120,7 @@ window.addEventListener('beforeunload', () => {
     fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=1`);
 });
 window.addEventListener("click", () => {
-    if (localStorage.getItem('liveUID') == null) {
-        localStorage.setItem('liveUID', uid());
-    }
-    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=0`);
+    pingCounter()
 }, { once: true });
 
 // register service worker
