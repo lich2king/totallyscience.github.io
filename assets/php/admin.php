@@ -24,7 +24,7 @@ if(!$pass || $pass != "Totally_admin4321") {
 }
 
 echo("<h1>Live Viewers</h1><table><tr><th>Live Viewer Count</th></tr>");
-$liveViewerCount = $pdo->query("select count(username) from liveviews");
+$liveViewerCount = $pdo->query("select count(*) from liveviews");
 /*
 while ($live = $select->fetch()) {
     if (date("d-m-Y h:i:s") - $live['lastping'] > 1) {
