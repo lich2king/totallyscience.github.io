@@ -30,7 +30,7 @@ $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
     if ($liveViewerCount == 1) {
-      echo $live;
+      echo $live['lastping'];
     }
     $liveViewerCount += 1;
 }
