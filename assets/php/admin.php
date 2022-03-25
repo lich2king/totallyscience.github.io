@@ -36,6 +36,7 @@ while ($live = $select->fetch()) {
       if ($conn->query($sql) === TRUE) {
           //success
       } else {
+        echo 'fail';
           //fail
       }
     } else {
