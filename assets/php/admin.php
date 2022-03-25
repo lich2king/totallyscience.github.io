@@ -33,7 +33,7 @@ while ($live = $select->fetch()) {
       $uid = $live['username'];
       $sql = "DELETE FROM liveviews WHERE username='$uid'";
 
-      $conn->query($sql);
+      $pdo->query($sql);
     } else {
       $liveViewerCount += 1;
     }
