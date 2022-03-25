@@ -29,24 +29,18 @@ $select = $pdo->query("select username, lastping from liveviews");
 $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
-    if ($liveViewerCount == 1) {
-      echo $live['username'];
+    if (time() - strtotime($live['lastping']) < 3601) {
+      $sql = "DELETE FROM liveviews WHERE username='$live['username']'";
+    
+      if ($conn->query($sql) === TRUE) {
+          //success
+      } else {
+          //fail
+      }
+    } else {
+      $liveViewerCount += 1;
     }
-    $liveViewerCount += 1;
 }
-/*
-
-if (time() - strtotime($live['lastping']) < 3601) {
-  $sql = "DELETE FROM liveviews WHERE username='$uid'";
-
-  if ($conn->query($sql) === TRUE) {
-      //success
-  } else {
-      //fail
-  }
-}
-
-*/
 
 echo("<tr><td>" . $liveViewerCount . "</td></tr>");
 
