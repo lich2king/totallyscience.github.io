@@ -14,18 +14,13 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
+
 $query = "SELECT * FROM liveviews";
 $result = mysqli_query($conn, $query);
 $count = 0;
 
 while($row = mysqli_fetch_assoc($result))
 {
-  if (date("d-m-Y h:i:s") - $row['lastping'] > 1) {
-      $uid = $row['username'];
-      $sql = "DELETE FROM liveviews WHERE username='$uid'";
-
-      $conn->query($sql));
-  }
   $count += 1;
 }
 
