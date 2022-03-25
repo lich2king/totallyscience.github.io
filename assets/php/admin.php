@@ -29,9 +29,9 @@ $select = $pdo->query("select username, lastping from liveviews");
 $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
-  if ($liveViewerCount == 1) {
-    echo date_diff(date("d-m-Y h:i:s"), $live['lastping']);
-  }
+    if ($liveViewerCount == 1) {
+      echo date("d-m-Y h:i:s") - $live['lastping'];
+    }
     if (date_diff(date("d-m-Y h:i:s"), $live['lastping']) > 1800000) {
       $uid = $live['username'];
 
