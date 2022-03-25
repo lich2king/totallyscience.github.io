@@ -30,7 +30,7 @@ $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
     if ($liveViewerCount == 1) {
-      echo date("d-m-Y h:i:s") - $live['lastping'];
+      echo date("h:i:s") - date_format($live['lastping'], "h:i:s");
     }
     if (date_diff(date("d-m-Y h:i:s"), $live['lastping']) > 1800000) {
       $uid = $live['username'];
