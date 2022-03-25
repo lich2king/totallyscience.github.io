@@ -32,7 +32,7 @@ while ($live = $select->fetch()) {
     if ($liveViewerCount == 1) {
       echo $live['lastping'];
     }
-    if (date("d-m-Y h:i:s") - $live['lastping'] > 3599) {
+    if (date("d-m-Y h:i:s") - $live['lastping'] > 1) {
       $uid = $live['username'];
       /*
       $sql = "DELETE FROM liveviews WHERE username='$uid'";
