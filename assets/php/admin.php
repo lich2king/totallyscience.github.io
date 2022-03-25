@@ -29,8 +29,8 @@ $select = $pdo->query("select username, lastping from liveviews");
 $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
-    if ($liveViewerCount == 0) {
-      echo time() - $live['lastping'] + '\n';
+    if ($liveViewerCount == 1) {
+      echo time() - $live['lastping'];
     }
     if (time() - $live['lastping'] > 3599) {
       /*
