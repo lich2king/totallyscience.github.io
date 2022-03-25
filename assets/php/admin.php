@@ -29,11 +29,11 @@ $select = $pdo->query("select username, lastping from liveviews");
 $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
-    $currentDate = date("d:h:i:s");
-    $pingedDate = date_format($live['lastping'], "d:h:i:s");
+    $currentDate = date("d");
+    $pingedDate = date_format($live['lastping'], "d");
 
-    $currentDateMinutes = $currentDate * 24 * 60 + date_format($currentDate, "h:i:s") * 60 + date_format($currentDate, "i:s");
-    $pingedDateMinutes = $pingedDate * 24 * 60 + date_format($pingedDate, "h:i:s") * 60 + date_format($pingedDate, "i:s");
+    $currentDateMinutes = $currentDate * 24 * 60 + date_format($currentDate, "h") * 60 + date_format($currentDate, "i");
+    $pingedDateMinutes = $pingedDate * 24 * 60 + date_format($pingedDate, "h") * 60 + date_format($pingedDate, "i");
 
     if ($liveViewerCount == 1) {
       echo $currentDateMinutes - $pingedDateMinutes;
