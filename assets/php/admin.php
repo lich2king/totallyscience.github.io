@@ -30,15 +30,14 @@ $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
     if (time() - strtotime($live['lastping']) < 3601) {
-      /*
-      $sql = "DELETE FROM liveviews WHERE username='$live['username']'";
+      $uid = $live['username'];
+      $sql = "DELETE FROM liveviews WHERE username='$uid'";
     
       if ($conn->query($sql) === TRUE) {
           //success
       } else {
           //fail
       }
-      */
     } else {
       $liveViewerCount += 1;
     }
