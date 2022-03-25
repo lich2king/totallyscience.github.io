@@ -24,7 +24,7 @@ while($row = mysqli_fetch_assoc($result))
       $uid = $row['username'];
       $sql = "DELETE FROM liveviews WHERE username='$uid'";
 
-      $pdo->query($sql);
+      $conn->query($sql));
   }
   $count += 1;
 }
