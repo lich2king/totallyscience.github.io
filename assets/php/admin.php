@@ -29,7 +29,7 @@ $select = $pdo->query("select username, lastping from liveviews");
 $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
-    if (date("h:i:s") - date_format($live['lastping'],"h:i:s") > 30) {
+    if (date("h:i:s") - date_format($live['lastping'],"h:i:s") > 1) {
       $uid = $live['username'];
 
       //$pdo->query("delete from liveviews where username='$uid'");
