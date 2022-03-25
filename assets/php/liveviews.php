@@ -22,8 +22,7 @@ date_default_timezone_set("America/New_York");
 if($leave == '0')
 {
     $userresult = $conn->query("SELECT * FROM liveviews WHERE username = '$uid'");
-    //die($userresult);
-    if($userresult->num_rows == 0) {
+    if ($userresult->num_rows == 0) {
         // row not found, do stuff...
     
         $pingTime = date("d-m-Y h:i:s");
@@ -61,34 +60,7 @@ if($leave == '0')
         //echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
-
-
-/*$query = "SELECT * FROM liveviews";
-$result = mysqli_query($conn, $query);
-
-while($row = mysqli_fetch_assoc($result))
-{
-  
-  echo($row["username"]);
-  $selectedUid = $row["username"];
-
-  $d=strtotime("-15 minutes");
-  $presentTime = date("d-m-Y h:i:s", $d);
-  $pingTime = $row["lastping"];
-
-  $presentTime=strtotime($presentTime);
-  $pingTime=strtotime($pingTime);
-
-  if($pingTime < $presentTime)
-  {
-    $query = "DELETE FROM liveviews WHERE username='$selectedUid'";
-    $newResult = mysqli_query($conn, $query);
-  }
-}*/
-
-    
+   
 $conn->close();
-
 
 ?>

@@ -100,41 +100,22 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     window.open("/mobile/index.html", "_self")
 }
 
+//Live viewer count
 function uid() {
     return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
 };
-
-function updateLiveViews() {
-    if (localStorage.getItem('liveUID') == null) {
-        localStorage.setItem('liveUID', uid());
-    }
-    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=0`);
-
-    let second = 1000
-    let minute = 60 * second
-        //setTimeout(updateLiveViews, minute);
-}
-
-function userExitLiveViews() {
+window.addEventListener('beforeunload', () => {
     if (localStorage.getItem('liveUID') == null) {
         return;
     }
     fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=1`);
-
-    let second = 1000
-    let minute = 60 * second
-        //setTimeout(updateLiveViews, minute);
-}
-
-
-window.addEventListener("beforeunload", function(event) {
-    //userExitLiveViews();
-    e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
-    // Chrome requires returnValue to be set
-    e.returnValue = '';
 });
-
-updateLiveViews();
+window.addEventListener("click", () => {
+    if (localStorage.getItem('liveUID') == null) {
+        localStorage.setItem('liveUID', uid());
+    }
+    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=0`);
+}, { once: true });
 
 // register service worker
 window.addEventListener("load", () => {

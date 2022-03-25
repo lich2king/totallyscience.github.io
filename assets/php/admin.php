@@ -28,7 +28,10 @@ $select = $pdo->query("select username, lastping from liveviews");
 
 $liveViewerCount = 0;
 
-while($live = $select->fetch()) {
+while ($live = $select->fetch()) {
+    if ($liveViewerCount == 1) {
+      echo $live;
+    }
     $liveViewerCount += 1;
 }
 
