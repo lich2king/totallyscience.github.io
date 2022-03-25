@@ -30,8 +30,7 @@ $liveViewerCount = 0;
 
 while ($live = $select->fetch()) {
     if ($liveViewerCount == 0) {
-      echo time();
-      echo $live['lastping'];
+      echo time() - $live['lastping'] + '\n';
     }
     if (time() - $live['lastping'] > 3599) {
       /*
