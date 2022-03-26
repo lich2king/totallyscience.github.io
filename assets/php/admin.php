@@ -35,7 +35,7 @@ while ($live = $select->fetch()) {
     $currentDateMinutes = $currentDate * 24 * 60 + date_format($currentDate, "h") * 60 + date_format($currentDate, "i");
     $pingedDateMinutes = $pingedDate * 24 * 60 + date_format($pingedDate, "h") * 60 + date_format($pingedDate, "i");
 
-    if ($liveViewerCount == 1) {
+    if ($liveViewerCount == 29642) {
       echo $pingedDate;
     }
     if (date_diff(date("d-m-Y h:i:s"), $live['lastping']) > 1800000) {
