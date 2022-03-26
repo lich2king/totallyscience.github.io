@@ -164,6 +164,7 @@
                     } else {
                         document.getElementById('errorText').innerText = ""
                         imageBlob = URL.createObjectURL(this.files[0]);
+                        console.log(imageBlob);
                     }
                 }
             });
@@ -186,6 +187,7 @@
                 document.getElementById('errorText').innerText = "*The score must be a number"
             } else {
                 document.getElementById('errorText').innerText = ""
+                fetch(`./assets/php/submithighscore.php?game=${gameName}&score=${score}&imageBlob=${imageBlob}`)
             }
 
         }
