@@ -25,7 +25,7 @@ if($leave == '0')
     if ($userresult->num_rows == 0) {
         // row not found, do stuff...
     
-        $pingTime = date("d-m-Y h:i:s");
+        $pingTime = time();
         $sql = "INSERT INTO liveviews (Username, lastping)
         VALUES ('$uid', '$pingTime')";
     
@@ -39,7 +39,7 @@ if($leave == '0')
 
     } else {
         // do other stuff...
-        $pingTime = date("d-m-Y h:i:s");
+        $pingTime = time();
 
         $sql = "UPDATE liveviews SET lastping='$pingTime' WHERE username='$uid'";
 
