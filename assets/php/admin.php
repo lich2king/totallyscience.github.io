@@ -33,7 +33,10 @@ date_default_timezone_set("America/New_York");
 while ($live = $select->fetch()) {
     $currentDateMinutes = date("d") * 24 * 60 + date("h") * 60 + date("i");
     $pingedDateMinutes = date("d", $live['lastping']) * 24 * 60 + date("h", $live['lastping']) * 60 + date("i", $live['lastping']);
-    
+
+    if ($liveViewerCount == 1) {
+      echo $currentDateMinutes - $pingedDateMinutes;
+    }
     if ($currentDateMinutes - $pingedDateMinutes > 30) {
       $uid = $live['username'];
 
