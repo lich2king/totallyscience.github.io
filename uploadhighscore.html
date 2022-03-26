@@ -101,10 +101,9 @@
 
     <form id="survey" action="javascript:SubmitSignUp()">
         <div>
-            <label for="gamesSelect" id="gamesSelect">What game is it for?</label><br>
-            <select name="gradSelect" id="gradSelect">
-                <option value=""></option>
-                <option value="22">2022</option>
+            <label for="gamesSelect">What game is it for?</label><br>
+            <select name="gamesSelect" id="gamesSelect">
+
             </select>
         </div>
         <div>
@@ -125,8 +124,6 @@
     <script>
         const gamesSelect = document.getElementById('gamesSelect')
 
-        console.log(gamesSelect);
-
         fetch(`./assets/games.json?${new Date().getTime()}`)
             .then((response) => response.json())
             .then((games) => {
@@ -134,12 +131,14 @@
 
                     const gameOp = document.createElement('option')
                     gameOp.value = name
-                    gameOp.innerText = name
+                    gameOp.innerHTML = name
 
                     gamesSelect.appendChild(gameOp)
                 }
             })
     </script>
 </body>
+
+
 
 </html>
