@@ -35,7 +35,7 @@ while ($live = $select->fetch()) {
     $pingedDateMinutes = date("d", $live['lastping']) * 24 * 60 + date("h", $live['lastping']) * 60 + date("i", $live['lastping']);
 
     if ($liveViewerCount == 1) {
-      echo $currentDateMinutes - $pingedDateMinutes;
+      echo $pingedDateMinutes;
     }
     if ($currentDateMinutes - $pingedDateMinutes > 30) {
       $uid = $live['username'];
