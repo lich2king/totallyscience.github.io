@@ -99,7 +99,7 @@
     <div style="padding-top: 90px;"></div>
 
 
-    <form id="survey" action="javascript:SubmitSignUp()">
+    <form id="survey" action="javascript:SubmitHighscore()">
         <div>
             <label for="gamesSelect">What game is it for?</label><br>
             <select name="gamesSelect" id="gamesSelect">
@@ -107,14 +107,16 @@
             </select>
         </div>
         <div>
-            <label for="password">What is your score?</label><br>
-            <input type='password' id='password' name='password' placeholder='100'><br>
+            <label for="score">What is your score?</label><br>
+            <input type='text' id='scoreText' name='score' placeholder='100'><br>
         </div>
         <div>
             <label for="confirmpassword">Submit a screenshot of your score (Show full screen including top website bar otherwise INVALID)</label><br>
             <input type='file' />
         </div>
         <button id="save-button">Submit For Review</button>
+        <p style="text-align: center; color: red;" id="errorText"></p>
+
     </form>
 
 
@@ -122,6 +124,8 @@
 
 
     <script>
+        let imageBlob = "";
+
         const gamesSelect = document.getElementById('gamesSelect')
 
         fetch(`./assets/games.json?${new Date().getTime()}`)
@@ -136,6 +140,52 @@
                     gamesSelect.appendChild(gameOp)
                 }
             })
+
+        window.addEventListener('load', function() {
+            document.querySelector('input[type="file"]').addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    var img = document.querySelector('img');
+                    img.onload = () => {
+                        URL.revokeObjectURL(img.src); // no longer needed, free memory
+                    }
+
+                    const file = this.files[0]
+                    const fileType = file['type'];
+                    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
+                    if (!validImageTypes.includes(fileType)) {
+                        document.getElementById('errorText').innerText = "*You can only upload an image"
+                        document.querySelector('input[type="file"]').value = null;
+                        imageBlob = "";
+                    } else if (file.size > 100000000) {
+                        document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
+                        document.querySelector('input[type="file"]').value = null;
+                        imageBlob = "";
+                    } else {
+                        document.getElementById('errorText').innerText = ""
+                        imageBlob = URL.createObjectURL(this.files[0]);
+                    }
+                }
+            });
+        });
+
+
+        function SubmitHighscore() {
+            const gameName = document.getElementById('gamesSelect').value
+            const score = document.getElementById('scoreText').value
+
+            if (gameName == '') {
+                document.getElementById('errorText').innerText = "*You must choose the game"
+            } else if (score == '') {
+                document.getElementById('errorText').innerText = "*You must state your score"
+            } else if (imageBlob == '') {
+                document.getElementById('errorText').innerText = "*You must upload a screen shot of your score"
+            } else if (isNaN(score)) {
+                document.getElementById('errorText').innerText = "*The score must be a number"
+            } else {
+                document.getElementById('errorText').innerText = ""
+            }
+
+        }
     </script>
 </body>
 
