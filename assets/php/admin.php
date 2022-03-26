@@ -28,6 +28,8 @@ $select = $pdo->query("select username, lastping from liveviews");
 
 $liveViewerCount = 0;
 
+date_default_timezone_set("America/New_York");
+
 while ($live = $select->fetch()) {
     $currentDate = date("d");
     $pingedDate = date("d", $live['lastping']);
