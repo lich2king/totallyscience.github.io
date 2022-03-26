@@ -175,7 +175,7 @@
             const score = document.getElementById('scoreText').value
 
             if (username == '') {
-                document.getElementById('errorText').innerText = "*You must login to submit a highscore"
+                document.getElementById('errorText').innerHTML = "*You must <a href='./signup.html'>sign up</a> to submit a highscore"
             } else if (gameName == '') {
                 document.getElementById('errorText').innerText = "*You must choose the game"
             } else if (score == '') {
