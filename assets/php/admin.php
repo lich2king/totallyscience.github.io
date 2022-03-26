@@ -31,13 +31,11 @@ $liveViewerCount = 0;
 date_default_timezone_set("America/New_York");
 
 while ($live = $select->fetch()) {
-    $pingedDate = date("d", $live['lastping']);
-
     $currentDateMinutes = date("d") * 24 * 60 + date("h") * 60 + date("i");
-    $pingedDateMinutes = $pingedDate * 24 * 60 + date_format($pingedDate, "h") * 60 + date_format($pingedDate, "i");
+    $pingedDateMinutes = date("d", $live['lastping']) * 24 * 60 + date("h", $live['lastping']) * 60 + date("i", $live['lastping']);
 
     if ($liveViewerCount == 29642) {
-      echo $currentDateMinutes;
+      echo $currentDateMinutes - $pingedDateMinutes;
     }
     if (date_diff(date("d-m-Y h:i:s"), $live['lastping']) > 1800000) {
       $uid = $live['username'];
