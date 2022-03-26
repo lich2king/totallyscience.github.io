@@ -124,7 +124,8 @@
 
 
     <script>
-        let imageBlob = "";
+        let imageBlob = '';
+        let username = ''
 
         const gamesSelect = document.getElementById('gamesSelect')
 
@@ -173,7 +174,9 @@
             const gameName = document.getElementById('gamesSelect').value
             const score = document.getElementById('scoreText').value
 
-            if (gameName == '') {
+            if (username == '') {
+                document.getElementById('errorText').innerText = "*You must login to submit a highscore"
+            } else if (gameName == '') {
                 document.getElementById('errorText').innerText = "*You must choose the game"
             } else if (score == '') {
                 document.getElementById('errorText').innerText = "*You must state your score"
@@ -186,6 +189,19 @@
             }
 
         }
+
+        function GetUser() {
+            fetch(`./assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+                if (res != "null") {
+                    res = JSON.parse(res);
+                    username = res["username"]
+                } else {
+                    username = ""
+                }
+            });
+        }
+
+        GetUser();
     </script>
 </body>
 
