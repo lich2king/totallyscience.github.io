@@ -1,36 +1,36 @@
 {
     "Youtube": {
-        "image": "assets/apps/icons/youtube.svg",
+        "image": "assets/apps/icons/youtube-red-square.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://www.youtube.com/",
         "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
     },
     "Google": {
-        "image": "assets/apps/icons/google.svg",
+        "image": "assets/apps/icons/google.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://google.com/",
         "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
     },
     "Discord": {
-        "image": "assets/apps/icons/discord.svg",
+        "image": "assets/apps/icons/discord.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://discord.com/",
         "alt_url": ""
     },
     "Tik Tok": {
-        "image": "assets/apps/icons/tiktok.svg",
+        "image": "assets/apps/icons/tiktok.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://tiktok.com/",
         "alt_url": ""
     },
     "Twitch": {
-        "image": "assets/apps/icons/twitch.svg",
+        "image": "assets/apps/icons/twitch.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "https://twitch.tv/",
         "alt_url": ""
     },
     "Spotify": {
-        "image": "assets/apps/icons/spotify.svg",
+        "image": "assets/apps/icons/spotify.png",
         "date_added": "2022-03-22T23:48:32.617Z",
         "iframe_url": "https://www.spotify.com/",
         "alt_url": ""
@@ -48,7 +48,7 @@
         "alt_url": ""
     },
     "Netflix": {
-        "image": "assets/apps/icons/netflix.webp",
+        "image": "assets/apps/SVGicons/netflix.webp",
         "date_added": "2022-02-25T23:48:32.617Z",
         "iframe_url": "https://netflix.com/",
         "alt_url": ""
