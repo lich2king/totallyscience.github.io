@@ -11,6 +11,7 @@ if (baseurl.includes("github")) {
 }
 
 document.getElementById('report-btn').addEventListener('click', () => {
+    // TODO: FIX REPORT
     if (hasReported) return;
 
     fetch(`https://${baseurl}/assets/php/game_stats.php/?type=reports&name=${gameName}`).then((response) => response.text()).then((text) => {
@@ -41,14 +42,6 @@ window.addEventListener('load', () => {
             document.getElementById('game-iframe').src = gameData.iframe_url + '?id=' + id;
             console.log(gameData.iframe_url + '?id=' + id);
         }
-    }).catch((err) => {
-        if (err) console.log(`cannot fetch /gamesjson`);
-    });
-
-    fetch(`https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`).then((response) => {
-        if (!response.ok) console.log(`cannot fetch https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`);
-    }).catch((err) => {
-        if (err) console.log(`cannot fetch https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`);
     });
 });
 

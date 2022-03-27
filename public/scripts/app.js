@@ -1,15 +1,11 @@
+// DONE
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const appName = urlParams.get('app');
 
 window.addEventListener('load', () => {
-    document.getElementsByTagName('body')[0].style = "overflow: hidden"
-    fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
-        }
+    fetch(`/appsjson`).then((response) => {
+        if (response.ok) return response.json();
     }).then((apps) => {
         const appData = apps[appName];
         const appFrame = document.getElementById('app_frame');
@@ -26,7 +22,5 @@ window.addEventListener('load', () => {
                 location.href = '/apps.html';
             }
         }, 1000);
-    }).catch((err) => {
-        if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
     });
 });

@@ -32,6 +32,9 @@ app.get('/leaderboard', (req, res) => {
 app.get('/applications', (req, res) => {
     res.render('apps', { apps: 'selected'});
 });
+app.get('/app', (req, res) => {
+    res.render('app', { apps: 'selected'});
+});
 
 app.get('/preferences', (req, res) => {
     res.render('preferences');

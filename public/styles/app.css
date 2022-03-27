@@ -1,0 +1,29 @@
+.iframeloader {
+    background: url(./assets/images/loadinggif.gif) center center no-repeat;
+    background-size: 5vw;
+}
+
+#noCookies {
+    margin-top: 5vh;
+    padding-bottom: 20vh;
+    text-align: center;
+}
+
+#noCookies p {
+    font-size: 2vw;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+}
+
+#noCookies p2 {
+    font-size: 1vw;
+    display: block;
+    padding-bottom: 3vh;
+}
+
+#noCookies img {
+    margin-bottom: 2vh;
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+}
