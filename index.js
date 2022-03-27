@@ -7,6 +7,7 @@ const io = require('socket.io')(http);
 const port = 3000;
 
 let liveUsers = 0;
+let totalPageViews = 0;
 
 app.use(express.static(path.join(__dirname, 'public'), { redirect: false }));
 app.set('view engine', 'pug');
@@ -64,6 +65,11 @@ app.get('/gamesjson', (req, res) => {
 });
 
 
+// views
+app.get('/pageloads', (req, res) => {
+    res.send(JSON.stringify({"total": totalPageViews}));
+});
+
 io.on('connection', (socket) => {
     liveUsers += 1;
     increaseStats(socket.request.rawHeaders[17])
@@ -84,6 +90,8 @@ function increaseStats(page) {
         } else {
             oldStats.page_views[page] += 1;
         }
+
+        if (page.endsWith('/')) totalPageViews += 1;
     
         fs.writeFile('stats.json', JSON.stringify(oldStats), (err) => {
             if (err) console.log(err);
@@ -112,9 +120,27 @@ function updateLiveViews() {
 http.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 
+    // start saving live viewers every hour
     const d = new Date();
     const h = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours() + 1, 0, 0, 0);
     const e = h - d;
 
     setTimeout(updateLiveViews, e);
+
+    // get previous total page views
+    fs.readFile('stats.json', (err, data) => {
+        if (err) return console.log(err);
+
+        oldStats = JSON.parse(data);
+
+        let keys = Object.keys(oldStats.page_views);
+        let sortedKeys = keys.filter(key => key.endsWith('/'));
+        let pageViews = 0;
+
+        for (let x in sortedKeys) {
+            pageViews += oldStats.page_views[sortedKeys[x]];
+        }
+
+        totalPageViews = pageViews;
+    });
 });

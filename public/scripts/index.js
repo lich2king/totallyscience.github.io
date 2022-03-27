@@ -63,14 +63,6 @@ const autoSwitch = () => {
 switchSlide(slideIndex)
 autoSwitch()
 
-//visits counter code
-var getUrl = window.location;
-var baseUrl = getUrl.host;
-
-if (baseUrl.includes('github') || baseUrl.includes('localhost')) {
-    baseUrl = 'totallyscience.co'
-}
-
 const addSuffix = (num) => {
     if (num.endsWith('1')) {
         return num + 'st'
@@ -82,8 +74,7 @@ const addSuffix = (num) => {
     return num + 'th'
 }
 
-fetch(`https://${baseUrl}/assets/php/counter.php`).then((response) => response.text()).then((visits) => {
+fetch(`/pageloads`).then((response) => response.text()).then((visits) => {
     const display = document.getElementById('visits-count');
-
-    display.innerText = addSuffix(visits);
+    display.innerText = addSuffix(JSON.parse(visits).total.toString());
 });
