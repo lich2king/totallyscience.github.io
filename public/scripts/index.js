@@ -12,7 +12,7 @@ const isVisible = (element) => {
 }
 
 const scanDocument = () => {
-    const sectionList = $qsa('.hidden')
+    const sectionList = document.querySelectorAll('.hidden')
     sectionList.forEach((section) => {
         if (isVisible(section)) {
             section.classList.remove('hidden')

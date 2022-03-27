@@ -1,9 +1,3 @@
-// Thank you stack overflow.
-let sortObject = (obj) =>
-    Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {})
-
-
-const gamesDiv = document.getElementById('games');
 const maxGames = 10;
 
 let selectedTopic = 'all';
@@ -11,8 +5,19 @@ let displayedGames = 0;
 let games;
 let sorted;
 
+// thank you stack overflow
+// sorts object in alphabetical order
+function sortObject(obj) {
+    return Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {});
+}
+
+const mk = (type) => {
+    return document.createElement(type)
+}
 
 function displayGames() {
+    const gamesDiv = document.getElementById('games');
+
     for (let x = displayedGames; x < displayedGames + maxGames; x++) {
         let keys = Object.keys(sorted);
 
@@ -102,6 +107,8 @@ function displayGames() {
 }
 
 function loadTopic() {
+    const gamesDiv = document.getElementById('games');
+
     displayedGames = 0;
     gamesDiv.innerHTML = '';
     document.getElementById('load-games').style.display = '';
@@ -122,7 +129,7 @@ function loadTopic() {
     displayGames();
 }
 
-hasLoaded = false;
+let hasLoaded = false;
 window.addEventListener('scroll', () => {
     let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
 
@@ -135,53 +142,46 @@ window.addEventListener('scroll', () => {
     }
 });
 
-//game catagories
-//selected topic variable is used both in the button category changer and the search bar function
-const buttons = $qsa('.categoryButton, #bolt');
+function switchTopic(e) {
+    if (e.target.id == 'bolt') {
+        selectedTopic = e.target.parentNode.parentNode.name;
+    } else {
+        selectedTopic = e.target.name;
+    }
 
-//buttons.appendChild(document.getElementById('bolt'))
-//add event listener to every element in the document with the class "categoryButton"
-buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
+    const buttons = document.querySelectorAll('.categoryButton');
 
-        if (e.target.id == 'bolt') {
-            selectedTopic = e.target.parentNode.parentNode.name;
-        } else {
-            selectedTopic = e.target.name;
-        }
+    buttons.forEach((btn) => {
+        btn.classList.add('unselectedCategory');
+        btn.classList.remove('selectedCategory');
+    })
 
-        const buttons = $qsa('.categoryButton');
-
-        buttons.forEach((btn) => {
-            btn.classList.add('unselectedCategory');
-            btn.classList.remove('selectedCategory');
-        })
-
-        const selected = $n(selectedTopic)[0];
-        if (e.target.innerHTML == '⚡') {
-            selected.parentNode.classList.add('selectedCategory');
-            selected.parentNode.classList.remove('unselectedCategory');
-        } else {
-            selected.classList.add('selectedCategory');
-            selected.classList.remove('unselectedCategory');
-        }
+    const selected = $n(selectedTopic)[0];
+    if (e.target.innerHTML == '⚡') {
+        selected.parentNode.classList.add('selectedCategory');
+        selected.parentNode.classList.remove('unselectedCategory');
+    } else {
         selected.classList.add('selectedCategory');
         selected.classList.remove('unselectedCategory');
+    }
+    selected.classList.add('selectedCategory');
+    selected.classList.remove('unselectedCategory');
 
-        document.getElementById('searchBar').value = '';
+    document.getElementById('searchBar').value = '';
 
-        loadTopic();
-    })
-})
+    loadTopic();
+}
 
-const searchBar = $('searchBar')
-searchBar.addEventListener('keyup', () => {
+function search(e) {
+    const searchBar = e.target;
     const input = searchBar.value.toUpperCase();
 
     if (input == '' || input == null) {
         loadTopic();
         return;
     }
+
+    const gamesDiv = document.getElementById('games');
 
     document.getElementById('load-games').style.display = 'none';
     gamesDiv.innerHTML = '';
@@ -277,7 +277,7 @@ searchBar.addEventListener('keyup', () => {
             }
         }
     });
-})
+}
 
 fetch(`/gamesjson`).then((response) => response.json()).then((retrievedGames) => {
     games = retrievedGames;

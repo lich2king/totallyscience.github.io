@@ -9,20 +9,20 @@
         include includes/navbar.pug
 
         <div class="categories">
-            <button name="all" onclick="" class="selectedCategory categoryButton not-selectable">All</button>
-            <button name="new" onclick="" class="unselectedCategory categoryButton not-selectable">New<span><img id="bolt" src="icons/boltcategory.svg"></span></button>
-            <button name="2" onclick="" class="unselectedCategory categoryButton not-selectable">2 Player</button>
-            <button name="car" onclick="" class="unselectedCategory categoryButton not-selectable">Car</button>
-            <button name="card" onclick="" class="unselectedCategory categoryButton not-selectable">Card</button>
-            <button name="sport" onclick="" class="unselectedCategory categoryButton not-selectable">Sport</button>
-            <button name="stickmin" onclick="" class="unselectedCategory categoryButton not-selectable">Stickman</button>
-            <button name="hard" onclick="" class="unselectedCategory categoryButton not-selectable">Hard</button>
-            <button name="flash" onclick="" class="unselectedCategory categoryButton not-selectable">Flash</button>
-            <button name="multiplayer" onclick="" class="unselectedCategory categoryButton not-selectable">Multiplayer</button>
-            <button name="horror" onclick="" class="unselectedCategory categoryButton not-selectable">Horror</button>
+            <button name="all" onclick="switchTopic(event)" class="selectedCategory categoryButton not-selectable">All</button>
+            <button name="new" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">New<span><img onclick="switchTopic(event)" id="bolt" src="icons/boltcategory.svg"></span></button>
+            <button name="2" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">2 Player</button>
+            <button name="car" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Car</button>
+            <button name="card" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Card</button>
+            <button name="sport" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Sport</button>
+            <button name="stickmin" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Stickman</button>
+            <button name="hard" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Hard</button>
+            <button name="flash" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Flash</button>
+            <button name="multiplayer" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Multiplayer</button>
+            <button name="horror" onclick="switchTopic(event)" class="unselectedCategory categoryButton not-selectable">Horror</button>
         </div>
 
-        <div class="search-bar" style="margin-top: 25px; margin-left: 50%; transform: translate(-50%); text-align: center;">
+        <div class="search-bar" onkeyup="search(event);" style="margin-top: 25px; margin-left: 50%; transform: translate(-50%); text-align: center;">
             <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
         </div>
 
@@ -44,7 +44,6 @@
             include includes/verticalAd.pug
         </div>
 
-        <script src="scripts/main.js"></script>
         <script src="scripts/classes.js"></script>
     </body>
 </html>
