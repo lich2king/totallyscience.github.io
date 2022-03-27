@@ -213,7 +213,7 @@ function search(e) {
                 }
                 gameBtn.addEventListener('click', () => {
                     window.location.href = `./class.html?class=${game}`
-                })
+                });
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
                 const gameImg = mk('img')
@@ -278,10 +278,11 @@ function search(e) {
         }
     });
 }
-
-fetch(`/gamesjson`).then((response) => response.json()).then((retrievedGames) => {
-    games = retrievedGames;
-    loadTopic();
+window.addEventListener('load', () => {
+    fetch(`/gamesjson`).then((response) => response.json()).then((retrievedGames) => {
+        games = retrievedGames;
+        loadTopic();
+    });
 });
 
 document.getElementById('searchBar').style.backgroundImage = `url(icons/magnifying-${localStorage.getItem("theme")}.svg)`;
