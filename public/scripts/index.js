@@ -30,7 +30,7 @@ document.addEventListener('scroll', _.throttle(scanDocument, 250))
 let shouldAutoSwitch = true
 let slideIndex = 1
 const switchSlide = (n) => {
-    const slides = $c('featuredSlide')
+    const slides = document.getElementsByClassName('featuredSlide')
     if (n > slides.length) {
         slideIndex = 1
     }

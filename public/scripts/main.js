@@ -1,15 +1,3 @@
-const $ = (id) => {
-    return document.getElementById(id)
-}
-
-const $c = (className) => {
-    return document.getElementsByClassName(className)
-}
-
-const $n = (name) => {
-    return document.getElementsByName(name)
-}
-
 // set preferences
 if (localStorage.getItem("website") == null) {
     localStorage.setItem("website", "https://classroom.google.com/")

@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
         document.getElementById('game-iframe').src = gameData.iframe_url;
 
         if (id) {
-            $('game-iframe').src = gameData.iframe_url + '?id=' + id;
+            document.getElementById('game-iframe').src = gameData.iframe_url + '?id=' + id;
             console.log(gameData.iframe_url + '?id=' + id);
         }
     }).catch((err) => {

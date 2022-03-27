@@ -35,7 +35,7 @@ function displayGames() {
         const name = keys[x];
         const data = sorted[keys[x]];
         const sectionLetter = name[0].toLowerCase();
-        let existingSection = $(sectionLetter);
+        let existingSection = document.getElementById(sectionLetter);
 
         if (existingSection == null) {
             const section = mk('section')
@@ -156,7 +156,7 @@ function switchTopic(e) {
         btn.classList.remove('selectedCategory');
     })
 
-    const selected = $n(selectedTopic)[0];
+    const selected = document.getElementsByName(selectedTopic)[0];
     if (e.target.innerHTML == '⚡') {
         selected.parentNode.classList.add('selectedCategory');
         selected.parentNode.classList.remove('unselectedCategory');
@@ -191,7 +191,7 @@ function search(e) {
             if (selectedTopic == 'all') {
                 const data = games[game];
                 const sectionLetter = game[0].toLowerCase();
-                let existingSection = $(sectionLetter);
+                let existingSection = document.getElementById(sectionLetter);
 
                 if (existingSection == null) {
                     const section = mk('section')
@@ -234,7 +234,7 @@ function search(e) {
             } else if (games[game].tags.includes(selectedTopic)) {
                 const data = games[game];
                 const sectionLetter = game[0].toLowerCase();
-                let existingSection = $(sectionLetter);
+                let existingSection = document.getElementById(sectionLetter);
 
                 if (existingSection == null) {
                     const section = mk('section')
