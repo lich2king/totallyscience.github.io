@@ -23,6 +23,7 @@ document.getElementById('report-btn').addEventListener('click', () => {
         hasReported = true;
     })
 });
+
 window.addEventListener('load', () => {
     document.getElementById('fullscreenImg').src = `icons/fullscreen-${localStorage.getItem("theme")}.svg`;
 

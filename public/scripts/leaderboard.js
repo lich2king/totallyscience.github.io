@@ -1,3 +1,4 @@
+// TODO: SET UP AUTO LEADERBOARD
 fetch(`/leaderboardjson`).then((response) => {
     if (response.ok) {
         return response.json();

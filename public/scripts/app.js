@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
         const appData = apps[appName];
         const appFrame = document.getElementById('app_frame');
 
-        if (appData == null) window.location.href = '../apps.html';
+        if (appData == null) window.location.href = '../applications';
 
         appFrame.src = appData.iframe_url;
 
@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
             
             if (appFrame.getAttribute('__uv-attr-src') == null) {
                 alert('Error, failed to load. Apps do not work on some domains.');
-                location.href = '/apps.html';
+                location.href = '/applications';
             }
         }, 1000);
     });

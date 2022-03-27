@@ -1,5 +1,4 @@
 // DONE
-
 const websiteInput = document.getElementById('website');
 const themeInput = document.getElementById('theme');
 const saveBtn = document.getElementById('save-button');
