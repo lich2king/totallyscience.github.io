@@ -30,36 +30,11 @@ if (baseUrl.includes("github")) {
     baseUrl = 'totallyscience.co'
 }
 
-
-window.addEventListener(
-    'keydown',
-    function(e) {
-        if (e.key == '`') {
-            window.open(
-                this.localStorage.getItem("website"),
-                '_blank',
-            )
-        }
-    },
-    false
-)
-
 mkHtml(`
         <svg id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});' xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#f75dfc" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
         </svg>`)
 const scrollButton = $('scrollb')
-
-if (scrollButton) {
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.addEventListener('scroll', () => {
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-            scrollButton.style.display = 'block'
-        } else {
-            scrollButton.style.display = 'none'
-        }
-    })
-}
 
 if (localStorage.getItem("website") == null) {
     localStorage.setItem("website", "https://classroom.google.com/")
@@ -89,9 +64,6 @@ if (localStorage.getItem("disguise") == null) {
 document.body.setAttribute("theme", localStorage.getItem("theme"))
 document.getElementById('settings').children[0].src = `icons/settings-${localStorage.getItem("theme")}.svg`
 
-
-
-
 var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
@@ -100,32 +72,27 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     window.open("/mobile/index.html", "_self")
 }
 
-//Live viewer count
-function uid() {
-    return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
-};
-function pingCounter() {
-    if (localStorage.getItem('liveUID') == null) {
-        localStorage.setItem('liveUID', uid());
-    }
-    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=0`);
-
-    setTimeout(pingCounter, 1800000);
-};
-
-window.addEventListener('beforeunload', () => {
-    if (localStorage.getItem('liveUID') == null) {
-        return;
-    }
-    fetch(`./assets/php/liveviews.php?uid=${localStorage.getItem('liveUID')}&leave=1`);
-});
-window.addEventListener("click", () => {
-    pingCounter()
-}, { once: true });
-
-// register service worker
 window.addEventListener("load", () => {
+    // register service worker
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js");
+    }
+
+    // connect to socket (live views)
+    const socket = io();
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key == '`') {
+        window.open(this.localStorage.getItem("website"), '_blank',)
+    }
+}, false);
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        scrollButton.style.display = 'block';
+    } else {
+        scrollButton.style.display = 'none';
     }
 });

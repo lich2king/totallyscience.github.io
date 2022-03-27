@@ -1,7 +1,12 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const port = 3000;
+
+let liveUsers = 0;
 
 app.use(express.static(path.join(__dirname, 'public'), { redirect: false }));
 app.set('view engine', 'pug');
@@ -59,6 +64,57 @@ app.get('/gamesjson', (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+io.on('connection', (socket) => {
+    liveUsers += 1;
+    increaseStats(socket.request.rawHeaders[17])
+ 
+    socket.on('disconnect', () => {
+        liveUsers -= 1;
+    });
+});
+
+function increaseStats(page) {
+    fs.readFile('stats.json', (err, data) => {
+        if (err) return console.log(err);
+
+        oldStats = JSON.parse(data);
+        
+        if (!oldStats.page_views.hasOwnProperty(page)) {
+            oldStats.page_views[page] = 1;
+        } else {
+            oldStats.page_views[page] += 1;
+        }
+    
+        fs.writeFile('stats.json', JSON.stringify(oldStats), (err) => {
+            if (err) console.log(err);
+        });
+    });
+}
+function updateLiveViews() {
+    fs.readFile('stats.json', (err, data) => {
+        if (err) return console.log(err);
+        
+        oldStats = JSON.parse(data);
+
+        const d = new Date();
+        
+        oldStats.live_views[`${d.getMonth}/${d.getDate}/${d.getFullYear} ${d.getHours}:00`] = liveUsers;
+
+        setTimeout(updateLiveViews, 1000 * 60 * 60);
+    
+        fs.writeFile('stats.json', JSON.stringify(oldStats), (err) => {
+            if (err) console.log(err);
+        });
+    });
+}
+
+
+http.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+
+    const d = new Date();
+    const h = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours() + 1, 0, 0, 0);
+    const e = h - d;
+
+    setTimeout(updateLiveViews, e);
 });
