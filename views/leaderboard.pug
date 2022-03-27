@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        include includes/head.pug
+        <link rel="stylesheet" href="styles/leaderboard.css">
+    </head>
+
+    <body>
+        include includes/navbar.pug
+
+        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfxzuusvWg0CSONtXP_8-tQ0J6vofG4EXHFNmZAmBlCojPdhA/viewform');">Submit a Highscore</button>
+        <table id="scores">
+            <tr>
+                <th>Game</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </table>
+
+        <script src="scripts/main.js"></script>
+        <script src="scripts/leaderboard.js"></script>
+    </body>
+</html>

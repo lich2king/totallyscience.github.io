@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        include includes/head.pug
+        <link rel='stylesheet' href='styles/preferences.css'>
+    </head>
+
+    <body>
+        include includes/navbar.pug
+
+        <form id="survey">
+            <div>
+                <label for="website">What's your school website?</label><br>
+                <input type='text' id='website' name='website' value='https://classroom.google.com/u/0/h'><br>
+            </div>
+
+            <div>
+                <label for="theme">Choose a theme</label>
+
+                <br>
+
+                <select name="theme" id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="disguise">Disguise tab</label>
+
+                <br>
+
+                <select name="disguise" id="disguise">
+                    <option value="none">None</option>
+                    <option value="gc">Google Classroom</option>
+                    <option value="gd">Google Docs</option>
+                    <option value="canvas">Canvas</option>
+                </select>
+            </div>
+
+            <button id="save-button">Save</button>
+            <p style="text-align: center; color: red;" id="errorText"></p>
+        </form>
+
+        <script defer src="scripts/main.js"></script>
+        <script defer src="scripts/preferences.js"></script>
+    </body>
+</html>

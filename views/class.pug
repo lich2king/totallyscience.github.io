@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        include includes/head.pug
+        <link rel="stylesheet" href="styles/class.css">
+    </head>
+
+    <body>
+        include includes/navbar.pug
+
+        <section id="game">
+            <div id="gameDiv">
+                <iframe class="iframeloader" src="" width="80vw" height="80vw" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
+            </div>
+
+            <button onclick="enterFullscreen()"><img id="fullscreenImg" src="icons/fullscreen-light.svg"></button>
+        </section>
+
+        <div align="center">
+            include includes/horizontalAd.pug
+        </div>
+
+        <section id="desc">
+            <div class="grid-container">
+                <div>
+                    <p class="mainText">Controls:</p>
+                </div>
+                <div>
+                    <p class="mainText">Developer:</p>
+                </div>
+                <div>
+                    <p id="controls" class="subText">...</p>
+                </div>
+                <div>
+                    <p id="developer" class="subText">This game was created by...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="report">
+            <p>Is this game not working? Let us know!</p>
+            <button id="report-btn">Report</button>
+        </section>
+
+        <script src="/scripts/main.js"></script>
+        <script defer src="/scripts/class.js"></script>
+    </body>
+</html>
