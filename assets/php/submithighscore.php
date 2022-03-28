@@ -13,7 +13,7 @@ $imageFile = htmlspecialchars($_GET["imageFile"]);
 $baseImage = file_get_contents($imageFile);
 $baseImage = base64_encode($baseImage);
 
-die("hi");
+die($baseImage);
 
 
 // Create connection
