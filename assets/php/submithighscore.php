@@ -11,9 +11,9 @@ $score = htmlspecialchars($_GET["score"]);
 $imageFile = htmlspecialchars($_GET["imageFile"]);
 
 $baseImage = file_get_contents($imageFile);
-$baseImage = base64_encode($baseImage);
+//$baseImage = base64_encode($baseImage);
 
-die($imageFile);
+die($baseImage);
 
 
 // Create connection
