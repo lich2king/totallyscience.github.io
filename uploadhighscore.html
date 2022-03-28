@@ -164,6 +164,9 @@
                     } else {
                         document.getElementById('errorText').innerText = ""
                         imageFile = file;
+                        fetch(`./assets/php/submithighscore.php?username=${username}game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
+                            alert(res);
+                        });
                     }
 
                 }
