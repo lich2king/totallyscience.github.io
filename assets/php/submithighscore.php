@@ -11,8 +11,8 @@ $score = htmlspecialchars($_GET["score"]);
 $imageFile = htmlspecialchars($_GET["imageFile"]);
 
 echo($imageFile);
-$baseImage = file_get_contents($imageFile);
-echo($baseImage);
+//$baseImage = file_get_contents($imageFile);
+//echo($baseImage);
 $baseImage = base64_encode($baseImage);
 
 
