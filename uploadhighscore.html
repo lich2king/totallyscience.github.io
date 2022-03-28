@@ -145,11 +145,6 @@
         window.addEventListener('load', function() {
             document.querySelector('input[type="file"]').addEventListener('change', function() {
                 if (this.files && this.files[0]) {
-                    var img = document.querySelector('img');
-                    alert(img.src)
-                    img.onload = () => {
-                        URL.revokeObjectURL(img.src); // no longer needed, free memory
-                    }
 
                     const file = this.files[0]
                     const fileType = file['type'];
