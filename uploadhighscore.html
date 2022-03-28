@@ -124,7 +124,7 @@
 
 
     <script>
-        let imageBlob = '';
+        let imageFile = '';
         let username = ''
 
         const gamesSelect = document.getElementById('gamesSelect')
@@ -156,16 +156,16 @@
                     if (!validImageTypes.includes(fileType)) {
                         document.getElementById('errorText').innerText = "*You can only upload an image"
                         document.querySelector('input[type="file"]').value = null;
-                        imageBlob = "";
+                        imageFile = "";
                     } else if (file.size > 100000000) {
                         document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
                         document.querySelector('input[type="file"]').value = null;
-                        imageBlob = "";
+                        imageFile = "";
                     } else {
                         document.getElementById('errorText').innerText = ""
-                        imageBlob = URL.createObjectURL(this.files[0]);
-                        console.log(imageBlob);
+                        imageFile = file;
                     }
+
                 }
             });
         });
@@ -181,13 +181,13 @@
                 document.getElementById('errorText').innerText = "*You must choose the game"
             } else if (score == '') {
                 document.getElementById('errorText').innerText = "*You must state your score"
-            } else if (imageBlob == '') {
+            } else if (imageFile == '') {
                 document.getElementById('errorText').innerText = "*You must upload a screen shot of your score"
             } else if (isNaN(score)) {
                 document.getElementById('errorText').innerText = "*The score must be a number"
             } else {
                 document.getElementById('errorText').innerText = ""
-                fetch(`./assets/php/submithighscore.php?username=${username}game=${gameName}&score=${score}&imageBlob=${imageBlob}`)
+                fetch(`./assets/php/submithighscore.php?username=${username}game=${gameName}&score=${score}&imageFile=${imageFile}`)
             }
 
         }
