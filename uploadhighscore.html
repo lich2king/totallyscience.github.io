@@ -187,7 +187,7 @@
                 document.getElementById('errorText').innerText = "*The score must be a number"
             } else {
                 document.getElementById('errorText').innerText = ""
-                fetch(`./assets/php/submithighscore.php?game=${gameName}&score=${score}&imageBlob=${imageBlob}`)
+                fetch(`./assets/php/submithighscore.php?username=${username}game=${gameName}&score=${score}&imageBlob=${imageBlob}`)
             }
 
         }
