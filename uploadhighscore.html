@@ -163,8 +163,9 @@
                         imageFile = "";
                     } else {
                         document.getElementById('errorText').innerText = ""
+                        let imageBlob = URL.createObjectURL(file);
                         imageFile = file;
-                        ConvertImg();
+                        ConvertImg(imageBlob);
                     }
 
                 }
@@ -204,8 +205,8 @@
             });
         }
 
-        async function ConvertImg() {
-            const result = await fetch(`./assets/php/submithighscore.php?imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
+        async function ConvertImg(img) {
+            const result = await fetch(`./assets/php/submithighscore.php?imageFile=${img}`).then((response) => response.text()).then((res) => {
                 return (res);
             });
             alert(result);
