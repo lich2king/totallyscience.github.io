@@ -13,7 +13,7 @@ $imageFile = htmlspecialchars($_GET["imageFile"]);
 echo($imageFile);
 //$baseImage = file_get_contents($imageFile);
 //echo($baseImage);
-$baseImage = base64_encode($baseImage);
+$baseImage = base64_encode($imageFile);
 
 
 die($baseImage);
