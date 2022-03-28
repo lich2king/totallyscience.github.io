@@ -164,9 +164,6 @@
                     } else {
                         document.getElementById('errorText').innerText = ""
                         imageFile = file;
-                        fetch(`./assets/php/submithighscore.php?imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
-                            alert(res);
-                        });
                     }
 
                 }
@@ -204,6 +201,13 @@
                     username = ""
                 }
             });
+        }
+
+        async function ConvertImg() {
+            let result = await fetch(`./assets/php/submithighscore.php?imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
+                return (res);
+            });
+            alert(result);
         }
 
         GetUser();
