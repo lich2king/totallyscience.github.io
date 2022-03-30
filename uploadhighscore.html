@@ -194,7 +194,10 @@
                 document.getElementById('errorText').innerText = "*The score must be a number"
             } else {
                 document.getElementById('errorText').innerText = ""
-                fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`)
+                fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
+                    res = JSON.parse(res);
+                    console.log(res);
+                });
             }
 
         }
