@@ -129,18 +129,7 @@
 
         const gamesSelect = document.getElementById('gamesSelect')
 
-        await fetch(`./assets/games.json?${new Date().getTime()}`)
-            .then((response) => response.json())
-            .then((games) => {
-                for (const [name] of Object.entries(games)) {
 
-                    const gameOp = document.createElement('option')
-                    gameOp.value = name
-                    gameOp.innerHTML = name
-
-                    gamesSelect.appendChild(gameOp)
-                }
-            })
 
         window.addEventListener('load', function() {
             document.querySelector('input[type="file"]').addEventListener('change', function() {
@@ -214,7 +203,23 @@
         }
 
 
+        async function GetGames() {
+            await fetch(`./assets/games.json?${new Date().getTime()}`)
+                .then((response) => response.json())
+                .then((games) => {
+                    for (const [name] of Object.entries(games)) {
 
+                        const gameOp = document.createElement('option')
+                        gameOp.value = name
+                        gameOp.innerHTML = name
+
+                        gamesSelect.appendChild(gameOp)
+                    }
+                })
+        }
+
+
+        GetGames();
         GetUser();
     </script>
 </body>
