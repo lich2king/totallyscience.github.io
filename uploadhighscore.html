@@ -143,25 +143,38 @@
             })
 
         window.addEventListener('load', function() {
-            document.querySelector('input[type="file"]').addEventListener('change', function() {
-                if (this.files && this.files[0]) {
+                    document.querySelector('input[type="file"]').addEventListener('change', function() {
+                                if (this.files && this.files[0]) {
 
-                    const file = this.files[0]
-                    const fileType = file['type'];
-                    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
-                    if (!validImageTypes.includes(fileType)) {
-                        document.getElementById('errorText').innerText = "*You can only upload an image"
-                        document.querySelector('input[type="file"]').value = null;
-                        imageFile = "";
-                    } else if (file.size > 100000000) {
-                        document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
-                        document.querySelector('input[type="file"]').value = null;
-                        imageFile = "";
-                    } else {
-                        document.getElementById('errorText').innerText = ""
-                        let imageBlob = URL.createObjectURL(file);
+                                    const file = this.files[0]
+                                    const fileType = file['type'];
+                                    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
+                                    if (!validImageTypes.includes(fileType)) {
+                                        document.getElementById('errorText').innerText = "*You can only upload an image"
+                                        document.querySelector('input[type="file"]').value = null;
+                                        imageFile = "";
+                                    } else if (file.size > 100000000) {
+                                        document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
+                                        document.querySelector('input[type="file"]').value = null;
+                                        imageFile = "";
+                                    } else {
+                                        document.getElementById('errorText').innerText = ""
+                                        let imageBlob = URL.createObjectURL(file);
+
+                                        var reader = new FileReader();
+                                        reader.readAsDataURL(file);
+                                        reader.onload = function() {
+                                            alert(reader.result);
+                                            console.log(reader.result);
+                                        };
+                                        reader.onerror = function(error) {
+                                            console.log('Error: ', error);
+                                        };
+
+                                        /*alert(imageBlob);
                         imageFile = file;
                         ConvertImg(imageFile);
+                        console.log(imageFile)8?
                     }
 
                 }
