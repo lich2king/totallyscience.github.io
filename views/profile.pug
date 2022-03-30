@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        include includes/head.pug
+        <link rel='stylesheet' href='styles/profile.css'>
+    </head>
+
+    <body>
+        include includes/navbar.pug
+
+        <div id="welcomeHeader">
+            <p>Welcome, #{username}</p>
+        </div>
+
+        <div id="logOutButton">
+            <button onclick="logout()">Log Out</button>
+        </div>
+
+        <script src="scripts/profile.js"></script>
+    </body>
+</html>

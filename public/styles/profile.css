@@ -1,0 +1,20 @@
+#welcomeHeader {
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 100px;
+}
+
+#logOutButton {
+    text-align: center;
+}
+
+#logOutButton button {
+    font-size: 2vw;
+    padding: 15px;
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    border: 0px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}

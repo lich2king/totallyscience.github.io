@@ -1,14 +1,20 @@
 // DONE
-const websiteInput = document.getElementById('website');
-const themeInput = document.getElementById('theme');
-const saveBtn = document.getElementById('save-button');
-const disguiseInput = document.getElementById('disguise');
+window.addEventListener('load', () => {
+    const websiteInput = document.getElementById('website');
+    const themeInput = document.getElementById('theme');
+    const disguiseInput = document.getElementById('disguise');
+    
+    websiteInput.value = localStorage.getItem('website');
+    themeInput.value = localStorage.getItem('theme');
+    disguiseInput.value = localStorage.getItem('disguise');
+});
 
-websiteInput.value = localStorage.getItem('website')
-themeInput.value = localStorage.getItem('theme')
-disguiseInput.value = localStorage.getItem('disguise')
+function savePrefs() {
+    const websiteInput = document.getElementById('website');
+    const themeInput = document.getElementById('theme');
+    const disguiseInput = document.getElementById('disguise');
+    const saveBtn = document.getElementById('save-button');
 
-document.getElementById('survey').addEventListener('submit', (e) => {
     let websiteEntered = websiteInput.value;
     let themeEntered = themeInput.value;
     let disguiseEntered = disguiseInput.value;
@@ -21,4 +27,4 @@ document.getElementById('survey').addEventListener('submit', (e) => {
     setTimeout(() => {
         saveBtn.innerHTML = "Save";
     }, 500);
-})
+}

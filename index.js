@@ -1,3 +1,8 @@
+require('dotenv').config();
+const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
+const bodyParser = require('body-parser');
+const bcrypt = require("bcrypt");
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -10,6 +15,7 @@ let liveUsers = 0;
 let totalPageViews = 0;
 
 app.use(express.static(path.join(__dirname, 'public'), { redirect: false }));
+app.use(cookieParser());
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -34,6 +40,22 @@ app.get('/applications', (req, res) => {
 });
 app.get('/app', (req, res) => {
     res.render('app', { apps: 'selected'});
+});
+
+app.get('/profile', (req, res) => {
+    if (req.cookies['accessToken']) {
+        try {
+            jwt.verify(req.cookies['accessToken'], process.env.TOKEN_SECRET, (err, decoded) => {
+                if (err) throw err;
+    
+                res.render('profile', { username: decoded.user });
+            });
+        } catch (error) {
+            res.render('login');
+        }
+    } else {
+        res.render('login');
+    }
 });
 
 app.get('/preferences', (req, res) => {
@@ -82,6 +104,81 @@ io.on('connection', (socket) => {
     });
 });
 
+// auth
+app.post('/signup', bodyParser.json(), (req, res) => {
+    const { username, password, confirmPassword, email } = req.body;
+    
+    if (!username || !password || !confirmPassword || !email) return res.send('all fields are required');
+    if (confirmPassword != password) return res.send('passwords must be the same');
+
+    fs.readFile('users.json', (err, data) => {
+        if (err) return console.log(err);
+
+        const d = new Date();
+        let users = JSON.parse(data);
+
+        if (!users.hasOwnProperty(username)) {
+            hash(password).then((pass) => {
+                users[username] = {
+                    password: pass,
+                    email: email,
+                    verified: false,
+                    created: `${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`
+                };
+
+                fs.writeFile('users.json', JSON.stringify(users), (err) => {
+                    if (err) console.log(err);
+                });
+    
+                res.cookie('accessToken', generateAccessToken(username));
+                res.send('success');
+            });
+        } else {
+            res.send('username is taken');
+        }
+    });
+});
+
+app.post('/login', bodyParser.json(), (req, res) => {
+    const { username, password } = req.body;
+    
+    if (!username || !password) return res.send('all fields are required');
+
+    fs.readFile('users.json', (err, data) => {
+        if (err) return console.log(err);
+
+        let users = JSON.parse(data);
+
+        if (users.hasOwnProperty(username)) {
+            hash(password).then((hashedPass) => {
+                if (bcrypt.compare(users[username].password, hashedPass)) {
+                    res.cookie('accessToken', generateAccessToken(username));
+                    res.send('success');
+                } else {
+                    res.send('invalid username or password');
+                }
+            });
+        } else {
+            res.send('invalid username or password');
+        }
+    });
+});
+
+app.get('/logout', (req, res) => {
+    res.clearCookie('accessToken');
+    res.send('success');
+});
+
+
+function generateAccessToken(username) {
+    return jwt.sign({ user: username }, process.env.TOKEN_SECRET, {});
+}
+async function hash(string) {
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(string, salt);
+}
+
+// stats
 function increaseStats(page) {
     fs.readFile('stats.json', (err, data) => {
         if (err) return console.log(err);
@@ -109,7 +206,7 @@ function updateLiveViews() {
 
         const d = new Date();
         
-        oldStats.live_views[`${d.getMonth}/${d.getDate}/${d.getFullYear} ${d.getHours}:00`] = liveUsers;
+        oldStats.live_views[`${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:00`] = liveUsers;
 
         setTimeout(updateLiveViews, 1000 * 60 * 60);
     
@@ -119,7 +216,7 @@ function updateLiveViews() {
     });
 }
 
-
+// start server
 http.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 
