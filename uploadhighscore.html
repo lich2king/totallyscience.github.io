@@ -129,7 +129,7 @@
 
         const gamesSelect = document.getElementById('gamesSelect')
 
-        fetch(`./assets/games.json?${new Date().getTime()}`)
+        await fetch(`./assets/games.json?${new Date().getTime()}`)
             .then((response) => response.json())
             .then((games) => {
                 for (const [name] of Object.entries(games)) {
