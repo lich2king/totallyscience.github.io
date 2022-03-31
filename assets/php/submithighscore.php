@@ -39,7 +39,6 @@ if($highscoreresult->num_rows == 0) {
     $prevScore = $row[1];
     if((float)$score > (float)$prevScore)
     {
-        echo($game);
         uploadHighscore();
     }
     else
@@ -51,6 +50,7 @@ if($highscoreresult->num_rows == 0) {
 
 function uploadHighscore()
 {
+  echo($game);
   /*$sql = "INSERT INTO highscore_requests (game, score, username, image)
   VALUES ('$game', '$score', '$user', '$imageFile')";
       
