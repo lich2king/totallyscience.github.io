@@ -37,10 +37,9 @@ if($highscoreresult->num_rows == 0) {
     $prevScore = $row[1];
     if((float)$score > (float)$prevScore)
     {
-      die("Upload");
         uploadHighscore();
     }
-    die("Don't");
+    echo("Score is not greater than current highscore");
 }
 
 
