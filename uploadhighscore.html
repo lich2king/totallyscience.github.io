@@ -170,6 +170,7 @@
         function SubmitHighscore() {
             const gameName = document.getElementById('gamesSelect').value
             const score = document.getElementById('scoreText').value
+            document.getElementById('errorText').style.color = "red";
 
             if (username == '') {
                 document.getElementById('errorText').innerHTML = "*You must <a href='./signup.html'>sign up</a> to submit a highscore"
@@ -186,8 +187,6 @@
                 fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
                     if (res.toLowerCase().includes('success')) {
                         document.getElementById('errorText').style.color = "green";
-                    } else {
-                        document.getElementById('errorText').style.color = "red";
                     }
                     console.log(res);
                     document.getElementById('errorText').innerHTML = res
