@@ -10,6 +10,8 @@ $game = htmlspecialchars($_GET["game"]);
 $score = htmlspecialchars($_GET["score"]);
 $imageFile = htmlspecialchars($_GET["imageFile"]);
 
+echo($game);
+
 //echo($imageFile);
 //$baseImage = file_get_contents($imageFile);
 //echo($baseImage);
