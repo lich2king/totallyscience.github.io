@@ -51,9 +51,8 @@ if($highscoreresult->num_rows == 0) {
 function uploadHighscore()
 {
   global $game, $score, $user, $imageFile;
-  
-  $sql = "INSERT INTO highscore_requests (game, score, username, image)
-  VALUES ('$game', '$score', '$user', '$imageFile')";
+
+  $sql = "INSERT INTO highscore_requests (game, score, username, image) VALUES ('$game', '$score', '$user', '$imageFile')";
       
   if ($conn->query($sql) === TRUE) {
       echo ("Success, your score will be reviewed shortly");
