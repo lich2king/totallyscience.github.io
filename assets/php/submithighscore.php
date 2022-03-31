@@ -39,7 +39,10 @@ if($highscoreresult->num_rows == 0) {
     {
         uploadHighscore();
     }
-    echo("Score is not greater than current highscore");
+    else
+    {
+      echo("Score is not greater than current highscore");
+    }
 }
 
 
