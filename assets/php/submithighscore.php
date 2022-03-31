@@ -34,6 +34,8 @@ if($highscoreresult->num_rows == 0) {
     uploadHighscore();
 } else {
     // do other stuff...
+    echo($game);
+
     $row = $highscoreresult -> fetch_row();
     
     $prevScore = $row[1];
