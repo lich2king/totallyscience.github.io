@@ -136,6 +136,7 @@
                 if (this.files && this.files[0]) {
 
                     const file = this.files[0]
+                    console.log(file);
                     const fileType = file['type'];
                     const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
                     if (!validImageTypes.includes(fileType)) {
