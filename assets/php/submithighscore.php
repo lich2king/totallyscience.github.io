@@ -45,7 +45,10 @@ if($highscoreresult->num_rows == 0) {
 
 function uploadHighscore()
 {
-  echo("aqui");
+  $sql = "INSERT INTO highscore_requests (game, score, username, image)
+  VALUES ('$game', '$score', '$user', '$imageFile')";
+      
+  
 }
 
     
