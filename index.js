@@ -12,7 +12,9 @@ const io = require('socket.io')(http);
 const port = 3000;
 
 let liveUsers = 0;
-let totalPageViews = 0;
+
+let stats = {}
+let users = {}
 
 app.use(express.static(path.join(__dirname, 'public'), { redirect: false }));
 app.use(cookieParser());
@@ -21,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // pages
 app.get('/', (req, res) => {
-    res.render('index', { index: 'selected'});
+    res.render('index', { index: 'selected', views: getPageViews() });
 });
 
 app.get('/classes', (req, res) => {
@@ -91,13 +93,15 @@ app.get('/gamesjson', (req, res) => {
 
 
 // views
-app.get('/pageloads', (req, res) => {
-    res.send(JSON.stringify({"total": totalPageViews}));
-});
-
 io.on('connection', (socket) => {
     liveUsers += 1;
-    increaseStats(socket.request.rawHeaders[17])
+
+    let page = socket.request.rawHeaders[17];
+    if (!stats.page_views.hasOwnProperty(page)) {
+        stats.page_views[page] = 1;
+    } else {
+        stats.page_views[page] += 1;
+    }
  
     socket.on('disconnect', () => {
         liveUsers -= 1;
@@ -178,47 +182,54 @@ async function hash(string) {
     return await bcrypt.hash(string, salt);
 }
 
-// stats
-function increaseStats(page) {
-    fs.readFile('stats.json', (err, data) => {
-        if (err) return console.log(err);
+// total home page views
+function getPageViews() {
+    let totalViews = 0;
 
-        oldStats = JSON.parse(data);
-        
-        if (!oldStats.page_views.hasOwnProperty(page)) {
-            oldStats.page_views[page] = 1;
-        } else {
-            oldStats.page_views[page] += 1;
+    for (key in stats.page_views) {
+        if (key.endsWith('/')) {
+            totalViews += stats.page_views[key];
         }
+    }
 
-        if (page.endsWith('/')) totalPageViews += 1;
-    
-        fs.writeFile('stats.json', JSON.stringify(oldStats), (err) => {
-            if (err) console.log(err);
-        });
-    });
+    return addSuffix(totalViews.toString());
 }
+const addSuffix = (num) => {
+    if (num.endsWith('1')) {
+        return num + 'st'
+    } else if (num.endsWith('2')) {
+        return num + 'nd'
+    } else if (num.endsWith('3')) {
+        return num + 'rd'
+    }
+    return num + 'th'
+}
+
+// update live users every hour
 function updateLiveViews() {
-    fs.readFile('stats.json', (err, data) => {
-        if (err) return console.log(err);
-        
-        oldStats = JSON.parse(data);
-
-        const d = new Date();
-        
-        oldStats.live_views[`${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:00`] = liveUsers;
-
-        setTimeout(updateLiveViews, 1000 * 60 * 60);
+    const d = new Date();
     
-        fs.writeFile('stats.json', JSON.stringify(oldStats), (err) => {
-            if (err) console.log(err);
-        });
-    });
+    stats.live_views[`${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:00`] = liveUsers;
+
+    setTimeout(updateLiveViews, 1000 * 60 * 60);
 }
 
 // start server
 http.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
+
+    // read date from files
+    fs.readFile('stats.json', (err, data) => {
+        if (err) return console.log(err);
+
+        stats = JSON.parse(data);
+    });
+
+    fs.readFile('users.json', (err, data) => {
+        if (err) return console.log(err);
+
+        users = JSON.parse(data);
+    });
 
     // start saving live viewers every hour
     const d = new Date();
@@ -226,21 +237,19 @@ http.listen(port, () => {
     const e = h - d;
 
     setTimeout(updateLiveViews, e);
+});
 
-    // get previous total page views
-    fs.readFile('stats.json', (err, data) => {
-        if (err) return console.log(err);
+// application quit
+process.on('SIGINT', () => {
+    console.log('saving and stopping...');
 
-        oldStats = JSON.parse(data);
+    fs.writeFile('stats.json', JSON.stringify(stats), (err) => {
+        if (err) console.log(err);
 
-        let keys = Object.keys(oldStats.page_views);
-        let sortedKeys = keys.filter(key => key.endsWith('/'));
-        let pageViews = 0;
+        fs.writeFile('users.json', JSON.stringify(users), (err) => {
+            if (err) console.log(err);
 
-        for (let x in sortedKeys) {
-            pageViews += oldStats.page_views[sortedKeys[x]];
-        }
-
-        totalPageViews = pageViews;
+            process.exit();
+        });
     });
 });

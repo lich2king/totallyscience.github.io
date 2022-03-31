@@ -1,0 +1,3 @@
+[submodule "proxy/uv"]
+	path = proxy/uv
+	url = https://github.com/titaniumnetwork-dev/ultraviolet-scripts.git

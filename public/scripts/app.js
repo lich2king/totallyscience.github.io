@@ -18,8 +18,10 @@ window.addEventListener('load', () => {
             if (appName == 'Firefox') return;
             
             if (appFrame.getAttribute('__uv-attr-src') == null) {
-                alert('Error, failed to load. Apps do not work on some domains.');
-                location.href = '/applications';
+                const proxyPath = 'http://localhost:5500';
+                
+                // proxy website
+                appFrame.src = proxyPath + '/index.html#' + btoa(appData.iframe_url);
             }
         }, 1000);
     });
