@@ -32,7 +32,10 @@ if($highscoreresult->num_rows == 0) {
     uploadHighscore();
 } else {
     // do other stuff...
-    die($highscoreresult);
+    $row = $highscoreresult -> fetch_row();
+    
+    $prevScore = $row[4];
+    die($prevScore);
 }
 
 
