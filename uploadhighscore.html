@@ -127,7 +127,7 @@
         let imageFile = '';
         let username = ''
 
-        const gamesSelect = document.getElementById('gamesSelect')
+
 
 
 
@@ -151,8 +151,6 @@
                         document.getElementById('errorText').innerText = ""
                         let imageBlob = URL.createObjectURL(file);
                         imageFile = imageBlob;
-                        alert(imageBlob);
-                        console.log(imageBlob);
                         /*var reader = new FileReader();
                         reader.readAsDataURL(file);
                         reader.onload = function() {
@@ -210,8 +208,8 @@
             await fetch(`./assets/games.json?${new Date().getTime()}`)
                 .then((response) => response.json())
                 .then((games) => {
+                    const gamesSelect = document.getElementById('gamesSelect')
                     for (const [name] of Object.entries(games)) {
-
                         const gameOp = document.createElement('option')
                         gameOp.value = name
                         gameOp.innerHTML = name
