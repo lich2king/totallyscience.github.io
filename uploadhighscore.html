@@ -177,7 +177,7 @@
                 document.getElementById('errorText').innerText = "*You must choose the game"
             } else if (score == '') {
                 document.getElementById('errorText').innerText = "*You must state your score"
-            } else if (imageFile == '') {
+            } else if (imageFile == '' || imageFile == null) {
                 document.getElementById('errorText').innerText = "*You must upload a screen shot of your score"
             } else if (isNaN(score)) {
                 document.getElementById('errorText').innerText = "*The score must be a number"
