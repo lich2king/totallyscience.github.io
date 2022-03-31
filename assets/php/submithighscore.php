@@ -10,7 +10,6 @@ $game = htmlspecialchars($_GET["game"]);
 $score = htmlspecialchars($_GET["score"]);
 $imageFile = htmlspecialchars($_GET["imageFile"]);
 
-echo($game);
 
 //echo($imageFile);
 //$baseImage = file_get_contents($imageFile);
@@ -34,13 +33,13 @@ if($highscoreresult->num_rows == 0) {
     uploadHighscore();
 } else {
     // do other stuff...
-    echo($game);
 
     $row = $highscoreresult -> fetch_row();
     
     $prevScore = $row[1];
     if((float)$score > (float)$prevScore)
     {
+        echo($game);
         uploadHighscore();
     }
     else
