@@ -29,7 +29,7 @@ $highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'")
     //die($userresult);
 if($highscoreresult->num_rows == 0) {
     // row not found, do stuff...
-    //uploadHighscore();
+    uploadHighscore();
 } else {
     // do other stuff...
     //die($highscoreresult[1]);
