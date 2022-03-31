@@ -146,8 +146,6 @@
                         document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
                         document.querySelector('input[type="file"]').value = null;
                         imageFile = "";
-                    } else if (document.getElementById("fileUpload").files.length < 1) {
-                        imageFile = "";
                     } else {
                         document.getElementById('errorText').innerText = ""
                         let imageBlob = URL.createObjectURL(file);
@@ -170,7 +168,6 @@
 
 
         function SubmitHighscore() {
-            console.log(document.getElementById("fileUpload").files.length);
             const gameName = document.getElementById('gamesSelect').value
             const score = document.getElementById('scoreText').value
 
@@ -180,7 +177,7 @@
                 document.getElementById('errorText').innerText = "*You must choose the game"
             } else if (score == '') {
                 document.getElementById('errorText').innerText = "*You must state your score"
-            } else if (imageFile == '' || imageFile == null) {
+            } else if (imageFile == '' || document.getElementById("fileUpload").files.length < 1) {
                 document.getElementById('errorText').innerText = "*You must upload a screen shot of your score"
             } else if (isNaN(score)) {
                 document.getElementById('errorText').innerText = "*The score must be a number"
