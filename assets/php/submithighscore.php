@@ -32,7 +32,7 @@ if($highscoreresult->num_rows == 0) {
     uploadHighscore();
 } else {
     // do other stuff...
-    die($highscoreresult[1]);
+    die($highscoreresult);
 }
 
 
