@@ -25,17 +25,6 @@ if ($conn->connect_error) {
 }
 
 
-/*$highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
-    //die($userresult);
-if($highscoreresult->num_rows == 0) {
-    // row not found, do stuff...
-    uploadHighscore();
-} else {
-    // do other stuff...
-    die($highscoreresult[1]);
-}*/
-
-
 function uploadHighscore()
 {
   $sql = "INSERT INTO highscore_requests (game, score, username, image)
@@ -49,6 +38,20 @@ function uploadHighscore()
       //echo "Error";
   }
 }
+
+
+$highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
+    //die($userresult);
+if($highscoreresult->num_rows == 0) {
+    // row not found, do stuff...
+    uploadHighscore();
+} else {
+    // do other stuff...
+    die($highscoreresult[1]);
+}
+
+
+
 
     
 
