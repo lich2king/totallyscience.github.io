@@ -149,8 +149,8 @@
                     } else {
                         console.log("Fuck");
                         document.getElementById('errorText').innerText = ""
-                        let imageBlob = URL.createObjectURL(file);
-
+                        let imageBlob = URL.createObjectURL(new Blob(file));
+                        imageFile = imageBlob;
                         alert(imageBlob);
                         console.log(imageBlob);
                         /*var reader = new FileReader();
