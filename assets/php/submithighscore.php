@@ -25,18 +25,32 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "INSERT INTO highscore_requests (game, score, username, image)
-VALUES ('$game', '$score', '$user', '$imageFile')";
-    
-if ($conn->query($sql) === TRUE) {
-    echo "Success";
-    //echo "New record created successfully";
+$highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
+    //die($userresult);
+if($highscoreresult->num_rows == 0) {
+    // row not found, do stuff...
+    uploadHighscore();
 } else {
-    //echo "Error: " . $sql . "<br>" . $conn->error;
-    //echo "Error";
+    // do other stuff...
+    die($highscoreresult[1]);
 }
+
+
+function uploadHighscore()
+{
+  $sql = "INSERT INTO highscore_requests (game, score, username, image)
+  VALUES ('$game', '$score', '$user', '$imageFile')";
+      
+  if ($conn->query($sql) === TRUE) {
+      echo "Success";
+      //echo "New record created successfully";
+  } else {
+      //echo "Error: " . $sql . "<br>" . $conn->error;
+      //echo "Error";
+  }
+}
+
     
-$conn->close();
 
     
 
