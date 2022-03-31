@@ -112,7 +112,7 @@
         </div>
         <div>
             <label for="confirmpassword">Submit a screenshot of your score (Show full screen including top website bar otherwise INVALID)</label><br>
-            <input type='file' />
+            <input id="fileUpload" type='file' />
         </div>
         <button id="save-button">Submit For Review</button>
         <p style="text-align: center; color: red;" id="errorText"></p>
@@ -136,7 +136,6 @@
                 if (this.files && this.files[0]) {
 
                     const file = this.files[0]
-                    console.log(file);
                     const fileType = file['type'];
                     const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
                     if (!validImageTypes.includes(fileType)) {
@@ -146,6 +145,8 @@
                     } else if (file.size > 100000000) {
                         document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
                         document.querySelector('input[type="file"]').value = null;
+                        imageFile = "";
+                    } else if (document.getElementById("fileUpload").files.length < 1) {
                         imageFile = "";
                     } else {
                         document.getElementById('errorText').innerText = ""
