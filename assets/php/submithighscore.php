@@ -35,8 +35,10 @@ if($highscoreresult->num_rows == 0) {
     $row = $highscoreresult -> fetch_row();
     
     $prevScore = $row[1];
-    echo("hi");
-    die($prevScore);
+    if($score > $prevScore)
+    {
+        uploadHighscore();
+    }
 }
 
 
