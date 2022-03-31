@@ -25,7 +25,7 @@ if ($conn->connect_error) {
 }
 
 
-$highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
+/*$highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
     //die($userresult);
 if($highscoreresult->num_rows == 0) {
     // row not found, do stuff...
@@ -33,7 +33,7 @@ if($highscoreresult->num_rows == 0) {
 } else {
     // do other stuff...
     die($highscoreresult[1]);
-}
+}*/
 
 
 function uploadHighscore()
