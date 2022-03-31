@@ -45,7 +45,7 @@ if($highscoreresult->num_rows == 0) {
 
 function uploadHighscore()
 {
-  $sql = "INSERT INTO highscore_requests (game, score, username, image)
+  /*$sql = "INSERT INTO highscore_requests (game, score, username, image)
   VALUES ('$game', '$score', '$user', '$imageFile')";
       
   if ($conn->query($sql) === TRUE) {
@@ -54,7 +54,8 @@ function uploadHighscore()
   } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
       //echo "Error";
-  }
+  }*/
+  echo("okay");
 }
 
     
