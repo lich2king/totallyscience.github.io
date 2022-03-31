@@ -37,7 +37,6 @@ if($highscoreresult->num_rows == 0) {
     $prevScore = $row[1];
     if((float)$score > (float)$prevScore)
     {
-        $conn->close();
         uploadHighscore();
     }
     echo("Score is not greater than current highscore");
