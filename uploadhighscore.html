@@ -150,7 +150,9 @@
                         document.getElementById('errorText').innerText = ""
                         let imageBlob = URL.createObjectURL(file);
 
-                        var reader = new FileReader();
+                        alert(imageBlob);
+                        console.log(imageBlob);
+                        /*var reader = new FileReader();
                         reader.readAsDataURL(file);
                         reader.onload = function() {
                             imageFile = reader.result
@@ -158,7 +160,7 @@
                         };
                         reader.onerror = function(error) {
                             console.log('Error: ', error);
-                        };
+                        };*/
 
                     }
 
