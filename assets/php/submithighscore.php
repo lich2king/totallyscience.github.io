@@ -58,7 +58,7 @@ function uploadHighscore()
       //echo "Error: " . $sql . "<br>" . $conn->error;
       //echo "Error";
   }*/
-  echo("okay");
+  echo(`$game, $score, $user, $imageFile`);
 }
 
     
