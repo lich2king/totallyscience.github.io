@@ -39,7 +39,6 @@ if($highscoreresult->num_rows == 0) {
     {
         uploadHighscore();
     }
-    echo("Score is not greater than current highscore");
 }
 
 
@@ -49,7 +48,7 @@ function uploadHighscore()
   VALUES ('$game', '$score', '$user', '$imageFile')";
       
   if ($conn->query($sql) === TRUE) {
-      echo "Success, your score will be reviewed shortly";
+      echo "Success";
       //echo "New record created successfully";
   } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
