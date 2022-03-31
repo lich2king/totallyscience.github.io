@@ -186,6 +186,7 @@
                 document.getElementById('errorText').innerText = ""
                 fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
                     console.log(res);
+                    document.getElementById('errorText').innerHTML = res
                 });
             }
 

@@ -49,7 +49,7 @@ function uploadHighscore()
   VALUES ('$game', '$score', '$user', '$imageFile')";
       
   if ($conn->query($sql) === TRUE) {
-      echo "Success";
+      echo "Success, your score will be reviewed shortly";
       //echo "New record created successfully";
   } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
