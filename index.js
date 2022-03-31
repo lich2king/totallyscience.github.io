@@ -239,8 +239,21 @@ http.listen(port, () => {
     setTimeout(updateLiveViews, e);
 });
 
-// application quit
-process.on('SIGINT', () => {
+
+// application exited
+process.on('exit', saveAndStop);
+
+// application quit using ctrl c
+process.on('SIGINT', saveAndStop);
+
+// quit b/c or error 
+process.on('uncaughtException', saveAndStop);
+
+// quit b/c kill pid
+process.on('SIGUSR1', saveAndStop);
+process.on('SIGUSR2', saveAndStop);
+
+function saveAndStop() {
     console.log('saving and stopping...');
 
     fs.writeFile('stats.json', JSON.stringify(stats), (err) => {
@@ -252,4 +265,4 @@ process.on('SIGINT', () => {
             process.exit();
         });
     });
-});
+}
