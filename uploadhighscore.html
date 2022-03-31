@@ -186,6 +186,8 @@
                 fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
                     if (res.toLowerCase().includes('success')) {
                         document.getElementById('errorText').style += "color: green";
+                    } else {
+                        document.getElementById('errorText').style += "color: red";
                     }
                     console.log(res);
                     document.getElementById('errorText').innerHTML = res
