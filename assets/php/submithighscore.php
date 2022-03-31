@@ -39,7 +39,16 @@ if($highscoreresult->num_rows == 0) {
     $prevScore = $row[1];
     if((float)$score > (float)$prevScore)
     {
-        uploadHighscore();
+      $sql = "INSERT INTO highscore_requests (game, score, username, image)
+      VALUES ('$game', '$score', '$user', '$imageFile')";
+          
+      if ($conn->query($sql) === TRUE) {
+          echo ("Success, your score will be reviewed shortly");
+          //echo "New record created successfully";
+      } else {
+          //echo "Error: " . $sql . "<br>" . $conn->error;
+          //echo "Error";
+      }
     }
     else
     {
