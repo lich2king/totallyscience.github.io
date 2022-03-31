@@ -35,6 +35,7 @@ if($highscoreresult->num_rows == 0) {
     $row = $highscoreresult -> fetch_row();
     
     $prevScore = $row[4];
+    echo("hi");
     die($prevScore);
 }
 
