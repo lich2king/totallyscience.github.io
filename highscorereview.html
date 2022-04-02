@@ -155,8 +155,7 @@
                 document.getElementById('username').innerText = res['user'];
                 document.getElementById('score').innerText = res['score'];
 
-                var objectURL = URL.createObjectURL(res['image']);
-                console.log(objectURL);
+                console.log(res['image']);
                 document.getElementById('image').src = objectURL;
             });
         }
