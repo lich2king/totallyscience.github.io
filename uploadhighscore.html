@@ -171,7 +171,7 @@
             const score = document.getElementById('scoreText').value
             document.getElementById('errorText').style.color = "red";
 
-            if (username != '') {
+            if (username == '') {
                 document.getElementById('errorText').innerHTML = "*You must <a href='./signup.html'>sign up</a> to submit a highscore"
             } else if (gameName == '') {
                 document.getElementById('errorText').innerText = "*You must choose the game"
