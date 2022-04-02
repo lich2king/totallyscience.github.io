@@ -22,7 +22,7 @@ if($step == 0)
 elseif ($step == 1)
 {
   //Reject
-  rejectRow()
+  rejectRow();
 }
 elseif ($step == 2)
 {
@@ -59,6 +59,8 @@ function getRow(){
 }
 
 function rejectRow(){
+  global $conn;
+
   $user = htmlspecialchars($_GET["username"]);
   $game = htmlspecialchars($_GET["game"]);
   $score = htmlspecialchars($_GET["score"]);
