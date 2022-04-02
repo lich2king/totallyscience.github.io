@@ -65,10 +65,9 @@ function rejectRow(){
   $game = htmlspecialchars($_GET["game"]);
   $score = htmlspecialchars($_GET["score"]);
 
-  $sql = "DELETE FROM highscore_requests WHERE username='$username' AND game='$game' AND score=$score";
+  $sql = "DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score";
   if ($conn->query($sql) === TRUE) {
-    echo('watching the throne');
-      echo (`$username, $game, $score`);
+    echo('success');
       //echo "New record created successfully";
   } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
