@@ -37,6 +37,7 @@ elseif ($step == 2)
 function getRow(){
     global $conn;
 
+    
     $firstRow = $conn->query("SELECT * FROM highscore_requests WHERE 1 LIMIT 1");
     if($firstRow->num_rows == 0) {
         echo("No rows");
@@ -47,7 +48,42 @@ function getRow(){
         $user = $row[2];
         $score = $row[1];
         $image = $row[3];
-    
+      
+        $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game='$game");
+        if($currentHighscore->num_rows == 0) {
+          $data->game = $game;
+          $data->user = $user;
+          $data->score = $score;
+          $data->image = $image;
+          $dataJSON = json_encode($data);
+          echo($dataJSON);
+
+        } else {
+          $currentRow = $currentHighscore -> fetch_row();
+          $currentScore = $row[1];
+
+          if($score > $currentScore)
+          {
+            $data->game = $game;
+            $data->user = $user;
+            $data->score = $score;
+            $data->image = $image;
+            $dataJSON = json_encode($data);
+            echo($dataJSON);
+          }
+          else
+          {
+            $sql = "DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score";
+            if ($conn->query($sql) === TRUE) {
+              echo('success');
+            }
+            getRow();
+          }
+
+        }
+
+
+
         $data->game = $game;
         $data->user = $user;
         $data->score = $score;
