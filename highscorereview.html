@@ -152,7 +152,9 @@
                 res = JSON.parse(res);
 
                 document.getElementById('gameName').innerText = res['game'];
-
+                document.getElementById('username').innerText = res['user'];
+                document.getElementById('score').innerText = res['score'];
+                document.getElementById('image').innerText = res['image'];
             });
         }
 
