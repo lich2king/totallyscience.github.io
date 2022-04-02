@@ -99,7 +99,7 @@
     <div style="padding-top: 90px;"></div>
 
 
-    <form id="survey" action="javascript:SubmitHighscore()">
+    <form id="survey" action="./assets/php/submithighscore.php" method="post">
         <div>
             <label for="gamesSelect">What game is it for?</label><br>
             <select name="gamesSelect" id="gamesSelect">
@@ -149,8 +149,8 @@
                     } else {
                         document.getElementById('errorText').innerText = ""
                         let imageBlob = URL.createObjectURL(file);
-                        imageFile = imageBlob;
-                        /*var reader = new FileReader();
+                        //imageFile = imageBlob;
+                        var reader = new FileReader();
                         reader.readAsDataURL(file);
                         reader.onload = function() {
                             imageFile = reader.result
@@ -158,7 +158,7 @@
                         };
                         reader.onerror = function(error) {
                             console.log('Error: ', error);
-                        };*/
+                        };
 
                     }
 
@@ -184,47 +184,64 @@
                 document.getElementById('errorText').innerText = "*The score must be a number"
             } else {
                 document.getElementById('errorText').innerText = ""
-                fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
-                    if (res.toLowerCase().includes('success')) {
-                        document.getElementById('errorText').style.color = "green";
-                    }
+                    /*fetch(`./assets/php/submithighscore.php?username=${username}&game=${gameName}&score=${score}&imageFile=${imageFile}`).then((response) => response.text()).then((res) => {
+                        if (res.toLowerCase().includes('success')) {
+                            document.getElementById('errorText').style.color = "green";
+                        }
+                        console.log(res);
+                        document.getElementById('errorText').innerHTML = res
+                    });*/
+
+                let data = {
+                    username,
+                    gameName,
+                    score,
+                    imageFile
+                }
+                data = JSON.stringify(data)
+
+                result = await fetch('./assets/php/submithighscore.php', {
+                    method: 'POST',
+                    body: data
+                }).then((res) => {
+                    //res.json()
                     console.log(res);
-                    document.getElementById('errorText').innerHTML = res
+                    document.getElementById('errorText').innerHTML = res;
+                })
+
+
+            }
+
+            function GetUser() {
+                fetch(`./assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+                    if (res != "null") {
+                        res = JSON.parse(res);
+                        username = res["username"]
+                    } else {
+                        username = ""
+                    }
                 });
             }
 
-        }
 
-        function GetUser() {
-            fetch(`./assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-                if (res != "null") {
-                    res = JSON.parse(res);
-                    username = res["username"]
-                } else {
-                    username = ""
-                }
-            });
-        }
+            async function GetGames() {
+                await fetch(`./assets/games.json?${new Date().getTime()}`)
+                    .then((response) => response.json())
+                    .then((games) => {
+                        const gamesSelect = document.getElementById('gamesSelect')
+                        for (const [name] of Object.entries(games)) {
+                            const gameOp = document.createElement('option')
+                            gameOp.value = name
+                            gameOp.innerHTML = name
 
-
-        async function GetGames() {
-            await fetch(`./assets/games.json?${new Date().getTime()}`)
-                .then((response) => response.json())
-                .then((games) => {
-                    const gamesSelect = document.getElementById('gamesSelect')
-                    for (const [name] of Object.entries(games)) {
-                        const gameOp = document.createElement('option')
-                        gameOp.value = name
-                        gameOp.innerHTML = name
-
-                        gamesSelect.appendChild(gameOp)
-                    }
-                })
-        }
+                            gamesSelect.appendChild(gameOp)
+                        }
+                    })
+            }
 
 
-        GetGames();
-        GetUser();
+            GetGames();
+            GetUser();
     </script>
 </body>
 

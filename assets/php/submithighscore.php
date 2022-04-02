@@ -4,16 +4,12 @@ $username = "u483325885_user";
 $password = "Totally_password4321";
 $database = "u483325885_database";
 
+$data = json_decode(file_get_contents('php://input'), true);
 
-$user = htmlspecialchars($_GET["username"]);
-$game = htmlspecialchars($_GET["game"]);
-$score = htmlspecialchars($_GET["score"]);
-$imageFile = htmlspecialchars($_GET["imageFile"]);
-
-
-//echo($imageFile);
-//$baseImage = file_get_contents($imageFile);
-//echo($baseImage);
+$user = $data['username'];
+$game = $data['gameName'];
+$score = $data['score'];
+$imageFile = $data['imageFile'];
 
 
 
