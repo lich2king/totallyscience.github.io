@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Totally Science">
+    <meta property="og:site_name" content="Totally Science">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="The best place for 'Learning Science!'">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
+
+    <title>Totally Science</title>
+    <meta charset="UTF-8">
+
+    <!--Cache Killer-->
+    <script>
+        const mainCSS = `<link rel='stylesheet' href='assets/styles/main.css?${new Date().getTime()}'>`
+        document.getElementsByTagName('head')[0].innerHTML += mainCSS
+    </script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--End Cache Killer-->
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <style>
+        #survey {
+            text-align: center;
+        }
+        
+        #survey div {
+            padding-bottom: 2vh;
+        }
+        
+        #survey label {
+            font-size: 1.1vw;
+        }
+        
+        #survey input,
+        #survey select {
+            width: 21vw;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            background-color: var(--light-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 4px;
+            color: var(--dark-color);
+            box-sizing: border-box;
+            outline: none;
+            font-size: 1vw;
+            margin-bottom: 4vh;
+        }
+        
+        #survey button {
+            font-size: 1.5vw;
+            width: 15vw;
+            height: 8vh;
+            color: var(--light-color);
+            background-color: var(--accent-color);
+            border: 0px;
+            border-radius: 10px;
+            margin-bottom: 2%;
+            cursor: pointer;
+        }
+        
+        #data {
+            text-align: center;
+        }
+        
+        #data p {
+            font-size: 1.5vw;
+        }
+        
+        #data div {
+            margin-top: 15vh;
+        }
+        
+        #data button {
+            font-size: 1.5vw;
+            width: 8vw;
+            height: 4vh;
+            color: var(--light-color);
+            background-color: var(--accent-color);
+            border: 0px;
+            border-radius: 10px;
+            margin-bottom: 2%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        
+        #data button:hover {
+            transform: scale(1.02);
+            -moz-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
+            -webkit-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
+            box-shadow: 3px 3px 5px 3px var(--box-shadow-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftbar">
+            <div class="nav-button"><a href="index.html">Home</a></div>
+            <div class="nav-button"><a href="classes.html">Games</a></div>
+            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
+            <div class="nav-button"><a href="apps.html">Apps</a></div>
+            <div class="nav-button"><a href="chat.html">Chat</a></div>
+        </div>
+
+        <div id="middlebar">
+            <p>Totally Science</p>
+        </div>
+
+        <div id="rightbar">
+            <a id="login" href="profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+            </a>
+
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
+        </div>
+    </div>
+
+    <div style="padding-top: 90px;"></div>
+
+
+
+    <div id="data">
+        <h1>Game Name</h1>
+        <p>Username</p>
+        <p>100</p>
+        <img width="400px" src="./assets/game_images/amongus.jpg">
+        <div>
+            <button style="margin-right: 40vw;">Reject</button>
+            <button style="margin-left: 40vw;">Approve</button>
+        </div>
+    </div>
+
+
+    <script defer src="assets/scripts/main.js?v15"></script>
+
+    <script>
+        function getRowData() {
+            fetch(`./assets/php/reviewhighscore.php`).then((response) => response.text()).then((res) => {
+                res = JSON.parse(res);
+                console.log(res);
+            });
+        }
+
+        getRowData();
+    </script>
+
+
+</body>
+
+
+
+</html>
