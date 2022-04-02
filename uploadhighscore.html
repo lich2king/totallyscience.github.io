@@ -211,37 +211,38 @@
 
 
             }
+        }
 
-            function GetUser() {
-                fetch(`./assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-                    if (res != "null") {
-                        res = JSON.parse(res);
-                        username = res["username"]
-                    } else {
-                        username = ""
+        function GetUser() {
+            fetch(`./assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+                if (res != "null") {
+                    res = JSON.parse(res);
+                    username = res["username"]
+                } else {
+                    username = ""
+                }
+            });
+        }
+
+
+        async function GetGames() {
+            await fetch(`./assets/games.json?${new Date().getTime()}`)
+                .then((response) => response.json())
+                .then((games) => {
+                    const gamesSelect = document.getElementById('gamesSelect')
+                    for (const [name] of Object.entries(games)) {
+                        const gameOp = document.createElement('option')
+                        gameOp.value = name
+                        gameOp.innerHTML = name
+
+                        gamesSelect.appendChild(gameOp)
                     }
-                });
-            }
+                })
+        }
 
 
-            async function GetGames() {
-                await fetch(`./assets/games.json?${new Date().getTime()}`)
-                    .then((response) => response.json())
-                    .then((games) => {
-                        const gamesSelect = document.getElementById('gamesSelect')
-                        for (const [name] of Object.entries(games)) {
-                            const gameOp = document.createElement('option')
-                            gameOp.value = name
-                            gameOp.innerHTML = name
-
-                            gamesSelect.appendChild(gameOp)
-                        }
-                    })
-            }
-
-
-            GetGames();
-            GetUser();
+        GetGames();
+        GetUser();
     </script>
 </body>
 
