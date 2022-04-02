@@ -204,7 +204,7 @@
                     method: 'POST',
                     body: data
                 }).then((res) => {
-                    //res.json()
+                    res.text()
                     console.log(res);
                     document.getElementById('errorText').innerHTML = res;
                 })
