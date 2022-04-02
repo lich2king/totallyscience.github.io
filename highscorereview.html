@@ -139,7 +139,7 @@
         <img id="image" width="400px" src="">
         <div>
             <button onclick="reject()" style="margin-right: 40vw;">Reject</button>
-            <button style="margin-left: 40vw;">Approve</button>
+            <button onclick="approve()" style="margin-left: 40vw;">Approve</button>
         </div>
     </div>
 
@@ -169,6 +169,13 @@
 
         function reject() {
             fetch(`./assets/php/reviewhighscore.php?step=1&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
+                console.log(res);
+            });
+            location.reload();
+        }
+
+        function approve() {
+            fetch(`./assets/php/reviewhighscore.php?step=2&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
                 console.log(res);
             });
             location.reload();

@@ -27,6 +27,7 @@ elseif ($step == 1)
 elseif ($step == 2)
 {
   //Approve
+  approveRow();
 }
 
 
@@ -72,6 +73,39 @@ function rejectRow(){
   } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
   }
+}
+
+function approveRow(){
+  global $conn;
+
+  $user = htmlspecialchars($_GET["username"]);
+  $game = htmlspecialchars($_GET["game"]);
+  $score = htmlspecialchars($_GET["score"]);
+
+  $sql = "DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score";
+  if ($conn->query($sql) === TRUE) {
+    echo('success');
+  }
+
+  $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
+    if ($userresult->num_rows == 0) {
+        // row not found, do stuff...
+        $sql = "INSERT INTO highscores (game, score, name)
+        VALUES ('$game', '$score', '$user')";
+    
+        if ($conn->query($sql) === TRUE) {
+            echo "Success";
+        }
+
+    } else {
+        // do other stuff...
+        $sql = "UPDATE highscores SET score='$score', name='$user' WHERE game='$game'";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Success";
+        }
+    }
+
 }
 
 
