@@ -73,25 +73,11 @@ function getRow(){
           }
           else
           {
-            $sql = "DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score";
-            if ($conn->query($sql) === TRUE) {
-              echo('success');
-            }
+            $conn->query("DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score");
             getRow();
           }
 
         }
-
-
-
-        $data->game = $game;
-        $data->user = $user;
-        $data->score = $score;
-        $data->image = $image;
-
-        $dataJSON = json_encode($data);
-            
-        echo($dataJSON);
     }
 }
 
