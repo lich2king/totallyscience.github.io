@@ -148,7 +148,7 @@
 
     <script>
         function getRowData() {
-            fetch(`./assets/php/reviewhighscore.php`).then((response) => response.text()).then((res) => {
+            fetch(`./assets/php/reviewhighscore.php?step=0`).then((response) => response.text()).then((res) => {
                 res = JSON.parse(res);
 
                 document.getElementById('gameName').innerText = res['game'];
