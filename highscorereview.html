@@ -164,6 +164,11 @@
                 document.getElementById('score').innerText = score;
                 document.getElementById('image').src = res['image'];
             });
+            if (document.getElementById('image').src = '') {
+                document.getElementById('gameName').innerText = 'No more highscores currently :)';
+                document.getElementById('username').innerText = '';
+                document.getElementById('score').innerText = '';
+            }
         }
 
 
