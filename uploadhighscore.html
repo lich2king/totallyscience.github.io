@@ -167,8 +167,7 @@
         });
 
 
-        async function SubmitHighscore(e) {
-            e.preventDefault();
+        async function SubmitHighscore() {
             const gameName = document.getElementById('gamesSelect').value
             const score = document.getElementById('scoreText').value
             document.getElementById('errorText').style.color = "red";
