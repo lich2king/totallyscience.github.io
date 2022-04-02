@@ -167,7 +167,8 @@
         });
 
 
-        async function SubmitHighscore() {
+        async function SubmitHighscore(e) {
+            e.preventDefault();
             const gameName = document.getElementById('gamesSelect').value
             const score = document.getElementById('scoreText').value
             document.getElementById('errorText').style.color = "red";
@@ -200,6 +201,7 @@
                 }
                 data = JSON.stringify(data)
                 alert(data);
+
                 result = await fetch('./assets/php/submithighscore.php', {
                     method: 'POST',
                     body: data
