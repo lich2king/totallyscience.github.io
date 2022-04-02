@@ -141,7 +141,7 @@
                         document.getElementById('errorText').innerText = "*You can only upload an image"
                         document.querySelector('input[type="file"]').value = null;
                         imageFile = "";
-                    } else if (file.size > 100000000) {
+                    } else if (file.size > 1000000) {
                         document.getElementById('errorText').innerText = "*The file must be smaller than 100mb"
                         document.querySelector('input[type="file"]').value = null;
                         imageFile = "";
@@ -203,9 +203,10 @@
                     method: 'POST',
                     body: data
                 }).then((res) => {
-                    res = res.text();
-                    console.log(res);
-                    document.getElementById('errorText').innerHTML = res;
+                    res = res.text().then(() => {
+                        console.log(res);
+                        document.getElementById('errorText').innerHTML = res;
+                    });
                 })
 
 
