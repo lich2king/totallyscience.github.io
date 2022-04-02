@@ -198,13 +198,12 @@
                     imageFile
                 }
                 data = JSON.stringify(data)
-                alert(data);
 
                 result = await fetch('./assets/php/submithighscore.php', {
                     method: 'POST',
                     body: data
                 }).then((res) => {
-                    res.text()
+                    res = res.text();
                     console.log(res);
                     document.getElementById('errorText').innerHTML = res;
                 })
