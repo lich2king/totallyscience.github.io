@@ -133,10 +133,10 @@
 
 
     <div id="data">
-        <h1>Game Name</h1>
-        <p>Username</p>
-        <p>100</p>
-        <img width="400px" src="./assets/game_images/amongus.jpg">
+        <h1 id="gameName">Game Name</h1>
+        <p id="username">Username</p>
+        <p id="score">100</p>
+        <img id="image" width="400px" src="./assets/game_images/amongus.jpg">
         <div>
             <button style="margin-right: 40vw;">Reject</button>
             <button style="margin-left: 40vw;">Approve</button>
@@ -150,9 +150,12 @@
         function getRowData() {
             fetch(`./assets/php/reviewhighscore.php`).then((response) => response.text()).then((res) => {
                 res = JSON.parse(res);
-                console.log(res);
+
+                document.getElementById('gameName').innerText = res['game'];
+
             });
         }
+
 
         getRowData();
     </script>
