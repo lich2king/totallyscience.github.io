@@ -22,6 +22,7 @@ if($step == 0)
 elseif ($step == 1)
 {
   //Reject
+  rejectRow()
 }
 elseif ($step == 2)
 {
@@ -55,6 +56,20 @@ function getRow(){
             
         echo($dataJSON);
     }
+}
+
+function rejectRow(){
+  $user = htmlspecialchars($_GET["username"]);
+  $game = htmlspecialchars($_GET["game"]);
+  $score = htmlspecialchars($_GET["score"]);
+
+  $sql = "DELETE FROM highscore_requests WHERE username='$username' AND game='$game' AND score=$score";
+  if ($conn->query($sql) === TRUE) {
+      echo "Success";
+      //echo "New record created successfully";
+  } else {
+      //echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 }
 
 

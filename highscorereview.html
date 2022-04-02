@@ -147,17 +147,31 @@
     <script defer src="assets/scripts/main.js?v15"></script>
 
     <script>
+        let username;
+        let gameName;
+        let score;
+
         function getRowData() {
             fetch(`./assets/php/reviewhighscore.php?step=0`).then((response) => response.text()).then((res) => {
                 res = JSON.parse(res);
 
-                document.getElementById('gameName').innerText = res['game'];
-                document.getElementById('username').innerText = res['user'];
-                document.getElementById('score').innerText = res['score'];
+                username = res['user']
+                gameName = res['game']
+                score = res['score']
+
+                document.getElementById('gameName').innerText = gameName;
+                document.getElementById('username').innerText = username;
+                document.getElementById('score').innerText = score;
                 document.getElementById('image').src = res['image'];
             });
         }
 
+
+        function reject() {
+            fetch(`./assets/php/reviewhighscore.php?step=1&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
+                console.log(res);
+            });
+        }
 
         getRowData();
     </script>
