@@ -154,7 +154,9 @@
                 document.getElementById('gameName').innerText = res['game'];
                 document.getElementById('username').innerText = res['user'];
                 document.getElementById('score').innerText = res['score'];
-                document.getElementById('image').src = res['image'];
+
+                var objectURL = URL.createObjectURL(res['image']);
+                document.getElementById('image').src = objectURL;
             });
         }
 
