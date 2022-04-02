@@ -199,7 +199,7 @@
                     imageFile
                 }
                 data = JSON.stringify(data)
-
+                console.LOG(data);
                 result = await fetch('./assets/php/submithighscore.php', {
                     method: 'POST',
                     body: data
