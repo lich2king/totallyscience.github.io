@@ -3,18 +3,15 @@ const urlParams = new URLSearchParams(queryString);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
-let hasReported = false;
-let baseurl = location.host;
-
-if (baseurl.includes("github")) {
-    baseurl = 'totallyscience.co';
-}
-
 document.getElementById('report-btn').addEventListener('click', () => {
     // TODO: FIX REPORT
+
+    /*
     if (hasReported) return;
 
-    fetch(`https://${baseurl}/assets/php/game_stats.php/?type=reports&name=${gameName}`).then((response) => response.text()).then((text) => {
+let hasReported = false;
+
+    fetch(`https://${hasReported}/assets/php/game_stats.php/?type=reports&name=${gameName}`).then((response) => response.text()).then((text) => {
         if (text.includes('<?php')) {
             document.getElementById('report-btn').innerText = '?';
             return;
@@ -22,11 +19,10 @@ document.getElementById('report-btn').addEventListener('click', () => {
         document.getElementById('report-btn').innerText = text;
         hasReported = true;
     })
+    */
 });
 
 window.addEventListener('load', () => {
-    document.getElementById('fullscreenImg').src = `icons/fullscreen-${localStorage.getItem("theme")}.svg`;
-
     fetch(`/gamesjson`).then((response) => {
         if (response.ok) {
             return response.json();
@@ -59,4 +55,29 @@ function enterFullscreen() {
     } else if (elem.msRequestFullscreen) {
         elem.msRequestFullscreen();
     }
+}
+function starGame() {
+    if (!getCookie('accessToken')) return alert('must be signed in to star games.');
+
+    fetch(`/star`, { method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ class: gameName }) }).then((response) => response.text()).then((res) => {
+        if (res == 'success') return location.reload();
+        
+        alert(res);
+    });
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
 }
