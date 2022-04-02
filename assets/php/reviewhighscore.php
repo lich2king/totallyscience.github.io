@@ -24,12 +24,12 @@ if($firstRow->num_rows == 0) {
     $game = $row[0];
     $user = $row[2];
     $score = $row[1];
-    $image = $row[3];
+    //$image = $row[3];
     
     $data->game = $game;
     $data->user = $user;
     $data->score = $score;
-    $data->image = $image;
+    //$data->image = $image;
 
     $dataJSON = json_encode($data);
             
