@@ -6,6 +6,8 @@ $database = "u483325885_database";
 
 $data = json_decode(file_get_contents('php://input'), true);
 
+var_dump($data);
+
 $user = $data['username'];
 $game = $data['gameName'];
 $score = $data['score'];
