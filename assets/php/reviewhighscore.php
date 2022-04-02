@@ -67,7 +67,7 @@ function rejectRow(){
 
   $sql = "DELETE FROM highscore_requests WHERE username='$username' AND game='$game' AND score=$score";
   if ($conn->query($sql) === TRUE) {
-      echo "Success";
+      echo (`DELETE FROM highscore_requests WHERE username='$username' AND game='$game' AND score=$score`);
       //echo "New record created successfully";
   } else {
       //echo "Error: " . $sql . "<br>" . $conn->error;
