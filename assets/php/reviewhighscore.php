@@ -29,7 +29,7 @@ if($firstRow->num_rows == 0) {
     $data->game = $game;
     $data->user = $user;
     $data->score = $score;
-    //$data->image = $image;
+    $data->image = $image;
 
     $dataJSON = json_encode($data);
             
