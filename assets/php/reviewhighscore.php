@@ -51,6 +51,7 @@ function getRow(){
       
         $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game='$game");
         if($currentHighscore->num_rows == 0) {
+          //No current highscore set
           $data->game = $game;
           $data->user = $user;
           $data->score = $score;
@@ -64,6 +65,7 @@ function getRow(){
 
           if($score > $currentScore)
           {
+            //Score is greater than current highscore score
             $data->game = $game;
             $data->user = $user;
             $data->score = $score;
