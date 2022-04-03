@@ -49,7 +49,7 @@ function getRow(){
         $score = $row[1];
         $image = $row[3];
       
-        $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game='$game");
+        $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game='$game'");
         if($currentHighscore->num_rows == 0) {
           //No current highscore set
           $data->game = $game;
@@ -57,7 +57,6 @@ function getRow(){
           $data->score = $score;
           $data->image = $image;
           $dataJSON = json_encode($data);
-          echo("mello");
           echo($dataJSON);
 
         } else {
@@ -72,7 +71,6 @@ function getRow(){
             $data->score = $score;
             $data->image = $image;
             $dataJSON = json_encode($data);
-            echo("si");
             echo($dataJSON);
           }
           else
