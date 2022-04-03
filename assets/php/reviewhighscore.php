@@ -62,8 +62,8 @@ function getRow(){
         } else {
           $currentRow = $currentHighscore -> fetch_row();
           $currentScore = $row[1];
-          echo($score);
-          echo($currentHighscore);
+
+          echo($currentScore);
           if($score > $currentScore)
           {
             //Score is greater than current highscore score
