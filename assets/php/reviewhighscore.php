@@ -63,7 +63,6 @@ function getRow(){
           $currentRow = $currentHighscore -> fetch_row();
           $currentScore = $currentRow[1];
 
-          echo($currentScore);
           if($score > $currentScore)
           {
             //Score is greater than current highscore score
@@ -76,9 +75,8 @@ function getRow(){
           }
           else
           {
-            echo(`$score, $currentScore`);
-            //$conn->query("DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score");
-            //getRow();
+            $conn->query("DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score");
+            getRow();
           }
 
         }
