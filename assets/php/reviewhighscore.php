@@ -62,7 +62,7 @@ function getRow(){
         } else {
           $currentRow = $currentHighscore -> fetch_row();
           $currentScore = $row[1];
-
+          echo($score);
           echo($currentHighscore);
           if($score > $currentScore)
           {
