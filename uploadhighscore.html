@@ -203,6 +203,9 @@
                     method: 'POST',
                     body: data
                 }).then((response) => response.text()).then((res) => {
+                    if (res.toLowerCase().includes('success')) {
+                        document.getElementById('errorText').style.color = "green";
+                    }
                     console.log(res);
                     document.getElementById('errorText').innerHTML = res;
                 });
