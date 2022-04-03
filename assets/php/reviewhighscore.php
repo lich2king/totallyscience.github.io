@@ -57,6 +57,7 @@ function getRow(){
           $data->score = $score;
           $data->image = $image;
           $dataJSON = json_encode($data);
+          echo("hello");
           echo($dataJSON);
 
         } else {
@@ -71,6 +72,7 @@ function getRow(){
             $data->score = $score;
             $data->image = $image;
             $dataJSON = json_encode($data);
+            echo("hi");
             echo($dataJSON);
           }
           else
