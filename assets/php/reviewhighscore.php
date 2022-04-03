@@ -76,8 +76,8 @@ function getRow(){
           else
           {
             echo(`$score, $currentScore`);
-            $conn->query("DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score");
-            getRow();
+            //$conn->query("DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score");
+            //getRow();
           }
 
         }
