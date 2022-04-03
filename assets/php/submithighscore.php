@@ -39,7 +39,7 @@ if($highscoreresult->num_rows == 0) {
     }
     else
     {
-      echo("Score is not greater than current highscore");
+      echo("*Score is not greater than current highscore");
     }
 }
 
