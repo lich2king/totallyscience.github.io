@@ -122,8 +122,9 @@ app.get('/privacypolicy', (req, res) => {
     res.render('legal/privacypolicy');
 });
 
-
-// json files
+// ---------------------------------------------------
+// json files ----------------------------------------
+// ---------------------------------------------------
 app.get('/leaderboardjson', (req, res) => {
     res.sendFile(path.join(__dirname, 'leaderboard.json'));
 });
@@ -137,7 +138,9 @@ app.get('/gamesjson', (req, res) => {
 });
 
 
-// views
+// ---------------------------------------------------
+// view counter --------------------------------------
+// ---------------------------------------------------
 io.on('connection', (socket) => {
     liveUsers += 1;
 
@@ -153,7 +156,42 @@ io.on('connection', (socket) => {
     });
 });
 
-// auth
+// save live users every hour
+function updateLiveViews() {
+    const d = new Date();
+    
+    stats.live_views[`${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:00`] = liveUsers;
+
+    setTimeout(updateLiveViews, 1000 * 60 * 60);
+}
+
+// total home page views
+function getPageViews() {
+    let totalViews = 0;
+
+    for (key in stats.page_views) {
+        if (key.endsWith('/')) {
+            totalViews += stats.page_views[key];
+        }
+    }
+
+    return addSuffix(totalViews.toString());
+}
+
+const addSuffix = (num) => {
+    if (num.endsWith('1')) {
+        return num + 'st'
+    } else if (num.endsWith('2')) {
+        return num + 'nd'
+    } else if (num.endsWith('3')) {
+        return num + 'rd'
+    }
+    return num + 'th'
+}
+
+// ---------------------------------------------------
+// authentication ------------------------------------
+// ---------------------------------------------------
 app.post('/signup', bodyParser.json(), (req, res) => {
     const { username, password, confirmPassword, email } = req.body;
     
@@ -204,7 +242,6 @@ app.get('/logout', (req, res) => {
     res.send('success');
 });
 
-
 function generateAccessToken(username) {
     return jwt.sign({ user: username }, process.env.TOKEN_SECRET, {});
 }
@@ -213,30 +250,11 @@ async function hash(string) {
     return await bcrypt.hash(string, salt);
 }
 
-// total home page views
-function getPageViews() {
-    let totalViews = 0;
-
-    for (key in stats.page_views) {
-        if (key.endsWith('/')) {
-            totalViews += stats.page_views[key];
-        }
-    }
-
-    return addSuffix(totalViews.toString());
-}
-const addSuffix = (num) => {
-    if (num.endsWith('1')) {
-        return num + 'st'
-    } else if (num.endsWith('2')) {
-        return num + 'nd'
-    } else if (num.endsWith('3')) {
-        return num + 'rd'
-    }
-    return num + 'th'
-}
-
+// ---------------------------------------------------
+// helper functions ----------------------------------
+// ---------------------------------------------------
 function getStarredGames(user) {
+    // get starred games from user data
     let starredGames = '';
     for (game in users[user].starred_games) {
         if (users[user].starred_games[game]) {
@@ -247,17 +265,11 @@ function getStarredGames(user) {
     return starredGames;
 }
 
-// update live users every hour
-function updateLiveViews() {
-    const d = new Date();
-    
-    stats.live_views[`${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:00`] = liveUsers;
-
-    setTimeout(updateLiveViews, 1000 * 60 * 60);
-}
-
-// start server
+// ---------------------------------------------------
+// server functions ----------------------------------
+// ---------------------------------------------------
 http.listen(port, () => {
+    // start server
     console.log(`Example app listening on port ${port}`);
 
     // read date from files
@@ -280,6 +292,8 @@ http.listen(port, () => {
 
     setTimeout(updateLiveViews, e);
 });
+
+// saving data when node process ends
 
 // application quit using ctrl c
 process.on('SIGINT', saveAndStop);

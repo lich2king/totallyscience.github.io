@@ -20,15 +20,30 @@
     resize: vertical;
 }
 
-#game span {
+#actions {
     margin-left: calc(12.5vw - 12px);
+    width: 75vw;
+    height: 50px;
+    margin-top: 15px;
 }
 
-#game span svg {
+#actions svg {
+    position: relative;
     fill: var(--dark-color);
     height: 30px;
-    margin-top: 15px;
     padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 4px solid var(--accent-color);
+}
+#actions span {
+    font-family: 'Rubik';
+    position: relative;
+    top: -24px;
+    display: inline-block;
+    margin-left: 3px;
+    fill: var(--dark-color);
+    padding: 15.5px;
     border-radius: 20px;
     cursor: pointer;
     border: 4px solid var(--accent-color);
