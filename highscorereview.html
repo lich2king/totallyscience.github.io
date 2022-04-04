@@ -147,59 +147,65 @@
     <script defer src="assets/scripts/main.js?v15"></script>
 
     <script>
-        let username;
-        let gameName;
-        let score;
+        const urlParams = new URLSearchParams(queryString);
+        const pass = urlParams.get('password')
+        if (pass == 'Totally') {
+            const color = urlParams.get('color')
 
-        function getRowData() {
-            fetch(`./assets/php/reviewhighscore.php?step=0`).then((response) => response.text()).then((res) => {
-                console.log(res);
-                res = JSON.parse(res);
+            let username;
+            let gameName;
+            let score;
 
-                username = res['user']
-                gameName = res['game']
-                score = res['score']
+            function getRowData() {
+                fetch(`./assets/php/reviewhighscore.php?step=0`).then((response) => response.text()).then((res) => {
+                    console.log(res);
+                    res = JSON.parse(res);
 
-                document.getElementById('gameName').innerText = gameName;
-                document.getElementById('username').innerText = username;
-                document.getElementById('score').innerText = score;
-                document.getElementById('image').src = res['image'];
-            });
-            if (document.getElementById('gameName').src = 'Game Name') {
-                document.getElementById('gameName').innerText = 'No more highscores currently :)';
-                document.getElementById('username').innerText = '';
-                document.getElementById('score').innerText = '';
+                    username = res['user']
+                    gameName = res['game']
+                    score = res['score']
+
+                    document.getElementById('gameName').innerText = gameName;
+                    document.getElementById('username').innerText = username;
+                    document.getElementById('score').innerText = score;
+                    document.getElementById('image').src = res['image'];
+                });
+                if (document.getElementById('gameName').src = 'Game Name') {
+                    document.getElementById('gameName').innerText = 'No more highscores currently :)';
+                    document.getElementById('username').innerText = '';
+                    document.getElementById('score').innerText = '';
+                }
             }
-        }
 
 
-        function reject() {
-            fetch(`./assets/php/reviewhighscore.php?step=1&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
-                console.log(res);
-            });
-            location.reload();
-        }
+            function reject() {
+                fetch(`./assets/php/reviewhighscore.php?step=1&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
+                    console.log(res);
+                });
+                location.reload();
+            }
 
-        function approve() {
-            fetch(`./assets/php/reviewhighscore.php?step=2&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
-                console.log(res);
-            });
-            location.reload();
-        }
+            function approve() {
+                fetch(`./assets/php/reviewhighscore.php?step=2&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
+                    console.log(res);
+                });
+                location.reload();
+            }
 
-        getRowData();
+            getRowData();
 
-        function enterFullscreen() {
-            var elem = document.getElementById("image");
+            function enterFullscreen() {
+                var elem = document.getElementById("image");
 
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.mozRequestFullScreen) {
-                elem.mozRequestFullScreen();
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) {
-                elem.msRequestFullscreen();
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
             }
         }
     </script>
