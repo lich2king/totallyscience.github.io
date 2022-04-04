@@ -147,6 +147,7 @@
     <script defer src="assets/scripts/main.js?v15"></script>
 
     <script>
+        const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const pass = urlParams.get('password')
         console.log(pass);
