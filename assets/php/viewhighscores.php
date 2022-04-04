@@ -34,7 +34,7 @@ while($row = mysqli_fetch_assoc($result))
   
 }
 
-die($highscores);    
+var_dump($highscores);    
 
 
    
