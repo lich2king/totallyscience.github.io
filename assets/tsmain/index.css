@@ -1,0 +1,209 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+@import 'https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy';
+@import'https://fonts.googleapis.com/css?family=Arvo' @import 'https://fonts.googleapis.com/css?family=Buenard';
+@import 'font-awesome/css/font-awesome.min.css" type="text/css';
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css';
+@import '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css';
+@import 'https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css';
+.navbar {
+    z-index: 98;
+    box-shadow: 0px 5px 16px -1px rgba(163, 163, 163, 0.4);
+    font-family: 'Sorts Mill Goudy', serif;
+    color: #A78AC3;
+    height: 82px;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.navbar-brand {
+    position: relative;
+    padding: 0 28px 0 15px;
+    font-size: 25px;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 80px;
+    letter-spacing: 2px;
+}
+
+.nav li {
+    display: inline;
+    vertical-align: middle;
+}
+
+.navbar-nav li a {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 30px 25px 33px 25px;
+}
+
+.navbar-nav li a:hover {
+    background-color: #d9d9d9;
+    height: 100%;
+}
+
+#navbar-collapse {
+    background-color: white;
+}
+
+#cards {
+    margin-top: 10vh;
+    font-family: Arial;
+}
+
+.wrapper {
+    max-width: 100vw;
+    overflow: hidden;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: flex-start;
+    transition: 1s;
+}
+
+.card {
+    max-width: 400px;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 100px;
+    margin: 60px auto;
+    position: relative;
+    transition: 0.5s ease-out;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.back {
+    transform: rotateX(180deg);
+}
+
+.card div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 2s;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.active {
+    transform: rotateX(180deg);
+}
+
+.prev,
+.next {
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: #222;
+    background-color: #eee;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+#header {
+    padding-top: 2vh;
+}
+
+#logo {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 1vh;
+    padding-left: 1vh;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.25s;
+}
+
+#logo:hover {
+    -webkit-filter: brightness(80%);
+}
+
+#choices {
+    margin-top: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+#choices div {
+    margin: 1vw;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 25vw;
+    height: 25vh;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#choices div:hover {
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+#slider {
+    z-index: 99;
+    position: absolute;
+    top: 0%;
+    background-color: #e6e6e6;
+    width: 25vw;
+    height: 100vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+#slider.closed {
+    width: 0%;
+}
+
+#slider img {
+    width: 2vw;
+    float: right;
+    padding-right: 0.5vw;
+    padding-top: 0.5vh;
+    cursor: pointer;
+}
+
+#slider h1 {
+    white-space: nowrap;
+    color: black;
+    padding-left: 1vw;
+    text-decoration: underline;
+}
+
+#slider div {
+    padding-left: 1vw;
+}
+
+#slider div a {
+    margin-right: 50vw;
+}
