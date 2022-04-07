@@ -15,6 +15,7 @@ let liveUsers = 0;
 
 let stats = {};
 let users = {};
+let highscores = {};
 
 app.use(express.static(path.join(__dirname, 'public'), { redirect: false }));
 app.use(cookieParser());
@@ -75,6 +76,31 @@ app.post('/star', bodyParser.json(), (req, res) => {
         }
     } else {
         res.send('must be signed in to star games.');
+    }
+});
+app.post('/highscore', bodyParser.json({ limit: '1.1mb' }), (req, res) => {
+    if (req.cookies['accessToken']) {
+        try {
+            jwt.verify(req.cookies['accessToken'], process.env.TOKEN_SECRET, (err, decoded) => {
+                if (err) throw err;
+
+                if (req.body.game == null) return res.send('error submitting highscore');
+                if (req.body.score == null || isNaN(score) || score == '') return res.send('invalid score');
+                if (req.body.image == null || req.body.image == '') return res.send('invalid image');
+
+                if (highscores.active.hasOwnProperty(req.body.game)) {
+                    if (highscores.active[req.body.game].score >= req.body.score) return res.send('greater highscore already exists.')
+                }
+
+                highscores.pending.push({ score: req.body.score, image: req.body.image, game: req.body.game, user: decoded.user });
+
+                res.send('success');
+            });
+        } catch (error) {
+            res.send('must be signed in to submit highscores');
+        }
+    } else {
+        res.send('must be signed in to submit highscores.');
     }
 });
 
@@ -285,6 +311,12 @@ http.listen(port, () => {
         users = JSON.parse(data);
     });
 
+    fs.readFile('highscores.json', (err, data) => {
+        if (err) return console.log(err);
+
+        highscores = JSON.parse(data);
+    });
+
     // start saving live viewers every hour
     const d = new Date();
     const h = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours() + 1, 0, 0, 0);
@@ -314,7 +346,11 @@ function saveAndStop() {
         fs.writeFile('users.json', JSON.stringify(users), (err) => {
             if (err) console.log(err);
 
-            process.exit();
+            fs.writeFile('highscores.json', JSON.stringify(highscores), (err) => {
+                if (err) console.log(err);
+    
+                process.exit();
+            });
         });
     });
 }

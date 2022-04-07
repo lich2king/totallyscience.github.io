@@ -3,6 +3,8 @@ const urlParams = new URLSearchParams(queryString);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
+let imageFile = '';
+
 document.getElementById('report-btn').addEventListener('click', () => {
     // TODO: FIX REPORT
 
@@ -40,8 +42,35 @@ window.addEventListener('load', () => {
             console.log(gameData.iframe_url + '?id=' + id);
         }
     });
-});
 
+    document.querySelector('input[type="file"]').addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+
+            const file = this.files[0]
+            const fileType = file['type'];
+            const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
+
+            if (!validImageTypes.includes(fileType)) {
+                alert('invalid image');
+                document.querySelector('input[type="file"]').value = null;
+                imageFile = '';
+            } else if (file.size > 1000000) {
+                alert('image must be under 1mb');
+                document.querySelector('input[type="file"]').value = null;
+                imageFile = '';
+            } else {
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function() {
+                    imageFile = reader.result
+                };
+                reader.onerror = function(error) {
+                    console.log('Error: ', error);
+                };
+            }
+        }
+    });
+});
 
 function enterFullscreen() {
     var elem = document.getElementsByTagName("iframe")[0];
@@ -62,6 +91,25 @@ function starGame() {
     fetch(`/star`, { method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ class: gameName }) }).then((response) => response.text()).then((res) => {
         if (res == 'success') return location.reload();
         
+        alert(res);
+    });
+}
+
+function submitHighscore() {
+    if (!getCookie('accessToken')) return alert('must be signed in to submit highscores.');
+
+    const score = document.getElementById('scoreUpload').value;
+
+    if (score == null || isNaN(score) || score == '') return alert('invalid score');
+    if (imageFile == '') return alert('invalid image');
+    
+    let data = {
+        game: gameName,
+        score: score,
+        image: imageFile
+    }
+    
+    fetch('/highscore', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) }).then((response) => response.text()).then((res) => {
         alert(res);
     });
 }

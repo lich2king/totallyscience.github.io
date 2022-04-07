@@ -31,6 +31,7 @@
     position: relative;
     fill: var(--dark-color);
     height: 30px;
+    display: inline-block;
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
@@ -39,7 +40,7 @@
 #actions span {
     font-family: 'Rubik';
     position: relative;
-    top: -24px;
+    top: -23px;
     display: inline-block;
     margin-left: 3px;
     fill: var(--dark-color);
@@ -47,6 +48,22 @@
     border-radius: 20px;
     cursor: pointer;
     border: 4px solid var(--accent-color);
+}
+#actions input {
+    font-family: 'Rubik';
+    position: relative;
+    top: -24px;
+    display: inline-block;
+    margin-left: 3px;
+    fill: var(--dark-color);
+    padding: 17px;
+    border-radius: 20px;
+    border: 4px solid var(--accent-color);
+    outline: none;
+}
+#actions input[type=file] {
+    padding: 14px;
+    top: -24px;
 }
 
 #report {
