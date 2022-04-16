@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        include includes/head.pug
+        <link rel="stylesheet" href="styles/leaderboard.css">
+    </head>
+
+    <body>
+        include includes/navbar.pug
+
+        <form id="survey" action="javascript:SubmitHighscore()">
+            <div>
+                <label for="gamesSelect">What game is it for?</label><br>
+                <select name="gamesSelect" id="gamesSelect">
+                </select>
+            </div>
+            <div>
+                <label for="score">What is your score?</label><br>
+                <input type='text' id='scoreText' name='score' placeholder='100'><br>
+            </div>
+            <div>
+                <label for="confirmpassword">Submit a screenshot of your score (Show full screen including top website bar otherwise INVALID)</label><br>
+                <input id="fileUpload" type='file' />
+            </div>
+            <button id="save-button">Submit For Review</button>
+            <p style="text-align: center; color: red;" id="errorText"></p>
+        </form>
+
+        <script src="scripts/leaderboard.js"></script>
+    </body>
+</html>
