@@ -211,26 +211,26 @@
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/index.js"></script>
 
-
-    <script async data-cfasync="false">
-        const url = new URL(window.location.href);
-        const clickID = url.searchParams.get("click_id");
-        const sourceID = url.searchParams.get("source_id");
-
-        const s = document.createElement("script");
-        s.dataset.cfasync = "false";
-        s.src = "https://system-notify.app/f/sdk.js?z=618901";
-        s.onload = (opts) => {
-            opts.zoneID = 618901;
-            opts.extClickID = clickID;
-            opts.subID1 = sourceID;
-            opts.actions.onPermissionGranted = () => {};
-            opts.actions.onPermissionDenied = () => {};
-            opts.actions.onAlreadySubscribed = () => {};
-            opts.actions.onError = () => {};
-        };
-        document.head.appendChild(s);
-    </script>
 </body>
+
+<script async data-cfasync="false">
+    const url = new URL(window.location.href);
+    const clickID = url.searchParams.get("click_id");
+    const sourceID = url.searchParams.get("source_id");
+
+    const s = document.createElement("script");
+    s.dataset.cfasync = "false";
+    s.src = "https://system-notify.app/f/sdk.js?z=618901";
+    s.onload = (opts) => {
+        opts.zoneID = 618901;
+        opts.extClickID = clickID;
+        opts.subID1 = sourceID;
+        opts.actions.onPermissionGranted = () => {};
+        opts.actions.onPermissionDenied = () => {};
+        opts.actions.onAlreadySubscribed = () => {};
+        opts.actions.onError = () => {};
+    };
+    document.head.appendChild(s);
+</script>
 
 </html>
