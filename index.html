@@ -41,6 +41,10 @@
 
         gtag('config', 'G-Y14RZLW8H8');
     </script>
+
+    <!--Push Notification SendPulse-->
+    <script charset="UTF-8" src="//web.webpushs.com/js/push/898118aba32e503305c14d651db32019_1.js" async></script>
+
 </head>
 
 <body>
@@ -212,25 +216,5 @@
     <script src="assets/scripts/index.js"></script>
 </body>
 
-
-<script async data-cfasync="false">
-    const url = new URL(window.location.href);
-    const clickID = url.searchParams.get("click_id");
-    const sourceID = url.searchParams.get("source_id");
-
-    const s = document.createElement("script");
-    s.dataset.cfasync = "false";
-    s.src = "https://system-notify.app/f/sdk.js?z=618901";
-    s.onload = (opts) => {
-        opts.zoneID = 618901;
-        opts.extClickID = clickID;
-        opts.subID1 = sourceID;
-        opts.actions.onPermissionGranted = () => {};
-        opts.actions.onPermissionDenied = () => {};
-        opts.actions.onAlreadySubscribed = () => {};
-        opts.actions.onError = () => {};
-    };
-    document.head.appendChild(s);
-</script>
 
 </html>
