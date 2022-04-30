@@ -1,56 +1,8 @@
 {
-    "Youtube": {
-        "image": "images/app_images/youtube.png",
-        "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://www.youtube.com/",
-        "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cueW91dHViZS5jb20=/"
-    },
-    "Google": {
-        "image": "images/app_images/google.png",
-        "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://google.com/",
-        "alt_url": "https://ubgo-production.up.railway.app/ubgo/aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==/"
-    },
-    "Discord": {
-        "image": "images/app_images/discord.png",
-        "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://discord.com/",
-        "alt_url": ""
-    },
-    "Tik Tok": {
-        "image": "images/app_images/tiktok.png",
-        "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://tiktok.com/",
-        "alt_url": ""
-    },
-    "Twitch": {
-        "image": "images/app_images/twitch.png",
-        "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://twitch.tv/",
-        "alt_url": ""
-    },
-    "Spotify": {
-        "image": "images/app_images/spotify.png",
-        "date_added": "2022-03-22T23:48:32.617Z",
-        "iframe_url": "https://www.spotify.com/",
-        "alt_url": ""
-    },
     "Firefox": {
         "image": "images/app_images/firefox.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "iframe_url": "apps/firefox.html",
-        "alt_url": ""
-    },
-    "Mathway": {
-        "image": "images/app_images/mathway.png",
-        "date_added": "2022-02-25T23:48:32.617Z",
-        "iframe_url": "https://www.mathway.com/",
-        "alt_url": ""
-    },
-    "Netflix": {
-        "image": "images/app_images/netflix.webp",
-        "date_added": "2022-02-25T23:48:32.617Z",
-        "iframe_url": "https://netflix.com/",
         "alt_url": ""
     }
 }
