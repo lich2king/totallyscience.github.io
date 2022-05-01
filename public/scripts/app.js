@@ -14,16 +14,5 @@ window.addEventListener('load', () => {
         if (appData == null) window.location.href = '../applications';
 
         appFrame.src = appData.iframe_url;
-
-        setTimeout(() => {
-            if (appName == 'Firefox') return;
-            
-            if (appFrame.getAttribute('__uv-attr-src') == null) {
-                const proxyPath = 'http://localhost:5500';
-                
-                // proxy website
-                appFrame.src = proxyPath + '/index.html#' + btoa(appData.iframe_url);
-            }
-        }, 1000);
     });
 });
