@@ -35,11 +35,11 @@ table {
 
 td,
 th {
-    border: 1px solid black;
+    border: 1px solid var(--dark-color);
     padding: 8px;
 }
 
-tr:nth-child(even) {
+tr {
     background-color: #f2f2f2;
 }
 
