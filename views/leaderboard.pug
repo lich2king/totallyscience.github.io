@@ -8,7 +8,8 @@
     <body>
         include includes/navbar.pug
 
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfxzuusvWg0CSONtXP_8-tQ0J6vofG4EXHFNmZAmBlCojPdhA/viewform');">Submit a Highscore</button>
+        <button onclick="window.open('./submithighscore', '_self');">Submit a Highscore</button>
+        <br><br>
         <table id="scores">
             <tr>
                 <th>Game</th>
@@ -16,6 +17,8 @@
                 <th>Score</th>
             </tr>
         </table>
+        <br><br><br><br>
+        
 
         <script src="scripts/leaderboard.js"></script>
     </body>
