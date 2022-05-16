@@ -964,6 +964,15 @@
         "date_added": "2022-03-03T02:19:54.536Z",
         "developer": "AddictingGames",
         "iframe_url": "assets/games/bloonstd5/index.html"
+    },
+    "Rolling Sky": {
+        "description": "A fun musical skill game. You are a ball rolling over a track with tons of hazards to make you fall.",
+        "image": "./assets/game_images/rollingsky.jpeg",
+        "controls": "[Arrow Keys] - move\n[Mouse] - move",
+        "tags": [""],
+        "date_added": "2022-05-16T16:12:45.844Z",
+        "developer": "Cheetah Games",
+        "iframe_url": "assets/games/webgl-rollingsky/index.html"
     }
 
 
