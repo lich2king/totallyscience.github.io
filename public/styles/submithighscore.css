@@ -29,8 +29,7 @@
 
 #survey button {
     font-size: 1.5vw;
-    width: 15vw;
-    height: 8vh;
+    padding: 20px;
     color: var(--light-color);
     background-color: var(--accent-color);
     border: 0px;
