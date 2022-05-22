@@ -2,9 +2,9 @@
   "name": "totallyscience",
   "version": "1.0.0",
   "description": "The best place for 'Learning Science!",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
