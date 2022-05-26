@@ -37,5 +37,5 @@ function handleFiles() {
 }
 
 function SubmitHighscore() {
-    
+    //todo
 }
