@@ -20,11 +20,6 @@
         title.insertAdjacentElement('afterend', mainJS);
     </script>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <!--End Cache Killer-->
-
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="icon" href="assets/images/logo.png">
 
@@ -36,14 +31,11 @@
             background-color: var(--accent-color);
             color: var(--light-color);
             border: 2px;
-            border-radius: 10px;
+            border-radius: 40px;
             font-family: 'Spline Sans', sans-serif;
             font-size: 30px;
-            padding-right: 2%;
-            padding-left: 2%;
-            padding-top: 1%;
+            padding: 20px;
             margin-top: 80px;
-            padding-bottom: 1%;
         }
         
         @media (max-width: 675px) {
@@ -63,6 +55,7 @@
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
             width: 50%;
+            margin-top: 40px;
         }
         
         td,
@@ -87,10 +80,12 @@
             color: white;
         }
     </style>
+
     <!--Google Adsense-->
     <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -120,16 +115,16 @@
         <div id="rightbar">
             <a id="login" href="profile.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
     <button onclick="window.open('./uploadhighscore.html', '_self');">Submit a Highscore</button>
+
     <table id="scores">
         <tr>
             <th>Game</th>
@@ -137,7 +132,6 @@
             <th>Score</th>
         </tr>
     </table>
-    <div style="padding-bottom: 10vh;"></div>
 
     <script>
         fetch(`./assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
@@ -152,9 +146,11 @@
                 let tGame = document.createElement('td');
                 let tName = document.createElement('td');
                 let tScore = document.createElement('td');
+
                 tGame.innerText = highscores[score][0];
                 tName.innerText = highscores[score][1];
                 tScore.innerText = highscores[score][2];
+                
                 row.appendChild(tGame);
                 row.appendChild(tName);
                 row.appendChild(tScore);

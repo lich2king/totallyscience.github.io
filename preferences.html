@@ -14,16 +14,13 @@
     <link rel='stylesheet' href='assets/styles/preferences.css'>
     <link rel='stylesheet' href='assets/styles/main.css'>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <!--End Cache Killer-->
-
     <link rel="icon" href="assets/images/logo.png">
+    
     <!--Google Adsense-->
     <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -53,12 +50,11 @@
         <div id="rightbar">
             <a id="login" href="profile.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
@@ -73,27 +69,27 @@
         <div>
             <label for="theme">Choose a theme</label><br>
             <select name="theme" id="theme">
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
-                </select>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
         </div>
 
         <div>
             <label for="disguise">Disguise tab</label><br>
             <select name="disguise" id="disguise">
-                        <option value="none">None</option>
-                        <option value="gc">Google Classroom</option>
-                        <option value="gd">Google Docs</option>
-                        <option value="canvas">Canvas</option>
-                </select>
+                <option value="none">None</option>
+                <option value="gc">Google Classroom</option>
+                <option value="gd">Google Docs</option>
+                <option value="canvas">Canvas</option>
+            </select>
         </div>
 
         <button id="save-button">Save</button>
         <p style="text-align: center; color: red;" id="errorText"></p>
     </form>
 
-    <script defer src="assets/scripts/main.js?v15"></script>
-    <script defer src="assets/scripts/preferences.js?3"></script>
+    <script defer src="assets/scripts/main.js"></script>
+    <script defer src="assets/scripts/preferences.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,12 @@
-// init user prefs
-if (localStorage.getItem('website') == null) {
-    localStorage.setItem('website', 'https://classroom.google.com/');
-}
+// deprecate github domain
+if (location.host.includes('github')) location.replace('https://tsmain.co'); 
 
-if (localStorage.getItem('theme') == null) {
-    localStorage.setItem('theme', 'light');
-}
+// init user prefs
+if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
+if (localStorage.getItem('theme') == null) localStorage.setItem('theme', 'light');
+
+document.body.setAttribute('theme', localStorage.getItem('theme'));
+document.getElementById('settings').children[0].src = `/assets/images/settings-${localStorage.getItem('theme')}.svg`;
 
 if (localStorage.getItem('disguise') == null) {
     localStorage.setItem('disguise', 'none');
@@ -24,9 +25,6 @@ if (localStorage.getItem('disguise') == null) {
         favicon.href = './assets/images/disguises/canvasicon.jpg';
     }
 }
-
-document.body.setAttribute('theme', localStorage.getItem('theme'));
-document.getElementById('settings').children[0].src = `/assets/images/settings-${localStorage.getItem('theme')}.svg`;
 
 
 //----------------------------to be replaced--------------------------------------------------------
