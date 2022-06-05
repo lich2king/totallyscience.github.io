@@ -1,20 +1,20 @@
-const websiteInput = $('website')
-const themeInput = $('theme')
-const saveBtn = $('save-button')
-const disguiseInput = $('disguise')
+const websiteInput = document.getElementById('website');
+const themeInput = document.getElementById('theme');
+const saveBtn = document.getElementById('save-button');
+const disguiseInput = document.getElementById('disguise');
 
 var getUrl = window.location;
 var baseUrl = getUrl.host;
 
 if (baseUrl.includes('github') || baseUrl.includes('localhost')) {
-    baseUrl = 'totallyscience.co'
+    baseUrl = 'totallyscience.co';
 }
 
 websiteInput.value = localStorage.getItem('website')
 themeInput.value = localStorage.getItem('theme')
 disguiseInput.value = localStorage.getItem('disguise')
 
-$('survey').addEventListener('submit', (e) => {
+document.getElementById('survey').addEventListener('submit', (e) => {
     e.preventDefault();
     fetch(`https://${baseUrl}/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res)

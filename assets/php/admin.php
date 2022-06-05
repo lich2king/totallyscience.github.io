@@ -1,49 +1,27 @@
 <style>
-* {
-  font-family: arial, sans-serif;
-}
+  * {
+    font-family: arial, sans-serif;
+  }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
 </style>
 
 <?php
 $pdo = require "connect.php";
-
 $pass = htmlspecialchars($_GET["password"]);
-if(!$pass || $pass != "Totally_admin4321") {
-    die("Incorrect password.");
+
+if (!$pass || $pass != "Totally_admin4321") {
+  die("Incorrect password.");
 }
-
-echo("<h1>Live Viewers</h1><table><tr><th>Live Viewer Count</th></tr>");
-$select = $pdo->query("select username, lastping from liveviews");
-
-$liveViewerCount = 0;
-
-date_default_timezone_set("America/New_York");
-
-while ($live = $select->fetch()) {
-    $currentDateMinutes = date("d") * 24 * 60 + date("h") * 60 + date("i");
-    $pingedDateMinutes = date("d", $live['lastping']) * 24 * 60 + date("h", $live['lastping']) * 60 + date("i", $live['lastping']);
-
-    if ($currentDateMinutes - $pingedDateMinutes > 30) {
-      $uid = $live['username'];
-
-      //$pdo->query("delete from liveviews where username='$uid'");
-    } else {
-      $liveViewerCount += 1;
-    }
-}
-
-echo("<tr><td>" . $liveViewerCount . "</td></tr>");
 
 echo("</table><h1>Game Stats</h1><table><tr><th>Game Name</th><th>Views</th><th>Reports</th></tr>");
 $select = $pdo->query("select name, views, reports from games order by views desc");

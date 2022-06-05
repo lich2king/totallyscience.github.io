@@ -30,16 +30,16 @@ function displayGames() {
         const name = keys[x];
         const data = sorted[keys[x]];
         const sectionLetter = name[0].toLowerCase();
-        let existingSection = $(sectionLetter);
+        let existingSection = document.getElementById(sectionLetter);
 
         if (existingSection == null) {
-            const section = mk('section')
+            const section = document.createElement('section')
             section.id = sectionLetter
             gamesDiv.appendChild(section)
             existingSection = section
         }
 
-        const gameBtn = mk('button')
+        const gameBtn = document.createElement('button')
         gameBtn.name = name
         gameBtn.classList = data.tags.join(' ')
         const gameDate = new Date(data.date_added)
@@ -55,16 +55,16 @@ function displayGames() {
         })
         gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
-        const gameImg = mk('img')
+        const gameImg = document.createElement('img')
         gameImg.src = data.image
         gameBtn.appendChild(gameImg)
 
-        const gameText = mk('div')
-        const gameTitle = mk('p')
+        const gameText = document.createElement('div')
+        const gameTitle = document.createElement('p')
         gameTitle.innerText = name
         gameText.appendChild(gameTitle)
 
-        const gameDesc = mk('p2')
+        const gameDesc = document.createElement('p2')
         gameDesc.innerText = data.description
         gameText.appendChild(gameDesc)
 
@@ -137,7 +137,7 @@ window.addEventListener('scroll', () => {
 
 //game catagories
 //selected topic variable is used both in the button category changer and the search bar function
-const buttons = $qsa('.categoryButton, #bolt');
+const buttons = document.querySelectorAll('.categoryButton, #bolt');
 
 //buttons.appendChild(document.getElementById('bolt'))
 //add event listener to every element in the document with the class "categoryButton"
@@ -150,14 +150,14 @@ buttons.forEach((button) => {
             selectedTopic = e.target.name;
         }
 
-        const buttons = $qsa('.categoryButton');
+        const buttons = document.querySelectorAll('.categoryButton');
 
         buttons.forEach((btn) => {
             btn.classList.add('unselectedCategory');
             btn.classList.remove('selectedCategory');
         })
 
-        const selected = $n(selectedTopic)[0];
+        const selected = document.getElementsByName(selectedTopic)[0];
         if (e.target.innerHTML == '⚡') {
             selected.parentNode.classList.add('selectedCategory');
             selected.parentNode.classList.remove('unselectedCategory');
@@ -174,7 +174,7 @@ buttons.forEach((button) => {
     })
 })
 
-const searchBar = $('searchBar')
+const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
     const input = searchBar.value.toUpperCase();
 
@@ -191,16 +191,16 @@ searchBar.addEventListener('keyup', () => {
             if (selectedTopic == 'all') {
                 const data = games[game];
                 const sectionLetter = game[0].toLowerCase();
-                let existingSection = $(sectionLetter);
+                let existingSection = document.getElementById(sectionLetter);
 
                 if (existingSection == null) {
-                    const section = mk('section')
+                    const section = document.createElement('section')
                     section.id = sectionLetter
                     gamesDiv.appendChild(section)
                     existingSection = section
                 }
 
-                const gameBtn = mk('button')
+                const gameBtn = document.createElement('button')
                 gameBtn.game = game
                 gameBtn.classList = data.tags.join(' ')
                 const gameDate = new Date(data.date_added)
@@ -216,16 +216,16 @@ searchBar.addEventListener('keyup', () => {
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
-                const gameImg = mk('img')
+                const gameImg = document.createElement('img')
                 gameImg.src = data.image
                 gameBtn.appendChild(gameImg)
 
-                const gameText = mk('div')
-                const gameTitle = mk('p')
+                const gameText = document.createElement('div')
+                const gameTitle = document.createElement('p')
                 gameTitle.innerText = game
                 gameText.appendChild(gameTitle)
 
-                const gameDesc = mk('p2')
+                const gameDesc = document.createElement('p2')
                 gameDesc.innerText = data.description
                 gameText.appendChild(gameDesc)
 
@@ -234,16 +234,16 @@ searchBar.addEventListener('keyup', () => {
             } else if (games[game].tags.includes(selectedTopic)) {
                 const data = games[game];
                 const sectionLetter = game[0].toLowerCase();
-                let existingSection = $(sectionLetter);
+                let existingSection = document.getElementById(sectionLetter);
 
                 if (existingSection == null) {
-                    const section = mk('section')
+                    const section = document.createElement('section')
                     section.id = sectionLetter
                     gamesDiv.appendChild(section)
                     existingSection = section
                 }
 
-                const gameBtn = mk('button')
+                const gameBtn = document.createElement('button')
                 gameBtn.game = game
                 gameBtn.classList = data.tags.join(' ')
                 const gameDate = new Date(data.date_added)
@@ -259,16 +259,16 @@ searchBar.addEventListener('keyup', () => {
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
-                const gameImg = mk('img')
+                const gameImg = document.createElement('img')
                 gameImg.src = data.image
                 gameBtn.appendChild(gameImg)
 
-                const gameText = mk('div')
-                const gameTitle = mk('p')
+                const gameText = document.createElement('div')
+                const gameTitle = document.createElement('p')
                 gameTitle.innerText = game
                 gameText.appendChild(gameTitle)
 
-                const gameDesc = mk('p2')
+                const gameDesc = document.createElement('p2')
                 gameDesc.innerText = data.description
                 gameText.appendChild(gameDesc)
 

@@ -12,7 +12,7 @@ const isVisible = (element) => {
 }
 
 const scanDocument = () => {
-    const sectionList = $qsa('.hidden')
+    const sectionList = document.querySelectorAll('.hidden')
     sectionList.forEach((section) => {
         if (isVisible(section)) {
             section.classList.remove('hidden')
@@ -30,7 +30,7 @@ document.addEventListener('scroll', _.throttle(scanDocument, 250))
 let shouldAutoSwitch = true
 let slideIndex = 1
 const switchSlide = (n) => {
-    const slides = $c('featuredSlide')
+    const slides = document.getElementsByClassName('featuredSlide')
     if (n > slides.length) {
         slideIndex = 1
     }
