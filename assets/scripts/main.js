@@ -1,5 +1,5 @@
 // deprecate github domain
-if (location.host.includes('github')) location.replace('https://tsmain.co'); 
+//if (location.host.includes('github')) location.replace('https://tsmain.co'); 
 
 // init user prefs
 if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
@@ -41,14 +41,14 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
 
 // panic button
 window.addEventListener('keydown', (e) => {
-    if (e.key == '`') window.open(this.localStorage.getItem('website'), '_blank',);
+    if (e.key == '`') window.open(this.localStorage.getItem('website'), '_blank', );
 }, false);
 
 // page load init 
 window.addEventListener('load', () => {
     // register service worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
+        navigator.serviceWorker.register('sw.js');
     }
 
     // scroll button
