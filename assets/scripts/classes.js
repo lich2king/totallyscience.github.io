@@ -279,7 +279,7 @@ searchBar.addEventListener('keyup', () => {
     });
 })
 
-fetch(`./assets/games.json?${new Date().getTime()}`).then((response) => response.json()).then((retrievedGames) => {
+fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
     games = retrievedGames;
     loadTopic();
 });
