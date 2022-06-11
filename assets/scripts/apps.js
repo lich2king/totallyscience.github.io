@@ -1,6 +1,6 @@
 const appContainer = document.getElementById('apps')
 
-fetch(`./assets/apps.json?${new Date().getTime()}`)
+fetch(`assets/apps.json`)
     .then((response) => response.json())
     .then((apps) => {
         for (const [name, data] of Object.entries(apps)) {
