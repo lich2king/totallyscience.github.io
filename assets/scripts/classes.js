@@ -51,7 +51,7 @@ function displayGames() {
             gameBtn.classList.add('new')
         }
         gameBtn.addEventListener('click', () => {
-            window.location.href = `./class.html?class=${name}`
+            window.location.href = `class.html?class=${name}`
         })
         gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
@@ -212,7 +212,7 @@ searchBar.addEventListener('keyup', () => {
                     gameBtn.classList.add('new')
                 }
                 gameBtn.addEventListener('click', () => {
-                    window.location.href = `./class.html?class=${game}`
+                    window.location.href = `class.html?class=${game}`
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
@@ -255,7 +255,7 @@ searchBar.addEventListener('keyup', () => {
                     gameBtn.classList.add('new')
                 }
                 gameBtn.addEventListener('click', () => {
-                    window.location.href = `./class.html?class=${game}`
+                    window.location.href = `class.html?class=${game}`
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
