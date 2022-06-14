@@ -136,7 +136,7 @@
     <script>
         fetch(`./assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
-            console.log(res);
+            
             const highscores = res;
             const scoresDiv = document.getElementById('scores');
 

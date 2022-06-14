@@ -17,10 +17,6 @@
         const indexCss = `<link rel='stylesheet' href='assets/styles/games.css?${new Date().getTime()}'>`;
         document.getElementsByTagName('head')[0].innerHTML += indexCss;
     </script>
-
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <!--End Cache Killer-->
 
     <link rel="stylesheet" href="assets/styles/main.css">
@@ -120,14 +116,7 @@
     </div>
 
     <script src="assets/scripts/main.js?v14"></script>
-    <script>
-        const title = document.getElementsByTagName('title')[0];
-        let gamesJS = document.createElement("script");
-        gamesJS.src = `assets/scripts/classes.js?${new Date().getTime()}`;
-        gamesJS.defer = true;
-        gamesJS.async = true;
-        document.getElementsByTagName('section')[0].insertAdjacentElement('beforebegin', gamesJS);
-    </script>
+    <script src="assets/scripts/classes.js"></script>
 
     <!--Ad-maven video ad-->
     <script src="https://video-serve.com/vidjs?tid=959630%22%3E"></script>
