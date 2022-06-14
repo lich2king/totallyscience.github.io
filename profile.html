@@ -97,21 +97,21 @@
         fetch(`assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res)
             if (res != null) {
-                const loggedIn = res["isLoggedIn"];
-                const name = res["username"];
+                const loggedIn = res['isLoggedIn'];
+                const name = res['username'];
     
-                if (loggedIn != "true") {
-                    location.href = './signup.html';
+                if (loggedIn != 'true') {
+                    location.href = 'signup.html';
                 }
                 document.getElementById('usernameSpan').innerText = name;
             } else {
-                location.href = './signup.html';
+                location.href = 'signup.html';
             }
         });
     
         function Logout() {
             fetch(`assets/php/logout.php`).then(() => {
-                location.href = './login.html';
+                location.href = 'login.html';
             });
         }
     </script>

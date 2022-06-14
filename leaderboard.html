@@ -135,7 +135,7 @@
 
     <script src="assets/scripts/main.js"></script>
     <script>
-        fetch(`./assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
+        fetch(`assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
             
             const highscores = res;

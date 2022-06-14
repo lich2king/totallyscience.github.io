@@ -77,24 +77,17 @@ else if ($step == 3) {
     <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
 
     <title>Totally Science</title>
-    <!--Cache Killer-->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
 
     <link rel='stylesheet' href='./assets/styles/account.css'>
     <link rel='stylesheet' href='./assets/styles/main.css'>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <!--End Cache Killer-->
-
     <link rel="icon" href="./assets/images/logo.png">
+
     <!--Google Adsense-->
     <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -125,8 +118,7 @@ else if ($step == 3) {
                 </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
@@ -160,13 +152,14 @@ else if ($step == 3) {
 <script>
     let username;
     fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res)
-        const loggedIn = 'false'
+        res = JSON.parse(res);
+        const loggedIn = 'false';
+
         if (res != null) {
-            const loggedIn = res["isLoggedIn"]
+            const loggedIn = res['isLoggedIn'];
         }
-        if (loggedIn == "true") {
-            window.open('./profile.html', '_self')
+        if (loggedIn == 'true') {
+            window.open('profile.html', '_self');
         }
     });
 
@@ -179,7 +172,7 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`./changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
@@ -198,7 +191,8 @@ else if ($step == 3) {
             errorText.innerText = 'Code cannot be empty';
             return;
         }
-        fetch(`./changepassword.php?code=${code}&username=${localStorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
+
+        fetch(`changepassword.php?code=${code}&username=${localStorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').style.display = 'none';
                 document.getElementById('username').style.display = 'none';
@@ -225,7 +219,7 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`./changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 location.href = '/profile.html';
             } else {
