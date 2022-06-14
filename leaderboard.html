@@ -11,15 +11,6 @@
 
     <title>Totally Science</title>
 
-    <!--Cache Killer-->
-    <script>
-        const title = document.getElementsByTagName('title')[0];
-        // main.js
-        let mainJS = document.createElement("script");
-        mainJS.src = `assets/scripts/main.js?${new Date().getTime()}`;
-        title.insertAdjacentElement('afterend', mainJS);
-    </script>
-
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="icon" href="assets/images/logo.png">
 
@@ -56,12 +47,17 @@
             border-collapse: collapse;
             width: 50%;
             margin-top: 40px;
+            margin-bottom: 50px;
         }
         
         td,
         th {
             border: 1px solid black;
             padding: 8px;
+        }
+
+        tr {
+            background-color: white;
         }
         
         tr:nth-child(even) {
@@ -123,7 +119,7 @@
         </div>
     </div>
 
-    <button onclick="window.open('./uploadhighscore.html', '_self');">Submit a Highscore</button>
+    <button onclick="window.open('uploadhighscore.html', '_self');">Submit a Highscore</button>
 
     <table id="scores">
         <tr>
@@ -137,13 +133,13 @@
         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
     </svg>
 
+    <script src="assets/scripts/main.js"></script>
     <script>
         fetch(`./assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
             
             const highscores = res;
             const scoresDiv = document.getElementById('scores');
-
 
             for (score in highscores) {
                 let row = document.createElement('tr');
