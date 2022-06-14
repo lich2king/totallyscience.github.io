@@ -25,13 +25,12 @@
 }
 
 #survey button {
-    font-size: 2vw;
-    width: 10vw;
-    height: 8vh;
+    font-size: 30px;
+    padding: 20px;
     color: var(--light-color);
     background-color: var(--accent-color);
-    border: 0px;
-    border-radius: 10px;
+    border: none;
+    border-radius: 40px;
     margin-bottom: 2%;
     cursor: pointer;
 }
