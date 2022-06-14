@@ -10,6 +10,7 @@ let selectedTopic = 'all';
 let displayedGames = 0;
 let games;
 let sorted;
+let hasLoaded = false;
 
 
 function displayGames() {
@@ -29,69 +30,53 @@ function displayGames() {
 
         const name = keys[x];
         const data = sorted[keys[x]];
-        const sectionLetter = name[0].toLowerCase();
-        let existingSection = document.getElementById(sectionLetter);
 
-        if (existingSection == null) {
-            const section = document.createElement('section')
-            section.id = sectionLetter
-            gamesDiv.appendChild(section)
-            existingSection = section
-        }
-
-        const gameBtn = document.createElement('button')
-        gameBtn.name = name
-        gameBtn.classList = data.tags.join(' ')
-        const gameDate = new Date(data.date_added)
+        let classlist = data.tags.join(' ');
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
 
+        const gameDate = new Date(data.date_added);
+
         if (gameDate > weekAgo) {
-            gameBtn.classList.add('new')
+            classlist += ' new';
         }
-        gameBtn.addEventListener('click', () => {
-            window.location.href = `class.html?class=${name}`
-        })
-        gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
-        const gameImg = document.createElement('img')
-        gameImg.src = data.image
-        gameBtn.appendChild(gameImg)
 
-        const gameText = document.createElement('div')
-        const gameTitle = document.createElement('p')
-        gameTitle.innerText = name
-        gameText.appendChild(gameTitle)
+        const gameBtn = `
+            <button name="${name}" class="${classlist} gameButton all not-selectable">
+                <img src="${data.image}">
 
-        const gameDesc = document.createElement('p2')
-        gameDesc.innerText = data.description
-        gameText.appendChild(gameDesc)
+                <div>
+                    <p>${name}</p>
+                    <p2>${data.description}</p2>
+                </div>
+            </button>
+        `;
 
-        gameBtn.appendChild(gameText)
-        existingSection.appendChild(gameBtn)
+        gamesDiv.innerHTML += gameBtn;
 
         if (x + 1 == displayedGames + maxGames / 2) {
-            const adDiv = document.createElement("div")
-            adDiv.classList.add("adDiv")
-            const innerAdDiv = document.createElement("div")
-            adDiv.appendChild(innerAdDiv)
-            existingSection.appendChild(adDiv)
+            let adDiv = document.createElement('div');
+            adDiv.classList.add('adDiv');
+            let innerAdDiv = document.createElement("div");
+            adDiv.appendChild(innerAdDiv);
+            gamesDiv.appendChild(adDiv);
 
 
-            const adScript = document.createElement("script")
-            adScript.async = true
-            adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
-            adScript.crossOrigin = "anonymous"
+            let adScript = document.createElement('script');
+            adScript.async = true;
+            adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210';
+            adScript.crossOrigin = 'anonymous';
 
-            const adIns = document.createElement("ins")
-            adIns.setAttribute("class", "adsbygoogle")
-            adIns.setAttribute("style", "display:inline-block;width:525px;height:105px")
-            adIns.setAttribute("data-ad-client", "ca-pub-3486863589051210")
-            adIns.setAttribute("data-ad-slot", "2075384482")
+            let adIns = document.createElement('ins');
+            adIns.setAttribute('class', 'adsbygoogle');
+            adIns.setAttribute('style', 'display:inline-block;width:525px;height:105px');
+            adIns.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
+            adIns.setAttribute('data-ad-slot', '2075384482');
 
-            const adScriptEnd = document.createElement("script")
-            adScriptEnd.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});"
+            let adScriptEnd = document.createElement('script');
+            adScriptEnd.innerText = '(adsbygoogle = window.adsbygoogle || []).push({});';
 
             innerAdDiv.insertAdjacentElement('afterend', adScript);
             innerAdDiv.insertAdjacentElement('afterend', adIns);
@@ -99,41 +84,10 @@ function displayGames() {
         }
     }
     displayedGames += maxGames;
+    
+    hasLoaded = false;
 }
 
-function loadTopic() {
-    displayedGames = 0;
-    gamesDiv.innerHTML = '';
-    document.getElementById('load-games').style.display = '';
-
-    sorted = sortObject(games);
-    if (selectedTopic != 'all') {
-        let gamesWithTopic = {};
-
-        for (let game in sorted) {
-            if (sorted[game].tags.includes(selectedTopic)) {
-                gamesWithTopic[game] = sorted[game];
-            }
-        }
-
-        sorted = gamesWithTopic;
-    }
-
-    displayGames();
-}
-
-hasLoaded = false;
-window.addEventListener('scroll', () => {
-    let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-
-    if (window.scrollY + window.innerHeight >= _docHeight + -300 && hasLoaded == false) {
-        hasLoaded = true;
-        setTimeout(() => {
-            displayGames();
-            hasLoaded = false;
-        }, 5);
-    }
-});
 
 //game catagories
 //selected topic variable is used both in the button category changer and the search bar function
@@ -279,9 +233,45 @@ searchBar.addEventListener('keyup', () => {
     });
 })
 
-fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
-    games = retrievedGames;
-    loadTopic();
+window.addEventListener('scroll', () => {
+    let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+
+    if (window.scrollY + window.innerHeight >= _docHeight + -300 && hasLoaded == false) {
+        hasLoaded = true;
+        setTimeout(() => {
+            displayGames();
+        }, 5);
+    }
 });
 
-document.getElementById('searchBar').style.backgroundImage = `url(assets/images/magnifying-${localStorage.getItem("theme")}.svg)`;
+document.addEventListener('DOMContentLoaded', () => {
+    fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
+        games = retrievedGames;
+        loadTopic();
+    });
+
+
+    document.getElementById('searchBar').style.backgroundImage = `url(assets/images/magnifying-${localStorage.getItem("theme")}.svg)`;
+});
+
+function loadTopic() {
+    displayedGames = 0;
+    gamesDiv.innerHTML = '';
+    document.getElementById('load-games').style.display = '';
+
+    sorted = sortObject(games);
+
+    if (selectedTopic != 'all') {
+        let gamesWithTopic = {};
+
+        for (let game in sorted) {
+            if (sorted[game].tags.includes(selectedTopic)) {
+                gamesWithTopic[game] = sorted[game];
+            }
+        }
+
+        sorted = gamesWithTopic;
+    }
+
+    displayGames();
+}
