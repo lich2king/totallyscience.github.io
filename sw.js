@@ -47,6 +47,7 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener('fetch', (e) => {
   if (e.request.url.startsWith('https://pagead')) return;
+  if (e.request.url.startsWith('https://www.googletag')) return;
 
   e.respondWith((async () => {
     const r = await caches.match(e.request);
