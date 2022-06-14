@@ -48,7 +48,7 @@ window.addEventListener('keydown', (e) => {
 window.addEventListener('load', () => {
     // register service worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
+        //navigator.serviceWorker.register('sw.js');
     }
 
     // scroll button
