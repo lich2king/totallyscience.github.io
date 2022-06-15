@@ -3,7 +3,8 @@ const urlParams = new URLSearchParams(queryString);
 const appName = urlParams.get('app');
 
 window.addEventListener('load', () => {
-    document.getElementsByTagName('body')[0].style = "overflow: hidden"
+    document.getElementsByTagName('body')[0].style = 'overflow: hidden';
+
     fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
         if (response.ok) {
             return response.json();
@@ -21,11 +22,6 @@ window.addEventListener('load', () => {
         } else {
             appFrame.src = appData.iframe_url;
         }
-
-        setTimeout(() => {
-            if (appName == 'Firefox') return;
-
-        }, 1000);
     }).catch((err) => {
         if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
     });

@@ -79,11 +79,6 @@
     margin-right: 5%;
 }
 
-#viewer p {
-    font-family: 'Spline Sans', sans-serif;
-    font-size: 4vw;
-}
-
 
 /* footer */
 
@@ -94,6 +89,7 @@ footer {
     width: calc(100% - 60px);
     font-family: 'Spline Sans', sans-serif;
     height: 100px;
+    margin-top: 60px;
     color: white;
 }
 

@@ -44,7 +44,7 @@ function displayGames() {
 
 
         const gameBtn = `
-            <button name="${name}" class="${classlist} gameButton all not-selectable">
+            <button onclick="location.href = 'class.html?class=${name}'" name="${name}" class="${classlist} gameButton all not-selectable">
                 <img src="${data.image}">
 
                 <div>
