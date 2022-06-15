@@ -42,18 +42,6 @@
     text-align: center;
 }
 
-#report button {
-    font-size: 2vw;
-    width: 15%;
-    height: 60px;
-    color: var(--light-color);
-    background-color: var(--accent-color);
-    border: 0px;
-    border-radius: 10px;
-    margin-bottom: 2%;
-    cursor: pointer;
-}
-
 @media (max-width: 600px) {
     #game {
         margin-top: 100px;

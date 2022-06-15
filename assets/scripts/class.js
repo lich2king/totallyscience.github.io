@@ -3,29 +3,10 @@ const urlParams = new URLSearchParams(queryString);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
-let hasReported = false;
-let baseurl = location.host;
-
-if (baseurl.includes("github")) {
-    baseurl = 'totallyscience.co';
-}
-
-document.getElementById('report-btn').addEventListener('click', () => {
-    if (hasReported) return;
-
-    fetch(`https://${baseurl}/assets/php/game_stats.php/?type=reports&name=${gameName}`).then((response) => response.text()).then((text) => {
-        if (text.includes('<?php')) {
-            document.getElementById('report-btn').innerText = '?';
-            return;
-        }
-        document.getElementById('report-btn').innerText = text;
-        hasReported = true;
-    })
-});
 window.addEventListener('load', () => {
     document.getElementById('fullscreenImg').src = `./assets/images/fullscreen-${localStorage.getItem("theme")}.svg`;
 
-    fetch(`./assets/games.json?date=${new Date().getTime()}`).then((response) => {
+    fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
         if (response.ok) {
             return response.json();
         } else {
@@ -44,13 +25,7 @@ window.addEventListener('load', () => {
             console.log(gameData.iframe_url + '?id=' + id);
         }
     }).catch((err) => {
-        if (err) console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
-    });
-
-    fetch(`https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`).then((response) => {
-        if (!response.ok) console.log(`cannot fetch https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`);
-    }).catch((err) => {
-        if (err) console.log(`cannot fetch https://${baseurl}/assets/php/game_stats.php/?type=views&name=${gameName}`);
+        if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
     });
 });
 
