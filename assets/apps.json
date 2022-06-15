@@ -2,31 +2,37 @@
     "Youtube": {
         "image": "assets/apps/icons/youtube-red-square.png",
         "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
         "iframe_url": "https://www.youtube.com/"
     },
     "Google": {
         "image": "assets/apps/icons/google.png",
         "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
         "iframe_url": "https://google.com/"
     },
     "Discord": {
         "image": "assets/apps/icons/discord.png",
         "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
         "iframe_url": "https://discord.com/"
     },
     "Tik Tok": {
         "image": "assets/apps/icons/tiktok.png",
         "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
         "iframe_url": "https://tiktok.com/"
     },
     "Twitch": {
         "image": "assets/apps/icons/twitch.png",
         "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
         "iframe_url": "https://twitch.tv/"
     },
     "Spotify": {
         "image": "assets/apps/icons/spotify.png",
         "date_added": "2022-03-22T23:48:32.617Z",
+        "type": "proxy",
         "iframe_url": "https://www.spotify.com/"
     },
     "Firefox": {
@@ -37,11 +43,13 @@
     "Mathway": {
         "image": "assets/apps/icons/mathway.png",
         "date_added": "2022-02-25T23:48:32.617Z",
+        "type": "proxy",
         "iframe_url": "https://www.mathway.com/"
     },
     "Netflix": {
         "image": "assets/apps/icons/netflix.webp",
         "date_added": "2022-02-25T23:48:32.617Z",
+        "type": "proxy",
         "iframe_url": "https://netflix.com/"
     }
 }

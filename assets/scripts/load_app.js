@@ -16,15 +16,20 @@ window.addEventListener('load', () => {
 
         if (appData == null) window.location.href = '../apps.html';
 
-        appFrame.src = appData.iframe_url;
+        if (appData.type = 'proxy') {
+            appFrame.src = 'https://p.' + window.location.host + '/index.html#' + btoa(appData.iframe_url);
+        } else {
+            appFrame.src = appData.iframe_url;
+        }
 
         setTimeout(() => {
             if (appName == 'Firefox') return;
-            
+            /*
             if (appFrame.getAttribute('__uv-attr-src') == null) {
                 alert('Error, failed to load. Apps do not work on some domains.');
                 location.href = '/apps.html';
             }
+            */
         }, 1000);
     }).catch((err) => {
         if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
