@@ -24,12 +24,7 @@ window.addEventListener('load', () => {
 
         setTimeout(() => {
             if (appName == 'Firefox') return;
-            /*
-            if (appFrame.getAttribute('__uv-attr-src') == null) {
-                alert('Error, failed to load. Apps do not work on some domains.');
-                location.href = '/apps.html';
-            }
-            */
+
         }, 1000);
     }).catch((err) => {
         if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
