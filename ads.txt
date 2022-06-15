@@ -549,3 +549,31 @@ teads.tv, 16578, RESELLER, 15a9c44f6d26cbe1
 lijit.com, 348134, DIRECT, fafdf38b16bf6b2b #SOVRN
 lijit.com, 348134-eb, DIRECT, fafdf38b16bf6b2b #SOVRN
 contextweb.com, 562703, DIRECT, 89ff185a4c4e857c
+houseofpubs.com, 161059, DIRECT
+beachfront.com, 13226, DIRECT, e2541279e8e2ca4d
+indexexchange.com, 197737, RESELLER, 50b1c356f2c5c8fc
+pubmatic.com, 161324, RESELLER, 5d62403b186f2ace
+pubmatic.com, 161325, RESELLER, 5d62403b186f2ace
+rhythmone.com, 2335692403, DIRECT, a670c89d4a324e47
+video.unrulymedia.com, 2335692403, DIRECT
+rhythmone.com, 1255201812, DIRECT, a670c89d4a324e47
+video.unrulymedia.com, 1255201812, DIRECT
+adagio.io, 1206, DIRECT
+smartadserver.com, 3554, RESELLER
+33across.com, 0015a00002oUk4aAAC, RESELLER, bbea06d9c4d2853c
+didna.io, 4169, DIRECT
+google.com, pub-3565385483761681, RESELLER, f08c47fec0942fa0
+sharethrough.com, 3232726a, DIRECT, d53b998a7bd4ecd2
+advertising.com, 28575, DIRECT
+rubiconproject.com, 20100, DIRECT, 0bfd66d529a55807 #Prebid
+rubiconproject.com, 20102, DIRECT, 0bfd66d529a55807 #EBDA
+indexexchange.com, 186905, DIRECT, 50b1c356f2c5c8fc
+pubmatic.com, 159744, DIRECT, 5d62403b186f2ace #EBDA
+pubmatic.com, 161258, DIRECT, 5d62403b186f2ace #vPrebid
+openx.com, 540717738, DIRECT, 6a698e2ec38604c6 #OB
+openx.com, 540742273, DIRECT, 6a698e2ec38604c6 #video
+rhythmone.com, 1837834705,DIRECT,a670c89d4a324e47
+video.unrulymedia.com, 1837834705, DIRECT
+media.net, 8CU1MXMOP, DIRECT #EBDA
+sovrn.com, 236010, DIRECT, fafdf38b16bf6b2b
+appnexus.com, 8219, DIRECT, f5ab79cb980f11d1
