@@ -15,7 +15,6 @@
     <link rel='stylesheet' href='./assets/styles/main.css'>
 
     <link rel="icon" href="./assets/images/logo.png">
-
     <!--Google Adsense-->
     <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -54,7 +53,8 @@
                 </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
+            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
+            </a>
         </div>
     </div>
 
@@ -122,7 +122,7 @@
                 location.href = 'profile.html';
             }
         });
-    
+
         const validateEmail = (email) => {
             return String(email)
                 .toLowerCase()
@@ -130,7 +130,7 @@
                     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 );
         };
-    
+
         async function containsHash() {
             user = document.getElementById('username').value;
             email = document.getElementById('email').value;
@@ -140,29 +140,29 @@
 
             return false;
         };
-    
+
         async function userTaken() {
             user = document.getElementById('username').value;
             email = document.getElementById('email').value;
             pass = document.getElementById('password').value;
             grad = document.getElementById('gradSelect').value;
-    
+
             return await fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
                 return res == 'found';
             });
         };
-    
+
         async function emailTaken() {
             user = document.getElementById('username').value;
             email = document.getElementById('email').value;
             pass = document.getElementById('password').value;
             grad = document.getElementById('gradSelect').value;
-    
+
             return await fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=0`).then((response) => response.text()).then((res) => {
                 return res == 'found';
             });
         };
-    
+
         async function SubmitSignUp() {
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
@@ -170,7 +170,7 @@
             const confirmpass = document.getElementById('confirmpassword').value;
             const errorText = document.getElementById('errorText');
             const grad = document.getElementById('gradSelect').value;
-    
+
             if (user == '') {
                 errorText.innerText = '*Missing username';
             } else if (email == '') {
@@ -197,7 +197,7 @@
                 const email = document.getElementById('email').value;
                 const pass = document.getElementById('password').value;
                 const grad = document.getElementById('gradSelect').value;
-    
+
                 await fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
                     if (res == 'Success') {
                         errorText.style.color = 'green';
@@ -206,7 +206,7 @@
                         errorText.innerText = '*Error creating account';
                     }
                 });
-    
+
                 await fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                     if (res == 'Success') {
                         location.href = 'profile.html';
