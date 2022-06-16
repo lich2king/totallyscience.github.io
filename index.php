@@ -11,30 +11,7 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <div id="leftbar">
-            <div class="nav-button selected"><a href="">Home</a></div>
-            <div class="nav-button"><a href="classes.html">Games</a></div>
-            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
-            <div class="nav-button"><a href="apps.html">Apps</a></div>
-            <div class="nav-button"><a href="chat.html">Chat</a></div>
-        </div>
-
-        <div id="middlebar">
-            <p>Rewrite</p>
-        </div>
-
-        <div id="rightbar">
-            <a id="login" href="profile.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-            </a>
-
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img>
-            </a>
-        </div>
-    </div>
+    <?php include "assets/includes/navbar.php" ?>
 
     <section id="featured" class="not-selectable">
         <div class="featuredSlide fade">
