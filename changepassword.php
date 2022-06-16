@@ -77,11 +77,11 @@ else if ($step == 3) {
 <body>
     <div id="navbar">
         <div id="leftbar">
-            <div class="nav-button"><a href="index.html">Home</a></div>
-            <div class="nav-button"><a href="classes.html">Games</a></div>
-            <div class="nav-button"><a href="leaderboard.html">Leaderboard</a></div>
-            <div class="nav-button"><a href="browser.html">Browser</a></div>
-            <div class="nav-button"><a href="chat.html">Chat</a></div>
+            <div class="nav-button"><a href="index">Home</a></div>
+            <div class="nav-button"><a href="classes">Games</a></div>
+            <div class="nav-button"><a href="leaderboard">Leaderboard</a></div>
+            <div class="nav-button"><a href="browser">Browser</a></div>
+            <div class="nav-button"><a href="chat">Chat</a></div>
         </div>
 
         <div id="middlebar">
@@ -89,13 +89,13 @@ else if ($step == 3) {
         </div>
 
         <div id="rightbar">
-            <a id="login" href="profile.html">
+            <a id="login" href="profile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                 </svg>
             </a>
 
-            <a id="settings" href="preferences.html"><img src="./assets/images/settings-light.svg"></img></a>
+            <a id="settings" href="preferences"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
@@ -121,7 +121,7 @@ else if ($step == 3) {
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;"><a href="login.html">back to login</a></p>
+    <p style="text-align: center;"><a href="login">back to login</a></p>
     <script defer src="./assets/scripts/main.js?v14"></script>
 </body>
 
@@ -136,7 +136,7 @@ else if ($step == 3) {
             const loggedIn = res['isLoggedIn'];
         }
         if (loggedIn == 'true') {
-            window.open('profile.html', '_self');
+            window.open('profile', '_self');
         }
     });
 
@@ -198,7 +198,7 @@ else if ($step == 3) {
 
         fetch(`changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
-                location.href = '/profile.html';
+                location.href = '/profile';
             } else {
                 errorText.innerText = 'error changing password';
                 location.reload();

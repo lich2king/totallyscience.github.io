@@ -44,7 +44,7 @@ function displayGames() {
 
 
         const gameBtn = `
-            <button onclick="location.href = 'class.html?class=${name}'" name="${name}" class="${classlist} gameButton all not-selectable">
+            <button onclick="location.href = 'class?class=${name}'" name="${name}" class="${classlist} gameButton all not-selectable">
                 <img src="${data.image}">
 
                 <div>
@@ -166,7 +166,7 @@ searchBar.addEventListener('keyup', () => {
                     gameBtn.classList.add('new')
                 }
                 gameBtn.addEventListener('click', () => {
-                    window.location.href = `class.html?class=${game}`
+                    window.location.href = `class?class=${game}`
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 
@@ -209,7 +209,7 @@ searchBar.addEventListener('keyup', () => {
                     gameBtn.classList.add('new')
                 }
                 gameBtn.addEventListener('click', () => {
-                    window.location.href = `class.html?class=${game}`
+                    window.location.href = `class?class=${game}`
                 })
                 gameBtn.classList.add('gameButton', 'all', 'not-selectable')
 

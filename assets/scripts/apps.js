@@ -6,7 +6,7 @@ fetch(`assets/apps.json`).then((response) => response.json()).then((apps) => {
         const appDiv = document.createElement('div');
         appDiv.classList = 'card game';
         appDiv.addEventListener('click', () => {
-            window.location.href = `app.html?app=${name}`;
+            window.location.href = `app?app=${name}`;
         });
 
         const appImage = document.createElement('img');
@@ -22,7 +22,7 @@ fetch(`assets/apps.json`).then((response) => response.json()).then((apps) => {
         appButton.classList = 'launch';
         appButton.innerText = 'Launch';
         appButton.addEventListener('click', () => {
-            window.location.href = `app.html?app=${name}`;
+            window.location.href = `app?app=${name}`;
         });
 
         appDiv.appendChild(appImage);

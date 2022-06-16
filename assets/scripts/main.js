@@ -32,7 +32,7 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
-    window.open('/mobile/index.html', '_self')
+    window.open('/mobile/index', '_self')
 }
 
 // panic button
