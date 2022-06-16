@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
         document.getElementById('controls').innerText = gameData.controls;
         document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
 
-        if (appData.type = 'proxy') {
+        if (gameData.type == 'proxy') {
             document.getElementById('game-iframe').src = 'https://p.' + window.location.host + '/index.html#' + btoa(gameData.iframe_url);
         } else {
             document.getElementById('game-iframe').src = gameData.iframe_url;

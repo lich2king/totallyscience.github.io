@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
         if (appData == null) window.location.href = '../apps.html';
 
-        if (appData.type = 'proxy') {
+        if (appData.type == 'proxy') {
             appFrame.src = 'https://p.' + window.location.host + '/index.html#' + btoa(appData.iframe_url);
         } else {
             appFrame.src = appData.iframe_url;
