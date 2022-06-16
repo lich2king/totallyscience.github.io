@@ -11,37 +11,14 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <div id="leftbar">
-            <div class="nav-button selected"><a href="">Home</a></div>
-            <div class="nav-button"><a href="classes">Games</a></div>
-            <div class="nav-button"><a href="leaderboard">Leaderboard</a></div>
-            <div class="nav-button"><a href="apps">Apps</a></div>
-            <div class="nav-button"><a href="chat">Chat</a></div>
-        </div>
-
-        <div id="middlebar">
-            <p>Rewrite</p>
-        </div>
-
-        <div id="rightbar">
-            <a id="login" href="profile">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-            </a>
-
-            <a id="settings" href="preferences"><img src="./assets/images/settings-light.svg"></img>
-            </a>
-        </div>
-    </div>
+    <?php include "assets/includes/navbar.php" ?>
 
     <section id="featured" class="not-selectable">
         <div class="featuredSlide fade">
             <img src="./assets/images/retrobowlfeature.png">
             <div class="slide">
                 <p>RETRO BOWL</p>
-                <button onclick="location.assign('class?class=Retro%20Bowl');">Play Now!</button>
+                <button onclick="location.assign('class.html?class=Retro%20Bowl');">Play Now!</button>
             </div>
         </div>
 
@@ -49,7 +26,7 @@
             <img src="./assets/images/fnaffeature.jpeg">
             <div class="slide">
                 <p>FIVE NIGHTS AT FREDDY'S 2</p>
-                <button onclick="location.assign('class?class=FNAF%202');">Play Now!</button>
+                <button onclick="location.assign('class.html?class=FNAF%202');">Play Now!</button>
             </div>
         </div>
 
@@ -57,7 +34,7 @@
             <img src="./assets/images/basketballstarsfeature.jpeg">
             <div class="slide">
                 <p>BASKETBALL <br> STARS</p>
-                <button onclick="location.assign('class?class=Basketball%20Stars');">Play Now!</button>
+                <button onclick="location.assign('class.html?class=Basketball%20Stars');">Play Now!</button>
             </div>
         </div>
 
@@ -132,7 +109,7 @@
             <img id="center-image" src="assets/images/logo.png" class="not-selectable">
             <div>
                 <p id="center-text">
-                    <br>&copy; 2022 TotallyScience | <a class="terms" href="./termsofuse">Terms of Use</a> | <a class="terms" href="./privacypolicy">Privacy Policy</a> | <a class="terms" href="./partners">Partners</a> | A Zach Yadegari
+                    <br>&copy; 2022 TotallyScience | <a class="terms" href="./termsofuse.html">Terms of Use</a> | <a class="terms" href="./privacypolicy.html">Privacy Policy</a> | <a class="terms" href="./partners.html">Partners</a> | A Zach Yadegari
                     Production &trade;
                 </p>
             </div>
