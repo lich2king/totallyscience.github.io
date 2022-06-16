@@ -15,10 +15,10 @@ window.addEventListener('load', () => {
         const appData = apps[appName];
         const appFrame = document.getElementById('app_frame');
 
-        if (appData == null) window.location.href = '../apps.html';
+        if (appData == null) window.location.href = '../apps';
 
         if (appData.type == 'proxy') {
-            appFrame.src = 'https://p.' + window.location.host + '/index.html#' + btoa(appData.iframe_url);
+            appFrame.src = 'https://p.' + window.location.host + '/index#' + btoa(appData.iframe_url);
         } else {
             appFrame.src = appData.iframe_url;
         }

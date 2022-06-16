@@ -14,13 +14,13 @@ window.addEventListener('load', () => {
         }
     }).then((games) => {
         const gameData = games[gameName];
-        if (gameData == null) window.location.href = '../classes.html';
+        if (gameData == null) window.location.href = '../classes';
 
         document.getElementById('controls').innerText = gameData.controls;
         document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
 
         if (gameData.type == 'proxy') {
-            document.getElementById('game-iframe').src = 'https://p.' + window.location.host + '/index.html#' + btoa(gameData.iframe_url);
+            document.getElementById('game-iframe').src = 'https://p.' + window.location.host + '/index#' + btoa(gameData.iframe_url);
         } else {
             document.getElementById('game-iframe').src = gameData.iframe_url;
         }
