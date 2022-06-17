@@ -1,0 +1,120 @@
+html {
+    overflow-x: hidden;
+}
+
+#startcontent {
+    width: 100vw;
+    height: 80vh;
+}
+
+
+/*#region featured game*/
+
+#feature {
+    float: left;
+    margin-top: 20vh;
+    margin-left: 3vw;
+    width: 50vw;
+    height: 50vh;
+    border: 4px solid var(--accent-color);
+    border-radius: 50px;
+}
+
+#feature img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+#feature #arrows {
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: .5vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#feature #text {
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 3vw;
+    width: 50.3vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#feature #arrows img {
+    width: 2vw;
+    height: 8vh;
+    border-radius: 50px;
+}
+
+#feature #arrows img:first-of-type {
+    margin-right: 51vw;
+}
+
+#feature #text p {
+    text-align: center;
+    color: var(--light-color);
+    font-size: 6vw;
+    font-family: 'Rubik', sans-serif;
+}
+
+.stroke-text {
+    --stroke-color: var(--accent-color);
+    --stroke-width: 4px;
+    letter-spacing: var(--stroke-width);
+    color: white;
+    text-shadow: var(--stroke-width) 0 0 var(--stroke-color), calc(var(--stroke-width) * -1) 0 0 var(--stroke-color), 0 var(--stroke-width) 0 var(--stroke-color), 0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
+}
+
+.smooth-16 {
+    text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color);
+}
+
+
+/*#endregion*/
+
+#scisuggests {
+    margin-top: 20vh;
+    margin-right: 3vw;
+    float: right;
+    width: 40vw;
+    height: 50vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+    padding: 10px;
+}
+
+#scisuggests img {
+    width: 13vw;
+    height: 13vh;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+#scisuggests img:hover {
+    transform: scale(1.05);
+}
+
+#info {
+    width: 100vw;
+    text-align: center;
+}
+
+#info p {
+    color: var(--light-color);
+    font-size: 1.5vw;
+    font-family: 'Rubik', sans-serif;
+}
