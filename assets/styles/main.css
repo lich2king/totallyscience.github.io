@@ -5,6 +5,7 @@
     --background-color: #1F0336;
     --dark-color: #000000;
     --accent-color: #f75dfc;
+    --dark-accent: #340060;
     --box-shadow-color: #ccc;
 }
 
@@ -180,3 +181,36 @@ label {
     background-color: transparent;
     cursor: pointer;
 }
+
+
+/*#region scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: var(--dark-accent);
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #bc47c0;
+}
+
+
+/*#endregion*/

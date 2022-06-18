@@ -118,3 +118,92 @@ html {
     font-size: 1.5vw;
     font-family: 'Rubik', sans-serif;
 }
+
+#searchcat {
+    width: 100vw;
+    height: 35vh;
+    background-color: aqua;
+    margin-bottom: 50vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 1vw;
+}
+
+
+/* searchbar */
+
+input[type='text'] {
+    width: 15vw;
+    height: 30%;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 17px;
+    font-size: 16px;
+    background-color: var(--light-color);
+    outline: none;
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+    background-size: 1.25vw;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3%;
+    color: var(--dark-color);
+}
+
+input[type='text']:focus {
+    width: 18vw;
+}
+
+
+/* category selection */
+
+.categoryButton {
+    height: 30%;
+    border: none;
+    color: var(--light-color);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5vw;
+    font-family: 'Rubik';
+    cursor: pointer;
+    background-color: var(--accent-color);
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.categoryButton span {
+    font-size: 1.7vw;
+}
+
+@media (min-width: 1200px) {
+    .categoryButton {
+        font-size: 20pt;
+    }
+    .categoryButton span {
+        font-size: 17pt;
+    }
+}
+
+.selectedCategory {
+    opacity: 1;
+}
+
+.unselectedCategory {
+    opacity: 0.4;
+}
+
+.categories {
+    text-align: center;
+    margin-top: 80px;
+}
+
+@media (max-width: 600px) {
+    .categories {
+        margin-top: 100px;
+    }
+}
