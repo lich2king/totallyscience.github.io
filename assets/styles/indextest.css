@@ -121,10 +121,10 @@ html {
 
 #searchcat {
     position: sticky;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: var(--background-color);
-    top: 5vh;
+    top: 60vh;
     /**/
     margin-top: 10vh;
     width: 100vw;
