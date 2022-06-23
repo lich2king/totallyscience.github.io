@@ -39,7 +39,7 @@ label {
     justify-content: center;
     align-items: normal;
     width: 100%;
-    height: 60px;
+    height: 6.5vh;
     top: 0;
     left: 0;
     background-color: var(--background-color);
@@ -56,8 +56,8 @@ label {
 
 .nav-button a {
     text-decoration: none;
-    font-size: 17px;
-    line-height: 40px;
+    font-size: .9vw;
+    line-height: 3.5vh;
     letter-spacing: 0.05rem;
     color: var(--light-color);
 }
@@ -80,12 +80,12 @@ label {
 }
 
 #login {
-    margin-top: 18px;
+    margin-top: 2vh;
     margin-right: 0.5vw;
 }
 
 .selected a {
-    border-bottom: 2px solid var(--light-color);
+    border-bottom: 0.15vw solid var(--light-color);
 }
 
 #leftbar {
@@ -106,7 +106,7 @@ label {
 
 #middlebar p {
     font-family: 'Spline Sans', sans-serif;
-    font-size: 30px;
+    font-size: 1.6vw;
     color: var(--light-color);
 }
 
@@ -120,47 +120,48 @@ label {
 }
 
 #rightbar p {
-    font-size: 17px;
+    font-size: .9vw;
 }
 
 #gp {
     background-color: #f75dfc;
-    line-height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
+    line-height: 3vh;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    border-radius: .5vw;
 }
 
-@media (max-width: 1050px) {
+
+/*@media (max-width: 1050px) {
     #rightbar {
         display: none;
     }
     #middlebar {
         justify-content: right;
-        margin-right: 20px;
+        margin-right: 1vw;
     }
 }
 
 @media (max-width: 675px) {
     #middlebar {
         position: absolute;
-        top: 0px;
+        top: 0vh;
         justify-content: center;
         width: 100%;
         height: 50%;
     }
     #navbar {
-        height: 100px;
+        height: 100%;
     }
     #leftbar {
-        margin-top: 45px;
+        margin-top: 2.25vw;
         display: flex;
         justify-content: center;
         width: 100%;
         height: 50%;
         padding-left: 2%;
     }
-}
+}*/
 
 .not-selectable {
     -webkit-touch-callout: none;
@@ -174,8 +175,8 @@ label {
 #scrollb {
     display: none;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: .5vw;
+    right: .5vw;
     z-index: 99;
     outline: none;
     background-color: transparent;
@@ -186,7 +187,7 @@ label {
 /*#region scrollbar*/
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: .5vw;
 }
 
 
@@ -194,7 +195,7 @@ label {
 
  ::-webkit-scrollbar-track {
     background: var(--dark-accent);
-    border-radius: 10px;
+    border-radius: .5vw;
 }
 
 
@@ -202,7 +203,7 @@ label {
 
  ::-webkit-scrollbar-thumb {
     background: var(--accent-color);
-    border-radius: 10px;
+    border-radius: .5vw;
 }
 
 
