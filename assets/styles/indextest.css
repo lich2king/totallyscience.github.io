@@ -235,14 +235,56 @@ input[type='text'] {
     margin-bottom: 10vh;
 }
 
-#games input {
+#gameDiv {
     width: 15vw;
     height: 15vh;
     border-radius: 30px;
-    border: transparent;
+    text-align: center;
     transition: 0.1s;
 }
 
-#games input:hover {
+#gameDiv input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv:hover {
+    cursor: pointer;
     transform: scale(1.05);
+}
+
+#gameDiv {
+    position: relative;
+}
+
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9vw;
+    font-family: 'Rubik';
+    font-weight: 700;
+    color: white;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+#gameDiv:hover div {
+    visibility: visible;
+    opacity: 1;
+}
+
+#gameDiv:hover div .border {
+    width: 150%;
+}
+
+.border {
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0, 0, 0, .1);
 }
