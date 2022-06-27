@@ -72,7 +72,7 @@ html {
     --stroke-color: var(--accent-color);
     --stroke-width: 4px;
     letter-spacing: var(--stroke-width);
-    color: white;
+    color: var(--light-color);
     text-shadow: var(--stroke-width) 0 0 var(--stroke-color), calc(var(--stroke-width) * -1) 0 0 var(--stroke-color), 0 var(--stroke-width) 0 var(--stroke-color), 0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
 }
 
@@ -120,6 +120,7 @@ html {
 }
 
 #searchcat {
+    z-index: 1;
     position: sticky;
     padding-top: 10px;
     padding-bottom: 30px;
@@ -225,6 +226,7 @@ input[type='text'] {
 }
 
 #games {
+    z-index: 0;
     width: 100vw;
     /* Grid */
     display: grid;
@@ -266,7 +268,7 @@ input[type='text'] {
     font-size: 0.9vw;
     font-family: 'Rubik';
     font-weight: 700;
-    color: white;
+    color: var(--light-color);
     font-family: sans-serif;
     opacity: 0;
     visibility: hidden;
@@ -287,4 +289,55 @@ input[type='text'] {
     width: 100%;
     height: 15%;
     background-color: rgba(0, 0, 0, .1);
+}
+
+#extraCategories {
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 4vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#extraCategory {
+    width: 15vw;
+    height: 30vh;
+    border-radius: 30px;
+    transition: 0.1s;
+}
+
+#extraCategory:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#extraCategory div {
+    border-radius: 30px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+#extraCategory img {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+#extraCategory p {
+    margin-top: 0%;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: var(--light-color);
+    font-size: 1vw;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--accent-color);
 }
