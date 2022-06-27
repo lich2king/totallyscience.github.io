@@ -262,6 +262,7 @@
         padding-right: 3vw;
         border-radius: 15px;
         font-weight: 900;
+        border: none;
     }
     
     #gamePassAd div h1 {
