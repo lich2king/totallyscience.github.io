@@ -25,42 +25,18 @@
         </div>
 
         <div id="scisuggests">
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
+            <img
+                src="https://store-images.s-microsoft.com/image/apps.10897.13510798883898003.c2c8bc14-3a39-4806-b549-e42939afea6a.53beb45d-d382-43db-962f-19ccb4b868c2">
+            <img
+                src="https://store-images.s-microsoft.com/image/apps.10897.13510798883898003.c2c8bc14-3a39-4806-b549-e42939afea6a.53beb45d-d382-43db-962f-19ccb4b868c2">
+            <img
+                src="https://store-images.s-microsoft.com/image/apps.10897.13510798883898003.c2c8bc14-3a39-4806-b549-e42939afea6a.53beb45d-d382-43db-962f-19ccb4b868c2">
+            <img
+                src="https://store-images.s-microsoft.com/image/apps.10897.13510798883898003.c2c8bc14-3a39-4806-b549-e42939afea6a.53beb45d-d382-43db-962f-19ccb4b868c2">
+            <img
+                src="https://store-images.s-microsoft.com/image/apps.10897.13510798883898003.c2c8bc14-3a39-4806-b549-e42939afea6a.53beb45d-d382-43db-962f-19ccb4b868c2">
+            <img
+                src="https://store-images.s-microsoft.com/image/apps.10897.13510798883898003.c2c8bc14-3a39-4806-b549-e42939afea6a.53beb45d-d382-43db-962f-19ccb4b868c2">
         </div>
     </div>
 
