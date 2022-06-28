@@ -231,7 +231,7 @@ input[type='text'] {
     /* Grid */
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    gap: 3vw;
+    gap: 4vw;
     justify-content: center;
     text-align: center;
     margin-bottom: 10vh;
