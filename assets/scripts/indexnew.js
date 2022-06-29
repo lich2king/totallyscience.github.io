@@ -102,7 +102,6 @@ function displayGames() {
             <div id="gameDiv" onclick="location.href = 'class?class=${name}'" class="${classlist} all">
                 <input type="image"
                     src="${data.image}" />
-                <div class="innerGameDiv border"></div>
                 <div class="innerGameDiv">${name}</div>
             </div>
         `;
