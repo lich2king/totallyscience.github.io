@@ -88,26 +88,23 @@
         <div id="searchcat">
             <div id="firstcatrow">
                 <button name="all" onclick="" class="selectedCategory categoryButton">All</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Some</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Couple</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Few</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Fun</button>
+                <button name="new" onclick="" class="unselectedCategory categoryButton">New</button>
+                <button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button>
+                <button name="car" onclick="" class="unselectedCategory categoryButton">Car</button>
+                <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Not Fun</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Boring</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Time</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Week</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Month</button>
+                <button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button>
+                <button name="card" onclick="" class="unselectedCategory categoryButton">Card</button>
+                <button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button>
+                <button name="fnf" onclick="" class="unselectedCategory categoryButton">FNF</button>
+                <button name="multiplayer" onclick="" class="unselectedCategory categoryButton">Multiplayer</button>
             </div>
             <div id="nextcatrow">
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Not Fun</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Boring</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Time</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Week</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Month</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Not Fun</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Boring</button>
-                <button name="all" onclick="" class="unselectedCategory categoryButton">Time</button>
+                <button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button>
+                <button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button>
+                <button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button>
+                <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
+                <button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button>
             </div>
         </div>
 

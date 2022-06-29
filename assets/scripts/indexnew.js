@@ -109,3 +109,78 @@ function displayGames() {
         gamesDiv.innerHTML += gameBtn;
     }
 }
+
+
+const searchBar = document.getElementById('searchBar')
+searchBar.addEventListener('keyup', () => {
+    const input = searchBar.value.toUpperCase();
+
+    if (input == '' || input == null) {
+        loadTopic();
+        return;
+    }
+
+    gamesDiv.innerHTML = '';
+
+    let numGames = 0;
+    Object.keys(games).forEach((game) => {
+        if (numGames < maxGames) {
+            if (game.toUpperCase().includes(input)) {
+                if (games[game].tags.includes(selectedTopic) || selectedTopic == 'all') {
+                    const data = games[game];
+
+                    let classlist = data.tags.join(' ');
+
+                    const weekAgo = new Date();
+                    weekAgo.setDate(weekAgo.getDate() - 7);
+
+                    const gameDate = new Date(data.date_added);
+
+                    if (gameDate > weekAgo) {
+                        classlist += ' new';
+                    }
+
+                    const gameBtn = `
+                    <div id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist} all">
+                        <input type="image"
+                            src="${data.image}" />
+                        <div class="innerGameDiv">${game}</div>
+                    </div>
+                    `;
+
+                    gamesDiv.innerHTML += gameBtn;
+                    numGames += 1
+                }
+            }
+        } else {
+            return;
+        }
+    });
+})
+
+
+// Category buttons
+
+const buttons = document.querySelectorAll('.categoryButton, #bolt');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+
+        selectedTopic = e.target.name;
+
+        const buttons = document.querySelectorAll('.categoryButton');
+
+        buttons.forEach((btn) => {
+            btn.classList.add('unselectedCategory');
+            btn.classList.remove('selectedCategory');
+        })
+
+        const selected = document.getElementsByName(selectedTopic)[0];
+        selected.classList.add('selectedCategory');
+        selected.classList.remove('unselectedCategory');
+
+        document.getElementById('searchBar').value = '';
+
+        loadTopic();
+    })
+})
