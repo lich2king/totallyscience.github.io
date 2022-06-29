@@ -84,7 +84,7 @@ function displayGames() {
         }
     }
     displayedGames += maxGames;
-    
+
     hasLoaded = false;
 }
 
