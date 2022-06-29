@@ -14,13 +14,27 @@
 
     <div id="startcontent">
         <div id="feature">
-            <img src="https://www.pockettactics.com/wp-content/uploads/2020/03/Retro-bowl-hero.jpg">
             <div id="arrows">
-                <img src="https://www.cooperlighting.com/s/vividtune/png/left-arrow.png">
-                <img src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png">
+                <img src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                <img src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
             </div>
-            <div id="text">
-                <p class="stroke-text smooth-16">RETRO BOWL</p>
+            <div class="featureDiv featuredSlide fade">
+                <img src="https://www.pockettactics.com/wp-content/uploads/2020/03/Retro-bowl-hero.jpg">
+                <div id="text">
+                    <p class="stroke-text smooth-16">RETRO BOWL</p>
+                </div>
+            </div>
+            <div class="featureDiv featuredSlide fade" style="display:none">
+                <img src="https://images.crazygames.com/games/basketball-stars-2019/cover-1583231506155.png?auto=format,compress&q=75&cs=strip&ch=DPR&w=1200&h=630&fit=crop">
+                <div id="text">
+                    <p class="stroke-text smooth-16">BASKETBALL STARS</p>
+                </div>
+            </div>
+            <div class="featureDiv featuredSlide fade" style="display:none">
+                <img src="https://cdn.mos.cms.futurecdn.net/BZQf6Crt2rUpB7fSedthN9.jpg">
+                <div id="text">
+                    <p class="stroke-text smooth-16">FIVE NIGHTS AT FREDDY'S</p>
+                </div>
             </div>
         </div>
 
@@ -285,7 +299,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/indexnew.js"></script>
 </body>
 
 </html>

@@ -18,6 +18,12 @@ html {
     height: 50vh;
     border: 4px solid var(--accent-color);
     border-radius: 50px;
+    overflow: hidden;
+}
+
+#feature .featureDiv {
+    width: 100%;
+    height: 100%;
 }
 
 #feature img {
@@ -31,11 +37,21 @@ html {
     left: 0%;
     position: absolute;
     margin-top: 20vh;
-    margin-left: .5vw;
+    margin-left: .75vw;
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#feature #arrows img {
+    opacity: 0.5;
+    transition: 0.1s;
+}
+
+#feature #arrows img:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 #feature #text {
@@ -83,6 +99,40 @@ html {
 
 /*#endregion*/
 
+
+/*#region animation for feature*/
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.25s;
+    animation-name: fade;
+    animation-duration: 1.25s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*#endregion*/
+
+
+/*#region suggested games*/
+
 #scisuggests {
     margin-top: 20vh;
     margin-right: 3vw;
@@ -108,6 +158,9 @@ html {
     transform: scale(1.05);
 }
 
+
+/*#endregion*/
+
 #info {
     width: 100vw;
     text-align: center;
@@ -118,6 +171,9 @@ html {
     font-size: 1.5vw;
     font-family: 'Rubik', sans-serif;
 }
+
+
+/*#region categories + seach*/
 
 #searchcat {
     z-index: 1;
@@ -225,6 +281,12 @@ input[type='text'] {
     opacity: 0.45;
 }
 
+
+/*#endregion*/
+
+
+/*#region games*/
+
 #games {
     z-index: 0;
     width: 100vw;
@@ -291,6 +353,12 @@ input[type='text'] {
     background-color: rgba(0, 0, 0, .1);
 }
 
+
+/*#endregion*/
+
+
+/*#region extracategories*/
+
 #extraCategories {
     margin-top: 10vh;
     margin-bottom: 20vh;
@@ -341,3 +409,6 @@ input[type='text'] {
     font-family: 'Rubik', sans-serif;
     background-color: var(--accent-color);
 }
+
+
+/*#endregion*/
