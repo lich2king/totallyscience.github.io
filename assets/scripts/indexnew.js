@@ -35,7 +35,6 @@ const autoSwitch = () => {
 switchSlide(slideIndex)
 autoSwitch()
 
-
 // Load Games
 const gamesDiv = document.getElementById('games');
 const maxGames = 50;
