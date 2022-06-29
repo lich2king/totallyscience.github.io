@@ -113,6 +113,11 @@ function displayGames() {
 
 const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
+    document.getElementById('info').scrollIntoView({
+        block: "start",
+        inline: "nearest"
+    });
+
     const input = searchBar.value.toUpperCase();
 
     if (input == '' || input == null) {
