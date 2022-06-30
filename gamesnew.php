@@ -56,6 +56,8 @@
         </div>
     </div>
 
+    <div style = "padding-bottom: 14vh">
+    </div>
 
     <?php include "assets/includes/footer.php" ?>
 

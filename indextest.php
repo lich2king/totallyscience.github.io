@@ -116,7 +116,7 @@
                 <img
                     src="https://lh3.googleusercontent.com/47RcwWXXnAimVJKSGsj-DKfIQKCwocry-TNO-m5G13eXEJM6NDoG6Y6uuhvzR7qehg" />
             </div>
-            <p>Driving Games</p>
+            <p>Car Games</p>
         </div>
         <div id="extraCategory">
             <div>

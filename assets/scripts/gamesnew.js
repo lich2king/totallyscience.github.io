@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadTopic() {
     displayedGames = 0;
     gamesDiv.innerHTML = '';
+    document.getElementById("noSearch").style.display = 'none';
 
     sorted = sortObject(games);
 
@@ -62,13 +63,18 @@ function loadTopic() {
 
 
 function displayGames() {
+
     for (let x = displayedGames; x < displayedGames + maxGames; x++) {
+
         let keys = Object.keys(sorted);
 
         const name = keys[x];
         const data = sorted[keys[x]];
 
-        let classlist = data.tags.join(' ');
+        let classlist = '';
+        classlist = data.tags.join(' ');
+
+
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
