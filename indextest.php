@@ -39,42 +39,7 @@
         </div>
 
         <div id="scisuggests">
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
-            <div id="gameDiv">
-                <input type="image"
-                    src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
-                <div class="innerGameDiv border"></div>
-                <div class="innerGameDiv">Bottom Right</div>
-            </div>
+            
         </div>
     </div>
 
@@ -89,9 +54,9 @@
             <div id="firstcatrow">
                 <button name="all" onclick="" class="selectedCategory categoryButton">All</button>
                 <button name="new" onclick="" class="unselectedCategory categoryButton">New</button>
+                <button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button>
                 <button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button>
                 <button name="car" onclick="" class="unselectedCategory categoryButton">Car</button>
-                <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
                 <button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button>
                 <button name="card" onclick="" class="unselectedCategory categoryButton">Card</button>
@@ -103,8 +68,9 @@
                 <button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button>
                 <button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button>
                 <button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button>
+                <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
-                <button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button>
+                <button name="premium" onclick="" class="unselectedCategory categoryButton">Premium</button>
             </div>
         </div>
 

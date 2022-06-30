@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
         loadTopic();
+        suggestGames();
     });
 });
 
@@ -171,6 +172,14 @@ const buttons = document.querySelectorAll('.categoryButton, #bolt');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
 
+        if (e.target.name != selectedTopic) {
+            document.getElementById('info').scrollIntoView({
+                block: "start",
+                inline: "nearest"
+            });
+        }
+
+
         selectedTopic = e.target.name;
 
         const buttons = document.querySelectorAll('.categoryButton');
@@ -189,3 +198,35 @@ buttons.forEach((button) => {
         loadTopic();
     })
 })
+
+
+function suggestGames() {
+    let randomGames = []
+    for (let x = displayedGames; x < displayedGames + 6; x++) {
+        let randGame = randomProperty(games)
+        while (randomGames.includes(randGame)) {
+            randGame = randomProperty(games)
+        }
+        randomGames.push(randGame);
+    }
+    console.log(randomGames)
+
+    document.getElementById('scisuggests').innerHTML = '';
+    randomGames.forEach(function(game) {
+        const gameBtn = `
+                    <div id="gameDiv" onclick="location.href = 'class?class=${game}'">
+                        <input type="image"
+                            src="${games[game]["image"]}" />
+                        <div class="innerGameDiv">${game}</div>
+                    </div>
+                    `;
+
+        document.getElementById('scisuggests').innerHTML += gameBtn;
+    })
+
+}
+
+var randomProperty = function(object) {
+    var keys = Object.keys(object);
+    return keys[Math.floor(keys.length * Math.random())];
+};

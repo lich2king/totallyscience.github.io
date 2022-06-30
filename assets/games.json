@@ -154,7 +154,7 @@
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fridaynightfunkin.png",
         "controls": "Use the arrow keys to play notes",
-        "tags": [""],
+        "tags": ["fnf"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "iframe_url": "https://cookieduck.com/games/fnf/week7/week7/"
@@ -164,7 +164,7 @@
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
         "image": "./assets/game_images/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
-        "tags": ["mobile", "fnf"],
+        "tags": ["mobile", "fnaf"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
         "iframe_url": "https://scratch.mit.edu/projects/469219637/embed/",
@@ -372,7 +372,7 @@
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
         "image": "./assets/game_images/escapingtheprison.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "assets/games/escapingtheprison.html"
@@ -390,7 +390,7 @@
         "description": "Attempt to break into a bank, built in the middle of a desert.",
         "image": "./assets/game_images/breakingthebank.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "assets/games/breakinbank.html"
@@ -399,7 +399,7 @@
         "description": "Help Henry Stickmin break into a museum and execute a diamond heist.",
         "image": "./assets/game_images/stealdiamond.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "assets/games/stealdiamond.html"
@@ -408,7 +408,7 @@
         "description": "Try not to fail during a deadly mission in the sky! Infiltrating the Airship dares you to make risky decisions.",
         "image": "./assets/game_images/infiltratingairship.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "assets/games/infiltrateairship.html"
@@ -417,7 +417,7 @@
         "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
         "image": "./assets/game_images/fleeingcomplex.jpg",
         "controls": "Click with the mouse",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "assets/games/fleecomplex.html"
@@ -507,7 +507,7 @@
         "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
         "image": "./assets/game_images/fnafworld.jpg",
         "controls": "[WASD] - move\n[Click] - interact",
-        "tags": ["fnf"],
+        "tags": ["fnaf"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "GamingRaccoon44",
         "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
@@ -516,7 +516,7 @@
         "description": "30 years after the events that took place in 5 Nights at Freddy's.",
         "image": "./assets/game_images/fnaf3.png",
         "controls": "[Space] - close vents\n[Click] - interact",
-        "tags": ["fnf"],
+        "tags": ["fnaf"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Fnafphoneguy123",
         "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
@@ -571,7 +571,7 @@
         "description": "Find your target and eliminate them as quickly as possible.",
         "image": "./assets/game_images/sniper.jpg",
         "controls": "[Click] - shoot",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Crazy Monkey Games",
         "iframe_url": "assets/games/sniper.html"
@@ -580,7 +580,7 @@
         "description": "A free tower defense game. Those pesky stickfigures are at it again! Defend your castle!",
         "image": "./assets/game_images/stormthehouse2.jpg",
         "controls": "[Click] - shoot\n[Space] - reload",
-        "tags": ["stickmin", "flash"],
+        "tags": ["stickman", "flash"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Ivory",
         "iframe_url": "assets/games/stormthehouse2.html"
@@ -663,7 +663,7 @@
         "description": "The classic Five Nights at Freddy's game. Don't get too scared!",
         "image": "./assets/game_images/fnaf1.png",
         "controls": "Click and drag with mouse",
-        "tags": ["fnf"],
+        "tags": ["fnaf"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Scottgames",
         "iframe_url": "https://g.vseigru.net/scratch/app/?id=217819833&turbo=false"
@@ -693,7 +693,7 @@
         "tags": ["multiplayer"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "JustPlay",
-        "iframe_url": "https://ejvd3326248pklq0mtj313irgbc2vsrb-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s035r8h4/1v1.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=544c660bc8b16c1d&libs=core&mid=172&parent=https://sites.google.com/site/unblockedgames66ez/1v1-lol#st=e%3DAIHE3cBK9D0UGibwSQF2F64MR8cb4pzmPVFPpm9x2iU1OmvV3wfrHm9F2stu5dMRRYLHGsmiZQNreywjA%252F5m1pl9Ovr49lxTSbekq%252F58DGx8Fju5Kybmy15YlmhPX4edPMPIxnzqTss%252F%26c%3Denterprise&rpctoken=-1798097197484458310"
+        "iframe_url": "https://ejvd3326248pklq0mtj313irgbc2vsrb-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s035r8h4/1v1.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=544c660bc8b16c1d&libs=core&mid=172&parent=https://sites.google.com/site/unblockedgameswtf/1v1-lol#st=e%3DAIHE3cDa0V5V5RnKPUs5fhJBAkMIsLvCyhTqhhIz%252BaQp3fJ%252B1VqrM7hjYJShkamIsSjBFRSP2Ao1z3zRDWUv86sh6HYTR6gGoTqt%252Beb4IhfwcKqAnQqZL6M6EZ9ZrzsD5vEgfn8G1q70%26c%3Denterprise&rpctoken=-1063403043488099387"
     },
     "Fall Guys": {
         "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
@@ -735,7 +735,7 @@
         "description": "The final chapter of FNAF radically changes its location and gameplay while upping the level of thrill even further.",
         "image": "./assets/game_images/fnaf4.jpeg",
         "controls": "Use mouse to interact\n[Space] - flashlight\nFlick mouse down to look behind you\n[Click] - close/open door\n[x] - hide tips",
-        "tags": ["fnf"],
+        "tags": ["fnaf"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Kk32423",
         "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
@@ -888,7 +888,7 @@
         "description": "A point-and-click survival horror video game created to fit in the FNAF series.",
         "image": "./assets/game_images/sisterloco.jpg",
         "controls": "[Click] - interact\n[w] - move in vent\nMUST TURN VOLUME ON TO HEAR TASKS",
-        "tags": ["fnf"],
+        "tags": ["fnaf"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Codyjax",
         "iframe_url": "https://scratch.mit.edu/projects/125366612/embed"
