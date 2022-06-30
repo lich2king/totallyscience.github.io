@@ -1,49 +1,30 @@
-// featured games slides code
-let shouldAutoSwitch = true
-let slideIndex = 1
-const slides = document.getElementsByClassName('featuredSlide')
-const switchSlide = (n) => {
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none'
-    }
-    slides[slideIndex - 1].style.display = ''
-}
-const plusSlides = (n) => {
-    shouldAutoSwitch = false
-    switchSlide((slideIndex += n))
-}
-const autoPlusSlides = (n) => {
-    switchSlide((slideIndex += n))
-}
-const autoSwitch = () => {
-    if (shouldAutoSwitch) {
-        setTimeout(() => {
-            if (shouldAutoSwitch) {
-                autoPlusSlides(1)
-                autoSwitch()
-            }
-        }, 2500)
-    }
-}
-
-switchSlide(slideIndex)
-autoSwitch()
-
 // Load Games
 const gamesDiv = document.getElementById('games');
-const maxGames = 50;
+const maxGames = 500;
 
 let selectedTopic = 'all';
 let displayedGames = 0;
 let games;
 let sorted;
 let hasLoaded = false;
+
+let customcategory = false;
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const category = urlParams.get('category');
+if (category != null) {
+    selectedTopic = category;
+    document.getElementById("topText").style.display = '';
+    document.getElementById("topText").innerText = `${category.toUpperCase()} Games`;
+
+    document.getElementsByName('all')[0].classList.add('unselectedCategory');
+    document.getElementsByName('all')[0].classList.remove('selectedCategory');
+
+    document.getElementById('searchcat').style.marginTop = "20px";
+
+    customcategory = true;
+}
 
 
 let sortObject = (obj) =>
@@ -114,10 +95,8 @@ function displayGames() {
 
 const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
-    document.getElementById('info').scrollIntoView({
-        block: "start",
-        inline: "nearest"
-    });
+
+    scrollTo(0, 0);
 
     const input = searchBar.value.toUpperCase();
 
@@ -127,6 +106,7 @@ searchBar.addEventListener('keyup', () => {
     }
 
     gamesDiv.innerHTML = '';
+    document.getElementById("noSearch").style.display = 'none';
 
     let numGames = 0;
     Object.keys(games).forEach((game) => {
@@ -162,6 +142,9 @@ searchBar.addEventListener('keyup', () => {
             return;
         }
     });
+    if (gamesDiv.innerHTML == '') {
+        document.getElementById("noSearch").style.display = '';
+    }
 })
 
 
@@ -172,13 +155,14 @@ const buttons = document.querySelectorAll('.categoryButton');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
 
-        if (e.target.name != selectedTopic) {
-            document.getElementById('info').scrollIntoView({
-                block: "start",
-                inline: "nearest"
-            });
+        if (customcategory) {
+            document.getElementById("topText").style.display = 'none';
+            document.getElementById('searchcat').style.marginTop = "80px";
         }
 
+        if (e.target.name != selectedTopic) {
+            window.scrollTo(0, 0);
+        }
 
         selectedTopic = e.target.name;
 
@@ -198,35 +182,3 @@ buttons.forEach((button) => {
         loadTopic();
     })
 })
-
-
-function suggestGames() {
-    let randomGames = []
-    for (let x = displayedGames; x < displayedGames + 6; x++) {
-        let randGame = randomProperty(games)
-        while (randomGames.includes(randGame)) {
-            randGame = randomProperty(games)
-        }
-        randomGames.push(randGame);
-    }
-    console.log(randomGames)
-
-    document.getElementById('scisuggests').innerHTML = '';
-    randomGames.forEach(function(game) {
-        const gameBtn = `
-                    <div id="gameDiv" onclick="location.href = 'class?class=${game}'">
-                        <input type="image"
-                            src="${games[game]["image"]}" />
-                        <div class="innerGameDiv">${game}</div>
-                    </div>
-                    `;
-
-        document.getElementById('scisuggests').innerHTML += gameBtn;
-    })
-
-}
-
-var randomProperty = function(object) {
-    var keys = Object.keys(object);
-    return keys[Math.floor(keys.length * Math.random())];
-};

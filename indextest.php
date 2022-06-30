@@ -80,38 +80,38 @@
     </div>
 
     <div style="text-align:center">
-        <button onclick="" class="regularButton"><span>ALL GAMES</span> <img style="padding-left:0.5vw" width="16vw"
+        <button onclick="window.open('gamesnew.php', '_self')" class="regularButton"><span>ALL GAMES</span> <img style="padding-left:0.5vw" width="16vw"
                 src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
     <div id="extraCategories">
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=stickmin', '_self')">
             <div>
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjDjKTvljf2ZWNwwFDGJbRwCvmbWL9xKghA&usqp=CAU" />
             </div>
             <p>Henry Stickmin Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=fnaf', '_self')">
             <div>
                 <img
                     src="https://play-lh.googleusercontent.com/myJ2kwywsCRglKkZuHBq6Aku9PX7HB75v-8KbnTK9JOPU6z0hpD9xtvjiTGqrn-e4eI" />
             </div>
             <p>Five Nights at Freddy's Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=fnf', '_self')">
             <div>
                 <img src="https://i1.sndcdn.com/avatars-fKIWZo5CKgieiX3m-HeK5MA-t240x240.jpg" />
             </div>
             <p>Friday Night Funkin' Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=vex', '_self')">
             <div>
                 <img src="https://files.gamezhero.com/game/de4/d2c/de4d2c1e1953443a/images/240/vex.jpg" />
             </div>
             <p>Vex Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=car', '_self')">
             <div>
                 <img
                     src="https://lh3.googleusercontent.com/47RcwWXXnAimVJKSGsj-DKfIQKCwocry-TNO-m5G13eXEJM6NDoG6Y6uuhvzR7qehg" />
