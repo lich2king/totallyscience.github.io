@@ -92,7 +92,6 @@ function displayGames() {
 //game catagories
 //selected topic variable is used both in the button category changer and the search bar function
 const buttons = document.querySelectorAll('.categoryButton, #bolt');
-
 //buttons.appendChild(document.getElementById('bolt'))
 //add event listener to every element in the document with the class "categoryButton"
 buttons.forEach((button) => {

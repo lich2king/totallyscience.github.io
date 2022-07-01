@@ -1,0 +1,99 @@
+html {
+    overflow-x: hidden;
+}
+
+
+/* searchbar */
+
+#searchDiv {
+    padding-top: 100px;
+    text-align: center;
+    height: 50px;
+    z-index: 1;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background-color: var(--background-color);
+    top: 60px;
+}
+
+input[type='text'] {
+    /**/
+    width: 20vw;
+    height: 5vh;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 17px;
+    font-size: 16px;
+    background-color: var(--light-color);
+    outline: none;
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+    background-size: 1.25vw;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 1vh 1vw 1vh 2.2vw;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3%;
+    color: var(--dark-color);
+}
+
+#highscores {
+    margin-top: 120px;
+    width: 100vw;
+    margin-bottom: 20vh;
+}
+
+#highscore {
+    text-align: center;
+    background-color: var(--accent-color);
+    margin: auto;
+    border-radius: 30px;
+    width: 35vw;
+    height: 15vh;
+    margin-bottom: 5vh;
+    transition: 0.1s;
+}
+
+#highscore:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+#highscore .text {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 1vh 0;
+}
+
+#highscore h1,
+p,
+h2 {
+    color: var(--light-color);
+    font-family: 'Rubik';
+    margin: 1vh;
+}
+
+#highscore p {
+    font-size: 1vw;
+}
+
+#highscore h1 {
+    font-size: 1.5vw;
+}
+
+#highscore .image {
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#highscore .image img {
+    margin-left: 2vw;
+    border-radius: 30px;
+    height: 12vh;
+    width: 12vw;
+}
