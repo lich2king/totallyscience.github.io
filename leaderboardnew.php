@@ -73,6 +73,7 @@ $conn->close();
     console.log("Here");
     window.open('leaderboardnew.php');
     fetch(`/leaderboardnew.php`).then((response) => response.text()).then((res) => {
+        console.log(res);
         res = JSON.parse(res);
 
         const highscores = res;
