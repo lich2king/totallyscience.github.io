@@ -26,6 +26,8 @@
 
 
     <script>
+    document.getElementById("leaderboardnav").classList.add("selected");
+
     console.log("Here");
     window.open('leaderboardnew.php');
     fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
