@@ -37,25 +37,24 @@
 
         for (score in highscores) {
             const highscoreDiv = `
-            <div id="highscore">
-            <div class="text">
-                <h1>
-                    ${highscores[score][0]}
-                </h1>
-                <h2>
-                    ${highscores[score][2]}
-                </h2>
-                <p>
-                    ${highscores[score][1]}
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        `;
-        console.log(highscoreDiv);
-
+                <div id="highscore">
+                    <div class="text">
+                        <h1>
+                            ${highscores[score][0]}
+                        </h1>
+                        <h2>
+                            ${highscores[score][2]}
+                        </h2>
+                        <p>
+                            ${highscores[score][1]}
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="http://localhost:3000/assets/game_images/2048.png">
+                    </div>
+                </div>
+            `;
+            console.log(highscoreDiv);
             scoresDiv.appendChild(highscoreDiv);
         }
     });
