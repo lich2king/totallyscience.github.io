@@ -219,8 +219,13 @@
         padding-left: 1.5vw;
         padding-right: 1.5vw;
         border-radius: 20px;
-        transition: opacity 0.3s ease;
         font-weight: 900;
+        transition: opacity 0.3s ease;
+        transition: transform 0.1s ease;
+    }
+    
+    .regularButton:hover {
+        transform: scale(1.05);
     }
     
     .regularButton>img,
