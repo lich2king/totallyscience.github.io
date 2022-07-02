@@ -29,6 +29,10 @@
     console.log("Here");
     window.open('leaderboardnew.php');
     fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
+        const games;
+        fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
+            games = retrievedGames;
+        });
         console.log(res);
         res = JSON.parse(res);
 
@@ -53,7 +57,7 @@
                         </p>
                     </div>
                     <div class="image">
-                        <img src="http://localhost:3000/assets/game_images/2048.png">
+                        <img src="${games[game].image}">
                     </div>
                 </div>
             `;
