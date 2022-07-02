@@ -34,6 +34,7 @@
             games = retrievedGames;
         });
         console.log(res);
+        console.log(games);
         res = JSON.parse(res);
 
         const highscores = res;
