@@ -32,9 +32,10 @@
         let games;
         fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
             games = retrievedGames;
+            console.log(games);
         });
         console.log(res);
-        console.log(games);
+        
         res = JSON.parse(res);
 
         const highscores = res;
