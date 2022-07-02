@@ -68,6 +68,7 @@
                 <button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button>
                 <button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button>
                 <button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button>
+                <button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button>
                 <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
                 <button name="premium" onclick="" class="unselectedCategory categoryButton">Premium</button>
