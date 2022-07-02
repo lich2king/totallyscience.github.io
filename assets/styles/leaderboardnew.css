@@ -82,6 +82,10 @@ h2 {
     font-size: 1.5vw;
 }
 
+#highscore h2 {
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+
 #highscore .image {
     width: 50%;
     height: 100%;
