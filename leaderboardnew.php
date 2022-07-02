@@ -102,7 +102,6 @@ $conn->close();
     });
     </script>
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/gamesnew.js"></script>
 </body>
 
 </html>
