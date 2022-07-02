@@ -54,8 +54,7 @@
                     </div>
                 </div>
             `;
-            console.log(highscoreDiv);
-            scoresDiv.appendChild(highscoreDiv);
+            scoresDiv.innerHTML += highscoreDiv;
         }
     });
     </script>
