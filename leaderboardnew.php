@@ -71,7 +71,7 @@ $conn->close();
 
     <script>
     console.log("Here");
-    fetch(`assets/php/leaderboardnew.php`).then((response) => response.text()).then((res) => {
+    fetch(`leaderboardnew.php`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
         const highscores = res;
