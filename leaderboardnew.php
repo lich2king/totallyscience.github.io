@@ -71,6 +71,7 @@ $conn->close();
 
     <script>
     console.log("Here");
+    window.open('leaderboardnew.php');
     fetch(`/leaderboardnew.php`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
