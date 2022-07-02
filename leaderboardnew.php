@@ -29,7 +29,7 @@
     console.log("Here");
     window.open('leaderboardnew.php');
     fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
-        const games;
+        let games;
         fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
             games = retrievedGames;
         });
