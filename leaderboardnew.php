@@ -54,6 +54,7 @@
             </div>
         </div>
         `;
+        console.log(highscoreDiv);
 
             scoresDiv.appendChild(highscoreDiv);
         }
