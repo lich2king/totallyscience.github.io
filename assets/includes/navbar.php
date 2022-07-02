@@ -1,7 +1,7 @@
 <div id="navbar">
     <div id="leftbar">
         <div class="nav-button" id="gamesnav"><a href="indextest.php">&#127918; Games</a></div>
-        <div class="nav-button" id="leaderboardnav"><a href="classes.html">&#127942; Leaderboard</a></div>
+        <div class="nav-button" id="leaderboardnav"><a href="leaderboardnew.php">&#127942; Leaderboard</a></div>
         <div class="nav-button" id="chatnav"><a href="leaderboard.html">&#128172; Chat</a></div>
         <div class="nav-button" id="appsnav"><a href="apps.html">&#127922; Apps</a></div>
     </div>
