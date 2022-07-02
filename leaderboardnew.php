@@ -38,7 +38,7 @@
         for (score in highscores) {
             const game = highscores[score][0];
             const name = highscores[score][1];
-            const score = highscores[score][2];
+            const gameScore = highscores[score][2];
             const highscoreDiv = `
                 <div id="highscore" onclick="location.href = 'class?class=${game}'">
                     <div class="text">
@@ -46,7 +46,7 @@
                             ${game}
                         </h1>
                         <h2>
-                            ${score}
+                            ${gameScore}
                         </h2>
                         <p>
                             ${name}
