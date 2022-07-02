@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $database);
   
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
+  //die("connection failed"); //. $conn->connect_error);
 }
 
 
@@ -34,7 +34,7 @@ while($row = mysqli_fetch_assoc($result))
   
 }
 
-die(json_encode($highscores));    
+echo(json_encode($highscores));    
 
 
    
