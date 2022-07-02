@@ -1,3 +1,47 @@
+<?php
+$servername = "localhost";
+$username = "u483325885_user";
+$password = "Totally_password4321";
+$database = "u483325885_database";
+
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+  
+// Check connection
+if ($conn->connect_error) {
+  die("connection failed"); //. $conn->connect_error);
+}
+
+
+
+
+
+$query = "SELECT * FROM highscores";
+$result = mysqli_query($conn, $query);
+
+$highscores = array ();
+
+
+while($row = mysqli_fetch_assoc($result))
+{
+  $game = $row["game"];
+  $score = $row["score"];
+  $name = $row["name"];
+
+  array_push($highscores, array($game, $name, $score));
+  
+}
+
+echo(json_encode($highscores));    
+
+
+   
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,171 +61,46 @@
     </div>
 
     <div id="highscores">
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
-        <div id="highscore">
-            <div class="text">
-                <h1>
-                    Cookie Clicker
-                </h1>
-                <h2>
-                    1,000,576
-                </h2>
-                <p>
-                    Jane Doe
-                </p>
-            </div>
-            <div class="image">
-                <img src="http://localhost:3000/assets/game_images/2048.png">
-            </div>
-        </div>
         
+
     </div>
 
     <?php include "assets/includes/footer.php" ?>
 
+
+
+    <script>
+    console.log("Here");
+    fetch(`assets/php/leaderboardnew.php`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res);
+
+        const highscores = res;
+        const scoresDiv = document.getElementById('highscores');
+
+        for (score in highscores) {
+            const highscoreDiv = `
+            <div id="highscore">
+            <div class="text">
+                <h1>
+                    ${highscores[score][0]}
+                </h1>
+                <h2>
+                    ${highscores[score][2]}
+                </h2>
+                <p>
+                    ${highscores[score][1]}
+                </p>
+            </div>
+            <div class="image">
+                <img src="http://localhost:3000/assets/game_images/2048.png">
+            </div>
+        </div>
+        `;
+
+            scoresDiv.appendChild(highscoreDiv);
+        }
+    });
+    </script>
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/gamesnew.js"></script>
 </body>

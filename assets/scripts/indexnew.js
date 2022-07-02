@@ -1,3 +1,5 @@
+document.getElementById("gamesnav").classList.add("selected");
+
 // featured games slides code
 let shouldAutoSwitch = true
 let slideIndex = 1

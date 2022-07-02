@@ -1,3 +1,7 @@
+document.getElementById("gamesnav").classList.add("selected");
+
+
+
 // Load Games
 const gamesDiv = document.getElementById('games');
 const maxGames = 500;
