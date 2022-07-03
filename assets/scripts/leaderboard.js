@@ -63,12 +63,13 @@ searchBar.addEventListener('keyup', () => {
     console.log(highscoreDivs);
 
     for (highscore in highscoreDivs) {
-        if (highscore.name.toUpperCase().includes(input)) {
+        console.log(highscore);
+        /*if (highscore.name.toUpperCase().includes(input)) {
             console.log(highscore);
 
         } else {
             console.log("NO");
             console.log(highscore);
-        }
+        }*/
     }
 });
