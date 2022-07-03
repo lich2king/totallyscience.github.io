@@ -2,6 +2,8 @@ document.getElementById("leaderboardnav").classList.add("selected");
 
 let games;
 let highscores;
+const scoresDiv = document.getElementById('highscores');
+
 fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
@@ -9,7 +11,6 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
         res = JSON.parse(res);
 
         highscores = res;
-        const scoresDiv = document.getElementById('highscores');
 
         for (score in highscores) {
             const game = highscores[score][0];
@@ -44,7 +45,6 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
 
 //search bar
 
-let highscoresDiv = document.getElementById("highscores");
 
 const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
@@ -56,7 +56,7 @@ searchBar.addEventListener('keyup', () => {
     const input = searchBar.value.toUpperCase();
 
 
-    highscoresDiv.innerHTML = '';
+    scoresDiv.innerHTML = '';
 
     let numGames = 0;
     console.log(highscores);
