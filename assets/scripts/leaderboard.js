@@ -36,8 +36,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                 `;
             scoresDiv.innerHTML += highscoreDiv;
         }
-        const highscoreDivs = document.getElementsByClassName("highscore");
-        console.log(highscoreDivs);
+
     });
 });
 
@@ -59,36 +58,17 @@ searchBar.addEventListener('keyup', () => {
 
     scoresDiv.innerHTML = '';
 
-    let numGames = 0;
 
     const highscoreDivs = document.getElementsByClassName("highscore");
     console.log(highscoreDivs);
-    for (highscore in highscores) {
-        if (highscore.toUpperCase().includes(input)) {
-            const game = highscores[highscore][0];
-            const name = highscores[highscore][1];
-            const gameScore = highscores[highscore][2];
-            const highscoreDiv = `
-                    <div name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
-                        <div class="text">
-                            <h1>
-                                ${game}
-                            </h1>
-                            <h2>
-                                ${gameScore}
-                            </h2>
-                            <p>
-                                ${name}
-                            </p>
-                        </div>
-                        <div class="image">
-                            <img src="${games[game].image}">
-                        </div>
-                    </div>
-                `;
-            scoresDiv.innerHTML += highscoreDiv;
-            numGames += 1
 
+    for (highscore in highscoreDivs) {
+        if (highscore.name.toUpperCase().includes(input)) {
+            console.log(highscore);
+
+        } else {
+            console.log("NO");
+            console.log(highscore);
         }
     }
 });
