@@ -36,7 +36,8 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                 `;
             scoresDiv.innerHTML += highscoreDiv;
         }
-        console.log(highscores);
+        const highscoreDivs = document.getElementsByClassName("highscore");
+        console.log(highscoreDivs);
     });
 });
 
@@ -61,7 +62,7 @@ searchBar.addEventListener('keyup', () => {
     let numGames = 0;
 
     const highscoreDivs = document.getElementsByClassName("highscore");
-    console.log(highscoreDivs)
+    console.log(highscoreDivs);
     for (highscore in highscores) {
         if (highscore.toUpperCase().includes(input)) {
             const game = highscores[highscore][0];
