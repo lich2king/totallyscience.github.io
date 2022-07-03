@@ -35,9 +35,10 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                 `;
             scoresDiv.innerHTML += highscoreDiv;
         }
-
+        console.log(highscores);
     });
 });
+
 
 
 
