@@ -60,11 +60,11 @@ searchBar.addEventListener('keyup', () => {
 
     for (highscore in highscoreDivs) {
         if (highscoreDivs[highscore].name.toUpperCase().includes(input)) {
-            console.log(highscore);
+            console.log(highscoreDivs[highscore].name);
 
         } else {
             console.log("NO");
-            console.log(highscore);
+            console.log(highscoreDivs[highscore].name);
         }
     }
 });
