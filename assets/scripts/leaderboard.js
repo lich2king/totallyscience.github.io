@@ -56,9 +56,6 @@ searchBar.addEventListener('keyup', () => {
     const input = searchBar.value.toUpperCase();
 
 
-    scoresDiv.innerHTML = '';
-
-
     const highscoreDivs = document.getElementsByClassName("highscore");
     console.log(highscoreDivs);
 
