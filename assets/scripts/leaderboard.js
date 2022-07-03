@@ -17,7 +17,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
             const name = highscores[score][1];
             const gameScore = highscores[score][2];
             const highscoreDiv = `
-                    <div name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
+                    <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
                         <div class="text">
                             <h1>
                                 ${game}
@@ -60,6 +60,8 @@ searchBar.addEventListener('keyup', () => {
 
     let numGames = 0;
 
+    const highscoreDivs = document.getElementsByClassName("highscore");
+    console.log(highscoreDivs)
     for (highscore in highscores) {
         if (highscore.toUpperCase().includes(input)) {
             const game = highscores[highscore][0];
