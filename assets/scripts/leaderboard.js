@@ -60,7 +60,7 @@ searchBar.addEventListener('keyup', () => {
     console.log(highscoreDivs);
 
     for (highscore in highscoreDivs) {
-        console.log(highscore);
+        console.log(highscoreDivs[highscore]);
         /*if (highscore.name.toUpperCase().includes(input)) {
             console.log(highscore);
 
