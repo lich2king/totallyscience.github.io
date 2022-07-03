@@ -59,8 +59,8 @@ searchBar.addEventListener('keyup', () => {
     scoresDiv.innerHTML = '';
 
     let numGames = 0;
-    console.log(highscores);
-    for (score in highscores) {
+
+    for (highscore in highscores) {
         if (highscore.toUpperCase().includes(input)) {
             const game = highscores[highscore][0];
             const name = highscores[highscore][1];
