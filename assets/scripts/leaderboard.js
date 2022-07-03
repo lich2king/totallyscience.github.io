@@ -1,13 +1,14 @@
 document.getElementById("leaderboardnav").classList.add("selected");
 
 let games;
+let highscores;
 fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
 
         res = JSON.parse(res);
 
-        const highscores = res;
+        highscores = res;
         const scoresDiv = document.getElementById('highscores');
 
         for (score in highscores) {
@@ -57,12 +58,12 @@ searchBar.addEventListener('keyup', () => {
     highscoresDiv.innerHTML = '';
 
     let numGames = 0;
-    Object.keys(games).forEach((game) => {
-        if (game.toUpperCase().includes(input)) {
-            if (games[game].tags.includes(selectedTopic) || selectedTopic == 'all') {
-                const data = games[game];
-
-                const highscoreDiv = `
+    Object.keys(highscores).forEach((highscore) => {
+        if (highscore.toUpperCase().includes(input)) {
+            const game = highscores[highscore][0];
+            const name = highscores[highscore][1];
+            const gameScore = highscores[highscore][2];
+            const highscoreDiv = `
                     <div name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
                         <div class="text">
                             <h1>
@@ -80,9 +81,9 @@ searchBar.addEventListener('keyup', () => {
                         </div>
                     </div>
                 `;
-                scoresDiv.innerHTML += highscoreDiv;
-                numGames += 1
-            }
+            scoresDiv.innerHTML += highscoreDiv;
+            numGames += 1
+
         }
     });
 })
