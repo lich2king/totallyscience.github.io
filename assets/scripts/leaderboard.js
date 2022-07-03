@@ -60,7 +60,7 @@ searchBar.addEventListener('keyup', () => {
 
     let numGames = 0;
     console.log(highscores);
-    Object.keys(highscores).forEach((highscore) => {
+    for (score in highscores) {
         if (highscore.toUpperCase().includes(input)) {
             const game = highscores[highscore][0];
             const name = highscores[highscore][1];
@@ -87,5 +87,5 @@ searchBar.addEventListener('keyup', () => {
             numGames += 1
 
         }
-    });
-})
+    }
+});
