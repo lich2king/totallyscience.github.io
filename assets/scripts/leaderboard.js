@@ -59,6 +59,7 @@ searchBar.addEventListener('keyup', () => {
     const highscoreDivs = document.getElementsByClassName("highscore");
 
     for (highscore in highscoreDivs) {
+        console.log(highscoreDivs[highscore].name);
         if (highscoreDivs[highscore].name.toUpperCase().includes(input)) {
             console.log(highscoreDivs[highscore].name);
 
