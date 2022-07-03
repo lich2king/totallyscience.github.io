@@ -12,8 +12,10 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
+    <div id="top"></div>
+
     <div id="searchDiv">
-        <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
+        <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search by game">
     </div>
 
     <div style="text-align:center; margin-top:100px">
