@@ -1,0 +1,34 @@
+#gameframe {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    width: 100vw;
+}
+
+#gameframe .game {
+    margin: auto;
+    margin-top: 120px;
+    width: 70vw;
+    height: 70vh;
+    background-color: var(--background-color);
+    border: 2px solid var(--accent-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5cedd5e7c6e7df0001bbb67c/1564551904738-KZM0F360MGS6LSD6ZXTB/Screenshot_Banner_01.jpg?format=1500w");
+}
+
+#gameframe .options {
+    margin: auto;
+    width: 70vw;
+    height: 6vh;
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#gameframe .options input {
+    margin-left: 1.5vw;
+    height: 70%;
+}
