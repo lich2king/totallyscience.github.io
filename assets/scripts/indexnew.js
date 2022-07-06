@@ -102,7 +102,7 @@ function displayGames() {
 
 
         const gameBtn = `
-            <div id="gameDiv" onclick="location.href = 'class?class=${name}'" class="${classlist} all">
+            <div id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
                 <input type="image"
                     src="${data.image}" />
                 <div class="innerGameDiv">${name}</div>
@@ -149,7 +149,7 @@ searchBar.addEventListener('keyup', () => {
                     }
 
                     const gameBtn = `
-                    <div id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist} all">
+                    <div id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
                         <input type="image"
                             src="${data.image}" />
                         <div class="innerGameDiv">${game}</div>
@@ -216,7 +216,7 @@ function suggestGames() {
     document.getElementById('scisuggests').innerHTML = '';
     randomGames.forEach(function(game) {
         const gameBtn = `
-                    <div id="gameDiv" onclick="location.href = 'class?class=${game}'">
+                    <div id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
                         <input type="image"
                             src="${games[game]["image"]}" />
                         <div class="innerGameDiv">${game}</div>

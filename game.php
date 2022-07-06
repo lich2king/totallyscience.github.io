@@ -15,7 +15,8 @@
 
     <div id="gameframe">
         <div class="game">
-            <iframe id="iframe" src="https://ejvd3326248pklq0mtj313irgbc2vsrb-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s035r8h4/1v1.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=544c660bc8b16c1d&libs=core&mid=172&parent=https://sites.google.com/site/unblockedgames66ez/1v1-lol#st=e%3DAIHE3cBK9D0UGibwSQF2F64MR8cb4pzmPVFPpm9x2iU1OmvV3wfrHm9F2stu5dMRRYLHGsmiZQNreywjA%252F5m1pl9Ovr49lxTSbekq%252F58DGx8Fju5Kybmy15YlmhPX4edPMPIxnzqTss%252F%26c%3Denterprise&rpctoken=-1798097197484458310">
+            <iframe id="iframe"
+                src="">
             </iframe>
         </div>
         <div class="options">
@@ -24,14 +25,73 @@
                         src="/assets/images/icons/likeoutline.png"></button>
                 <button onclick="OpenHighscore()" class="game-button hover-text" data-hover="203"><img
                         src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
-                <button class="game-button"><img src="/assets/images/icons/saveicon.png"></button>
+                <button id="save" class="game-button"><img src="/assets/images/icons/saveicon.png"></button>
+                <button class="game-button"><img src="/assets/images/icons/upload.png"></button>
             </div>
             <div class="right">
-                <input type="image" id="image" alt="Login" src="/assets/images/icons/pin.png">
-                <input type="image" id="image" alt="Login" src="/assets/images/icons/fullscreen.png">
+                <button id="pin" class="game-button button-effect-a"><img
+                        src="/assets/images/icons/pinoutline.png"></button>
+                <button id="fullscreen" class="game-button"><img src="/assets/images/icons/fullscreen.png"></button>
             </div>
         </div>
     </div>
+
+    <div id="info">
+        <div>
+            <h1>
+                Description
+            </h1>
+            <p id="description">
+                
+            </p>
+            <div class="break"></div>
+            <h1>
+                Controls
+            </h1>
+            <p id="controls">
+                
+            </p>
+            <div class="break"></div>
+            <h1>
+                Created By
+            </h1>
+            <p id="developer">
+                
+            </p>
+        </div>
+
+    </div>
+
+
+    <div id="moregames">
+        <h1>
+            Reccomended
+        </h1>
+        <div class="gamesDiv">
+            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
+                <input type="image"
+                    src="./assets/game_images/1v1.jpg" />
+                <div class="innerGameDiv">1v1 LOL</div>
+            </div>
+            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
+                <input type="image"
+                    src="./assets/game_images/1v1.jpg" />
+                <div class="innerGameDiv">1v1 LOL</div>
+            </div>
+            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
+                <input type="image"
+                    src="./assets/game_images/1v1.jpg" />
+                <div class="innerGameDiv">1v1 LOL</div>
+            </div>
+            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
+                <input type="image"
+                    src="./assets/game_images/1v1.jpg" />
+                <div class="innerGameDiv">1v1 LOL</div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <?php include "assets/includes/footer.php" ?>

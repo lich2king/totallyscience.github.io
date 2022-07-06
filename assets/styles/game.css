@@ -12,11 +12,13 @@ html {
     margin: auto;
     width: 70vw;
     height: 70vh;
-    background-color: var(--background-color);
+    background-color: rgb(25, 31, 38);
     border: 3px solid var(--accent-color);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    background-image: url("https://images.squarespace-cdn.com/content/v1/5cedd5e7c6e7df0001bbb67c/1564551904738-KZM0F360MGS6LSD6ZXTB/Screenshot_Banner_01.jpg?format=1500w");
+    background-image: url("/assets/images/icons/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
 }
 
@@ -48,8 +50,8 @@ html {
     align-items: center;
 }
 
-#gameframe .options .left input {
-    margin-left: 1.5vw;
+#gameframe .options .left .game-button {
+    margin-left: 1vw;
     height: 70%;
 }
 
@@ -59,9 +61,9 @@ html {
     justify-content: flex-end;
 }
 
-#gameframe .options .right input {
+#gameframe .options .right .game-button {
     float: right;
-    margin-right: 1.5vw;
+    margin-right: 1vw;
     height: 70%;
 }
 
@@ -69,9 +71,12 @@ html {
     position: relative;
     background-color: transparent;
     border: none;
-    margin-left: 1.5vw;
-    height: 70%;
     cursor: pointer;
+    transition: 0.1s;
+}
+
+.game-button:hover {
+    transform: scale(1.05);
 }
 
 .game-button img {
@@ -127,4 +132,112 @@ html {
 .hover-text:hover:before {
     opacity: 1;
     visibility: visible;
+}
+
+#info {
+    margin: auto;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+    width: 70vw;
+}
+
+#info div {
+    border-radius: 30px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+    width: 100%;
+    background-color: var(--accent-color);
+    font-family: 'Rubik';
+}
+
+#info h1,
+#info p {
+    font-size: 1vw;
+    color: var(--light-color);
+    margin-right: 15%;
+}
+
+#info h1 {
+    font-size: 1.5vw;
+    margin-top: 0;
+}
+
+#info p {
+    line-height: 3vh;
+}
+
+#info .break {
+    height: 1vh;
+    width: .1vw;
+}
+
+#moregames {
+    margin: auto;
+    border-radius: 30px;
+    width: 70vw;
+    height: 13vw;
+    background-color: var(--accent-color);
+    margin-bottom: 10vh;
+}
+
+#moregames h1 {
+    color: var(--light-color);
+    padding-left: 1vw;
+    padding-top: 1vh;
+}
+
+#moregames .gamesDiv {
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameDiv {
+    margin-right: 2vw;
+    width: 15vw;
+    height: 15vh;
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#gameDiv input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#gameDiv {
+    position: relative;
+}
+
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9vw;
+    font-family: 'Rubik';
+    font-weight: 700;
+    color: var(--light-color);
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+#gameDiv:hover div {
+    visibility: visible;
+    opacity: 1;
+    text-shadow: var(--dark-color) 1px 0 10px;
 }
