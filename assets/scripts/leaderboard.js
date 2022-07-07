@@ -4,6 +4,10 @@ let games;
 let highscores;
 const scoresDiv = document.getElementById('highscores');
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const gameName = urlParams.get('class');
+
 fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
@@ -36,6 +40,13 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                 `;
             scoresDiv.innerHTML += highscoreDiv;
         }
+        if (gameName) {
+            document.getElementsByName(`${gameName}`).scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest"
+            });
+        }
 
     });
 });
@@ -44,7 +55,6 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
 
 
 //search bar
-
 
 const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
