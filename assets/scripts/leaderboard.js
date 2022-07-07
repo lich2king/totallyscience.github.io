@@ -43,7 +43,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
         console.log(gameName);
         if (gameName) {
             console.log("Yes");
-            document.getElementsByName(`${gameName}`).scrollIntoView({
+            document.getElementsByName(`${gameName}`)[0].scrollIntoView({
                 behavior: "smooth",
                 block: "start",
                 inline: "nearest"
