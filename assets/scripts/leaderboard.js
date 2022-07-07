@@ -40,7 +40,9 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                 `;
             scoresDiv.innerHTML += highscoreDiv;
         }
+        console.log(gameName);
         if (gameName) {
+            console.log("Yes");
             document.getElementsByName(`${gameName}`).scrollIntoView({
                 behavior: "smooth",
                 block: "start",
