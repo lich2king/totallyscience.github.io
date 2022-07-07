@@ -95,6 +95,7 @@ window.addEventListener('load', () => {
         const gameData = games[gameName];
         if (gameData == null) window.location.href = '../classes';
 
+        document.getElementById('description').innerText = gameData.description;
         document.getElementById('controls').innerText = gameData.controls;
         document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
 
