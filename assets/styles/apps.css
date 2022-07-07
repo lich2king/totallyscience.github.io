@@ -6,6 +6,7 @@ html {
     margin: 0px;
     border: none;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -133,4 +134,9 @@ div.card.game {
         max-width: 400px;
         grid-template-columns: auto;
     }
+}
+
+#apps {
+    margin: auto;
+    margin-top: 120px;
 }
