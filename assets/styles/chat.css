@@ -1,0 +1,38 @@
+html {
+    overflow-x: hidden;
+}
+
+#chatoptions {
+    margin-top: 120px;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 40vh;
+}
+
+#chatoptions input[type='text'] {
+    /**/
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 17px;
+    font-size: 16px;
+    background-color: var(--light-color);
+    outline: none;
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+    background-size: 1.25vw;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 1vh 1vw 1vh 2.2vw;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3vh;
+    color: var(--dark-color);
+}
+
+#chatoptions button {
+    width: 13vw;
+    height: 8vh;
+    font-size: 1.5vw;
+    margin-bottom: 2vh;
+}
