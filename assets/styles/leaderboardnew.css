@@ -101,3 +101,12 @@ h2 {
     height: 12vh;
     width: 12vw;
 }
+
+#nohighscore {
+    margin-top: 100px;
+    margin-bottom: -50px;
+    text-align: center;
+    color: var(--light-color);
+    font-family: 'Rubik';
+    font-size: 1.5vw;
+}

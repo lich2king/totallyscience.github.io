@@ -41,14 +41,27 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
             scoresDiv.innerHTML += highscoreDiv;
         }
         console.log(gameName);
-        console.log(highscores);
+
+
         if (gameName) {
-            console.log("Yes");
-            document.getElementsByName(`${gameName}`)[0].scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "nearest"
-            });
+            let highscored = false;
+            for (score in highscores) {
+                const game = highscores[score][0];
+                if (game == gameName) {
+                    highscored = true;
+                }
+            }
+            if (highscored) {
+                document.getElementsByName(`${gameName}`)[0].scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                    inline: "nearest"
+                });
+            } else {
+                document.getElementById("nohighscore").style.display = '';
+                document.getElementById("nohighscore").innerText = `No current highscore set for ${gameName}`;
+            }
+
         }
 
     });
