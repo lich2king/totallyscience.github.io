@@ -30,7 +30,7 @@
 
 
 
-    <script src="assets/scripts/leaderboard.js?v13"></script>
+    <script src="assets/scripts/leaderboard.js?v14"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
