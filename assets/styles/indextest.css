@@ -193,6 +193,10 @@ html {
 
 /*#region categories + seach*/
 
+#searchcatParent {
+    margin-bottom: 5vh;
+}
+
 #searchcat {
     z-index: 1;
     position: sticky;
