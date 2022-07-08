@@ -140,18 +140,17 @@ html {
 
 .imageTest h1 {
     font-size: 100px;
+    position: absolute;
 }
 
 .arrows {
-    position: absolute;
     display: flex;
     flex: 1;
-    color: white;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    gap: 1000px;
+    gap: 100%;
     margin-right: 50px;
+    width: 100%;
 }
 
 .arrows img {
