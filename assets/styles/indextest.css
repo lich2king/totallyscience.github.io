@@ -168,10 +168,10 @@ html {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2%;
+    margin-top: 100px;
 }
 
 #feature {
-    margin-top: 9%;
     display: flex;
     flex: 2;
     align-content: center;
@@ -232,6 +232,7 @@ html {
     justify-content: center;
     gap: 2vh;
     flex-wrap: wrap;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 1150px) {
@@ -259,6 +260,10 @@ html {
 
 
 /*#region categories + seach*/
+
+#searchcatParent {
+    margin-bottom: 5vh;
+}
 
 #searchcat {
     z-index: 1;
@@ -392,6 +397,59 @@ input[type='text'] {
     /* 304 x 162  */
 }
 
+<<<<<<< HEAD
+=======
+#gameDiv {
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#gameDiv input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#gameDiv {
+    position: relative;
+}
+
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    color: var(--light-color);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+#gameDiv:hover div {
+    visibility: visible;
+    opacity: 1;
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+>>>>>>> 0affa6884b2593546dc69ef8374af46a4a3abc90
 
 
 /*#endregion*/
