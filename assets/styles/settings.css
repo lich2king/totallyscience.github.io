@@ -1,0 +1,57 @@
+html {
+    overflow-x: hidden;
+}
+
+#settingoptions {
+    margin-top: 120px;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 40vh;
+}
+
+#settingoptions input[type='text'] {
+    /**/
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 17px;
+    font-size: 1vw;
+    background-color: var(--light-color);
+    outline: none;
+    padding: 1vh 1vw 1vh 1vw;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3vh;
+    color: var(--dark-color);
+}
+
+#settingoptions select {
+    /**/
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 17px;
+    font-size: 1vw;
+    background-color: var(--light-color);
+    outline: none;
+    padding: 1vh 1vw 1vh 1vw;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3vh;
+    color: var(--dark-color);
+}
+
+#settingoptions button {
+    width: 8vw;
+    height: 5vh;
+    font-size: 1.25vw;
+    margin-bottom: 2vh;
+}
+
+#settingoptions p {
+    color: var(--light-color);
+    font-size: 1.25vw;
+    font-family: sans-serif;
+}
