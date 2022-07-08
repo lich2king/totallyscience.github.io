@@ -176,7 +176,9 @@ html {
 
 @media screen and (max-width: 1150px) {
     #scisuggests {
-        display: none;
+        flex: 2;
+        align-content: center;
+        justify-content: center;
     }
     #features {
         margin-top: 2vh;
