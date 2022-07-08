@@ -62,10 +62,15 @@ html {
 }
 
 .container {
-    width: 100vw;
-    height: 20vh;
+    /* width: 100vw;
+    height: 20vh; */
     display: flex;
+    flex: 1;
+    overflow-x: auto;
+    overflow-y:hidden;
+    padding: 15px;
     gap: 3vw;
+    margin-right: 4vw;
     margin-bottom: 5vh;
 }
 
@@ -104,8 +109,15 @@ html {
 }
 
 #gameDiv {
-    width: 15vw;
-    height: 15vh;
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
     border-radius: 30px;
     text-align: center;
     transition: 0.1s;
