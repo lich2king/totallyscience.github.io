@@ -213,9 +213,7 @@ function suggestGames() {
     document.getElementById('scisuggests').innerHTML = '';
     randomGames.forEach(function(game) {
         const gameBtn = `
-                    <div id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
-                        <input type="image"
-                            src="${games[game]["image"]}" />
+                    <div style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;

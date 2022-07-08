@@ -108,10 +108,10 @@ html {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2%;
+    margin-top: 100px;
 }
 
 #feature {
-    margin-top: 9%;
     display: flex;
     flex: 2;
     align-content: center;
@@ -172,6 +172,7 @@ html {
     justify-content: center;
     gap: 2vh;
     flex-wrap: wrap;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 1150px) {
