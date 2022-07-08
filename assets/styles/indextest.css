@@ -220,7 +220,7 @@ input[type='text'] {
     box-sizing: border-box;
     border: transparent;
     border-radius: 17px;
-    font-size: 16px;
+    font-size: 1vw;
     background-color: var(--light-color);
     outline: none;
     background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
@@ -342,7 +342,6 @@ input[type='text'] {
     font-family: 'Rubik';
     font-weight: 700;
     color: var(--light-color);
-    font-family: sans-serif;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.2s linear;

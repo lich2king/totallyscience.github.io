@@ -15,9 +15,9 @@
     <div id="chatoptions">
         <input type="text" id="roomcode" placeholder="Room Code...">
         <br>
-        <button onclick="window.open('gamesnew.php', '_self')" class="regularButton"><span>Join Room</span></button>
+        <button onclick="" class="regularButton"><span>Join Room</span></button>
         <br>
-        <button onclick="window.open('gamesnew.php', '_self')" class="regularButton"><span>Create Room</span></button>
+        <button onclick="" class="regularButton"><span>Create Room</span></button>
     </div>
 
 

@@ -200,7 +200,6 @@ input[type='text'] {
     font-family: 'Rubik';
     font-weight: 700;
     color: var(--light-color);
-    font-family: sans-serif;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.2s linear;
