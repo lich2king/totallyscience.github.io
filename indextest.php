@@ -17,7 +17,11 @@
     <div id="startcontent">
         <div id="feature">
             <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest">
-                <h1>[GAME NAME]</h1>
+                <h1 class="stroke-text smooth-16">RETRO BOWL</h1>
+                <div class="arrows">
+                    <img src="/assets/images/left-arrow.png">
+                    <img src="/assets/images/right-arrow.png">
+                </div>
             </div>
         </div>
 
@@ -65,7 +69,8 @@
     </div>
 
     <div style="text-align:center">
-        <button onclick="window.open('gamesnew.php', '_self')" class="regularButton"><span>ALL GAMES</span> <img style="padding-left:0.5vw" width="16vw"
+        <button onclick="window.open('gamesnew.php', '_self')" class="regularButton"><span>ALL GAMES</span> <img
+                style="padding-left:0.5vw" width="16vw"
                 src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
