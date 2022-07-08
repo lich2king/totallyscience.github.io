@@ -91,11 +91,9 @@ function displayGames() {
 
 
         const gameBtn = `
-            <div id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
-                <input type="image"
-                    src="${data.image}" />
-                <div class="innerGameDiv">${name}</div>
-            </div>
+        <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
+            <div class="innerGameDiv">${name}</div>
+        </div>
         `;
 
         gamesDiv.innerHTML += gameBtn;
@@ -137,10 +135,8 @@ searchBar.addEventListener('keyup', () => {
                     }
 
                     const gameBtn = `
-                    <div id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist} all">
-                        <input type="image"
-                            src="${data.image}" />
-                        <div class="innerGameDiv">${game}</div>
+                    <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
+                        <div class="innerGameDiv">${name}</div>
                     </div>
                     `;
 

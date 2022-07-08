@@ -156,21 +156,39 @@ input[type='text'] {
 
 /*#region games*/
 
+
 #games {
-    z-index: 0;
+    padding: 2%;
+    /* z-index: 0;
     width: 100vw;
-    /* Grid */
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     gap: 3vw;
     justify-content: center;
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 10vh; */
+
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    /* 304 x 162  */
+
 }
 
 #gameDiv {
-    width: 15vw;
-    height: 15vh;
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
     border-radius: 30px;
     text-align: center;
     transition: 0.1s;
