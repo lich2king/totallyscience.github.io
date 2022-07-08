@@ -16,13 +16,35 @@
 
     <div id="startcontent">
         <div id="feature">
-            <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest">
+            <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
                     <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">RETRO BOWL</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw">
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw"  onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+            </div>
+            <div style="background-image: url(./assets/images/impossiblefeaturedimage.png); display:none;" class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">IMPOSSIBLE QUIZ</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw"  onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+            </div>
+            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw"  onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>

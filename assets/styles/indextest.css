@@ -202,8 +202,6 @@ html {
     flex-direction: column;
 }
 
-
-
 .arrows {
     display: flex;
     flex: 1;
@@ -242,13 +240,11 @@ html {
         justify-content: center;
         margin-top: 0;
     }
-
     #gametext {
         font-size: 40px;
         padding-left: 10%;
         padding-right: 10%;
     }
-
     #feature {
         margin-top: 0;
         font-size: 15px;
@@ -405,9 +401,7 @@ input[type='text'] {
     /* 304 x 162  */
 }
 
-<<<<<<< HEAD
-=======
-#gameDiv {
+<<<<<<< HEAD=======#gameDiv {
     min-width: 225px;
     max-width: 225px;
     max-height: 120px;
@@ -457,7 +451,6 @@ input[type='text'] {
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
 }
-
 
 
 /*#endregion*/
