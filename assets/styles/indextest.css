@@ -53,7 +53,6 @@ html {
 }
 
 #gameDiv .innerGameDiv {
-    position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -198,19 +197,13 @@ html {
     flex-direction: column;
 }
 
-.imageTest h1 {
-    font-size: 100px;
-    position: absolute;
-}
+
 
 .arrows {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
-    gap: 100%;
-    margin-right: 50px;
-    width: 100%;
 }
 
 .arrows img {
@@ -449,7 +442,7 @@ input[type='text'] {
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
 }
->>>>>>> 0affa6884b2593546dc69ef8374af46a4a3abc90
+
 
 
 /*#endregion*/

@@ -17,10 +17,14 @@
     <div id="startcontent">
         <div id="feature">
             <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest">
-                <h1 class="stroke-text smooth-16">RETRO BOWL</h1>
                 <div class="arrows">
-                    <img src="/assets/images/left-arrow.png">
-                    <img src="/assets/images/right-arrow.png">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h1 style="display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">RETRO BOWL</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
                 </div>
             </div>
         </div>
