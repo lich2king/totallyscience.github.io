@@ -360,7 +360,7 @@ input[type='text'] {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 0.9vw;
+    font-size: 17px;
     font-family: 'Rubik';
     font-weight: 700;
     color: var(--light-color);
