@@ -34,8 +34,9 @@ const autoSwitch = () => {
     }
 }
 
-switchSlide(slideIndex)
-autoSwitch()
+// DISABLED BECAUSE IT NEEDS TO BE RE-PROGRAMMED
+// switchSlide(slideIndex)
+// autoSwitch()
 
 // Load Games
 const gamesDiv = document.getElementById('games');
@@ -102,9 +103,7 @@ function displayGames() {
 
 
         const gameBtn = `
-            <div id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
-                <input type="image"
-                    src="${data.image}" />
+            <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
                 <div class="innerGameDiv">${name}</div>
             </div>
         `;
@@ -149,9 +148,7 @@ searchBar.addEventListener('keyup', () => {
                     }
 
                     const gameBtn = `
-                    <div id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
-                        <input type="image"
-                            src="${data.image}" />
+                    <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;

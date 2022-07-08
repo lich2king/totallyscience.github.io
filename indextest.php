@@ -3,8 +3,10 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-
     <link rel='stylesheet' href='assets/styles/indextest.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
@@ -14,38 +16,20 @@
 
     <div id="startcontent">
         <div id="feature">
-            <div id="arrows">
-                <img src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                <img src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
-            </div>
-            <div class="featureDiv featuredSlide fade">
-                <img src="https://www.pockettactics.com/wp-content/uploads/2020/03/Retro-bowl-hero.jpg">
-                <div id="text">
-                    <p class="stroke-text smooth-16">RETRO BOWL</p>
-                </div>
-            </div>
-            <div class="featureDiv featuredSlide fade" style="display:none">
-                <img src="https://images.crazygames.com/games/basketball-stars-2019/cover-1583231506155.png?auto=format,compress&q=75&cs=strip&ch=DPR&w=1200&h=630&fit=crop">
-                <div id="text">
-                    <p class="stroke-text smooth-16">BASKETBALL STARS</p>
-                </div>
-            </div>
-            <div class="featureDiv featuredSlide fade" style="display:none">
-                <img src="https://cdn.mos.cms.futurecdn.net/BZQf6Crt2rUpB7fSedthN9.jpg">
-                <div id="text">
-                    <p class="stroke-text smooth-16">FIVE NIGHTS AT FREDDY'S</p>
-                </div>
+            <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest">
+                <h1>[GAME NAME]</h1>
             </div>
         </div>
 
+
         <div id="scisuggests">
-            
+
         </div>
     </div>
 
     <div id="info">
-        <p><span style="font-size: 2.25vw;">&#129323;</span> To quickly return to Google Classroom, press <img
-                style="width:3vw;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
+        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
+                style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
         <p>Click <span style="text-decoration: underline"><b>here</b></span> to view alternate links</p>
     </div>
 
