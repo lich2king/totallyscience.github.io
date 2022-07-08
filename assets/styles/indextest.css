@@ -15,6 +15,9 @@ html {
     --stroke-width: 4px;
     letter-spacing: var(--stroke-width);
     color: var(--light-color);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
     text-shadow: var(--stroke-width) 0 0 var(--stroke-color), calc(var(--stroke-width) * -1) 0 0 var(--stroke-color), 0 var(--stroke-width) 0 var(--stroke-color), 0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
 }
 
@@ -184,6 +187,8 @@ html {
     display: flex;
     padding-left: 5%;
     flex: 1;
+    /* background-color: rgb(76, 76, 76);
+    background-blend-mode:overlay; */
     width: 700px;
     height: 400px;
     background-position: center;
@@ -202,6 +207,8 @@ html {
 .arrows {
     display: flex;
     flex: 1;
+    margin-right: 5%;
+    font-size: 40px;
     justify-content: center;
     align-items: center;
 }
@@ -235,9 +242,17 @@ html {
         justify-content: center;
         margin-top: 0;
     }
-    #features {
+
+    #gametext {
+        font-size: 40px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #feature {
         margin-top: 0;
         font-size: 15px;
+        flex: 1;
     }
     .imageTest {
         max-width: 80%;
