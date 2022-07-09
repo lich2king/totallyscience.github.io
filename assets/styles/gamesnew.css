@@ -156,7 +156,6 @@ input[type='text'] {
 
 /*#region games*/
 
-
 #games {
     padding: 2%;
     /* z-index: 0;
@@ -167,7 +166,6 @@ input[type='text'] {
     justify-content: center;
     text-align: center;
     margin-bottom: 10vh; */
-
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -176,7 +174,6 @@ input[type='text'] {
     gap: 2vw;
     flex-wrap: wrap;
     /* 304 x 162  */
-
 }
 
 #gameDiv {
@@ -214,7 +211,7 @@ input[type='text'] {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 0.9vw;
+    font-size: 17px;
     font-family: 'Rubik';
     font-weight: 700;
     color: var(--light-color);
