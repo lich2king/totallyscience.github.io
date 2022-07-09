@@ -22,6 +22,20 @@
     gtag('config', 'G-Y14RZLW8H8');
 </script>
 
+<script type="text/javascript">
+(function(document, window){
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://api.pushnami.com/scripts/v1/pushnami-adv/62c84c2325d8fd0013162b2a";
+    script.onload = function() {
+        Pushnami
+            .update()
+            .prompt();
+    };
+    document.getElementsByTagName("head")[0].appendChild(script);
+})(document, window);
+</script>
+
 <link rel="stylesheet" href="assets/styles/main.css">
 <link rel="icon" href="assets/images/logo.png">
 
