@@ -60,7 +60,7 @@
     <div id="info">
         <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
                 style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
-        <p>Click <span style="text-decoration: underline"><b>here</b></span> to view alternate links</p>
+        <p>Click <span style="text-decoration: underline; cursor:pointer;"><b>here</b></span> to view alternate links</p>
     </div>
 
     <div id="searchcatParent">
