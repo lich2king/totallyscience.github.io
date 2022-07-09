@@ -185,7 +185,7 @@ html {
 }
 
 .imageTest {
-    border: 4px solid var(--accent-color);
+    border: 3px solid var(--accent-color);
     display: flex;
     padding-left: 5%;
     flex: 1;
