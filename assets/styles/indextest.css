@@ -153,13 +153,15 @@ html {
 }
 
 #info p {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex: 1;
     color: var(--light-color);
     font-size: 35px;
     font-family: 'Rubik', sans-serif;
+}
+
+#info p img {
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 5px;
 }
 
 #startcontent {
@@ -194,15 +196,13 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 20px;
+    border-radius: 40px;
     color: white;
     font-size: 25px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-
 
 .arrows {
     display: flex;
@@ -242,13 +242,11 @@ html {
         justify-content: center;
         margin-top: 0;
     }
-
     #gametext {
         font-size: 40px;
         padding-left: 10%;
         padding-right: 10%;
     }
-
     #feature {
         margin-top: 0;
         font-size: 15px;
@@ -405,9 +403,7 @@ input[type='text'] {
     /* 304 x 162  */
 }
 
-<<<<<<< HEAD
-=======
-#gameDiv {
+<<<<<<< HEAD=======#gameDiv {
     min-width: 225px;
     max-width: 225px;
     max-height: 120px;
@@ -457,7 +453,6 @@ input[type='text'] {
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
 }
-
 
 
 /*#endregion*/

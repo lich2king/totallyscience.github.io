@@ -43,7 +43,7 @@ html {
 }
 
 #highscores {
-    margin-top: 20vh;
+    margin-top: 12vh;
 }
 
 #highscores,
@@ -66,8 +66,8 @@ html {
     height: 20vh; */
     display: flex;
     flex: 1;
-    overflow-x: auto;
-    overflow-y:hidden;
+    /*overflow-x: auto;
+    overflow-y: hidden;*/
     padding: 15px;
     gap: 3vw;
     margin-right: 4vw;
@@ -123,6 +123,37 @@ html {
     transition: 0.1s;
 }
 
+#arrow {
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+}
+
+#arrow input {
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 75px;
+    min-height: 75px;
+    border-radius: 30px;
+    transition: 0.1s;
+}
+
+#arrow input:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 #gameDiv input {
     width: 100%;
     height: 100%;
@@ -143,7 +174,7 @@ html {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 0.9vw;
+    font-size: 17px;
     font-family: 'Rubik';
     font-weight: 700;
     color: var(--light-color);

@@ -3,7 +3,7 @@ document.getElementById("gamesnav").classList.add("selected");
 // featured games slides code
 let shouldAutoSwitch = true
 let slideIndex = 1
-const slides = document.getElementsByClassName('featuredSlide')
+const slides = document.getElementsByClassName('imageTest')
 const switchSlide = (n) => {
     if (n > slides.length) {
         slideIndex = 1
@@ -35,8 +35,8 @@ const autoSwitch = () => {
 }
 
 // DISABLED BECAUSE IT NEEDS TO BE RE-PROGRAMMED
-// switchSlide(slideIndex)
-// autoSwitch()
+switchSlide(slideIndex)
+autoSwitch()
 
 // Load Games
 const gamesDiv = document.getElementById('games');
