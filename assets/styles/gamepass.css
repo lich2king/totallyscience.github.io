@@ -38,7 +38,7 @@ html {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10%;
 }
 
 .p-view {
@@ -58,6 +58,18 @@ html {
     padding: 15px;
 }
 
+.whygoprem-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.whygoprem-container h1 {
+    color: white;
+}
+
 .btn {
     display: flex;
     cursor: pointer;
@@ -72,6 +84,24 @@ html {
     outline-width: 0;
     font-size: 20px;
     border-radius: 15px;
+}
+
+.why-rows {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.img-label {
+    padding: 20px;
+    border-radius: 25%;
+    background: #340060;
+    max-width: 50%;
+    max-height: 50%;
 }
 
 .c-items {

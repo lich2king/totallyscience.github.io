@@ -42,6 +42,24 @@
 
     </div>
 
+    <div class="whygoprem-container">
+        <h1>Why Go Premium?</h1>
+        <div class="why-rows">
+            <div class="reason">
+                <img class="img-label" src="/assets/images/icons/lock_2.png" alt="">
+            </div>
+
+            <div class="reason">
+
+            </div>
+
+            <div class="reason">
+
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
