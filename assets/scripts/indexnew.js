@@ -103,10 +103,11 @@ function displayGames() {
 
 
         const gameBtn = `
-            <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${name}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
                 <div class="innerGameDiv">${name}</div>
             </div>
         `;
+
 
         gamesDiv.innerHTML += gameBtn;
     }
@@ -148,7 +149,7 @@ searchBar.addEventListener('keyup', () => {
                     }
 
                     const gameBtn = `
-                    <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
@@ -167,6 +168,7 @@ searchBar.addEventListener('keyup', () => {
 // Category buttons
 
 const buttons = document.querySelectorAll('.categoryButton');
+
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -213,7 +215,7 @@ function suggestGames() {
     document.getElementById('scisuggests').innerHTML = '';
     randomGames.forEach(function(game) {
         const gameBtn = `
-                    <div style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
@@ -227,3 +229,19 @@ var randomProperty = function(object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
+
+function changeToGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null)
+        ele.style = `background-image: url(${data.gif})`;
+}
+
+function noGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null)
+        ele.style = `background-image: url(${data.image})`;
+}
