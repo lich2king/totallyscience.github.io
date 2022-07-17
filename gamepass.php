@@ -19,14 +19,25 @@
     <div class="product-container">
 
         <div class="p-view">
-            <h1>FREE</h1>
-            <h3>$0 / Month</h3>
-            <p>Upgrade whenever you want Free access to all our base features</p>
-            <button class="btn">Join</button>
+            <div class="c-item">
+                <h1>FREE</h1>
+                <h3>$0 / Month</h3>
+                <p>Upgrade whenever you want Free access to all our base features</p>
+                <div style="display: flex; flex: 1; align-content: center; justify-content:center; margin-top:0;">
+                    <button class="btn">Join</button>
+                </div>
+            </div>
         </div>
 
         <div class="p-view">
-
+        <div class="c-item">
+                <h1>PREMIUM</h1>
+                <h3>$4.99 / Month <p style="font-weight:lighter; padding:0; margin-top:0;">(or pay 49.99 / Year)</p> </h3>
+                <p>Upgrade whenever you want Free access to all our base features</p>
+                <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
         </div>
 
     </div>

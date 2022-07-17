@@ -32,6 +32,7 @@ html {
 
 .product-container {
     display: flex;
+    margin-top:0;
     flex: 1;
     padding: 8%;
     flex-wrap: wrap;
@@ -42,19 +43,43 @@ html {
 
 .p-view {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 500px;
+    margin-top:0;
     max-height: 400px;
-    min-width: 500px;
-    min-height: 400px;
-    padding: 15px;
+    min-width: fit-content;
+    min-height: fit-content;
     text-align: center;
+    align-content: center;
+    justify-content: center;
     font-size: 25px;
-    min-height: 403px;
     background-color: #B115BE;
-    border-radius: 40px;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.btn {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #340060;
+    color: white;
+    text-align: center;
+    min-width: 75%;
+    align-content: center;
+    justify-content: center;
+    border-width: 0;
+    outline-width: 0;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.c-items {
+    display: flex;
+    flex: 1;
     align-items: center;
     justify-items: center;
+    gap: 2px;
 }
 
 .p-view h1 {
