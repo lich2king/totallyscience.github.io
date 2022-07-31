@@ -1,0 +1,127 @@
+html {
+    overflow-x: hidden;
+
+}
+
+#mainBody {
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 680px) {
+    #mainBody {
+        margin-top: 20%;
+    }
+}
+
+.gamepass-header {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    background-color: #340060;
+    font-size: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gamepass-header h1 {
+    color: white;
+    font-family: 'Rubik';
+    font-style: normal;
+}
+
+.product-container {
+    display: flex;
+    margin-top:0;
+    flex: 1;
+    padding: 8%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.p-view {
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+    margin-top:0;
+    max-height: 400px;
+    min-width: fit-content;
+    min-height: fit-content;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 25px;
+    background-color: #B115BE;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.whygoprem-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.whygoprem-container h1 {
+    color: white;
+}
+
+.btn {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #340060;
+    color: white;
+    text-align: center;
+    min-width: 75%;
+    align-content: center;
+    justify-content: center;
+    border-width: 0;
+    outline-width: 0;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.why-rows {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.img-label {
+    padding: 20px;
+    border-radius: 25%;
+    background: #340060;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.c-items {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-items: center;
+    gap: 2px;
+}
+
+.p-view h1 {
+    color: white;
+}
+
+.p-view h3 {
+    color: white;
+}
+
+.p-view p {
+    color: white;
+    font-size: 15px;
+}
+

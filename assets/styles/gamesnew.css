@@ -100,7 +100,7 @@ input[type='text'] {
     outline: none;
     background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
     background-size: 1.25vw;
-    background-position: 10px 10px;
+    background-position: 10px calc(50%);
     background-repeat: no-repeat;
     padding: 1vh 1vw 1vh 2.2vw;
     transition: width 0.4s ease-in-out;

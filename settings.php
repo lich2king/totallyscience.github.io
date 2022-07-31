@@ -27,6 +27,7 @@
             <option value="g">Google</option>
             <option value="canvas">Canvas</option>
             <option value="calc">Calculator</option>
+            <option value="wiki">Wikipedia</option>
         </select>
         <br>
         <button onclick="" class="regularButton"><span>Save</span></button>
