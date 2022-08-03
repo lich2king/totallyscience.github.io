@@ -40,12 +40,12 @@
         <h1 class="label">Your Highscores</h1>
         <div class="container">
             <div class="highscore">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/24-sport-and-awards/trophy.png">
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
                 <h1>Cookie Clicker</h1>
                 <p>1,000,576</p>
             </div>
             <div class="highscore">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/24-sport-and-awards/trophy.png">
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
                 <h1>Cookie Clicker</h1>
                 <p>1,000,576</p>
             </div>
@@ -54,30 +54,38 @@
 
     <div id="recents">
         <h1 class="label">Recent Games</h1>
-        <div class="container">
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
+        <div class="biccontainer">
+            <div class="container">
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
             </div>
             <div id="arrow" onclick="window.open('gamesnew.php?category=recent', '_self')">
                 <input type="image" src="/assets/images/right-arrow.png" />
@@ -88,37 +96,46 @@
 
     <div id="recents">
         <h1 class="label">Liked Games</h1>
-        <div class="container">
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
+        <div class="biccontainer">
+            <div class="container">
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
+                <div id="gameDiv" onclick="">
+                    <input type="image"
+                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                    <div class="innerGameDiv">FNAF</div>
+                </div>
             </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="gameDiv" onclick="">
-                <input type="image" src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                <div class="innerGameDiv">FNAF</div>
-            </div>
-            <div id="arrow" onclick="window.open('gamesnew.php?category=liked', '_self')">
+            <div id="arrow" onclick="window.open('gamesnew.php?category=recent', '_self')">
                 <input type="image" src="/assets/images/right-arrow.png" />
             </div>
         </div>
     </div>
 
+    <div style="padding-bottom: 10vh;"></div> <!--Spacer-->
 
 
     <?php include "assets/includes/footer.php" ?>

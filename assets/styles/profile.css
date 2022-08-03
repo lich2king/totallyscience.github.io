@@ -61,15 +61,25 @@ html {
     color: var(--light-color);
 }
 
-.container {
-    /* width: 100vw;
-    height: 20vh; */
+.biccontainer {
+    height: 17vh;
+    width: 100vw;
+    overflow-y: hidden;
     display: flex;
     flex: 1;
-    /*overflow-x: auto;
-    overflow-y: hidden;*/
+    gap: 0;
+}
+
+.container {
+    width: 80vw;
+    height: 70%;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
     padding: 15px;
-    gap: 3vw;
+    gap: 2vw;
     margin-right: 4vw;
     margin-bottom: 5vh;
 }
@@ -124,6 +134,7 @@ html {
 }
 
 #arrow {
+    align-self: center;
     min-width: 225px;
     max-width: 225px;
     max-height: 120px;
