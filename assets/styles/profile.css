@@ -62,7 +62,7 @@ html {
 }
 
 .biccontainer {
-    height: 17vh;
+    height: 150px;
     width: 100vw;
     overflow-y: hidden;
     display: flex;
