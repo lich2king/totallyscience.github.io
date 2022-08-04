@@ -15,8 +15,7 @@
 
     <div id="gameframe">
         <div class="game">
-            <iframe id="iframe"
-                src="">
+            <iframe id="iframe" src="">
             </iframe>
         </div>
         <div class="options">
@@ -42,21 +41,21 @@
                 Description
             </h1>
             <p id="description">
-                
+
             </p>
             <div class="break"></div>
             <h1>
                 Controls
             </h1>
             <p id="controls">
-                
+
             </p>
             <div class="break"></div>
             <h1>
                 Created By
             </h1>
             <p id="developer">
-                
+
             </p>
         </div>
 
@@ -65,27 +64,24 @@
 
     <div id="moregames">
         <h1>
-            Reccomended
+            Recommended
         </h1>
         <div class="gamesDiv">
             <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image"
-                    src="./assets/game_images/1v1.jpg" />
+                <input type="image" src="./assets/game_images/1v1.jpg" />
+                <div class="innerGameDiv">1v1 LOL</div>
+                
+            </div>
+            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
+                <input type="image" src="./assets/game_images/1v1.jpg" />
                 <div class="innerGameDiv">1v1 LOL</div>
             </div>
             <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image"
-                    src="./assets/game_images/1v1.jpg" />
+                <input type="image" src="./assets/game_images/1v1.jpg" />
                 <div class="innerGameDiv">1v1 LOL</div>
             </div>
             <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image"
-                    src="./assets/game_images/1v1.jpg" />
-                <div class="innerGameDiv">1v1 LOL</div>
-            </div>
-            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image"
-                    src="./assets/game_images/1v1.jpg" />
+                <input type="image" src="./assets/game_images/1v1.jpg" />
                 <div class="innerGameDiv">1v1 LOL</div>
             </div>
         </div>
