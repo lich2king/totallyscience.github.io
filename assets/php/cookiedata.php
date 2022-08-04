@@ -6,6 +6,4 @@
     } else {
         echo($_COOKIE[$cookieName]);
     }
-
-    
 ?>

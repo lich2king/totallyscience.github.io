@@ -94,7 +94,7 @@
                 loggedIn = res['isLoggedIn'];
             }
             if (loggedIn == 'true') {
-                location.href = 'profile.php';
+                location.href = 'profilenew.php';
             }
         });
 
@@ -184,7 +184,7 @@
 
                 await fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                     if (res == 'Success') {
-                        location.href = 'profile';
+                        location.href = 'profilenew.php';
                     }
                 });
             }

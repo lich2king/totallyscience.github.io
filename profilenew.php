@@ -19,12 +19,11 @@
 
     <div id="accountoptions">
         <div class="accountoption">
-            <p>Username: <span class="span">Username4323</span></p>
+            <p>Username: <span class="span" id="usernameSpan">username</span></p>
             <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
-            <p>Email: <span class="span">help@totallyscience.co</span></p>
-            <input type="image" src="assets/images/icons/edit.png">
+            <p>Email: <span class="span" id="emailSpan">help@totallyscience.co</span></p>
         </div>
         <div class="accountoption">
             <p>Password: <span class="span">*********</span></p>
@@ -88,7 +87,7 @@
                 </div>
             </div>
             <div id="arrow" onclick="window.open('gamesnew.php?category=recent', '_self')">
-                <input type="image" src="/assets/images/right-arrow.png" />
+                <input type="image" src="assets/images/right-arrow.png" />
             </div>
         </div>
     </div>
@@ -130,7 +129,7 @@
                 </div>
             </div>
             <div id="arrow" onclick="window.open('gamesnew.php?category=recent', '_self')">
-                <input type="image" src="/assets/images/right-arrow.png" />
+                <input type="image" src="assets/images/right-arrow.png" />
             </div>
         </div>
     </div>
@@ -153,6 +152,7 @@
                     location.href = 'signup.php';
                 }
                 document.getElementById('usernameSpan').innerText = name;
+                document.getElementById('emailSpan').innerText = res['email'];
             } else {
                 location.href = 'signup.php';
             }

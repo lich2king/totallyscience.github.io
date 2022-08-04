@@ -59,9 +59,6 @@
     </svg>
     
     <script>
-        var getUrl = window.location;
-        var baseUrl = getUrl.host;
-    
         fetch(`assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
     
@@ -72,7 +69,7 @@
             }
     
             if (loggedIn == "true") {
-                location.href = './profile';
+                location.href = 'profilenew.php';
             }
         });
     
@@ -81,20 +78,16 @@
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
             const errorText = document.getElementById('errorText');
-
-            if (baseUrl.includes("github")) {
-                errorText.innerHTML = `*Login does not work on github url. <a href='https://tsmain.co'>Try a different link</a>`;
-            } else {
-                fetch(`https://${baseUrl}/assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
-                    if (res == 'Success') {
-                        errorText.style = 'text-align: center; color: green;';
-                        errorText.innerText = ('*' + res);
-                        location.href = 'profile';
-                    } else {
-                        errorText.innerText = ('*'+ res);
-                    }
-                });
-            }
+          
+            fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+                if (res == 'Success') {
+                    errorText.style = 'text-align: center; color: green;';
+                    errorText.innerText = ('*' + res);
+                    location.href = 'profilenew.php';
+                } else {
+                    errorText.innerText = ('*'+ res);
+                }
+            });
         }
     </script>
 </body>

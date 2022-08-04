@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
+if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'"))
 {
     $row = $userresult -> fetch_row();
     $usersPass = $row[2];
@@ -24,7 +24,8 @@ if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$u
     {
         $data = array(
             'isLoggedIn' => 'true',
-            'username' => $user
+            'username' => $user,
+            'email' => $row[1]
         );
         $cookie_name = "logintoken";
         $cookie_value = json_encode($data);

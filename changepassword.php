@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 if ($step == 1) {
     $user = htmlspecialchars($_GET["username"]);
 
-    if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
+    if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
     
@@ -28,7 +28,7 @@ if ($step == 1) {
         $message = "Your confirmation code is " . $code;
         $headers = "From:" . $from;
 
-        $conn->query("UPDATE AccountsTable SET code = '$code' WHERE Username = '$user'");
+        $conn->query("UPDATE accounts SET code = '$code' WHERE Username = '$user'");
     
         if (mail($to, $subject, $message, $headers)) {
             // email send client should show confirmation box
@@ -41,7 +41,7 @@ if ($step == 1) {
 else if ($step == 2) {
     $user = htmlspecialchars($_GET["username"]);
 
-    if ($userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'"))
+    if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
     
@@ -58,7 +58,7 @@ else if ($step == 3) {
     $user = htmlspecialchars($_GET["username"]);
     $pass = password_hash(htmlspecialchars($_GET["password"]), PASSWORD_DEFAULT);
 
-    if ($conn->query("UPDATE AccountsTable SET Password = '$pass' WHERE Username = '$user'"))
+    if ($conn->query("UPDATE accounts SET Password = '$pass' WHERE Username = '$user'"))
     {
         echo 'success';
     }
@@ -136,7 +136,7 @@ else if ($step == 3) {
             const loggedIn = res['isLoggedIn'];
         }
         if (loggedIn == 'true') {
-            window.open('profile', '_self');
+            window.open('profilenew.php', '_self');
         }
     });
 
@@ -198,7 +198,7 @@ else if ($step == 3) {
 
         fetch(`changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
-                location.href = '/profile';
+                location.href = 'profilenew.php';
             } else {
                 errorText.innerText = 'error changing password';
                 location.reload();
