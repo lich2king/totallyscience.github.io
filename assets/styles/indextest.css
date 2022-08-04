@@ -223,6 +223,7 @@ html {
     font-weight: 900;
     transition: opacity 0.3s ease;
     transition: transform 0.1s ease;
+    margin-right: 50px;
 }
 
 .featureButton:hover {
