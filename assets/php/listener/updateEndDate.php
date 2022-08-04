@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "u483325885_client";
-$password = "Totally_password4321";
-$database = "u483325885_private";
+$username = "u138268534_ts_user";
+$password = "Totally_accounts4321";
+$database = "u138268534_ts_users";
 
 
 $email = htmlspecialchars($_GET["email"]);

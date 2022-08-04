@@ -22,16 +22,16 @@
         <div class="options">
             <div class="left">
                 <button id="like" class="game-button button-effect-a hover-text" data-hover="0"><img
-                        src="/assets/images/icons/likeoutline.png"></button>
+                        src="assets/images/icons/likeoutline.png"></button>
                 <button onclick="OpenHighscore()" class="game-button hover-text" data-hover="203"><img
                         src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
-                <button id="save" class="game-button"><img src="/assets/images/icons/saveicon.png"></button>
-                <button class="game-button"><img src="/assets/images/icons/upload.png"></button>
+                <button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
+                <button class="game-button"><img src="assets/images/icons/upload.png"></button>
             </div>
             <div class="right">
                 <button id="pin" class="game-button button-effect-a"><img
-                        src="/assets/images/icons/pinoutline.png"></button>
-                <button id="fullscreen" class="game-button"><img src="/assets/images/icons/fullscreen.png"></button>
+                        src="assets/images/icons/pinoutline.png"></button>
+                <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.png"></button>
             </div>
         </div>
     </div>

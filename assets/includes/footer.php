@@ -1,13 +1,13 @@
 <div id="gamePassAd">
         <div>
-            <img src="/assets/images/icons/lock.png" />
+            <img src="assets/images/icons/lock.png" />
             <p>
                 More Games
             </p>
         </div>
         <div>
             <img
-                src="/assets/images/icons/save.png" />
+                src="assets/images/icons/save.png" />
             <p>
                 Save Games
             </p>
@@ -18,14 +18,14 @@
         </div>
         <div>
             <img
-                src="/assets/images/icons/block-ads.png" />
+                src="assets/images/icons/block-ads.png" />
             <p>
                 No Ads
             </p>
         </div>
         <div>
             <img
-                src="/assets/images/icons/eye.png" />
+                src="assets/images/icons/eye.png" />
             <p>
                 More Links
             </p>
