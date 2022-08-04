@@ -26,7 +26,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=Retro%20Bowl')" class="featureButton">Play Now</button>
+                <button onclick="window.open('game.php?class=Retro%20Bowl', '_self')" class="featureButton">Play Now</button>
             </div>
             <div style="background-image: url(./assets/images/impossiblefeaturedimage.png); display:none;" class="imageTest fade">
                 <div class="arrows">
@@ -38,7 +38,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=The%20Impossible%20Quiz')" class="featureButton">Play Now</button>
+                <button onclick="window.open('game.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton">Play Now</button>
             </div>
             <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
                 <div class="arrows">
@@ -50,7 +50,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=Basketball%20Stars')" class="featureButton">Play Now</button>
+                <button onclick="window.open('game.php?class=Basketball%20Stars', '_self')" class="featureButton">Play Now</button>
             </div>
         </div>
 
