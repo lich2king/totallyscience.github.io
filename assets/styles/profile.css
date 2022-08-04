@@ -200,3 +200,13 @@ html {
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
 }
+
+.logout {
+    color: red;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.logout:hover {
+    opacity: 1;
+}

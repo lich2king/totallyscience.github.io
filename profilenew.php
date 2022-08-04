@@ -24,6 +24,7 @@
         </div>
         <div class="accountoption">
             <p>Email: <span class="span" id="emailSpan">help@totallyscience.co</span></p>
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Password: <span class="span">*********</span></p>
@@ -32,6 +33,9 @@
         <div class="accountoption">
             <p>Game Pass: <span class="span">FREE</span></p>
             <input type="image" src="assets/images/icons/edit.png">
+        </div>
+        <div class="accountoption">
+            <a class="logout" href="">Logout</a>
         </div>
     </div>
 
@@ -154,7 +158,7 @@
                 document.getElementById('usernameSpan').innerText = name;
                 document.getElementById('emailSpan').innerText = res['email'];
             } else {
-                location.href = 'signup.php';
+                //location.href = 'signup.php';
             }
         });
     
