@@ -41,7 +41,7 @@
 
     <div id="highscores">
         <h1 class="label">Your Highscores</h1>
-        <div class="container">
+        <div class="highcontainer">
             <div class="highscore">
                 <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
                 <h1>Cookie Clicker</h1>
