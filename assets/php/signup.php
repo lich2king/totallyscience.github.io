@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 
 if($uservalid != '1')
 {
-    $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Username = '$user'");
+    $userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'");
     //die($userresult);
     if($userresult->num_rows == 0) {
         // row not found, do stuff...
@@ -34,7 +34,7 @@ if($uservalid != '1')
     }
 } else if($emailvalid != '1')
 {
-    $userresult = $conn->query("SELECT * FROM AccountsTable WHERE Email = '$email'");
+    $userresult = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
     //die($userresult);
     if($userresult->num_rows == 0) {
         // row not found, do stuff...
@@ -46,7 +46,7 @@ if($uservalid != '1')
 }
 else
 {
-    $sql = "INSERT INTO AccountsTable (Username, Email, Password, GradYear)
+    $sql = "INSERT INTO accounts (Username, Email, Password, GradYear)
     VALUES ('$user', '$email', '$pass', '$grad')";
     
     if ($conn->query($sql) === TRUE) {
