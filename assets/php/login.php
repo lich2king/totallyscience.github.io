@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "u483325885_profile";
+$username = "u138268534_ts_user";
 $password = "Totally_accounts4321";
-$database = "u483325885_accounts";
+$database = "u138268534_ts_users";
 
 $user = htmlspecialchars($_GET["username"]);
 $pass = htmlspecialchars($_GET["password"]);

@@ -20,19 +20,19 @@
     <div id="accountoptions">
         <div class="accountoption">
             <p>Username: <span class="span">Username4323</span></p>
-            <input type="image" src="/assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Email: <span class="span">help@totallyscience.co</span></p>
-            <input type="image" src="/assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Password: <span class="span">*********</span></p>
-            <input type="image" src="/assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Game Pass: <span class="span">FREE</span></p>
-            <input type="image" src="/assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
     </div>
 
@@ -142,6 +142,28 @@
 
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/profile.js"></script>
+    <script>
+        fetch(`assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+            res = JSON.parse(res)
+            if (res != null) {
+                const loggedIn = res['isLoggedIn'];
+                const name = res['username'];
+    
+                if (loggedIn != 'true') {
+                    location.href = 'signup.php';
+                }
+                document.getElementById('usernameSpan').innerText = name;
+            } else {
+                location.href = 'signup.php';
+            }
+        });
+    
+        function Logout() {
+            fetch(`assets/php/logout.php`).then(() => {
+                location.href = 'login.php';
+            });
+        }
+    </script>
 </body>
 
 </html>

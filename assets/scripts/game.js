@@ -43,12 +43,12 @@ const likeButtonImg = likeButton.firstChild;
 let likeCount = 0;
 
 likeButton.addEventListener('click', function() {
-    if (likeButtonImg.getAttribute('src') == '/assets/images/icons/likeoutline.png') {
-        likeButtonImg.setAttribute('src', '/assets/images/icons/like.png');
+    if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
+        likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
         likeCount += 1;
         UpdateLikeCount();
     } else {
-        likeButtonImg.setAttribute('src', '/assets/images/icons/likeoutline.png');
+        likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
         likeCount -= 1;
         UpdateLikeCount();
     }
@@ -75,10 +75,10 @@ const pinButtonImg = pinButton.firstChild;
 
 
 pinButton.addEventListener('click', function() {
-    if (pinButtonImg.getAttribute('src') == '/assets/images/icons/pinoutline.png') {
-        pinButtonImg.setAttribute('src', '/assets/images/icons/pin.png');
+    if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
+        pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
     } else {
-        pinButtonImg.setAttribute('src', '/assets/images/icons/pinoutline.png');
+        pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
     }
 });
 
