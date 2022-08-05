@@ -77,9 +77,13 @@
             <div class="answer" style="display: none" id="included">
                 <div>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li>You have access to games locked for free pass users</li>
+                        <br>
+                        <li>A list of private links only accessible to premium users is available to you</li>
+                        <br>
+                        <li>You do not have to complete any captchas before playing games</li>
+                        <br>
+                        <li>You have the ability to save progress in games while playing them from different links</li>
                     </ul>
                 </div>
             </div>
@@ -90,9 +94,7 @@
             <div class="answer" style="display: none" id="private">
                 <div>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li>Private links are only accessible to premium users, so it is much more unlikely for a prviate link to get caught and banned in your school</li>
                     </ul>
                 </div>
             </div>
@@ -103,9 +105,7 @@
             <div class="answer" style="display: none" id="cancel">
                 <div>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li>You can cancel your subscription by clicking the link <a href="">here</a></li>
                     </ul>
                 </div>
             </div>
@@ -116,9 +116,7 @@
             <div class="answer" style="display: none" id="year">
                 <div>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li>Yes, on the purchase page for premium you can select to pay for the full year</li>
                     </ul>
                 </div>
             </div>

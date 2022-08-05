@@ -55,6 +55,11 @@ html {
     background-color: #B115BE;
     border-radius: 20px;
     padding: 15px;
+    transition: all 0.1s;
+}
+
+.p-view:hover {
+    transform: scale(1.05);
 }
 
 .whygoprem-container {
@@ -83,6 +88,11 @@ html {
     outline-width: 0;
     font-size: 25px;
     border-radius: 15px;
+    transition: all 0.1s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 .why-rows {
@@ -101,6 +111,11 @@ html {
     background: #340060;
     max-width: 40%;
     max-height: 40%;
+    transition: all 0.1s;
+}
+
+.img-label:hover {
+    transform: scale(1.05);
 }
 
 .c-items {
@@ -188,4 +203,9 @@ html {
 
 .answer ul {
     margin: 0%;
+}
+
+.answer a {
+    color: var(--accent-color);
+    text-decoration: none;
 }
