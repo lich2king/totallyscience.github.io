@@ -1,6 +1,5 @@
 html {
     overflow-x: hidden;
-
 }
 
 #mainBody {
@@ -32,7 +31,7 @@ html {
 
 .product-container {
     display: flex;
-    margin-top:0;
+    margin-top: 0;
     flex: 1;
     padding: 8%;
     flex-wrap: wrap;
@@ -45,7 +44,7 @@ html {
     display: flex;
     flex-direction: row;
     max-width: 500px;
-    margin-top:0;
+    margin-top: 0;
     max-height: 400px;
     min-width: fit-content;
     min-height: fit-content;
@@ -82,7 +81,7 @@ html {
     justify-content: center;
     border-width: 0;
     outline-width: 0;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 15px;
 }
 
@@ -91,7 +90,7 @@ html {
     flex: 1;
     align-content: center;
     justify-content: center;
-    gap: 15px;
+    gap: 50px;
     flex-wrap: wrap;
     padding: 5%;
 }
@@ -100,8 +99,8 @@ html {
     padding: 20px;
     border-radius: 25%;
     background: #340060;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 40%;
+    max-height: 40%;
 }
 
 .c-items {
@@ -110,6 +109,14 @@ html {
     align-items: center;
     justify-items: center;
     gap: 2px;
+}
+
+.c-item {
+    width: 400px;
+}
+
+.c-item p {
+    line-height: 25px;
 }
 
 .p-view h1 {
@@ -125,3 +132,60 @@ html {
     font-size: 15px;
 }
 
+.reason {
+    width: 450px;
+    text-align: center;
+}
+
+.reason p {
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.question-container {
+    padding-top: 5vh;
+    width: 1000px;
+    height: 50vh;
+}
+
+.question {
+    width: 1000px;
+    height: 90px;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex: 1;
+    align-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.question p {
+    color: white;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.question input {
+    margin-left: auto;
+    margin-right: 10px;
+    width: 25px;
+}
+
+.answer div {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Rubik';
+}
+
+.answer {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.answer ul {
+    margin: 0%;
+}
