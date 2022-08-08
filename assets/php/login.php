@@ -1,9 +1,5 @@
 <?php
-
-$servername = "localhost";
-$username = "u138268534_ts_user";
-$password = "Totally_accounts4321";
-$database = "u138268534_ts_users";
+include 'config.php';
 
 $user = htmlspecialchars($_GET["username"]);
 $pass = htmlspecialchars($_GET["password"]);

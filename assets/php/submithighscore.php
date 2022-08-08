@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "u138268534_ts_user";
-$password = "Totally_accounts4321";
-$database = "u138268534_ts_users";
+include 'config.php';
 
 $data = json_decode(file_get_contents('php://input'), true);
 

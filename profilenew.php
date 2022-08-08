@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v2'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v3'>
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
@@ -35,7 +35,7 @@
             <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
-            <a class="logout" href="">Logout</a>
+            <a class="logout" onclick="logout();">Logout</a>
         </div>
     </div>
 
@@ -158,11 +158,11 @@
                 document.getElementById('usernameSpan').innerText = name;
                 document.getElementById('emailSpan').innerText = res['email'];
             } else {
-                //location.href = 'signup.php';
+                location.href = 'signup.php';
             }
         });
     
-        function Logout() {
+        function logout() {
             fetch(`assets/php/logout.php`).then(() => {
                 location.href = 'login.php';
             });

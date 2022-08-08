@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "u138268534_ts_user";
-$password = "Totally_accounts4321";
-$database = "u138268534_ts_users";
-
-
+include 'config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -13,9 +8,6 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
-
-
-
 
 
 $query = "SELECT * FROM highscores";
