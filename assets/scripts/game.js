@@ -2,6 +2,24 @@ document.getElementById("gamesnav").classList.add("selected");
 
 
 
+//Check if user is logged in
+let loggedIn = false;
+fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    res = JSON.parse(res);
+
+    let userloggedIn = 'false';
+
+    if (res != null) {
+        userloggedIn = res['isLoggedIn'];
+    }
+
+    if (loggedIn == "true") {
+        loggedIn = true;
+    }
+});
+
+
+
 //Load Game
 
 const queryString = window.location.search;
@@ -43,15 +61,20 @@ const likeButtonImg = likeButton.firstChild;
 let likeCount = 0;
 
 likeButton.addEventListener('click', function() {
-    if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
-        likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-        likeCount += 1;
-        UpdateLikeCount();
+    if (loggedIn) {
+        if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
+            likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+            likeCount += 1;
+            UpdateLikeCount();
+        } else {
+            likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
+            likeCount -= 1;
+            UpdateLikeCount();
+        }
     } else {
-        likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
-        likeCount -= 1;
-        UpdateLikeCount();
+        alert("You must log in.");
     }
+
 });
 
 
@@ -75,10 +98,14 @@ const pinButtonImg = pinButton.firstChild;
 
 
 pinButton.addEventListener('click', function() {
-    if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-        pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+    if (loggedIn) {
+        if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
+            pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+        } else {
+            pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
+        }
     } else {
-        pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
+        alert("You must log in.")
     }
 });
 
