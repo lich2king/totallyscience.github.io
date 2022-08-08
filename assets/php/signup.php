@@ -18,8 +18,7 @@
         die("connection failed");
     }
 
-    if($uservalid != '1')
-    {
+    if($uservalid != '1') {
         $userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'");
 
         if($userresult->num_rows == 0) {
@@ -27,8 +26,7 @@
         } else {
             echo("found");
         }
-    } else if($emailvalid != '1')
-    {
+    } else if($emailvalid != '1') {
         $userresult = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
         if($userresult->num_rows == 0) {
             echo("not found");
@@ -36,10 +34,8 @@
             echo("found");
         }
     }
-    else
-    {
-        $sql = "INSERT INTO accounts (Username, Email, Password, GradYear)
-        VALUES ('$user', '$email', '$pass', '$grad')";
+    else {
+        $sql = "INSERT INTO accounts (Username, Email, Password, GradYear) VALUES ('$user', '$email', '$pass', '$grad')";
         
         if ($conn->query($sql) === TRUE) {
             $from = "help@totallyscience.co";

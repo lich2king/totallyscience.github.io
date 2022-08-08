@@ -19,11 +19,9 @@
     <div id="accountoptions">
         <div class="accountoption">
             <p>Username: <span class="span" id="usernameSpan">username</span></p>
-            <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Email: <span class="span" id="emailSpan">help@totallyscience.co</span></p>
-            <input type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Password: <span class="span">*********</span></p>
@@ -144,7 +142,7 @@
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/profile.js"></script>
     <script>
-        fetch(`assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
             // CHECK IF VERIFIED REQUIRE ENTER CODE IF NOT
             // HAVE RESEND EMAIL BUTTON
             res = JSON.parse(res)
@@ -156,7 +154,7 @@
                     location.href = 'signup.php';
                 }
                 
-                fetch(`assets/php/verified.php?username=${name}`).then((response) => response.text()).then((verified) => {
+                fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
                     if (!verified) {
                         location.href = 'verify.php';
                     }
