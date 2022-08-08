@@ -56,34 +56,34 @@
         <h1 class="label">Recent Games</h1>
         <div class="biccontainer">
             <div class="container">
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
             </div>
@@ -98,34 +98,34 @@
         <h1 class="label">Liked Games</h1>
         <div class="biccontainer">
             <div class="container">
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
+                    style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
+                    onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
+                    <div class="innerGameDiv">Retro Bowl</div>
+                </div>
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
-                    <div class="innerGameDiv">FNAF</div>
-                </div>
-                <div id="gameDiv" onclick="">
-                    <input type="image"
-                        src="https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI" />
+                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
+                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
+                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
                     <div class="innerGameDiv">FNAF</div>
                 </div>
             </div>
@@ -142,36 +142,36 @@
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/profile.js"></script>
     <script>
-        fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-            // CHECK IF VERIFIED REQUIRE ENTER CODE IF NOT
-            // HAVE RESEND EMAIL BUTTON
-            res = JSON.parse(res)
-            if (res != null) {
-                const loggedIn = res['isLoggedIn'];
-                const name = res['username'];
-    
-                if (loggedIn != 'true') {
-                    location.href = 'signup.php';
-                }
-                
-                fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
-                    if (!verified) {
-                        location.href = 'verify.php';
-                    }
+    /*fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        // CHECK IF VERIFIED REQUIRE ENTER CODE IF NOT
+        // HAVE RESEND EMAIL BUTTON
+        res = JSON.parse(res)
+        if (res != null) {
+            const loggedIn = res['isLoggedIn'];
+            const name = res['username'];
 
-                    document.getElementById('usernameSpan').innerText = name;
-                    document.getElementById('emailSpan').innerText = res['email'];
-                });
-            } else {
+            if (loggedIn != 'true') {
                 location.href = 'signup.php';
             }
-        });
-    
-        function logout() {
-            fetch(`assets/php/logout.php`).then(() => {
-                location.href = 'login.php';
+
+            fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
+                if (!verified) {
+                    location.href = 'verify.php';
+                }
+
+                document.getElementById('usernameSpan').innerText = name;
+                document.getElementById('emailSpan').innerText = res['email'];
             });
+        } else {
+            location.href = 'signup.php';
         }
+    });*/
+
+    function logout() {
+        fetch(`assets/php/logout.php`).then(() => {
+            location.href = 'login.php';
+        });
+    }
     </script>
 </body>
 

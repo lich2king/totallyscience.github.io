@@ -67,25 +67,34 @@
             Recommended
         </h1>
         <div class="gamesDiv">
-            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image" src="./assets/game_images/1v1.jpg" />
-                <div class="innerGameDiv">1v1 LOL</div>
-                
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
+                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
+                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
+                <div class="innerGameDiv">Retro Bowl</div>
             </div>
-            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image" src="./assets/game_images/1v1.jpg" />
-                <div class="innerGameDiv">1v1 LOL</div>
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
+                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
+                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
+                <div class="innerGameDiv">Retro Bowl</div>
             </div>
-            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image" src="./assets/game_images/1v1.jpg" />
-                <div class="innerGameDiv">1v1 LOL</div>
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
+                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
+                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
+                <div class="innerGameDiv">Retro Bowl</div>
             </div>
-            <div id="gameDiv" onclick="location.href = 'class?class=1v1 LOL'">
-                <input type="image" src="./assets/game_images/1v1.jpg" />
-                <div class="innerGameDiv">1v1 LOL</div>
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
+                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
+                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
+                <div class="innerGameDiv">Retro Bowl</div>
+            </div>
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
+                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
+                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
+                <div class="innerGameDiv">Retro Bowl</div>
             </div>
         </div>
     </div>
+
 
 
 

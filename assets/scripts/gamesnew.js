@@ -91,10 +91,11 @@ function displayGames() {
 
 
         const gameBtn = `
-        <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
-            <div class="innerGameDiv">${name}</div>
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${name}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
+                <div class="innerGameDiv">${name}</div>
         </div>
         `;
+
 
         gamesDiv.innerHTML += gameBtn;
     }
@@ -135,8 +136,8 @@ searchBar.addEventListener('keyup', () => {
                     }
 
                     const gameBtn = `
-                    <div style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
-                        <div class="innerGameDiv">${name}</div>
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+                        <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
 
@@ -188,3 +189,19 @@ buttons.forEach((button) => {
         loadTopic();
     })
 })
+
+function changeToGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null)
+        ele.style = `background-image: url(${data.gif})`;
+}
+
+function noGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null)
+        ele.style = `background-image: url(${data.image})`;
+}
