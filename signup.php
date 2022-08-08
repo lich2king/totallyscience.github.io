@@ -28,8 +28,7 @@
                 </svg>
             </a>
 
-            <a id="settings" href="preferences"><img src="./assets/images/settings-light.svg"></img>
-            </a>
+            <a id="settings" href="preferences"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
@@ -173,18 +172,18 @@
                 const pass = document.getElementById('password').value;
                 const grad = document.getElementById('gradSelect').value;
 
-                await fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+                fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
                     if (res == 'Success') {
                         errorText.style.color = 'green';
                         errorText.innerText = '*Account successfully created';
+
+                        fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+                            if (res == 'Success') {
+                                location.href = 'profilenew.php';
+                            }
+                        });
                     } else {
                         errorText.innerText = '*Error creating account';
-                    }
-                });
-
-                await fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
-                    if (res == 'Success') {
-                        location.href = 'profilenew.php';
                     }
                 });
             }

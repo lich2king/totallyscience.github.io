@@ -125,17 +125,6 @@ else if ($step == 3) {
 
 <script>
     let username;
-    fetch(`https://totallyscience.co/assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res);
-        const loggedIn = 'false';
-
-        if (res != null) {
-            const loggedIn = res['isLoggedIn'];
-        }
-        if (loggedIn == 'true') {
-            window.open('profilenew.php', '_self');
-        }
-    });
 
     function sendEmailConfirm() {
         username = document.getElementById('username').value;

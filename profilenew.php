@@ -12,7 +12,6 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-
     <h1 id="nameheader">
         Username
     </h1>
@@ -138,8 +137,7 @@
         </div>
     </div>
 
-    <div style="padding-bottom: 10vh;"></div> <!--Spacer-->
-
+    <div style="padding-bottom: 10vh;"></div>
 
     <?php include "assets/includes/footer.php" ?>
 
@@ -147,6 +145,8 @@
     <script src="assets/scripts/profile.js"></script>
     <script>
         fetch(`assets/php/cookiedata.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+            // CHECK IF VERIFIED REQUIRE ENTER CODE IF NOT
+            // HAVE RESEND EMAIL BUTTON
             res = JSON.parse(res)
             if (res != null) {
                 const loggedIn = res['isLoggedIn'];
@@ -155,8 +155,15 @@
                 if (loggedIn != 'true') {
                     location.href = 'signup.php';
                 }
-                document.getElementById('usernameSpan').innerText = name;
-                document.getElementById('emailSpan').innerText = res['email'];
+                
+                fetch(`assets/php/verified.php?username=${name}`).then((response) => response.text()).then((verified) => {
+                    if (!verified) {
+                        location.href = 'verify.php';
+                    }
+
+                    document.getElementById('usernameSpan').innerText = name;
+                    document.getElementById('emailSpan').innerText = res['email'];
+                });
             } else {
                 location.href = 'signup.php';
             }
