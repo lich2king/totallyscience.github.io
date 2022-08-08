@@ -219,6 +219,7 @@ html {
     color: red;
     opacity: 0.9;
     text-align: center;
+    cursor: pointer;
 }
 
 .logout:hover {
