@@ -176,7 +176,7 @@ html {
     margin: auto;
     border-radius: 30px;
     width: 70vw;
-    height: 12vw;
+    height: 220px;
     background-color: var(--accent-color);
     margin-bottom: 10vh;
 }
