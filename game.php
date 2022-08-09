@@ -66,32 +66,7 @@
         <h1>
             Recommended
         </h1>
-        <div class="gamesDiv">
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
-                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
-                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
-                <div class="innerGameDiv">Retro Bowl</div>
-            </div>
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
-                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
-                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
-                <div class="innerGameDiv">Retro Bowl</div>
-            </div>
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
-                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
-                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
-                <div class="innerGameDiv">Retro Bowl</div>
-            </div>
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
-                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
-                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
-                <div class="innerGameDiv">Retro Bowl</div>
-            </div>
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
-                style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
-                onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
-                <div class="innerGameDiv">Retro Bowl</div>
-            </div>
+        <div class="gamesDiv" id="suggestedGames">  
         </div>
     </div>
 
