@@ -144,6 +144,7 @@ document.getElementById("fullscreen").addEventListener('click', function() {
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
+        suggestGames();
     });
 });
 
@@ -164,3 +165,63 @@ function noGif(ele) {
     if (data.gif != null)
         ele.style = `background-image: url(${data.image})`;
 }
+
+function suggestGames() {
+    let displayedGames = 0;
+    let randomGames = []
+    let currentTags = games[gameName]["tags"];
+    let totalGames = Object.keys(games).length;
+    for (let x = 0; x < totalGames; x++) {
+        //let randGame = randomProperty(games)
+        //while (randomGames.includes(randGame)) {
+        //randGame = randomProperty(games)
+        //}
+        let randGame = Object.keys(games)[x];
+        let sameTag = false;
+        currentTags.forEach(function(game) {
+            let gameTags = games[randGame]["tags"];
+            gameTags.forEach(function(currentgame) {
+                if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'premium' && game != 'new' && game != 'popular') {
+                    sameTag = true;
+                }
+            })
+        })
+        if (gameName == randGame) {
+            sameTag = false;
+        }
+        if (sameTag && displayedGames < 5) {
+            randomGames.push(randGame);
+            displayedGames++;
+        } else if (displayedGames >= 5) {
+            break;
+        }
+    }
+    while (displayedGames < 5) {
+        for (let x = 0; x < 5 - displayedGames; x++) {
+            let randGame = randomProperty(games)
+            while (randomGames.includes(randGame)) {
+                randGame = randomProperty(games)
+            }
+            randomGames.push(randGame);
+            displayedGames++;
+        }
+    }
+    console.log(randomGames)
+
+    document.getElementById('suggestedGames').innerHTML = '';
+    randomGames.forEach(function(game) {
+        const gameBtn = `
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
+                        <div class="innerGameDiv">${game}</div>
+                    </div>
+                    `;
+
+        document.getElementById('suggestedGames').innerHTML += gameBtn;
+    })
+}
+
+
+var randomProperty = function(object) {
+    var keys = Object.keys(object);
+    return keys[Math.floor(keys.length * Math.random())];
+};
