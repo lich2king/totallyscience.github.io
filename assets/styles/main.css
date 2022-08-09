@@ -15,6 +15,10 @@
         --box-shadow-color: #000000;
     }
     
+    html {
+        overflow-x: hidden;
+    }
+    
     body {
         padding: 0;
         margin: 0;
@@ -29,7 +33,6 @@
     p2,
     a,
     label {
-        color: var(--dark-color);
         font-family: 'Rubik', sans-serif;
     }
     

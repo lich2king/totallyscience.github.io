@@ -1,0 +1,14 @@
+#privacyText {
+    color: var(--light-color);
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+
+#privacyText h1 {
+    text-align: center;
+}
+
+#privacyText {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}

@@ -77,8 +77,8 @@
                 <h1>
                     Legal
                 </h1>
-                <p><a href="">Terms of Use</a></p>
-                <p><a href="">Privacy Policy</a></p>
+                <p><a href="termsofuse.php">Terms of Use</a></p>
+                <p><a href="privacypolicy.php">Privacy Policy</a></p>
                 <p><a href="">Partners</a></p>
             </div>
         </div>
