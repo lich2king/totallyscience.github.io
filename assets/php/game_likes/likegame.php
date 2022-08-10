@@ -16,7 +16,7 @@ if (!isset($_COOKIE['logintoken'])) {
     die("no cookie");
 }
 
-$user = json_decode($_COOKIE['logintoken'], true)['username'];
+$user = json_decode($_COOKIE['logintoken'], true)['id'];
 
 
 //first check if the user has not already liked the game
