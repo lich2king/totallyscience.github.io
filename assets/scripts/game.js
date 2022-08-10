@@ -63,7 +63,9 @@ window.addEventListener('load', () => {
     //check if user liked the game previously
     fetch(`assets/php/game_likes/checkifuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
         if (res == 'liked') {
+            alert("Righttt?");
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+            alert("LEFT");
         }
     });
 
