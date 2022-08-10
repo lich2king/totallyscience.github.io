@@ -1,4 +1,8 @@
 <?php
+
+die("hi");
+
+/*
 include 'config.php';
 
 // Create connection
@@ -9,10 +13,10 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-//$gameName = htmlspecialchars($_GET["name"]);
+$gameName = htmlspecialchars($_GET["name"]);
 
 
-$query = "SELECT * FROM liked_games WHERE game = 'test'";
+$query = "SELECT * FROM liked_games WHERE game = '$gameName'";
 $result = mysqli_query($conn, $query);
 
 
@@ -21,6 +25,6 @@ echo(mysqli_num_rows($result));
 
 
    
-$conn->close();
+$conn->close();*/
 
 ?>
