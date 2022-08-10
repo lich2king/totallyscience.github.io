@@ -69,7 +69,7 @@ window.addEventListener('load', () => {
 
     //set like count
     fetch(`assets/php/game_likes/getlikes.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-        likeCount = res;
+        likeCount = parseInt(res);
         UpdateLikeCount();
     });
 });
