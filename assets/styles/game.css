@@ -10,8 +10,7 @@ html {
 
 #gameframe .game {
     margin: auto;
-    width: 90vw;
-    height: 80vh;
+    width: 70vw;
     background-color: rgb(25, 31, 38);
     border: 3px solid var(--accent-color);
     border-top-left-radius: 30px;
