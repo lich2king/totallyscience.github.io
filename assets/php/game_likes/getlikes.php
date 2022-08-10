@@ -9,10 +9,10 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-$gameName = htmlspecialchars($_GET["name"]);
+//$gameName = htmlspecialchars($_GET["name"]);
 
 
-$query = "SELECT * FROM liked_games WHERE game = '$gameName'";
+$query = "SELECT * FROM liked_games WHERE game = 'test'";
 $result = mysqli_query($conn, $query);
 
 
