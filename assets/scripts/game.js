@@ -61,9 +61,9 @@ window.addEventListener('load', () => {
     });
 
     //check if user liked the game previously
-    fetch(`assets/php/game_likes/checkifuserliked.php?name=${gameName}`).then((responses) => responses.text()).then((ress) => {
-        alert(ress);
-        if (ress == 'liked') {
+    fetch(`assets/php/game_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+        alert(res);
+        if (res == 'liked') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
         }
     });
