@@ -27,11 +27,11 @@ $result = mysqli_num_rows(mysqli_query($conn, $query));
 if($result > 0)
 {
     //user has liked the game
-    die('liked');    
+    echo("liked");    
 }
 else
 {
-    die('unliked');
+    echo("unliked");
 }
 
 
