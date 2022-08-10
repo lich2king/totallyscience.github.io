@@ -118,13 +118,37 @@ else if ($step == 3) {
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;"><a href="login">back to login</a></p>
+    <p style="text-align: center;" id="back-login"><a href="login">back to login</a></p>
     <script defer src="./assets/scripts/main.js?v14"></script>
 </body>
 
 
 <script>
     let username;
+
+    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res);
+
+        let loggedIn = 'false';
+
+        if (res != null) {
+            loggedIn = res['isLoggedIn'];
+        }
+        if (loggedIn == 'true') {
+            document.getElementById('back-login').display = 'none';
+            username = res['username'];
+
+            fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
+            if (res.startsWith('success')) {
+                document.getElementById('usertext').innerText = 'Confirmation Code From Email';
+                document.getElementById('survey').action = 'javascript:submitConfirmCode()';
+                document.getElementById('username').value = '';
+                document.getElementById('username').placeholder = '*****';
+                localStorage.setItem('tempusername', username);
+            }
+        });
+        }
+    });
 
     function sendEmailConfirm() {
         username = document.getElementById('username').value;
