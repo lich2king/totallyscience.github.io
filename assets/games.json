@@ -11,7 +11,7 @@
 
     },
 
-    "Papa's Pizzeria": {
+    "Papas Pizzeria": {
         "description": "Ever wanted to have your own pizza restraunt? Here you go!",
         "image": "./assets/game_images/papaspizza.png",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
@@ -152,7 +152,7 @@
         "scratch_url": "https://scratch.mit.edu/projects/17828009/embed"
     },
 
-    "Friday Night Funkin'": {
+    "Friday Night Funkin": {
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fridaynightfunkin.png",
         "controls": "Use the arrow keys to play notes",
@@ -343,7 +343,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
     },
 
-    "World's Hardest Game": {
+    "Worlds Hardest Game": {
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
         "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
