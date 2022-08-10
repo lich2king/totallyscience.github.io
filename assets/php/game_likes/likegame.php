@@ -21,7 +21,7 @@ $user = json_decode($_COOKIE['logintoken'], true)['username'];
 
 //first check if the user has not already liked the game
 
-$query = "SELECT * FROM liked_games WHERE ID = '' AND Game = ''";
+$query = "SELECT * FROM liked_games WHERE ID = '$user' AND Game = '$gameName'";
 $result = mysqli_num_rows(mysqli_query($conn, $query));
 
 if($result <= 0)
