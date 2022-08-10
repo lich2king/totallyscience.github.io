@@ -1,3 +1,11 @@
+body {
+    color: var(--light-color);
+}
+
+a {
+    color: var(--light-color);
+}
+
 #survey {
     text-align: center;
 }
@@ -11,17 +19,21 @@
 }
 
 #survey input, #survey select {
-    width: 21vw;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    background-color: var(--light-color);
-    border: 2px solid var(--accent-color);
-    border-radius: 4px;
-    color: var(--dark-color);
+    font-family: 'Rubik';
+    margin: auto;
+    margin-top: 10px;
+    width: 20vw;
+    height: 50px;
     box-sizing: border-box;
-    outline: none;
+    border: transparent;
+    border-radius: 17px;
     font-size: 1vw;
+    background-color: var(--light-color);
+    outline: none;
+    padding: 1vh 1vw 1vh 1vw;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3vh;
+    color: var(--dark-color);
 }
 
 #survey button {
