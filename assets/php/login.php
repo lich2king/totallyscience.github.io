@@ -20,7 +20,8 @@
             $data = array(
                 'isLoggedIn' => 'true',
                 'username' => $user,
-                'email' => $row[1]
+                'email' => $row[1],
+                'id' => $row[7]
             );
 
             $cookie_name = "logintoken";
