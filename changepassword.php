@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'assets/php/config.php';
 
 $step = htmlspecialchars($_GET["step"]);
 
