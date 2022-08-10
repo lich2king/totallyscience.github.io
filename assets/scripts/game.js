@@ -27,7 +27,12 @@ const urlParams = new URLSearchParams(queryString);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
+let likeCount = 0;
+
 window.addEventListener('load', () => {
+
+    //get game data for iframe etc
+
     fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
         if (response.ok) {
             return response.json();
@@ -51,6 +56,13 @@ window.addEventListener('load', () => {
     }).catch((err) => {
         if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
     });
+
+    //set like count
+
+    fetch(`assets/php/game_likes/getlikes.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+        likeCount = res;
+        UpdateLikeCount();
+    });
 });
 
 //Like Button
@@ -58,7 +70,6 @@ window.addEventListener('load', () => {
 const likeButton = document.querySelector('#like');
 const likeButtonImg = likeButton.firstChild;
 
-let likeCount = 0;
 
 likeButton.addEventListener('click', function() {
     if (loggedIn) {
