@@ -16,9 +16,27 @@ $gameName = htmlspecialchars($_GET["name"]);
 $query = "SELECT * FROM liked_games WHERE game = '$gameName'";
 $result = mysqli_query($conn, $query);
 
+//also check if user liked the game
+
+
+$query = "SELECT * FROM liked_games WHERE ID = '' AND Game = ''";
+$result = mysqli_num_rows(mysqli_query($conn, $query));
+
+if($result <= 0)
+{
+    //user has not already liked the game
+    $query = "INSERT INTO liked_games (ID, Game)
+    VALUES ('$user', '$gameName')";
+
+    $result = mysqli_query($conn, $query);
+}
+
+
+
 
 
 echo(mysqli_num_rows($result));    
+
 
 
    
