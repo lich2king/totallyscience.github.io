@@ -22,9 +22,9 @@ $user = json_decode($_COOKIE['logintoken'], true)['username'];
 
 
 $query = "SELECT * FROM liked_games WHERE ID = '$user' AND Game = '$gameName'";
-$result = mysqli_num_rows(mysqli_query($conn, $query));
+$result = mysqli_query($conn, $query);
 
-if($result > 0)
+if(mysqli_num_rows($result > 0))
 {
     //user has liked the game
     echo('liked');    
