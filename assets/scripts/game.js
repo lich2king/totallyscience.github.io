@@ -29,6 +29,9 @@ const id = urlParams.get('id');
 
 let likeCount = 0;
 
+const likeButton = document.querySelector('#like');
+const likeButtonImg = likeButton.firstChild;
+
 window.addEventListener('load', () => {
 
     //get game data for iframe etc
@@ -57,8 +60,14 @@ window.addEventListener('load', () => {
         if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
     });
 
-    //set like count
+    //check if user liked the game previously
+    fetch(`assets/php/game_likes/checkifuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+        if (res = 'liked') {
+            likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+        }
+    });
 
+    //set like count
     fetch(`assets/php/game_likes/getlikes.php?name=${gameName}`).then((response) => response.text()).then((res) => {
         likeCount = res;
         UpdateLikeCount();
@@ -67,8 +76,7 @@ window.addEventListener('load', () => {
 
 //Like Button
 
-const likeButton = document.querySelector('#like');
-const likeButtonImg = likeButton.firstChild;
+
 
 
 likeButton.addEventListener('click', function() {
@@ -76,10 +84,12 @@ likeButton.addEventListener('click', function() {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             likeCount += 1;
+            fetch(`assets/php/game_likes/likegame.php?name=${gameName}`);
             UpdateLikeCount();
         } else {
             likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
             likeCount -= 1;
+            fetch(`assets/php/game_likes/unlikegame.php?name=${gameName}`);
             UpdateLikeCount();
         }
     } else {

@@ -18,20 +18,28 @@ if (!isset($_COOKIE['logintoken'])) {
 
 $user = json_decode($_COOKIE['logintoken'], true)['username'];
 
+//check if user liked the game
 
-//first check if the user has not already liked the game
 
-$query = "SELECT * FROM liked_games WHERE ID = '' AND Game = ''";
+$query = "SELECT * FROM liked_games WHERE ID = '$user' AND Game = '$gameName'";
 $result = mysqli_num_rows(mysqli_query($conn, $query));
 
-if($result <= 0)
+if($result > 0)
 {
-    //user has not already liked the game
-    $query = "INSERT INTO liked_games (ID, Game)
-    VALUES ('$user', '$gameName')";
-
-    $result = mysqli_query($conn, $query);
+    //user has liked the game
+    echo('liked');    
 }
+else
+{
+    echo('unliked');
+}
+
+
+
+
+
+
+
 
 
    
