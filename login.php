@@ -8,30 +8,7 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <div id="leftbar">
-            <div class="nav-button"><a href="index">Home</a></div>
-            <div class="nav-button"><a href="classes">Games</a></div>
-            <div class="nav-button"><a href="leaderboard">Leaderboard</a></div>
-            <div class="nav-button"><a href="apps">Apps</a></div>
-            <div class="nav-button"><a href="chat">Chat</a></div>
-        </div>
-
-        <div id="middlebar">
-            <p>Totally Science</p>
-        </div>
-
-        <div id="rightbar">
-            <a id="login" href="profilenew.php">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-            </a>
-
-            <a id="settings" href="preferences"><img src="./assets/images/settings-light.svg"></img>
-            </a>
-        </div>
-    </div>
+    <?php include "assets/includes/navbar.php" ?>
 
     <div style="padding-top: 90px;"></div>
 
@@ -50,7 +27,7 @@
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;">Don't have an account? <a href="signup">Sign up instead</a></p>
+    <p style="text-align: center;">Don't have an account? <a href="signup.php">Sign up instead</a></p>
     <p style="text-align: center;">Forgot your password? <a href="changepassword.php">Change password</a></p>
     <script src="./assets/scripts/main.js"></script>
 

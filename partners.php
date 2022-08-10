@@ -82,7 +82,7 @@
                     </svg>
             </a>
 
-            <a id="settings" href="preferences"><img src="./assets/images/settings-light.svg"></img></a>
+            <a id="settings" href="settings.php"><img src="./assets/images/settings-light.svg"></img></a>
         </div>
     </div>
 
