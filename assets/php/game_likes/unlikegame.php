@@ -20,6 +20,7 @@ $user = json_decode($_COOKIE['logintoken'], true)['username'];
 
 
 $query = "DELETE FROM liked_games WHERE ID='$user' AND Game = '$gameName'";
+mysqli_query($conn, $query);
 
 
 
