@@ -210,12 +210,11 @@ function suggestGames() {
         }
         randomGames.push(randGame);
     }
-    console.log(randomGames)
 
     document.getElementById('scisuggests').innerHTML = '';
     randomGames.forEach(function(game) {
         const gameBtn = `
-                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
