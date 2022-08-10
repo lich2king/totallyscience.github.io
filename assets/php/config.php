@@ -1,7 +1,7 @@
 <?php
     // READY
     $servername = "localhost";
-    $username = "u138268534_ts_user";
-    $password = "Totally_accounts4321";
-    $database = "u138268534_ts_users";
+    $username = "u483325885_user";
+    $password = "Totally_password4321";
+    $database = "u483325885_database";
 ?>

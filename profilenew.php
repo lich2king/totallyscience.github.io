@@ -142,8 +142,7 @@
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/profile.js"></script>
     <script>
-    /*fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-        // CHECK IF VERIFIED REQUIRE ENTER CODE IF NOT
+    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         // HAVE RESEND EMAIL BUTTON
         res = JSON.parse(res)
         if (res != null) {
@@ -155,7 +154,7 @@
             }
 
             fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
-                if (!verified) {
+                if (verified == 0) {
                     location.href = 'verify.php';
                 }
 
@@ -165,7 +164,7 @@
         } else {
             location.href = 'signup.php';
         }
-    });*/
+    });
 
     function logout() {
         fetch(`assets/php/logout.php`).then(() => {
