@@ -78,7 +78,7 @@
 
 
 
-    <script src="assets/scripts/game.js?v22ewf"></script>
+    <script src="assets/scripts/game.js?v21ewf"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
