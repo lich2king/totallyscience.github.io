@@ -154,8 +154,7 @@
             }
 
             fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
-                console.log(verified)
-                if (!verified) {
+                if (verified == 0) {
                     location.href = 'verify.php';
                 }
 
