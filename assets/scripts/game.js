@@ -66,6 +66,8 @@ window.addEventListener('load', () => {
             alert("Righttt?");
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             alert("LEFT");
+        } else {
+            alert("dayum");
         }
     });
 
