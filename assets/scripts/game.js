@@ -13,7 +13,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         userloggedIn = res['isLoggedIn'];
     }
 
-    if (loggedIn == "true") {
+    if (userloggedIn == "true") {
         loggedIn = true;
     }
 });
