@@ -25,7 +25,7 @@
         </div>
         <div class="accountoption">
             <p>Password: <span class="span">*********</span></p>
-            <input type="image" src="assets/images/icons/edit.png">
+            <input onclick="location.href = 'changepassword.php'" type="image" src="assets/images/icons/edit.png">
         </div>
         <div class="accountoption">
             <p>Game Pass: <span class="span">FREE</span></p>
