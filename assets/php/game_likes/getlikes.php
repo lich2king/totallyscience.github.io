@@ -1,4 +1,8 @@
 <?php
+
+die("hi");
+
+/*
 include 'config.php';
 
 // Create connection
@@ -21,6 +25,6 @@ echo(mysqli_num_rows($result));
 
 
    
-$conn->close();
+$conn->close();*/
 
 ?>
