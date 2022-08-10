@@ -143,7 +143,6 @@
     <script src="assets/scripts/profile.js"></script>
     <script>
     fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-        // CHECK IF VERIFIED REQUIRE ENTER CODE IF NOT
         // HAVE RESEND EMAIL BUTTON
         res = JSON.parse(res)
         if (res != null) {
@@ -155,6 +154,7 @@
             }
 
             fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
+                console.log(verified)
                 if (!verified) {
                     location.href = 'verify.php';
                 }
