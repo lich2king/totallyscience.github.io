@@ -72,29 +72,7 @@ else if ($step == 3) {
 </head>
 
 <body>
-    <div id="navbar">
-        <div id="leftbar">
-            <div class="nav-button"><a href="index">Home</a></div>
-            <div class="nav-button"><a href="classes">Games</a></div>
-            <div class="nav-button"><a href="leaderboard">Leaderboard</a></div>
-            <div class="nav-button"><a href="browser">Browser</a></div>
-            <div class="nav-button"><a href="chat">Chat</a></div>
-        </div>
-
-        <div id="middlebar">
-            <p>Totally Science</p>
-        </div>
-
-        <div id="rightbar">
-            <a id="login" href="profilenew.php">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-            </a>
-
-            <a id="settings" href="settings.php"><img src="./assets/images/settings-light.svg"></img></a>
-        </div>
-    </div>
+    <?php include "assets/includes/navbar.php" ?>
 
     <div style="padding-top: 90px;"></div>
 
@@ -135,7 +113,7 @@ else if ($step == 3) {
             loggedIn = res['isLoggedIn'];
         }
         if (loggedIn == 'true') {
-            document.getElementById('back-login').display = 'none';
+            document.getElementById('back-login').style.display = 'none';
             username = res['username'];
 
             fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
