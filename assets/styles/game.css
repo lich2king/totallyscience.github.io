@@ -31,16 +31,18 @@ html {
 #gameframe .options {
     margin: auto;
     width: 70vw;
-    height: 6vh;
+    height: 4vh;
     background-color: var(--accent-color);
     border: 3px solid var(--accent-color);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     display: flex;
     align-items: center;
+    padding-bottom: 1.5vh;
 }
 
-#gameframe .options div {
+#gameframe .options .left,
+#gameframe .options .right {
     width: 50%;
     height: 100%;
 }
@@ -55,6 +57,24 @@ html {
     height: 70%;
 }
 
+#gameframe .options .left .text-button {
+    margin-left: 1vw;
+    height: 100%;
+}
+
+#gameframe .undertext {
+    height: 70%;
+}
+
+#gameframe .undertext div {
+    position: absolute;
+    margin-left: 1.25vw;
+    color: white;
+    font-family: 'Rubik';
+    font-size: 15px;
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+
 #gameframe .options .right {
     display: flex;
     align-items: center;
@@ -67,7 +87,8 @@ html {
     height: 70%;
 }
 
-.game-button {
+.game-button,
+.text-button {
     position: relative;
     background-color: transparent;
     border: none;
@@ -75,11 +96,13 @@ html {
     transition: 0.1s;
 }
 
-.game-button:hover {
-    transform: scale(1.05);
+.game-button:hover,
+.text-button:hover {
+    transform: scale(1.125);
 }
 
-.game-button img {
+.game-button img,
+.text-button img {
     height: 100%;
 }
 

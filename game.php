@@ -20,10 +20,16 @@
         </div>
         <div class="options">
             <div class="left">
-                <button id="like" class="game-button button-effect-a hover-text" data-hover="0"><img
-                        src="assets/images/icons/likeoutline.png"></button>
-                <button onclick="OpenHighscore()" class="game-button hover-text" data-hover="203"><img
-                        src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
+                <div class="undertext">
+                    <button id="like" class="text-button button-effect-a"><img
+                            src="assets/images/icons/likeoutline.png"></button>
+                    <div id="likeCount">0</div>
+                </div>
+                <div class="undertext">
+                    <button onclick="OpenHighscore()" class="text-button"><img
+                            src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
+                    <div>1M+</div>
+                </div>
                 <button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
                 <button class="game-button"><img src="assets/images/icons/upload.png"></button>
             </div>
@@ -66,7 +72,7 @@
         <h1>
             Recommended
         </h1>
-        <div class="gamesDiv" id="suggestedGames">  
+        <div class="gamesDiv" id="suggestedGames">
         </div>
     </div>
 

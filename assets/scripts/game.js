@@ -110,7 +110,7 @@ likeButton.addEventListener("webkitAnimationEnd", function() {
 
 
 function UpdateLikeCount() {
-    likeButton.setAttribute('data-hover', likeCount);
+    document.getElementById('likeCount').innerText = likeCount;
 }
 
 
