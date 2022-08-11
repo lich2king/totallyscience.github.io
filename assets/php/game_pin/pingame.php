@@ -30,8 +30,9 @@ if (!function_exists('str_contains')) {
 }
 
 // die(str_contains('Slope;Chess;', 'Chess;'));
-die(`$result`);
+print_r(`$result`);
 
+/*
 if(str_contains($result, `$gameName;`))
 {
     //game is pinned
@@ -56,7 +57,7 @@ else
     
 }
 
-
+*/
 
 
 
