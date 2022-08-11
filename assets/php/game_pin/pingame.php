@@ -29,6 +29,8 @@ if (!function_exists('str_contains')) {
     }
 }
 
+die(str_contains($result, `Tanuki Sunset;`));
+
 if(str_contains($result, `$gameName;`))
 {
     //game is pinned
