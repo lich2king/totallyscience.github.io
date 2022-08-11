@@ -22,7 +22,7 @@ $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
 
 
-if(str_contains("$result", "$gameName;"))
+if(str_contains("hello", "e"))
 {
     //game is pinned
     echo('prevpinned');
