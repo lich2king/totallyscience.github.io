@@ -21,6 +21,7 @@ $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
 
+
 if (!function_exists('str_contains')) {
     function str_contains( $haystack, $needle)
     {
@@ -33,7 +34,7 @@ if(str_contains("hello", "e"))
     //game is pinned
     echo('prevpinned');
 }
-/*else
+else
 {
     //game is not pinned
     if(substr_count($result,";") < 3)
@@ -50,7 +51,7 @@ if(str_contains("hello", "e"))
     }
     
     
-}*/
+}
 
 
 
