@@ -20,7 +20,7 @@ $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
 $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
-$result = $result -> fetch_object();
+$result = ($result -> fetch_row())[0];
 
 if (!function_exists('str_contains')) {
     function str_contains( $haystack, $needle)
@@ -31,7 +31,6 @@ if (!function_exists('str_contains')) {
 
 // die(str_contains('Slope;Chess;', 'Chess;'));
 die($result);
-//die($result[0]);
 
 /*
 if(str_contains($result, `$gameName;`))
