@@ -41,7 +41,7 @@ else
     //game is not pinned
     if(substr_count($result,";") < 3)
     {
-        if($result = '')
+        if($result == '')
         {
             $query = "UPDATE `accounts` SET `PinnedGames`=='$gameName;' WHERE ID='$userid'";
         }
