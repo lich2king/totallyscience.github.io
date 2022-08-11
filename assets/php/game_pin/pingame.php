@@ -29,7 +29,7 @@ if (!function_exists('str_contains')) {
     }
 }
 
-die(str_contains($result, `e`));
+die(str_contains($result, `z`));
 
 if(str_contains($result, `$gameName;`))
 {
