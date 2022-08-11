@@ -20,8 +20,9 @@ $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
 $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
+$result = ($result -> fetch_row())[0];
 
-if(str_contains($result, `$gameName;`))
+if(str_contains($result, "$gameName;"))
 {
     //game is pinned
     echo('pinned');    
