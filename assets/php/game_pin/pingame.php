@@ -43,14 +43,14 @@ else
     {
         
         $pinnedString = "$result$gameName";
-        die($pinnedString);
+        //die($pinnedString);
         $query = "UPDATE `accounts` SET PinnedGames='$pinnedString;' WHERE ID='$userid'";
-        mysqli_query($conn, $query);
-        echo('feewew');
-        // if ($conn->query($query) === TRUE) 
-        // {
-        //     echo('successpinned');
-        // }
+        //mysqli_query($conn, $query);
+        //echo('feewew');
+        if ($conn->query($query) === TRUE) 
+        {
+            echo('successpinned');
+        }
     }
     else
     {
