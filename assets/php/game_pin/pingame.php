@@ -49,7 +49,7 @@ else
         //echo('feewew');
         if ($conn->query($query) === TRUE) 
         {
-            echo('successpinned');
+            die('successpinned');
         }
     }
     else
