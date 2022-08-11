@@ -43,7 +43,7 @@ else
     {
         $query = "UPDATE `accounts` SET `PinnedGames`=CONCAT(`PinnedGames`,'$gameName;') WHERE ID='$userid'";
         mysqli_query($conn, $query);
-        echo('successpinned');
+        echo('succwwesspinned');
         // if ($conn->query($query) === TRUE) 
         // {
         //     echo('successpinned');
