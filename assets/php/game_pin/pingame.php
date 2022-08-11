@@ -21,6 +21,7 @@ $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
 
+/*
 if(str_contains(`$gameName;`, $result))
 {
     //game is pinned
@@ -32,7 +33,8 @@ else
     if(substr_count($result,";") < 3)
     {
         $query = "UPDATE `accounts` SET `PinnedGames`=CONCAT(`PinnedGames`,'$gameName;') WHERE ID='$userid'";
-        if ($conn->query($query) === TRUE) {
+        if ($conn->query($query) === TRUE) 
+        {
             echo('successpinned');
         }
     }
@@ -42,7 +44,7 @@ else
     }
     
     
-}
+}*/
 
 
 
