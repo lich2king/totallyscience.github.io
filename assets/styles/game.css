@@ -73,6 +73,8 @@ html {
     font-family: 'Rubik';
     font-size: 15px;
     text-shadow: var(--dark-color) 1px 0 10px;
+    width: 1.25vw;
+    text-align: center;
 }
 
 #gameframe .options .right {
