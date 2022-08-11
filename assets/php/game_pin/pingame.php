@@ -29,7 +29,7 @@ if (!function_exists('str_contains')) {
     }
 }
 
-if(str_contains("$result", "$gameName;"))
+if(str_contains($result, `$gameName;`))
 {
     //game is pinned
     echo('prevpinned');
