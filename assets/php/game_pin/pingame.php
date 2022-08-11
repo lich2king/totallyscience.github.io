@@ -30,7 +30,7 @@ if (!function_exists('str_contains')) {
 }
 
 // die(str_contains('Slope;Chess;', 'Chess;'));
-var_dump($result);
+die($result);
 
 /*
 if(str_contains($result, `$gameName;`))
