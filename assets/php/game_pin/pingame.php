@@ -41,7 +41,7 @@ else
     //game is not pinned
     if(substr_count($result,";") < 3)
     {
-        $query = "UPDATE `accounts` SET PinnedGames='$result$gameName;' WHERE ID='$userid'";
+        $query = "UPDATE `accounts` SET PinnedGames='$gameName;' WHERE ID='$userid'";
         mysqli_query($conn, $query);
         echo('successpinned');
         // if ($conn->query($query) === TRUE) 
