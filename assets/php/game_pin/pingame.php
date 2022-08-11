@@ -21,6 +21,12 @@ $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
 
+if (!function_exists('str_contains')) {
+    function str_contains( $haystack, $needle)
+    {
+        return $needle !== '' && mb_strpos($haystack, $needle) !== false;
+    }
+}
 
 if(str_contains("hello", "e"))
 {
