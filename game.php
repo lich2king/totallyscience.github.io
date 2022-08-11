@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/game.css?v5'>
+    <link rel='stylesheet' href='assets/styles/game.css?v6'>
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
@@ -84,7 +84,7 @@
 
 
 
-    <script src="assets/scripts/game.js?v24"></script>
+    <script src="assets/scripts/game.js?v25"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
