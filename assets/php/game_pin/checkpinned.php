@@ -22,6 +22,15 @@ $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
 $result = ($result -> fetch_row())[0];
 
+
+if (!function_exists('str_contains')) {
+    function str_contains( $haystack, $needle)
+    {
+        return $needle !== '' && mb_strpos($haystack, $needle) !== false;
+    }
+}
+
+
 if(str_contains($result, "$gameName;"))
 {
     //game is pinned
