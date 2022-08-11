@@ -51,14 +51,12 @@
                 <br>
                 Would you like to request it?
             </p>
-            <button class="regularButton" style="height: 6vh">
-                Request Game
-            </button>
+
+            <button>Request Game</button>
         </div>
     </div>
 
-    <div style = "padding-bottom: 14vh">
-    </div>
+    <div style = "padding-bottom: 14vh"></div>
 
     <?php include "assets/includes/footer.php" ?>
 

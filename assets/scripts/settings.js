@@ -1,3 +1,5 @@
+// READY
+
 const websiteInput = document.getElementById('website');
 const saveBtn = document.getElementById('save-button');
 const disguiseInput = document.getElementById('disguise');
