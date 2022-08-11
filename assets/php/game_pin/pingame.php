@@ -42,10 +42,12 @@ else
     if(substr_count($result,";") < 3)
     {
         $query = "UPDATE `accounts` SET `PinnedGames`=CONCAT(`PinnedGames`,'$gameName;') WHERE ID='$userid'";
-        if ($conn->query($query) === TRUE) 
-        {
-            echo('successpinned');
-        }
+        mysqli_query($conn, $query);
+        echo('successpinned');
+        // if ($conn->query($query) === TRUE) 
+        // {
+        //     echo('successpinned');
+        // }
     }
     else
     {
