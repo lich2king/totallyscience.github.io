@@ -43,11 +43,11 @@ else
     {
         if($result == '')
         {
-            $query = "UPDATE `accounts` SET `PinnedGames`='$gameName;' WHERE ID='$userid'";
+            $query = "UPDATE `accounts` SET `PinnedGames`=`$gameName;` WHERE ID='$userid'";
         }
         else
         {
-            $query = "UPDATE `accounts` SET `PinnedGames`=CONCAT(`PinnedGames`,'$gameName;') WHERE ID='$userid'";
+            $query = "UPDATE `accounts` SET PinnedGames=CONCAT(PinnedGames,`$gameName;`) WHERE ID='$userid'";
         }
         mysqli_query($conn, $query);
         echo('successpinned');
