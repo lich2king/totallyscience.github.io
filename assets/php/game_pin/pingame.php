@@ -43,7 +43,7 @@ else
     {
         if($result == '')
         {
-            $query = "UPDATE `accounts` SET `PinnedGames`=='$gameName;' WHERE ID='$userid'";
+            $query = "UPDATE `accounts` SET `PinnedGames`='$gameName;' WHERE ID='$userid'";
         }
         else
         {
