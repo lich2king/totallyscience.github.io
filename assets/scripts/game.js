@@ -32,6 +32,10 @@ let likeCount = 0;
 const likeButton = document.querySelector('#like');
 const likeButtonImg = likeButton.firstChild;
 
+const pinButton = document.querySelector('#pin');
+const pinButtonImg = pinButton.firstChild;
+
+
 window.addEventListener('load', () => {
 
     //get game data for iframe etc
@@ -72,11 +76,18 @@ window.addEventListener('load', () => {
         likeCount = parseInt(res);
         UpdateLikeCount();
     });
+
+    //check if user pinned the game previously
+    fetch(`assets/php/game_pin/checkpinned.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+        if (res == 'pinned') {
+            pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+        }
+    });
 });
 
+
+
 //Like Button
-
-
 
 
 likeButton.addEventListener('click', function() {
@@ -114,13 +125,19 @@ function UpdateLikeCount() {
 }
 
 
-const pinButton = document.querySelector('#pin');
-const pinButtonImg = pinButton.firstChild;
+
 
 
 pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
+            fetch(`assets/php/game_pin/pingame.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                if (res == 'successpinned') {
+                    pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+                } else if (res == 'maxpins') {
+                    alert('You have pinned the max amount of games (3).');
+                }
+            });
             pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
         } else {
             pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
