@@ -29,7 +29,7 @@ if (!function_exists('str_contains')) {
     }
 }
 
-echo(`$result`);
+die(str_contains('Slope;Chess;', `Tanuki Sunset;`));
 
 if(str_contains($result, `$gameName;`))
 {
