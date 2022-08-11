@@ -44,7 +44,7 @@ else
         $pinnedString = "$result+$gameName";
         $query = "UPDATE `accounts` SET PinnedGames='$pinnedString;' WHERE ID='$userid'";
         mysqli_query($conn, $query);
-        echo('fe');
+        echo('feewew');
         // if ($conn->query($query) === TRUE) 
         // {
         //     echo('successpinned');
