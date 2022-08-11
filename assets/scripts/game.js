@@ -140,6 +140,7 @@ pinButton.addEventListener('click', function() {
             });
             pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
         } else {
+            fetch(`assets/php/game_pin/unpingame.php?name=${gameName}`);
             pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
         }
     } else {
