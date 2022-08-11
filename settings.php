@@ -30,7 +30,7 @@
             <option value="wiki">Wikipedia</option>
         </select>
         <br>
-        <button onclick="" class="regularButton"><span>Save</span></button>
+        <button id="save-button" onclick="submit()" class="regularButton"><span>Save</span></button>
     </div>
 
 
