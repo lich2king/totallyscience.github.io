@@ -26,7 +26,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=Retro%20Bowl', '_self')" class="featureButton">Play Now</button>
+                <button onclick="window.open('game.php?class=Retro%20Bowl', '_self')" class="featureButton button">Play Now</button>
             </div>
             <div style="background-image: url(./assets/images/impossiblefeaturedimage.png); display:none;" class="imageTest fade">
                 <div class="arrows">
@@ -38,7 +38,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton">Play Now</button>
+                <button onclick="window.open('game.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton button">Play Now</button>
             </div>
             <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
                 <div class="arrows">
@@ -50,7 +50,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=Basketball%20Stars', '_self')" class="featureButton">Play Now</button>
+                <button onclick="window.open('game.php?class=Basketball%20Stars', '_self')" class="featureButton button">Play Now</button>
             </div>
         </div>
 
@@ -98,7 +98,7 @@
     </div>
 
     <div style="text-align:center">
-        <button onclick="window.open('gamesnew.php', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+        <button class="button" onclick="window.open('gamesnew.php', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
     <div id="extraCategories">

@@ -15,9 +15,9 @@
     <div id="chatoptions">
         <input type="text" id="roomcode" placeholder="Room Code...">
         <br>
-        <button onclick=""><span>Join Room</span></button>
+        <button class="button" onclick=""><span>Join Room</span></button>
         <br>
-        <button onclick=""><span>Create Room</span></button>
+        <button class="button" onclick=""><span>Create Room</span></button>
     </div>
 
 

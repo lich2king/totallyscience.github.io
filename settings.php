@@ -26,7 +26,7 @@
         </select>
         
         <br>
-        <button id="save-button" onclick="submit()">Save</button>
+        <button class="button" id="save-button" onclick="submit()">Save</button>
     </div>
 
     <?php include "assets/includes/footer.php" ?>

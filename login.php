@@ -23,7 +23,7 @@
             <input type='password' id='password' name='password' placeholder='**********'><br>
         </div>
 
-        <button id="save-button">Sign In</button>
+        <button class="button" id="save-button">Sign In</button>
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>

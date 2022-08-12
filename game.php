@@ -84,8 +84,9 @@
 
 
 
-    <script src="assets/scripts/game.js?v28"></script>
     <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/game.js?v28"></script>
+
 </body>
 
 </html>

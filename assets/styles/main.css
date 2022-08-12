@@ -1,325 +1,328 @@
-    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
-     :root {
-        --light-color: #ffffff;
-        --background-color: #1F0336;
-        --dark-color: #000000;
-        --accent-color: #f75dfc;
-        --dark-accent: #340060;
-        --box-shadow-color: #ccc;
-    }
-    
-    [theme=dark] {
-        --light-color: #000000;
-        --dark-color: #ffffff;
-        --box-shadow-color: #000000;
-    }
-    
-    html {
-        overflow-x: hidden;
-    }
-    
-    body {
-        padding: 0;
-        margin: 0;
-        background-color: var(--background-color);
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    p2,
-    a,
-    label {
-        font-family: 'Rubik', sans-serif;
-    }
-    
-    #navbar {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: normal;
-        width: 100%;
-        height: 60px;
-        top: 0;
-        left: 0;
-        background-color: var(--background-color);
-        z-index: 99;
-    }
-    
-    .nav-button {
-        float: left;
-        padding-right: 1vw;
-        height: 100%;
-        display: inline-flex;
-        align-items: center;
-    }
-    
-    .nav-button a {
-        text-decoration: none;
-        font-size: 17px;
-        line-height: 40px;
-        letter-spacing: 0.05rem;
-        color: var(--light-color);
-    }
-    
-    #discord {
-        display: flex;
-        align-items: center;
-        margin-right: 0.5vw;
-    }
-    
-    #tiktok {
-        display: flex;
-        align-items: center;
-        margin-right: 1vw;
-    }
-    
-    #settings {
-        display: flex;
-        align-items: center;
-    }
-    
-    #login {
-        margin-top: 18px;
-        margin-right: 0.5vw;
-    }
-    
-    .selected a {
-        border-bottom: 2px solid var(--light-color);
-    }
-    
-    #leftbar {
-        display: flex;
-        justify-content: left;
-        width: 100%;
-        height: 100%;
-        padding-left: 1vw;
-    }
-    
-    #middlebar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-    
-    #middlebar p {
-        font-family: 'Spline Sans', sans-serif;
-        font-size: 30px;
-        color: var(--light-color);
-    }
-    
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
+ :root {
+    --light-color: #ffffff;
+    --background-color: #1F0336;
+    --dark-color: #000000;
+    --accent-color: #f75dfc;
+    --dark-accent: #340060;
+    --box-shadow-color: #ccc;
+}
+
+[theme=dark] {
+    --light-color: #000000;
+    --dark-color: #ffffff;
+    --box-shadow-color: #000000;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+p2,
+a,
+label {
+    font-family: 'Rubik', sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    z-index: 99;
+}
+
+.nav-button {
+    float: left;
+    padding-right: 1vw;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-button a {
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 40px;
+    letter-spacing: 0.05rem;
+    color: var(--light-color);
+}
+
+#discord {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5vw;
+}
+
+#tiktok {
+    display: flex;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+#settings {
+    display: flex;
+    align-items: center;
+}
+
+#login {
+    margin-top: 18px;
+    margin-right: 0.5vw;
+}
+
+.selected a {
+    border-bottom: 2px solid var(--light-color);
+}
+
+#leftbar {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 1vw;
+}
+
+#middlebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#middlebar p {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 30px;
+    color: var(--light-color);
+}
+
+#rightbar {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    padding-right: 1vw;
+}
+
+#rightbar p {
+    font-size: 17px;
+}
+
+#gp {
+    background-color: #f75dfc;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1050px) {
     #rightbar {
-        display: flex;
-        justify-content: right;
-        text-align: right;
-        width: 100%;
-        height: 100%;
-        padding-right: 1vw;
-    }
-    
-    #rightbar p {
-        font-size: 17px;
-    }
-    
-    #gp {
-        background-color: #f75dfc;
-        line-height: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: 10px;
-    }
-    
-    @media (max-width: 1050px) {
-        #rightbar {
-            display: none;
-        }
-        #middlebar {
-            justify-content: right;
-            margin-right: 20px;
-        }
-    }
-    
-    @media (max-width: 675px) {
-        #middlebar {
-            position: absolute;
-            top: 0px;
-            justify-content: center;
-            width: 100%;
-            height: 50%;
-        }
-        #navbar {
-            height: 100px;
-        }
-        #leftbar {
-            margin-top: 45px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            height: 50%;
-            padding-left: 2%;
-        }
-    }
-    
-    .not-selectable {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    
-    #scrollb {
         display: none;
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        z-index: 99;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
     }
-    /*#region scrollbar*/
-    
-     ::-webkit-scrollbar {
-        width: 10px;
+    #middlebar {
+        justify-content: right;
+        margin-right: 20px;
     }
-    /* Track */
-    
-     ::-webkit-scrollbar-track {
-        background: var(--dark-accent);
-        border-radius: 10px;
-    }
-    /* Handle */
-    
-     ::-webkit-scrollbar-thumb {
-        background: var(--accent-color);
-        border-radius: 10px;
-    }
-    /* Handle on hover */
-    
-     ::-webkit-scrollbar-thumb:hover {
-        background: #bc47c0;
-    }
-    /*#endregion*/
-    
-    /*#region Footer */
-    
-    #gamePassAd {
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-        width: 100vw;
-        height: 16vh;
-        background-color: var(--dark-accent);
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        gap: 10vw;
+}
+
+@media (max-width: 675px) {
+    #middlebar {
+        position: absolute;
+        top: 0px;
         justify-content: center;
-        text-align: center;
-    }
-    
-    #gamePassAd div img {
-        width: 5vw;
-    }
-    
-    #gamePassAd div p {
-        font-size: 1vw;
-        color: var(--light-color);
-    }
-    
-    #gamePassAd div button {
-        height: 5vh;
-        color: var(--light-color);
-        font-size: 1.25vw;
-        font-family: 'Rubik';
-        cursor: pointer;
-        background-color: var(--accent-color);
-        padding-left: 3vw;
-        padding-right: 3vw;
-        border-radius: 15px;
-        font-weight: 900;
-        border: none;
-    }
-    
-    #gamePassAd div h1 {
-        font-size: 2vw;
-        color: var(--light-color);
-        margin-top: 1.5vh;
-    }
-    
-    #gamePassAd div h1 span {
-        color: var(--accent-color);
-    }
-    
-    footer {
-        width: 100vw;
-        height: 25vh;
-        background-color: #1C1C1C;
-    }
-    
-    footer .footSections {
         width: 100%;
-        height: 90%;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 0vw;
+        height: 50%;
+    }
+    #navbar {
+        height: 100px;
+    }
+    #leftbar {
+        margin-top: 45px;
+        display: flex;
         justify-content: center;
-        text-align: center;
+        width: 100%;
+        height: 50%;
+        padding-left: 2%;
     }
-    
-    footer .footSection {
-        width: 25vw;
-        height: 100%;
-    }
-    
-    footer .teamFoot {
-        font-size: 1vw;
-        font-family: 'Rubik';
-        color: var(--light-color);
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 1vw;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    footer h1 {
-        font-size: 1.5vw;
-    }
-    
-    footer h1,
-    footer p,
-    footer a {
-        color: var(--light-color);
-        text-decoration: none;
-    }
-    
-    footer a:hover {
-        color: var(--accent-color);
-    }
-    
-    footer .bottomFoot {
-        text-align: center;
-        color: var(--light-color);
-        font-size: 0.8vw;
-        font-family: 'Rubik';
-    }
-    /*#endregion*/
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#scrollb {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 
+/*#region scrollbar*/
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
 
 
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: var(--dark-accent);
+    border-radius: 10px;
+}
 
 
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
 
 
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #bc47c0;
+}
 
 
+/*#endregion*/
+
+
+/*#region Footer */
+
+#gamePassAd {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 100vw;
+    height: 16vh;
+    background-color: var(--dark-accent);
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#gamePassAd div img {
+    width: 5vw;
+}
+
+#gamePassAd div p {
+    font-size: 1vw;
+    color: var(--light-color);
+}
+
+#gamePassAd div button {
+    height: 5vh;
+    color: var(--light-color);
+    font-size: 1.25vw;
+    font-family: 'Rubik';
+    cursor: pointer;
+    background-color: var(--accent-color);
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 15px;
+    font-weight: 900;
+    border: none;
+}
+
+#gamePassAd div h1 {
+    font-size: 2vw;
+    color: var(--light-color);
+    margin-top: 1.5vh;
+}
+
+#gamePassAd div h1 span {
+    color: var(--accent-color);
+}
+
+footer {
+    width: 100vw;
+    height: 25vh;
+    background-color: #1C1C1C;
+}
+
+footer .footSections {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0vw;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .footSection {
+    width: 25vw;
+    height: 100%;
+}
+
+footer .teamFoot {
+    font-size: 1vw;
+    font-family: 'Rubik';
+    color: var(--light-color);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1vw;
+    justify-content: center;
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 1.5vw;
+}
+
+footer h1,
+footer p,
+footer a {
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+footer .bottomFoot {
+    text-align: center;
+    color: var(--light-color);
+    font-size: 0.8vw;
+    font-family: 'Rubik';
+}
+
+
+/*#endregion*/
 
 input[type='text'] {
     font-family: 'Rubik';
@@ -355,7 +358,7 @@ select {
     color: var(--dark-color);
 }
 
-button {
+.button {
     padding: 20px 30px 20px 30px;
     height: auto;
     border: none;
@@ -373,11 +376,11 @@ button {
     transition: transform 0.1s ease;
 }
 
-button:hover {
+.button:hover {
     transform: scale(1.05);
 }
 
-button>img,
-button>span {
+.button>img,
+.button>span {
     vertical-align: middle;
 }

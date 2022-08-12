@@ -50,7 +50,7 @@
                     <option value="Other">Other</option>
                 </select>
         </div>
-        <button id="save-button">Sign Up</button>
+        <button class="button" id="save-button">Sign Up</button>
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
