@@ -233,24 +233,40 @@ function suggestGames() {
 
 
         document.getElementById('scisuggests').innerHTML = '';
-        randomGames.forEach(function(game) {
-            const gameBtn = `
+        for (let i = 0; i < 3; i++) {
+            let game = randomGames[i];
+            let gameBtn = `
                     <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
-
             document.getElementById('scisuggests').innerHTML += gameBtn;
-        })
-        pinnedGames.forEach(function(game) {
-            const gameBtn = `
+            game = pinnedGames[i];
+            gameBtn = `
                     <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
-
             document.getElementById('scisuggests').innerHTML += gameBtn;
-        })
+        }
+        // randomGames.forEach(function(game) {
+        //     const gameBtn = `
+        //             <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
+        //                 <div class="innerGameDiv">${game}</div>
+        //             </div>
+        //             `;
+
+        //     document.getElementById('scisuggests').innerHTML += gameBtn;
+        // })
+        // pinnedGames.forEach(function(game) {
+        //     const gameBtn = `
+        //             <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
+        //                 <div class="innerGameDiv">${game}</div>
+        //             </div>
+        //             `;
+
+        //     document.getElementById('scisuggests').innerHTML += gameBtn;
+        // })
     });
 }
 
