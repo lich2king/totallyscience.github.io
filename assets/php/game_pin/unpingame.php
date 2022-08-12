@@ -35,7 +35,7 @@ if(str_contains($result, "$gameName;"))
 {
     //game is pinned
 
-    $pinnedString = str_replace("$gameName;", "", $result);
+    $pinnedString = str_replace(";$gameName", "", $result);
 
     $query = "UPDATE `accounts` SET PinnedGames='$pinnedString' WHERE ID='$userid'";
 
