@@ -41,14 +41,7 @@ else
     //game is not pinned
     if(substr_count($result,";") < 3)
     {
-        if(substr_count($result,";") == 0)
-        {
-            $pinnedString = "$result$gameName";
-        }
-        else
-        {
-            $pinnedString = ";$result$gameName";
-        }
+        $pinnedString = ";$result$gameName";
         //die($pinnedString);
         $query = "UPDATE `accounts` SET PinnedGames='$pinnedString' WHERE ID='$userid'";
         //mysqli_query($conn, $query);
