@@ -36,7 +36,7 @@
 })(document, window);
 </script>
 
-<link rel="stylesheet" href="assets/styles/main.css">
+<link rel="stylesheet" href="assets/styles/main.css?v1">
 <link rel="icon" href="assets/images/logo.png">
 
 <title>Totally Science</title>
