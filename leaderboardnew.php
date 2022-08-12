@@ -21,7 +21,7 @@
     <h1 id="nohighscore" style="display:none"></h1>
 
     <div style="text-align:center; margin-top:100px">
-        <button onclick="window.open('#', '_self')" class="regularButton"><span>Submit Highscore</span> <img
+        <button onclick="window.open('#', '_self')"><span>Submit Highscore</span> <img
                 style="padding-left:0.5vw" width="16vw"
                 src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>

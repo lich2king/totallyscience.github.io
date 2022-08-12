@@ -98,9 +98,7 @@
     </div>
 
     <div style="text-align:center">
-        <button onclick="window.open('gamesnew.php', '_self')" class="regularButton"><span>ALL GAMES</span> <img
-                style="padding-left:0.5vw" width="16vw"
-                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+        <button onclick="window.open('gamesnew.php', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
     <div id="extraCategories">

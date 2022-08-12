@@ -207,27 +207,7 @@ html {
 .featureButton {
     position: absolute;
     margin-top: 275px;
-    height: 70px;
-    border: none;
-    color: var(--light-color);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    font-family: 'Rubik';
-    cursor: pointer;
-    background-color: var(--accent-color);
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    border-radius: 20px;
-    font-weight: 900;
-    transition: opacity 0.3s ease;
-    transition: transform 0.1s ease;
     margin-right: 50px;
-}
-
-.featureButton:hover {
-    transform: scale(1.05);
 }
 
 .arrows {
