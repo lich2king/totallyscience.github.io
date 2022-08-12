@@ -227,6 +227,7 @@ function suggestGames() {
                 }
                 alert(randGame);
                 pinnedGames.push(randGame);
+                alert(pinnedGames);
             }
         }
 
