@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
         }
     }).then((games) => {
         const gameData = games[gameName];
-        if (gameData == null) window.location.href = '../classes';
+        if (gameData == null) window.location.href = '../gamesnew.php';
 
         document.getElementById('description').innerText = gameData.description;
         document.getElementById('controls').innerText = gameData.controls;
