@@ -217,6 +217,7 @@ function suggestGames() {
             randomGames.push(randGame);
         }
 
+
         //first pinned game is always going to be '' so length will always be atleast 1
         pinnedGames = pinnedGames.slice(1);
         if (pinnedGames.length < 3) {
@@ -242,12 +243,22 @@ function suggestGames() {
                     `;
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
-            gameBtn = `
+            if (i <= pinnedGames.length - 1) {
+                gameBtn = `
                     <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
                         <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
+            } else {
+                gameBtn = `
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
+                        <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
+                        <div class="innerGameDiv">${game}</div>
+                    </div>
+                    `;
+            }
+
             document.getElementById('scisuggests').innerHTML += gameBtn;
         }
         // randomGames.forEach(function(game) {
