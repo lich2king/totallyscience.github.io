@@ -255,7 +255,6 @@ function suggestGames() {
             } else {
                 gameBtn = `
                     <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
-                        <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
