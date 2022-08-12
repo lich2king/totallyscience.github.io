@@ -202,26 +202,55 @@ buttons.forEach((button) => {
 
 
 function suggestGames() {
-    let randomGames = []
-    for (let x = displayedGames; x < displayedGames + 6; x++) {
-        let randGame = randomProperty(games)
-        while (randomGames.includes(randGame)) {
-            randGame = randomProperty(games)
-        }
-        randomGames.push(randGame);
-    }
+    let pinnedGames = [];
+    //check previously pinned games
+    fetch(`assets/php/game_pin/getpinnedgames.php`).then((response) => response.text()).then((res) => {
 
-    document.getElementById('scisuggests').innerHTML = '';
-    randomGames.forEach(function(game) {
-        const gameBtn = `
+        pinnedGames = res.split(";");
+        let randomGames = [];
+
+        for (let x = displayedGames; x < displayedGames + 3; x++) {
+            let randGame = randomProperty(games)
+            while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
+                randGame = randomProperty(games)
+            }
+            randomGames.push(randGame);
+        }
+
+
+        if (pinnedGames.length < 3) {
+            let generateGames = 3 - pinnedGames.length;
+            for (let i = 0; i < generateGames + 1; i++) {
+                let randGame = randomProperty(games)
+                while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
+                    randGame = randomProperty(games)
+                }
+                pinnedGames.push(randGame);
+            }
+        }
+
+
+
+        document.getElementById('scisuggests').innerHTML = '';
+        randomGames.forEach(function(game) {
+            const gameBtn = `
                     <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
                         <div class="innerGameDiv">${game}</div>
                     </div>
                     `;
 
-        document.getElementById('scisuggests').innerHTML += gameBtn;
-    })
+            document.getElementById('scisuggests').innerHTML += gameBtn;
+        })
+        pinnedGames.forEach(function(game) {
+            const gameBtn = `
+                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
+                        <div class="innerGameDiv">${game}</div>
+                    </div>
+                    `;
 
+            document.getElementById('scisuggests').innerHTML += gameBtn;
+        })
+    });
 }
 
 var randomProperty = function(object) {
