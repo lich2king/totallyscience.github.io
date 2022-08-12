@@ -219,8 +219,6 @@ function suggestGames() {
 
         alert(pinnedGames.length);
         if (pinnedGames.length < 3) {
-            //const index = pinnedGames.indexOf('');
-            array.splice(0, 1); // 2nd parameter means remove one item only
             let generateGames = 3 - pinnedGames.length;
             for (let i = 0; i < generateGames + 1; i++) {
                 let randGame = randomProperty(games)
