@@ -171,7 +171,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/indexnew.js?v10"></script>
+    <script src="assets/scripts/indexnew.js?v11"></script>
 </body>
 
 </html>
