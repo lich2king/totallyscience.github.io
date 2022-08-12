@@ -218,9 +218,10 @@ function suggestGames() {
         }
 
         //first pinned game is always going to be '' so length will always be atleast 1
-        if (pinnedGames.length < 4) {
-            let generateGames = 4 - pinnedGames.length;
-            for (let i = 1; i < generateGames; i++) {
+        pinnedGames = pinnedGames.slice(1);
+        if (pinnedGames.length < 3) {
+            let generateGames = 3 - pinnedGames.length;
+            for (let i = 0; i < generateGames; i++) {
                 let randGame = randomProperty(games)
                 while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
                     randGame = randomProperty(games)
