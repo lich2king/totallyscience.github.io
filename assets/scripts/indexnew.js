@@ -220,6 +220,8 @@ function suggestGames() {
 
         //first pinned game is always going to be '' so length will always be atleast 1
         pinnedGames = pinnedGames.slice(1);
+        let totalPinned = pinnedGames.length;
+
         if (pinnedGames.length < 3) {
             let generateGames = 3 - pinnedGames.length;
             for (let i = 0; i < generateGames; i++) {
@@ -243,7 +245,7 @@ function suggestGames() {
                     `;
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
-            if (i <= pinnedGames.length - 1) {
+            if (i <= totalPinned - 1) {
                 gameBtn = `
                     <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
                         <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
