@@ -220,7 +220,7 @@ function suggestGames() {
         alert(pinnedGames.length);
         if (pinnedGames.length < 3) {
             let generateGames = 3 - pinnedGames.length;
-            for (let i = 0; i < generateGames + 1; i++) {
+            for (let i = 0; i < generateGames; i++) {
                 let randGame = randomProperty(games)
                 while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
                     randGame = randomProperty(games)
