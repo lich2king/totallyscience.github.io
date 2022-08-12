@@ -217,7 +217,7 @@ function suggestGames() {
             randomGames.push(randGame);
         }
 
-
+        alert(pinnedGames);
         if (pinnedGames.length < 3) {
             let generateGames = 3 - pinnedGames.length;
             for (let i = 0; i < generateGames + 1; i++) {
