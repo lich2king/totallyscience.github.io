@@ -460,6 +460,25 @@ input[type='text'] {
     text-shadow: var(--dark-color) 1px 0 10px;
 }
 
+#pin {
+    position: absolute;
+    top: -10%;
+    left: 85%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+#pin:hover {
+    transform: scale(1.1);
+}
+
+#pin img {
+    width: 40px;
+    height: 40px;
+}
+
 
 /*#endregion*/
 
