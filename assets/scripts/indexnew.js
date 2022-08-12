@@ -219,13 +219,13 @@ function suggestGames() {
 
 
         if (pinnedGames.length < 3) {
-            alert(pinnedGames.length);
             let generateGames = 3 - pinnedGames.length;
             for (let i = 0; i < generateGames + 1; i++) {
                 let randGame = randomProperty(games)
                 while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
                     randGame = randomProperty(games)
                 }
+                alert(randGame);
                 pinnedGames.push(randGame);
             }
         }
