@@ -5,21 +5,16 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/settings.css'>
-
-    <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="settingoptions">
-        <p>
-            School Website
-        </p>
+        <p>School Website</p>
         <input type="text" id="website" placeholder="Google.com">
-        <p>
-            Disguise Tab
-        </p>
+    
+        <p>Disguise Tab</p>
         <select name="disguise" id="disguise">
             <option value="none">None</option>
             <option value="gc">Google Classroom</option>
@@ -29,10 +24,10 @@
             <option value="calc">Calculator</option>
             <option value="wiki">Wikipedia</option>
         </select>
+        
         <br>
-        <button onclick="submit()" class="regularButton"><span>Save</span></button>
+        <button id="save-button" onclick="submit()">Save</button>
     </div>
-
 
     <?php include "assets/includes/footer.php" ?>
 
