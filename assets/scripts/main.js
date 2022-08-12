@@ -23,6 +23,18 @@ if (localStorage.getItem('disguise') == null) {
     } else if (localStorage.getItem('disguise') == 'canvas') {
         title.innerHTML = 'Dashboard';
         favicon.href = './assets/images/disguises/canvasicon.jpg';
+    } else if (localStorage.getItem('disguise') == 'g') {
+        title.innerHTML = 'Google';
+        favicon.href = '';
+    } else if (localStorage.getItem('disguise') == 'g') {
+        title.innerHTML = 'Google';
+        favicon.href = '';
+    } else if (localStorage.getItem('disguise') == 'calc') {
+        title.innerHTML = 'Calculator';
+        favicon.href = '';
+    } else if (localStorage.getItem('disguise') == 'wiki') {
+        title.innerHTML = 'Wikipedia';
+        favicon.href = '';
     }
 }
 
@@ -46,7 +58,7 @@ window.addEventListener('load', () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
-    
+
     // scroll button
     const scrollButton = document.getElementById('scrollb');
 
