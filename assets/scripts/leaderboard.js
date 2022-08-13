@@ -34,7 +34,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                             </p>
                         </div>
                         <div class="image">
-                            <img style="background-image: url('${games[game].image}')" src="">
+                            <img style="background-image: url('${games[game].image}'); background-position: center; background-repeat: no-repeat; background-size: cover;" src="">
                         </div>
                     </div>
                 `;
