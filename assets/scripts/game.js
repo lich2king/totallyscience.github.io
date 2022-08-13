@@ -35,6 +35,8 @@ const likeButtonImg = likeButton.firstChild;
 const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
+const currentHighscore = 0;
+
 
 window.addEventListener('load', () => {
 
@@ -71,10 +73,16 @@ window.addEventListener('load', () => {
         }
     });
 
-    //set like count
+    //get like count
     fetch(`assets/php/game_likes/getlikes.php?name=${gameName}`).then((response) => response.text()).then((res) => {
         likeCount = parseInt(res);
         UpdateLikeCount();
+    });
+
+    //get current highscore
+    fetch(`assets/php/game_likes/getgamehighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+        currentHighscore = numFormatter(res);
+        document.getElementById('currentHighscore').innerText = currentHighscore;
     });
 
     //check if user pinned the game previously
