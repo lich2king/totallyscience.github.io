@@ -33,14 +33,15 @@ html {
     display: flex;
     margin-top: 0;
     flex: 1;
-    padding: 8%;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     gap: 10%;
+    padding: 5%;
 }
 
 .p-view {
+    position: relative;
     display: flex;
     flex-direction: row;
     max-width: 500px;
@@ -60,6 +61,25 @@ html {
 
 .p-view:hover {
     transform: scale(1.05);
+}
+
+#pin {
+    position: absolute;
+    top: -15%;
+    left: 85%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+#pin:hover {
+    transform: scale(1.1);
+}
+
+#pin img {
+    width: 125px;
+    height: 125px;
 }
 
 .whygoprem-container {
@@ -140,6 +160,10 @@ html {
 
 .p-view h3 {
     color: white;
+}
+
+.p-view h3 span {
+    font-size: 20px;
 }
 
 .p-view p {
