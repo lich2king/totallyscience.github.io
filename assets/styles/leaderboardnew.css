@@ -95,11 +95,14 @@ h2 {
     align-items: center;
 }
 
-#highscore .image img {
+#highscore .image div {
     margin-left: 2vw;
     border-radius: 30px;
     height: 12vh;
     width: 12vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #nohighscore {

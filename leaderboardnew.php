@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/leaderboardnew.css?v4'>
+    <link rel='stylesheet' href='assets/styles/leaderboardnew.css?v5'>
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
@@ -35,7 +35,7 @@
 
 
 
-    <script src="assets/scripts/leaderboard.js?v20"></script>
+    <script src="assets/scripts/leaderboard.js?v21"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
