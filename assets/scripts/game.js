@@ -81,8 +81,10 @@ window.addEventListener('load', () => {
 
     //get current highscore
     fetch(`assets/php/game_likes/getgamehighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-        const currentHighscore = numFormatter(res);
-        document.getElementById('currentHighscore').innerText = currentHighscore;
+        if (res != null) {
+            const currentHighscore = numFormatter(res);
+            document.getElementById('currentHighscore').innerText = currentHighscore;
+        }
     });
 
     //check if user pinned the game previously
