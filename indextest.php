@@ -135,36 +135,36 @@
             </div>
             <p>Car Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=multiplayer', '_self')">
             <div>
-                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
+                <img src="https://cdn-icons-png.flaticon.com/512/444/444183.png" />
             </div>
-            <p>Game</p>
+            <p>Multiplayer Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=running', '_self')">
             <div>
-                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
+                <img src="https://files.gamezhero.com/game/44d/e0a/44de0ad44e6a08ac/images/240/angrygranrunbrazil.jpg" />
             </div>
-            <p>Game</p>
+            <p>Running Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=puzzle', '_self')">
             <div>
-                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5aL_3E5VL51rb9AcbFYYolnT_5Q6V-aura8bcQ0q9winWetUD2pFPpVxEh1_LqBpm-E&usqp=CAU" />
             </div>
-            <p>Game</p>
+            <p>Puzzle Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=arcade', '_self')">
             <div>
-                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1251460/capsule_616x353.jpg?t=1607094043" />
+                <img src="https://media.istockphoto.com/vectors/retro-80s-video-game-joystick-controller-vector-id165555994?k=20&m=165555994&s=170667a&w=0&h=BSWOQbVEcsYeZKKqzSNPUEOtBeLp0heVNqknBaJby9g=" />
             </div>
-            <p>Game</p>
+            <p>Arcade Games</p>
         </div>
-        <div id="extraCategory">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=clicker', '_self')">
             <div>
                 <img
-                    src="https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png" />
+                    src="https://clicker-games.com/images/home.png" />
             </div>
-            <p>Game</p>
+            <p>Clicker Games</p>
         </div>
     </div>
 
