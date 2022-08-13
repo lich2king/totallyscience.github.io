@@ -35,7 +35,7 @@
 
 
 
-    <script src="assets/scripts/leaderboard.js?v19"></script>
+    <script src="assets/scripts/leaderboard.js?v20"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
