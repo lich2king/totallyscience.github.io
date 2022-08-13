@@ -35,7 +35,7 @@ const likeButtonImg = likeButton.firstChild;
 const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
-const currentHighscore = 0;
+
 
 
 window.addEventListener('load', () => {
@@ -81,7 +81,7 @@ window.addEventListener('load', () => {
 
     //get current highscore
     fetch(`assets/php/game_likes/getgamehighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-        currentHighscore = numFormatter(res);
+        const currentHighscore = numFormatter(res);
         document.getElementById('currentHighscore').innerText = currentHighscore;
     });
 
