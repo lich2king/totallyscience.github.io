@@ -85,7 +85,7 @@
 
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/game.js?v32"></script>
+    <script src="assets/scripts/game.js?v33"></script>
 
 </body>
 
