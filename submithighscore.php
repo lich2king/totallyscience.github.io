@@ -28,7 +28,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/submithighscore.js"></script>
+    <script src="assets/scripts/submithighscore.js?v1"></script>
 </body>
 
 </html>
