@@ -403,3 +403,8 @@ select {
 .button>span {
     vertical-align: middle;
 }
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
