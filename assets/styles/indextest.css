@@ -6,8 +6,12 @@ html {
     display: flex;
     flex: 1;
     flex-direction: row;
+    padding: 2vw;
+    align-content: center;
+    justify-content: center;
     flex-wrap: wrap;
-    top: 2vh;
+    gap: 2%;
+    margin-top: 50px;
 }
 
 .stroke-text {
@@ -164,17 +168,6 @@ html {
     margin-left: 5px;
 }
 
-#startcontent {
-    display: flex;
-    flex: 1;
-    padding: 2vw;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2%;
-    margin-top: 100px;
-}
-
 #feature {
     display: flex;
     flex: 2;
@@ -285,7 +278,7 @@ html {
     background-color: var(--background-color);
     top: 60px;
     /**/
-    margin-top: 10vh;
+    margin-top: 5vh;
     width: 100vw;
     height: 10vh;
     margin-bottom: 10vh;
