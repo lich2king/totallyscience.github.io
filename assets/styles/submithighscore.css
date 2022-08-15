@@ -1,0 +1,18 @@
+/* READY */
+
+#gameInfo {
+    margin-top: 120px;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 40vh;
+}
+
+#gameInfo p {
+    color: var(--light-color);
+    font-size: 1.25vw;
+    font-family: 'Rubik';
+}
+
+#save-button {
+    font-size: 25px;
+}

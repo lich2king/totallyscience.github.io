@@ -341,6 +341,25 @@ input[type='text'] {
     color: var(--dark-color);
 }
 
+input[type="file"] {
+    font-family: 'Rubik';
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    background-color: var(--light-color);
+    border: transparent;
+    border-radius: 17px;
+    color: var(--dark-color);
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1vw;
+    margin-bottom: 4vh;
+    padding: 1vh 1vw 1vh 1vw;
+    box-sizing: border-box;
+    margin-bottom: 3vh;
+    transition: width 0.4s ease-in-out;
+}
+
 select {
     font-family: 'Rubik';
     margin: auto;
