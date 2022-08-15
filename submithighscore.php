@@ -19,7 +19,7 @@
         <input type="text" id="scoreText" placeholder="100">
 
         <p>Submit a screenshot of your score (Show full screen including top website bar otherwise INVALID)</p>
-        <input type="file" id="fileUpload" placeholder="">
+        <input type="file" id="fileUpload">
         <br><br>
         <button class="button" id="save-button" onclick="SubmitHighscore()">Submit</button>
         <p style="text-align: center; color: red;" id="errorText"></p>
