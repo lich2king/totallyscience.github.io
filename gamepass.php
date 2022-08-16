@@ -38,7 +38,7 @@
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
                     <button onclick="location.href = 'purchasepass.php?pass=monthly'" class="btn">Purchase</button>
                 </div>
-                <button id="pin"><img src="assets/images/icons/discount.png"></button>
+                <button id="pin"><img src="assets/images/icons/Discount.png"></button>
             </div>
         </div>
 
