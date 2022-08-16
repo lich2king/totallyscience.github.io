@@ -52,7 +52,7 @@
                 Would you like to request it?
             </p>
 
-            <button>Request Game</button>
+            <button class="button">Request Game</button>
         </div>
     </div>
 

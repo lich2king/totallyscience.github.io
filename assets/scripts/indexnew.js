@@ -102,11 +102,7 @@ function displayGames() {
         }
 
 
-        const gameBtn = `
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${name}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${name}'" class="${classlist} all">
-                <div class="innerGameDiv">${name}</div>
-            </div>
-        `;
+        const gameBtn = createGameButton(name);
 
 
         gamesDiv.innerHTML += gameBtn;
@@ -135,24 +131,8 @@ searchBar.addEventListener('keyup', () => {
         if (numGames < maxGames) {
             if (game.toUpperCase().includes(input)) {
                 if (games[game].tags.includes(selectedTopic) || selectedTopic == 'all') {
-                    const data = games[game];
 
-                    let classlist = data.tags.join(' ');
-
-                    const weekAgo = new Date();
-                    weekAgo.setDate(weekAgo.getDate() - 7);
-
-                    const gameDate = new Date(data.date_added);
-
-                    if (gameDate > weekAgo) {
-                        classlist += ' new';
-                    }
-
-                    const gameBtn = `
-                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
-                        <div class="innerGameDiv">${game}</div>
-                    </div>
-                    `;
+                    const gameBtn = createGameButton(game);
 
                     gamesDiv.innerHTML += gameBtn;
                     numGames += 1
@@ -238,26 +218,13 @@ function suggestGames() {
         document.getElementById('scisuggests').innerHTML = '';
         for (let i = 0; i < 3; i++) {
             let game = randomGames[i];
-            let gameBtn = `
-                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
-                        <div class="innerGameDiv">${game}</div>
-                    </div>
-                    `;
+            let gameBtn = createGameButton(game);
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
             if (i <= totalPinned - 1) {
-                gameBtn = `
-                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
-                        <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
-                        <div class="innerGameDiv">${game}</div>
-                    </div>
-                    `;
+                gameBtn = createGameButton(game, "pin");
             } else {
-                gameBtn = `
-                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
-                        <div class="innerGameDiv">${game}</div>
-                    </div>
-                    `;
+                gameBtn = createGameButton(game);
             }
 
             document.getElementById('scisuggests').innerHTML += gameBtn;
@@ -302,4 +269,45 @@ function noGif(ele) {
 
     if (data.gif != null)
         ele.style = `background-image: url(${data.image})`;
+}
+
+function createGameButton(game, pin) {
+    const data = games[game];
+
+    let classlist = data.tags.join(' ');
+
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+
+    const gameDate = new Date(data.date_added);
+
+    if (gameDate > weekAgo) {
+        classlist += ' new';
+    }
+
+    let gameBtn = '';
+    if (data.tags.includes("gamepass")) {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else if (pin == "pin") {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    }
+
+    return (gameBtn);
+
 }
