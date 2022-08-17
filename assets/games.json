@@ -975,5 +975,42 @@
         "date_added": "2022-05-16T16:12:45.844Z",
         "developer": "Cheetah Games",
         "iframe_url": "assets/games/webgl-rollingsky/index.html"
+    },
+    "Basket Random": {
+        "description": "Try to score a basket by using only one key with different variations from each other! Changing fields, changing players and changing balls do not surprise you! The one who reaches 5 score first, wins the game.",
+        "image": "./assets/game_images/basket-random.jpg",
+        "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
+        "tags": ["2"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Two Player Games",
+        "iframe_url": "assets/games/basket-random/index.html"
+    },
+    "Boxing Random": {
+        "description": "Changing conditions occur in every round. Sometimes the boxing field changes and sometimes the boxers. Adapt to every random feature and hit accurately. The one who reaches 5 score first, wins the game!",
+        "image": "./assets/game_images/boxingrandom.jpg",
+        "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
+        "tags": ["2"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Two Player Games",
+        "iframe_url": "assets/games/boxing-random/index.html"
+    },
+    "Economical": {
+        "description": "2D puzzle action game where saving coins is important! Aiming for a goal using items. Make a way with blocks.",
+        "image": "./assets/game_images/economical.jpg",
+        "controls": "[w] - jump \n[a] - left\n[d] - right\n[Click] - place block",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Koganegames",
+        "iframe_url": "assets/games/economical/index.html",
+        "gif": "./assets/game_images/gifs/economical.gif"
+    },
+    "Geometry Dash Remastered": {
+        "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
+        "image": "./assets/game_images/geometry-dash-remastered.jpg",
+        "controls": "[Space] - jump",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Arabask",
+        "iframe_url": "assets/games/geometry-dash-remastered/index.html"
     }
 }
