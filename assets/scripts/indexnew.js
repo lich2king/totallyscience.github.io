@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadTopic() {
     displayedGames = 0;
     gamesDiv.innerHTML = '';
+    document.getElementById("noSearch").style.display = 'none';
 
     sorted = sortObject(games);
 
@@ -125,6 +126,7 @@ searchBar.addEventListener('keyup', () => {
     }
 
     gamesDiv.innerHTML = '';
+    document.getElementById("noSearch").style.display = 'none';
 
     let numGames = 0;
     Object.keys(games).forEach((game) => {
@@ -142,6 +144,9 @@ searchBar.addEventListener('keyup', () => {
             return;
         }
     });
+    if (gamesDiv.innerHTML == '') {
+        document.getElementById("noSearch").style.display = '';
+    }
 })
 
 
