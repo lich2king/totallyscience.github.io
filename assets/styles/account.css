@@ -2,15 +2,11 @@ body {
     color: var(--light-color);
 }
 
-a {
-    color: var(--light-color);
-}
-
 #survey {
     text-align: center;
 }
 
-#survey div{
+#survey div {
     padding-bottom: 2vh;
 }
 
@@ -18,7 +14,8 @@ a {
     font-size: 1.75vw;
 }
 
-#survey input, #survey select {
+#survey input,
+#survey select {
     font-family: 'Rubik';
     margin: auto;
     margin-top: 10px;

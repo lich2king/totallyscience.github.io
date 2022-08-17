@@ -408,3 +408,7 @@ a {
     text-decoration: none;
     color: var(--accent-color);
 }
+
+.swal-text {
+    font-family: 'Rubik';
+}

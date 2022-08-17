@@ -114,7 +114,22 @@ likeButton.addEventListener('click', function() {
             UpdateLikeCount();
         }
     } else {
-        alert("You must log in.");
+        swal("You must login to like the game", {
+                buttons: {
+                    cancel: "Cancel",
+                    login: {
+                        text: "Login",
+                        value: "login",
+                    },
+                },
+            })
+            .then((value) => {
+                switch (value) {
+                    case "login":
+                        window.open('signup.php', '_self');
+                        break;
+                }
+            });
     }
 
 });
@@ -145,7 +160,7 @@ pinButton.addEventListener('click', function() {
                 if (res == 'successpinned') {
                     pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
                 } else if (res == 'maxpins') {
-                    alert('You have pinned the max amount of games (3).');
+                    swal('You have pinned the max amount of games (3).');
                 }
             });
         } else {
@@ -153,7 +168,22 @@ pinButton.addEventListener('click', function() {
             pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
         }
     } else {
-        alert("You must log in.")
+        swal("You must login to pin the game", {
+                buttons: {
+                    cancel: "Cancel",
+                    login: {
+                        text: "Login",
+                        value: "login",
+                    },
+                },
+            })
+            .then((value) => {
+                switch (value) {
+                    case "login":
+                        window.open('signup.php', '_self');
+                        break;
+                }
+            });
     }
 });
 

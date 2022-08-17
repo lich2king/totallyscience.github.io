@@ -5,6 +5,10 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/game.css?v7'>
+    <link rel='stylesheet' href='assets/styles/popups.css?v7'>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
@@ -23,12 +27,12 @@
                 <div class="undertext">
                     <button id="like" class="text-button button-effect-a"><img
                             src="assets/images/icons/likeoutline.png"></button>
-                    <div id="likeCount">0</div>
+                    <div id="likeCount">...</div>
                 </div>
                 <div class="undertext">
                     <button onclick="OpenHighscore()" class="text-button"><img
                             src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
-                    <div id="currentHighscore">0</div>
+                    <div id="currentHighscore">...</div>
                 </div>
                 <button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
                 <button class="game-button"><img src="assets/images/icons/upload.png"></button>
@@ -85,6 +89,7 @@
 
 
     <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/popups.js"></script>
     <script src="assets/scripts/game.js?v33"></script>
 
 </body>
