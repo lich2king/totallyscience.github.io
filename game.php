@@ -5,7 +5,6 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/game.css?v7'>
-    <link rel='stylesheet' href='assets/styles/popups.css?v7'>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
@@ -89,8 +88,7 @@
 
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/popups.js"></script>
-    <script src="assets/scripts/game.js?v33"></script>
+    <script src="assets/scripts/game.js?v34"></script>
 
 </body>
 
