@@ -84,6 +84,8 @@ window.addEventListener('load', () => {
         if (res != '') {
             const currentHighscore = numFormatter(res);
             document.getElementById('currentHighscore').innerText = currentHighscore;
+        } else {
+            document.getElementById('currentHighscore').innerText = '0';
         }
     });
 
