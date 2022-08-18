@@ -36,7 +36,7 @@
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Billed once at $47.88</p>
                 </h3>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button onclick="location.href = 'purchasepass.php?pass=monthly'" class="btn">Purchase</button>
+                    <button onclick="location.href = 'purchasepass.php?pass=monthly'" class="btn">Subscribe</button>
                 </div>
                 <button id="pin"><img src="assets/images/icons/Discount.png"></button>
             </div>
