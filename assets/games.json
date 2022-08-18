@@ -347,10 +347,10 @@
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
         "image": "./assets/game_images/whg.jpeg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["hard", "flash"],
+        "tags": ["hard"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "vinmannie",
-        "iframe_url": "https://vinmannie.github.io/WorldsHardestGame/"
+        "iframe_url": "assets/games/worlds-hardest-game/index.html"
     },
     "The Impossible Quiz": {
         "description": "It really is impossible. Don't even bother trying to beat it.",
@@ -830,7 +830,7 @@
         "tags": [""],
         "date_added": "2022-01-27T15:05:28.200Z",
         "developer": "Josh Wardle",
-        "iframe_url": "https://www.wordleunlimited.com/"
+        "iframe_url": "assets/games/wordle/index.html"
     },
     "Rocket League": {
         "description": "A fun car soccer 3D game that can be played 1 and 2 player.",
@@ -1109,7 +1109,7 @@
         "tags": ["gamepass", "mobile"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Imangi",
-        "iframe_url": "assets/games/temple-run/Temple Run 2.html"
+        "iframe_url": "assets/games/temple-run-2/index.html"
     },
     "Time Shooter 2": {
         "description": "A shooting game built in the same style as SuperHot, and features the same thrilling action that keeps you determined to beat each level.",
@@ -1182,6 +1182,44 @@
         "date_added": "2022-02-02T01:28:28.388Z",
         "developer": "ZEPTOLAB",
         "iframe_url": "assets/games/cut-the-rope/index.html"
+    },
+    "Vex 6": {
+        "description": "The sixth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
+        "image": "./assets/game_images/vex6.jpg",
+        "controls": "[Arrow Keys] - move",
+        "tags": ["gamepass", "vex"],
+        "date_added": "2022-02-10T14:51:17.859Z",
+        "developer": "Gogy Games",
+        "iframe_url": "assets/games/Vex6/index.html"
+    },
+    "Smash Karts": {
+        "description": "Smash Karts is a 3D driving game where the objective is to collect surprise boxes and survive using whatever you find in them: Bullets, grenades, even rockets?! Buckle up, wear your helmet, reload your guns and eliminate your opponents!",
+        "image": "./assets/game_images/smashkarts.jpg",
+        "controls": "[Arrow Keys] or [WASD] - move",
+        "tags": ["multiplayer"],
+        "date_added": "2022-02-10T14:51:17.859Z",
+        "developer": "Tall Team",
+        "iframe_url": "assets/games/smashkarts/index.html"
+    },
+
+    "Worlds Hardest Game 2": {
+        "description": "The second episode of the self-proclaimed world's hardest game series! Hone your reflexes and accuracy as you try to move your little block to the end of each stage without touching the obstacles.",
+        "image": "./assets/game_images/whg2.jpg",
+        "controls": "[Arrow Keys] - move",
+        "tags": ["hard", "gamepass"],
+        "date_added": "2021-12-22T04:56:36.982Z",
+        "developer": "vinmannie",
+        "iframe_url": "assets/games/worlds-hardest-game-2/index.html"
+    },
+
+    "There Is No Game": {
+        "description": "There Is No Game is a tricky, puzzle game (or not game). Disobey the instructions, because there is no game! This funny adventure isn't about rules. In fact, your entire job is to ignore the narrator! Break the title, play with the speaker icon, and unlock mini-games. Try to find the goat!",
+        "image": "./assets/game_images/thereisnogame.jpg",
+        "controls": "[Arrow Keys] - move",
+        "tags": ["hard", "puzzle"],
+        "date_added": "2021-12-22T04:56:36.982Z",
+        "developer": "Kamizoto",
+        "iframe_url": "assets/games/there-is-no-game/index.html"
     }
 
 }
