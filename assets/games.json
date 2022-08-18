@@ -881,7 +881,7 @@
         "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex5.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["gamepass"],
+        "tags": ["gamepass", "vex"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Gogy Games",
         "iframe_url": "assets/games/Vex5/index.html"
@@ -899,7 +899,7 @@
         "description": "The fourth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex4.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["vex"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "assets/games/vex4/index.html"
@@ -908,7 +908,7 @@
         "description": "The third platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex3.jpeg",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["vex"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "assets/games/vex3/index.html"
