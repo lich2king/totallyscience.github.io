@@ -1001,8 +1001,7 @@
         "tags": [""],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Koganegames",
-        "iframe_url": "assets/games/economical/index.html",
-        "gif": "./assets/game_images/gifs/economical.gif"
+        "iframe_url": "assets/games/economical/index.html"
     },
     "Geometry Dash Remastered": {
         "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
@@ -1147,6 +1146,15 @@
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Ant Karlov",
         "iframe_url": "assets/games/zombotron-2/index.html"
+    },
+    "Crossy Road Space": {
+        "description": "The space version of Crossy Road, the 8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
+        "image": "./assets/game_images/crossyroadspace.png",
+        "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
+        "tags": ["mobile", "gamepass"],
+        "date_added": "2022-02-02T01:28:28.388Z",
+        "developer": "Hipster Whale",
+        "iframe_url": "assets/games/tam-crossyroad/index.html?world=space"
     }
 
 }
