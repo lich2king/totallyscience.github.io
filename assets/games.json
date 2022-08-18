@@ -500,7 +500,7 @@
         "description": "The second edition of the impossible quiz. Think you can beat it?",
         "image": "./assets/game_images/impquiz2.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["hard", "flash"],
+        "tags": ["hard", "flash", "gamepass"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Splapp-Me-Do Games",
         "iframe_url": "assets/games/TheImpossibleQuiz2.html"
@@ -881,7 +881,7 @@
         "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex5.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": [""],
+        "tags": ["gamepass"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Gogy Games",
         "iframe_url": "assets/games/Vex5/index.html"
@@ -1007,7 +1007,7 @@
         "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
         "image": "./assets/game_images/geometry-dash-remastered.jpg",
         "controls": "[Space] - jump",
-        "tags": [""],
+        "tags": ["gamepass"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Arabask",
         "iframe_url": "assets/games/geometry-dash-remastered/index.html"
@@ -1022,7 +1022,7 @@
         "iframe_url": "assets/games/Hypersnake/HYPERSNAKE.html"
     },
     "Madalin Cars Multiplayer": {
-        "description": "Online car driving game in the hugely popular Madalin Cars series. Choose from a range of different sports cars and customize them to your liking. You can change the color and drive settings of your car to give yourself a truly personalized ride!",
+        "description": "Online car driving game in the hugely popular `Mada`lin Cars series. Choose from a range of different sports cars and customize them to your liking. You can change the color and drive settings of your car to give yourself a truly personalized ride!",
         "image": "./assets/game_images/madalin-cars-multiplayer.jpg",
         "controls": "WASD or arrow keys - move \n [f] to use nitro \n [c] to change camera \n [r] to reset car \n [i] to start or stop engine \n [Space] - use handbrake",
         "tags": ["car", "multiplayer"],
@@ -1034,7 +1034,7 @@
         "description": "3D stunt driving game featuring some of the world’s most powerful cars. Jump behind the wheel of your favorite automobile and race around one of the three expansive maps. You can invite your friends to play in any of the online multiplayer servers to share the high-octane thrill.",
         "image": "./assets/game_images/madalin-stunt-cars-2.jpg",
         "controls": "WASD or arrow keys - move \n [Shift] to use nitro \n [r] to reset car",
-        "tags": ["car", "multiplayer"],
+        "tags": ["car", "multiplayer", "gamepass"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Madalin Stanciu",
         "iframe_url": "assets/games/madalin-stunt-cars-2/index.html"
@@ -1043,7 +1043,7 @@
         "description": "A motorbike racing game with summer as the main theme. This 5th part in the Moto X3M series has 22 new challenging levels. Race your motorbike through pools and beaches and discover all the new obstacles in this sequel in the Moto X3M series.",
         "image": "./assets/game_images/motox3mpool.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
-        "tags": ["car"],
+        "tags": ["car", "gamepass"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "MadPuffers",
         "iframe_url": "assets/games/moto-x3m-pool-party/index.html"
@@ -1052,7 +1052,7 @@
         "description": "Moto X3M Spooky Land is a stunt motor bike game and is the sixth release in the Moto X3M series. This time with a complete halloween theme where you drive your motor through spooky halloween levels and you have to perform all kinds of stunts to dodge objects of hazards coming your way.",
         "image": "./assets/game_images/motox3mspooky.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
-        "tags": ["car"],
+        "tags": ["car", "gamepass"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "MadPuffers",
         "iframe_url": "assets/games/moto-x3m-spooky-land/index.html"
@@ -1061,7 +1061,7 @@
         "description": "Speed with your motorbike across icy mountains in Moto X3M 4: Winter! This motorbike game dares you to drive on bridges made of candy canes and other sweet treats. Ride a motorcycle past snowmen and Christmas trees with Rudolph the Red-Nosed Reindeer and Santa Claus!",
         "image": "./assets/game_images/motox3mwinter.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
-        "tags": ["car"],
+        "tags": ["car", "gamepass"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "MadPuffers",
         "iframe_url": "assets/games/moto-x3m-winter/index.html"
@@ -1070,7 +1070,7 @@
         "description": "The sequel to the Slope game. The gameplay has changed slightly, but the mechanics remain the same. Let me remind you that as the difficulty of each level increases, the ball moves extremely quickly.",
         "image": "./assets/game_images/slope2.jpg",
         "controls": "[WASD] - Player 1 \n [Arrow Keys] - Player 2",
-        "tags": [""],
+        "tags": ["gamepass"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "UNKNOWN",
         "iframe_url": "assets/games/slope-2/index.html"
@@ -1087,8 +1087,8 @@
     "Stickman Hook": {
         "description": "You play as a swinging stickman through hundreds of challenging levels. This fun, colorful stickman game offers over 100 challenging levels. Unlock unique characters along the way to switch things up while you swing. Pay attention to the angle and direction of your swing to make it to the finish line! Can you control your swing?",
         "image": "./assets/game_images/stickmanhook.jpg",
-        "controls": "[Click] - swing",
-        "tags": [""],
+        "controls": "[Space] - swing \nIf the play button doesn't work, press SPACE",
+        "tags": ["gamepass"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Madbox",
         "iframe_url": "assets/games/stickman-hook/Stickman Hook.html"
@@ -1106,7 +1106,7 @@
         "description": "An infinite runner where the player must escape from his enemy and avoid all the obstacles and traps that are found along the way. Traverse cliffs, forests and even mines, and help this fearless treasure hunter escape with the gold idol. But hurry up! The evil monkey monsters are chasing you!",
         "image": "./assets/game_images/templerun.jpg",
         "controls": "[AD] or [Left/Right arrows] - move \n[w] or [Up arrow] - jump \n[s] or [Down arrow] - slide down",
-        "tags": [""],
+        "tags": ["gamepass"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Imangi",
         "iframe_url": "assets/games/temple-run/Temple Run 2.html"

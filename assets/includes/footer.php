@@ -62,15 +62,6 @@
                     <div>
                         Developer
                     </div>
-                    <div>
-                        Jake K
-                    </div>
-                    <div>
-                        ||
-                    </div>
-                    <div>
-                        Developer
-                    </div>
                 </div>
             </div>
             <div class="footSection">
