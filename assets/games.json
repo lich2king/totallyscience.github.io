@@ -440,7 +440,7 @@
         "tags": ["multiplayer"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Voodoo",
-        "iframe_url": "https://script.google.com/macros/s/AKfycbxO8jKpDOwFYpSGrGbReR4Mv2e1-6T4uHsWBphygjzyG8Qqpvij/exec"
+        "iframe_url": "assets/games/paperio/index.html"
     },
     "Run 3": {
         "description": "Run through an endless tunnel, diverting from the holes and pieces of ground that break.",
@@ -485,7 +485,7 @@
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Total Jerk Face",
-        "iframe_url": "https://games-online.io/game/HappyWheels/"
+        "iframe_url": "assets/games/happywheels/index.html"
     },
     "Among Us": {
         "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
@@ -695,7 +695,7 @@
         "tags": ["multiplayer"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "JustPlay",
-        "iframe_url": "https://ejvd3326248pklq0mtj313irgbc2vsrb-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s035r8h4/1v1.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=544c660bc8b16c1d&libs=core&mid=172&parent=https://sites.google.com/site/unblockedgameswtf/1v1-lol#st=e%3DAIHE3cDa0V5V5RnKPUs5fhJBAkMIsLvCyhTqhhIz%252BaQp3fJ%252B1VqrM7hjYJShkamIsSjBFRSP2Ao1z3zRDWUv86sh6HYTR6gGoTqt%252Beb4IhfwcKqAnQqZL6M6EZ9ZrzsD5vEgfn8G1q70%26c%3Denterprise&rpctoken=-1063403043488099387"
+        "iframe_url": "assets/games/1v1lol/index.html"
     },
     "Fall Guys": {
         "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
@@ -764,7 +764,7 @@
         "description": "The Kingdom of Mirrors has been invaded and Kirby's going to need to call for backup.",
         "image": "./assets/game_images/kirbymirror.jpg",
         "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Arrow keys] - move\n[z] - jump\n[x] - suck/release air",
-        "tags": [""],
+        "tags": ["emulator"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "HAL Laboratory",
         "iframe_url": "assets/games/kirbytheamazingmirror.html"
@@ -773,7 +773,7 @@
         "description": "A platoformer action-adventure game of the classic Mario franchise.",
         "image": "./assets/game_images/supermariobros3.jpg",
         "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Arrow keys] - move\n[z] - select/jump\n[x] - back/attack",
-        "tags": [""],
+        "tags": ["emulator"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Nintendo",
         "iframe_url": "assets/games/supermarioadvanced.html"
@@ -1155,6 +1155,33 @@
         "date_added": "2022-02-02T01:28:28.388Z",
         "developer": "Hipster Whale",
         "iframe_url": "assets/games/tam-crossyroad/index.html?world=space"
+    },
+    "Learn To Fly": {
+        "description": "Launch the penguin as far as you can. At first, it will be very hard, but you can slowly fly a longer distance, make more money, and buy all the upgrades.",
+        "image": "./assets/game_images/learntofly.jpg",
+        "controls": "[Arrow Keys] - tilt up and down",
+        "tags": [""],
+        "date_added": "2022-02-02T01:28:28.388Z",
+        "developer": "Light Bringer Games",
+        "iframe_url": "assets/games/learntofly.html"
+    },
+    "Raft Wars": {
+        "description": "A fun, level-based shooting game, where you and your brother Simon will need to defend your treasure from enemies of all kinds!",
+        "image": "./assets/game_images/raftwars.jpg",
+        "controls": "[Click] - shoot",
+        "tags": [""],
+        "date_added": "2022-02-02T01:28:28.388Z",
+        "developer": "Martijn Kunst",
+        "iframe_url": "assets/games/raftwars.html"
+    },
+    "Cut The Rope": {
+        "description": "Cut the rope to feed candy to the green monster! Om Nom is hungry for large pieces of candy. Your mission is to feed him as quickly as possible. You can collect stars in each level for bonus points. Slice every rope at the right time to win!",
+        "image": "./assets/game_images/cuttherope.jpg",
+        "controls": "[Swipe] - cut",
+        "tags": ["puzzle"],
+        "date_added": "2022-02-02T01:28:28.388Z",
+        "developer": "ZEPTOLAB",
+        "iframe_url": "assets/games/cut-the-rope/index.html"
     }
 
 }
