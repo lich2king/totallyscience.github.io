@@ -337,10 +337,10 @@
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
         "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
-        "tags": ["card", "mobile"],
+        "tags": ["card", "mobile", "multiplayer"],
         "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "Hooda Math",
-        "iframe_url": "https://www.hoodamath.com/mobile/games/four-colors/game.html?nocheckorient=1"
+        "developer": "Code This Lab",
+        "iframe_url": "assets/games/uno/index.html"
     },
 
     "Worlds Hardest Game": {
@@ -603,7 +603,7 @@
         "tags": [""],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Deer Cat",
-        "iframe_url": "assets/games/tunnel-rush/index.html"
+        "iframe_url": "assets/games/tunnelrush/index.html"
     },
     "Squid Game": {
         "description": "Complete the following challenges inspired by the popular show Squid Games.",
@@ -671,13 +671,13 @@
         "iframe_url": "https://g.vseigru.net/scratch/app/?id=217819833&turbo=false"
     },
     "Moto X3M": {
-        "description": "Choose a bike, drive pass obstacles, and difficult terrains. Do a flip!",
+        "description": "Hop on your dirt bike and ride over jumps, do tricks, and try not to fly off in Moto X3M. Memorize the course and execute your stunts perfectly.",
         "image": "./assets/game_images/motox3m.jpeg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
         "tags": ["car"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "MadPuffers",
-        "iframe_url": "https://www-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s017q3e/moto-x3m.xml"
+        "iframe_url": "assets/games/moto-x3m/index.html"
     },
     "Basketball Stars": {
         "description": "You can play solo or with a friend as a variety of legendary basketball players.",
@@ -980,7 +980,7 @@
         "description": "Try to score a basket by using only one key with different variations from each other! Changing fields, changing players and changing balls do not surprise you! The one who reaches 5 score first, wins the game.",
         "image": "./assets/game_images/basket-random.jpg",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
-        "tags": ["2"],
+        "tags": ["2", "sport"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Two Player Games",
         "iframe_url": "assets/games/basket-random/index.html"
@@ -989,7 +989,7 @@
         "description": "Changing conditions occur in every round. Sometimes the boxing field changes and sometimes the boxers. Adapt to every random feature and hit accurately. The one who reaches 5 score first, wins the game!",
         "image": "./assets/game_images/boxingrandom.jpg",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
-        "tags": ["2"],
+        "tags": ["2", "sport"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Two Player Games",
         "iframe_url": "assets/games/boxing-random/index.html"
@@ -1012,5 +1012,141 @@
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Arabask",
         "iframe_url": "assets/games/geometry-dash-remastered/index.html"
+    },
+    "Hypersnake": {
+        "description": "Hypersnake is a skill game where you have to collect balls to grow your snake and find the path of least resistance to make it as far as possible. How far can you go in Hypersnake?",
+        "image": "./assets/game_images/hypersnake.jpg",
+        "controls": "[Mouse] - move",
+        "tags": ["mobile"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "BuyHTML5",
+        "iframe_url": "assets/games/Hypersnake/HYPERSNAKE.html"
+    },
+    "Madalin Cars Multiplayer": {
+        "description": "Online car driving game in the hugely popular Madalin Cars series. Choose from a range of different sports cars and customize them to your liking. You can change the color and drive settings of your car to give yourself a truly personalized ride!",
+        "image": "./assets/game_images/madalin-cars-multiplayer.jpg",
+        "controls": "WASD or arrow keys - move \n [f] to use nitro \n [c] to change camera \n [r] to reset car \n [i] to start or stop engine \n [Space] - use handbrake",
+        "tags": ["car", "multiplayer"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Madalin Stanciu",
+        "iframe_url": "assets/games/madalin-cars-multiplayer/index.html"
+    },
+    "Madalin Stunt Cars 2": {
+        "description": "3D stunt driving game featuring some of the world’s most powerful cars. Jump behind the wheel of your favorite automobile and race around one of the three expansive maps. You can invite your friends to play in any of the online multiplayer servers to share the high-octane thrill.",
+        "image": "./assets/game_images/madalin-stunt-cars-2.jpg",
+        "controls": "WASD or arrow keys - move \n [Shift] to use nitro \n [r] to reset car",
+        "tags": ["car", "multiplayer"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Madalin Stanciu",
+        "iframe_url": "assets/games/madalin-stunt-cars-2/index.html"
+    },
+    "Moto X3M Pool Party": {
+        "description": "A motorbike racing game with summer as the main theme. This 5th part in the Moto X3M series has 22 new challenging levels. Race your motorbike through pools and beaches and discover all the new obstacles in this sequel in the Moto X3M series.",
+        "image": "./assets/game_images/motox3mpool.jpg",
+        "controls": "[Arrow Keys] - move\n[r] - restart",
+        "tags": ["car"],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "MadPuffers",
+        "iframe_url": "assets/games/moto-x3m-pool-party/index.html"
+    },
+    "Moto X3M Spooky Land": {
+        "description": "Moto X3M Spooky Land is a stunt motor bike game and is the sixth release in the Moto X3M series. This time with a complete halloween theme where you drive your motor through spooky halloween levels and you have to perform all kinds of stunts to dodge objects of hazards coming your way.",
+        "image": "./assets/game_images/motox3mspooky.jpg",
+        "controls": "[Arrow Keys] - move\n[r] - restart",
+        "tags": ["car"],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "MadPuffers",
+        "iframe_url": "assets/games/moto-x3m-spooky-land/index.html"
+    },
+    "Moto X3M Winter": {
+        "description": "Speed with your motorbike across icy mountains in Moto X3M 4: Winter! This motorbike game dares you to drive on bridges made of candy canes and other sweet treats. Ride a motorcycle past snowmen and Christmas trees with Rudolph the Red-Nosed Reindeer and Santa Claus!",
+        "image": "./assets/game_images/motox3mwinter.jpg",
+        "controls": "[Arrow Keys] - move\n[r] - restart",
+        "tags": ["car"],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "MadPuffers",
+        "iframe_url": "assets/games/moto-x3m-winter/index.html"
+    },
+    "Slope 2": {
+        "description": "The sequel to the Slope game. The gameplay has changed slightly, but the mechanics remain the same. Let me remind you that as the difficulty of each level increases, the ball moves extremely quickly.",
+        "image": "./assets/game_images/slope2.jpg",
+        "controls": "[WASD] - Player 1 \n [Arrow Keys] - Player 2",
+        "tags": [""],
+        "date_added": "2022-01-10T18:17:09.107Z",
+        "developer": "UNKNOWN",
+        "iframe_url": "assets/games/slope-2/index.html"
+    },
+    "Soccer Random": {
+        "description": "Try to score a goal by using only one key with different variations from each other! Sometimes you will play on a iced field or you will play on a beach. The goal of the game is, to score five goals.",
+        "image": "./assets/game_images/soccer-random.jpg",
+        "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
+        "tags": ["2", "sport"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Two Player Games",
+        "iframe_url": "assets/games/soccer-random/index.html"
+    },
+    "Stickman Hook": {
+        "description": "You play as a swinging stickman through hundreds of challenging levels. This fun, colorful stickman game offers over 100 challenging levels. Unlock unique characters along the way to switch things up while you swing. Pay attention to the angle and direction of your swing to make it to the finish line! Can you control your swing?",
+        "image": "./assets/game_images/stickmanhook.jpg",
+        "controls": "[Click] - swing",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Madbox",
+        "iframe_url": "assets/games/stickman-hook/Stickman Hook.html"
+    },
+    "Superhot": {
+        "description": "A first-person shooter game where time moves once you move. Shoot and move around to see your bullets fly off. Stand still and your bullets will stop moving too. This counts for enemy fire as well! Move around and shoot your enemies. Stand still and look for the best ways to move and dodge incoming fire.",
+        "image": "./assets/game_images/superhot.jpg",
+        "controls": "[WASD] - move \n[Click] - shoot",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "SUPERHOT Team",
+        "iframe_url": "assets/games/superhot/index.html"
+    },
+    "Temple Run": {
+        "description": "An infinite runner where the player must escape from his enemy and avoid all the obstacles and traps that are found along the way. Traverse cliffs, forests and even mines, and help this fearless treasure hunter escape with the gold idol. But hurry up! The evil monkey monsters are chasing you!",
+        "image": "./assets/game_images/templerun.jpg",
+        "controls": "[AD] or [Left/Right arrows] - move \n[w] or [Up arrow] - jump \n[s] or [Down arrow] - slide down",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Imangi",
+        "iframe_url": "assets/games/temple-run/Temple Run 2.html"
+    },
+    "Time Shooter 2": {
+        "description": "A shooting game built in the same style as SuperHot, and features the same thrilling action that keeps you determined to beat each level.",
+        "image": "./assets/game_images/timeshooter2.png",
+        "controls": "[WASD] - move \n[Left-Click] - shoot \n[Right-Click] - throw",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "GoGoMan",
+        "iframe_url": "assets/games/time-shooter-2/index.html"
+    },
+    "Tube Jumpers": {
+        "description": "Stay afloat in the ultimate water-skiing competition! This adventure game lets you play against one, two, or three friends on the same device. In Tube Jumpers, you must bounce upwards to avoid waves, sharks, and other dangers in the water!",
+        "image": "./assets/game_images/tubejumpers.jpg",
+        "controls": "[w] - Player 1 \n[i] - Player 2",
+        "tags": ["2"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "New Eich Games",
+        "iframe_url": "assets/games/tube-jumpers/index.html"
+    },
+    "Volley Random": {
+        "description": "With fun ragdoll physics and a variety of variations, each match will be different. The playing court, ball and players may change. The important thing is to be able to get score under all conditions.",
+        "image": "./assets/game_images/volley-random.jpg",
+        "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
+        "tags": ["2", "sport"],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Two Player Games",
+        "iframe_url": "assets/games/volley-random/index.html"
+    },
+    "Zombotron": {
+        "description": "You play a zombie robot, which was given the task to destroy the zombies. Therefore, you are running around, buying new weapons and shooting at everything that moves.",
+        "image": "./assets/game_images/zombotron.jpg",
+        "controls": "[WASD] - move \n[Click] - shoot \n[q] - change weapons \n[h] - heal \n[e] - interact",
+        "tags": [""],
+        "date_added": "2022-08-17T22:49:53.721Z",
+        "developer": "Ant Karlov",
+        "iframe_url": "assets/games/zombotron-2/index.html"
     }
+
 }
