@@ -746,7 +746,7 @@
         "description": "Start your journey in Pallet Town where you choose your Pokemon. Take down Team Rocket!",
         "image": "./assets/game_images/pokemonfirered.png",
         "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Shift] - select\n[Arrow keys] - move\n[z] - a\n[x] - b",
-        "tags": [""],
+        "tags": ["emulator"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Game Freak",
         "iframe_url": "assets/games/pokemonfirered.html"
@@ -755,7 +755,7 @@
         "description": "Your mission is to collect all 150 Pokémon. Go catch em all!",
         "image": "./assets/game_images/pokemonleafgreen.jpg",
         "controls": "Click the video game controller to see controls.\n[Enter] - start\n[Shift] - select\n[Arrow keys] - move\n[z] - a\n[x] - b",
-        "tags": [""],
+        "tags": ["emulator"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Game Freak",
         "iframe_url": "assets/games/pokemonleafgreen.html"
