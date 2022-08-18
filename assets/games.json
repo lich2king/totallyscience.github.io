@@ -431,7 +431,7 @@
         "tags": [""],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Griffpatch",
-        "iframe_url": "https://scratch.mit.edu/projects/60917032/embed"
+        "iframe_url": "assets/games/scratch/appelplatformer.html"
     },
     "Paper.io": {
         "description": "Invade as many lands as possible and become the biggest on the server!",
@@ -1220,6 +1220,36 @@
         "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "Kamizoto",
         "iframe_url": "assets/games/there-is-no-game/index.html"
+    },
+
+    "Flip 3d": {
+        "description": "An addictive puzzle game that tests your logic and patience. The aim of the game is simple – you must direct the block into the hole.",
+        "image": "./assets/game_images/flip3d.png",
+        "controls": "[Arrow Keys] - move",
+        "tags": ["scratch", "puzzle"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "Master Andras",
+        "iframe_url": "assets/games/scratch/flip3d.html"
+    },
+
+    "Candy Crush": {
+        "description": "Match and decimate clusters of hard candies and tasty fruits in our expansive assortment of Candy Crush games! You can play a classic game of Bejeweled, but with sugary sweets in the place of gemstones. Shift the treats around the board to make matches based on color and shape.",
+        "image": "./assets/game_images/candycrush.png",
+        "controls": "[Swipe] - move candy",
+        "tags": ["scratch", "puzzle"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "SohCahToa314",
+        "iframe_url": "assets/games/scratch/candycrush.html"
+    },
+
+    "Fortnite 2d": {
+        "description": "A massive multiplayer Battle Royale game in your browser. Players are represented by circular figures on a 2D grid-like playing field, surrounded by a circular blue zone that shrinks as the game advances.",
+        "image": "./assets/game_images/fortnite2d.jpg",
+        "controls": "[WASD] or [Arrows Keys] - move \n[Mouse] - look around \n[e] - interact \n[q] - drop \n[f] - build \n[z] - emotes \n[b] - get unstuck from wall \n[l] - leave modes",
+        "tags": ["scratch", "multiplayer"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "FunnyAnimatorJimTV",
+        "iframe_url": "assets/games/scratch/fortnite.html"
     }
 
 }
