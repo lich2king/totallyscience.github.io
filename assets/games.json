@@ -1106,7 +1106,7 @@
         "description": "An infinite runner where the player must escape from his enemy and avoid all the obstacles and traps that are found along the way. Traverse cliffs, forests and even mines, and help this fearless treasure hunter escape with the gold idol. But hurry up! The evil monkey monsters are chasing you!",
         "image": "./assets/game_images/templerun.jpg",
         "controls": "[AD] or [Left/Right arrows] - move \n[w] or [Up arrow] - jump \n[s] or [Down arrow] - slide down",
-        "tags": ["gamepass"],
+        "tags": ["gamepass", "mobile"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Imangi",
         "iframe_url": "assets/games/temple-run/Temple Run 2.html"

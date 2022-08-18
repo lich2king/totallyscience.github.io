@@ -37,7 +37,7 @@
                 <button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button>
                 <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
-                <button name="premium" onclick="" class="unselectedCategory categoryButton">Premium</button>
+                <button name="gamepass" onclick="" class="unselectedCategory categoryButton">GamePass</button>
             </div>
         </div>
 
