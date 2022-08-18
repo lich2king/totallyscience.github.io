@@ -247,3 +247,28 @@ h1 {
     font-size: 1vw;
     font-family: 'Rubik', sans-serif;
 }
+
+#gameDiv:hover>button {
+    opacity: 1;
+    top: -10%;
+}
+
+#gamelock {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#gamelock:hover {
+    transform: scale(1.05);
+}
+
+#gamelock img {
+    width: 80px;
+    height: 100px;
+}
