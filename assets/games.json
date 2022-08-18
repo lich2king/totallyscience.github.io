@@ -1170,7 +1170,7 @@
         "image": "./assets/game_images/raftwars.jpg",
         "controls": "[Click] - shoot",
         "tags": [""],
-        "date_added": "2022-02-02T01:28:28.388Z",
+        "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "Martijn Kunst",
         "iframe_url": "assets/games/raftwars.html"
     },
@@ -1179,7 +1179,7 @@
         "image": "./assets/game_images/cuttherope.jpg",
         "controls": "[Swipe] - cut",
         "tags": ["puzzle"],
-        "date_added": "2022-02-02T01:28:28.388Z",
+        "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "ZEPTOLAB",
         "iframe_url": "assets/games/cut-the-rope/index.html"
     },
@@ -1188,7 +1188,7 @@
         "image": "./assets/game_images/vex6.jpg",
         "controls": "[Arrow Keys] - move",
         "tags": ["gamepass", "vex"],
-        "date_added": "2022-02-10T14:51:17.859Z",
+        "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "Gogy Games",
         "iframe_url": "assets/games/Vex6/index.html"
     },
@@ -1197,7 +1197,7 @@
         "image": "./assets/game_images/smashkarts.jpg",
         "controls": "[Arrow Keys] or [WASD] - move",
         "tags": ["multiplayer"],
-        "date_added": "2022-02-10T14:51:17.859Z",
+        "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "Tall Team",
         "iframe_url": "assets/games/smashkarts/index.html"
     },
@@ -1207,7 +1207,7 @@
         "image": "./assets/game_images/whg2.jpg",
         "controls": "[Arrow Keys] - move",
         "tags": ["hard", "gamepass"],
-        "date_added": "2021-12-22T04:56:36.982Z",
+        "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "vinmannie",
         "iframe_url": "assets/games/worlds-hardest-game-2/index.html"
     },
@@ -1217,7 +1217,7 @@
         "image": "./assets/game_images/thereisnogame.jpg",
         "controls": "[Arrow Keys] - move",
         "tags": ["hard", "puzzle"],
-        "date_added": "2021-12-22T04:56:36.982Z",
+        "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "Kamizoto",
         "iframe_url": "assets/games/there-is-no-game/index.html"
     }
