@@ -35,7 +35,7 @@
         "description": "Online board game where your could play against a friend or the computer.",
         "image": "./assets/game_images/chess-icon.png",
         "controls": "Use your mouse to drag the piece you want to move",
-        "tags": ["2", "mobile"],
+        "tags": ["2", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/chess/game.html?nocheckorient=1"
@@ -45,7 +45,7 @@
         "description": "2048 is an easy and fun puzzle game. Join the numbers and get to the 2048 tile.",
         "image": "./assets/game_images/2048.png",
         "controls": "Arrow keys to slide tiles",
-        "tags": [""],
+        "tags": ["puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Gabriele Cirulli",
         "iframe_url": "assets/games/2048.html"
@@ -55,7 +55,7 @@
         "description": "The college edition of the classic 2048 game. Try to get to the MIT tile.",
         "image": "./assets/game_images/college2048.png",
         "controls": "Arrow keys to slide tiles",
-        "tags": [""],
+        "tags": ["puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Mitchell Gu",
         "iframe_url": "https://mitchgu.github.io/GetMIT/"
@@ -65,7 +65,7 @@
         "description": "Get 4 pieces in a row to win. Play against a friend or the computer.",
         "image": "./assets/game_images/connect4.jpeg",
         "controls": "Click where your want to place your piece",
-        "tags": ["2", "mobile"],
+        "tags": ["2", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Codethislab",
         "iframe_url": "https://www.hoodamath.com/mobile/games/connect-4/game.html?nocheckorient=1"
@@ -75,7 +75,7 @@
         "description": "The cupcake edition of the classic 2048 game. Mix cupcakes together to create new ones!",
         "image": "./assets/game_images/cupcake2048.png",
         "controls": "Arrow keys to slide tiles",
-        "tags": [""],
+        "tags": ["puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Gabriele Cirulli",
         "iframe_url": "https://0x0800.github.io/2048-CUPCAKES/"
@@ -809,7 +809,7 @@
         "description": "Your mission is to get to the moon! To get there cost 50,000,000,000 dogecoin. Goodluck!",
         "image": "./assets/game_images/dogeminer.jpg",
         "controls": "Click",
-        "tags": [""],
+        "tags": ["clicker"],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Rkn_dev",
         "iframe_url": "assets/games/DogeMiner-main/DogeMiner-main/index.html"
@@ -872,7 +872,7 @@
         "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
         "image": "./assets/game_images/cookieclicker.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["mobile"],
+        "tags": ["mobile", "clicker"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Julien Thiennot",
         "iframe_url": "assets/games/cookie-clicker-main/index.html"
