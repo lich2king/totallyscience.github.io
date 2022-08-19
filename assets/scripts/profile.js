@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    fetch(`/assets/php/personalhighscores.php?username=zm`).then((response) => response.text()).then((res) => {
+    fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
         if (res != '[]') {
             res = JSON.parse(res);
             highscores = res;
