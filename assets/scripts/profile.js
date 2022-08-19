@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
         alert(res);
         scoresDiv.innerHTML = '';
-        alert("efw");
+        alert("wef");
         if (res != '[]') {
             res = JSON.parse(res);
             highscores = res;
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             alert("yes");
-            document.getElementById("noscores").setAttribute("style", '');
+            document.getElementById("noscores").setAttribute("style", "display: ");
         }
     });
 });
