@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 res = JSON.parse(res);
 
                 highscores = res;
-
+                scoresDiv.innerHTML = '';
                 for (score in highscores) {
                     const game = highscores[score][0];
                     const name = highscores[score][1];
