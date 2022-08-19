@@ -34,11 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
+        scoresDiv.innerHTML = '';
+        res = JSON.parse(res);
         if (res != '') {
-            res = JSON.parse(res);
-
             highscores = res;
-            scoresDiv.innerHTML = '';
             for (score in highscores) {
                 const game = highscores[score][0];
                 const name = highscores[score][1];
