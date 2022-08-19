@@ -138,7 +138,7 @@ searchBar.addEventListener('keyup', () => {
 
     scrollTo(0, 0);
 
-    let input = (searchBar.value.toUpperCase()).replace(' ', '');
+    let input = (searchBar.value.toUpperCase()).replaceall(' ', '');
 
     if (input == '' || input == null) {
         loadTopic();
@@ -150,7 +150,7 @@ searchBar.addEventListener('keyup', () => {
 
     Array.from(gameButtons).forEach(game => {
         var name = game.getAttribute("name").toUpperCase();
-        name = name.replace(' ', '');
+        name = name.replaceall(' ', '');
 
         if (name.includes(input)) {
             game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
