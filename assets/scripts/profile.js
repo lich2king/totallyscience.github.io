@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(res);
         scoresDiv.innerHTML = '';
         res = JSON.parse(res);
+        alert(res);
         if (res != '[]') {
             highscores = res;
             for (score in highscores) {
