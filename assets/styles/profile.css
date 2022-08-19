@@ -98,6 +98,10 @@ html {
     margin-bottom: 5vh;
 }
 
+.highcontainer p {
+    color: var(--light-color);
+}
+
 .highscore {
     background-color: #340060;
     width: 150px;
@@ -107,6 +111,12 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.highscore:hover {
+    transform: scale(1.05);
 }
 
 .highscore h1,

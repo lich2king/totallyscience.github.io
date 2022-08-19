@@ -36,21 +36,6 @@
         </div>
     </div>
 
-    <div id="highscores">
-        <h1 class="label">Your Highscores</h1>
-        <div class="highcontainer">
-            <div class="highscore">
-                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
-                <h1>Cookie Clicker</h1>
-                <p>1,000,576</p>
-            </div>
-            <div class="highscore">
-                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
-                <h1>Cookie Clicker</h1>
-                <p>1,000,576</p>
-            </div>
-        </div>
-    </div>
 
     <div id="recents">
         <h1 class="label">Recent Games</h1>
@@ -133,6 +118,24 @@
                 <input type="image" src="assets/images/right-arrow.png" />
             </div>
         </div>
+        
+    </div>
+
+    <div id="highscores">
+        <h1 class="label">Your Highscores</h1>
+        <div class="highcontainer" id="highscorecontainer">
+            <p style="display: none" id="noscores">You do not hold any highscores currently.</p>
+            <div class="highscore">
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
+                <h1>Cookie Clicker</h1>
+                <p>1,000,576</p>
+            </div>
+            <div class="highscore">
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
+                <h1>Cookie Clicker</h1>
+                <p>1,000,576</p>
+            </div>
+        </div>
     </div>
 
     <div style="padding-bottom: 10vh;"></div>
@@ -142,35 +145,7 @@
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/profile.js"></script>
     <script>
-    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-        // HAVE RESEND EMAIL BUTTON
-        res = JSON.parse(res)
-        if (res != null) {
-            const loggedIn = res['isLoggedIn'];
-            const name = res['username'];
-
-            if (loggedIn != 'true') {
-                location.href = 'signup.php';
-            }
-
-            fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
-                if (verified == 0) {
-                    location.href = 'verify.php';
-                }
-
-                document.getElementById('usernameSpan').innerText = name;
-                document.getElementById('emailSpan').innerText = res['email'];
-            });
-        } else {
-            location.href = 'signup.php';
-        }
-    });
-
-    function logout() {
-        fetch(`assets/php/logout.php`).then(() => {
-            location.href = 'login.php';
-        });
-    }
+    
     </script>
 </body>
 
