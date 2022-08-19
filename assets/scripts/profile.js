@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
         alert(res);
         scoresDiv.innerHTML = '';
-        res = JSON.parse(res);
-        if (res != null) {
+        if (res != '[]') {
+            res = JSON.parse(res);
             highscores = res;
             for (score in highscores) {
                 const game = highscores[score][0];
