@@ -63,13 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadTopic() {
     displayedGames = 0;
-    gamesDiv.innerHTML = '';
+
     document.getElementById("noSearch").style.display = 'none';
 
     sorted = sortObject(games);
 
     if (selectedTopic != 'all') {
-        let gamesWithTopic = {};
+        const gameButtons = document.getElementsByClassName("all");
+
+        Array.from(gameButtons).forEach(game => {
+            if (game.classList.contains(selectedTopic)) {
+                game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
+            } else {
+                game.setAttribute('style', 'display:none')
+            }
+        });
+        /*let gamesWithTopic = {};
 
         for (let game in sorted) {
             if (sorted[game].tags.includes(selectedTopic)) {
@@ -77,10 +86,11 @@ function loadTopic() {
             }
         }
 
-        sorted = gamesWithTopic;
+        sorted = gamesWithTopic;*/
+    } else {
+        gamesDiv.innerHTML = '';
+        displayGames();
     }
-
-    displayGames();
 }
 
 

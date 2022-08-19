@@ -145,7 +145,19 @@ searchBar.addEventListener('keyup', () => {
         return;
     }
 
-    gamesDiv.innerHTML = '';
+
+    const gameButtons = document.getElementsByClassName("all");
+
+    Array.from(gameButtons).forEach(game => {
+        if (game.toUpperCase().includes(input)) {
+            game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
+        } else {
+            game.setAttribute('style', 'display:none')
+        }
+    });
+
+
+    /*gamesDiv.innerHTML = '';
     document.getElementById("noSearch").style.display = 'none';
 
     let numGames = 0;
@@ -162,7 +174,7 @@ searchBar.addEventListener('keyup', () => {
         } else {
             return;
         }
-    });
+    });*/
     if (gamesDiv.innerHTML == '') {
         document.getElementById("noSearch").style.display = '';
     }
