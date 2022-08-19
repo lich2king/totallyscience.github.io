@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             alert("yes");
+            console.log(document.getElementById("noscores"));
             document.getElementById("noscores").setAttribute("style", "display: ");
             alert('wef');
         }
