@@ -138,8 +138,7 @@ searchBar.addEventListener('keyup', () => {
 
     scrollTo(0, 0);
 
-    const input = searchBar.value.toUpperCase();
-    input = input.replace(' ', '');
+    let input = (searchBar.value.toUpperCase()).replace(' ', '');
 
     if (input == '' || input == null) {
         loadTopic();
