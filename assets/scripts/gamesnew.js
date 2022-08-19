@@ -105,7 +105,7 @@ function displayGames() {
             let liked = false;
             for (like in likedgames) {
                 console.log(like);
-                if (like == game) {
+                if (like[0] == game.name) {
                     console.log("liked");
                     liked = true;
                 }
