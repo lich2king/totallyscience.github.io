@@ -95,13 +95,17 @@ function loadTopic() {
 
 
 function displayGames() {
-    for (let x = displayedGames; x < displayedGames + maxGames; x++) {
+    for (let x = 0; x < Object.keys(sorted).length; x++) {
+
         let keys = Object.keys(sorted);
 
         const name = keys[x];
         const data = sorted[keys[x]];
 
-        let classlist = data.tags.join(' ');
+        let classlist = '';
+        classlist = data.tags.join(' ');
+
+
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
@@ -118,24 +122,55 @@ function displayGames() {
 
         gamesDiv.innerHTML += gameBtn;
     }
+    //all games are generated... now add the liked and recent tags to the games
+    const gameButtons = document.getElementsByClassName("all");
+
+    fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+        var likedgames = JSON.parse(res);
+
+        Array.from(gameButtons).forEach(game => {
+            let liked = false;
+            for (like in likedgames) {
+                if (likedgames[like][0] == game.getAttribute("name")) {
+                    liked = true;
+                }
+            }
+            if (liked) {
+                game.classList.add('liked');
+            }
+        });
+    });
 }
 
 
 const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
-    document.getElementById('info').scrollIntoView({
-        block: "start",
-        inline: "nearest"
-    });
 
-    const input = searchBar.value.toUpperCase();
+    scrollTo(0, 0);
+
+    let input = (searchBar.value.toUpperCase()).split(' ').join('');;
 
     if (input == '' || input == null) {
         loadTopic();
         return;
     }
 
-    gamesDiv.innerHTML = '';
+
+    const gameButtons = document.getElementsByClassName("all");
+
+    Array.from(gameButtons).forEach(game => {
+        var name = game.getAttribute("name").toUpperCase();
+        name = name.split(' ').join('');
+
+        if (name.includes(input)) {
+            game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
+        } else {
+            game.setAttribute('style', 'display:none')
+        }
+    });
+
+
+    /*gamesDiv.innerHTML = '';
     document.getElementById("noSearch").style.display = 'none';
 
     let numGames = 0;
@@ -143,7 +178,6 @@ searchBar.addEventListener('keyup', () => {
         if (numGames < maxGames) {
             if (game.toUpperCase().includes(input)) {
                 if (games[game].tags.includes(selectedTopic) || selectedTopic == 'all') {
-
                     const gameBtn = createGameButton(game);
 
                     gamesDiv.innerHTML += gameBtn;
@@ -153,7 +187,7 @@ searchBar.addEventListener('keyup', () => {
         } else {
             return;
         }
-    });
+    });*/
     if (gamesDiv.innerHTML == '') {
         document.getElementById("noSearch").style.display = '';
     }
