@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             username = res['username'];
 
             if (loggedIn != 'true') {
-                //location.href = 'signup.php';
+                location.href = 'signup.php';
             }
 
             fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('emailSpan').innerText = res['email'];
             });
         } else {
-            //location.href = 'signup.php';
+            location.href = 'signup.php';
         }
     });
 
