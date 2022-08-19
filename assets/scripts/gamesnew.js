@@ -96,7 +96,7 @@ function displayGames() {
     //all games are generated... now add the liked and recent tags to the games
     const gameButtons = document.getElementsByClassName("all");
 
-    fetch(`/assets/php/personallikes.php`).then((response) => response.text()).then((res) => {
+    fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         var likedgames = JSON.parse(res);
 
         console.log(likedgames);
