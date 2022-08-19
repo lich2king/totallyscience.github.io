@@ -34,32 +34,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
-        fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
-            games = retrievedGames;
+        if (res != '') {
+            res = JSON.parse(res);
 
-            if (res != '') {
-                res = JSON.parse(res);
-
-                highscores = res;
-                scoresDiv.innerHTML = '';
-                for (score in highscores) {
-                    const game = highscores[score][0];
-                    const name = highscores[score][1];
-                    const gameScore = highscores[score][2];
-                    const highscoreDiv = `
+            highscores = res;
+            scoresDiv.innerHTML = '';
+            for (score in highscores) {
+                const game = highscores[score][0];
+                const name = highscores[score][1];
+                const gameScore = highscores[score][2];
+                const highscoreDiv = `
                             <div class="highscore">
                                 <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
                                 <h1>${game}</h1>
                                 <p>${gameScore}</p>
                             </div>
                         `;
-                    scoresDiv.innerHTML += highscoreDiv;
-                }
-            } else {
-                document.getElementById("noscores").style.display = '';
+                scoresDiv.innerHTML += highscoreDiv;
             }
-
-        });
+        } else {
+            document.getElementById("noscores").style.display = '';
+        }
     });
 });
 
