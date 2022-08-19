@@ -37,6 +37,7 @@
                 <button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button>
                 <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
+                <button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button>
                 <button name="gamepass" onclick="" class="unselectedCategory categoryButton">GamePass</button>
             </div>
         </div>
@@ -57,7 +58,7 @@
     </div>
 
     <div style = "padding-bottom: 14vh"></div>
-
+    
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>

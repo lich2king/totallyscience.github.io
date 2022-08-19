@@ -17,6 +17,13 @@
 
 html {
     overflow-x: hidden;
+    /* prevent highlight */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 body {
@@ -236,6 +243,11 @@ label {
 
 #gamePassAd div img {
     width: 5vw;
+    transition: all 0.1s;
+}
+
+#gamePassAd div img:hover {
+    transform: scale(1.05);
 }
 
 #gamePassAd div p {
@@ -255,6 +267,11 @@ label {
     border-radius: 15px;
     font-weight: 900;
     border: none;
+    transition: all 0.1s;
+}
+
+#gamePassAd div button:hover {
+    transform: scale(1.05);
 }
 
 #gamePassAd div h1 {
