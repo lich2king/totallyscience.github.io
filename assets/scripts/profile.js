@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     location.href = 'verify.php';
                 }
 
-                document.getElementById('usernameSpan').innerText = name;
+                document.getElementById('usernameSpan').innerText = username;
                 document.getElementById('emailSpan').innerText = res['email'];
             });
         } else {
