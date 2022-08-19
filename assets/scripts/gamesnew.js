@@ -99,10 +99,14 @@ function displayGames() {
     fetch(`/assets/php/personallikes.php`).then((response) => response.text()).then((res) => {
         var likedgames = JSON.parse(res);
 
+        console.log(likedgames);
         Array.from(gameButtons).forEach(game => {
+            console.log(game);
             let liked = false;
             for (like in likedgames) {
+                console.log(like);
                 if (like == game) {
+                    console.log("liked");
                     liked = true;
                 }
             }
