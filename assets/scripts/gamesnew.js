@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadTopic() {
     displayedGames = 0;
-    gamesDiv.innerHTML = '';
+
     document.getElementById("noSearch").style.display = 'none';
 
     sorted = sortObject(games);
@@ -69,6 +69,7 @@ function loadTopic() {
 
         sorted = gamesWithTopic;*/
     } else {
+        gamesDiv.innerHTML = '';
         displayGames();
     }
 
