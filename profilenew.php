@@ -124,17 +124,7 @@
     <div id="highscores">
         <h1 class="label">Your Highscores</h1>
         <div class="highcontainer" id="highscorecontainer">
-            <p style="" id="noscores">You do not hold any highscores currently.</p>
-            <div class="highscore">
-                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
-                <h1>Cookie Clicker</h1>
-                <p>1,000,576</p>
-            </div>
-            <div class="highscore">
-                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
-                <h1>Cookie Clicker</h1>
-                <p>1,000,576</p>
-            </div>
+            <p style="display: none" id="noscores">You do not hold any highscores currently.</p>
         </div>
     </div>
 
