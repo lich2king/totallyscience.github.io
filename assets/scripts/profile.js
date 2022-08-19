@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
     });
+
     fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         // HAVE RESEND EMAIL BUTTON
         res = JSON.parse(res)
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
+        alert(res);
         scoresDiv.innerHTML = '';
         res = JSON.parse(res);
         if (res != '') {
