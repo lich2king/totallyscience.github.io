@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v4'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v5'>
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
@@ -143,7 +143,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/profile.js"></script>
+    <script src="assets/scripts/profile.js?v1"></script>
     <script>
     
     </script>
