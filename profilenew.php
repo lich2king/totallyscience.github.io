@@ -133,7 +133,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/profile.js?v20"></script>
+    <script src="assets/scripts/profile.js?v19"></script>
     <script>
     
     </script>
