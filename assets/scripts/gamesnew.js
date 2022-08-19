@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
         loadTopic();
-        suggestGames();
     });
 });
 
@@ -67,8 +66,7 @@ function loadTopic() {
 
 
 function displayGames() {
-
-    for (let x = displayedGames; x < displayedGames + maxGames; x++) {
+    for (let x = 0; x < Object.keys(sorted).length; x++) {
 
         let keys = Object.keys(sorted);
 
@@ -95,6 +93,26 @@ function displayGames() {
 
         gamesDiv.innerHTML += gameBtn;
     }
+    //all games are generated... now add the liked and recent tags to the games
+    const gameButtons = document.getElementsByClassName("all");
+
+    fetch(`/assets/php/personallikes.php`).then((response) => response.text()).then((res) => {
+        var likedgames = JSON.parse(res);
+
+        Array.from(gameButtons).forEach(game => {
+            let liked = false;
+            for (like in likedgames) {
+                if (like == game) {
+                    liked = true;
+                }
+            }
+            if (liked) {
+                game.classList.add('liked');
+            }
+        });
+    });
+
+
 }
 
 
