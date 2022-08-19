@@ -53,7 +53,7 @@ function loadTopic() {
         const gameButtons = document.getElementsByClassName("all");
 
         Array.from(gameButtons).forEach(game => {
-            if (game.classList.includes('selectedTopic')) {
+            if (game.classList.contains('selectedTopic')) {
                 game.setAttribute('style', 'background-image: url(./assets/game_images/pool.jpeg)')
             } else {
                 game.setAttribute('style', 'display:none')
