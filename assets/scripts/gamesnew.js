@@ -149,7 +149,7 @@ searchBar.addEventListener('keyup', () => {
     const gameButtons = document.getElementsByClassName("all");
 
     Array.from(gameButtons).forEach(game => {
-        if (game.toUpperCase().includes(input)) {
+        if (game.getAttribute("name").toUpperCase().includes(input)) {
             game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
         } else {
             game.setAttribute('style', 'display:none')
