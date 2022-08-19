@@ -33,9 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
-        alert(res);
-        scoresDiv.innerHTML = '';
-        alert("hwef");
         if (res != '[]') {
             res = JSON.parse(res);
             highscores = res;
@@ -53,10 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scoresDiv.innerHTML += highscoreDiv;
             }
         } else {
-            alert("yes");
-            console.log(document.getElementById("noscores"));
             document.getElementById("noscores").setAttribute("style", "display: ");
-            alert('wef');
         }
     });
 });
