@@ -273,7 +273,7 @@ function suggestGames() {
             if (i <= totalPinned - 1) {
                 gameBtn = createGameButton(game, "pin");
             } else {
-                gameBtn = createGameButton(game);
+                gameBtn = createGameButton(game, "suggested");
             }
 
             document.getElementById('scisuggests').innerHTML += gameBtn;
@@ -345,6 +345,13 @@ function createGameButton(game, pin) {
     } else if (pin == "pin") {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else if (pin == "suggested") {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
             <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
             <div class="innerGameDiv">${game}</div>
         </div>
