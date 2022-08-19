@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
         alert(res);
+        document.getElementById("noscores").style.display = '';
         scoresDiv.innerHTML = '';
         if (res != '[]') {
             res = JSON.parse(res);
