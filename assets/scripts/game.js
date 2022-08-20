@@ -95,6 +95,9 @@ window.addEventListener('load', () => {
             pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
         }
     });
+
+    //add to recent games list
+    fetch(`assets/php/recent_games/addgame.php?name=${gameName}`);
 });
 
 
