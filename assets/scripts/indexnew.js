@@ -117,12 +117,13 @@ function displayGames() {
         }
 
         let gameBtn;
-        if (x > maxGames) {
+        if (x >= maxGames) {
             gameBtn = createGameButton(name, "hidden");
+            console.log(maxGames);
         } else {
             gameBtn = createGameButton(name);
+            console.log("1");
         }
-
 
 
         gamesDiv.innerHTML += gameBtn;
@@ -369,7 +370,7 @@ function createGameButton(game, pin) {
         `;
     } else if (pin == "hidden") {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
