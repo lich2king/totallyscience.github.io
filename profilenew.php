@@ -82,37 +82,8 @@
     <div id="recents">
         <h1 class="label">Liked Games</h1>
         <div class="biccontainer">
-            <div class="container">
-                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="Retro Bowl"
-                    style="background-image: url(&quot;./assets/game_images/retrobowl.jpg&quot;);" id="gameDiv"
-                    onclick="location.href = 'game.php?class=Retro Bowl'" class="featured sport mobile all">
-                    <div class="innerGameDiv">Retro Bowl</div>
-                </div>
-                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
-                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
-                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
-                    <div class="innerGameDiv">FNAF</div>
-                </div>
-                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
-                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
-                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
-                    <div class="innerGameDiv">FNAF</div>
-                </div>
-                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
-                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
-                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
-                    <div class="innerGameDiv">FNAF</div>
-                </div>
-                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
-                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
-                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
-                    <div class="innerGameDiv">FNAF</div>
-                </div>
-                <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
-                    style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
-                    id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
-                    <div class="innerGameDiv">FNAF</div>
-                </div>
+            <div class="container" id="likedcontainer">
+                
             </div>
             <div id="arrow" onclick="window.open('gamesnew.php?category=recent', '_self')">
                 <input type="image" src="assets/images/right-arrow.png" />

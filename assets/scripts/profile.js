@@ -53,6 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("noscores").setAttribute("style", "display: ");
         }
     });
+
+    //Load liked games
+    fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+        var likedgames = JSON.parse(res);
+        const likeContainer = document.getElementById("likedcontainer");
+
+        for (like in likedgames) {
+            var game = likedgames[like][0];
+            const gameButton = createGameButton(game);
+
+            likeContainer.innerHTML += gameButton;
+        }
+    });
 });
 
 
@@ -89,4 +102,39 @@ function numFormatter(num) {
     } else if (num < 1000) {
         return num; // if value < 1000, nothing to do
     }
+}
+
+
+function createGameButton(game, pin) {
+    const data = games[game];
+
+    let classlist = data.tags.join(' ');
+
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+
+    const gameDate = new Date(data.date_added);
+
+    if (gameDate > weekAgo) {
+        classlist += ' new';
+    }
+
+    let gameBtn = '';
+    if (data.tags.includes("gamepass")) {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    }
+
+    return (gameBtn);
+
 }
