@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
         recentGames = recentGames.slice(1);
         const recentContainer = document.getElementById("recentContainer");
 
-        for (game in recentGames) {
-            const gameButton = createGameButton(game);
+        for (let i = 0; i < recentGames.length; i++) {
+            const gameButton = createGameButton(recentGames[i]);
 
             recentContainer.innerHTML += gameButton;
         }
