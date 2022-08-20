@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Load recent games
     fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         let recentGames = res.split(";");
-        recentGames = pinnedGames.slice(1);
+        recentGames = recentGames.slice(1);
         const recentContainer = document.getElementById("recentContainer");
 
         for (game in recentGames) {
