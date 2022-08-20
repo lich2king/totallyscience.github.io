@@ -49,7 +49,11 @@ function loadTopic() {
 
     sorted = sortObject(games);
 
-    if (selectedTopic != 'all') {
+    if (selectedTopic != 'all') {\
+        if (selectedTopic != 'all') {
+            displayGames();
+        }
+
         const gameButtons = document.getElementsByClassName("all");
 
         Array.from(gameButtons).forEach(game => {
