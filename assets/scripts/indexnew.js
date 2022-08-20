@@ -352,7 +352,6 @@ function createGameButton(game, pin) {
     } else if (pin == "suggested") {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
-            <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
