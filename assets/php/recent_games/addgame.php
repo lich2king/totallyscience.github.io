@@ -29,7 +29,7 @@ $recentString = str_replace(";$gameName",'',$result);
 $recentString = ";$gameName$recentString"; //bring game to start of list
 $recentString = explode(";",$recentString);
 
-//$recentString = array_slice($recentString, 1, 10);
+$recentString = array_slice($recentString, 1, 10);
 $recentString = implode(";",$recentString);
 //$recentString = `;$recentString`;
 
