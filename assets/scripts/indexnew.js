@@ -95,7 +95,7 @@ function loadTopic() {
 
 
 function displayGames() {
-    for (let x = 0; x < Object.keys(sorted).length; x++) {
+    for (let x = 0; x < maxGames; x++) {
 
         let keys = Object.keys(sorted);
 
