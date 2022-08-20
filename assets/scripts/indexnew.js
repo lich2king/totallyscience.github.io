@@ -118,7 +118,7 @@ function displayGames() {
 
         let gameBtn;
         if (x > maxGames) {
-            gameBtn = createGameButton(name, hidden);
+            gameBtn = createGameButton(name, "hidden");
         } else {
             gameBtn = createGameButton(name);
         }
