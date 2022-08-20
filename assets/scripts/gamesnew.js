@@ -49,7 +49,7 @@ function loadTopic() {
 
     sorted = sortObject(games);
 
-    if (selectedTopic != 'all') {\
+    if (selectedTopic != 'all') {
         if (selectedTopic != 'all') {
             displayGames();
         }
