@@ -119,10 +119,8 @@ function displayGames() {
         let gameBtn;
         if (x >= maxGames) {
             gameBtn = createGameButton(name, "hidden");
-            console.log(maxGames);
         } else {
             gameBtn = createGameButton(name);
-            console.log("1");
         }
 
 
@@ -348,14 +346,7 @@ function createGameButton(game, pin) {
     }
 
     let gameBtn = '';
-    if (data.tags.includes("gamepass")) {
-        gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
-            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
-            <div class="innerGameDiv">${game}</div>
-        </div>
-        `;
-    } else if (pin == "pin") {
+    if (pin == "pin") {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
             <button id="pin"><img src="/assets/images/icons/coloredpin.png"></button>
@@ -371,6 +362,13 @@ function createGameButton(game, pin) {
     } else if (pin == "hidden") {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else if (data.tags.includes("gamepass")) {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
