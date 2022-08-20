@@ -49,8 +49,8 @@ function loadTopic() {
 
     sorted = sortObject(games);
 
-    if (selectedTopic != 'all') { //solves the problem of doing the category parameter on url
-        if (selectedTopic != 'all') {
+    if (selectedTopic != 'all') {
+        if (gamesDiv.innerHTML != '') { //solves the problem of doing the category parameter on url
             displayGames();
         }
 
