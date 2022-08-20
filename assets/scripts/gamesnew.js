@@ -109,7 +109,6 @@ function displayGames() {
         gamesDiv.innerHTML += gameBtn;
     }
     //all games are generated... now add the liked and recent tags to the games
-    alert("damn");
     const gameButtons = document.getElementsByClassName("all");
 
     fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
@@ -127,7 +126,6 @@ function displayGames() {
             }
         });
     });
-    alert("done");
 }
 
 
