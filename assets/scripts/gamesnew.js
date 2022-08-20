@@ -51,6 +51,7 @@ async function loadTopic() {
 
     if (selectedTopic != 'all') {
         if (customcategory) { //solves the problem of doing the category parameter on url
+            alert("hi");
             await displayGames();
         }
         const gameButtons = document.getElementsByClassName("all");
