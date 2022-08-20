@@ -30,7 +30,7 @@ $recentString = ";$gameName$recentString"; //bring game to start of list
 $recentString = explode(";",$recentString);
 
 $newString = implode(";",array_slice($recentString, 1, 10));
-print_r (`;$newString`);
+print_r ($newString);
 $recentString = implode(";",$recentString);
 //$recentString = `;$recentString`;
 
