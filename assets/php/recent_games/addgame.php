@@ -31,8 +31,6 @@ $recentString = ";$gameName$recentString"; //bring game to start of list
 
 $query = "UPDATE `accounts` SET RecentGames='$recentString' WHERE ID='$userid'";
 mysqli_query($conn, $query);
-die('e');
-
 
 
    
