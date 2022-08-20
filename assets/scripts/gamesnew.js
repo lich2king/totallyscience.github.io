@@ -114,7 +114,7 @@ async function displayGames() {
     await fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         var likedgames = JSON.parse(res);
 
-        await fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+        fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
             let recentGames = res.split(";");
             recentGames = recentGames.slice(1);
             const recentContainer = document.getElementById("recentContainer");
