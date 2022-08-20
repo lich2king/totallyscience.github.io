@@ -116,10 +116,11 @@ function displayGames() {
             classlist += ' new';
         }
 
+        let gameBtn;
         if (x > maxGames) {
-            const gameBtn = createGameButton(name, hidden);
+            gameBtn = createGameButton(name, hidden);
         } else {
-            const gameBtn = createGameButton(name);
+            gameBtn = createGameButton(name);
         }
 
 
