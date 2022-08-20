@@ -6,7 +6,6 @@ document.getElementById("gamesnav").classList.add("selected");
 
 
 
-
 //Load Game
 
 const queryString = window.location.search;
@@ -23,12 +22,13 @@ const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
 
-let loggedIn = false;
 
 
 window.addEventListener('load', () => {
+
     //Check if user is logged in
-    await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    let loggedIn = false;
+    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
         let userloggedIn = 'false';
@@ -39,6 +39,25 @@ window.addEventListener('load', () => {
 
         if (userloggedIn == "true") {
             loggedIn = true;
+
+            //check if user liked the game previously
+            fetch(`assets/php/game_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                if (res == 'liked') {
+                    likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+                }
+            });
+
+            //check if user pinned the game previously
+            fetch(`assets/php/game_pin/checkpinned.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                if (res == 'pinned') {
+                    pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+                }
+            });
+
+            //add to recent games list
+            console.log("here");
+            fetch(`assets/php/recent_games/addgame.php?name=${gameName}`);
+            console.log("after");
         }
     });
 
@@ -84,29 +103,6 @@ window.addEventListener('load', () => {
             document.getElementById('currentHighscore').innerText = '0';
         }
     });
-
-    console.log(loggedIn);
-    if (loggedIn) {
-        console.log("special effects");
-        //check if user liked the game previously
-        fetch(`assets/php/game_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-            if (res == 'liked') {
-                likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-            }
-        });
-
-        //check if user pinned the game previously
-        fetch(`assets/php/game_pin/checkpinned.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-            if (res == 'pinned') {
-                pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-            }
-        });
-
-        //add to recent games list
-        console.log("here");
-        fetch(`assets/php/recent_games/addgame.php?name=${gameName}`);
-        console.log("after");
-    }
 });
 
 
