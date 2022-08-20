@@ -83,6 +83,7 @@ window.addEventListener('load', () => {
     });
 
     if (loggedIn) {
+        console.log("special effects");
         //check if user liked the game previously
         fetch(`assets/php/game_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
             if (res == 'liked') {
