@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function loadTopic() {
+async function loadTopic() {
     displayedGames = 0;
 
     document.getElementById("noSearch").style.display = 'none';
@@ -51,7 +51,7 @@ function loadTopic() {
 
     if (selectedTopic != 'all') {
         if (customcategory) { //solves the problem of doing the category parameter on url
-            displayGames();
+            await displayGames();
         }
         const gameButtons = document.getElementsByClassName("all");
 
@@ -80,7 +80,7 @@ function loadTopic() {
 }
 
 
-function displayGames() {
+async function displayGames() {
     for (let x = 0; x < Object.keys(sorted).length; x++) {
 
         let keys = Object.keys(sorted);
