@@ -181,7 +181,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/indexnew.js?v32"></script>
+    <script src="assets/scripts/indexnew.js?v33"></script>
 </body>
 
 </html>
