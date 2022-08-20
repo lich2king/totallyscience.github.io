@@ -146,7 +146,7 @@ searchBar.addEventListener('keyup', () => {
         var name = game.getAttribute("name").toUpperCase();
         name = name.split(' ').join('');
 
-        if (name.includes(input) && game.getAttribute('style') != 'display:none') {
+        if (name.includes(input) && game.classList.contains(selectedTopic)) {
             game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
             gameShown = true;
         } else {
