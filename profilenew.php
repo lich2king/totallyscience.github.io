@@ -72,7 +72,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/profile.js?v29"></script>
+    <script src="assets/scripts/profile.js?v30"></script>
     <script>
     
     </script>
