@@ -34,7 +34,7 @@ if (!function_exists('str_contains')) {
 if(str_contains($result, ";$gameName"))
 {
     //game is already part of recent games
-    $recentString = str_replace(`;$gameName`,'',$recentString);
+    $recentString = str_replace(";$gameName",'',$result);
     $recentString = ";$gameName$recentString"; //bring game to start of list
 }
 else
