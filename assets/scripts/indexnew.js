@@ -146,9 +146,9 @@ function displayGames() {
                     }
                 }
                 for (let i = 0; i < recentGames.length; i++) {
-                    const gameButton = createGameButton(recentGames[i]);
-
-                    recentContainer.innerHTML += gameButton;
+                    if (recentGames[i] == game.getAttribute("name")) {
+                        recent = true;
+                    }
                 }
                 if (liked) {
                     game.classList.add('liked');
