@@ -145,8 +145,10 @@ function displayGames() {
 
 const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', () => {
-
-    scrollTo(0, 0);
+    document.getElementById('info').scrollIntoView({
+        block: "start",
+        inline: "nearest"
+    });
 
     let input = (searchBar.value.toUpperCase()).split(' ').join('');;
 
