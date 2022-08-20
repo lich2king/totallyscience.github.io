@@ -88,7 +88,7 @@
 
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/game.js?v39"></script>
+    <script src="assets/scripts/game.js?v40wef"></script>
 
 </body>
 
