@@ -18,6 +18,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category');
 if (category != null) {
+    alert("hiwe");
+
     selectedTopic = category;
     document.getElementById("topText").style.display = '';
     document.getElementById("topText").innerText = `${category.toUpperCase()} Games`;
