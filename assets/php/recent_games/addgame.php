@@ -30,11 +30,9 @@ $recentString = ";$gameName$recentString"; //bring game to start of list
 $recentString = explode(";",$recentString);
 
 $newString = implode(";",array_slice($recentString, 1, 10));
-print_r (";$newString");
-$recentString = implode(";",$recentString);
-//$recentString = `;$recentString`;
+$newString = ";$newString";
 
-$query = "UPDATE `accounts` SET RecentGames='$recentString' WHERE ID='$userid'";
+$query = "UPDATE `accounts` SET RecentGames='$newString' WHERE ID='$userid'";
 mysqli_query($conn, $query);
 
 die();
