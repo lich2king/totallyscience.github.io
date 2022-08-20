@@ -251,7 +251,7 @@ function suggestGames() {
 
         for (let x = displayedGames; x < displayedGames + 3; x++) {
             let randGame = randomProperty(games)
-            while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
+            while (randomGames.includes(randGame) || pinnedGames.includes(randGame) || games[randGame].tags.includes("gamepass")) {
                 randGame = randomProperty(games)
             }
             randomGames.push(randGame);
