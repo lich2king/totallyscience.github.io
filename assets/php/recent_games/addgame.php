@@ -48,7 +48,7 @@ else
 
 $query = "UPDATE `accounts` SET RecentGames='$recentString' WHERE ID='$userid'";
 mysqli_query($conn, $query);
-die();
+die('');
 
 
 
