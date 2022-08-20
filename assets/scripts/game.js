@@ -82,6 +82,7 @@ window.addEventListener('load', () => {
         }
     });
 
+    console.log(loggedIn);
     if (loggedIn) {
         console.log("special effects");
         //check if user liked the game previously
