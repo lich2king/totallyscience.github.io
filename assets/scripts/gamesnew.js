@@ -114,16 +114,31 @@ async function displayGames() {
     await fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         var likedgames = JSON.parse(res);
 
-        Array.from(gameButtons).forEach(game => {
-            let liked = false;
-            for (like in likedgames) {
-                if (likedgames[like][0] == game.getAttribute("name")) {
-                    liked = true;
+        await fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+            let recentGames = res.split(";");
+            recentGames = recentGames.slice(1);
+            const recentContainer = document.getElementById("recentContainer");
+
+            Array.from(gameButtons).forEach(game => {
+                let liked = false;
+                let recent = false;
+                for (like in likedgames) {
+                    if (likedgames[like][0] == game.getAttribute("name")) {
+                        liked = true;
+                    }
                 }
-            }
-            if (liked) {
-                game.classList.add('liked');
-            }
+                for (let i = 0; i < recentGames.length; i++) {
+                    if (recentGames[i] == game.getAttribute("name")) {
+                        recent = true;
+                    }
+                }
+                if (liked) {
+                    game.classList.add('liked');
+                }
+                if (recent) {
+                    game.classList.add('recent');
+                }
+            });
         });
     });
 }
