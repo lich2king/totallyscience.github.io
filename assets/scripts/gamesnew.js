@@ -126,6 +126,7 @@ function displayGames() {
             }
         });
     });
+    loadTopic();
 }
 
 
