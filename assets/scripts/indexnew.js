@@ -160,16 +160,21 @@ searchBar.addEventListener('keyup', () => {
 
     const gameButtons = document.getElementsByClassName("all");
 
+    let gameShown = false;
     Array.from(gameButtons).forEach(game => {
         var name = game.getAttribute("name").toUpperCase();
         name = name.split(' ').join('');
 
-        if (name.includes(input)) {
+        if (name.includes(input) && game.getAttribute('style') != 'display:none') {
             game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
+            gameShown = true;
         } else {
             game.setAttribute('style', 'display:none')
         }
     });
+    if (!gameShown) {
+        document.getElementById("noSearch").style.display = '';
+    }
 
 
     /*gamesDiv.innerHTML = '';
