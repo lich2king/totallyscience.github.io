@@ -127,6 +127,7 @@ function displayGames() {
             }
         });
     });
+    alert("done");
 }
 
 
