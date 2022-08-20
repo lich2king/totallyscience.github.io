@@ -22,26 +22,11 @@ $query = "SELECT `RecentGames` FROM `accounts` WHERE id='$userid'";
 $result = mysqli_query($conn, $query);
 $result = ($result -> fetch_row())[0];
 
-if (!function_exists('str_contains')) {
-    function str_contains( $haystack, $needle)
-    {
-        return $needle !== '' && mb_strpos($haystack, $needle) !== false;
-    }
-}
 
-if(str_contains($result, ";$gameName"))
-{
-    //game is already part of recent games
-    $recentString = str_replace(";$gameName",'',$result);
-    $recentString = ";$gameName$recentString"; //bring game to start of list
-    echo("recent");
-}
-else
-{
-    //game was not recently played
-    $recentString = ";$gameName$result";
-    echo("not recent");
-}
+
+//game is already part of recent games
+$recentString = str_replace(";$gameName",'',$result);
+$recentString = ";$gameName$recentString"; //bring game to start of list
 
 
 $query = "UPDATE `accounts` SET RecentGames='$recentString' WHERE ID='$userid'";
