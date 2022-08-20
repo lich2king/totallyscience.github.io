@@ -95,7 +95,7 @@ function loadTopic() {
 
 
 function displayGames() {
-    for (let x = 0; x < maxGames; x++) {
+    for (let x = 0; x < Object.keys(sorted).length; x++) {
 
         let keys = Object.keys(sorted);
 
@@ -116,8 +116,12 @@ function displayGames() {
             classlist += ' new';
         }
 
+        if (x > maxGames) {
+            const gameBtn = createGameButton(name, hidden);
+        } else {
+            const gameBtn = createGameButton(name);
+        }
 
-        const gameBtn = createGameButton(name);
 
 
         gamesDiv.innerHTML += gameBtn;
@@ -359,6 +363,12 @@ function createGameButton(game, pin) {
     } else if (pin == "suggested") {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else if (pin == "hidden") {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
