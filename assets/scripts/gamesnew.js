@@ -54,6 +54,7 @@ async function loadTopic() {
         if (customcategory) { //solves the problem of doing the category parameter on url
             alert("hi");
             await displayGames();
+            alert("SKIPS?");
         }
         const gameButtons = document.getElementsByClassName("all");
 
@@ -128,6 +129,7 @@ async function displayGames() {
             }
         });
     });
+    alert("DONE");
 }
 
 
