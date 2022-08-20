@@ -104,7 +104,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/profile.js?v24"></script>
+    <script src="assets/scripts/profile.js?v25"></script>
     <script>
     
     </script>
