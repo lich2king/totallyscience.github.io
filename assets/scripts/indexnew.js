@@ -267,7 +267,7 @@ function suggestGames() {
         document.getElementById('scisuggests').innerHTML = '';
         for (let i = 0; i < 3; i++) {
             let game = randomGames[i];
-            let gameBtn = createGameButton(game);
+            let gameBtn = createGameButton(game, "suggested");
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
             if (i <= totalPinned - 1) {
