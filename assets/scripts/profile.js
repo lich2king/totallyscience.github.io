@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //Load highscores
     fetch(`/assets/php/personalhighscores.php?username=${username}`).then((response) => response.text()).then((res) => {
         if (res != '[]') {
             res = JSON.parse(res);
@@ -64,6 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const gameButton = createGameButton(game);
 
             likeContainer.innerHTML += gameButton;
+        }
+    });
+
+    //Load recent games
+    fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+        let recentGames = res.split(";");
+        recentGames = pinnedGames.slice(1);
+        const recentContainer = document.getElementById("recentContainer");
+
+        for (game in recentGames) {
+            const gameButton = createGameButton(game);
+
+            recentContainer.innerHTML += gameButton;
         }
     });
 });

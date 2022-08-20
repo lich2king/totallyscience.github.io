@@ -38,7 +38,7 @@
     <div id="recents">
         <h1 class="label">Recent Games</h1>
         <div class="biccontainer">
-            <div class="container">
+            <div class="container" id="recentContainer">
                 <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="FNAF"
                     style="background-image: url('https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/Legacy%20Videos/posters/N2ZTFzaTE6foFLgrLK4DTEhIejf4DuTI')"
                     id="gameDiv" onclick="location.href = 'game.php?class=FNAF'">
