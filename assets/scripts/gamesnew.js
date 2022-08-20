@@ -50,6 +50,7 @@ async function loadTopic() {
     sorted = sortObject(games);
 
     if (selectedTopic != 'all') {
+        alert(customcategory);
         if (customcategory) { //solves the problem of doing the category parameter on url
             alert("hi");
             await displayGames();
