@@ -18,8 +18,6 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category');
 if (category != null) {
-    alert("hiwe");
-
     selectedTopic = category;
     document.getElementById("topText").style.display = '';
     document.getElementById("topText").innerText = `${category.toUpperCase()} Games`;
@@ -52,11 +50,8 @@ async function loadTopic() {
     sorted = sortObject(games);
 
     if (selectedTopic != 'all') {
-        alert(customcategory);
         if (customcategory) { //solves the problem of doing the category parameter on url
-            alert("hi");
             await displayGames();
-            alert("SKIPS?");
         }
         const gameButtons = document.getElementsByClassName("all");
 
@@ -131,7 +126,6 @@ async function displayGames() {
             }
         });
     });
-    alert("DONE");
 }
 
 
