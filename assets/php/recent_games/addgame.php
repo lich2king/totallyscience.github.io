@@ -31,7 +31,7 @@ $recentString = explode(";",$recentString);
 
 //$recentString = array_slice($recentString, 1, 10);
 $recentString = implode(";",$recentString);
-$recentString = `;$recentString`;
+//$recentString = `;$recentString`;
 
 $query = "UPDATE `accounts` SET RecentGames='$recentString' WHERE ID='$userid'";
 mysqli_query($conn, $query);
