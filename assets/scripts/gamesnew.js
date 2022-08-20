@@ -49,7 +49,7 @@ function loadTopic() {
 
     sorted = sortObject(games);
 
-    if (selectedTopic != 'all') {
+    if (selectedTopic != 'all') { //solves the problem of doing the category parameter on url
         if (selectedTopic != 'all') {
             displayGames();
         }
