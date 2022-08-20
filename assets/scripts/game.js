@@ -2,21 +2,8 @@ document.getElementById("gamesnav").classList.add("selected");
 
 
 
-//Check if user is logged in
-let loggedIn = false;
-fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
-    res = JSON.parse(res);
 
-    let userloggedIn = 'false';
 
-    if (res != null) {
-        userloggedIn = res['isLoggedIn'];
-    }
-
-    if (userloggedIn == "true") {
-        loggedIn = true;
-    }
-});
 
 
 
@@ -36,9 +23,25 @@ const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
 
+let loggedIn = false;
 
 
 window.addEventListener('load', () => {
+    //Check if user is logged in
+    await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res);
+
+        let userloggedIn = 'false';
+
+        if (res != null) {
+            userloggedIn = res['isLoggedIn'];
+        }
+
+        if (userloggedIn == "true") {
+            loggedIn = true;
+        }
+    });
+
 
     //get game data for iframe etc
 
