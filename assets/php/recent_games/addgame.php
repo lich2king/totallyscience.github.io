@@ -29,8 +29,7 @@ if (!function_exists('str_contains')) {
     }
 }
 
-
-echo($gameName);
+die(str_contains($result, ";$gameName"));
 if(str_contains($result, ";$gameName"))
 {
     //game is already part of recent games
