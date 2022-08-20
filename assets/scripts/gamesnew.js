@@ -50,10 +50,9 @@ function loadTopic() {
     sorted = sortObject(games);
 
     if (selectedTopic != 'all') {
-        if (gamesDiv.innerHTML == '') { //solves the problem of doing the category parameter on url
+        if (customcategory) { //solves the problem of doing the category parameter on url
             displayGames();
         }
-
         const gameButtons = document.getElementsByClassName("all");
 
         Array.from(gameButtons).forEach(game => {
@@ -196,6 +195,7 @@ buttons.forEach((button) => {
         if (customcategory) {
             document.getElementById("topText").style.display = 'none';
             document.getElementById('searchcat').style.marginTop = "80px";
+            customcategory = false;
         }
 
         if (e.target.name != selectedTopic) {
