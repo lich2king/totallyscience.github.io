@@ -158,6 +158,8 @@ searchBar.addEventListener('keyup', () => {
     });
     if (!gameShown) {
         document.getElementById("noSearch").style.display = '';
+    } else {
+        document.getElementById("noSearch").style.display = 'none';
     }
 
 
