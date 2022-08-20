@@ -98,8 +98,9 @@ window.addEventListener('load', () => {
         });
 
         //add to recent games list
-
+        console.log("here");
         fetch(`assets/php/recent_games/addgame.php?name=${gameName}`);
+        console.log("after");
     }
 });
 
