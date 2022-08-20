@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 document.getElementById('usernameSpan').innerText = username;
-                document.getElementById('nameheader').innerText = username;
                 document.getElementById('emailSpan').innerText = res['email'];
             });
         } else {

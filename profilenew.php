@@ -12,9 +12,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <h1 id="nameheader">
-        Username
-    </h1>
+
 
     <div id="accountoptions">
         <div class="accountoption">
@@ -104,7 +102,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/profile.js?v25"></script>
+    <script src="assets/scripts/profile.js?v26"></script>
     <script>
     
     </script>
