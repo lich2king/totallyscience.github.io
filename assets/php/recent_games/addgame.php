@@ -29,7 +29,6 @@ if (!function_exists('str_contains')) {
     }
 }
 
-die(str_contains($result, ";$gameName"));
 if(str_contains($result, ";$gameName"))
 {
     //game is already part of recent games
@@ -47,7 +46,7 @@ else
 
 $query = "UPDATE `accounts` SET RecentGames='$recentString' WHERE ID='$userid'";
 mysqli_query($conn, $query);
-die('');
+die('e');
 
 
 
