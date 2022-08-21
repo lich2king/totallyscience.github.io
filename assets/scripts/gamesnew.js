@@ -289,7 +289,7 @@ function createGameButton(game, pin) {
         `;
     } else if (data.tags.includes("gamepass") && pin == "hidden") {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
             <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
             <div class="innerGameDiv">${game}</div>
         </div>
