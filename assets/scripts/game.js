@@ -21,13 +21,13 @@ const likeButtonImg = likeButton.firstChild;
 const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
-
+let loggedIn = false;
 
 
 window.addEventListener('load', () => {
 
     //Check if user is logged in
-    let loggedIn = false;
+
     fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
