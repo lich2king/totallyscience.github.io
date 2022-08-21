@@ -55,6 +55,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
+            console.log(roominput)
 
             joinChat.style.display = 'none';
 
@@ -177,7 +178,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                 joinChat.style.display = '';
             }
 
-            messageinput.addEventListener("keyup", function(event) {
+            messageinput.addEventListener("keyup", (event) => {
                 if (event.key === 'Enter') {
                     event.preventDefault();
                     messageinp = messageinput.value.replace("'", '"');
