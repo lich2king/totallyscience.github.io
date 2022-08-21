@@ -77,7 +77,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         //display chatroom id
                         let ele = document.createElement('li');
                         let span = document.createElement('span');
-                        span.innerText = 'Room Code:'
+                        span.innerText = 'Room Code:';
+                        span.className = 'span';
                         ele.innerText = localStorage.getItem('chatRoom');
                         ele.append(span);
                         messageList.appendChild(ele);
@@ -88,6 +89,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                             let ele = document.createElement('li');
                             let span = document.createElement('span');
+                            span.className = 'span';
                             ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                             span.innerText = curmsg[0];
         
@@ -125,6 +127,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                         //display chatroom id
                                         let ele = document.createElement('li');
                                         let span = document.createElement('span');
+                                        span.className = 'span';
                                         span.innerText = 'Room Code:'
                                         ele.innerText = localStorage.getItem('chatRoom');
                                         ele.append(span);
@@ -136,6 +139,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                                             let ele = document.createElement('li');
                                             let span = document.createElement('span');
+                                            span.className = 'span';
                                             ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                             span.innerText = curmsg[0];
         
@@ -197,6 +201,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                 let ele = document.createElement('li');
                                 let span = document.createElement('span');
                                 span.innerText = 'Room Code:'
+                                span.className = 'span';
                                 ele.innerText = localStorage.getItem('chatRoom');
                                 ele.append(span);
                                 messageList.appendChild(ele);
@@ -207,6 +212,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                                     let ele = document.createElement('li');
                                     let span = document.createElement('span');
+                                    span.className = 'span';
                                     ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                     span.innerText = curmsg[0];
         
