@@ -102,8 +102,12 @@ async function displayGames() {
             classlist += ' new';
         }
 
-
-        const gameBtn = createGameButton(name);
+        let gameBtn;
+        if (customcategory) {
+            gameBtn = createGameButton(name, "hidden");
+        } else {
+            gameBtn = createGameButton(name);
+        }
 
 
         gamesDiv.innerHTML += gameBtn;
@@ -276,10 +280,23 @@ function createGameButton(game, pin) {
     }
 
     let gameBtn = '';
-    if (data.tags.includes("gamepass")) {
+    if (data.tags.includes("gamepass") && pin != "hidden") {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
             <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else if (data.tags.includes("gamepass") && pin == "hidden") {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else if (pin == "hidden") {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
