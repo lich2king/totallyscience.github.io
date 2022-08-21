@@ -137,6 +137,7 @@
             let username;
             let gameName;
             let score;
+            let uid;
 
             function getRowData() {
                 fetch(`./assets/php/reviewhighscore.php?step=0`).then((response) => response.text()).then((res) => {
@@ -146,6 +147,7 @@
                     username = res['user']
                     gameName = res['game']
                     score = res['score']
+                    uid = res['uid']
 
                     document.getElementById('gameName').innerText = gameName;
                     document.getElementById('username').innerText = username;
@@ -161,14 +163,14 @@
 
 
             function reject() {
-                fetch(`./assets/php/reviewhighscore.php?step=1&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
+                fetch(`./assets/php/reviewhighscore.php?step=1&username=${username}&game=${gameName}&score=${score}&uid=${uid}`).then((response) => response.text()).then((res) => {
                     console.log(res);
                 });
                 location.reload();
             }
 
             function approve() {
-                fetch(`./assets/php/reviewhighscore.php?step=2&username=${username}&game=${gameName}&score=${score}`).then((response) => response.text()).then((res) => {
+                fetch(`./assets/php/reviewhighscore.php?step=2&username=${username}&game=${gameName}&score=${score}&uid=${uid}`).then((response) => response.text()).then((res) => {
                     console.log(res);
                 });
                 location.reload();

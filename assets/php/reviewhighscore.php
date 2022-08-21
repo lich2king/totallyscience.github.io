@@ -45,6 +45,7 @@ function getRow(){
         $user = $row[2];
         $score = $row[1];
         $image = $row[3];
+        $uid = $row[4];
       
         $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game='$game'");
         if($currentHighscore->num_rows == 0) {
@@ -53,6 +54,7 @@ function getRow(){
           $data->user = $user;
           $data->score = $score;
           $data->image = $image;
+          $data->uid = $uid;
           $dataJSON = json_encode($data);
           echo($dataJSON);
 
@@ -67,6 +69,7 @@ function getRow(){
             $data->user = $user;
             $data->score = $score;
             $data->image = $image;
+            $data->uid = $uid;
             $dataJSON = json_encode($data);
             echo($dataJSON);
           }
@@ -102,6 +105,7 @@ function approveRow(){
   $user = htmlspecialchars($_GET["username"]);
   $game = htmlspecialchars($_GET["game"]);
   $score = htmlspecialchars($_GET["score"]);
+  $uid = htmlspecialchars($_GET["uid"]);
 
   $sql = "DELETE FROM highscore_requests WHERE username='$user' AND game='$game' AND score=$score";
   if ($conn->query($sql) === TRUE) {
