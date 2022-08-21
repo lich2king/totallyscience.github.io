@@ -1,1 +1,0 @@
-document.getElementById("chatnav").classList.add("selected");

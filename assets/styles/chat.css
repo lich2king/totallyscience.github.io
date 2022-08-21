@@ -1,10 +1,67 @@
-#chatoptions {
+body {
+    color: var(--dark-color);
+}
+
+#joinChat {
     margin-top: 120px;
     width: 100vw;
     text-align: center;
     margin-bottom: 40vh;
 }
-
-#chatoptions button {
+#joinChat button {
     margin-bottom: 30px;
+}
+
+#messageinput {
+    padding: 15px;
+    width: 220px;
+    border: solid 2px var(--accent-color);
+    border-radius: 10px;
+    margin-left: 50%;
+    outline: none;
+    background-color: var(--light-color);
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+
+ul {
+    margin-top: 150px;
+    margin-left: 200px;
+    font-family: 'Rubik';
+    line-height: 30px;
+    word-break: break-all;
+    list-style-type: none;
+}
+
+span {
+    position: absolute;
+    left: 10px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+#username {
+    margin-top: 150px;
+}
+
+#messageinput {
+    transform: none;
+    bottom: 10px;
+    left: 100px;
+    margin-left: 0;
+    position: fixed;
+    width: calc(100% - 200px);
+}
+
+#leavebtn {
+    transform: none;
+    bottom: 10px;
+    padding: 15px;
+    left: 10px;
+    margin-left: 0;
+    position: fixed;
+    width: 80px;
+    font-size: 18px;
 }
