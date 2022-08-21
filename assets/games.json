@@ -1250,6 +1250,57 @@
         "date_added": "2022-08-18T05:11:25.557Z",
         "developer": "FunnyAnimatorJimTV",
         "iframe_url": "assets/games/scratch/fortnite.html"
+    },
+
+    "Riddle School": {
+        "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
+        "image": "./assets/game_images/riddleschool.jpg",
+        "controls": "[Click] - interact",
+        "tags": ["stickman", "puzzle"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "JonBro",
+        "iframe_url": "assets/games/riddleschool/index.html"
+    },
+
+    "Riddle School 2": {
+        "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
+        "image": "./assets/game_images/riddleschool2.jpg",
+        "controls": "[Click] - interact",
+        "tags": ["stickman", "puzzle"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "JonBro",
+        "iframe_url": "assets/games/riddleschool2/index.html"
+    },
+
+    "Riddle School 3": {
+        "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
+        "image": "./assets/game_images/riddleschool3.jpg",
+        "controls": "[Click] - interact",
+        "tags": ["stickman", "puzzle"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "JonBro",
+        "iframe_url": "assets/games/riddleschool3/index.html"
+    },
+
+    "Riddle School 4": {
+        "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
+        "image": "./assets/game_images/riddleschool4.jpg",
+        "controls": "[Click] - interact",
+        "tags": ["stickman", "puzzle", "gamepass"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "JonBro",
+        "iframe_url": "assets/games/riddleschool4/index.html"
+    },
+
+    "Riddle School 5": {
+        "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
+        "image": "./assets/game_images/riddleschool5.jpg",
+        "controls": "[Click] - interact",
+        "tags": ["stickman", "puzzle", "gamepass"],
+        "date_added": "2022-08-18T05:11:25.557Z",
+        "developer": "JonBro",
+        "iframe_url": "assets/games/riddleschool5/index.html"
     }
+
 
 }
