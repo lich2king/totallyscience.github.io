@@ -52,6 +52,7 @@ function uploadHighscore()
       echo ("Success, your score will be reviewed shortly");
       //echo "New record created successfully";
   } else {
+      echo ("Error");
       //echo "Error: " . $sql . "<br>" . $conn->error;
       //echo "Error";
   }
