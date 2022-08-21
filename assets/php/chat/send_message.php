@@ -1,15 +1,15 @@
 <?php
 include 'config.php';
 
+if (!isset($_COOKIE['logintoken'])) {
+  die("no cookie");
+}
+
+$name = json_decode($_COOKIE['logintoken'], true)['username'];
 $roomid = htmlspecialchars($_GET["id"]);
-$name = htmlspecialchars($_GET["name"]);
 $message = htmlspecialchars($_GET["message"]);
 if (!$roomid || !$name || !$message) {
     //die("missing name, room id, or message");
-}
-
-if (strlen($name) > 20) {
-  die("name cannot exceed 20 characters");
 }
 
 if (strlen($message) > 200) {
@@ -23,7 +23,7 @@ if (strlen($roomid) > 20) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_database);
   
 // Check connection
 if ($conn->connect_error) {

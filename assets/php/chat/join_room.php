@@ -1,14 +1,15 @@
 <?php
 include 'config.php';
 
-$roomid = htmlspecialchars($_GET["id"]);
-$name = htmlspecialchars($_GET["name"]);
-if (!$roomid || !$name) {
-    die("missing name or room id");
+if (!isset($_COOKIE['logintoken'])) {
+  die("no cookie");
 }
 
-if (strlen($name) > 20) {
-  die("name cannot exceed 20 characters");
+$name = json_decode($_COOKIE['logintoken'], true)['username'];
+
+$roomid = htmlspecialchars($_GET["id"]);
+if (!$roomid || !$name) {
+    die("missing name or room id");
 }
 
 $roomid = strval($roomid);
@@ -18,11 +19,11 @@ if (strlen($roomid) > 20) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_database);
 
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed");// . $conn->connect_error);
+  die("connection failed");
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {

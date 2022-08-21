@@ -6,10 +6,6 @@ if (!$roomid) {
     die("missing room id");
 }
 
-if (strlen($name) > 20) {
-  die("name cannot exceed 20 characters");
-}
-
 $roomid = strval($roomid);
 
 if (strlen($roomid) > 20) {
@@ -17,11 +13,11 @@ if (strlen($roomid) > 20) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_database);
   
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
+  die("connection failed");
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
@@ -39,7 +35,7 @@ if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
         }
         echo json_encode($cars);
       } else {
-        echo "error getting messages";// . $conn->error;
+        echo "error getting messages";
       } 
       
       $conn->close();
