@@ -13,7 +13,47 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         let doscroll = true;
 
-        joinChat.children[4].addEventListener('click', () => {
+        joinChat.children[2].addEventListener('click', joinChat);
+        joinChat.children[4].addEventListener('click', joinChat);
+
+        var HTMLUtils = new function() {
+            var rules = [
+                { replacement: '&', expression: /&amp;/g },
+                { replacement: '<', expression: /&lt;/g },
+                { replacement: '>', expression: /&gt;/g },
+                { replacement: '"', expression: /&quot;/g },
+            ];
+            this.escape = function(html) {
+                var result = html;
+                for (var i = 0; i < rules.length; ++i) {
+                    var rule = rules[i];
+                    result = result.replace(rule.expression, rule.replacement);
+                }
+                return result;
+            }
+        };
+        
+        window.addEventListener('load', function() {
+            const nameinput = document.getElementById('username');
+            const roominput = document.getElementById('roominput');
+        
+            nameinput.value = localStorage.getItem('chatName');
+            roominput.value = localStorage.getItem('chatRoom');
+        });
+        window.addEventListener('scroll', () => {
+            const scrollb = document.getElementById('scrollb');
+            let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+        
+            if (document.body.scrollTop > (_docHeight - 1500) || document.documentElement.scrollTop > (_docHeight - 1500)) {
+                scrollb.style.display = 'none';
+                doscroll = true;
+            } else {
+                scrollb.style.display = 'block';
+                doscroll = false;
+            }
+        });
+
+        function joinChat() {
             const roominput = joinChat.children[0].value;
 
             joinChat.style.display = 'none';
@@ -187,48 +227,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     }
                 }
             });
-        });
-        joinChat.children[2].addEventListener('click', () => {
-            const roominput = joinChat.children[0].value;
-
-        });
-
-        var HTMLUtils = new function() {
-            var rules = [
-                { replacement: '&', expression: /&amp;/g },
-                { replacement: '<', expression: /&lt;/g },
-                { replacement: '>', expression: /&gt;/g },
-                { replacement: '"', expression: /&quot;/g },
-            ];
-            this.escape = function(html) {
-                var result = html;
-                for (var i = 0; i < rules.length; ++i) {
-                    var rule = rules[i];
-                    result = result.replace(rule.expression, rule.replacement);
-                }
-                return result;
-            }
-        };
-        
-        window.addEventListener('load', function() {
-            const nameinput = document.getElementById('username');
-            const roominput = document.getElementById('roominput');
-        
-            nameinput.value = localStorage.getItem('chatName');
-            roominput.value = localStorage.getItem('chatRoom');
-        });
-        window.addEventListener('scroll', () => {
-            const scrollb = document.getElementById('scrollb');
-            let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-        
-            if (document.body.scrollTop > (_docHeight - 1500) || document.documentElement.scrollTop > (_docHeight - 1500)) {
-                scrollb.style.display = 'none';
-                doscroll = true;
-            } else {
-                scrollb.style.display = 'block';
-                doscroll = false;
-            }
-        });
+        }
     } else {
         errorText.innerText = 'You must be logged in to use chat.';
     }
