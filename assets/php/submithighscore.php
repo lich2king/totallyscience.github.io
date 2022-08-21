@@ -7,7 +7,7 @@ $user = $data['username'];
 $game = $data['gameName'];
 $score = $data['score'];
 $imageFile = $data['imageFile'];
-
+$uid = $data['uid'];
 
 
 // Create connection
@@ -43,10 +43,10 @@ if($highscoreresult->num_rows == 0) {
 
 function uploadHighscore()
 {
-  global $game, $score, $user, $imageFile, $conn;
+  global $game, $score, $user, $imageFile, $uid, $conn;
   
-  $sql = "INSERT INTO highscore_requests (game, score, username, image)
-  VALUES ('$game', '$score', '$user', '$imageFile')";
+  $sql = "INSERT INTO highscore_requests (game, score, username, image, uid)
+  VALUES ('$game', '$score', '$user', '$imageFile', '$uid')";
       
   if ($conn->query($sql) === TRUE) {
       echo ("Success, your score will be reviewed shortly");

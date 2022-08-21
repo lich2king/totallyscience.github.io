@@ -1,5 +1,6 @@
 let imageFile = '';
-let username = ''
+let username = '';
+let uid = '';
 
 window.addEventListener('load', function() {
     document.querySelector('input[type="file"]').addEventListener('change', function() {
@@ -66,7 +67,8 @@ async function SubmitHighscore() {
             username,
             gameName,
             score,
-            imageFile
+            imageFile,
+            uid
         }
         data = JSON.stringify(data)
 
@@ -83,11 +85,12 @@ async function SubmitHighscore() {
     }
 }
 
-function GetUser() {
-    fetch(`./assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+async function GetUser() {
+    await fetch(`./assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         if (res != "null") {
             res = JSON.parse(res);
             username = res["username"]
+            uid = res["id"]
         } else {
             username = ""
         }
