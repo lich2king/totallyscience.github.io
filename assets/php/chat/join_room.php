@@ -1,19 +1,15 @@
 <?php
 include 'config.php';
 
+if (!isset($_COOKIE['logintoken'])) {
+  die("no cookie");
+}
+
+$name = json_decode($_COOKIE['logintoken'], true)['username'];
+
 $roomid = htmlspecialchars($_GET["id"]);
-$name = htmlspecialchars($_GET["name"]);
-$message = htmlspecialchars($_GET["message"]);
-if (!$roomid || !$name || !$message) {
-    //die("missing name, room id, or message");
-}
-
-if (strlen($name) > 20) {
-  die("name cannot exceed 20 characters");
-}
-
-if (strlen($message) > 200) {
-  die("message cannot exceed 200 characters");
+if (!$roomid || !$name) {
+    die("missing name or room id");
 }
 
 $roomid = strval($roomid);
@@ -23,17 +19,18 @@ if (strlen($roomid) > 20) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-  
+$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_username);
+
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
+  die("connection failed");// . $conn->connect_error);
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
   if($result->num_rows == 1) {
+      $message = $name . " has joined the chat";
       $sql2 = "INSERT INTO `$roomid` (name, message)
-      VALUES ('$name', '$message')";
+      VALUES ('Server', '$message')";
       
       if ($conn->query($sql2) === TRUE) {
           $sql3 = "SELECT name, message, time FROM `$roomid`";
@@ -50,7 +47,7 @@ if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
             echo json_encode($cars);
           } else {
             echo "error getting messages";// . $conn->error;
-          }  
+          } 
       } else {
           echo "error sending message";// . $conn->error;
       }

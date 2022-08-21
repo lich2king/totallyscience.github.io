@@ -58,8 +58,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
             joinChat.style.display = 'none';
 
-            console.log('ay')
-
             try {
                 fetch(`assets/php/chat/create_room.php?id=${roominput.value}`).then((response) => response.text()).then((res) => {
                     let jsonRes;
@@ -113,7 +111,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         setInterval(() => {
                             try {
-                                fetch(`assets/php/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
+                                fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
                                     let jsonRes;
                                     try {
                                         jsonRes = JSON.parse(res);
@@ -162,7 +160,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         window.addEventListener('beforeunload', function() {
                             try {
-                                fetch(`assets/php/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
+                                fetch(`assets/php/chat/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
                             } catch (err) {
                                 console.log(err);
                             }
