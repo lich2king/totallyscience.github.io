@@ -13,8 +13,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         let doscroll = true;
 
-        joinChat.children[2].addEventListener('click', joinChat);
-        joinChat.children[4].addEventListener('click', joinChat);
+        joinChat.children[2].addEventListener('click', joinChatroom);
+        joinChat.children[4].addEventListener('click', joinChatroom);
 
         var HTMLUtils = new function() {
             var rules = [
@@ -53,7 +53,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
             }
         });
 
-        function joinChat() {
+        function joinChatroom() {
             const roominput = joinChat.children[0].value;
 
             joinChat.style.display = 'none';
