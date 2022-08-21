@@ -58,6 +58,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
             joinChat.style.display = 'none';
 
+            console.log('ay')
+
             try {
                 fetch(`assets/php/chat/create_room.php?id=${roominput.value}`).then((response) => response.text()).then((res) => {
                     let jsonRes;
@@ -111,7 +113,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         setInterval(() => {
                             try {
-                                fetch(`https://${baseUrl}/assets/php/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
+                                fetch(`assets/php/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
                                     let jsonRes;
                                     try {
                                         jsonRes = JSON.parse(res);
@@ -160,7 +162,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         window.addEventListener('beforeunload', function() {
                             try {
-                                fetch(`https://${baseUrl}/assets/php/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
+                                fetch(`assets/php/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
                             } catch (err) {
                                 console.log(err);
                             }
@@ -184,7 +186,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     messageinput.value = '';
         
                     try {
-                        fetch(`https://${baseUrl}/assets/php/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
+                        fetch(`assets/php/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
                             let jsonRes;
                             try {
                                 jsonRes = JSON.parse(res);
