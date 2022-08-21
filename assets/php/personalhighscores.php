@@ -9,9 +9,9 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-$username = htmlspecialchars($_GET["username"]);
+$uid = htmlspecialchars($_GET["uid"]);
 
-$query = "SELECT * FROM highscores WHERE name='$username'";
+$query = "SELECT * FROM highscores WHERE uid='$uid'";
 $result = mysqli_query($conn, $query);
 
 $highscores = array ();
