@@ -13,7 +13,7 @@ if (strlen($roomid) > 20) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_username);
+$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_database);
   
 // Check connection
 if ($conn->connect_error) {

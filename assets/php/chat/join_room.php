@@ -19,11 +19,11 @@ if (strlen($roomid) > 20) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_username);
+$conn = new mysqli($servername, $chatroom_username, $password, $chatroom_database);
 
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed");// . $conn->connect_error);
+  die("connection failed");
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
