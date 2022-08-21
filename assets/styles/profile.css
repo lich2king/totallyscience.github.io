@@ -240,6 +240,11 @@ html {
 
 /*Game pass lock icon on game*/
 
+#gameDiv:hover>button {
+    opacity: 1;
+    top: -10%;
+}
+
 #gamelock {
     position: absolute;
     top: 5%;
