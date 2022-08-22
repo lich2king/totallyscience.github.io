@@ -4,12 +4,17 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
     let loggedIn = res ? res['isLoggedIn']: 'false';
 
     if (loggedIn == 'true' || location.host == 'localhost:3000') {
+        const nameinput = document.getElementById('username');
+        const roominput = document.getElementById('roominput');
         const errorText = document.getElementById('errorText');
         const joinChat = document.getElementById('joinChat');
         const messageList = document.getElementById('messages');
         const messageinput = document.getElementById('messageinput');
         const leavebtn = document.getElementById('leavebtn');
         const scrollb = document.getElementById('scrollb');
+        
+        nameinput.value = localStorage.getItem('chatName');
+        roominput.value = localStorage.getItem('chatRoom');
 
         let doscroll = true;
         let url;
@@ -39,15 +44,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                 return result;
             }
         };
-        
-        window.addEventListener('load', function() {
-            const nameinput = document.getElementById('username');
-            const roominput = document.getElementById('roominput');
-        
-            nameinput.value = localStorage.getItem('chatName');
-            roominput.value = localStorage.getItem('chatRoom');
-        });
-        
+
         window.addEventListener('scroll', () => {
             const scrollb = document.getElementById('scrollb');
             let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
@@ -63,7 +60,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
-            console.log(roominput)
 
             joinChat.style.display = 'none';
 
