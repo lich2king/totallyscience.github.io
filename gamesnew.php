@@ -49,11 +49,7 @@
         <div id="noSearch" style="display:none">
             <p>
                 You search terms did not match any games...
-                <br>
-                Would you like to request it?
             </p>
-
-            <button class="button">Request Game</button>
         </div>
     </div>
 
