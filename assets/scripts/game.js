@@ -214,7 +214,7 @@ function OpenHighscore() {
 }
 
 document.getElementById("fullscreen").addEventListener('click', function() {
-    var elem = document.getElementById("iframe")[0];
+    var elem = document.getElementById("iframe");
 
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
