@@ -25,7 +25,7 @@ $gameName = htmlspecialchars($_GET["name"]);
 $ee = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
 //$result = mysqli_query($conn, $query);
 mysqli_query($conn, $ee);
-
+$conn->close();
 die("wef");
 
 
