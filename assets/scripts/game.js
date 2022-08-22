@@ -101,6 +101,8 @@ window.addEventListener('load', () => {
             document.getElementById('currentHighscore').innerText = '0';
         }
     });
+
+    addGameData(); //increment game views by 1
 });
 
 
@@ -323,4 +325,10 @@ function numFormatter(num) {
     } else if (num < 1000) {
         return num; // if value < 1000, nothing to do
     }
+}
+
+
+function addGameData() {
+    const gameData = games[gameName];
+    if (gameData != null) fetch(`assets/php/addgameviews.php?name=${gameName}`);
 }
