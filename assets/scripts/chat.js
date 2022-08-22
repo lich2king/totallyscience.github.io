@@ -4,21 +4,17 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
     let loggedIn = res ? res['isLoggedIn']: 'false';
 
     if (loggedIn == 'true' || location.host == 'localhost:3000') {
-        const nameinput = document.getElementById('username');
-        const roominput = document.getElementById('roominput');
         const errorText = document.getElementById('errorText');
         const joinChat = document.getElementById('joinChat');
         const messageList = document.getElementById('messages');
         const messageinput = document.getElementById('messageinput');
         const leavebtn = document.getElementById('leavebtn');
         const scrollb = document.getElementById('scrollb');
-        
-        nameinput.value = localStorage.getItem('chatName');
-        roominput.value = localStorage.getItem('chatRoom');
 
         let doscroll = true;
         let url;
 
+        joinChat.children[0].value = localStorage.getItem('chatRoom');
         joinChat.children[2].addEventListener('click', () => {
             url = 'join_room';
             joinChatroom();
