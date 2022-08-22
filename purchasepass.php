@@ -29,7 +29,7 @@
 
 
     <div id="payment-container">
-        <div class="payment" id="monthpaypal">
+        <!--<div class="payment" id="monthpaypal">
             <div id="paypal-button-container-P-22399174D2019973RML4B54Q"></div>
             <script
                 src="https://www.paypal.com/sdk/js?client-id=AVd4hxcHkYm85fyGxB5Fg7IcrpZ_l1cxb_QSmrVeStRo90-biqKgpaIIfxtcbmfZd2ejFxV7iVEEc1ix&vault=true&intent=subscription"
@@ -57,7 +57,7 @@
                     .subscriptionID); // You can add optional success message for the subscriber here
                 }
             }).render('#paypal-button-container-P-22399174D2019973RML4B54Q'); // Renders the PayPal button
-            </script>
+            </script>-->
         </div>
         <div class="payment" id="annualpaypal">
             
