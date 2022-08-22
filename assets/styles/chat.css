@@ -31,8 +31,10 @@ body {
 ul {
     margin-top: 150px;
     margin-left: 200px;
+    min-height: 90vh;
     font-family: 'Rubik';
     line-height: 30px;
+    color: var(--light-color);
     word-break: break-all;
     list-style-type: none;
 }
@@ -40,7 +42,6 @@ ul {
 .span {
     position: absolute;
     left: 10px;
-    color: var(--light-color);
 }
 
 #username {

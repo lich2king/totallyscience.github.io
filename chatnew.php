@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/chat.css?v1'>
+    <link rel='stylesheet' href='assets/styles/chat.css?v2'>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/chat.js?v3"></script>
+    <script src="assets/scripts/chat.js?v4"></script>
 </body>
 
 </html>
