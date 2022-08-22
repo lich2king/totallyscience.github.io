@@ -23,18 +23,18 @@ $result = mysqli_num_rows(mysqli_query($conn, $query));
 if($result <= 0)
 {
     //game does not exist in database
-    $query = "INSERT INTO game_data (game, totalviews, day1)
-    VALUES ('$gameName', 0, 0)";
+    $gg = "INSERT INTO game_data (game, totalviews, day1)
+    VALUES ('$gameName', 1, 1)";
 
     //$result = 
-    die(mysqli_query($conn, $query));
+    die(mysqli_query($conn, $gg));
 }
 else if($result > 0)
 {   
     //game exists in database
-    $query = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
+    $ee = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
     //$result = mysqli_query($conn, $query);
-    die(mysqli_query($conn, $query));
+    die(mysqli_query($conn, $ee));
 }
 die("wef");
 
