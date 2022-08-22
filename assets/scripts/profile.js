@@ -1,5 +1,4 @@
 let username;
-let uid;
 let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
@@ -35,8 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load highscores
-    alert(uid);
-    fetch(`/assets/php/personalhighscores.php?uid=${uid}`).then((response) => response.text()).then((res) => {
+    fetch(`/assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
         if (res != '[]') {
             res = JSON.parse(res);
             highscores = res;
