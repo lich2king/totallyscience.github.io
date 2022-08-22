@@ -22,7 +22,7 @@ $gameName = htmlspecialchars($_GET["name"]);
 
 
 //game exists in database
-$ee = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
+$ee = "UPDATE `game_data` SET `totalviews`=2+`totalviews`,`day1`=`day1`+2 WHERE game='$gameName'";
 //$result = mysqli_query($conn, $query);
 mysqli_query($conn, $ee);
 die("wef");
