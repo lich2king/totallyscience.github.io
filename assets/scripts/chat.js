@@ -47,6 +47,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
             nameinput.value = localStorage.getItem('chatName');
             roominput.value = localStorage.getItem('chatRoom');
         });
+        
         window.addEventListener('scroll', () => {
             const scrollb = document.getElementById('scrollb');
             let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
@@ -110,7 +111,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         leavebtn.style = ''
                         scrollb.style.display = 'block'
         
-                        localStorage.setItem('chatName', nameinput.value);
+                        localStorage.setItem('chatName', res['username']);
                         localStorage.setItem('chatRoom', roominput.value);
         
                         if (doscroll) {
