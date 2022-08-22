@@ -36,8 +36,6 @@ else
     $result = mysqli_query($conn, $query);
     die("efefef");
 }
-$query = "UPDATE `game_data` SET `totalviews`=`totalviews`+0,`day1`=`day1`+0 WHERE game='$gameName'";
-$result = mysqli_query($conn, $query);
 die("efefef");
 die("wef");
 
