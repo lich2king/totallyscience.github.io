@@ -18,39 +18,56 @@
         <div id="feature">
             <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">RETRO BOWL</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw"  onclick="plusSlides(1)">
+                    <h1 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">RETRO BOWL</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=Retro%20Bowl', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('game.php?class=Retro%20Bowl', '_self')" class="featureButton button">Play
+                    Now</button>
             </div>
-            <div style="background-image: url(./assets/images/impossiblefeaturedimage.png); display:none;" class="imageTest fade">
+            <div style="background-image: url(./assets/images/impossiblefeaturedimage.png); display:none;"
+                class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">IMPOSSIBLE QUIZ</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw"  onclick="plusSlides(1)">
+                    <h1 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">IMPOSSIBLE QUIZ</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('game.php?class=The%20Impossible%20Quiz', '_self')"
+                    class="featureButton button">Play Now</button>
             </div>
-            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
+            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;"
+                class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw"  onclick="plusSlides(1)">
+                    <h1 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">BASKETBALL STARS</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('game.php?class=Basketball%20Stars', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('game.php?class=Basketball%20Stars', '_self')"
+                    class="featureButton button">Play Now</button>
             </div>
         </div>
 
@@ -99,16 +116,14 @@
         <div id="noSearch" style="display:none">
             <p>
                 You search terms did not match any games...
-                <br>
-                Would you like to request it?
             </p>
-
-            <button class="button">Request Game</button>
         </div>
     </div>
 
     <div style="text-align:center">
-        <button class="button" onclick="window.open('gamesnew.php', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+        <button class="button" onclick="window.open('gamesnew.php', '_self')"><span>ALL GAMES</span><img
+                style="padding-left:0.5vw" width="16vw"
+                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
     <div id="extraCategories">
@@ -153,26 +168,28 @@
         </div>
         <div id="extraCategory" onclick="window.open('gamesnew.php?category=running', '_self')">
             <div>
-                <img src="https://files.gamezhero.com/game/44d/e0a/44de0ad44e6a08ac/images/240/angrygranrunbrazil.jpg" />
+                <img
+                    src="https://files.gamezhero.com/game/44d/e0a/44de0ad44e6a08ac/images/240/angrygranrunbrazil.jpg" />
             </div>
             <p>Running Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('gamesnew.php?category=puzzle', '_self')">
             <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5aL_3E5VL51rb9AcbFYYolnT_5Q6V-aura8bcQ0q9winWetUD2pFPpVxEh1_LqBpm-E&usqp=CAU" />
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5aL_3E5VL51rb9AcbFYYolnT_5Q6V-aura8bcQ0q9winWetUD2pFPpVxEh1_LqBpm-E&usqp=CAU" />
             </div>
             <p>Puzzle Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('gamesnew.php?category=arcade', '_self')">
             <div>
-                <img src="https://media.istockphoto.com/vectors/retro-80s-video-game-joystick-controller-vector-id165555994?k=20&m=165555994&s=170667a&w=0&h=BSWOQbVEcsYeZKKqzSNPUEOtBeLp0heVNqknBaJby9g=" />
+                <img
+                    src="https://media.istockphoto.com/vectors/retro-80s-video-game-joystick-controller-vector-id165555994?k=20&m=165555994&s=170667a&w=0&h=BSWOQbVEcsYeZKKqzSNPUEOtBeLp0heVNqknBaJby9g=" />
             </div>
             <p>Arcade Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('gamesnew.php?category=clicker', '_self')">
             <div>
-                <img
-                    src="https://clicker-games.com/images/home.png" />
+                <img src="https://clicker-games.com/images/home.png" />
             </div>
             <p>Clicker Games</p>
         </div>
