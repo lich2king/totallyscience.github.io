@@ -115,8 +115,8 @@ function approveRow(){
   $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
     if ($currentHighscore->num_rows == 0) {
         // row not found, do stuff...
-        $sql = "INSERT INTO highscores (game, score, name)
-        VALUES ('$game', '$score', '$user')";
+        $sql = "INSERT INTO highscores (game, score, name, uid)
+        VALUES ('$game', '$score', '$user', '$uid')";
     
         if ($conn->query($sql) === TRUE) {
             echo "Success";
@@ -124,7 +124,7 @@ function approveRow(){
 
     } else {
         // do other stuff...
-        $sql = "UPDATE highscores SET score='$score', name='$user' WHERE game='$game'";
+        $sql = "UPDATE highscores SET score='$score', name='$user', uid='$uid' WHERE game='$game'";
 
         if ($conn->query($sql) === TRUE) {
             echo "Success";
