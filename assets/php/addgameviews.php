@@ -17,8 +17,8 @@ $gameName = htmlspecialchars($_GET["name"]);
 
 //first check if the user has not already liked the game
 
-$query = "SELECT * FROM game_data WHERE game = '$gameName'";
-$result = mysqli_num_rows(mysqli_query($conn, $query));
+//$query = "SELECT * FROM game_data WHERE game = '$gameName'";
+//$result = mysqli_num_rows(mysqli_query($conn, $query));
 
 
 //game exists in database
