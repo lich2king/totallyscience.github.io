@@ -24,7 +24,7 @@ if($result <= 0)
 {
     //game does not exist in database
     $query = "INSERT INTO game_data (game, totalviews, day1)
-    VALUES ('$gameName', 1, 1)";
+    VALUES ('$gameName', 0, 0)";
 
     //$result = 
     die(mysqli_query($conn, $query));
