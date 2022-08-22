@@ -17,17 +17,17 @@ $gameName = htmlspecialchars($_GET["name"]);
 
 //first check if the user has not already liked the game
 
-//$query = "SELECT * FROM game_data WHERE game = '$gameName'";
-//$result = mysqli_num_rows(mysqli_query($conn, $query));
+$query = "SELECT * FROM game_data WHERE game = '$gameName'";
+$result = mysqli_num_rows(mysqli_query($conn, $query));
 
+$query = "INSERT INTO game_data (game, totalviews, day1)
+    VALUES ('$gameName', 1, 1)";
 
-//game exists in database
-$ee = "UPDATE `game_data` SET `totalviews`=2+`totalviews`,`day1`=`day1`+2 WHERE game='$gameName'";
-//$result = mysqli_query($conn, $query);
-mysqli_query($conn, $ee);
-die("wef");
+    $result = mysqli_query($conn, $query);
+    die("hh");
 
 
    
+$conn->close();
 
 ?>
