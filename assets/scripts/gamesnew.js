@@ -112,46 +112,64 @@ async function displayGames() {
 
         gamesDiv.innerHTML += gameBtn;
     }
-    //all games are generated... now add the liked and recent tags to the games
-    const gameButtons = document.getElementsByClassName("all");
 
-    await fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-        var likedgames = JSON.parse(res);
+    let loggedIn = false;
 
-        Array.from(gameButtons).forEach(game => {
-            let liked = false;
-            for (like in likedgames) {
-                if (likedgames[like][0] == game.getAttribute("name")) {
-                    liked = true;
+    await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        // HAVE RESEND EMAIL BUTTON
+        res = JSON.parse(res)
+        if (res != null) {
+            const isLoggedIn = res['isLoggedIn'];
+
+            if (isLoggedIn == 'true') {
+                loggedIn = true;
+            }
+        }
+    });
+
+    //only get recent and liked games if logged in
+    if (loggedIn) {
+        //all games are generated... now add the liked and recent tags to the games
+        const gameButtons = document.getElementsByClassName("all");
+
+        await fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+            var likedgames = JSON.parse(res);
+
+            Array.from(gameButtons).forEach(game => {
+                let liked = false;
+                for (like in likedgames) {
+                    if (likedgames[like][0] == game.getAttribute("name")) {
+                        liked = true;
+                    }
                 }
-            }
 
-            if (liked) {
-                game.classList.add('liked');
-            }
+                if (liked) {
+                    game.classList.add('liked');
+                }
+
+            });
 
         });
+        await fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+            let recentGames = res.split(";");
+            recentGames = recentGames.slice(1);
+            const recentContainer = document.getElementById("recentContainer");
 
-    });
-    await fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
-        let recentGames = res.split(";");
-        recentGames = recentGames.slice(1);
-        const recentContainer = document.getElementById("recentContainer");
+            Array.from(gameButtons).forEach(game => {
+                let recent = false;
 
-        Array.from(gameButtons).forEach(game => {
-            let recent = false;
-
-            for (let i = 0; i < recentGames.length; i++) {
-                if (recentGames[i] == game.getAttribute("name")) {
-                    recent = true;
+                for (let i = 0; i < recentGames.length; i++) {
+                    if (recentGames[i] == game.getAttribute("name")) {
+                        recent = true;
+                    }
                 }
-            }
 
-            if (recent) {
-                game.classList.add('recent');
-            }
+                if (recent) {
+                    game.classList.add('recent');
+                }
+            });
         });
-    });
+    }
 }
 
 

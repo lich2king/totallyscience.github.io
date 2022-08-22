@@ -27,7 +27,9 @@ html {
     /* Standard syntax */
 }
 
-.error{color:var(--error-color);}
+.error {
+    color: var(--error-color);
+}
 
 body {
     padding: 0;
@@ -142,6 +144,7 @@ label {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
+    transition: all 0.1s;
 }
 
 @media (max-width: 1050px) {
