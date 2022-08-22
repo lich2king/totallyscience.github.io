@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config.php';
 
 $roomid = htmlspecialchars($_GET["id"]);
 if (!$roomid) {

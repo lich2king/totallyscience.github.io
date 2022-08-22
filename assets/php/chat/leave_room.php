@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config.php';
 
 if (!isset($_COOKIE['logintoken'])) {
     die("no cookie");
