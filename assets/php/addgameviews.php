@@ -27,7 +27,7 @@ if($result <= 0)
     VALUES ('$gameName', 1, 1)";
 
     $result = mysqli_query($conn, $query);
-    die("ewf");
+    die("hh");
 }
 else
 {   
