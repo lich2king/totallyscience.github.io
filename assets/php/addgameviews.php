@@ -20,11 +20,26 @@ $gameName = htmlspecialchars($_GET["name"]);
 $query = "SELECT * FROM game_data WHERE game = '$gameName'";
 $result = mysqli_num_rows(mysqli_query($conn, $query));
 
-$query = "INSERT INTO game_data (game, totalviews, day1)
+if($result <= 0)
+{
+    //game does not exist in database
+    $query = "INSERT INTO game_data (game, totalviews, day1)
     VALUES ('$gameName', 1, 1)";
 
     $result = mysqli_query($conn, $query);
     die("hh");
+}
+else
+{   
+    //game exists in database
+    $query = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
+    $result = mysqli_query($conn, $query);
+    die("efefef");
+}
+$query = "UPDATE `game_data` SET `totalviews`=`totalviews`+0,`day1`=`day1`+0 WHERE game='$gameName'";
+$result = mysqli_query($conn, $query);
+die("efefef");
+die("wef");
 
 
    
