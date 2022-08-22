@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load highscores
-    fetch(`/assets/php/personalhighscores.php?username=${uid}`).then((response) => response.text()).then((res) => {
+    fetch(`/assets/php/personalhighscores.php?uid=${uid}`).then((response) => response.text()).then((res) => {
         if (res != '[]') {
             res = JSON.parse(res);
             highscores = res;
