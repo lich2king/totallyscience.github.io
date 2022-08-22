@@ -24,6 +24,10 @@ body {
     margin-top: 10px;
 }
 
+#chat {
+    margin-bottom: 100px;
+}
+
 ul {
     margin-top: 150px;
     margin-left: 200px;
@@ -37,10 +41,6 @@ ul {
     position: absolute;
     left: 10px;
     color: var(--light-color);
-}
-
-section {
-    margin-bottom: 80px;
 }
 
 #username {
