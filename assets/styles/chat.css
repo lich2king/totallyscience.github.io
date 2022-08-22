@@ -36,6 +36,7 @@ ul {
 .span {
     position: absolute;
     left: 10px;
+    color: var(--light-color);
 }
 
 section {

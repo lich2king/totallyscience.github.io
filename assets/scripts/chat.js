@@ -12,9 +12,16 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         const scrollb = document.getElementById('scrollb');
 
         let doscroll = true;
+        let url;
 
-        joinChat.children[2].addEventListener('click', joinChatroom);
-        joinChat.children[4].addEventListener('click', joinChatroom);
+        joinChat.children[2].addEventListener('click', () => {
+            url = 'join_room';
+            joinChatroom();
+        });
+        joinChat.children[4].addEventListener('click', () => {
+            url = 'create_room';
+            joinChatroom();
+        });
 
         var HTMLUtils = new function() {
             var rules = [
@@ -60,7 +67,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
             joinChat.style.display = 'none';
 
             try {
-                fetch(`assets/php/chat/create_room.php?id=${roominput.value}`).then((response) => response.text()).then((res) => {
+                fetch(`assets/php/chat/${url}.php?id=${roominput.value}`).then((response) => response.text()).then((res) => {
                     let jsonRes;
 
                     try {
