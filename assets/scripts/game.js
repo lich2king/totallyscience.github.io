@@ -103,6 +103,7 @@ window.addEventListener('load', () => {
     });
 
     addGameData(); //increment game views by 1
+    alert("wefewf");
 });
 
 
