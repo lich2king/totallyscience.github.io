@@ -27,12 +27,14 @@ if($result <= 0)
     VALUES ('$gameName', 1, 1)";
 
     $result = mysqli_query($conn, $query);
+    die();
 }
 else
 {   
     //game exists in database
     $query = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
     $result = mysqli_query($conn, $query);
+    die();
 }
 
 
