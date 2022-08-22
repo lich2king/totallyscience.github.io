@@ -26,15 +26,15 @@ if($result <= 0)
     $query = "INSERT INTO game_data (game, totalviews, day1)
     VALUES ('$gameName', 1, 1)";
 
-    //$result = mysqli_query($conn, $query);
-    die("hh");
+    //$result = 
+    die(mysqli_query($conn, $query));
 }
 else if($result > 0)
 {   
     //game exists in database
     $query = "UPDATE `game_data` SET `totalviews`=`totalviews`+1,`day1`=`day1`+1 WHERE game='$gameName'";
     //$result = mysqli_query($conn, $query);
-    die("efefef");
+    die(mysqli_query($conn, $query));
 }
 die("wef");
 
