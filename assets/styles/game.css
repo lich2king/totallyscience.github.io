@@ -16,7 +16,7 @@ html {
     border: 3px solid var(--accent-color);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    background-image: url("assets/images/icons/loading.gif");
+    background-image: url("../../assets/images/icons/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
