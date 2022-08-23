@@ -129,7 +129,7 @@ async function displayGames() {
 
     await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
         let popularGames = JSON.parse(res);
-        console.log(popularGames.length);
+
         for (let i = 0; i < 10; i++) {
             if (document.getElementsByName(popularGames[i][0])) {
                 document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
