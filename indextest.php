@@ -203,7 +203,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/indexnew.js?v52"></script>
+    <script src="assets/scripts/indexnew.js?v53"></script>
 </body>
 
 </html>
