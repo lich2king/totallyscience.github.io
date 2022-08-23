@@ -77,10 +77,6 @@
         </div>
     </div>
 
-    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="2048" style="margin-left: 10vw; background-image: url(./assets/game_images/2048.png)" id="gameDiv" onclick="location.href = 'game.php?class=2048'" class="puzzle all popular liked recent">
-        <button id="newbanner"><img src="/assets/images/icons/newbanner.png"></button> 
-        <div class="innerGameDiv">2048</div>
-    </div>
 
     <div id="info">
         <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
