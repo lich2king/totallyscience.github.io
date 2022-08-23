@@ -118,9 +118,9 @@ async function displayGames() {
 
         let gameBtn;
         if (x >= maxGames) {
-            gameBtn = createGameButton(name, "hidden");
+            gameBtn = await createGameButton(name, "hidden");
         } else {
-            gameBtn = createGameButton(name);
+            gameBtn = await createGameButton(name);
         }
 
 
@@ -334,13 +334,13 @@ function suggestGames() {
         document.getElementById('scisuggests').innerHTML = '';
         for (let i = 0; i < 3; i++) {
             let game = randomGames[i];
-            let gameBtn = createGameButton(game, "suggested");
+            let gameBtn = await createGameButton(game, "suggested");
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
             if (i <= totalPinned - 1) {
-                gameBtn = createGameButton(game, "pin");
+                gameBtn = await createGameButton(game, "pin");
             } else {
-                gameBtn = createGameButton(game, "suggested");
+                gameBtn = await createGameButton(game, "suggested");
             }
 
             document.getElementById('scisuggests').innerHTML += gameBtn;
