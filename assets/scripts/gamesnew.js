@@ -284,38 +284,45 @@ function createGameButton(game, pin) {
 
     const gameDate = new Date(data.date_added);
 
-    if (gameDate > weekAgo) {
-        classlist += ' new';
+    let gameBtn = '';
+
+    let buttons = '';
+
+    if (data.tags.includes("gamepass")) {
+        buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
     }
 
-    let gameBtn = '';
-    if (data.tags.includes("gamepass") && pin != "hidden") {
+    if (pin == "pin") {
+        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>"
+    }
+
+
+    if (gameDate > weekAgo) {
+        classlist += ' new';
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>"
+    }
+
+    if (pin != "suggested") {
+        classlist += ' all';
+    }
+
+
+    if (pin != "hidden") {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
-            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
-            <div class="innerGameDiv">${game}</div>
-        </div>
-        `;
-    } else if (data.tags.includes("gamepass") && pin == "hidden") {
-        gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
-            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
-            <div class="innerGameDiv">${game}</div>
-        </div>
-        `;
-    } else if (pin == "hidden") {
-        gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display:none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
+            ${buttons}
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
     } else {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
+            ${buttons}
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
     }
+
 
     return (gameBtn);
 
