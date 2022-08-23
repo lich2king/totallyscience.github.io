@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/game.css?v7'>
+    <link rel='stylesheet' href='assets/styles/game.css?v8'>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
