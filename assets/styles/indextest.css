@@ -453,7 +453,7 @@ input[type='text'] {
     text-shadow: var(--dark-color) 1px 0 10px;
 }
 
-#gameDiv:hover>button {
+#gameDiv:hover>#gamelock {
     opacity: 1;
     top: -10%;
 }
@@ -495,6 +495,20 @@ input[type='text'] {
 #gamelock img {
     width: 80px;
     height: 100px;
+}
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#newbanner img {
+    width: 80px;
+    height: 80px;
 }
 
 
