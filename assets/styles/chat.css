@@ -15,6 +15,7 @@ body {
 #messageinput {
     padding: 15px;
     width: 220px;
+    border: none;
     border-radius: 10px;
     margin-left: 50%;
     outline: none;
@@ -56,8 +57,9 @@ ul {
 #leavebtn {
     transform: none;
     bottom: 10px;
-    padding: 15px;
+    padding: 12px;
     left: 10px;
+    border-radius: 10px;
     margin-left: 0;
     position: fixed;
     width: 80px;
