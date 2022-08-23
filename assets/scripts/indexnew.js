@@ -167,7 +167,6 @@ function displayGames() {
                     document.getElementsByName(recentGames[i])[0].classList.add('recent');
                 }
             }
-            console.log("new");
         });
     });
 }
