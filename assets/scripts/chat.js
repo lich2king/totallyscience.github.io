@@ -59,7 +59,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
             joinChat.style.display = 'none';
 
             try {
-                fetch(`assets/php/chat/${url}.php?id=${roominput.value}`).then((response) => response.text()).then((res1) => {
+                fetch(`assets/php/chat/${url}.php?id=${roominput}`).then((response) => response.text()).then((res1) => {
                     let jsonRes;
 
                     try {
