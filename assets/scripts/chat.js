@@ -56,7 +56,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
-            console.log(joinChat.children[0].value)
             joinChat.style.display = 'none';
 
             try {
@@ -104,7 +103,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         scrollb.style.display = 'block'
         
                         localStorage.setItem('chatName', res['username']);
-                        localStorage.setItem('chatRoom', roominput.value);
+                        localStorage.setItem('chatRoom', joinChat.children[0].value);
         
                         if (doscroll) {
                             window.scrollTo(0, document.body.scrollHeight);
