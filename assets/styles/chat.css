@@ -31,7 +31,7 @@ body {
 ul {
     margin-top: 150px;
     margin-left: 200px;
-    min-height: 90vh;
+    min-height: 50vh;
     font-family: 'Rubik';
     line-height: 30px;
     color: var(--light-color);
