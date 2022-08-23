@@ -117,7 +117,7 @@ async function displayGames() {
 
     await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         // HAVE RESEND EMAIL BUTTON
-        res = JSON.parse(res)
+        res = JSON.parse(res);
         if (res != null) {
             const isLoggedIn = res['isLoggedIn'];
 
