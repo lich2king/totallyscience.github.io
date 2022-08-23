@@ -21,6 +21,12 @@ body {
     background-color: var(--light-color);
     transform: translate(-50%);
     margin-top: 10px;
+    transform: none;
+    bottom: 10px;
+    left: 100px;
+    margin-left: 0;
+    position: fixed;
+    width: calc(100% - 200px);
 }
 
 #chat {
