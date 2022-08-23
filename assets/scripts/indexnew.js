@@ -387,8 +387,8 @@ function noGif(ele) {
         ele.style = `background-image: url(${data.image})`;
 }
 
-function createGameButton(game, pin) {
-    const data = games[game];
+async function createGameButton(game, pin) {
+    const data = await games[game];
 
     let classlist = data.tags.join(' ');
 
