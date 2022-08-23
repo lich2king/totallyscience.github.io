@@ -155,6 +155,8 @@ async function displayGames() {
             recentGames = recentGames.slice(1);
 
             for (let i = 0; i < recentGames.length; i++) {
+                console.log(recentGames[i]);
+                console.log(document.getElementsByName(recentGames[i]));
                 if (document.getElementsByName(recentGames[i])) {
                     console.log(document.getElementsByName(recentGames[i])[0]);
                     document.getElementsByName(recentGames[i])[0].classList.add('recent');
