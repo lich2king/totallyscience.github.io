@@ -62,6 +62,7 @@ li:nth-child( odd ) {
     transform: none;
     bottom: 10px;
     padding: 12px;
+    background-color: var(--accent-color);
     left: 10px;
     border-radius: 10px;
     margin-left: 0;
