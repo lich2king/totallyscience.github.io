@@ -247,7 +247,7 @@
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/rollingvortex.jpeg",
         "controls": "[Arrow Keys] - Move",
-        "tags": ["mobile"],
+        "tags": ["mobile", "running"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Voodoo",
         "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
@@ -307,7 +307,7 @@
         "description": "Play as a racoon on a skateboard. Drift at turns and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/tanukisunset.jpeg",
         "controls": "[Arrow Keys] - turn\n[Space] - drift",
-        "tags": [""],
+        "tags": ["car", "running"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Rewind Games",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1756009/WebGL/index.html"
@@ -442,15 +442,6 @@
         "developer": "Voodoo",
         "iframe_url": "assets/games/paperio/index.html"
     },
-    "Run 3": {
-        "description": "Run through an endless tunnel, diverting from the holes and pieces of ground that break.",
-        "image": "./assets/game_images/run3.jpeg",
-        "controls": "[Arrow Keys] - move",
-        "tags": [""],
-        "date_added": "2022-01-04T15:15:33.894Z",
-        "developer": "Joseph Cloutier",
-        "iframe_url": "assets/games/run3/index.html"
-    },
     "Snake": {
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
         "image": "./assets/game_images/snake.png",
@@ -546,7 +537,7 @@
         "description": "An endless obstacle running game. This game trains visual perception, and reaction time.",
         "image": "./assets/game_images/cubefield.jpg",
         "controls": "[WASD] - move",
-        "tags": ["flash"],
+        "tags": ["flash", "running"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "YoArcade",
         "iframe_url": "assets/games/cubedodge.html"
@@ -600,7 +591,7 @@
         "description": "Dodge the objects coming toward you in this endless tunnel. Beat your highscore!",
         "image": "./assets/game_images/tunnelrush.jpg",
         "controls": "[Arrow Keys] - turn",
-        "tags": [""],
+        "tags": ["running"],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Deer Cat",
         "iframe_url": "assets/games/tunnelrush/index.html"
@@ -854,7 +845,7 @@
         "description": "8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
         "image": "./assets/game_images/crossyroad.jpg",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
-        "tags": ["mobile"],
+        "tags": ["mobile", "running"],
         "date_added": "2022-02-02T01:28:28.388Z",
         "developer": "Hipster Whale",
         "iframe_url": "assets/games/tam-crossyroad/index.html?world=original"
@@ -863,7 +854,7 @@
         "description": "A classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.",
         "image": "./assets/game_images/subwaysurfers.jpeg",
         "controls": "[Arrow Keys] - move\n[Space] - use hoverboard",
-        "tags": ["mobile"],
+        "tags": ["mobile", "running"],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Skyflyer",
         "iframe_url": "assets/games/surfers2/index.html"
@@ -1106,7 +1097,7 @@
         "description": "An infinite runner where the player must escape from his enemy and avoid all the obstacles and traps that are found along the way. Traverse cliffs, forests and even mines, and help this fearless treasure hunter escape with the gold idol. But hurry up! The evil monkey monsters are chasing you!",
         "image": "./assets/game_images/templerun.jpg",
         "controls": "[AD] or [Left/Right arrows] - move \n[w] or [Up arrow] - jump \n[s] or [Down arrow] - slide down",
-        "tags": ["gamepass", "mobile"],
+        "tags": ["gamepass", "mobile", "running"],
         "date_added": "2022-08-17T22:49:53.721Z",
         "developer": "Imangi",
         "iframe_url": "assets/games/temple-run-2/index.html"

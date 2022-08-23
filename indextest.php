@@ -127,7 +127,7 @@
     </div>
 
     <div id="extraCategories">
-        <div id="extraCategory" onclick="window.open('gamesnew.php?category=stickmin', '_self')">
+        <div id="extraCategory" onclick="window.open('gamesnew.php?category=stickman', '_self')">
             <div>
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjDjKTvljf2ZWNwwFDGJbRwCvmbWL9xKghA&usqp=CAU" />
