@@ -118,9 +118,9 @@ async function displayGames() {
 
         let gameBtn;
         if (x >= maxGames) {
-            gameBtn = await createGameButton(name, "hidden");
+            gameBtn = createGameButton(name, "hidden");
         } else {
-            gameBtn = await createGameButton(name);
+            gameBtn = createGameButton(name);
         }
 
 
@@ -334,13 +334,13 @@ function suggestGames() {
         document.getElementById('scisuggests').innerHTML = '';
         for (let i = 0; i < 3; i++) {
             let game = randomGames[i];
-            let gameBtn = await createGameButton(game, "suggested");
+            let gameBtn = createGameButton(game, "suggested");
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
             if (i <= totalPinned - 1) {
-                gameBtn = await createGameButton(game, "pin");
+                gameBtn = createGameButton(game, "pin");
             } else {
-                gameBtn = await createGameButton(game, "suggested");
+                gameBtn = createGameButton(game, "suggested");
             }
 
             document.getElementById('scisuggests').innerHTML += gameBtn;
@@ -387,9 +387,10 @@ function noGif(ele) {
         ele.style = `background-image: url(${data.image})`;
 }
 
-async function createGameButton(game, pin) {
-    const data = await games[game];
+function createGameButton(game, pin) {
+    const data = games[game];
 
+    console.log(data);
     let classlist = data.tags.join(' ');
 
     const weekAgo = new Date();
