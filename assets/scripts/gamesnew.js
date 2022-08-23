@@ -130,14 +130,10 @@ async function displayGames() {
     console.log("here");
     await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
         let popularGames = JSON.parse(res);
-        console.log(popularGames);
-        console.log(popularGames[0]);
-        console.log(popularGames[0][0]);
         for (let i = 0; i < 10; i++) {
             if (document.getElementsByName(popularGames[i][0])) {
                 document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
             }
-            console.log("wef");
         }
     });
     //only get recent and liked games if logged in
