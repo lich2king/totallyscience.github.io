@@ -167,7 +167,7 @@ function displayGames() {
                 }
             }
             for (let i = 0; i < recentGames.length; i++) {
-                if (document.getElementsByName(recentGames[i])) {
+                if (document.getElementsByName(recentGames[i]).length > 0) {
                     document.getElementsByName(recentGames[i])[0].classList.add('recent');
                 }
             }
