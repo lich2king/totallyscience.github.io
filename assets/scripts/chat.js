@@ -56,19 +56,18 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
-
             joinChat.style.display = 'none';
 
             try {
-                fetch(`assets/php/chat/${url}.php?id=${roominput.value}`).then((response) => response.text()).then((res) => {
+                fetch(`assets/php/chat/${url}.php?id=${roominput.value}`).then((response) => response.text()).then((res1) => {
                     let jsonRes;
 
                     try {
-                        jsonRes = JSON.parse(res);
+                        jsonRes = JSON.parse(res1);
                     } catch (error) {
                         if (error) {
                             joinChat.style.display = '';
-                            return errorText.innerText = res;
+                            return errorText.innerText = res1;
                         }
                     }
         
@@ -104,7 +103,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         scrollb.style.display = 'block'
         
                         localStorage.setItem('chatName', res['username']);
-                        localStorage.setItem('chatRoom', roominput.value);
+                        localStorage.setItem('chatRoom', joinChat.children[0].value);
         
                         if (doscroll) {
                             window.scrollTo(0, document.body.scrollHeight);
