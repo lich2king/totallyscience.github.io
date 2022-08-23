@@ -127,14 +127,16 @@ async function displayGames() {
         }
     });
 
-    /*await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
+    await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
         let popularGames = JSON.parse(res);
+        console.log(popularGames.length);
         for (let i = 0; i < 10; i++) {
             if (document.getElementsByName(popularGames[i][0])) {
                 document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
             }
         }
-    });*/
+    });
+
     //only get recent and liked games if logged in
     if (loggedIn) {
         //all games are generated... now add the liked and recent tags to the games
