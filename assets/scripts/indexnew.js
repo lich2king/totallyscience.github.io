@@ -126,6 +126,17 @@ function displayGames() {
 
         gamesDiv.innerHTML += gameBtn;
     }
+
+    await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
+        let popularGames = JSON.parse(res);
+
+        for (let i = 0; i < 10; i++) {
+            if (document.getElementsByName(popularGames[i][0])) {
+                document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+            }
+        }
+    });
+
     //all games are generated... now add the liked and recent tags to the games
     const gameButtons = document.getElementsByClassName("all");
 
