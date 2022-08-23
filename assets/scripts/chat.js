@@ -56,7 +56,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
 
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
-            console.log(joinChat.children[0])
+            console.log(joinChat.children[0].value)
             joinChat.style.display = 'none';
 
             try {
