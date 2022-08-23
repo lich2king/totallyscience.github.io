@@ -127,7 +127,7 @@ function displayGames() {
         gamesDiv.innerHTML += gameBtn;
     }
 
-    await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
+    fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
         let popularGames = JSON.parse(res);
 
         for (let i = 0; i < 10; i++) {
@@ -139,7 +139,7 @@ function displayGames() {
 
     let loggedIn = false;
 
-    await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
         // HAVE RESEND EMAIL BUTTON
         res = JSON.parse(res)
         if (res != null) {
