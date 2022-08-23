@@ -152,6 +152,7 @@ async function displayGames() {
             }
         });
     }
+    console.log("here");
     await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
         let popularGames = JSON.parse(res);
 
@@ -159,6 +160,7 @@ async function displayGames() {
             if (document.getElementsByName(popularGames[i][0])) {
                 document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
             }
+            console.log("wef");
         }
     });
 }
