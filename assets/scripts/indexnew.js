@@ -137,49 +137,66 @@ function displayGames() {
         }
     });
 
-    //all games are generated... now add the liked and recent tags to the games
-    const gameButtons = document.getElementsByClassName("all");
+    let loggedIn = false;
 
-    fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-        var likedgames = JSON.parse(res);
+    await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        // HAVE RESEND EMAIL BUTTON
+        res = JSON.parse(res)
+        if (res != null) {
+            const isLoggedIn = res['isLoggedIn'];
 
-        fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
-            let recentGames = res.split(";");
-            recentGames = recentGames.slice(1);
-            const recentContainer = document.getElementById("recentContainer");
+            if (isLoggedIn == 'true') {
+                loggedIn = true;
+            }
+        }
+    });
 
-            /*Array.from(gameButtons).forEach(game => {
-                let liked = false;
-                let recent = false;
+    //only get recent and liked games if logged in
+    if (loggedIn) {
+        //all games are generated... now add the liked and recent tags to the games
+        const gameButtons = document.getElementsByClassName("all");
+
+        fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+            var likedgames = JSON.parse(res);
+
+            fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+                let recentGames = res.split(";");
+                recentGames = recentGames.slice(1);
+                const recentContainer = document.getElementById("recentContainer");
+
+                /*Array.from(gameButtons).forEach(game => {
+                    let liked = false;
+                    let recent = false;
+                    for (like in likedgames) {
+                        if (likedgames[like][0] == game.getAttribute("name")) {
+                            liked = true;
+                        }
+                    }
+                    for (let i = 0; i < recentGames.length; i++) {
+                        if (recentGames[i] == game.getAttribute("name")) {
+                            recent = true;
+                        }
+                    }
+                    if (liked) {
+                        game.classList.add('liked');
+                    }
+                    if (recent) {
+                        game.classList.add('recent');
+                    }
+                });*/
                 for (like in likedgames) {
-                    if (likedgames[like][0] == game.getAttribute("name")) {
-                        liked = true;
+                    if (document.getElementsByName(likedgames[like][0])) {
+                        document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
                     }
                 }
                 for (let i = 0; i < recentGames.length; i++) {
-                    if (recentGames[i] == game.getAttribute("name")) {
-                        recent = true;
+                    if (document.getElementsByName(recentGames[i])) {
+                        document.getElementsByName(recentGames[i])[0].classList.add('recent');
                     }
                 }
-                if (liked) {
-                    game.classList.add('liked');
-                }
-                if (recent) {
-                    game.classList.add('recent');
-                }
-            });*/
-            for (like in likedgames) {
-                if (document.getElementsByName(likedgames[like][0])) {
-                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                }
-            }
-            for (let i = 0; i < recentGames.length; i++) {
-                if (document.getElementsByName(recentGames[i])) {
-                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
-                }
-            }
+            });
         });
-    });
+    }
 }
 
 
