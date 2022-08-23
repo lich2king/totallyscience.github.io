@@ -135,39 +135,21 @@ async function displayGames() {
         await fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
             var likedgames = JSON.parse(res);
 
-            Array.from(gameButtons).forEach(game => {
-                let liked = false;
-                for (like in likedgames) {
-                    if (likedgames[like][0] == game.getAttribute("name")) {
-                        liked = true;
-                    }
+            for (like in likedgames) {
+                if (document.getElementsByName(likedgames[like][0])) {
+                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
                 }
-
-                if (liked) {
-                    game.classList.add('liked');
-                }
-
-            });
-
+            }
         });
         await fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
             let recentGames = res.split(";");
             recentGames = recentGames.slice(1);
-            const recentContainer = document.getElementById("recentContainer");
 
-            Array.from(gameButtons).forEach(game => {
-                let recent = false;
-
-                for (let i = 0; i < recentGames.length; i++) {
-                    if (recentGames[i] == game.getAttribute("name")) {
-                        recent = true;
-                    }
+            for (let i = 0; i < recentGames.length; i++) {
+                if (document.getElementsByName(recentGames[i])) {
+                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
                 }
-
-                if (recent) {
-                    game.classList.add('recent');
-                }
-            });
+            }
         });
     }
 }
