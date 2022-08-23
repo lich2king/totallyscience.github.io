@@ -248,7 +248,7 @@ h1 {
     font-family: 'Rubik', sans-serif;
 }
 
-#gameDiv:hover>button {
+#gameDiv:hover>#gamelock {
     opacity: 1;
     top: -10%;
 }
