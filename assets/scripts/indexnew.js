@@ -137,7 +137,7 @@ function displayGames() {
             recentGames = recentGames.slice(1);
             const recentContainer = document.getElementById("recentContainer");
 
-            Array.from(gameButtons).forEach(game => {
+            /*Array.from(gameButtons).forEach(game => {
                 let liked = false;
                 let recent = false;
                 for (like in likedgames) {
@@ -156,7 +156,18 @@ function displayGames() {
                 if (recent) {
                     game.classList.add('recent');
                 }
-            });
+            });*/
+            for (like in likedgames) {
+                if (document.getElementsByName(likedgames[like][0])) {
+                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                }
+            }
+            for (let i = 0; i < recentGames.length; i++) {
+                if (document.getElementsByName(recentGames[i])) {
+                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
+                }
+            }
+            console.log("new");
         });
     });
 }
