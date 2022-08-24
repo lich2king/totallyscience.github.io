@@ -1,4 +1,5 @@
 <?php
+// READY
 
 include '../config.php';
 
@@ -13,17 +14,14 @@ if ($conn->connect_error) {
 $gameName = htmlspecialchars($_GET["name"]);
 
 if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  die("no cookie");
 }
 
 $user = json_decode($_COOKIE['logintoken'], true)['id'];
 
-
 $query = "DELETE FROM liked_games WHERE ID='$user' AND Game = '$gameName'";
+
 mysqli_query($conn, $query);
-
-
-
    
 $conn->close();
 

@@ -1,5 +1,6 @@
-// deprecate github domain
-//if (location.host.includes('github')) location.replace('https://tsmain.co'); 
+// READY
+
+if (location.host.includes('github')) location.replace('https://tsmain.co'); 
 
 // init user prefs
 if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');

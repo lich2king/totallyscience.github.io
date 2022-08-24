@@ -1,4 +1,5 @@
 <?php
+// READY
 
 include '../config.php';
 
@@ -11,16 +12,10 @@ if ($conn->connect_error) {
 }
 
 $gameName = htmlspecialchars($_GET["name"]);
-
-
 $query = "SELECT * FROM liked_games WHERE game = '$gameName'";
 $result = mysqli_query($conn, $query);
 
-
 echo(mysqli_num_rows($result));    
-
-
-
    
 $conn->close();
 

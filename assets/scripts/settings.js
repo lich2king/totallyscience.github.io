@@ -11,9 +11,8 @@ function submit() {
     let websiteEntered = websiteInput.value;
     let disguiseEntered = disguiseInput.value;
 
-    if (!(websiteEntered.includes('http'))) {
-        websiteEntered = `https://${websiteEntered}`
-    }
+    if (!(websiteEntered.includes('http'))) websiteEntered = `https://${websiteEntered}`;
+    
     localStorage.setItem("website", websiteEntered);
     localStorage.setItem("disguise", disguiseEntered);
 

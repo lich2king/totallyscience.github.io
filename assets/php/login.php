@@ -1,4 +1,6 @@
 <?php
+    // READY
+
     include 'config.php';
 
     $user = htmlspecialchars($_GET["username"]);
@@ -16,7 +18,7 @@
         $row = $userresult -> fetch_row();
         $usersPass = $row[2];
 
-        if(password_verify($pass, $usersPass)) {
+        if (password_verify($pass, $usersPass)) {
             $data = array(
                 'isLoggedIn' => 'true',
                 'username' => $user,

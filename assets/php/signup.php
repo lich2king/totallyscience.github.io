@@ -1,4 +1,6 @@
 <?php
+    // READY
+    
     include 'config.php';
 
     $user = htmlspecialchars($_GET["username"]);
@@ -7,7 +9,6 @@
     $grad = htmlspecialchars($_GET["gradyear"]);
     $uservalid = htmlspecialchars($_GET["uservalid"]);
     $emailvalid = htmlspecialchars($_GET["emailvalid"]);
-
     $pass = password_hash($pass, PASSWORD_DEFAULT);
 
     // Create connection

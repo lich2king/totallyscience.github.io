@@ -11,7 +11,7 @@ $name = json_decode($_COOKIE['logintoken'], true)['username'];
 $roomid = htmlspecialchars($_GET["id"]);
 
 if (!$roomid || !$name) {
-    die("missing name or room id");
+  die("missing name or room id");
 }
 
 $roomid = strval($roomid);
