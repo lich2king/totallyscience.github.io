@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/chat.css?v13'>
+    <link rel='stylesheet' href='assets/styles/chat.css?v14'>
 </head>
 
 <body>
