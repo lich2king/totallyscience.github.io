@@ -68,10 +68,9 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         jsonRes.reverse();
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
-                            console.log(msg + 1)
         
-                            messageList.children[msg + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                            messageList.children[msg + 1].children[0].textContent = curmsg[0];
+                            messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                            messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                         }
         
                         messageinput.style = ''
@@ -106,8 +105,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
         
-                                            messageList.children[msg + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                            messageList.children[msg + 1].children[0].textContent = curmsg[0];
+                                            messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                            messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                                         }
         
                                         if (doscroll) {
@@ -166,8 +165,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
         
-                                    messageList.children[msg + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                    messageList.children[msg + 1].children[0].textContent = curmsg[0];
+                                    messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                    messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                                 }
         
                                 if (doscroll) {
