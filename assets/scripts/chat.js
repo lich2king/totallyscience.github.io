@@ -61,8 +61,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                     if (jsonRes) {
                         //display chatroom id
-                        messageList.children[0].innerText = localStorage.getItem('chatRoom');
-                        messageList.children[0].children[0].innerText = 'Room Code:';
+                        messageList.children[0].textContent = localStorage.getItem('chatRoom');
+                        messageList.children[0].children[0].textContent = 'Room Code:';
         
                         //display messages
                         jsonRes.reverse();
@@ -70,8 +70,8 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                             console.log(msg)
                             let curmsg = jsonRes[msg];
         
-                            messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                            messageList.children[msg + 1].children[0].innerText = curmsg[0];
+                            messageList.children[msg + 1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                            messageList.children[msg + 1].children[0].textContent = curmsg[0];
                         }
         
                         messageinput.style = ''
@@ -98,16 +98,16 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                                     if (jsonRes) {
                                         //display chatroom id
-                                        messageList.children[0].innerText = localStorage.getItem('chatRoom');
-                                        messageList.children[0].children[0].innerText = 'Room Code:';
+                                        messageList.children[0].textContent = localStorage.getItem('chatRoom');
+                                        messageList.children[0].children[0].textContent = 'Room Code:';
         
                                         //display messages
                                         jsonRes.reverse();
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
         
-                                            messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                            messageList.children[msg + 1].children[0].innerText = curmsg[0];
+                                            messageList.children[msg + 1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                            messageList.children[msg + 1].children[0].textContent = curmsg[0];
                                         }
         
                                         if (doscroll) {
@@ -158,16 +158,16 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                             if (jsonRes) {
                                 //display chatroom id
-                                messageList.children[0].innerText = localStorage.getItem('chatRoom');
-                                messageList.children[0].children[0].innerText = 'Room Code:';
+                                messageList.children[0].textContent = localStorage.getItem('chatRoom');
+                                messageList.children[0].children[0].textContent = 'Room Code:';
         
                                 //display messages
                                 jsonRes.reverse();
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
         
-                                    messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                    messageList.children[msg + 1].children[0].innerText = curmsg[0];
+                                    messageList.children[msg + 1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                    messageList.children[msg + 1].children[0].textContent = curmsg[0];
                                 }
         
                                 if (doscroll) {
