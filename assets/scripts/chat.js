@@ -136,7 +136,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     messageinput.value = '';
         
                     try {
-                        fetch(`assets/php/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
+                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
                             let jsonRes;
                             try {
                                 jsonRes = JSON.parse(res);
