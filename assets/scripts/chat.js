@@ -71,7 +71,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
                             if (curmsg[1].startsWith(res['username'])) {
                                 curmsg[1] = `<span3 style="color: ${randomColor}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                messageList.children[parseInt(msg) + 1].children[1].innerText = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                             } else {
                                 messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                             }
@@ -109,7 +109,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
                                             if (curmsg[1].startsWith(res['username'])) {
                                                 curmsg[1] = `<span3 style="color: ${randomColor}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                                messageList.children[parseInt(msg) + 1].children[1].innerText = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                             } else {
                                                 messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                             }
@@ -171,7 +171,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
                                     if (curmsg[1].startsWith(res['username'])) {
                                         curmsg[1] = `<span3 style="color: ${randomColor}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                        messageList.children[parseInt(msg) + 1].children[1].innerText = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                     } else {
                                         messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                     }
