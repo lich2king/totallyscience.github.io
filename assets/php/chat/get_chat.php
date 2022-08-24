@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
   if($result->num_rows == 1) {
-      $sql3 = "SELECT name, message, time FROM `$roomid`";
+      $sql3 = "SELECT name, message, time FROM `$roomid` ORDER BY time DESC LIMIT 50";
       $result = $conn->query($sql3);
       
       if ($result->num_rows > 0) {

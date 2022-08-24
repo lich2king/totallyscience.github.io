@@ -32,11 +32,6 @@ body {
 
 #chat {
     margin-bottom: 100px;
-    overflow: scroll;
-    height: 30%;
-}
-#chat::-webkit-scrollbar {
-    display: none;
 }
 
 ul {
