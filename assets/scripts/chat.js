@@ -11,7 +11,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         const messageList = document.getElementById('messages');
         const messageinput = document.getElementById('messageinput');
         const leavebtn = document.getElementById('leavebtn');
-        const scrollb = document.getElementById('scrollb');
 
         let doscroll = true;
         let url;
@@ -43,19 +42,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
             }
         };
 
-        window.addEventListener('scroll', () => {
-            const scrollb = document.getElementById('scrollb');
-            let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-        
-            if (document.body.scrollTop > (_docHeight - 1500) || document.documentElement.scrollTop > (_docHeight - 1500)) {
-                scrollb.style.display = 'none';
-                doscroll = true;
-            } else {
-                scrollb.style.display = 'block';
-                doscroll = false;
-            }
-        });
-
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
             joinChat.style.display = 'none';
@@ -77,33 +63,20 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         messageList.innerHTML = '';
         
                         //display chatroom id
-                        let ele = document.createElement('li');
-                        let span = document.createElement('span');
-                        span.innerText = 'Room Code:';
-                        span.className = 'span';
-                        ele.innerText = localStorage.getItem('chatRoom');
-                        ele.append(span);
-                        messageList.appendChild(ele);
+                        messageList.children[0].innerText = localStorage.getItem('chatRoom');
+                        messageList.children[0].children[0].innerText = 'Room Code:';
         
                         //display messages
                         jsonRes.reverse();
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
         
-                            let ele = document.createElement('li');
-                            let span = document.createElement('span');
-                            span.className = 'span';
-                            ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                            span.innerText = curmsg[0];
-        
-                            ele.append(span);
-        
-                            messageList.appendChild(ele);
+                            messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                            messageList.children[msg + 1].children[0].innerText = curmsg[0];
                         }
         
                         messageinput.style = ''
                         leavebtn.style = ''
-                        scrollb.style.display = 'block'
         
                         localStorage.setItem('chatName', res['username']);
                         localStorage.setItem('chatRoom', joinChat.children[0].value);
@@ -128,28 +101,16 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                         messageList.innerHTML = '';
         
                                         //display chatroom id
-                                        let ele = document.createElement('li');
-                                        let span = document.createElement('span');
-                                        span.className = 'span';
-                                        span.innerText = 'Room Code:'
-                                        ele.innerText = localStorage.getItem('chatRoom');
-                                        ele.append(span);
-                                        messageList.appendChild(ele);
+                                        messageList.children[0].innerText = localStorage.getItem('chatRoom');
+                                        messageList.children[0].children[0].innerText = 'Room Code:';
         
                                         //display messages
                                         jsonRes.reverse();
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
         
-                                            let ele = document.createElement('li');
-                                            let span = document.createElement('span');
-                                            span.className = 'span';
-                                            ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                            span.innerText = curmsg[0];
-        
-                                            ele.append(span);
-        
-                                            messageList.appendChild(ele);
+                                            messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                            messageList.children[msg + 1].children[0].innerText = curmsg[0];
                                         }
         
                                         if (doscroll) {
@@ -202,28 +163,16 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                 messageList.innerHTML = '';
         
                                 //display chatroom id
-                                let ele = document.createElement('li');
-                                let span = document.createElement('span');
-                                span.innerText = 'Room Code:'
-                                span.className = 'span';
-                                ele.innerText = localStorage.getItem('chatRoom');
-                                ele.append(span);
-                                messageList.appendChild(ele);
+                                messageList.children[0].innerText = localStorage.getItem('chatRoom');
+                                messageList.children[0].children[0].innerText = 'Room Code:';
         
                                 //display messages
                                 jsonRes.reverse();
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
         
-                                    let ele = document.createElement('li');
-                                    let span = document.createElement('span');
-                                    span.className = 'span';
-                                    ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                    span.innerText = curmsg[0];
-        
-                                    ele.append(span);
-        
-                                    messageList.appendChild(ele);
+                                    messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                    messageList.children[msg + 1].children[0].innerText = curmsg[0];
                                 }
         
                                 if (doscroll) {
