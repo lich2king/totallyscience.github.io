@@ -87,13 +87,13 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
         
                         setInterval(() => {
                             try {
-                                fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
+                                fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res3) => {
                                     let jsonRes;
                                     try {
-                                        jsonRes = JSON.parse(res);
+                                        jsonRes = JSON.parse(res3);
                                     } catch (error) {
                                         if (error) {
-                                            return alert(res)
+                                            return alert(res3)
                                         }
                                     }
         
@@ -131,7 +131,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                             }
                         });
                     } else {
-                        alert(res)
+                        alert(res1)
         
                         joinChat.style.display = '';
                     }
