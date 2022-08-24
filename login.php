@@ -46,7 +46,7 @@
             }
     
             if (loggedIn == "true") {
-                location.href = 'profilenew.php';
+                location.href = 'profile.php';
             }
         });
     
@@ -60,7 +60,7 @@
                 if (res == 'Success') {
                     errorText.style = 'text-align: center; color: green;';
                     errorText.innerText = ('*' + res);
-                    location.href = 'profilenew.php';
+                    location.href = 'profile.php';
                 } else {
                     errorText.innerText = ('*'+ res);
                 }

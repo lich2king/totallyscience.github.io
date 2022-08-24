@@ -17,7 +17,7 @@ document.getElementById('survey').addEventListener('submit', (e) => {
         if (res != null) {
             loggedIn = res["isLoggedIn"];
         } else {
-            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profilenew.php'>Click here</a>";
+            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profile.php'>Click here</a>";
         }
         if (loggedIn == "true") {
             let websiteEntered = websiteInput.value;
@@ -34,7 +34,7 @@ document.getElementById('survey').addEventListener('submit', (e) => {
                 saveBtn.innerHTML = "Save";
             }, 500);
         } else {
-            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profilenew.php'>Sign up</a>";
+            document.getElementById('errorText').innerHTML = "You must have an account to save. <a href='profile.php'>Sign up</a>";
         }
     });
 })

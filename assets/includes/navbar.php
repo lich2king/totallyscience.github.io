@@ -5,7 +5,7 @@
         <div class="nav-button" id="gamesnav"><a href="indextest.php">&#127918; Games</a></div>
         <div class="nav-button" id="leaderboardnav"><a href="leaderboardnew.php">&#127942; Leaderboard</a></div>
         <div class="nav-button" id="chatnav"><a href="chat.php">&#128172; Chat</a></div>
-        <div class="nav-button" id="appsnav"><a href="appsnew.php">&#127922; Apps</a></div>
+        <div class="nav-button" id="appsnav"><a href="apps.php">&#127922; Apps</a></div>
     </div>
 
     <div id="middlebar">
@@ -23,7 +23,7 @@
 
         <div class="nav-button"><a id="gp" href="gamepass.php">GAME <span style='font-weight: 900;'>PASS</span></a></div>
 
-        <a id="login" href="profilenew.php">
+        <a id="login" href="profile.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
             </svg>

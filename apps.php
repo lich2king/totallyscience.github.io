@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +7,17 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/apps.css'>
-
-    <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div id="apps">
-
-    </div>
+    <div id="apps"></div>
 
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/appsnew.js"></script>
+    <script src="assets/scripts/apps.js"></script>
 </body>
 
 </html>

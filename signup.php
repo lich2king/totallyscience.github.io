@@ -71,7 +71,7 @@
                 loggedIn = res['isLoggedIn'];
             }
             if (loggedIn == 'true') {
-                location.href = 'profilenew.php';
+                location.href = 'profile.php';
             }
         });
 
@@ -157,7 +157,7 @@
 
                         fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                             if (res == 'Success') {
-                                location.href = 'profilenew.php';
+                                location.href = 'profile.php';
                             }
                         });
                     } else {
