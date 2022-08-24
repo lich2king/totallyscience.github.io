@@ -149,13 +149,13 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     messageinput.value = '';
         
                     try {
-                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
+                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {
                             let jsonRes;
                             try {
-                                jsonRes = JSON.parse(res);
+                                jsonRes = JSON.parse(res2);
                             } catch (error) {
                                 if (error) {
-                                    return alert(res)
+                                    return alert(res2)
                                 }
                             }
         
