@@ -86,6 +86,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         messageList.appendChild(ele);
         
                         //display messages
+                        jsonRes.reverse();
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
         
@@ -136,6 +137,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                         messageList.appendChild(ele);
         
                                         //display messages
+                                        jsonRes.reverse();
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
         
@@ -209,6 +211,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                 messageList.appendChild(ele);
         
                                 //display messages
+                                jsonRes.reverse();
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
         
