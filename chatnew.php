@@ -72,7 +72,6 @@
             <li><span class="span"></span></li>
             <li><span class="span"></span></li>
             <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
         </ul>
         <input style="display: none;" id="messageinput" placeholder="message" onclick=""></input>
         <button style="display: none;" id="leavebtn" onclick="location.reload();">Leave</button>
@@ -82,7 +81,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/chat.js?v13"></script>
+    <script src="assets/scripts/chat.js?v14"></script>
 </body>
 
 </html>

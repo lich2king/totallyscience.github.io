@@ -67,6 +67,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         //display messages
                         jsonRes.reverse();
                         for (msg in jsonRes) {
+                            console.log(msg)
                             let curmsg = jsonRes[msg];
         
                             messageList.children[msg + 1].innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
