@@ -9,7 +9,7 @@ $name = json_decode($_COOKIE['logintoken'], true)['username'];
 $roomid = htmlspecialchars($_GET["id"]);
 $message = htmlspecialchars($_GET["message"]);
 if (!$roomid || !$name || !$message) {
-    //die("missing name, room id, or message");
+    die("missing name, room id, or message");
 }
 
 if (strlen($message) > 200) {
@@ -27,7 +27,7 @@ $conn = new mysqli($servername, $chatroom_username, $password, $chatroom_databas
   
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
+  die("connection failed");
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
@@ -49,10 +49,10 @@ if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
             }
             echo json_encode($cars);
           } else {
-            echo "error getting messages";// . $conn->error;
+            echo "error getting messages";
           }  
       } else {
-          echo "error sending message";// . $conn->error;
+          echo "error sending message";
       }
       
       $conn->close();
