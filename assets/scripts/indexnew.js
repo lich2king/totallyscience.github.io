@@ -146,6 +146,7 @@ async function displayGames() {
         for (let i = 0; i < 10; i++) {
             if (document.getElementsByName(popularGames[i][0])) {
                 document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+                document.getElementsByName(popularGames[i][0])[0].innerHTML += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
             }
         }
     });
