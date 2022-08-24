@@ -12,7 +12,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         const messageinput = document.getElementById('messageinput');
         const leavebtn = document.getElementById('leavebtn');
 
-        let doscroll = true;
         let url;
 
         joinChat.children[0].value = localStorage.getItem('chatRoom');
@@ -79,10 +78,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                         localStorage.setItem('chatName', res['username']);
                         localStorage.setItem('chatRoom', joinChat.children[0].value);
         
-                        if (doscroll) {
-                            window.scrollTo(0, document.body.scrollHeight);
-                        }
-        
                         setInterval(() => {
                             try {
                                 fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
@@ -107,10 +102,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                                             messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                             messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
-                                        }
-        
-                                        if (doscroll) {
-                                            window.scrollTo(0, document.body.scrollHeight);
                                         }
                                     }
                                 });
@@ -167,10 +158,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                                     messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                     messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
-                                }
-        
-                                if (doscroll) {
-                                    window.scrollTo(0, document.body.scrollHeight);
                                 }
                             } else {
                                 alert(res)
