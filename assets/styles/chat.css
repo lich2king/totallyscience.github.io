@@ -38,6 +38,7 @@ ul {
     margin-top: 150px;
     margin-left: 200px;
     height: 50vh;
+    overflow: scroll;
     font-family: 'Rubik';
     line-height: 30px;
     color: var(--light-color);
