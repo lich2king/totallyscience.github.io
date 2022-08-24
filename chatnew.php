@@ -82,7 +82,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/chat.js?v12"></script>
+    <script src="assets/scripts/chat.js?v13"></script>
 </body>
 
 </html>

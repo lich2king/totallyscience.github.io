@@ -60,8 +60,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     }
         
                     if (jsonRes) {
-                        messageList.innerHTML = '';
-        
                         //display chatroom id
                         messageList.children[0].innerText = localStorage.getItem('chatRoom');
                         messageList.children[0].children[0].innerText = 'Room Code:';
@@ -98,8 +96,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                                     }
         
                                     if (jsonRes) {
-                                        messageList.innerHTML = '';
-        
                                         //display chatroom id
                                         messageList.children[0].innerText = localStorage.getItem('chatRoom');
                                         messageList.children[0].children[0].innerText = 'Room Code:';
@@ -160,8 +156,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                             }
         
                             if (jsonRes) {
-                                messageList.innerHTML = '';
-        
                                 //display chatroom id
                                 messageList.children[0].innerText = localStorage.getItem('chatRoom');
                                 messageList.children[0].children[0].innerText = 'Room Code:';
