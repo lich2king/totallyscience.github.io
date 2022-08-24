@@ -199,7 +199,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/indexnew.js?v53"></script>
+    <script src="assets/scripts/indexnew.js?v54"></script>
 </body>
 
 </html>
