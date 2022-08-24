@@ -6,6 +6,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
     let loggedIn = res ? res['isLoggedIn']: 'false';
 
     if (loggedIn == 'true' || location.host == 'localhost:3000') {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
         const errorText = document.getElementById('errorText');
         const joinChat = document.getElementById('joinChat');
         const messageList = document.getElementById('messages');
@@ -67,6 +68,10 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                         jsonRes.reverse();
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
+
+                            if (curmsg[1].startsWith(res['username'])) {
+                                curmsg[1] = `span3 style="color: ${randomColor}">${curmsg[1]}</span>`;
+                            }
         
                             messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                             messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
@@ -98,6 +103,10 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                         jsonRes.reverse();
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
+
+                                            if (curmsg[1].startsWith(res['username'])) {
+                                                curmsg[1] = `<span3 style="color: ${randomColor}">${curmsg[1]}</span>`;
+                                            }
         
                                             messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                             messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
@@ -154,6 +163,10 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                 jsonRes.reverse();
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
+
+                                    if (curmsg[1].startsWith(res['username'])) {
+                                        curmsg[1] = `<span3 style="color: ${randomColor}">${curmsg[1]}</span>`;
+                                    }
         
                                     messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
                                     messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
