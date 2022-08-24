@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <meta property="og:title" content="Totally Science">
 <meta property="og:site_name" content="Totally Science">
 <meta property="og:url" content="">

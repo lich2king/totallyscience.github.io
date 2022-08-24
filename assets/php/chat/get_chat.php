@@ -1,4 +1,6 @@
 <?php
+// READY
+
 include '../config.php';
 
 $roomid = htmlspecialchars($_GET["id"]);

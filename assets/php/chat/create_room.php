@@ -1,4 +1,6 @@
 <?php
+// READY
+
 include '../config.php';
 
 if (!isset($_COOKIE['logintoken'])) {

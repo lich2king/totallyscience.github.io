@@ -1,4 +1,6 @@
 <?php
+// READY
+
 include '../config.php';
 
 if (!isset($_COOKIE['logintoken'])) {
@@ -46,10 +48,10 @@ if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
             }
             echo json_encode($cars);
           } else {
-            echo "error getting messages";// . $conn->error;
+            echo "error getting messages";
           } 
       } else {
-          echo "error sending message";// . $conn->error;
+          echo "error sending message";
       }
       
       $conn->close();
