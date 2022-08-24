@@ -1,10 +1,9 @@
 <?php
     // READY
-    $cookieName = htmlspecialchars($_GET["cookiename"]);
-
-    if(!isset($_COOKIE[$cookieName])) {
+    
+    if(!isset($_COOKIE['logintoken'])) {
         echo "null";
     } else {
-        echo($_COOKIE[$cookieName]);
+        echo($_COOKIE['logintoken']);
     }
 ?>

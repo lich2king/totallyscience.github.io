@@ -86,7 +86,7 @@ async function SubmitHighscore() {
 }
 
 async function GetUser() {
-    await fetch(`./assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    await fetch(`./assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         if (res != "null") {
             res = JSON.parse(res);
             username = res["username"]

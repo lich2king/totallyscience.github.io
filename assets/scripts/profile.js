@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         games = retrievedGames;
     });
 
-    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         // HAVE RESEND EMAIL BUTTON
         res = JSON.parse(res)
         if (res != null) {

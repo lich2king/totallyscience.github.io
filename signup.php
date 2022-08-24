@@ -62,7 +62,7 @@
 
     <script src="./assets/scripts/main.js"></script>
     <script>
-        fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
 
             let loggedIn = 'false';

@@ -1,6 +1,6 @@
 document.getElementById("chatnav").classList.add("selected");
 
-fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
     res = JSON.parse(res);
 
     let loggedIn = res ? res['isLoggedIn']: 'false';
@@ -74,8 +74,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         messageinput.style = ''
                         leavebtn.style = ''
-        
-                        localStorage.setItem('chatName', res['username']);
+    
                         localStorage.setItem('chatRoom', joinChat.children[0].value);
         
                         setInterval(() => {
@@ -112,7 +111,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         window.addEventListener('beforeunload', function() {
                             try {
-                                fetch(`assets/php/chat/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
+                                fetch(`assets/php/chat/leave_room.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text());
                             } catch (err) {
                                 console.log(err);
                             }
@@ -136,7 +135,7 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     messageinput.value = '';
         
                     try {
-                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
+                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
                             let jsonRes;
                             try {
                                 jsonRes = JSON.parse(res);
