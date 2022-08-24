@@ -21,57 +21,57 @@
 
     <div id="chat">
         <ul id="messages">
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
-            <li><span class="span"></span></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
+            <li><span class="span"></span><span2></span2></li>
         </ul>
         <input style="display: none;" id="messageinput" placeholder="message" onclick=""></input>
         <button style="display: none;" id="leavebtn" onclick="location.reload();">Leave</button>
@@ -81,7 +81,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/chat.js?v15"></script>
+    <script src="assets/scripts/chat.js?v16"></script>
 </body>
 
 </html>
