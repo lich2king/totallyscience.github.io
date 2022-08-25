@@ -198,7 +198,8 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                 //display chatroom id
                                 messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
                                 messageList.children[0].children[0].textContent = 'Room Code:';
-        
+                                
+                                console.log(users)
                                 //display messages
                                 jsonRes.reverse();
                                 for (msg in jsonRes) {
