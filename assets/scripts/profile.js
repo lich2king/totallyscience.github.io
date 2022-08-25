@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load highscores
-    fetch(`/assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
         if (res != '[]') {
             res = JSON.parse(res);
             highscores = res;
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load liked games
-    fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         let likedgames = JSON.parse(res);
         const likeContainer = document.getElementById("likedcontainer");
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load recent games
-    fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
         let recentGames = res.split(";");
         recentGames = recentGames.slice(1);
         const recentContainer = document.getElementById("recentContainer");
