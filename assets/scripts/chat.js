@@ -84,14 +84,14 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                     curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
                                     messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
                                 }
-                            } else if (users.includes(curmsg[1])) {
-                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1])]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                            } else if (users.includes(curmsg[1].trim())) {
+                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
                                 messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                             } else {
-                                users.push(curmsg[1]);
+                                users.push(curmsg[1].trim());
                                 colors.push(randomColor());
 
-                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
                                 messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                             }
         
@@ -138,14 +138,14 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                                     curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
                                                     messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
                                                 }
-                                            } else if (users.includes(curmsg[1])) {
-                                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1])]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                            } else if (users.includes(curmsg[1].trim())) {
+                                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
                                                 messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                             } else {
-                                                users.push(curmsg[1]);
+                                                users.push(curmsg[1].trim());
                                                 colors.push(randomColor());
                 
-                                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
                                                 messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                             }
 
@@ -199,7 +199,6 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                 messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
                                 messageList.children[0].children[0].textContent = 'Room Code:';
                                 
-                                console.log(users)
                                 //display messages
                                 jsonRes.reverse();
                                 for (msg in jsonRes) {
@@ -218,14 +217,14 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                             curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
                                             messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
                                         }
-                                    } else if (users.includes(curmsg[1])) {
-                                        curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1])]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                    } else if (users.includes(curmsg[1].trim())) {
+                                        curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
                                         messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                     } else {
-                                        users.push(curmsg[1]);
+                                        users.push(curmsg[1].trim());
                                         colors.push(randomColor());
         
-                                        curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                        curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
                                         messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                     }
         
