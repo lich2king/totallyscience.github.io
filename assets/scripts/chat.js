@@ -6,13 +6,15 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
     let loggedIn = res ? res['isLoggedIn']: 'false';
 
     if (loggedIn == 'true' || location.host == 'localhost:3000') {
-        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        const randomColor = () => Math.floor(Math.random()*16777215).toString(16);
         const errorText = document.getElementById('errorText');
         const joinChat = document.getElementById('joinChat');
         const messageList = document.getElementById('messages');
         const messageinput = document.getElementById('messageinput');
         const leavebtn = document.getElementById('leavebtn');
 
+        let users = [];
+        let colors = [];
         let url;
 
         joinChat.children[0].value = localStorage.getItem('chatRoom');
@@ -69,14 +71,28 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
 
-                            if (curmsg[1].startsWith(res['username'])) {
-                                curmsg[1] = `<span3 style="color: #${randomColor}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                            if (curmsg[1] == 'Server') {
+                                let foundUser = users.find(user => curmsg[2].startsWith(user));
+
+                                if (foundUser) {
+                                    curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                } else {
+                                    users.push(curmsg[2].split(" ")[0]);
+                                    colors.push(randomColor());
+                                    
+                                    curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                }
+                            } else if (users.includes(curmsg[1])) {
+                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1])]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
                                 messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                            } else if(curmsg[1].startsWith('Server') && curmsg[2].startsWith(res['username'])) {
-                                curmsg[2] = `<span3 style="color: #${randomColor}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
                             } else {
-                                messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                users.push(curmsg[1]);
+                                colors.push(randomColor());
+
+                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                             }
         
                             messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
@@ -109,14 +125,28 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
 
-                                            if (curmsg[1].startsWith(res['username'])) {
-                                                curmsg[1] = `<span3 style="color: #${randomColor}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                            if (curmsg[1] == 'Server') {
+                                                let foundUser = users.find(user => curmsg[2].startsWith(user));
+                
+                                                if (foundUser) {
+                                                    curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                                } else {
+                                                    users.push(curmsg[2].split(" ")[0]);
+                                                    colors.push(randomColor());
+                                                    
+                                                    curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                                }
+                                            } else if (users.includes(curmsg[1])) {
+                                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1])]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
                                                 messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                                            } else if(curmsg[1].startsWith('Server') && curmsg[2].startsWith(res['username'])) {
-                                                curmsg[2] = `<span3 style="color: #${randomColor}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
                                             } else {
-                                                messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                                users.push(curmsg[1]);
+                                                colors.push(randomColor());
+                
+                                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                             }
 
                                             messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
@@ -174,14 +204,28 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
 
-                                    if (curmsg[1].startsWith(res['username'])) {
-                                        curmsg[1] = `<span3 style="color: #${randomColor}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                    if (curmsg[1] == 'Server') {
+                                        let foundUser = users.find(user => curmsg[2].startsWith(user));
+        
+                                        if (foundUser) {
+                                            curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                        } else {
+                                            users.push(curmsg[2].split(" ")[0]);
+                                            colors.push(randomColor());
+                                            
+                                            curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                        }
+                                    } else if (users.includes(curmsg[1])) {
+                                        curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1])]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
                                         messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                                    } else if(curmsg[1].startsWith('Server') && curmsg[2].startsWith(res['username'])) {
-                                        curmsg[2] = `<span3 style="color: #${randomColor}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
                                     } else {
-                                        messageList.children[parseInt(msg) + 1].children[1].textContent = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
+                                        users.push(curmsg[1]);
+                                        colors.push(randomColor());
+        
+                                        curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                     }
         
                                     messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
