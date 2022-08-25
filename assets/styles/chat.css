@@ -70,6 +70,7 @@ li {
     border-radius: 10px;
     margin-left: 0;
     position: fixed;
+    border: none;
     width: 80px;
     font-size: 18px;
 }
