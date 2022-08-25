@@ -14,7 +14,7 @@
 
     <div>
         <h1>GAME <span>PASS</span></h1>
-        <button onclick="">Get It Now</button>
+        <button onclick="location.href = 'gamepass.php'">Get It Now</button>
     </div>
 
     <div>
