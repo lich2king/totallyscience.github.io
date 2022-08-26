@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +7,10 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/privacypolicy.css?v4'>
-
-    <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
-
 
     <div id="privacyText">
         <h1>TotallyScience LLC Privacy Policy (“Policy”)</h1>
@@ -87,10 +86,7 @@
             through this document. We reserve the right to modify this policy at any time.</p>
     </div>
 
-
     <?php include "assets/includes/footer.php" ?>
-
-
 
     <script src="assets/scripts/main.js"></script>
 </body>
