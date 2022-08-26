@@ -140,7 +140,7 @@ function UpdateLikeCount() {
 }
 
 function OpenHighscore() {
-    window.open(`/leaderboardnew.php?class=${gameName}`, '_self')
+    window.open(`/leaderboard.php?class=${gameName}`, '_self')
 }
 
 function changeToGif(ele) {

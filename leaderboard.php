@@ -1,12 +1,12 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/leaderboardnew.css?v5'>
-
-    <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
+    <link rel='stylesheet' href='assets/styles/leaderboard.css?v6'>
 </head>
 
 <body>
@@ -20,20 +20,13 @@
 
     <h1 id="nohighscore" style="display:none"></h1>
 
-    <div style="text-align:center; margin-top:100px">
-        <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span> <img
-                style="padding-left:0.5vw" width="16vw"
-                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+    <div style="text-align:center; margin-top: 20px">
+        <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span> <img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
-    
-
-    <div id="highscores">
-    </div>
+    <div id="highscores"></div>
 
     <?php include "assets/includes/footer.php" ?>
-
-
 
     <script src="assets/scripts/leaderboard.js?v21"></script>
     <script src="assets/scripts/main.js"></script>
