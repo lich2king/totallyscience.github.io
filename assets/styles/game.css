@@ -14,8 +14,8 @@ html {
     height: 70vh;
     background-color: rgb(25, 31, 38);
     border: 3px solid var(--accent-color);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     background-image: url("../../assets/images/icons/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
@@ -34,8 +34,8 @@ html {
     height: 4vh;
     background-color: var(--accent-color);
     border: 3px solid var(--accent-color);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     display: flex;
     align-items: center;
     padding-bottom: 1.5vh;
@@ -71,7 +71,7 @@ html {
     margin-left: 1.25vw;
     color: white;
     font-family: 'Rubik';
-    font-size: 15px;
+    font-size: 12px;
     text-shadow: var(--dark-color) 1px 0 10px;
     width: 1.25vw;
     text-align: center;
@@ -167,7 +167,7 @@ html {
 }
 
 #info div {
-    border-radius: 30px;
+    border-radius: 25px;
     padding-top: 2vh;
     padding-bottom: 2vh;
     padding-left: 1vw;
@@ -199,7 +199,7 @@ html {
 
 #moregames {
     margin: auto;
-    border-radius: 30px;
+    border-radius: 25px;
     width: 70vw;
     height: 220px;
     background-color: var(--accent-color);
@@ -236,9 +236,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 15vw;
-    height: 15vh; */
-    border-radius: 30px;
+    border-radius: 25px;
     text-align: center;
     transition: 0.1s;
 }
