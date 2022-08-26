@@ -18,7 +18,7 @@ div.card {
     height: 100px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: var(--dark-color);
+    background-color: var(--dark-accent);
     position: relative;
     padding: 20px;
     transition: 0.2s all;
@@ -76,7 +76,7 @@ div.card.game>img {
     transform: translate(-20px, -20px);
     padding: 10px;
     border-radius: 15px;
-    border: 5px solid var(--dark-color);
+    border: 5px solid var(--dark-accent);
     background: var(--light-color);
     width: 100px;
     height: 100px;
