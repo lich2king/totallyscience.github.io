@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <meta property="og:title" content="Totally Science">
 <meta property="og:site_name" content="Totally Science">
 <meta property="og:url" content="">
@@ -36,7 +38,7 @@
 })(document, window);
 </script>
 
-<link rel="stylesheet" href="assets/styles/main.css?v4">
+<link rel="stylesheet" href="assets/styles/main.css?v5">
 <link rel="icon" href="assets/images/logo.png">
 
 <title>Totally Science</title>

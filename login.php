@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +38,7 @@
     </svg>
     
     <script>
-        fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
     
             let loggedIn = 'false';
@@ -46,7 +48,7 @@
             }
     
             if (loggedIn == "true") {
-                location.href = 'profilenew.php';
+                location.href = 'profile.php';
             }
         });
     
@@ -60,7 +62,7 @@
                 if (res == 'Success') {
                     errorText.style = 'text-align: center; color: green;';
                     errorText.innerText = ('*' + res);
-                    location.href = 'profilenew.php';
+                    location.href = 'profile.php';
                 } else {
                     errorText.innerText = ('*'+ res);
                 }

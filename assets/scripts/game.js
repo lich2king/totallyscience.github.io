@@ -1,57 +1,38 @@
 document.getElementById("gamesnav").classList.add("selected");
 
-
-
-
-
-
-
 //Load Game
-
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
-
-let likeCount = 0;
-
 const likeButton = document.querySelector('#like');
 const likeButtonImg = likeButton.firstChild;
-
 const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
+let likeCount = 0;
 let loggedIn = false;
 
-
 window.addEventListener('load', () => {
-
     //Check if user is logged in
-
-    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
         let userloggedIn = 'false';
 
-        if (res != null) {
-            userloggedIn = res['isLoggedIn'];
-        }
+        if (res != null) userloggedIn = res['isLoggedIn'];
 
         if (userloggedIn == "true") {
             loggedIn = true;
 
             //check if user liked the game previously
             fetch(`assets/php/game_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-                if (res == 'liked') {
-                    likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-                }
+                if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             });
 
             //check if user pinned the game previously
             fetch(`assets/php/game_pin/checkpinned.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-                if (res == 'pinned') {
-                    pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                }
+                if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
             });
 
             //add to recent games list
@@ -59,23 +40,18 @@ window.addEventListener('load', () => {
         }
     });
 
-
     //get game data for iframe etc
-
     fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
-        }
+        if (response.ok) return response.json();
+        else console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
     }).then((games) => {
         const gameData = games[gameName];
+
         if (gameData == null) window.location.href = '../gamesnew.php';
 
         document.getElementById('description').innerText = gameData.description;
         document.getElementById('controls').innerText = gameData.controls;
         document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
-
         document.getElementById('iframe').src = gameData.iframe_url;
 
         if (id) {
@@ -97,19 +73,13 @@ window.addEventListener('load', () => {
         if (res != '') {
             const currentHighscore = numFormatter(res);
             document.getElementById('currentHighscore').innerText = currentHighscore;
-        } else {
-            document.getElementById('currentHighscore').innerText = '0';
-        }
+        } else document.getElementById('currentHighscore').innerText = '0';
     });
 
     addGameData(); //increment game views by 1
 });
 
-
-
 //Like Button
-
-
 likeButton.addEventListener('click', function() {
     if (loggedIn) {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
@@ -124,93 +94,66 @@ likeButton.addEventListener('click', function() {
             UpdateLikeCount();
         }
     } else {
-        swal("You must login to like the game", {
-                buttons: {
-                    cancel: "Cancel",
-                    login: {
-                        text: "Login",
-                        value: "login",
-                    },
-                },
-            })
-            .then((value) => {
-                switch (value) {
-                    case "login":
-                        window.open('signup.php', '_self');
-                        break;
-                }
-            });
+        swal("You must login to like the game", {buttons: { cancel: "Cancel", login: { text: "Login", value: "login" }},}).then((value) => {
+            if (value == 'login') {
+                window.open('signup.php', '_self');
+            }
+        });
     }
-
 });
 
 
 likeButton.addEventListener("click", function() {
     likeButton.classList.add("button-click");
-})
-
+});
 likeButton.addEventListener("webkitAnimationEnd", function() {
     likeButton.classList.remove("button-click");
-})
-
-
-
-function UpdateLikeCount() {
-    document.getElementById('likeCount').innerText = numFormatter(likeCount);
-}
-
-
-
-
-
+});
+pinButton.addEventListener("click", function() {
+    pinButton.classList.add("button-click");
+});
+pinButton.addEventListener("webkitAnimationEnd", function() {
+    pinButton.classList.remove("button-click");
+});
 pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
             fetch(`assets/php/game_pin/pingame.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-                if (res == 'successpinned') {
-                    pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                } else if (res == 'maxpins') {
-                    swal('You have pinned the max amount of games (3).');
-                }
+                if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+                else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
             });
         } else {
             fetch(`assets/php/game_pin/unpingame.php?name=${gameName}`);
             pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
         }
     } else {
-        swal("You must login to pin the game", {
-                buttons: {
-                    cancel: "Cancel",
-                    login: {
-                        text: "Login",
-                        value: "login",
-                    },
-                },
-            })
-            .then((value) => {
-                switch (value) {
-                    case "login":
-                        window.open('signup.php', '_self');
-                        break;
-                }
-            });
+        swal("You must login to pin the game", {buttons: { cancel: "Cancel", login: { text: "Login", value: "login" }},}).then((value) => {
+            if (value == 'login') {
+                window.open('signup.php', '_self');
+            }
+        });
     }
 });
 
-
-pinButton.addEventListener("click", function() {
-    pinButton.classList.add("button-click");
-})
-
-pinButton.addEventListener("webkitAnimationEnd", function() {
-    pinButton.classList.remove("button-click");
-})
-
-
-
+function UpdateLikeCount() {
+    document.getElementById('likeCount').innerText = numFormatter(likeCount);
+}
 
 function OpenHighscore() {
-    window.open(`/leaderboardnew.php?class=${gameName}`, '_self')
+    window.open(`/leaderboard.php?class=${gameName}`, '_self')
+}
+
+function changeToGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
+}
+function noGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
 document.getElementById("fullscreen").addEventListener('click', function() {
@@ -227,8 +170,6 @@ document.getElementById("fullscreen").addEventListener('click', function() {
     }
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
@@ -236,78 +177,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-function changeToGif(ele) {
-    const game = ele.getAttribute("name");
-    const data = games[game];
-
-    if (data.gif != null)
-        ele.style = `background-image: url(${data.gif})`;
-}
-
-function noGif(ele) {
-    const game = ele.getAttribute("name");
-    const data = games[game];
-
-    if (data.gif != null)
-        ele.style = `background-image: url(${data.image})`;
-}
-
 function suggestGames() {
     let displayedGames = 0;
-    let randomGames = []
+    let randomGames = [];
     let currentTags = games[gameName]["tags"];
     let totalGames = Object.keys(games).length;
+
     for (let x = 0; x < totalGames; x++) {
-        //let randGame = randomProperty(games)
-        //while (randomGames.includes(randGame)) {
-        //randGame = randomProperty(games)
-        //}
         let randGame = Object.keys(games)[x];
         let sameTag = false;
+
         currentTags.forEach(function(game) {
             let gameTags = games[randGame]["tags"];
             gameTags.forEach(function(currentgame) {
                 if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'premium' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
-            })
-        })
-        if (gameName == randGame) {
-            sameTag = false;
-        }
+            });
+        });
+        if (gameName == randGame) sameTag = false;
+
         if (sameTag && displayedGames < 5) {
             randomGames.push(randGame);
             displayedGames++;
-        } else if (displayedGames >= 5) {
-            break;
-        }
+        } else if (displayedGames >= 5) break;
     }
     while (displayedGames < 5) {
         for (let x = 0; x < 5 - displayedGames; x++) {
             let randGame = randomProperty(games)
+
             while (randomGames.includes(randGame)) {
                 randGame = randomProperty(games)
             }
+
             randomGames.push(randGame);
             displayedGames++;
         }
     }
-    console.log(randomGames)
 
     document.getElementById('suggestedGames').innerHTML = '';
+
     randomGames.forEach(function(game) {
         const gameBtn = `
-                    <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
-                        <div class="innerGameDiv">${game}</div>
-                    </div>
-                    `;
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
+                <div class="innerGameDiv">${game}</div>
+            </div>
+        `;
 
         document.getElementById('suggestedGames').innerHTML += gameBtn;
-    })
+    });
 }
-
 
 var randomProperty = function(object) {
     var keys = Object.keys(object);
@@ -326,7 +245,6 @@ function numFormatter(num) {
         return num; // if value < 1000, nothing to do
     }
 }
-
 
 function addGameData() {
     const gameData = games[gameName];

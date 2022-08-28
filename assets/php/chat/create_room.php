@@ -1,4 +1,6 @@
 <?php
+// READY
+
 include '../config.php';
 
 if (!isset($_COOKIE['logintoken'])) {
@@ -9,7 +11,7 @@ $name = json_decode($_COOKIE['logintoken'], true)['username'];
 $roomid = htmlspecialchars($_GET["id"]);
 
 if (!$roomid || !$name) {
-    die("missing name or room id");
+  die("missing name or room id");
 }
 
 $roomid = strval($roomid);
@@ -44,7 +46,7 @@ if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
             VALUES ('Server', '$message')";
             
             if ($conn->query($sql2) === TRUE) {
-                $sql3 = "SELECT name, message, time FROM `$roomid`";
+                $sql3 = "SELECT name, message, time FROM `$roomid` ORDER BY time DESC LIMIT 50";
                 $result = $conn->query($sql3);
                 
                 if ($result->num_rows > 0) {

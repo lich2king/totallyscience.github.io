@@ -104,7 +104,7 @@ else if ($step == 3) {
 <script>
     let username;
 
-    fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
         let loggedIn = 'false';
@@ -186,7 +186,7 @@ else if ($step == 3) {
 
         fetch(`changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
-                location.href = 'profilenew.php';
+                location.href = 'profile.php';
             } else {
                 errorText.innerText = 'error changing password';
                 location.reload();

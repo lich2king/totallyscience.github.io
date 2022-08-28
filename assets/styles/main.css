@@ -235,6 +235,7 @@ label {
 /*#region Footer */
 
 #gamePassAd {
+    box-sizing: initial;
     padding-top: 1vh;
     padding-bottom: 1vh;
     width: 100vw;

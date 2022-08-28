@@ -1,4 +1,5 @@
 <?php
+// READY
 
 include '../config.php';
 
@@ -13,14 +14,12 @@ if ($conn->connect_error) {
 $gameName = htmlspecialchars($_GET["name"]);
 
 if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  die("no cookie");
 }
 
 $user = json_decode($_COOKIE['logintoken'], true)['id'];
 
-
 //first check if the user has not already liked the game
-
 $query = "SELECT * FROM liked_games WHERE ID = '$user' AND Game = '$gameName'";
 $result = mysqli_num_rows(mysqli_query($conn, $query));
 
@@ -33,8 +32,6 @@ if($result <= 0)
     $result = mysqli_query($conn, $query);
 }
 
-
-   
 $conn->close();
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+// READY
 
 include 'config.php';
 
@@ -10,16 +11,11 @@ if ($conn->connect_error) {
   die("connection failed"); //. $conn->connect_error);
 }
 
-
 $query = "select game, totalviews from game_data order by totalviews desc";
 $result = mysqli_query($conn, $query);
-
-
 $popgames = array ();
 
-
-while($row = mysqli_fetch_assoc($result))
-{
+while ($row = mysqli_fetch_assoc($result)) {
   $game = $row["game"];
   $views = $row["totalviews"];
 
@@ -28,8 +24,6 @@ while($row = mysqli_fetch_assoc($result))
 
 echo(json_encode($popgames));   
 
-
-   
 $conn->close();
 
 ?>

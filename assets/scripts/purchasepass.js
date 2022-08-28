@@ -1,5 +1,5 @@
+// READY
 var payplan = document.getElementById("plans");
-
 
 payplan.addEventListener("change", function() {
     if (payplan.value == "monthly") {

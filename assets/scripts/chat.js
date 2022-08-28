@@ -1,19 +1,20 @@
 document.getElementById("chatnav").classList.add("selected");
 
-fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
     res = JSON.parse(res);
 
     let loggedIn = res ? res['isLoggedIn']: 'false';
 
     if (loggedIn == 'true' || location.host == 'localhost:3000') {
+        const randomColor = () => Math.floor(Math.random()*16777215).toString(16);
         const errorText = document.getElementById('errorText');
         const joinChat = document.getElementById('joinChat');
         const messageList = document.getElementById('messages');
         const messageinput = document.getElementById('messageinput');
         const leavebtn = document.getElementById('leavebtn');
-        const scrollb = document.getElementById('scrollb');
 
-        let doscroll = true;
+        let users = [];
+        let colors = [];
         let url;
 
         joinChat.children[0].value = localStorage.getItem('chatRoom');
@@ -43,19 +44,6 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
             }
         };
 
-        window.addEventListener('scroll', () => {
-            const scrollb = document.getElementById('scrollb');
-            let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-        
-            if (document.body.scrollTop > (_docHeight - 1500) || document.documentElement.scrollTop > (_docHeight - 1500)) {
-                scrollb.style.display = 'none';
-                doscroll = true;
-            } else {
-                scrollb.style.display = 'block';
-                doscroll = false;
-            }
-        });
-
         function joinChatroom() {
             const roominput = joinChat.children[0].value;
             joinChat.style.display = 'none';
@@ -74,84 +62,94 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     }
         
                     if (jsonRes) {
-                        messageList.innerHTML = '';
-        
                         //display chatroom id
-                        let ele = document.createElement('li');
-                        let span = document.createElement('span');
-                        span.innerText = 'Room Code:';
-                        span.className = 'span';
-                        ele.innerText = localStorage.getItem('chatRoom');
-                        ele.append(span);
-                        messageList.appendChild(ele);
+                        messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
+                        messageList.children[0].children[0].textContent = 'Room Code:';
         
                         //display messages
+                        jsonRes.reverse();
                         for (msg in jsonRes) {
                             let curmsg = jsonRes[msg];
+
+                            if (curmsg[1] == 'Server') {
+                                let foundUser = users.find(user => curmsg[2].startsWith(user));
+
+                                if (foundUser) {
+                                    curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                } else {
+                                    users.push(curmsg[2].split(" ")[0]);
+                                    colors.push(randomColor());
+                                    
+                                    curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                }
+                            } else if (users.includes(curmsg[1].trim())) {
+                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                            } else {
+                                users.push(curmsg[1].trim());
+                                colors.push(randomColor());
+
+                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
+                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                            }
         
-                            let ele = document.createElement('li');
-                            let span = document.createElement('span');
-                            span.className = 'span';
-                            ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                            span.innerText = curmsg[0];
-        
-                            ele.append(span);
-        
-                            messageList.appendChild(ele);
+                            messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                         }
         
                         messageinput.style = ''
                         leavebtn.style = ''
-                        scrollb.style.display = 'block'
-        
-                        localStorage.setItem('chatName', res['username']);
+    
                         localStorage.setItem('chatRoom', joinChat.children[0].value);
-        
-                        if (doscroll) {
-                            window.scrollTo(0, document.body.scrollHeight);
-                        }
         
                         setInterval(() => {
                             try {
-                                fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res) => {
+                                fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res3) => {
                                     let jsonRes;
                                     try {
-                                        jsonRes = JSON.parse(res);
+                                        jsonRes = JSON.parse(res3);
                                     } catch (error) {
                                         if (error) {
-                                            return alert(res)
+                                            return alert(res3)
                                         }
                                     }
         
                                     if (jsonRes) {
-                                        messageList.innerHTML = '';
-        
                                         //display chatroom id
-                                        let ele = document.createElement('li');
-                                        let span = document.createElement('span');
-                                        span.className = 'span';
-                                        span.innerText = 'Room Code:'
-                                        ele.innerText = localStorage.getItem('chatRoom');
-                                        ele.append(span);
-                                        messageList.appendChild(ele);
+                                        messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
+                                        messageList.children[0].children[0].textContent = 'Room Code:';
         
                                         //display messages
+                                        jsonRes.reverse();
                                         for (msg in jsonRes) {
                                             let curmsg = jsonRes[msg];
-        
-                                            let ele = document.createElement('li');
-                                            let span = document.createElement('span');
-                                            span.className = 'span';
-                                            ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                            span.innerText = curmsg[0];
-        
-                                            ele.append(span);
-        
-                                            messageList.appendChild(ele);
-                                        }
-        
-                                        if (doscroll) {
-                                            window.scrollTo(0, document.body.scrollHeight);
+
+                                            if (curmsg[1] == 'Server') {
+                                                let foundUser = users.find(user => curmsg[2].startsWith(user));
+                
+                                                if (foundUser) {
+                                                    curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                                } else {
+                                                    users.push(curmsg[2].split(" ")[0]);
+                                                    colors.push(randomColor());
+                                                    
+                                                    curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                                }
+                                            } else if (users.includes(curmsg[1].trim())) {
+                                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                            } else {
+                                                users.push(curmsg[1].trim());
+                                                colors.push(randomColor());
+                
+                                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
+                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                            }
+
+                                            messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                                         }
                                     }
                                 });
@@ -162,13 +160,13 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
         
                         window.addEventListener('beforeunload', function() {
                             try {
-                                fetch(`assets/php/chat/leave_room.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}`).then((response) => response.text());
+                                fetch(`assets/php/chat/leave_room.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text());
                             } catch (err) {
                                 console.log(err);
                             }
                         });
                     } else {
-                        alert(res)
+                        alert(res1)
         
                         joinChat.style.display = '';
                     }
@@ -186,45 +184,51 @@ fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => respo
                     messageinput.value = '';
         
                     try {
-                        fetch(`assets/php/send_message.php?id=${localStorage.getItem('chatRoom')}&name=${localStorage.getItem('chatName')}&message=${messageinp}`).then((response) => response.text()).then((res) => {
+                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {
                             let jsonRes;
                             try {
-                                jsonRes = JSON.parse(res);
+                                jsonRes = JSON.parse(res2);
                             } catch (error) {
                                 if (error) {
-                                    return alert(res)
+                                    return alert(res2)
                                 }
                             }
         
                             if (jsonRes) {
-                                messageList.innerHTML = '';
-        
                                 //display chatroom id
-                                let ele = document.createElement('li');
-                                let span = document.createElement('span');
-                                span.innerText = 'Room Code:'
-                                span.className = 'span';
-                                ele.innerText = localStorage.getItem('chatRoom');
-                                ele.append(span);
-                                messageList.appendChild(ele);
-        
+                                messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
+                                messageList.children[0].children[0].textContent = 'Room Code:';
+                                
                                 //display messages
+                                jsonRes.reverse();
                                 for (msg in jsonRes) {
                                     let curmsg = jsonRes[msg];
+
+                                    if (curmsg[1] == 'Server') {
+                                        let foundUser = users.find(user => curmsg[2].startsWith(user));
         
-                                    let ele = document.createElement('li');
-                                    let span = document.createElement('span');
-                                    span.className = 'span';
-                                    ele.innerText = HTMLUtils.escape(curmsg[1] + ': ' + curmsg[2]);
-                                    span.innerText = curmsg[0];
+                                        if (foundUser) {
+                                            curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                        } else {
+                                            users.push(curmsg[2].split(" ")[0]);
+                                            colors.push(randomColor());
+                                            
+                                            curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                        }
+                                    } else if (users.includes(curmsg[1].trim())) {
+                                        curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                    } else {
+                                        users.push(curmsg[1].trim());
+                                        colors.push(randomColor());
         
-                                    ele.append(span);
+                                        curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
+                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                    }
         
-                                    messageList.appendChild(ele);
-                                }
-        
-                                if (doscroll) {
-                                    window.scrollTo(0, document.body.scrollHeight);
+                                    messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                                 }
                             } else {
                                 alert(res)

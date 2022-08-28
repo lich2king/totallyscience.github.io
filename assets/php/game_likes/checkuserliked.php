@@ -1,4 +1,5 @@
 <?php
+// READY
 
 include '../config.php';
 
@@ -19,29 +20,14 @@ if (!isset($_COOKIE['logintoken'])) {
 $user = json_decode($_COOKIE['logintoken'], true)['id'];
 
 //check if user liked the game
-
-
 $query = "SELECT * FROM liked_games WHERE ID = '$user' AND Game = '$gameName'";
 $result = mysqli_num_rows(mysqli_query($conn, $query));
 
-if($result > 0)
-{
-    //user has liked the game
+if($result > 0) {
     echo("liked");    
-}
-else
-{
+} else {
     echo("unliked");
 }
-
-
-
-
-
-
-
-
-
    
 $conn->close();
 

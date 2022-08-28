@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +24,7 @@
         </div>
 
         <div id="rightbar">
-            <a id="login" href="profilenew.php">
+            <a id="login" href="profile.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                 </svg>
@@ -52,7 +54,7 @@
     </svg>
     
     <script>
-        fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+        fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
             res = JSON.parse(res);
     
             let loggedIn = 'false';
@@ -75,7 +77,7 @@
                 if (res == 'success') {
                     errorText.style = 'text-align: center; color: green;';
                     errorText.innerText = ('*' + res);
-                    location.href = 'profilenew.php';
+                    location.href = 'profile.php';
                 } else {
                     errorText.innerText = ('*'+ res);
                 }

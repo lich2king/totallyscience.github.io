@@ -115,7 +115,7 @@ async function displayGames() {
 
     let loggedIn = false;
 
-    await fetch(`assets/php/getCookie.php?cookiename=logintoken`).then((response) => response.text()).then((res) => {
+    await fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
         if (res != null) {
             const isLoggedIn = res['isLoggedIn'];

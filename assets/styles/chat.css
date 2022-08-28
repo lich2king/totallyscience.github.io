@@ -1,3 +1,5 @@
+/* // READY */
+
 body {
     color: var(--dark-color);
 }
@@ -9,7 +11,11 @@ body {
     margin-bottom: 40vh;
 }
 #joinChat button {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+#joinChat input {
+    padding: 20px;
 }
 
 #messageinput {
@@ -37,7 +43,6 @@ body {
 ul {
     margin-top: 150px;
     margin-left: 200px;
-    min-height: 50vh;
     font-family: 'Rubik';
     line-height: 30px;
     color: var(--light-color);
@@ -47,6 +52,9 @@ ul {
 
 li:nth-child( odd ) {
     background-color: var(--dark-accent);
+}
+li {
+    padding-left: 3px;
 }
 
 .span {
@@ -62,11 +70,13 @@ li:nth-child( odd ) {
     transform: none;
     bottom: 10px;
     padding: 12px;
+    cursor: pointer;
     background-color: var(--accent-color);
     left: 10px;
     border-radius: 10px;
     margin-left: 0;
     position: fixed;
+    border: none;
     width: 80px;
     font-size: 18px;
 }

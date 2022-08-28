@@ -1,3 +1,5 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +7,10 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/termsofuse.css?v4'>
-
-    <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
-
     
     <div id="termsText">
         <h1>Terms of Use</h1>
@@ -44,10 +43,7 @@
         <p>DMCA Requests: If there are any requests to take down content you own, please email <span style="color: var(--accent-color)">help@totallyscience.co</span></p>
     </div>
 
-
     <?php include "assets/includes/footer.php" ?>
-
-
 
     <script src="assets/scripts/main.js"></script>
 </body>

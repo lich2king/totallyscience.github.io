@@ -1,5 +1,6 @@
 <?php
     // READY
+    
     include 'config.php';
 
     // Create connection
