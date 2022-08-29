@@ -8,10 +8,10 @@ header('Content-Type: application/json');
 
 $YOUR_DOMAIN = 'http://mathstudyplace.com/gamepass/success.php';
 
-/*try {
+try {
   $checkout_session = \Stripe\Checkout\Session::retrieve($_POST['session_id']);
-  
-  $return_url = $YOUR_DOMAIN;
+}
+  /*$return_url = $YOUR_DOMAIN;
 
   // Authenticate your user.
   $session = \Stripe\BillingPortal\Session::create([
