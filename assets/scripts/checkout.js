@@ -24,12 +24,12 @@ async function initialize() {
     const appearance = {
         theme: 'night',
         variables: {
-            fontFamily: 'Sohne, system-ui, sans-serif',
+            fontFamily: 'Rubik',
             fontWeightNormal: '500',
             borderRadius: '8px',
-            colorBackground: '#0A2540',
-            colorPrimary: '#EFC078',
-            colorPrimaryText: '#1A1B25',
+            colorBackground: '#1F0336',
+            colorPrimary: '#f75dfc',
+            colorPrimaryText: '#ffffff',
             colorText: 'white',
             colorTextSecondary: 'white',
             colorTextPlaceholder: '#727F96',
