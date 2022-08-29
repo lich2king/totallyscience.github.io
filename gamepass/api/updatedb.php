@@ -30,7 +30,7 @@ if($result <= 0)
 }
 else
 {
-    //user has gamepass, add a month to the membership
+    //user has gamepass
     die("You already have gamepass");
 }
 
