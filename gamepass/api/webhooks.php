@@ -35,7 +35,7 @@ switch ($event->type) {
     // handleSubscriptionCreated($subscription);
     $customer = $subscription["customer"];
     $subscriptionID = $subscription[0];
-    include('updatesubid');
+    include('updatesubid.php');
     break;
   case 'customer.subscription.deleted':
     $subscription = $event->data->object; // contains a \Stripe\Subscription
