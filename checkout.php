@@ -6,6 +6,7 @@
     <meta name="description" content="A demo of a payment on Stripe" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="assets/styles/main.css?v3" />
     <script src="https://js.stripe.com/v3/"></script>
     <script src="assets/scripts/checkout.js?v3" defer></script>
   </head>
