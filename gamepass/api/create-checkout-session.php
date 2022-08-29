@@ -30,11 +30,18 @@ try {
     'cancel_url' => $YOUR_DOMAIN . '/cancel.php',
   ]);
 
+  if (!isset($_COOKIE['logintoken'])) {
+    die("no cookie");
+  }
+  
+  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+
+
     $from = "help@totallyscience.co";
     $to = "zay0106@icloud.com";
     $subject = "YESSIRSKY";
     $code = rand(10000,99999);
-    $message = "Your confirmation code is " . $checkout_session['customer'];
+    $message = "Your confirmation code is " . $userid;
     $headers = "From:" . $from;
 
 
