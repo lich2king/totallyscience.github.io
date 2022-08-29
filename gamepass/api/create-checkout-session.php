@@ -16,9 +16,7 @@ try {
     'expand' => ['data.product']
   ]);
 
-
   $checkout_session = \Stripe\Checkout\Session::create([
-    'customer' => '{{CUSTOMER_ID}}',
     'line_items' => [[
       'price' => $prices->data[0]->id,
       'quantity' => 1,
