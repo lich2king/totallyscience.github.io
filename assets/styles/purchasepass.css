@@ -48,22 +48,20 @@ p {
 }
 
 #payment-container {
-    /*position: relative;
+    position: relative;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 15%;*/
+    padding-top: 10%;
+    padding-bottom: 15%;
     display: flex;
-    background-color: #340060;
     justify-content: center;
     align-items: center;
 }
 
 .payment {
-    /*position: absolute;
+    position: absolute;
     width: 30vw;
     right: 50%;
-    transform: translateX(50%);*/
-    background-color: aliceblue;
+    transform: translateX(50%);
 }
 
 .buttons-container {
@@ -87,9 +85,11 @@ p {
 }
 
 .apple-button {
+    position: relative;
     padding: 20px 30px 20px 30px;
+    margin-top: 5vh;
     width: 30vw;
-    height: 7vh;
+    height: 3.5vw;
     border: none;
     color: black;
     text-align: center;
@@ -102,8 +102,13 @@ p {
     font-weight: 900;
     transition: opacity 0.3s ease;
     transition: transform 0.1s ease;
+    margin-bottom: 5vh;
 }
 
 .apple-button img {
+    position: absolute;
     width: 5vw;
+    right: 50%;
+    top: 25%;
+    transform: translateX(50%);
 }

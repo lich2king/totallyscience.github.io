@@ -12,9 +12,6 @@
 <body id="mainBody">
     <?php include "assets/includes/navbar.php" ?>
 
-    <div class="gamepass-header">
-        <h1>GAME <span style="color: var(--accent-color)">PASS</span></h1>
-    </div>
 
     <div class="details-container">
         <h2>Payment Plan</h2>
@@ -41,7 +38,7 @@
             <script>
             paypal.Buttons({
                 style: {
-                    shape: 'pill',
+                    shape: '',
                     color: 'blue',
                     layout: 'vertical',
                     label: 'paypal'
