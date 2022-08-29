@@ -37,7 +37,7 @@ switch ($event->type) {
     $to = "zay0106@icloud.com";
     $subject = "YESSIRSKY";
     $code = rand(10000,99999);
-    $message = "Your confirmation code is " . $subscription;
+    $message = "Your confirmation code is " . $subscription["customer"];
     $headers = "From:" . $from;
 
 
