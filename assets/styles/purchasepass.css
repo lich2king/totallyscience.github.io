@@ -66,6 +66,14 @@ p {
     background-color: aliceblue;
 }
 
+.buttons-container {
+    width: 100vw;
+}
+
+.paypal-button-container {
+    width: 100vw;
+}
+
 #mobileContainer {
     position: absolute;
     width: 100vw;
