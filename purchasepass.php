@@ -73,6 +73,6 @@
 
 
 <script src="assets/scripts/purchasepass.js"></script>
-<script src="assets/scripts/main.jsv?5"></script>
+<script src="assets/scripts/main.js?v5"></script>
 
 </html>
