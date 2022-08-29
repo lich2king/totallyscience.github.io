@@ -1,7 +1,7 @@
 <?php
 // READY
 
-include '../../php/config.php';
+include '../../assets/php/config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
