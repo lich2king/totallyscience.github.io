@@ -30,7 +30,7 @@ try {
   $to = "zay0106@icloud.com";
   $subject = "YESSIRSKY";
   $code = rand(10000,99999);
-  $message = "Your confirmation code is " . $code;
+  $message = "Your confirmation code is " . $checkout_session;
   $headers = "From:" . $from;
 
 
