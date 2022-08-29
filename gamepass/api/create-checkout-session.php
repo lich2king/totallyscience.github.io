@@ -36,6 +36,11 @@ try {
   
   $userid = json_decode($_COOKIE['logintoken'], true)['id'];
   $customerid = $checkout_session['customer'];
+  $monthly = 0;
+  if($_POST['lookup_key'] == 'gpmonthly')
+  {
+    $monthly = 1;
+  }
 
   //add customerid to userid in db
   include('updatedb.php');

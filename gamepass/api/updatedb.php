@@ -24,7 +24,7 @@ if($result <= 0)
 {
     //user has not already liked the game
     $query = "INSERT INTO gamepass (`ID`, `CustomerID`, `EndDate`, `Monthly`)
-    VALUES ('$userid', '$customerid', '$endDate', 1)";
+    VALUES ('$userid', '$customerid', '$endDate', $monthly)";
 
     mysqli_query($conn, $query);
 }
