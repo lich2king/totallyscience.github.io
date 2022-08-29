@@ -34,7 +34,7 @@ else
     die("You already have gamepass");
 }*/
 
-$query = "INSERT INTO liked_games (ID, CustomerID, EndDate, Monthly)
+$query = "INSERT INTO gamepass (ID, CustomerID, EndDate, Monthly)
     VALUES ('$userid', $customerid, $endDate, 1)";
 
 $result = mysqli_query($conn, $query);
