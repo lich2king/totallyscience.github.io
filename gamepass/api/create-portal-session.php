@@ -10,6 +10,9 @@ $YOUR_DOMAIN = 'http://mathstudyplace.com/gamepass/success.php';
 
 try {
   $checkout_session = \Stripe\Checkout\Session::retrieve($_POST['session_id']);
+} catch (Error $e) {
+  http_response_code(500);
+  echo json_encode(['error' => $e->getMessage()]);
 }
   /*$return_url = $YOUR_DOMAIN;
 
