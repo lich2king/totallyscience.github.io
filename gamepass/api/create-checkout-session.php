@@ -16,7 +16,13 @@ try {
     'expand' => ['data.product']
   ]);
 
+
+  $customer = \Stripe\Customer::create([
+    'description' => 'My First Test Customer (created for API docs at https://www.stripe.com/docs/api)',
+  ]);
+
   $checkout_session = \Stripe\Checkout\Session::create([
+    'customer' => $customer,
     'line_items' => [[
       'price' => $prices->data[0]->id,
       'quantity' => 1,
