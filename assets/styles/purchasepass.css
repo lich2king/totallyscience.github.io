@@ -48,15 +48,54 @@ p {
 }
 
 #payment-container {
-    position: relative;
+    /*position: relative;
     text-align: center;
-    padding: 5%;
-    padding-bottom: 15%;
+    padding-top: 5%;
+    padding-bottom: 15%;*/
+    display: flex;
+    background-color: #340060;
+    justify-content: center;
+    align-items: center;
 }
 
 .payment {
-    position: absolute;
+    /*position: absolute;
     width: 30vw;
     right: 50%;
+    transform: translateX(50%);*/
+    background-color: aliceblue;
+}
+
+#mobileContainer {
+    position: absolute;
+    width: 100vw;
+    right: 50%;
     transform: translateX(50%);
+    text-align: center;
+}
+
+#mobileContainer p {
+    color: rgb(190, 190, 190);
+}
+
+.apple-button {
+    padding: 20px 30px 20px 30px;
+    width: 30vw;
+    height: 7vh;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: 'Rubik';
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: 900;
+    transition: opacity 0.3s ease;
+    transition: transform 0.1s ease;
+}
+
+.apple-button img {
+    width: 5vw;
 }
