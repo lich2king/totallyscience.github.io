@@ -34,7 +34,7 @@ switch ($event->type) {
     // Then define and call a method to handle the subscription being created.
     // handleSubscriptionCreated($subscription);
     $customer = $subscription["customer"];
-    $subscriptionID = $subscription[0];
+    $subscriptionID = $subscription["id"];
     include('updatesubid.php');
     break;
   case 'customer.subscription.deleted':
