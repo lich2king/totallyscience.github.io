@@ -21,7 +21,7 @@
       </div>
     </div>
     <form action="/gamepass/api/create-portal-session.php" method="POST">
-      <input type="hidden" id="session-id" name="session_id" value="" />
+      <input type="" id="session-id" name="session_id" value="" />
       <button id="checkout-and-portal-button" type="submit">Manage your billing information</button>
     </form>
   </section>
