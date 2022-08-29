@@ -17,9 +17,7 @@ try {
   ]);
 
 
-  $customer = \Stripe\Customer::create([
-    'description' => 'My First Test Customer (created for API docs at https://www.stripe.com/docs/api)',
-  ]);
+  $customer = \Stripe\Customer::create();
 
   $checkout_session = \Stripe\Checkout\Session::create([
     'customer' => $customer,
@@ -36,7 +34,7 @@ try {
     $to = "zay0106@icloud.com";
     $subject = "YESSIRSKY";
     $code = rand(10000,99999);
-    $message = "Your confirmation code is " . $checkout_session;
+    $message = "Your confirmation code is " . $checkout_session['customer'];
     $headers = "From:" . $from;
 
 
