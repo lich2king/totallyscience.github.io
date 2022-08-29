@@ -33,20 +33,9 @@ switch ($event->type) {
     $subscription = $event->data->object; // contains a \Stripe\Subscription
     // Then define and call a method to handle the subscription being created.
     // handleSubscriptionCreated($subscription);
-    $from = "help@totallyscience.co";
-    $to = "zay0106@icloud.com";
-    $subject = "YESSIRSKY";
-    $code = rand(10000,99999);
-    $message = "Your confirmation code is " . $subscription["customer"];
-    $headers = "From:" . $from;
-
-
-    if (mail($to, $subject, $message, $headers)) {
-      // email send client should show confirmation box
-      echo "success";
-    } else {
-      echo "The email message was not sent.";
-    }
+    $customer = $subscription["customer"];
+    $subscriptionID = $subscription[0];
+    include('updatesubid');
     break;
   case 'customer.subscription.deleted':
     $subscription = $event->data->object; // contains a \Stripe\Subscription
