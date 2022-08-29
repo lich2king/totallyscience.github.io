@@ -38,6 +38,8 @@ try {
   $customerid = $checkout_session['customer'];
 
   //add customerid to userid in db
+  include('updatedb.php');
+
 
   header("HTTP/1.1 303 See Other");
   header("Location: " . $checkout_session->url);
