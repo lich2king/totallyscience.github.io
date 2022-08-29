@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="checkout.css" />
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="assets/scripts/checkout.js?v1" defer></script>
+    <script src="assets/scripts/checkout.js?v2" defer></script>
   </head>
   <body>
     <!-- Display a payment form -->
