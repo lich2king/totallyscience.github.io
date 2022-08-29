@@ -35,22 +35,9 @@ try {
   }
   
   $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $customerid = $checkout_session['customer'];
 
-
-    $from = "help@totallyscience.co";
-    $to = "zay0106@icloud.com";
-    $subject = "YESSIRSKY";
-    $code = rand(10000,99999);
-    $message = "Your confirmation code is " . $userid;
-    $headers = "From:" . $from;
-
-
-    if (mail($to, $subject, $message, $headers)) {
-      // email send client should show confirmation box
-      echo "success";
-    } else {
-      echo "The email message was not sent.";
-    }
+  //add customerid to userid in db
 
   header("HTTP/1.1 303 See Other");
   header("Location: " . $checkout_session->url);
