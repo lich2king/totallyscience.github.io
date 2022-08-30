@@ -94,7 +94,7 @@ if ($pass != null && $pass != '') {
         }
     });
 
-    funtion newUsername() {
+    function newUsername() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const errorText = document.getElementById('errorText');
