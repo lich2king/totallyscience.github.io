@@ -31,7 +31,7 @@ if ($conn->connect_error || $connacc->connect_error) {
 if ($userresult = $connacc->query("SELECT * FROM accounts WHERE Username = '".$name."'")) {
   $row = $userresult -> fetch_row();
 
-  if ($row[6] == 1) {
+  if ($row[6] == false) {
     die("you must verify your email to join chat.");
   }
 }
