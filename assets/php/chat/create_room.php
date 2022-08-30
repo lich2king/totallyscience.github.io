@@ -27,6 +27,14 @@ if ($conn->connect_error) {
   die("connection failed.");
 }
 
+if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$name'")) {
+  $row = $userresult -> fetch_row();
+
+  if ($row[6] == false) {
+    die("you must verify your email to join chat.");
+  }
+}
+
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
     if($result->num_rows == 1) {
         die("room id already exists");
