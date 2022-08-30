@@ -92,6 +92,7 @@ if ($password != null && $password != '') {
         if (loggedIn != 'true') {
             location.href = 'profile.php';
         }
+        console.log(res['id'])
     });
 
     function newUsername() {
