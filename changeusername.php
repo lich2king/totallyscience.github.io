@@ -1,6 +1,6 @@
 <?php
 include 'assets/php/config.php';
-echo $servername;
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
   
@@ -95,7 +95,7 @@ if ($pass != null && $pass != '') {
     });
 
     funtion newUsername() {
-        const newUsername = document.getElementById('username').value;
+        const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const errorText = document.getElementById('errorText');
 
@@ -104,7 +104,7 @@ if ($pass != null && $pass != '') {
             return;
         }
 
-        fetch(`changepassword.php?password=${password}&username=${newUsername}`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?password=${password}&username=${username}`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 location.href = 'profile.php';
             } else {
