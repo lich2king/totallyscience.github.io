@@ -17,9 +17,9 @@ if ($password != null && $password != '') {
         die("no cookie");
     }
       
-    $user = json_decode($_COOKIE['logintoken'], true)['id'];
+    $id = json_decode($_COOKIE['logintoken'], true)['id'];
     
-    if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'")) {
+    if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'")) {
         $row = $userresult -> fetch_row();
         $usersPass = $row[2];
 
@@ -28,7 +28,7 @@ if ($password != null && $password != '') {
             {
                 if($userresult->num_rows == 0) {
                     //username is new
-                    $conn->query("UPDATE accounts SET Username = '$newUsername' WHERE Username = '$user'");
+                    $conn->query("UPDATE accounts SET Username = '$newUsername' WHERE id = '$id'");
                     echo 'success';
                 } else {
                     //username is already taken
