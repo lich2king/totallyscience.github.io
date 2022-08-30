@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 $password = htmlspecialchars($_GET["password"]);
 $newUsername = htmlspecialchars($_GET["username"]);
 
-if ($pass != null && $pass != '') {
+if ($password != null && $password != '') {
     if (!isset($_COOKIE['logintoken'])) {
         die("no cookie");
     }
