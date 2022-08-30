@@ -35,7 +35,7 @@ if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '".$name
     die("you must verify your email to join chat.");
   }
 } else {
-  echo 'fail';
+  echo $name;
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
