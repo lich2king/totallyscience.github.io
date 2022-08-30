@@ -29,6 +29,19 @@ if ($password != null && $password != '') {
                 if($userresult->num_rows == 0) {
                     //username is new
                     $conn->query("UPDATE accounts SET Username = '$newUsername' WHERE id = '$id'");
+
+                    $data = array(
+                        'isLoggedIn' => 'true',
+                        'username' => $newUsername,
+                        'email' => $row[1],
+                        'id' => $row[7]
+                    );
+        
+                    $cookie_name = "logintoken";
+                    $cookie_value = json_encode($data);
+        
+                    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
                     echo 'success';
                 } else {
                     //username is already taken
