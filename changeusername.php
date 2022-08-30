@@ -1,9 +1,6 @@
 <?php
 include 'assets/php/config.php';
-
-$password = htmlspecialchars($_GET["password"]);
-$newUsername = htmlspecialchars($_GET["username"]);
-
+echo $servername;
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
   
@@ -11,6 +8,9 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
   die("connection failed");
 }
+
+$password = htmlspecialchars($_GET["password"]);
+$newUsername = htmlspecialchars($_GET["username"]);
 
 if ($pass != null && $pass != '') {
     if (!isset($_COOKIE['logintoken'])) {
