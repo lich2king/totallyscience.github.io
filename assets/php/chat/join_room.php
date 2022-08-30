@@ -22,20 +22,19 @@ if (strlen($roomid) > 20) {
 
 // Create connection
 $conn = new mysqli($servername, $chatroom_username, $password, $chatroom_database);
+$connacc = new mysqli($servername, $username, $password, $database);
 
 // Check connection
-if ($conn->connect_error) {
+if ($conn->connect_error || $connacc->connect_error) {
   die("connection failed");
 }
 
-if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '".$name."'")) {
+if ($userresult = $connacc->query("SELECT * FROM accounts WHERE Username = '".$name."'")) {
   $row = $userresult -> fetch_row();
 
   if ($row[6] == 1) {
     die("you must verify your email to join chat.");
   }
-} else {
-  echo $conn->connect_error;
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
