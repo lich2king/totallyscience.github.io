@@ -12,13 +12,9 @@ if ($conn->connect_error) {
 }
 
 if ($step == 1) {
-    if (!isset($_COOKIE['logintoken'])) {
-        die("no cookie");
-    }
-      
-    $id = json_decode($_COOKIE['logintoken'], true)['id'];
+    $user = htmlspecialchars($_GET["username"]);
 
-    if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'"))
+    if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
     
@@ -29,7 +25,7 @@ if ($step == 1) {
         $message = "Your confirmation code is " . $code;
         $headers = "From:" . $from;
 
-        $conn->query("UPDATE accounts SET code = '$code' WHERE id = '$id'");
+        $conn->query("UPDATE accounts SET code = '$code' WHERE Username = '$user'");
     
         if (mail($to, $subject, $message, $headers)) {
             // email send client should show confirmation box
@@ -40,13 +36,9 @@ if ($step == 1) {
     }
 }
 else if ($step == 2) {
-    if (!isset($_COOKIE['logintoken'])) {
-        die("no cookie");
-    }
-    
-    $id = json_decode($_COOKIE['logintoken'], true)['id'];
+    $user = htmlspecialchars($_GET["username"]);
 
-    if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'"))
+    if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'"))
     {
         $row = $userresult -> fetch_row();
     
@@ -60,14 +52,10 @@ else if ($step == 2) {
     }
 }
 else if ($step == 3) {
-    if (!isset($_COOKIE['logintoken'])) {
-        die("no cookie");
-    }
-
-    $id = json_decode($_COOKIE['logintoken'], true)['id'];
+    $user = htmlspecialchars($_GET["username"]);
     $pass = password_hash(htmlspecialchars($_GET["password"]), PASSWORD_DEFAULT);
 
-    if ($conn->query("UPDATE accounts SET Password = '$pass' WHERE id = '$id'"))
+    if ($conn->query("UPDATE accounts SET Password = '$pass' WHERE Username = '$user'"))
     {
         echo 'success';
     }
@@ -108,12 +96,14 @@ else if ($step == 3) {
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;" id="back-login"><a href="login.php">back to login</a></p>
+    <p style="text-align: center;" id="back-login"><a href="login">back to login</a></p>
     <script defer src="./assets/scripts/main.js?v14"></script>
 </body>
 
 
 <script>
+    let username;
+
     fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         res = JSON.parse(res);
 
@@ -124,13 +114,15 @@ else if ($step == 3) {
         }
         if (loggedIn == 'true') {
             document.getElementById('back-login').style.display = 'none';
+            username = res['username'];
 
-            fetch(`changepassword.php?step=1`).then((response) => response.text()).then((res) => {
+            fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
                 document.getElementById('username').placeholder = '*****';
+                localStorage.setItem('tempusername', username);
             }
         });
         }
@@ -145,12 +137,13 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`changepassword.php?step=1`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').innerText = 'Confirmation Code From Email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
                 document.getElementById('username').placeholder = '*****';
+                localStorage.setItem('tempusername', username);
             }
         });
     }
@@ -164,7 +157,7 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`changepassword.php?code=${code}&step=2`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?code=${code}&username=${localStorage.getItem("tempusername")}&step=2`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').style.display = 'none';
                 document.getElementById('username').style.display = 'none';
@@ -191,7 +184,7 @@ else if ($step == 3) {
             return;
         }
 
-        fetch(`changepassword.php?step=3`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?username=${username}&password=${pass}&step=3`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 location.href = 'profile.php';
             } else {
