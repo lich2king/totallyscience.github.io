@@ -15,6 +15,7 @@
     <div id="accountoptions">
         <div class="accountoption">
             <p>Username: <span class="span" id="usernameSpan">username</span></p>
+            <input onclick="location.href = 'changeusername.php'" type="image" src="assets/images/icons/edit.png">
         </div>
 
         <div class="accountoption">

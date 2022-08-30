@@ -22,14 +22,14 @@
     if($uservalid != '1') {
         $userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'");
 
-        if($userresult->num_rows == 0) {
+        if ($userresult->num_rows == 0) {
             echo("not found");
         } else {
             echo("found");
         }
     } else if($emailvalid != '1') {
         $userresult = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
-        if($userresult->num_rows == 0) {
+        if ($userresult->num_rows == 0) {
             echo("not found");
         } else {
             echo("found");
