@@ -104,7 +104,7 @@ if ($pass != null && $pass != '') {
             return;
         }
 
-        fetch(`changepassword.php?password=${password}&username=${username}`).then((response) => response.text()).then((res) => {
+        fetch(`changeusername.php?password=${password}&username=${username}`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 location.href = 'profile.php';
             } else {
