@@ -36,7 +36,7 @@ if ($userresult = $connacc->query("SELECT * FROM accounts WHERE Username = '$nam
     die("you must verify your email to join chat.");
   }
 } else {
-  echo $connacc->connect_error;
+  echo 'fail';
 }
 
 if ($result = $conn->query("SHOW TABLES LIKE '".$roomid."'")) {
