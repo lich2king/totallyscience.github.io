@@ -37,7 +37,7 @@
             <div class="c-item">
                 <h1>Annual</h1>
                 <h3>$3.99 <span>/ month</span>
-                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed once at $47.88</p>
+                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
                 </h3>
                 <form action="gamepass/api/create-checkout-session.php" method="POST">
                     <!-- Add a hidden field with the lookup_key of your Price -->
@@ -153,7 +153,7 @@
             <div class="c-item">
                 <h1>Annual</h1>
                 <h3>$3.99 <span>/ month</span>
-                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed once at $47.88</p>
+                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
                 </h3>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
                     <button onclick="location.href = 'purchasepass.php?pass=monthly'" class="btn">Subscribe</button>
