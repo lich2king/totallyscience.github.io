@@ -7,7 +7,7 @@ require_once('stripe-php-9.4.0/init.php');
 
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'http://mathstudyplace.com/gamepass';
+$YOUR_DOMAIN = 'http://mathstudyplace.com/';
 
 try {
   $prices = \Stripe\Price::all([
@@ -26,7 +26,7 @@ try {
       'quantity' => 1,
     ]],
     'mode' => 'subscription',
-    'success_url' => $YOUR_DOMAIN . '/success.php?session_id={CHECKOUT_SESSION_ID}',
+    'success_url' => $YOUR_DOMAIN . '/gpsuccess.php?session_id={CHECKOUT_SESSION_ID}',
     'cancel_url' => $YOUR_DOMAIN . '/cancel.php',
   ]);
 

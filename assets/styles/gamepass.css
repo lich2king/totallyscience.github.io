@@ -232,3 +232,13 @@ html {
     color: var(--accent-color);
     text-decoration: none;
 }
+
+.thankyou-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    margin-bottom: 300px;
+}
