@@ -12,9 +12,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div style="padding-top: 90px;"></div>
-
-    <p style="text-align: center;">You must verify your email address before accessing your account.</p>
+    <p style="text-align: center; margin-bottom: 50px; margin-top: 100px">You must verify your email address before accessing your account.</p>
 
     <form id="survey" action="javascript:submitConfirmCode()">
         <div>
