@@ -39,7 +39,7 @@ body {
     transition: all 0.1s;
 }
 
-#messageinput:hover {
+#messageinput:focus {
     transform: scale(1.005);
 }
 
