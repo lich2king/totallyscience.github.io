@@ -21,8 +21,8 @@ $query = "SELECT `LastPayment` FROM gamepass WHERE ID = '$userid'";
 $result = mysqli_query($conn, $query);
 $result = ($result -> fetch_row())[0];
 
-/*$query = "SELECT `Monthly` FROM gamepass WHERE ID = '$userid'";
-$monthly = mysqli_query($conn, $query);
+$query = "SELECT `Monthly` FROM gamepass WHERE ID = '$userid'";
+/*$monthly = mysqli_query($conn, $query);
 $monthly = ($result -> fetch_row())[0];
 
 date_default_timezone_set("America/New_York");
