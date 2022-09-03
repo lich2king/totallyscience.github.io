@@ -131,11 +131,11 @@
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
     },
 
-    "Eaglercraft": {
-        "description": "Minecraft 1.5.2 for the web",
+    "Minecraft": {
+        "description": "Minecraft eaglercraft 1.5.2 for the web",
         "image": "./assets/game_images/minecraft.png",
         "controls": "WASD to move, space to jump",
-        "tags": [""],
+        "tags": ["multiplayer"],
         "date_added": "2022-8-30T04:48:1.982Z",
         "developer": "lax1dude",
         "iframe_url": "assets/games/eaglercraft/index.html"
@@ -460,15 +460,6 @@
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Google",
         "iframe_url": "assets/games/google-snake/index.html"
-    },
-    "Minecraft": {
-        "description": "Build whatever you can imagine in this open world game.",
-        "image": "./assets/game_images/minecraft.png",
-        "controls": "[WASD] - move\n[Move Mouse] - look around",
-        "tags": [""],
-        "date_added": "2022-01-04T15:15:33.894Z",
-        "developer": "Markus Persson",
-        "iframe_url": "https://ubcdn.yodacode.repl.co/ubgo/aHR0cHM6Ly9iaW5iYXNoYmFuYW5hLmdpdGh1Yi5pbw==/gfiles/gfiles/html5/minecraft/"
     },
     "Golf Blast": {
         "description": "Get the ball in the hole in as little swings possible.",
