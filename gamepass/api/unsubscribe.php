@@ -51,7 +51,7 @@ try {
   $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
   $subscription->cancel();
 
-  $query = "DELETE FROM `gamepass` WHERE `CustomerID`='$userid'";
+  $query = "DELETE FROM `gamepass` WHERE `ID`='$userid'";
   $result = mysqli_query($conn, $query);
   $conn->close();
 
