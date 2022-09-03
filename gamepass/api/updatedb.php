@@ -16,9 +16,7 @@ if ($conn->connect_error) {
 $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
 $result = mysqli_num_rows(mysqli_query($conn, $query));
 
-date_default_timezone_set("America/New_York");
-$d=strtotime("+1 Months");
-$endDate = date("Y-m-d", $d);
+
 
 if($result <= 0)
 {
