@@ -29,7 +29,7 @@ date_default_timezone_set("America/New_York");
 if($monthly == 1)
 {
     $d=strtotime("+1 Months");
-    $date = date($result, $d);
+    $date = date(strtotime($result), $d);
     echo($date);
 }else{
     $d=strtotime("+1 Years");
