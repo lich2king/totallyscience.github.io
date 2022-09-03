@@ -35,7 +35,7 @@ else
     $result = mysqli_query($conn, $query);
     $result = ($result -> fetch_row())[0];
 
-    if($result == 1)
+    if($result == 0)
     {
       //allow user to update then purchase subscription
       
