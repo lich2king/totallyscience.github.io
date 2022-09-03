@@ -38,13 +38,13 @@ else
     if($result == 1)
     {
       //redirect user to subscription status page
-      header('Location: gpstatus.php');
+      header('Location: ../../gpstatus.php');
       exit;
     }
     else
     {
       //redirect user to page to renew their subscription
-      header('Location: gpstatus.php');
+      header('Location: ../../gpstatus.php');
       exit;
     }
 }
