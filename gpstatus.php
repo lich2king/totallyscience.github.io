@@ -28,7 +28,7 @@
             <li><a href="https://actuallyhistory.com" target="_blank">ActuallyHistory.com</a></li>
             <li><a href="https://actuallyhistory.com" target="_blank">MathPlace.com</a></li>
         </ul>
-        <a class="unsubscribe" onclick="unsubscribe()">Unsubscribe</a>
+        <a class="unsubscribe" onclick="unsubscribe()" id="unsubscribe">Unsubscribe</a>
     </div>
 
     <script>
@@ -51,6 +51,7 @@
             if(res == '0')
             {
                 document.getElementById("renewSpan").innerHTML = 'end';
+                document.getElementById("unsubscribe").setAttribute('style', 'display:none;');
             }
         });
 
