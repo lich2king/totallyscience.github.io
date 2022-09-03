@@ -26,16 +26,28 @@ if (unsubscribed == 1) {
     swal('You have successfully unsubscribed.');
 }
 
+let loggedIn = false;
 
-fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
+fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
     console.log("her");
     res = JSON.parse(res);
     if (res != null) {
         const isLoggedIn = res['isLoggedIn'];
 
-        if (isLoggedIn != 'true') {
-            console.log(document.getElementById("form"));
-            document.getElementById("form").setAttribute("action", "JavaScript:mustLogin()")
+        if (isLoggedIn == 'true') {
+            loggedIn = true;
         }
     }
 });
+
+function subscribe() {
+    if (loggedIn) {
+        document.forms["monthlyForm"].submit();
+    } else {
+        swal("You must sign up before purchasing Game Pass", { buttons: { cancel: "Cancel", signup: { text: "Signup", value: "signup" } }, }).then((value) => {
+            if (value == 'signup') {
+                window.open('signup.php', '_self');
+            }
+        });
+    }
+}
