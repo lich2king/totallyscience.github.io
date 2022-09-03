@@ -56,7 +56,7 @@
             }
         });
 
-        function unsubscribe()
+        function renew()
         {
             swal("Are you sure you want to Renew your subscription?", {buttons: {cancel: "Cancel", renew: { text: "Renew", value: "renew" }},}).then((value) => {
                 if (value == 'renew') {
