@@ -33,6 +33,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
         const isLoggedIn = res['isLoggedIn'];
 
         if (isLoggedIn != 'true') {
+            console.log(document.getElementById("form"));
             document.getElementById("form").setAttribute("action", "JavaScript:mustLogin()")
         }
     }
