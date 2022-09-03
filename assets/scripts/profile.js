@@ -147,6 +147,6 @@ function createGameButton(game, pin) {
 function cookieLoaded() {
     if (gamePass == 'true') {
         document.getElementById('membership').innerHTML = 'GAMEPASS';
-        document.getElementById('membershiplink').setAttribute('src', 'gpstatus');
+        document.getElementById('membershiplink').setAttribute('onclick', "location.href = 'gpstatus.php'");
     }
 }
