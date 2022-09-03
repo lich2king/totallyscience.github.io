@@ -26,6 +26,11 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
             url = 'create_room';
             joinChatroom();
         });
+        joinChat.children[6].addEventListener('click', () => {
+            url = 'join_room';
+            joinChatroom('Totally Science');
+        });
+
 
         var HTMLUtils = new function() {
             var rules = [
@@ -44,8 +49,15 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
             }
         };
 
-        function joinChatroom() {
-            const roominput = joinChat.children[0].value;
+        function joinChatroom(code) {
+            let roominput;
+
+            if (code != null) {
+                roominput = code;
+            }
+            else {
+                roominput = joinChat.children[0].value;
+            }
             joinChat.style.display = 'none';
 
             try {
