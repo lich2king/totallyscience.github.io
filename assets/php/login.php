@@ -23,17 +23,15 @@
             //check if user has game pass
             $hasGamePass = 'false';
             
-            $query = "SELECT `ID` FROM accounts WHERE `Username` = '$user'";
-            $userid = mysqli_num_rows(mysqli_query($conn, $query));
-            //$userid = ($userid -> fetch_row())[0];
+            $userid = $row["ID"];
 
-            /*$query = "SELECT * FROM gamepass WHERE ID = '$userid'";
+            $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
             $result = mysqli_num_rows(mysqli_query($conn, $query));
             if($result > 0)
             {
                 //user has game pass
                 $hasGamePass = 'true';
-            }*/
+            }
 
 
             $data = array(
