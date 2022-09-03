@@ -37,13 +37,15 @@ else
 
     if($result == 1)
     {
-      die("You already have gamepass");
+      //redirect user to subscription status page
+      header('Location: gpstatus.php');
+      exit;
     }
     else
     {
-      //user can renew their membership if they are set to expire
-      $query = "UPDATE `gamepass` SET `ChangeMonthly`='$monthly' WHERE ID='$userid'";
-      mysqli_query($conn, $query);
+      //redirect user to page to renew their subscription
+      header('Location: gpstatus.php');
+      exit;
     }
 }
 
