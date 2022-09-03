@@ -34,7 +34,7 @@ try {
 
   $subscriptionID = '';
 
-  /*if($result > 0)
+  if($result > 0)
   {
     $query = "SELECT `SubscriptionID` FROM gamepass WHERE ID = '$userid'";
     $result = mysqli_query($conn, $query);
@@ -46,7 +46,7 @@ try {
   }
 
   $conn->close();
-
+  /*
 
 
   $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
