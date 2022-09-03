@@ -49,8 +49,8 @@ try {
   
 
 
-  $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
-  //$subscription->cancel();
+  $subscription = \Stripe\Subscription::retrieve('sub_1LcG1qBRp1VXv1XhHf3Vz8Po');
+  $subscription->cancel();
 
   header("HTTP/1.1 303 See Other");
   header("Location: " . $checkout_session->url);
