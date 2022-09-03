@@ -28,9 +28,16 @@
             $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
             $result = mysqli_num_rows(mysqli_query($conn, $query));
             if($result > 0)
-            {
-                //user has game pass
-                $hasGamePass = 'true';
+            {  
+                $query = "SELECT Completed FROM gamepass WHERE ID = '$userid'";
+                $result = mysqli_query($conn, $query);
+                $result = ($result -> fetch_row())[0];
+
+                if($result == 1)
+                {
+                    //user has game pass
+                    $hasGamePass = 'true';
+                }
             }
 
 
