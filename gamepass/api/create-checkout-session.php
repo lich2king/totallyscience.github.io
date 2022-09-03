@@ -7,7 +7,7 @@ require_once('stripe-php-9.4.0/init.php');
 
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'http://mathstudyplace.com/';
+$YOUR_DOMAIN = 'http://mathstudyplace.com';
 
 try {
   $prices = \Stripe\Price::all([
