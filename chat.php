@@ -13,9 +13,11 @@
     <div id="joinChat">
         <input type="text" placeholder="Room Code...">
         <br>
-        <button class="button" onclick="">Join Room</button>
+        <button class="button">Join Room</button>
         <br>
-        <button class="button" onclick="">Create Room</button>
+        <button class="button">Create Room</button>
+        <br>
+        <button class="button">Join Public Chatroom</button>
         <p id="errorText" class="error"></p>
     </div>
 
@@ -82,7 +84,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/chat.js?v39"></script>
+    <script src="assets/scripts/chat.js?v40"></script>
 </body>
 
 </html>
