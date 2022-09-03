@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const loggedIn = res['isLoggedIn'];
             username = res['username'];
             uid = res['id'];
-            gamePass = res['gamepass'];
 
-            cookieLoaded();
+
 
             if (loggedIn != 'true') location.href = 'signup.php';
 
@@ -28,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('emailSpan').innerText = res['email'];
             });
         } else location.href = 'signup.php';
+    });
+
+    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+        if (res == 'true') {
+            gamepass = 'true';
+            cookieLoaded();
+        }
     });
 
     //Load highscores
