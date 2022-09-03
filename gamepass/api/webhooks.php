@@ -47,6 +47,13 @@ switch ($event->type) {
     // Then define and call a method to handle the subscription being updated.
     // handleSubscriptionUpdated($subscription);
     break;
+  case 'invoice.paid':
+    $subscription = $event->data->object; // contains a \Stripe\Subscription
+    $customer = $subscription["customer"];
+    include('confirmpayment.php');
+    // Then define and call a method to handle the subscription being updated.
+    // handleSubscriptionUpdated($subscription);
+    break;
   default:
     // Unexpected event type
     echo 'Received unknown event type';
