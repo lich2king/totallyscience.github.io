@@ -33,7 +33,7 @@ if($monthly == 1)
 }else{
     $d=strtotime("+1 Years");
     $date = date($result, $d);
-    echo($result);
+    //echo($result);
 }
 
 
