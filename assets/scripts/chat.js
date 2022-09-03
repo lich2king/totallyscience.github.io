@@ -52,7 +52,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
         function joinChatroom(code) {
             let roominput;
 
-            if (code != null) {
+            if (code) {
                 roominput = code;
             } else {
                 roominput = joinChat.children[0].value;
