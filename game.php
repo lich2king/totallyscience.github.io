@@ -27,8 +27,8 @@
                     <button onclick="OpenHighscore()" class="text-button"><img src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
                     <div id="currentHighscore">...</div>
                 </div>
-                <button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
-                <button class="game-button"><img src="assets/images/icons/upload.png"></button>
+                <!--<button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
+                <button class="game-button"><img src="assets/images/icons/upload.png"></button>-->
             </div>
             <div class="right">
                 <button id="pin" class="game-button button-effect-a"><img src="assets/images/icons/pinoutline.png"></button>
