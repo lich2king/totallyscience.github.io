@@ -88,7 +88,7 @@ if ($password != null && $password != '') {
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;" id="back-login"><a href="profile.php">back to profile</a></p>
+    <p style="text-align: center;" id="back-login"><a href="profile.php" style="color: var(--light-color)">Back to profile</a></p>
     <script defer src="./assets/scripts/main.js?v14"></script>
 </body>
 
