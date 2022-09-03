@@ -27,7 +27,7 @@
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="gpmonthly" />
                     <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                        <button type="submit" class="btn">Subscribe</button>
+                        <button type="" onclick="subscribe()" class="btn">Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -43,7 +43,7 @@
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="gpannual" />
                     <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                        <button type="submit" class="btn">Subscribe</button>
+                        <button type="" onclick="subscribe()" class="btn">Subscribe</button>
                     </div>
                 </form>
                 <button id="pin"><img src="assets/images/icons/Discount.png"></button>
@@ -147,7 +147,7 @@
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="gpmonthly" />
                     <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                        <button type="submit" class="btn">Subscribe</button>
+                        <button type="" onclick="subscribe()" class="btn">Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -163,7 +163,7 @@
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="gpannual" />
                     <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                        <button type="submit" class="btn">Subscribe</button>
+                        <button type="" onclick="subscribe()" class="btn">Subscribe</button>
                     </div>
                 </form>
                 <button id="pin"><img src="assets/images/icons/Discount.png"></button>
