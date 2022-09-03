@@ -29,7 +29,6 @@ if (unsubscribed == 1) {
 let loggedIn = false;
 
 fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-    console.log("her");
     res = JSON.parse(res);
     if (res != null) {
         const isLoggedIn = res['isLoggedIn'];
