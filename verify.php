@@ -45,6 +45,8 @@
                 location.href = 'login.php';
             }
         });
+
+        fetch('assets/php/sendVerification.php');
     
     
         function submitConfirmCode() {
