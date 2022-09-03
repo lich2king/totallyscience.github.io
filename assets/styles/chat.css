@@ -39,7 +39,7 @@ body {
     transition: all 0.1s;
 }
 
-#memessageinput:hover {
+#messageinput:hover {
     transform: scale(1.05);
 }
 
