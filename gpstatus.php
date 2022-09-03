@@ -38,7 +38,7 @@
             swal("Are you sure you want to Unsubscribe?", {buttons: {cancel: "Cancel", unsubscribe: { text: "Unsubscribe", value: "unsubscribe" }},}).then((value) => {
                 if (value == 'unsubscribe') {
                     fetch(`gamepass/api/unsubscribe.php`);
-                    window.open("gamepass.php?unsubscribe=1");
+                    window.open("gamepass.php?unsubscribe=1", "_self");
                 }
             });
 
