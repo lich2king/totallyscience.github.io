@@ -45,11 +45,15 @@ try {
     die("You do not have Game Pass.");
   }
 
-  $conn->close();
+  
   
 
   $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
   $subscription->cancel();
+
+  $query = "DELETE FROM `gamepass` WHERE `CustomerID`='$userid'";
+  $result = mysqli_query($conn, $query);
+  $conn->close();
 
   header("HTTP/1.1 303 See Other");
   header("Location: " . $checkout_session->url);
