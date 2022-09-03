@@ -13,6 +13,8 @@ const pinButtonImg = pinButton.firstChild;
 let likeCount = 0;
 let loggedIn = false;
 
+let games;
+
 window.addEventListener('load', () => {
     //Check if user is logged in
     fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
@@ -95,7 +97,7 @@ likeButton.addEventListener('click', function() {
             UpdateLikeCount();
         }
     } else {
-        swal("You must login to like the game", {buttons: { cancel: "Cancel", login: { text: "Login", value: "login" }},}).then((value) => {
+        swal("You must login to like the game", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
             if (value == 'login') {
                 window.open('signup.php', '_self');
             }
@@ -128,7 +130,7 @@ pinButton.addEventListener('click', function() {
             pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
         }
     } else {
-        swal("You must login to pin the game", {buttons: { cancel: "Cancel", login: { text: "Login", value: "login" }},}).then((value) => {
+        swal("You must login to pin the game", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
             if (value == 'login') {
                 window.open('signup.php', '_self');
             }
@@ -150,6 +152,7 @@ function changeToGif(ele) {
 
     if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
 }
+
 function noGif(ele) {
     const game = ele.getAttribute("name");
     const data = games[game];
