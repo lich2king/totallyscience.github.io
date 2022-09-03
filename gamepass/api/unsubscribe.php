@@ -14,7 +14,7 @@ try {
     die("no cookie");
   }
 
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  /*$userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
   //get subid from uid
 
@@ -50,7 +50,7 @@ try {
 
 
   $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
-  $subscription->cancel();
+  $subscription->cancel();*/
 
   header("HTTP/1.1 303 See Other");
   header("Location: " . $checkout_session->url);
