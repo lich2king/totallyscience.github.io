@@ -26,10 +26,10 @@
                 <form action="gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="gpmonthly" />
-                    <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                        <button type="" onclick="subscribe()" class="btn">Subscribe</button>
-                    </div>
                 </form>
+                <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
+                    <button type="" onclick="subscribe()" class="btn">Subscribe</button>
+                </div>
             </div>
         </div>
 
