@@ -131,6 +131,16 @@
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
     },
 
+    "Eaglercraft": {
+        "description": "Minecraft 1.5.2 for the web",
+        "image": "./assets/game_images/minecraft.png",
+        "controls": "WASD to move, space to jump",
+        "tags": [""],
+        "date_added": "2022-8-30T04:48:1.982Z",
+        "developer": "lax1dude",
+        "iframe_url": "assets/games/eaglercraft/index.html"
+    },
+
     "Factory Balls": {
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
         "image": "./assets/game_images/factoryballsforever.jpeg",

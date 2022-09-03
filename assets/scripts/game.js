@@ -53,6 +53,7 @@ window.addEventListener('load', () => {
         document.getElementById('controls').innerText = gameData.controls;
         document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
         document.getElementById('iframe').src = gameData.iframe_url;
+        document.getElementById('iframe').focus();
 
         if (id) {
             document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
@@ -156,7 +157,7 @@ function noGif(ele) {
     if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
-document.getElementById("fullscreen").addEventListener('click', function() {
+document.getElementById("fullscreen").addEventListener('click', () => {
     var elem = document.getElementById("iframe");
 
     if (elem.requestFullscreen) {
@@ -250,3 +251,8 @@ function addGameData() {
     const gameData = games[gameName];
     if (gameData != null) fetch(`assets/php/addgameviews.php?name=${gameName}`);
 }
+
+window.addEventListener('click', () => {
+    //fix some text inputs not working (eaglercraft)
+    document.getElementById('iframe').focus();
+});
