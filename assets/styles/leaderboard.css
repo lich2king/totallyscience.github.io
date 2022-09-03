@@ -6,6 +6,7 @@ html {
 
 
 /* searchbar */
+
 #searchDiv {
     margin-top: 80px;
     text-align: center;
@@ -107,7 +108,6 @@ h2 {
 
 #nohighscore {
     margin-top: 100px;
-    margin-bottom: -50px;
     text-align: center;
     color: var(--light-color);
     font-family: 'Rubik';
