@@ -26,7 +26,7 @@
 
         $conn->query("UPDATE accounts SET code = '$code' WHERE Username = '$user'");
     
-        if (mail($email, $subject, $message, $headers)) {
+        if (mail($to, $subject, $message, $headers)) {
             echo "Success";
         };
     }
