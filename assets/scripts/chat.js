@@ -57,8 +57,6 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
             } else {
                 roominput = joinChat.children[0].value;
             }
-            
-            localStorage.setItem('chatRoom', roominput);
 
             joinChat.style.display = 'none';
 
@@ -86,9 +84,14 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     }
 
                     if (jsonRes) {
+                        localStorage.setItem('chatRoom', roominput);
+
                         //display chatroom id
                         messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
                         messageList.children[0].children[0].textContent = 'Room Code:';
+
+                        document.querySelector('footer').style.display = 'none';
+                        document.querySelector('#gamePassAd').style.display = 'none';
 
                         //display messages
                         jsonRes.reverse();
