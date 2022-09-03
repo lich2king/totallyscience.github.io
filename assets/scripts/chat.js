@@ -57,6 +57,16 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     } catch (error) {
                         if (error) {
                             joinChat.style.display = '';
+
+                            if (res1 == 'you must verify your email to join chat.') {
+                                swal('you must verify your email to join chat.', {buttons: { cancel: 'Cancel', login: { text: 'Verify', value: "verify" }},}).then((value) => {
+                                    if (value == 'verify') {
+                                        window.open('verify.php', '_self');
+                                    }
+                                });
+
+                                return;
+                            }
                             return errorText.innerText = res1;
                         }
                     }
@@ -98,8 +108,8 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                             messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                         }
         
-                        messageinput.style = ''
-                        leavebtn.style = ''
+                        messageinput.style = '';
+                        leavebtn.style = '';
     
                         localStorage.setItem('chatRoom', joinChat.children[0].value);
         
@@ -111,7 +121,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                         jsonRes = JSON.parse(res3);
                                     } catch (error) {
                                         if (error) {
-                                            return alert(res3)
+                                            return alert(res3);
                                         }
                                     }
         
