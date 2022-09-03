@@ -19,7 +19,7 @@
     <div class="statusContainer">
         <br>
         <h1>Your membership will automatically <span id="renewSpan">renew</span> on <span style="color: var(--accent-color)" id="dateSpan"></span></h1>
-        <p>Would you like it to automatically <span style="color: var(--accent-color); cursor: pointer;" onclick="renew()">renew</span>?</p>
+        <p id="renew">Would you like it to automatically <span style="color: var(--accent-color); cursor: pointer;" onclick="renew()">renew</span>?</p>
         <br>
         <p>Enjoy your list of Private Links:</p>
         <ul>
@@ -53,6 +53,10 @@
             {
                 document.getElementById("renewSpan").innerHTML = 'end';
                 document.getElementById("unsubscribe").setAttribute('style', 'display:none;');
+            }
+            else
+            {
+                document.getElementById("renew").setAttribute('style', 'display:none;');
             }
         });
 
