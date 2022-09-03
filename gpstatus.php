@@ -35,14 +35,14 @@
     <script>
         function unsubscribe()
         {
-            swal("Are you sure you want to Unsubscribe?", {buttons: {cancel: "Cancel", unsubscribe: { text: "Unsubscribe", value: "login" }},}).then((value) => {
-                if (value == 'login') {
-                    window.open('signup.php', '_self');
+            swal("Are you sure you want to Unsubscribe?", {buttons: {cancel: "Cancel", unsubscribe: { text: "Unsubscribe", value: "unsubscribe" }},}).then((value) => {
+                if (value == 'unsubscribe') {
+                    fetch(`gamepass/api/unsubscribe.php`);
+                    window.load("gamepass.php?unsubscribe=1");
                 }
             });
 
-            fetch(`gamepass/api/unsubscribe.php`);
-            window.load("gamepass.php?unsubscribe=1")
+            
         }   
 
     </script>
