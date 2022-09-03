@@ -18,7 +18,7 @@
     </div>
     <div class="statusContainer">
         <br>
-        <h1>Your membership will automatically renew/end on <span style="color: var(--accent-color)">01/06/2022</span></h1>
+        <h1>Your membership will automatically renew/end on <span style="color: var(--accent-color)"></span></h1>
         <br>
         <p>Enjoy your list of <span style="color: var(--accent-color)">Private</span> Links:</p>
         <ul>
@@ -40,9 +40,9 @@
                     window.open("gamepass.php?unsubscribe=1", "_self");
                 }
             });
-
-            
         }   
+
+        
 
     </script>
 </body>
