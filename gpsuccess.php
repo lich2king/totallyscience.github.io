@@ -16,12 +16,7 @@
     <div class="thankyou-container">
         <h1>Thank you for your purchase.</h1>
         <p>You can visit the <a href="profile.php">account page</a> at any time to check the status of your order.</p>
-        <p>Before accessing Game Pass features, you must <a href="login.php">login</a> again.</p>
     </div>
-
-    <script>
-        fetch(`assets/php/logout.php`);
-    </script>
 </body>
 
 

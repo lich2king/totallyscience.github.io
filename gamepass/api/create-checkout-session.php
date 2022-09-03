@@ -27,7 +27,7 @@ try {
     ]],
     'mode' => 'subscription',
     'success_url' => $YOUR_DOMAIN . '/gpsuccess.php?session_id={CHECKOUT_SESSION_ID}',
-    'cancel_url' => $YOUR_DOMAIN . '/cancel.php',
+    'cancel_url' => $YOUR_DOMAIN . '/gamepass.php',
   ]);
 
   if (!isset($_COOKIE['logintoken'])) {
