@@ -20,33 +20,11 @@
 
         if (password_verify($pass, $usersPass)) {
 
-            //check if user has game pass
-            $hasGamePass = 'false';
-            
-            $userid = $row[7]; //row of id
-
-            $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
-            $result = mysqli_num_rows(mysqli_query($conn, $query));
-            if($result > 0)
-            {  
-                $query = "SELECT Completed FROM gamepass WHERE ID = '$userid'";
-                $result = mysqli_query($conn, $query);
-                $result = ($result -> fetch_row())[0];
-
-                if($result == 1)
-                {
-                    //user has game pass
-                    $hasGamePass = 'true';
-                }
-            }
-
-
             $data = array(
                 'isLoggedIn' => 'true',
                 'username' => $user,
                 'email' => $row[1],
-                'id' => $row[7],
-                'gamepass' => "$hasGamePass"
+                'id' => $row[7]
             );
 
             $cookie_name = "logintoken";

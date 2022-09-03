@@ -68,14 +68,16 @@ async function loadCookies() {
         res = JSON.parse(res);
         if (res != null) {
             const isLoggedIn = res['isLoggedIn'];
-            const hasGamePass = res['gamepass'];
 
             if (isLoggedIn == 'true') {
                 loggedIn = true;
             }
-            if (hasGamePass == 'true') {
-                gamepass = true;
-            }
+        }
+    });
+
+    await fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+        if (res == 'true') {
+            gamepass = true;
         }
     });
 
