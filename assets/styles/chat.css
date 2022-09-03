@@ -36,6 +36,11 @@ body {
     margin-left: 0;
     position: fixed;
     width: calc(100% - 150px);
+    transition: all 0.1s;
+}
+
+#memessageinput:hover {
+    transform: scale(1.05);
 }
 
 #chat {
