@@ -48,8 +48,13 @@ try {
   
   
 
-  $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
-  $subscription->cancel();
+  //$subscription = \Stripe\Subscription::retrieve("$subscriptionID");
+  \Stripe\Subscription::update(
+    "$subscriptionID",
+    [
+      'cancel_at_period_end' => true,
+    ]
+  );
 
   $query = "UPDATE `gamepass` SET `Renew`='0' WHERE `ID`='$userid'";
   $result = mysqli_query($conn, $query);
