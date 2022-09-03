@@ -28,7 +28,7 @@ $monthly = ($monthly -> fetch_row())[0];
 date_default_timezone_set("America/New_York");
 if($monthly == 1)
 {
-    $date = date("Y-m-d", strtotime("+1 Months", $result));
+    $date = date("Y-m-d", strtotime("+1 month", $result));
     echo($result);
 }else{
     $d=strtotime("+1 Years");
