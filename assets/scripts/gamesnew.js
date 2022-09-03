@@ -347,3 +347,11 @@ function createGameButton(game, pin) {
     return (gameBtn);
 
 }
+
+function lockedGame() {
+    swal("You must have Game Pass to play this game", { buttons: { cancel: "Cancel", gamepass: { text: "Game Pass", value: "gamepass" } }, }).then((value) => {
+        if (value == 'gamepass') {
+            window.open('gamepass.php', '_self');
+        }
+    });
+}
