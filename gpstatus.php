@@ -5,7 +5,6 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/gamepass.css?v1'>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
     <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->

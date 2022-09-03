@@ -22,6 +22,6 @@ function dropDownFaq(id) {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const unsubscribed = urlParams.get('unsubscribe');
-if (unsubscribed = 1) {
+if (unsubscribed == 1) {
     swal('You have successfully unsubscribed.');
 }
