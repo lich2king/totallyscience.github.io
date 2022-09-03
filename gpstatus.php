@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/gamepass.css'>
+    <link rel='stylesheet' href='assets/styles/gamepass.css?v1'>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
