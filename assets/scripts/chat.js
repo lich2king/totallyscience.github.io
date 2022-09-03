@@ -57,6 +57,8 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
             } else {
                 roominput = joinChat.children[0].value;
             }
+            
+            localStorage.setItem('chatRoom', roominput);
 
             joinChat.style.display = 'none';
 
@@ -122,8 +124,6 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
                         messageinput.style = '';
                         leavebtn.style = '';
-
-                        localStorage.setItem('chatRoom', roominput);
 
                         setInterval(() => {
                             try {
