@@ -18,9 +18,16 @@
     $message = "Your confirmation code is " . $code;
     $headers = "From:" . $from;
 
-    $conn->query("UPDATE accounts SET code = '$code' WHERE Username = '$user'");
+    if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'"))
+    {
+        $row = $userresult -> fetch_row();
+    
+        $to = $row[1];
 
-    if (mail($email, $subject, $message, $headers)) {
-        echo "Success";
-    };
+        $conn->query("UPDATE accounts SET code = '$code' WHERE Username = '$user'");
+    
+        if (mail($email, $subject, $message, $headers)) {
+            echo "Success";
+        };
+    }
 ?>
