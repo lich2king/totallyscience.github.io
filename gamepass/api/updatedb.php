@@ -30,16 +30,18 @@ else
 {
     //user has gamepass
 
-    //check if user will renew
-    $query = "SELECT Renew FROM gamepass WHERE ID = '$userid'";
+    //check if user has the completed field set to 1
+    $query = "SELECT Completed FROM gamepass WHERE ID = '$userid'";
     $result = mysqli_query($conn, $query);
     $result = ($result -> fetch_row())[0];
 
     if($result == 1)
     {
-      //redirect user to subscription status page
-      header('Location: ../../gpstatus.php');
-      exit;
+      //allow user to update then purchase subscription
+      
+      $query = "UPDATE `gamepass` SET `CustomerID`='$customerid', `Monthly`='$monthly', `ChangeMonthly`='$monthly' WHERE `ID` = '$userid'";
+
+      mysqli_query($conn, $query);
     }
     else
     {
