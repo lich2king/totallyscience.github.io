@@ -69,8 +69,8 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                         if (error) {
                             joinChat.style.display = '';
 
-                            if (res1 == 'You must verify your email to join the chat') {
-                                swal('you must verify your email to join chat.', { buttons: { cancel: 'Cancel', login: { text: 'Verify', value: "verify" } }, }).then((value) => {
+                            if (res1 == 'you must verify your email to join chat.') {
+                                swal('You must verify your email to join the chat', { buttons: { cancel: 'Cancel', login: { text: 'Verify', value: "verify" } }, }).then((value) => {
                                     if (value == 'verify') {
                                         window.open('verify.php', '_self');
                                     }
