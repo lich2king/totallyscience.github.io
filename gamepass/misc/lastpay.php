@@ -31,7 +31,6 @@ if($monthly == 1)
     $d=strtotime("+1 Months");
     $date = date($result, $d);
     echo($result);
-    echo("ge");
 }else{
     $d=strtotime("+1 Years");
     $date = date($result, $d);
