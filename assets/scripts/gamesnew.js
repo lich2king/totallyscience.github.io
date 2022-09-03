@@ -305,7 +305,7 @@ function createGameButton(game, pin) {
 
     let buttons = '';
 
-    let onclick = "location.href = 'game.php?class=${game}'";
+    let onclick = `location.href = 'game.php?class=${game}'`;
     if (data.tags.includes("gamepass") && !gamepass) {
         buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
         onclick = "lockedGame()";
