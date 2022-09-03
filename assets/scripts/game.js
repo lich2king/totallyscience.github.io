@@ -12,6 +12,7 @@ const pinButtonImg = pinButton.firstChild;
 
 let likeCount = 0;
 let loggedIn = false;
+let verified = false;
 
 let games;
 
@@ -40,6 +41,10 @@ window.addEventListener('load', () => {
             //add to recent games list
             fetch(`assets/php/recent_games/addgame.php?name=${gameName}`);
         }
+    });
+
+    fetch(`assets/php/verified.php`).then((response) => response.text()).then((res) => {
+        verified = res;
     });
 
     //get game data for iframe etc
@@ -85,16 +90,24 @@ window.addEventListener('load', () => {
 //Like Button
 likeButton.addEventListener('click', function() {
     if (loggedIn) {
-        if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
-            likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-            likeCount += 1;
-            fetch(`assets/php/game_likes/likegame.php?name=${gameName}`);
-            UpdateLikeCount();
+        if (verified) {
+            if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
+                likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+                likeCount += 1;
+                fetch(`assets/php/game_likes/likegame.php?name=${gameName}`);
+                UpdateLikeCount();
+            } else {
+                likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
+                likeCount -= 1;
+                fetch(`assets/php/game_likes/unlikegame.php?name=${gameName}`);
+                UpdateLikeCount();
+            }
         } else {
-            likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
-            likeCount -= 1;
-            fetch(`assets/php/game_likes/unlikegame.php?name=${gameName}`);
-            UpdateLikeCount();
+            swal("You must verify your email to pin the game", { buttons: { cancel: "Cancel", verify: { text: "Verify", value: "verify" } }, }).then((value) => {
+                if (value == 'verify') {
+                    window.open('profile.php', '_self');
+                }
+            });
         }
     } else {
         swal("You must login to like the game", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
@@ -120,15 +133,24 @@ pinButton.addEventListener("webkitAnimationEnd", function() {
 });
 pinButton.addEventListener('click', function() {
     if (loggedIn) {
-        if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-            fetch(`assets/php/game_pin/pingame.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-                if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
-            });
+        if (verified) {
+            if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
+                fetch(`assets/php/game_pin/pingame.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                    if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+                    else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
+                });
+            } else {
+                fetch(`assets/php/game_pin/unpingame.php?name=${gameName}`);
+                pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
+            }
         } else {
-            fetch(`assets/php/game_pin/unpingame.php?name=${gameName}`);
-            pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
+            swal("You must verify your email to pin the game", { buttons: { cancel: "Cancel", verify: { text: "Verify", value: "verify" } }, }).then((value) => {
+                if (value == 'verify') {
+                    window.open('profile.php', '_self');
+                }
+            });
         }
+
     } else {
         swal("You must login to pin the game", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
             if (value == 'login') {
