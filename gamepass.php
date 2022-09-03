@@ -176,7 +176,7 @@
 
 
 <?php include "assets/includes/footer.php" ?>
-<script src="assets/scripts/gamepass.js?v1"></script>
+<script src="assets/scripts/gamepass.js?v2"></script>
 <script src="assets/scripts/main.js"></script>
 
 </html>
