@@ -44,7 +44,9 @@ window.addEventListener('load', () => {
     });
 
     fetch(`assets/php/verified.php`).then((response) => response.text()).then((res) => {
-        verified = res;
+        if (res == '1') {
+            verified = true;
+        }
     });
 
     //get game data for iframe etc
