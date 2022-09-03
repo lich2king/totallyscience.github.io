@@ -43,6 +43,7 @@
         }   
 
         fetch(`gamepass/misc/lastpay.php`).then((response) => response.text()).then((res) => {
+            console.log(res);
             document.getElementById("dateSpan").innerHTML = res;
         });
 
