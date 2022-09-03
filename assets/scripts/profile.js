@@ -71,8 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const recentContainer = document.getElementById("recentContainer");
 
         for (let i = 0; i < recentGames.length; i++) {
-            const gameButton = createGameButton(recentGames[i]);
-            recentContainer.innerHTML += gameButton;
+            if (games[recentGames[i]] != null) {
+                const gameButton = createGameButton(recentGames[i]);
+                recentContainer.innerHTML += gameButton;
+            }
         }
     });
 });
