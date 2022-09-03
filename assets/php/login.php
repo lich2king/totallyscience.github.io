@@ -23,7 +23,7 @@
             //check if user has game pass
             $hasGamePass = 'false';
             
-            $userid = $row["ID"];
+            $userid = $row[7];
             die($userid);
 
             $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
