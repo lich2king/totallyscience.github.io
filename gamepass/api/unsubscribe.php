@@ -14,7 +14,7 @@ try {
     die("no cookie");
   }
 
-  /*$userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
   //get subid from uid
 
@@ -34,7 +34,7 @@ try {
 
   $subscriptionID = '';
 
-  if($result > 0)
+  /*if($result > 0)
   {
     $query = "SELECT `SubscriptionID` FROM gamepass WHERE ID = '$userid'";
     $result = mysqli_query($conn, $query);
