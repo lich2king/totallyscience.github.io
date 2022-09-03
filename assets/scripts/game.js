@@ -177,6 +177,7 @@ document.getElementById("fullscreen").addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
+        isGamePassGame();
         suggestGames();
     });
 });
@@ -194,7 +195,7 @@ function suggestGames() {
         currentTags.forEach(function(game) {
             let gameTags = games[randGame]["tags"];
             gameTags.forEach(function(currentgame) {
-                if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'premium' && game != 'new' && game != 'popular') {
+                if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'gamepass' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
             });
@@ -259,3 +260,16 @@ window.addEventListener('click', () => {
     //fix some text inputs not working (eaglercraft)
     document.getElementById('iframe').focus();
 });
+
+function isGamePassGame() {
+    if (games[gameName].tags.includes('gamepass')) {
+        //check if user has gamepass
+        //if not, kick them outta the game!
+        fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+            if (res != 'true') {
+                //they don't have gamepass, get them outta here!
+                window.location.href = '../gamesnew.php';
+            }
+        });
+    }
+}
