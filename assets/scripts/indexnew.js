@@ -48,6 +48,8 @@ let games;
 let sorted;
 let hasLoaded = false;
 
+let loggedIn = false;
+let gamepass = false;
 
 let sortObject = (obj) =>
     Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {})
@@ -56,10 +58,32 @@ let sortObject = (obj) =>
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
-        loadTopic();
-        suggestGames();
+        loadCookies()
+
     });
 });
+
+async function loadCookies() {
+    await fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res);
+        if (res != null) {
+            const isLoggedIn = res['isLoggedIn'];
+            const hasGamePass = res['gamepass'];
+
+            if (isLoggedIn == 'true') {
+                loggedIn = true;
+            }
+            if (hasGamePass == 'true') {
+                gamepass = true;
+            }
+        }
+    });
+
+
+    //when done
+    loadTopic();
+    suggestGames();
+}
 
 function loadTopic() {
     displayedGames = 0;
@@ -127,18 +151,6 @@ async function displayGames() {
         gamesDiv.innerHTML += gameBtn;
     }
 
-    let loggedIn = false;
-
-    await fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res);
-        if (res != null) {
-            const isLoggedIn = res['isLoggedIn'];
-
-            if (isLoggedIn == 'true') {
-                loggedIn = true;
-            }
-        }
-    });
 
     await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
         let popularGames = JSON.parse(res);
@@ -402,9 +414,12 @@ function createGameButton(game, pin) {
 
     let buttons = '';
 
-    if (data.tags.includes("gamepass")) {
+    let onclick = `location.href = 'game.php?class=${game}'`;
+    if (data.tags.includes("gamepass") && !gamepass) {
         buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
+        onclick = "lockedGame()";
     }
+
 
     if (pin == "pin") {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>"
@@ -423,14 +438,14 @@ function createGameButton(game, pin) {
 
     if (pin != "hidden") {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
     } else {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist}">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="innerGameDiv">${game}</div>
         </div>
@@ -440,4 +455,12 @@ function createGameButton(game, pin) {
 
     return (gameBtn);
 
+}
+
+function lockedGame() {
+    swal("You must have Game Pass to play this game", { buttons: { cancel: "Cancel", gamepass: { text: "Game Pass", value: "gamepass" } }, }).then((value) => {
+        if (value == 'gamepass') {
+            window.open('gamepass.php', '_self');
+        }
+    });
 }
