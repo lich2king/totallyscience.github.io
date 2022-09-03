@@ -21,8 +21,8 @@ $result = mysqli_num_rows(mysqli_query($conn, $query));
 if($result <= 0)
 {
     //user has not already liked the game
-    $query = "INSERT INTO gamepass (`ID`, `CustomerID`, `Monthly`)
-    VALUES ('$userid', '$customerid', $monthly)";
+    $query = "INSERT INTO gamepass (`ID`, `CustomerID`, `Monthly`, `ChangeMonthly`)
+    VALUES ('$userid', '$customerid', $monthly, $monthly)";
 
     mysqli_query($conn, $query);
 }
@@ -42,7 +42,7 @@ else
     else
     {
       //user can renew their membership if they are set to expire
-      $query = "UPDATE `gamepass` SET `Monthly`='$monthly' WHERE ID='$userid'";
+      $query = "UPDATE `gamepass` SET `ChangeMonthly`='$monthly' WHERE ID='$userid'";
       mysqli_query($conn, $query);
     }
 }
