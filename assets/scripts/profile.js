@@ -59,8 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (like in likedgames) {
             let game = likedgames[like][0];
-            const gameButton = createGameButton(game);
-            likeContainer.innerHTML += gameButton;
+            if (games[game] != null) {
+                const gameButton = createGameButton(game);
+                likeContainer.innerHTML += gameButton;
+            }
         }
     });
 
