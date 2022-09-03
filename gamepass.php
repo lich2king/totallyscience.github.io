@@ -28,7 +28,7 @@
                     <input type="hidden" name="lookup_key" value="gpmonthly" />
                 </form>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button type="" onclick="subscribe()" class="btn">Subscribe</button>
+                    <button type="" onclick="subscribe('monthlyForm')" class="btn">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                     <input type="hidden" name="lookup_key" value="gpannual" />
                 </form>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button type="" onclick="subscribe()" class="btn">Subscribe</button>
+                    <button type="" onclick="subscribe('annualForm')" class="btn">Subscribe</button>
                 </div>
                 <button id="pin"><img src="assets/images/icons/Discount.png"></button>
             </div>
@@ -148,7 +148,7 @@
                     <input type="hidden" name="lookup_key" value="gpmonthly" />
                 </form>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button type="" onclick="subscribe()" class="btn">Subscribe</button>
+                    <button type="" onclick="subscribe('monthlyForm')" class="btn">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@
                     <input type="hidden" name="lookup_key" value="gpannual" />
                 </form>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button type="" onclick="subscribe()" class="btn">Subscribe</button>
+                    <button type="" onclick="subscribe('annualForm')" class="btn">Subscribe</button>
                 </div>
                 <button id="pin"><img src="assets/images/icons/Discount.png"></button>
             </div>

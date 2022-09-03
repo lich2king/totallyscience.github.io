@@ -40,9 +40,9 @@ fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((r
     }
 });
 
-function subscribe() {
+function subscribe(form) {
     if (loggedIn) {
-        document.forms["monthlyForm"].submit();
+        document.forms[form].submit();
     } else {
         swal("You must sign up before purchasing Game Pass", { buttons: { cancel: "Cancel", signup: { text: "Signup", value: "signup" } }, }).then((value) => {
             if (value == 'signup') {
