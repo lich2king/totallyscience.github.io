@@ -30,11 +30,6 @@
             <li><a href="https://actuallyhistory.com" target="_blank">MathPlace.com</a></li>
         </ul>
         <a class="unsubscribe" onclick="unsubscribe()">Unsubscribe</a>
-        <form action="gamepass/api/unsubscribe.php" method="POST">
-            <!-- Add a hidden field with the lookup_key of your Price -->
-            <input type="hidden" name="lookup_key" value="gpmonthly" />
-            <button id="checkout-and-portal-button" type="submit">Checkout</button>
-      </form>
     </div>
 
     <script>
