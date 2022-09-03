@@ -19,7 +19,7 @@
     <div class="statusContainer">
         <br>
         <h1>Your membership will automatically <span id="renewSpan">renew</span> on <span style="color: var(--accent-color)" id="dateSpan"></span></h1>
-        <p>Would you like it to automatically <span style="color: var(--accent-color)" onclick="">renew</span>?</p>
+        <p>Would you like it to automatically <span style="color: var(--accent-color); cursor: pointer;" onclick="">renew</span>?</p>
         <br>
         <p>Enjoy your list of Private Links:</p>
         <ul>
