@@ -21,7 +21,7 @@
         <h1>Your membership will automatically <span id="renewSpan">renew</span> on <span style="color: var(--accent-color)" id="dateSpan"></span></h1>
         <p>Would you like it to automatically <a href=''>renew</a>?</p>
         <br>
-        <p>Enjoy your list of <span style="color: var(--accent-color)">Private</span> Links:</p>
+        <p>Enjoy your list of Private Links:</p>
         <ul>
             <li><a href="https://actuallyhistory.com" target="_blank">ActuallyHistory.com</a></li>
             <li><a href="https://actuallyhistory.com" target="_blank">MathPlace.com</a></li>
