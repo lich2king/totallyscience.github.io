@@ -48,8 +48,8 @@ try {
   $conn->close();
   
 
-
-  $subscription = \Stripe\Subscription::retrieve('sub_1LcFvDBRp1VXv1XhhhOkvftb');
+  $subscriptionID = "sub_1LcAtvBRp1VXv1XhDcFA7Y07";
+  $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
   $subscription->cancel();
 
   header("HTTP/1.1 303 See Other");
