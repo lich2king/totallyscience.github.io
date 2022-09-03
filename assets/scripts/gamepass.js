@@ -17,3 +17,11 @@ function dropDownFaq(id) {
         document.getElementById(id).setAttribute("style", "display:");
     }
 }
+
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const unsubscribed = urlParams.get('unsubscribe');
+if (unsubscribed = 1) {
+    swal('You have successfully unsubscribed.');
+}
