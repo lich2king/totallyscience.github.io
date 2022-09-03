@@ -48,7 +48,6 @@ try {
   $conn->close();
   
 
-  $subscriptionID = "sub_1LcAtvBRp1VXv1XhDcFA7Y07";
   $subscription = \Stripe\Subscription::retrieve("$subscriptionID");
   $subscription->cancel();
 
