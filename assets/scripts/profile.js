@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
         if (res == 'true') {
-            gamepass = 'true';
+            gamePass = 'true';
             cookieLoaded();
         }
     });
