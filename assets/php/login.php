@@ -25,7 +25,7 @@
             
             $query = "SELECT `ID` FROM accounts WHERE `Username` = '$user'";
             $userid = mysqli_num_rows(mysqli_query($conn, $query));
-            $userid = ($result -> fetch_row())[0];
+            $userid = ($userid -> fetch_row())[0];
 
             $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
             $result = mysqli_num_rows(mysqli_query($conn, $query));
