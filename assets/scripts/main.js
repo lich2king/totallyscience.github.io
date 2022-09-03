@@ -1,6 +1,6 @@
 // READY
 
-if (location.host.includes('github')) location.replace('https://tsmain.co'); 
+if (location.host.includes('github')) location.replace('https://tsmain.co');
 
 // init user prefs
 if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
@@ -26,16 +26,13 @@ if (localStorage.getItem('disguise') == null) {
         favicon.href = './assets/images/disguises/canvasicon.jpg';
     } else if (localStorage.getItem('disguise') == 'g') {
         title.innerHTML = 'Google';
-        favicon.href = '';
-    } else if (localStorage.getItem('disguise') == 'g') {
-        title.innerHTML = 'Google';
-        favicon.href = '';
+        favicon.href = './assets/images/disguises/googleicon.png';
     } else if (localStorage.getItem('disguise') == 'calc') {
         title.innerHTML = 'Calculator';
-        favicon.href = '';
+        favicon.href = './assets/images/disguises/calculator.png';
     } else if (localStorage.getItem('disguise') == 'wiki') {
         title.innerHTML = 'Wikipedia';
-        favicon.href = '';
+        favicon.href = './assets/images/disguises/wikipedia.png';
     }
 }
 
