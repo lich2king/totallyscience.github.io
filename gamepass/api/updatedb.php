@@ -39,7 +39,12 @@ else
     {
       die("You already have gamepass");
     }
-    //user can renew their membership if they are set to expire
+    else
+    {
+      //user can renew their membership if they are set to expire
+      $query = "UPDATE `gamepass` SET `Monthly`='$monthly' WHERE ID='$userid'";
+      mysqli_query($conn, $query);
+    }
 }
 
 
