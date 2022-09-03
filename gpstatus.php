@@ -37,8 +37,9 @@
         {
             swal("Are you sure you want to Unsubscribe?", {buttons: {cancel: "Cancel", unsubscribe: { text: "Unsubscribe", value: "unsubscribe" }},}).then((value) => {
                 if (value == 'unsubscribe') {
-                    fetch(`gamepass/api/unsubscribe.php`);
-                    window.open("gamepass.php?unsubscribe=1", "_self");
+                    fetch(`gamepass/api/unsubscribe.php`).then((response) => response.text()).then((res) => {
+                        window.open("gpstatus.php", "_self");
+                    });   
                 }
             });
         }   
@@ -61,8 +62,9 @@
         {
             swal("Are you sure you want to Renew your subscription?", {buttons: {cancel: "Cancel", renew: { text: "Renew", value: "renew" }},}).then((value) => {
                 if (value == 'renew') {
-                    fetch(`gamepass/api/renew.php`);
-                    window.open("gpstatus.php", "_self");
+                    fetch(`gamepass/api/renew.php`).then((response) => response.text()).then((res) => {
+                        window.open("gpstatus.php", "_self");
+                    });                    
                 }
             });
         }  
