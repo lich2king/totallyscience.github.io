@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='./assets/styles/account.css'>
+    <link rel='stylesheet' href='./assets/styles/account.css?v1'>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
     <div style="padding-top: 90px;"></div>
 
-    <p>You must verify your email address before accessing your account.</p>
+    <p style="text-align: center;">You must verify your email address before accessing your account.</p>
 
     <form id="survey" action="javascript:submitConfirmCode()">
         <div>
@@ -26,7 +26,7 @@
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p onclick="location.reload();">resend email</p>
+    <p id="resEmail" onclick="location.reload();">resend email</p>
     <script src="./assets/scripts/main.js"></script>
 
     <svg id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});' xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#f75dfc" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">

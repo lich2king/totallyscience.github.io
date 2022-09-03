@@ -43,3 +43,11 @@ body {
     margin-bottom: 2%;
     cursor: pointer;
 }
+
+#resEmail {
+    text-align: center;
+    cursor: pointer;
+}
+#resEmail:hover {
+    color: var(--accent-color);
+}
