@@ -28,10 +28,8 @@ $monthly = ($monthly -> fetch_row())[0];
 date_default_timezone_set("America/New_York");
 if($monthly == 1)
 {
-    $startDate = '2014-06-03'; // select date in Y-m-d format
-    $nMonths = 1; // choose how many months you want to move ahead
-    $final = endCycle($result, $nMonths); // output: 2014-07-02
-    echo($final);
+    $dt = strtotime($result);
+    echo (date("Y-m-d", strtotime("+1 month", $dt))."\n");
 }else{
     $d=strtotime("+1 Years");
     $date = date($result, $d);
