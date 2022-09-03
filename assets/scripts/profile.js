@@ -115,31 +115,11 @@ function numFormatter(num) {
 function createGameButton(game, pin) {
     const data = games[game];
 
-    let classlist = data.tags.join(' ');
-
-    const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
-
-    const gameDate = new Date(data.date_added);
-
-    if (gameDate > weekAgo) classlist += ' new';
-
-    let gameBtn = '';
-
-    if (data.tags.includes("gamepass")) {
-        gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
-            <button id="gamelock"><img src="/assets/images/icons/locked.png"></button> 
-            <div class="innerGameDiv">${game}</div>
-        </div>
-        `;
-    } else {
-        gameBtn = `
+    gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
-    }
 
     return (gameBtn);
 }
