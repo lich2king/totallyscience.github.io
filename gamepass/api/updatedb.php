@@ -29,7 +29,17 @@ if($result <= 0)
 else
 {
     //user has gamepass
-    die("You already have gamepass");
+
+    //check if user will renew
+    $query = "SELECT Renew FROM gamepass WHERE ID = '$userid'";
+    $result = mysqli_query($conn, $query);
+    $result = ($result -> fetch_row())[0];
+
+    if($result == 1)
+    {
+      die("You already have gamepass");
+    }
+    //user can renew their membership if they are set to expire
 }
 
 
