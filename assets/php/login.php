@@ -24,7 +24,6 @@
             $hasGamePass = 'false';
             
             $userid = $row[7]; //row of id
-            die($userid);
 
             $query = "SELECT * FROM gamepass WHERE ID = '$userid'";
             $result = mysqli_num_rows(mysqli_query($conn, $query));
