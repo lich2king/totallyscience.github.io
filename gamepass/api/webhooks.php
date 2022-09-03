@@ -41,6 +41,8 @@ switch ($event->type) {
     $subscription = $event->data->object; // contains a \Stripe\Subscription
     // Then define and call a method to handle the subscription being deleted.
     // handleSubscriptionDeleted($subscription);
+    //
+    //MAKE SURE to: logout user after deleting from db
     break;
   case 'customer.subscription.updated':
     $subscription = $event->data->object; // contains a \Stripe\Subscription
