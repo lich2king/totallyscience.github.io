@@ -18,7 +18,7 @@
     </div>
     <div class="statusContainer">
         <br>
-        <h1>Your membership will automatically renew/end on <span style="color: var(--accent-color)"></span></h1>
+        <h1>Your membership will automatically renew/end on <span style="color: var(--accent-color)" id="dateSpan"></span></h1>
         <br>
         <p>Enjoy your list of <span style="color: var(--accent-color)">Private</span> Links:</p>
         <ul>
@@ -42,7 +42,9 @@
             });
         }   
 
-        
+        fetch(`gamepass/misc/lastpay.php`).then((response) => response.text()).then((res) => {
+            document.getElementById("dateSpan").innerHTML = res;
+        });
 
     </script>
 </body>
