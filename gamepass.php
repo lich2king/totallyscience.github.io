@@ -118,7 +118,7 @@
             <div class="answer" style="display: none" id="cancel">
                 <div>
                     <ul>
-                        <li>You can cancel your subscription by clicking the link <a href="">here</a></li>
+                        <li>You can cancel your subscription on the <a href="profile.php">account page</a></li>
                     </ul>
                 </div>
             </div>
