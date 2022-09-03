@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 
-$query = "UPDATE `gamepass` SET `SubscriptionID`='$subscriptionID' WHERE CustomerID='$customer'";
+$query = "DELETE FROM `gamepass` WHERE CustomerID='$customer'";
 mysqli_query($conn, $query);
 
 

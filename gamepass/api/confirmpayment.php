@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 
 
 $query = "UPDATE `gamepass` SET `Completed`='1' WHERE CustomerID='$customer'";
-mysqli_num_rows(mysqli_query($conn, $query));
+mysqli_query($conn, $query);
 
 
 $conn->close();
