@@ -25,7 +25,7 @@ $query = "SELECT `Monthly` FROM gamepass WHERE ID = '$userid'";
 $monthly = mysqli_query($conn, $query);
 $monthly = ($monthly -> fetch_row())[0];
 
-/*date_default_timezone_set("America/New_York");
+date_default_timezone_set("America/New_York");
 if($monthly == 1)
 {
     $d=strtotime("+1 Months");
@@ -35,7 +35,7 @@ if($monthly == 1)
     $d=strtotime("+1 Years");
     $date = date($result, $d);
     echo($result);
-}*/
+}
 
 
 
