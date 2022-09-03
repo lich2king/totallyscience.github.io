@@ -76,7 +76,7 @@
             <li><span class="span"></span><span2></span2></li>
             <li><span class="span"></span><span2></span2></li>
         </ul>
-        <input style="display: none;" id="messageinput" placeholder="message" onclick=""></input>
+        <input style="display: none;" id="messageinput" placeholder="Message..." onclick=""></input>
         <button style="display: none;" id="leavebtn" onclick="location.reload();">Leave</button>
     </div>
 
