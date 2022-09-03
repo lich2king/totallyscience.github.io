@@ -2,6 +2,7 @@ let username;
 let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
+let gamePass = 'false';
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
@@ -14,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const loggedIn = res['isLoggedIn'];
             username = res['username'];
             uid = res['id'];
+            gamePass = res['gamepass'];
+
+            cookieLoaded();
 
             if (loggedIn != 'true') location.href = 'signup.php';
 
@@ -138,4 +142,11 @@ function createGameButton(game, pin) {
     }
 
     return (gameBtn);
+}
+
+function cookieLoaded() {
+    if (gamePass == 'true') {
+        document.getElementById('membership').innerHTML = 'GAMEPASS';
+        document.getElementById('membershiplink').setAttribute('src', 'gpstatus');
+    }
 }

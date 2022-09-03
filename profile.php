@@ -28,8 +28,8 @@
         </div>
 
         <div class="accountoption">
-            <p>Game Pass: <span class="span">FREE</span></p>
-            <input onclick="location.href = 'gamepass.php'" type="image" src="assets/images/icons/edit.png">
+            <p>Membership: <span class="span" id="membership">FREE</span></p>
+            <input id="membershiplink" onclick="location.href = 'gamepass.php'" type="image" src="assets/images/icons/edit.png">
         </div>
 
         <div class="accountoption">
