@@ -19,7 +19,7 @@
     <div class="statusContainer">
         <br>
         <h1>Your membership will automatically <span id="renewSpan">renew</span> on <span style="color: var(--accent-color)" id="dateSpan"></span></h1>
-        <p>Would you like it to automatically <span style="color: var(--accent-color); cursor: pointer;" onclick="">renew</span>?</p>
+        <p>Would you like it to automatically <span style="color: var(--accent-color); cursor: pointer;" onclick="renew()">renew</span>?</p>
         <br>
         <p>Enjoy your list of Private Links:</p>
         <ul>
@@ -55,6 +55,16 @@
                 document.getElementById("unsubscribe").setAttribute('style', 'display:none;');
             }
         });
+
+        function unsubscribe()
+        {
+            swal("Are you sure you want to Renew your subscription?", {buttons: {cancel: "Cancel", renew: { text: "Renew", value: "renew" }},}).then((value) => {
+                if (value == 'renew') {
+                    fetch(`gamepass/api/renew.php`);
+                    window.open("gpstatus.php", "_self");
+                }
+            });
+        }  
 
     </script>
 </body>
