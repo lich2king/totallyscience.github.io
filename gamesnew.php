@@ -58,7 +58,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/gamesnew.js?v46"></script>
+    <script src="assets/scripts/gamesnew.js?v47"></script>
 </body>
 
 </html>
