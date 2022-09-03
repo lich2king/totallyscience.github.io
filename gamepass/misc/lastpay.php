@@ -17,7 +17,7 @@ if (!isset($_COOKIE['logintoken'])) {
   
 $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
-$query = "SELECT `LastPayment` FROM gamepass WHERE ID = '$userid'";
+/*$query = "SELECT `LastPayment` FROM gamepass WHERE ID = '$userid'";
 $result = mysqli_query($conn, $query);
 $result = ($result -> fetch_row())[0];
 
@@ -35,7 +35,7 @@ if($monthly == 1)
     $d=strtotime("+1 Years");
     $date = date($result, $d);
     echo($result);
-}
+}*/
 
 
 
