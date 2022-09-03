@@ -12,7 +12,11 @@ if ($conn->connect_error) {
 }
 
 
-$query = "UPDATE `gamepass` SET `Completed`='1' WHERE CustomerID='$customer'";
+date_default_timezone_set("America/New_York");
+$date = date("Y-m-d");
+
+
+$query = "UPDATE `gamepass` SET `Completed`='1', 'LastPayment'='$date' WHERE CustomerID='$customer'";
 mysqli_query($conn, $query);
 
 
