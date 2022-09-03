@@ -31,7 +31,7 @@ if($monthly == 1)
     $startDate = '2014-06-03'; // select date in Y-m-d format
     $nMonths = 1; // choose how many months you want to move ahead
     $final = endCycle($result, $nMonths); // output: 2014-07-02
-    echo($date);
+    echo($final);
 }else{
     $d=strtotime("+1 Years");
     $date = date($result, $d);
