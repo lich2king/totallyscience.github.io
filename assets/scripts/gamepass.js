@@ -25,3 +25,15 @@ const unsubscribed = urlParams.get('unsubscribe');
 if (unsubscribed == 1) {
     swal('You have successfully unsubscribed.');
 }
+
+
+fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
+    res = JSON.parse(res);
+    if (res != null) {
+        const isLoggedIn = res['isLoggedIn'];
+
+        if (isLoggedIn != 'true') {
+            document.getElementById("form").setAttribute("action", "JavaScript:mustLogin()")
+        }
+    }
+});
