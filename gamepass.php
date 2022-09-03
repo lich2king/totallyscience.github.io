@@ -143,9 +143,13 @@
                 <h3>$4.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Paid each month</p>
                 </h3>
-                <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button onclick="location.href = 'purchasepass.php?pass=annual'" class="btn">Subscribe</button>
-                </div>
+                <form action="gamepass/api/create-checkout-session.php" method="POST">
+                    <!-- Add a hidden field with the lookup_key of your Price -->
+                    <input type="hidden" name="lookup_key" value="gpmonthly" />
+                    <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -155,9 +159,13 @@
                 <h3>$3.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
                 </h3>
-                <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
-                    <button onclick="location.href = 'purchasepass.php?pass=monthly'" class="btn">Subscribe</button>
-                </div>
+                <form action="gamepass/api/create-checkout-session.php" method="POST">
+                    <!-- Add a hidden field with the lookup_key of your Price -->
+                    <input type="hidden" name="lookup_key" value="gpannual" />
+                    <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
                 <button id="pin"><img src="assets/images/icons/Discount.png"></button>
             </div>
         </div>
