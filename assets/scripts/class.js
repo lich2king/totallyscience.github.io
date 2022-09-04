@@ -80,7 +80,7 @@ window.addEventListener('load', () => {
     });
 
     //get current highscore
-    fetch(`assets/php/game_likes/getgamehighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/game_likes/getclasshighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
         if (res != '') {
             const currentHighscore = numFormatter(res);
             document.getElementById('currentHighscore').innerText = currentHighscore;
