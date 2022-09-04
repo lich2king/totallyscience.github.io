@@ -14,8 +14,8 @@ try {
     // retrieve lookup_key from form data POST body
     //'lookup_keys' => [$_POST['lookup_key']],
     //'id' => 'price_1LcA10BRp1VXv1XhahWkIPJx',
-    'query' => 'metadata[\'test\']:\'test\''
-    //'expand' => ['data.product']
+    'query' => 'metadata[\'test\']:\'test\'',
+    'expand' => ['data.product']
   ]);
 
 
@@ -24,7 +24,7 @@ try {
   $checkout_session = \Stripe\Checkout\Session::create([
     'customer' => $customer,
     'line_items' => [[
-      'price' => $prices[0]->id,
+      'price' => $prices->id,
       'quantity' => 1,
     ]],
     'mode' => 'subscription',
