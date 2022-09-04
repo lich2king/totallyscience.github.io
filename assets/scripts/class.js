@@ -278,6 +278,7 @@ function numFormatter(num) {
 
 function addGameData() {
     const gameData = games[gameName];
+    console.log(gameData);
     if (gameData != null) fetch(`assets/php/addgameviews.php?name=${gameName}`);
 }
 
