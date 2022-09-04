@@ -2,10 +2,10 @@
 
 <div id="navbar">
     <div id="leftbar">
-        <div class="nav-button" id="gamesnav"><a href="index.php">&#127918; Games</a></div>
-        <div class="nav-button" id="leaderboardnav"><a href="leaderboard.php">&#127942; Leaderboard</a></div>
-        <div class="nav-button" id="chatnav"><a href="chat.php">&#128172; Chat</a></div>
-        <div class="nav-button" id="appsnav"><a href="apps.php">&#127922; Apps</a></div>
+        <div class="nav-button" id="gamesnav"><a href="index">&#127918; Games</a></div>
+        <div class="nav-button" id="leaderboardnav"><a href="leaderboard">&#127942; Leaderboard</a></div>
+        <div class="nav-button" id="chatnav"><a href="chat">&#128172; Chat</a></div>
+        <div class="nav-button" id="appsnav"><a href="apps">&#127922; Apps</a></div>
     </div>
 
     <div id="middlebar">
