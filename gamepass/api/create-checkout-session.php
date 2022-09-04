@@ -12,7 +12,7 @@ $YOUR_DOMAIN = 'http://mathstudyplace.com';
 try {
   $prices = \Stripe\Price::all([
     // retrieve lookup_key from form data POST body
-    'lookup_keys' => [$_POST['lookup_key']],
+    //'lookup_keys' => [$_POST['lookup_key']],
     //'id' => 'price_1LcA10BRp1VXv1XhahWkIPJx',
     //'query' => 'active:\'true\' AND metadata[\'test\']:\'test\'',
     'expand' => ['data.product']
