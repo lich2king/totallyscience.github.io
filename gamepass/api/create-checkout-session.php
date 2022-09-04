@@ -11,7 +11,7 @@ $YOUR_DOMAIN = 'http://mathstudyplace.com';
 
 try {
   $prices = \Stripe\Price::retrieve(
-    'price_1LcA1aBRp1VXv1XhfXwMpTTG',
+    'price_1LeP7HBRp1VXv1XhLgdpr5Fe',
     [
     // retrieve lookup_key from form data POST body
     //'lookup_keys' => [$_POST['lookup_key']],
