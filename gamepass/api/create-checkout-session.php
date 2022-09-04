@@ -27,7 +27,7 @@ try {
   $checkout_session = \Stripe\Checkout\Session::create([
     'customer' => $customer,
     'line_items' => [[
-      'price' => $prices->data[0]->id,
+      'price' => $prices,
       'quantity' => 1,
     ]],
     'mode' => 'subscription',
