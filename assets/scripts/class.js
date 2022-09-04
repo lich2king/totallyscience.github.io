@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
             });
 
             //add to recent games list
-            fetch(`assets/php/recent_games/addclass.php?name=${gameName}`);
+            fetch(`assets/php/recent_classes/addclass.php?name=${gameName}`);
         }
     });
 

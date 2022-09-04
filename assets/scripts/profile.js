@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load recent games
-    fetch(`assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
         let recentGames = res.split(";");
         recentGames = recentGames.slice(1);
         const recentContainer = document.getElementById("recentContainer");
