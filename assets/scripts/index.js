@@ -157,19 +157,29 @@ async function displayGames() {
         //all games are generated... now add the liked and recent tags to the games
         fetch(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
             var likedgames = JSON.parse(res);
-            console.log(likedgames);
+
             fetch(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
                 let recentGames = res.split(";");
                 recentGames = recentGames.slice(1);
                 const recentContainer = document.getElementById("recentContainer");
                 for (like in likedgames) {
                     if (document.getElementsByName(likedgames[like][0])) {
-                        document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                        //line below accounts for suggested/pinned games
+                        if (document.getElementsByName(likedgames[like][0])[0].classList.contains("all")) {
+                            document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                        } else {
+                            document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+                        }
                     }
                 }
                 for (let i = 0; i < recentGames.length; i++) {
                     if (document.getElementsByName(recentGames[i]).length > 0) {
-                        document.getElementsByName(recentGames[i])[0].classList.add('recent');
+                        //line below accounts for suggested/pinned games
+                        if (document.getElementsByName(recentGames[i])[0].classList.contains("all")) {
+                            document.getElementsByName(recentGames[i])[0].classList.add('recent');
+                        } else {
+                            document.getElementsByName(recentGames[i])[1].classList.add('recent');
+                        }
                     }
                 }
             });
