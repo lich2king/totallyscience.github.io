@@ -16,7 +16,7 @@ try {
     //'id' => 'price_1LcA10BRp1VXv1XhahWkIPJx',
     //'query' => 'active:\'true\' AND metadata[\'order_id\']:\'6735\'',
     //'expand' => ['data.product']
-    'prod_MN9QjimtOFDgbU',
+    'prod_MKpgCQ6aPnHyPr',
     []
   );
 
