@@ -12,7 +12,7 @@ $YOUR_DOMAIN = 'http://mathstudyplace.com';
 try {
   $prices = \Stripe\Price::all([
     // retrieve lookup_key from form data POST body
-    'lookup_keys' => ['gpmonthly'],
+    'lookup_keys' => ['gpannual'],
     'expand' => ['data.product']
   ]);
 
