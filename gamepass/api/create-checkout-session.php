@@ -14,7 +14,7 @@ try {
     // retrieve lookup_key from form data POST body
     //'lookup_keys' => [$_POST['lookup_key']],
     //'id' => 'price_1LcA10BRp1VXv1XhahWkIPJx',
-    'query' => 'active:\'true\' AND metadata[\'test\']:\'test\'',
+    'query' => 'active:\'true\' AND metadata[\'yest\']:\'test\'',
     'expand' => ['data.product']
   ]);
 
