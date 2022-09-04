@@ -9,6 +9,11 @@
   $grad = htmlspecialchars($_GET["gradyear"]);
   $uservalid = htmlspecialchars($_GET["uservalid"]);
   $emailvalid = htmlspecialchars($_GET["emailvalid"]);
+
+
+  $salt = rand(10000,99999);
+  $pass = $pass.$salt;
+
   $pass = password_hash($pass, PASSWORD_DEFAULT);
 
   // Create connection
@@ -36,7 +41,7 @@
     }
   }
   else {
-    $sql = "INSERT INTO accounts (Username, Email, Password, GradYear) VALUES ('$user', '$email', '$pass', '$grad')";
+    $sql = "INSERT INTO accounts (Username, Email, Password, GradYear, PwSalt) VALUES ('$user', '$email', '$pass', '$grad', '$salt')";
       
     if ($conn->query($sql) === TRUE) {
       $from = "help@totallyscience.co";
