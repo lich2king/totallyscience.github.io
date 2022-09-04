@@ -10,12 +10,12 @@ header('Content-Type: application/json');
 $YOUR_DOMAIN = 'http://mathstudyplace.com';
 
 try {
-  $prices = \Stripe\Price::search([
+  $prices = \Stripe\Prices::all([
     // retrieve lookup_key from form data POST body
     //'lookup_keys' => [$_POST['lookup_key']],
     //'id' => 'price_1LcA10BRp1VXv1XhahWkIPJx',
-    'query' => 'metadata[\'test\']:\'test\'',
-    'expand' => ['data']
+    'query' => 'active:\'true\' AND metadata[\'order_id\']:\'6735\'',
+    'expand' => ['data.product']
   ]);
 
 
