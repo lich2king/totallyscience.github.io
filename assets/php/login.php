@@ -19,7 +19,9 @@
     $usersPass = $row[2];
     $usersSalt = $row[10];
 
-    if (password_verify("$pass.$usersSalt", $usersPass)) {
+    $password = "$pass.$usersSalt";
+
+    if (password_verify($password, $usersPass)) {
 
       $data = array(
         'isLoggedIn' => 'true',
