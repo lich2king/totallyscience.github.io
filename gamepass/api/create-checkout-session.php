@@ -3,21 +3,19 @@
 require_once('stripe-php-9.4.0/init.php');
 
 // This is your test secret API key.
-\Stripe\Stripe::setApiKey('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');
+\Stripe\Stripe::setApiKey('sk_test_51LbBGpBRp1VXv1XhXArK0hGPZrl9XdeuZR8pywqPFpQRpWt3Uy3WzTfH1aJEk062WyIxa207bWjaQhAlaHeP3JmV00XjD3Uorj');
 
 header('Content-Type: application/json');
 
 $YOUR_DOMAIN = 'http://mathstudyplace.com';
 
 try {
-  $prices = \Stripe\Price::retrieve([
+  $prices = \Stripe\Price::all([
     // retrieve lookup_key from form data POST body
-    //'lookup_keys' => [$_POST['lookup_key']],
+    'lookup_keys' => [$_POST['lookup_key']],
     //'id' => 'price_1LcA10BRp1VXv1XhahWkIPJx',
     //'query' => 'active:\'true\' AND metadata[\'test\']:\'test\'',
-    //'expand' => ['data.product']
-    'price_1LcA1aBRp1VXv1XhfXwMpTTG',
-  []
+    'expand' => ['data.product']
   ]);
 
 
@@ -26,7 +24,7 @@ try {
   $checkout_session = \Stripe\Checkout\Session::create([
     'customer' => $customer,
     'line_items' => [[
-      'price' => $prices,
+      'price' => $prices->data[0]->id,
       'quantity' => 1,
     ]],
     'mode' => 'subscription',
