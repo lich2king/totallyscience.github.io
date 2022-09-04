@@ -157,7 +157,7 @@ async function displayGames() {
         //all games are generated... now add the liked and recent tags to the games
         fetch(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
             var likedgames = JSON.parse(res);
-
+            console.log(likedgames);
             fetch(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
                 let recentGames = res.split(";");
                 recentGames = recentGames.slice(1);
