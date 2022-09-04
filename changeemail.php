@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 }
 
 $password = htmlspecialchars($_GET["password"]);
-$newEmail = htmlspecialchars($_GET["username"]);
+$newEmail = htmlspecialchars($_GET["email"]);
 
 if ($password != null && $password != '') {
     if (!isset($_COOKIE['logintoken'])) {
@@ -29,6 +29,7 @@ if ($password != null && $password != '') {
                 if($userresult->num_rows == 0) {
                     //username is new
                     $conn->query("UPDATE accounts SET Email = '$newEmail' WHERE id = '$id'");
+                    $conn->query("UPDATE accounts SET Verified = false WHERE id = '$id'");
 
                     echo 'success';
                 } else {
@@ -104,7 +105,7 @@ if ($password != null && $password != '') {
             return;
         }
 
-        fetch(`changeemail.php?password=${password}&username=${username}`).then((response) => response.text()).then((res) => {
+        fetch(`changeemail.php?password=${password}&email=${email}`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 location.href = 'profile.php';
             } else {
