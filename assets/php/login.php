@@ -17,8 +17,9 @@
   if ($userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'")) {
     $row = $userresult -> fetch_row();
     $usersPass = $row[2];
+    $usersSalt = $row[10];
 
-    if (password_verify($pass, $usersPass)) {
+    if (password_verify($pass.$usersSalt, $usersPass)) {
 
       $data = array(
         'isLoggedIn' => 'true',
