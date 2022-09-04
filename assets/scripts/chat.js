@@ -213,13 +213,18 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
             messageinput.addEventListener("keyup", (event) => {
                 if (event.key === 'Enter') {
-                    if (lastMessage != null && getSecondsDiff(lastMessage, new Date()) < 2) {
-                        return swal('You cannot send a message more than once every 2 seconds. To remove this delay you need GamePass', { buttons: { cancel: 'Cancel', login: { text: 'Get Gamepass', value: "gamepass" } }, }).then((value) => {
-                            if (value == 'gamepass') {
-                                window.open('gamepass', '_self');
+                    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+                        if (res != 'true') {
+                            if (lastMessage != null && getSecondsDiff(lastMessage, new Date()) < 2) {
+                                return swal('You cannot send a message more than once every 2 seconds. To remove this delay you need GamePass', { buttons: { cancel: 'Cancel', login: { text: 'Get Gamepass', value: "gamepass" } }, }).then((value) => {
+                                    if (value == 'gamepass') {
+                                        window.open('gamepass', '_self');
+                                    }
+                                });
                             }
-                        });
-                    }
+                        }
+                    });
+                    
 
                     event.preventDefault();
                     messageinp = messageinput.value.replace("'", '"');
