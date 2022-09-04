@@ -3,7 +3,7 @@
 require_once('stripe-php-9.4.0/init.php');
 
 // This is your test secret API key.
-\Stripe\Stripe::setApiKey('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');
+\Stripe\Stripe::setApiKey('sk_test_51LbBGpBRp1VXv1XhXArK0hGPZrl9XdeuZR8pywqPFpQRpWt3Uy3WzTfH1aJEk062WyIxa207bWjaQhAlaHeP3JmV00XjD3Uorj');
 
 header('Content-Type: application/json');
 
@@ -24,7 +24,7 @@ try {
   $checkout_session = \Stripe\Checkout\Session::create([
     'customer' => $customer,
     'line_items' => [[
-      'price' => $prices->id,
+      'price' => $prices->data->id,
       'quantity' => 1,
     ]],
     'mode' => 'subscription',
