@@ -23,7 +23,7 @@
                 <h3>$4.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Paid each month</p>
                 </h3>
-                <form action="assets/gamepassapi/create-checkout-session.php" method="POST" id="monthlyForm">
+                <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="price_1LeP7HBRp1VXv1XhLgdpr5Fe" />
                 </form>
@@ -39,7 +39,7 @@
                 <h3>$3.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
                 </h3>
-                <form action="assets/gamepassapi/create-checkout-session.php" method="POST" id="annualForm">
+                <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="annualForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="price_1LeP6NBRp1VXv1XhUzs99z1w" />
                 </form>
@@ -143,7 +143,7 @@
                 <h3>$4.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Paid each month</p>
                 </h3>
-                <form action="assets/gamepassapi/create-checkout-session.php" method="POST" id="monthlyForm">
+                <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="price_1LeP7HBRp1VXv1XhLgdpr5Fe" />
                 </form>
@@ -159,7 +159,7 @@
                 <h3>$3.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
                 </h3>
-                <form action="assets/gamepassapi/create-checkout-session.php" method="POST" id="annualForm">
+                <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="annualForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
                     <input type="hidden" name="lookup_key" value="price_1LeP6NBRp1VXv1XhUzs99z1w" />
                 </form>
