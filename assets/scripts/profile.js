@@ -1,3 +1,5 @@
+// READY
+
 let username;
 let games;
 let highscores;
@@ -137,7 +139,7 @@ function createGameButton(game, pin) {
     let gameBtn = '';
 
     gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'" class="${classlist} all">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'class.php?class=${game}'" class="${classlist} all">
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
