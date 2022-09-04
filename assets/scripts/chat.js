@@ -198,7 +198,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     }
                 });
             } catch (err) {
-                console.log(err)
+                console.log(err);
 
                 joinChat.style.display = '';
             }
@@ -224,6 +224,8 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     event.preventDefault();
                     messageinp = messageinput.value.replace("'", '"');
                     messageinput.value = '';
+
+                    window.scrollTo(0, document.body.scrollHeight);
 
                     lastMessage = Date.now();
 
