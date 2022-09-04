@@ -21,7 +21,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="#8a8a8a"><path d="M38.4,21.68V16c-2.66,0-4.69-.71-6-2.09a8.9,8.9,0,0,1-2.13-5.64V7.86L24.9,7.73s0,.23,0,.54V30.8a5,5,0,1,1-3.24-5.61v-5.5a10.64,10.64,0,0,0-1.7-.14A10.36,10.36,0,1,0,30.32,29.91a10.56,10.56,0,0,0-.08-1.27V19.49A14.48,14.48,0,0,0,38.4,21.68Z"/></svg>
         </a>
 
-        <div class="nav-button"><a id="gp" href="">GAME <span style='font-weight: 900;'>PASS</span></a></div>
+        <div class="nav-button"><a id="gp" href="gamepass">GAME <span style='font-weight: 900;'>PASS</span></a></div>
 
         <a id="login" href="profile.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
