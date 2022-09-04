@@ -20,6 +20,7 @@
 
         <div class="accountoption">
             <p>Email: <span class="span" id="emailSpan">help@totallyscience.co</span></p>
+            <input onclick="location.href = 'changeemail.php'" type="image" src="assets/images/icons/edit.png">
         </div>
 
         <div class="accountoption">
