@@ -3,7 +3,7 @@
 require_once('stripe-php-9.4.0/init.php');
 
 // This is your test secret API key.
-\Stripe\Stripe::setApiKey('pk_live_51LbBGpBRp1VXv1XhMV53PKxcFZmYEBFij36bhjPWZSKGAs5dgQ3kVbjoPPZsOCj100BrmQY9oiXcsnzKlemw8NNg000koT5Dh5');
+\Stripe\Stripe::setApiKey('sk_test_51LbBGpBRp1VXv1XhXArK0hGPZrl9XdeuZR8pywqPFpQRpWt3Uy3WzTfH1aJEk062WyIxa207bWjaQhAlaHeP3JmV00XjD3Uorj');
 
 header('Content-Type: application/json');
 
