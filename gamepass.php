@@ -25,7 +25,7 @@
                 </h3>
                 <form action="gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
-                    <input type="hidden" name="lookup_key" value="prod_MN9QjimtOFDgbU" />
+                    <input type="hidden" name="lookup_key" value="gpmonthly" />
                 </form>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
                     <button type="" onclick="subscribe('monthlyForm')" class="btn">Subscribe</button>
@@ -145,7 +145,7 @@
                 </h3>
                 <form action="gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
-                    <input type="hidden" name="lookup_key" value="prod_MN9QjimtOFDgbU" />
+                    <input type="hidden" name="lookup_key" value="gpmonthly" />
                 </form>
                 <div style="display: flex; flex: 1; align-content: center; justify-content:center;margin-top:0;">
                     <button type="" onclick="subscribe('monthlyForm')" class="btn">Subscribe</button>
