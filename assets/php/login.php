@@ -19,7 +19,7 @@
     $usersPass = $row[2];
     $usersSalt = $row[10];
 
-    $password = "$pass.$usersSalt";
+    $password = $pass.$usersSalt;
 
     if (password_verify($password, $usersPass)) {
 
