@@ -349,7 +349,7 @@ function createGameButton(game, pin) {
         buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>"
     }
 
-    if (pin != "suggested") {
+    if (pin != "suggested" && pin != "pin") {
         classlist += ' all';
     }
 
