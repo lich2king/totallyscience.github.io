@@ -213,8 +213,8 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
             messageinput.addEventListener("keyup", (event) => {
                 if (event.key === 'Enter') {
-                    console.log(getSecondsDiff(lastMessage, Date.now()))
-                    if (getSecondsDiff(lastMessage, Date.now()) < 2) {
+                    console.log(getSecondsDiff(lastMessage, new Date))
+                    if (getSecondsDiff(lastMessage, new Date) < 2) {
                         return swal('You cannot send a message more than once every 2 seconds. To remove this delay you need GamePass', { buttons: { cancel: 'Cancel', login: { text: 'Get Gamepass', value: "gamepass" } }, }).then((value) => {
                             if (value == 'gamepass') {
                                 window.open('gamepass', '_self');
@@ -228,7 +228,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
                     window.scrollTo(0, document.body.scrollHeight);
 
-                    lastMessage = Date.now();
+                    lastMessage = new Date;
 
                     try {
                         fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {
