@@ -4,9 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/gamesnew.css?v3'>
-
-    <!--Ctrl + Alt + F (html in PHP formatting)         Ctrl+Alt+arrow (select multiple lines)-->
+    <link rel='stylesheet' href='assets/styles/classes.css?v3'>
 </head>
 
 <body>
@@ -57,7 +55,7 @@
     
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/gamesnew.js?v50"></script>
+    <script src="assets/scripts/classes.js?v50"></script>
 </body>
 
 </html>

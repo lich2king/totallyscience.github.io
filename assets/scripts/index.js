@@ -1,3 +1,5 @@
+// READY
+
 document.getElementById("gamesnav").classList.add("selected");
 
 // featured games slides code
@@ -47,7 +49,6 @@ let displayedGames = 0;
 let games;
 let sorted;
 let hasLoaded = false;
-
 let loggedIn = false;
 let gamepass = false;
 
@@ -59,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
         loadCookies()
-
     });
 });
 
@@ -80,7 +80,6 @@ async function loadCookies() {
             gamepass = true;
         }
     });
-
 
     //when done
     loadTopic();
@@ -104,15 +103,6 @@ function loadTopic() {
                 game.setAttribute('style', 'display:none')
             }
         });
-        /*let gamesWithTopic = {};
-
-        for (let game in sorted) {
-            if (sorted[game].tags.includes(selectedTopic)) {
-                gamesWithTopic[game] = sorted[game];
-            }
-        }
-
-        sorted = gamesWithTopic;*/
     } else {
         gamesDiv.innerHTML = '';
         displayGames();
@@ -131,8 +121,6 @@ async function displayGames() {
         let classlist = '';
         classlist = data.tags.join(' ');
 
-
-
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
 
@@ -148,7 +136,6 @@ async function displayGames() {
         } else {
             gameBtn = createGameButton(name);
         }
-
 
         gamesDiv.innerHTML += gameBtn;
     }
@@ -167,11 +154,7 @@ async function displayGames() {
 
     //only get recent and liked games if logged in
     if (loggedIn) {
-
-
         //all games are generated... now add the liked and recent tags to the games
-        const gameButtons = document.getElementsByClassName("all");
-
         fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
             var likedgames = JSON.parse(res);
 
@@ -179,27 +162,6 @@ async function displayGames() {
                 let recentGames = res.split(";");
                 recentGames = recentGames.slice(1);
                 const recentContainer = document.getElementById("recentContainer");
-
-                /*Array.from(gameButtons).forEach(game => {
-                    let liked = false;
-                    let recent = false;
-                    for (like in likedgames) {
-                        if (likedgames[like][0] == game.getAttribute("name")) {
-                            liked = true;
-                        }
-                    }
-                    for (let i = 0; i < recentGames.length; i++) {
-                        if (recentGames[i] == game.getAttribute("name")) {
-                            recent = true;
-                        }
-                    }
-                    if (liked) {
-                        game.classList.add('liked');
-                    }
-                    if (recent) {
-                        game.classList.add('recent');
-                    }
-                });*/
                 for (like in likedgames) {
                     if (document.getElementsByName(likedgames[like][0])) {
                         document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
@@ -230,7 +192,6 @@ searchBar.addEventListener('keyup', () => {
         return;
     }
 
-
     const gameButtons = document.getElementsByClassName("all");
 
     let gameShown = false;
@@ -250,26 +211,6 @@ searchBar.addEventListener('keyup', () => {
     } else {
         document.getElementById("noSearch").style.display = 'none';
     }
-
-
-    /*gamesDiv.innerHTML = '';
-    document.getElementById("noSearch").style.display = 'none';
-
-    let numGames = 0;
-    Object.keys(games).forEach((game) => {
-        if (numGames < maxGames) {
-            if (game.toUpperCase().includes(input)) {
-                if (games[game].tags.includes(selectedTopic) || selectedTopic == 'all') {
-                    const gameBtn = createGameButton(game);
-
-                    gamesDiv.innerHTML += gameBtn;
-                    numGames += 1
-                }
-            }
-        } else {
-            return;
-        }
-    });*/
     if (gamesDiv.innerHTML == '') {
         document.getElementById("noSearch").style.display = '';
     }
@@ -277,9 +218,7 @@ searchBar.addEventListener('keyup', () => {
 
 
 // Category buttons
-
 const buttons = document.querySelectorAll('.categoryButton');
-
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -290,7 +229,6 @@ buttons.forEach((button) => {
                 inline: "nearest"
             });
         }
-
 
         selectedTopic = e.target.name;
 
@@ -308,26 +246,25 @@ buttons.forEach((button) => {
         document.getElementById('searchBar').value = '';
 
         loadTopic();
-    })
-})
-
+    });
+});
 
 function suggestGames() {
     let pinnedGames = [];
     //check previously pinned games
     fetch(`assets/php/game_pin/getpinnedgames.php`).then((response) => response.text()).then((res) => {
-
         pinnedGames = res.split(";");
         let randomGames = [];
 
         for (let x = displayedGames; x < displayedGames + 3; x++) {
-            let randGame = randomProperty(games)
+            let randGame = randomProperty(games);
+
             while (randomGames.includes(randGame) || pinnedGames.includes(randGame) || games[randGame].tags.includes("gamepass")) {
-                randGame = randomProperty(games)
+                randGame = randomProperty(games);
             }
+
             randomGames.push(randGame);
         }
-
 
         //first pinned game is always going to be '' so length will always be atleast 1
         pinnedGames = pinnedGames.slice(1);
@@ -336,22 +273,24 @@ function suggestGames() {
         if (pinnedGames.length < 3) {
             let generateGames = 3 - pinnedGames.length;
             for (let i = 0; i < generateGames; i++) {
-                let randGame = randomProperty(games)
+                let randGame = randomProperty(games);
+
                 while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
-                    randGame = randomProperty(games)
+                    randGame = randomProperty(games);
                 }
+
                 pinnedGames.push(randGame);
             }
         }
-
-
 
         document.getElementById('scisuggests').innerHTML = '';
         for (let i = 0; i < 3; i++) {
             let game = randomGames[i];
             let gameBtn = createGameButton(game, "suggested");
+
             document.getElementById('scisuggests').innerHTML += gameBtn;
             game = pinnedGames[i];
+
             if (i <= totalPinned - 1) {
                 gameBtn = createGameButton(game, "pin");
             } else {
@@ -360,24 +299,6 @@ function suggestGames() {
 
             document.getElementById('scisuggests').innerHTML += gameBtn;
         }
-        // randomGames.forEach(function(game) {
-        //     const gameBtn = `
-        //             <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
-        //                 <div class="innerGameDiv">${game}</div>
-        //             </div>
-        //             `;
-
-        //     document.getElementById('scisuggests').innerHTML += gameBtn;
-        // })
-        // pinnedGames.forEach(function(game) {
-        //     const gameBtn = `
-        //             <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${encodeURIComponent(game)}'">
-        //                 <div class="innerGameDiv">${game}</div>
-        //             </div>
-        //             `;
-
-        //     document.getElementById('scisuggests').innerHTML += gameBtn;
-        // })
     });
 }
 
@@ -390,16 +311,14 @@ function changeToGif(ele) {
     const game = ele.getAttribute("name");
     const data = games[game];
 
-    if (data.gif != null)
-        ele.style = `background-image: url(${data.gif})`;
+    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
 }
 
 function noGif(ele) {
     const game = ele.getAttribute("name");
     const data = games[game];
 
-    if (data.gif != null)
-        ele.style = `background-image: url(${data.image})`;
+    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
 function createGameButton(game, pin) {
@@ -413,20 +332,17 @@ function createGameButton(game, pin) {
     const gameDate = new Date(data.date_added);
 
     let gameBtn = '';
-
     let buttons = '';
 
-    let onclick = `location.href = 'game.php?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game}'`;
     if (data.tags.includes("gamepass") && !gamepass) {
         buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
         onclick = "lockedGame()";
     }
 
-
     if (pin == "pin") {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>"
     }
-
 
     if (gameDate > weekAgo) {
         classlist += ' new';
@@ -436,7 +352,6 @@ function createGameButton(game, pin) {
     if (pin != "suggested") {
         classlist += ' all';
     }
-
 
     if (pin != "hidden") {
         gameBtn = `
@@ -454,9 +369,7 @@ function createGameButton(game, pin) {
         `;
     }
 
-
     return (gameBtn);
-
 }
 
 function lockedGame() {

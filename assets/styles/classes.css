@@ -1,23 +1,132 @@
+/* // READY */
+
 html {
-    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#scisuggests {
+    margin-top: 20vh;
+    margin-right: 3vw;
+    float: right;
+    width: 40vw;
+    height: 50vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+    padding: 10px;
+}
+
+#scisuggests img {
+    width: 13vw;
+    height: 13vh;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+#scisuggests img:hover {
+    transform: scale(1.05);
+}
+
+
+/*#endregion*/
+
+#info {
+    width: 100vw;
+    text-align: center;
+}
+
+#info p {
+    color: var(--light-color);
+    font-size: 1.5vw;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+/*#region categories + seach*/
+
+#searchcat {
+    z-index: 1;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: var(--background-color);
+    top: 60px;
+    /**/
+    margin-top: 80px;
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 10vh;
+    text-align: center;
+    /*Flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#firstcatrow {
+    width: 100vw;
+    height: 5vh;
+    /*Grid*/
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 1vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#nextcatrow {
+    margin-top: 2vh;
+    width: 91vw;
+    height: 5vh;
+    /*Flex*/
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* searchbar */
+
+input[type='text'] {
+    /**/
+    width: 20vw;
+    height: 100%;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 17px;
+    font-size: 16px;
+    background-color: var(--light-color);
+    outline: none;
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+    background-size: 1.25vw;
+    background-position: 10px calc(50%);
+    background-repeat: no-repeat;
+    padding: 1vh 1vw 1vh 2.2vw;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3%;
+    color: var(--dark-color);
 }
 
 
 /* category selection */
 
 .categoryButton {
+    height: 100%;
     border: none;
     color: var(--light-color);
-    padding: 8px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 2.5vw;
-    margin: 4px 2px;
+    font-size: 1.25vw;
     font-family: 'Rubik';
     cursor: pointer;
     background-color: var(--accent-color);
-    border-radius: 8px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    border-radius: 20px;
     transition: opacity 0.3s ease;
 }
 
@@ -25,150 +134,157 @@ html {
     font-size: 1.7vw;
 }
 
-@media (min-width: 1200px) {
+
+/*@media (min-width: 1200px) {
     .categoryButton {
-        font-size: 20pt;
+        font-size: 1.25vw;
     }
     .categoryButton span {
-        font-size: 17pt;
+        font-size: 1.7vw;
     }
-}
+}*/
 
 .selectedCategory {
     opacity: 1;
 }
 
 .unselectedCategory {
-    opacity: 0.4;
-}
-
-.categories {
-    text-align: center;
-    margin-top: 80px;
-}
-
-@media (max-width: 600px) {
-    .categories {
-        margin-top: 100px;
-    }
+    opacity: 0.45;
 }
 
 
-/* searchbar */
-
-input[type='text'] {
-    width: 15vw;
-    box-sizing: border-box;
-    border: 2px solid var(--dark-color);
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: var(--light-color);
-    outline: none;
-    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
-    background-size: 20px;
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    transition: width 0.4s ease-in-out;
-    margin-bottom: 3%;
-    color: var(--dark-color);
-}
-
-input[type='text']:focus {
-    width: 20vw;
-}
+/*#endregion*/
 
 
-/* games */
-
-#load-games {
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#load-games:hover {
-    color: var(--accent-color);
-}
+/*#region games*/
 
 #games {
-    margin-left: 50%;
-    transform: translate(-50%);
-    width: 37.5%;
-}
-
-#games button {
+    padding: 2%;
+    /* z-index: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 3vw;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10vh; */
     display: flex;
-    align-items: left;
-    justify-content: left;
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    /* 304 x 162  */
+}
+
+#gameDiv {
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#gameDiv input {
     width: 100%;
-    height: 15%;
-    text-align: left;
-    background-color: var(--accent-color);
-    border: 6px solid var(--accent-color);
-    border-radius: 10px;
-    margin-bottom: 15px;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv:hover {
     cursor: pointer;
-    border-left: 4px;
-    transition: 0.2s;
+    transform: scale(1.05);
 }
 
-#games button:hover {
-    transform: scale(1.02);
-    -moz-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
-    -webkit-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
-    box-shadow: 3px 3px 5px 3px var(--box-shadow-color);
+#gameDiv {
+    position: relative;
 }
 
-.new::after {
-    font-size: 2vw;
-    content: url(../images/bolt.svg);
-}
-
-#games button img {
-    border-radius: 10px;
-    height: 100px;
-    width: 30%;
-    max-width: 120px;
-    margin-right: 15px;
-}
-
-#games button div {
-    margin-top: 1.5%;
-    width: 100%;
-    margin-bottom: 2%;
-}
-
-#games button div p {
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-family: 'Rubik';
+    font-weight: 700;
     color: var(--light-color);
-    font-size: 2vw;
-    margin-bottom: 30px;
-    margin-top: 15px;
-    /* Not sure why but changing line height fixes text not being centered issue.*/
-    line-height: 6px;
-}
-
-#games button div p2 {
-    color: var(--light-color);
-    font-size: 13px;
-}
-
-.hideUnsorted {
+    opacity: 0;
     visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
 }
 
-#requestButton {
+#gameDiv:hover div {
+    visibility: visible;
+    opacity: 1;
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+
+
+/*#endregion*/
+
+h1 {
+    margin-top: 80px;
+    color: var(--light-color);
     text-align: center;
 }
 
-#requestButton button {
-    margin-bottom: 30px;
-    cursor: pointer;
-    background-color: var(--accent-color);
+#noSearch {
+    text-align: center;
+    margin-bottom: 10vh;
+    margin-top: -10vh;
+}
+
+#noSearch p {
     color: var(--light-color);
-    border: 2px;
-    border-radius: 10px;
-    font-family: 'Spline Sans', sans-serif;
-    font-size: 30px;
-    padding: 1%;
+    font-size: 1vw;
+    font-family: 'Rubik', sans-serif;
+}
+
+#gameDiv:hover>#gamelock {
+    opacity: 1;
+    top: -10%;
+}
+
+#gamelock {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#gamelock:hover {
+    transform: scale(1.05);
+}
+
+#gamelock img {
+    width: 80px;
+    height: 100px;
+}
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#newbanner img {
+    width: 80px;
+    height: 80px;
 }

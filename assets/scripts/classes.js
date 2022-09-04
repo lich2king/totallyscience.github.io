@@ -1,6 +1,6 @@
+// READY
+
 document.getElementById("gamesnav").classList.add("selected");
-
-
 
 // Load Games
 const gamesDiv = document.getElementById('games');
@@ -11,9 +11,7 @@ let displayedGames = 0;
 let games;
 let sorted;
 let hasLoaded = false;
-
 let customcategory = false;
-
 let loggedIn = false;
 let gamepass = false;
 
@@ -24,12 +22,11 @@ const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category');
 if (category != null) {
     selectedTopic = category;
+
     document.getElementById("topText").style.display = '';
     document.getElementById("topText").innerText = `${category.toUpperCase()} Games`;
-
     document.getElementsByName('all')[0].classList.add('unselectedCategory');
     document.getElementsByName('all')[0].classList.remove('selectedCategory');
-
     document.getElementById('searchcat').style.marginTop = "20px";
 
     customcategory = true;
@@ -45,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         games = retrievedGames;
 
         loadCookies();
-
     });
 });
 
@@ -66,7 +62,6 @@ async function loadCookies() {
             gamepass = true;
         }
     });
-
 
     //when done
     loadTopic();
@@ -92,21 +87,10 @@ async function loadTopic() {
                 game.setAttribute('style', 'display:none')
             }
         });
-        /*let gamesWithTopic = {};
-
-        for (let game in sorted) {
-            if (sorted[game].tags.includes(selectedTopic)) {
-                gamesWithTopic[game] = sorted[game];
-            }
-        }
-
-        sorted = gamesWithTopic;*/
     } else {
         gamesDiv.innerHTML = '';
         displayGames();
     }
-
-
 }
 
 
@@ -120,8 +104,6 @@ async function displayGames() {
 
         let classlist = '';
         classlist = data.tags.join(' ');
-
-
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
@@ -138,7 +120,6 @@ async function displayGames() {
         } else {
             gameBtn = createGameButton(name);
         }
-
 
         gamesDiv.innerHTML += gameBtn;
     }
@@ -183,9 +164,8 @@ async function displayGames() {
 }
 
 
-const searchBar = document.getElementById('searchBar')
+const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keyup', () => {
-
     scrollTo(0, 0);
 
     let input = (searchBar.value.toUpperCase()).split(' ').join('');;
@@ -194,7 +174,6 @@ searchBar.addEventListener('keyup', () => {
         loadTopic();
         return;
     }
-
 
     const gameButtons = document.getElementsByClassName("all");
 
@@ -215,26 +194,6 @@ searchBar.addEventListener('keyup', () => {
     } else {
         document.getElementById("noSearch").style.display = 'none';
     }
-
-
-    /*gamesDiv.innerHTML = '';
-    document.getElementById("noSearch").style.display = 'none';
-
-    let numGames = 0;
-    Object.keys(games).forEach((game) => {
-        if (numGames < maxGames) {
-            if (game.toUpperCase().includes(input)) {
-                if (games[game].tags.includes(selectedTopic) || selectedTopic == 'all') {
-                    const gameBtn = createGameButton(game);
-
-                    gamesDiv.innerHTML += gameBtn;
-                    numGames += 1
-                }
-            }
-        } else {
-            return;
-        }
-    });*/
     if (gamesDiv.innerHTML == '') {
         document.getElementById("noSearch").style.display = '';
     }
@@ -242,9 +201,7 @@ searchBar.addEventListener('keyup', () => {
 
 
 // Category buttons
-
 const buttons = document.querySelectorAll('.categoryButton');
-
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
 
@@ -281,16 +238,14 @@ function changeToGif(ele) {
     const game = ele.getAttribute("name");
     const data = games[game];
 
-    if (data.gif != null)
-        ele.style = `background-image: url(${data.gif})`;
+    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
 }
 
 function noGif(ele) {
     const game = ele.getAttribute("name");
     const data = games[game];
 
-    if (data.gif != null)
-        ele.style = `background-image: url(${data.image})`;
+    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
 function createGameButton(game, pin) {
@@ -307,27 +262,24 @@ function createGameButton(game, pin) {
 
     let buttons = '';
 
-    let onclick = `location.href = 'game.php?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game}'`;
     if (data.tags.includes("gamepass") && !gamepass) {
-        buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
+        buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>";
         onclick = "lockedGame()";
     }
 
-
     if (pin == "pin") {
-        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>"
+        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
     }
-
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>"
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
     }
 
     if (pin != "suggested") {
         classlist += ' all';
     }
-
 
     if (pin != "hidden") {
         gameBtn = `
@@ -345,9 +297,7 @@ function createGameButton(game, pin) {
         `;
     }
 
-
     return (gameBtn);
-
 }
 
 function lockedGame() {

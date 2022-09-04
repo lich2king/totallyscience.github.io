@@ -1,3 +1,5 @@
+// READY
+
 document.getElementById("gamesnav").classList.add("selected");
 
 //Load Game
@@ -13,7 +15,6 @@ const pinButtonImg = pinButton.firstChild;
 let likeCount = 0;
 let loggedIn = false;
 let verified = false;
-
 let games;
 
 window.addEventListener('load', () => {
@@ -39,7 +40,7 @@ window.addEventListener('load', () => {
             });
 
             //add to recent games list
-            fetch(`assets/php/recent_games/addgame.php?name=${gameName}`);
+            fetch(`assets/php/recent_games/addclass.php?name=${gameName}`);
         }
     });
 
@@ -56,7 +57,7 @@ window.addEventListener('load', () => {
     }).then((games) => {
         const gameData = games[gameName];
 
-        if (gameData == null) window.location.href = '../gamesnew.php';
+        if (gameData == null) window.location.href = '../classes.php';
 
         document.getElementById('description').innerText = gameData.description;
         document.getElementById('controls').innerText = gameData.controls;
@@ -96,12 +97,12 @@ likeButton.addEventListener('click', function() {
             if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
                 likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
                 likeCount += 1;
-                fetch(`assets/php/game_likes/likegame.php?name=${gameName}`);
+                fetch(`assets/php/game_likes/likeclass.php?name=${gameName}`);
                 UpdateLikeCount();
             } else {
                 likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
                 likeCount -= 1;
-                fetch(`assets/php/game_likes/unlikegame.php?name=${gameName}`);
+                fetch(`assets/php/game_likes/unlikeclass.php?name=${gameName}`);
                 UpdateLikeCount();
             }
         } else {
@@ -137,12 +138,12 @@ pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (verified) {
             if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-                fetch(`assets/php/game_pin/pingame.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                fetch(`assets/php/game_pin/pinclass.php?name=${gameName}`).then((response) => response.text()).then((res) => {
                     if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
                     else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
                 });
             } else {
-                fetch(`assets/php/game_pin/unpingame.php?name=${gameName}`);
+                fetch(`assets/php/game_pin/unpinclass.php?name=${gameName}`);
                 pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
             }
         } else {
@@ -248,7 +249,7 @@ function suggestGames() {
 
     randomGames.forEach(function(game) {
         const gameBtn = `
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'game.php?class=${game}'">
+            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]["image"]})" id="gameDiv" onclick="location.href = 'class.php?class=${game}'">
                 <div class="innerGameDiv">${game}</div>
             </div>
         `;
@@ -292,7 +293,7 @@ function isGamePassGame() {
         fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
             if (res != 'true') {
                 //they don't have gamepass, get them outta here!
-                window.location.href = '../gamesnew.php';
+                window.location.href = '../classes.php';
             }
         });
     }

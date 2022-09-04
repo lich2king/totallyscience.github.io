@@ -1,24 +1,23 @@
 <?php
-// READY
+  // READY
 
-include '../config.php';
+  include '../config.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-  
-// Check connection
-if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
-}
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $database);
+    
+  // Check connection
+  if ($conn->connect_error) {
+    die("connection failed"); //. $conn->connect_error);
+  }
 
-$gameName = htmlspecialchars($_GET["name"]);
+  $gameName = htmlspecialchars($_GET["name"]);
 
-$query = "SELECT score FROM `highscores` WHERE game='$gameName'";
-$result = mysqli_query($conn, $query);
-$result = ($result -> fetch_row())[0];
+  $query = "SELECT score FROM `highscores` WHERE game='$gameName'";
+  $result = mysqli_query($conn, $query);
+  $result = ($result -> fetch_row())[0];
 
-echo($result);
+  echo($result);
 
-$conn->close();
-
+  $conn->close();
 ?>

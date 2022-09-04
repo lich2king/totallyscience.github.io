@@ -44,7 +44,7 @@
         <div class="biccontainer">
             <div class="container" id="recentContainer">
             </div>
-            <div id="arrow" onclick="window.open('gamesnew.php?category=recent', '_self')">
+            <div id="arrow" onclick="window.open('classes.php?category=recent', '_self')">
                 <input type="image" src="assets/images/right-arrow.png" />
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="biccontainer">
             <div class="container" id="likedcontainer"></div>
 
-            <div id="arrow" onclick="window.open('gamesnew.php?category=liked', '_self')">
+            <div id="arrow" onclick="window.open('classes.php?category=liked', '_self')">
                 <input type="image" src="assets/images/right-arrow.png" />
             </div>
         </div>

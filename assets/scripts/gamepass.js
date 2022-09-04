@@ -1,3 +1,5 @@
+// READY
+
 function dropDownFaq(id) {
     //first set all answers to display none
     //then set the element with the id of 'id' to display show
