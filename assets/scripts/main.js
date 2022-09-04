@@ -71,3 +71,14 @@ window.addEventListener('load', () => {
         })
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    //if user has gamepass, hide gamePassAd element
+    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+        if (res == 'true') {
+            document.getElementById('gamePassAd').style = "display: none";
+        }
+    });
+});
