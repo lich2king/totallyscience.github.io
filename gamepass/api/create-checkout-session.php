@@ -25,6 +25,7 @@ try {
       'price' => $prices->data[0]->id,
       'quantity' => 1,
     ]],
+    'currency' => 'usd',
     'mode' => 'subscription',
     'success_url' => $YOUR_DOMAIN . '/gpsuccess.php?session_id={CHECKOUT_SESSION_ID}',
     'cancel_url' => $YOUR_DOMAIN . '/gamepass.php',
