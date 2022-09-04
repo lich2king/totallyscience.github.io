@@ -29,7 +29,6 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/leaderboard.js?v21"></script>
-    <script src="assets/scripts/main.js"></script>
 </body>
 
 </html>

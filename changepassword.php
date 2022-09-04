@@ -97,7 +97,6 @@ else if ($step == 3) {
 
     <p style="text-align: center; color: red;" id="errorText"></p>
     <p style="text-align: center;" id="back-login"><a href="login">back to login</a></p>
-    <script defer src="./assets/scripts/main.js?v14"></script>
 </body>
 
 

@@ -125,7 +125,6 @@
     </svg>
 
 
-    <script defer src="assets/scripts/main.js?v15"></script>
 
     <script>
         const queryString = window.location.search;

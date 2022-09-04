@@ -21,6 +21,5 @@
 
 
 <?php include "assets/includes/footer.php" ?>
-<script src="assets/scripts/main.js"></script>
 
 </html>
