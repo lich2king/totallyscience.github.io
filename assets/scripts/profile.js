@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Load liked games
-    fetch(`assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         let likedgames = JSON.parse(res);
         const likeContainer = document.getElementById("likedcontainer");
 

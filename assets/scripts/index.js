@@ -155,10 +155,10 @@ async function displayGames() {
     //only get recent and liked games if logged in
     if (loggedIn) {
         //all games are generated... now add the liked and recent tags to the games
-        fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+        fetch(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
             var likedgames = JSON.parse(res);
 
-            fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+            fetch(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
                 let recentGames = res.split(";");
                 recentGames = recentGames.slice(1);
                 const recentContainer = document.getElementById("recentContainer");
@@ -252,7 +252,7 @@ buttons.forEach((button) => {
 function suggestGames() {
     let pinnedGames = [];
     //check previously pinned games
-    fetch(`assets/php/game_pin/getpinnedgames.php`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/class_pin/getpinnedclasses.php`).then((response) => response.text()).then((res) => {
         pinnedGames = res.split(";");
         let randomGames = [];
 

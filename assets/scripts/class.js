@@ -30,12 +30,12 @@ window.addEventListener('load', () => {
             loggedIn = true;
 
             //check if user liked the game previously
-            fetch(`assets/php/game_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+            fetch(`assets/php/class_likes/checkuserliked.php?name=${gameName}`).then((response) => response.text()).then((res) => {
                 if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             });
 
             //check if user pinned the game previously
-            fetch(`assets/php/game_pin/checkpinned.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+            fetch(`assets/php/class_pin/checkpinned.php?name=${gameName}`).then((response) => response.text()).then((res) => {
                 if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
             });
 
@@ -74,13 +74,13 @@ window.addEventListener('load', () => {
     });
 
     //get like count
-    fetch(`assets/php/game_likes/getlikes.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/class_likes/getlikes.php?name=${gameName}`).then((response) => response.text()).then((res) => {
         likeCount = parseInt(res);
         UpdateLikeCount();
     });
 
     //get current highscore
-    fetch(`assets/php/game_likes/getclasshighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+    fetch(`assets/php/class_likes/getclasshighscore.php?name=${gameName}`).then((response) => response.text()).then((res) => {
         if (res != '') {
             const currentHighscore = numFormatter(res);
             document.getElementById('currentHighscore').innerText = currentHighscore;
@@ -97,12 +97,12 @@ likeButton.addEventListener('click', function() {
             if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
                 likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
                 likeCount += 1;
-                fetch(`assets/php/game_likes/likeclass.php?name=${gameName}`);
+                fetch(`assets/php/class_likes/likeclass.php?name=${gameName}`);
                 UpdateLikeCount();
             } else {
                 likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
                 likeCount -= 1;
-                fetch(`assets/php/game_likes/unlikeclass.php?name=${gameName}`);
+                fetch(`assets/php/class_likes/unlikeclass.php?name=${gameName}`);
                 UpdateLikeCount();
             }
         } else {
@@ -138,12 +138,12 @@ pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (verified) {
             if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-                fetch(`assets/php/game_pin/pinclass.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                fetch(`assets/php/class_pin/pinclass.php?name=${gameName}`).then((response) => response.text()).then((res) => {
                     if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
                     else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
                 });
             } else {
-                fetch(`assets/php/game_pin/unpinclass.php?name=${gameName}`);
+                fetch(`assets/php/class_pin/unpinclass.php?name=${gameName}`);
                 pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
             }
         } else {

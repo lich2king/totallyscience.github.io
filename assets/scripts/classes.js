@@ -141,7 +141,7 @@ async function displayGames() {
         //all games are generated... now add the liked and recent tags to the games
         const gameButtons = document.getElementsByClassName("all");
 
-        await fetch(`/assets/php/game_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+        await fetch(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
             var likedgames = JSON.parse(res);
 
             for (like in likedgames) {
@@ -150,7 +150,7 @@ async function displayGames() {
                 }
             }
         });
-        await fetch(`/assets/php/recent_games/recentgames.php`).then((response) => response.text()).then((res) => {
+        await fetch(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
             let recentGames = res.split(";");
             recentGames = recentGames.slice(1);
 
