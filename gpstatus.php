@@ -37,19 +37,19 @@
         {
             swal("Are you sure you want to Unsubscribe?", {buttons: {cancel: "Cancel", unsubscribe: { text: "Unsubscribe", value: "unsubscribe" }},}).then((value) => {
                 if (value == 'unsubscribe') {
-                    fetch(`gamepass/api/unsubscribe.php`).then((response) => response.text()).then((res) => {
+                    fetch(`assets/gamepassapi/unsubscribe.php`).then((response) => response.text()).then((res) => {
                         window.open("gpstatus.php", "_self");
                     });   
                 }
             });
         }   
 
-        fetch(`gamepass/misc/lastpay.php`).then((response) => response.text()).then((res) => {
+        fetch(`assets/gamepassmisc/lastpay.php`).then((response) => response.text()).then((res) => {
             console.log(res);
             document.getElementById("dateSpan").innerHTML = res;
         });
 
-        fetch(`gamepass/misc/renewtrue.php`).then((response) => response.text()).then((res) => {
+        fetch(`assets/gamepassmisc/renewtrue.php`).then((response) => response.text()).then((res) => {
             if(res == '0')
             {
                 document.getElementById("renewSpan").innerHTML = 'end';
@@ -62,7 +62,7 @@
         {
             swal("Are you sure you want to Renew your subscription?", {buttons: {cancel: "Cancel", renew: { text: "Renew", value: "renew" }},}).then((value) => {
                 if (value == 'renew') {
-                    fetch(`gamepass/api/renew.php`).then((response) => response.text()).then((res) => {
+                    fetch(`assets/gamepassapi/renew.php`).then((response) => response.text()).then((res) => {
                         window.open("gpstatus.php", "_self");
                     });                    
                 }

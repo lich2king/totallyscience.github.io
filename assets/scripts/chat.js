@@ -16,6 +16,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
         let users = [];
         let colors = [];
         let url;
+        let lastMessage;
 
         joinChat.children[0].value = localStorage.getItem('chatRoom');
         joinChat.children[2].addEventListener('click', () => {
@@ -202,11 +203,29 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                 joinChat.style.display = '';
             }
 
+            function getSecondsDiff(startDate, endDate) {
+                const msInSecond = 1000;
+                
+                return Math.round(
+                    Math.abs(endDate.getTime() - startDate.getTime()) / msInSecond,
+                );
+            }
+
             messageinput.addEventListener("keyup", (event) => {
                 if (event.key === 'Enter') {
+                    if (getSecondsDiff(lastMessage, Date.now()) < 2) {
+                        return swal('You cannot send a message more than once every 2 seconds. To remove this delay you need GamePass', { buttons: { cancel: 'Cancel', login: { text: 'Get Gamepass', value: "gamepass" } }, }).then((value) => {
+                            if (value == 'gamepass') {
+                                window.open('gamepass', '_self');
+                            }
+                        });
+                    }
+
                     event.preventDefault();
                     messageinp = messageinput.value.replace("'", '"');
                     messageinput.value = '';
+
+                    lastMessage = Date.now();
 
                     try {
                         fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {

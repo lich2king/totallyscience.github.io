@@ -1,14 +1,14 @@
 <?php
 // READY
 
-include '../../assets/php/config.php';
+include '../../php/config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
   
 // Check connection
 if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
+  die("connection failed");
 }
 
 if (!isset($_COOKIE['logintoken'])) {

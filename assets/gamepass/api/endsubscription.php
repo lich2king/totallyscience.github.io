@@ -1,7 +1,7 @@
 <?php
 // READY
 
-include '../../assets/php/config.php';
+include '../../php/config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 
-$query = "UPDATE `gamepass` SET `SubscriptionID`='$subscriptionID' WHERE CustomerID='$customer'";
+$query = "DELETE FROM `gamepass` WHERE CustomerID='$customer'";
 mysqli_query($conn, $query);
 
 
