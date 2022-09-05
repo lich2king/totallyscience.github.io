@@ -223,71 +223,70 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                 });
                             }
                         }
-                    });
-                    
 
-                    event.preventDefault();
-                    messageinp = messageinput.value.replace("'", '"');
-                    messageinput.value = '';
+                        event.preventDefault();
+                        messageinp = messageinput.value.replace("'", '"');
+                        messageinput.value = '';
 
-                    window.scrollTo(0, document.body.scrollHeight);
+                        window.scrollTo(0, document.body.scrollHeight);
 
-                    lastMessage = new Date();
+                        lastMessage = new Date();
 
-                    try {
-                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {
-                            let jsonRes;
-                            try {
-                                jsonRes = JSON.parse(res2);
-                            } catch (error) {
-                                if (error) {
-                                    return alert(res2)
+                        try {
+                            fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {
+                                let jsonRes;
+                                try {
+                                    jsonRes = JSON.parse(res2);
+                                } catch (error) {
+                                    if (error) {
+                                        return alert(res2)
+                                    }
                                 }
-                            }
 
-                            if (jsonRes) {
-                                //display chatroom id
-                                messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
-                                messageList.children[0].children[0].textContent = 'Room Code:';
+                                if (jsonRes) {
+                                    //display chatroom id
+                                    messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
+                                    messageList.children[0].children[0].textContent = 'Room Code:';
 
-                                //display messages
-                                jsonRes.reverse();
-                                for (msg in jsonRes) {
-                                    let curmsg = jsonRes[msg];
+                                    //display messages
+                                    jsonRes.reverse();
+                                    for (msg in jsonRes) {
+                                        let curmsg = jsonRes[msg];
 
-                                    if (curmsg[1] == 'Server') {
-                                        let foundUser = users.find(user => curmsg[2].startsWith(user));
+                                        if (curmsg[1] == 'Server') {
+                                            let foundUser = users.find(user => curmsg[2].startsWith(user));
 
-                                        if (foundUser) {
-                                            curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                            if (foundUser) {
+                                                curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                            } else {
+                                                users.push(curmsg[2].split(" ")[0]);
+                                                colors.push(randomColor());
+
+                                                curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
+                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                            }
+                                        } else if (users.includes(curmsg[1].trim())) {
+                                            curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
+                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                         } else {
-                                            users.push(curmsg[2].split(" ")[0]);
+                                            users.push(curmsg[1].trim());
                                             colors.push(randomColor());
 
-                                            curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                            curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
+                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
                                         }
-                                    } else if (users.includes(curmsg[1].trim())) {
-                                        curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                                    } else {
-                                        users.push(curmsg[1].trim());
-                                        colors.push(randomColor());
 
-                                        curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
-                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                        messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
                                     }
-
-                                    messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
+                                } else {
+                                    alert(res)
                                 }
-                            } else {
-                                alert(res)
-                            }
+                            });
+                        } catch (err) {
+                            console.log(err);
+                        }
                         });
-                    } catch (err) {
-                        console.log(err);
-                    }
                 }
             });
         }
