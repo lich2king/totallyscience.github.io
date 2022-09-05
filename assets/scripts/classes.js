@@ -1,37 +1,109 @@
-// Thank you stack overflow.
-let sortObject = (obj) =>
-    Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {})
+// READY
 
+document.getElementById("gamesnav").classList.add("selected");
 
+// Load Games
 const gamesDiv = document.getElementById('games');
-const maxGames = 10;
+const maxGames = 500;
 
 let selectedTopic = 'all';
 let displayedGames = 0;
 let games;
 let sorted;
 let hasLoaded = false;
+let customcategory = false;
+let loggedIn = false;
+let gamepass = false;
 
 
-function displayGames() {
-    for (let x = displayedGames; x < displayedGames + maxGames; x++) {
-        let keys = Object.keys(sorted);
 
-        if (keys.length <= 6) {
-            document.getElementById('load-games').style.display = 'none';
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const category = urlParams.get('category');
+if (category != null) {
+    selectedTopic = category;
 
-            if (x >= keys.length) {
-                continue;
+    document.getElementById("topText").style.display = '';
+    document.getElementById("topText").innerText = `${category.toUpperCase()} Games`;
+    document.getElementsByName('all')[0].classList.add('unselectedCategory');
+    document.getElementsByName('all')[0].classList.remove('selectedCategory');
+    document.getElementById('searchcat').style.marginTop = "20px";
+
+    customcategory = true;
+}
+
+
+let sortObject = (obj) =>
+    Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
+        games = retrievedGames;
+
+        loadCookies();
+    });
+});
+
+async function loadCookies() {
+    await fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
+        res = JSON.parse(res);
+        if (res != null) {
+            const isLoggedIn = res['isLoggedIn'];
+
+            if (isLoggedIn == 'true') {
+                loggedIn = true;
             }
-        } else if (x + 1 > keys.length) {
-            document.getElementById('load-games').style.display = 'none';
-            break;
         }
+    });
+
+    await fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+        if (res == 'true') {
+            gamepass = true;
+        }
+    });
+
+    //when done
+    loadTopic();
+}
+
+async function loadTopic() {
+    displayedGames = 0;
+
+    document.getElementById("noSearch").style.display = 'none';
+
+    sorted = sortObject(games);
+
+    if (selectedTopic != 'all') {
+        if (customcategory) { //solves the problem of doing the category parameter on url
+            await displayGames();
+        }
+        const gameButtons = document.getElementsByClassName("all");
+
+        Array.from(gameButtons).forEach(game => {
+            if (game.classList.contains(selectedTopic)) {
+                game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
+            } else {
+                game.setAttribute('style', 'display:none')
+            }
+        });
+    } else {
+        gamesDiv.innerHTML = '';
+        displayGames();
+    }
+}
+
+
+async function displayGames() {
+    for (let x = 0; x < Object.keys(sorted).length; x++) {
+
+        let keys = Object.keys(sorted);
 
         const name = keys[x];
         const data = sorted[keys[x]];
 
-        let classlist = data.tags.join(' ');
+        let classlist = '';
+        classlist = data.tags.join(' ');
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
@@ -42,67 +114,108 @@ function displayGames() {
             classlist += ' new';
         }
 
-
-        const gameBtn = `
-            <button onclick="location.href = 'class.html?class=${name}'" name="${name}" class="${classlist} gameButton all not-selectable">
-                <img src="${data.image}">
-
-                <div>
-                    <p>${name}</p>
-                    <p2>${data.description}</p2>
-                </div>
-            </button>
-        `;
+        let gameBtn;
+        if (customcategory) {
+            gameBtn = createGameButton(name, "hidden");
+        } else {
+            gameBtn = createGameButton(name);
+        }
 
         gamesDiv.innerHTML += gameBtn;
-
-        if (x + 1 == displayedGames + maxGames / 2) {
-            let adDiv = document.createElement('div');
-            adDiv.classList.add('adDiv');
-            let innerAdDiv = document.createElement("div");
-            adDiv.appendChild(innerAdDiv);
-            gamesDiv.appendChild(adDiv);
-
-
-            let adScript = document.createElement('script');
-            adScript.async = true;
-            adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210';
-            adScript.crossOrigin = 'anonymous';
-
-            let adIns = document.createElement('ins');
-            adIns.setAttribute('class', 'adsbygoogle');
-            adIns.setAttribute('style', 'display:inline-block;width:525px;height:105px');
-            adIns.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
-            adIns.setAttribute('data-ad-slot', '2075384482');
-
-            let adScriptEnd = document.createElement('script');
-            adScriptEnd.innerText = '(adsbygoogle = window.adsbygoogle || []).push({});';
-
-            innerAdDiv.insertAdjacentElement('afterend', adScript);
-            innerAdDiv.insertAdjacentElement('afterend', adIns);
-            innerAdDiv.insertAdjacentElement('afterend', adScriptEnd);
-        }
     }
-    displayedGames += maxGames;
-    
-    hasLoaded = false;
+
+
+    await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
+        let popularGames = JSON.parse(res);
+
+        for (let i = 0; i < 10; i++) {
+            if (document.getElementsByName(popularGames[i][0])) {
+                document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+                document.getElementsByName(popularGames[i][0])[0].innerHTML += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+            }
+        }
+    });
+
+    //only get recent and liked games if logged in
+    if (loggedIn) {
+        //all games are generated... now add the liked and recent tags to the games
+        const gameButtons = document.getElementsByClassName("all");
+
+        await fetch(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+            var likedgames = JSON.parse(res);
+
+            for (like in likedgames) {
+                if (document.getElementsByName(likedgames[like][0])) {
+                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                }
+            }
+        });
+        await fetch(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
+            let recentGames = res.split(";");
+            recentGames = recentGames.slice(1);
+
+            for (let i = 0; i < recentGames.length; i++) {
+                if (document.getElementsByName(recentGames[i]).length > 0) {
+                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
+                }
+            }
+        });
+    }
 }
 
 
-//game catagories
-//selected topic variable is used both in the button category changer and the search bar function
-const buttons = document.querySelectorAll('.categoryButton, #bolt');
+const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('keyup', () => {
+    scrollTo(0, 0);
 
-//buttons.appendChild(document.getElementById('bolt'))
-//add event listener to every element in the document with the class "categoryButton"
+    let input = (searchBar.value.toUpperCase()).split(' ').join('');;
+
+    if (input == '' || input == null) {
+        loadTopic();
+        return;
+    }
+
+    const gameButtons = document.getElementsByClassName("all");
+
+    let gameShown = false;
+    Array.from(gameButtons).forEach(game => {
+        var name = game.getAttribute("name").toUpperCase();
+        name = name.split(' ').join('');
+
+        if (name.includes(input) && game.classList.contains(selectedTopic)) {
+            game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`)
+            gameShown = true;
+        } else {
+            game.setAttribute('style', 'display:none')
+        }
+    });
+    if (!gameShown) {
+        document.getElementById("noSearch").style.display = '';
+    } else {
+        document.getElementById("noSearch").style.display = 'none';
+    }
+    if (gamesDiv.innerHTML == '') {
+        document.getElementById("noSearch").style.display = '';
+    }
+})
+
+
+// Category buttons
+const buttons = document.querySelectorAll('.categoryButton');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
 
-        if (e.target.id == 'bolt') {
-            selectedTopic = e.target.parentNode.parentNode.name;
-        } else {
-            selectedTopic = e.target.name;
+        if (customcategory) {
+            document.getElementById("topText").style.display = 'none';
+            document.getElementById('searchcat').style.marginTop = "80px";
+            customcategory = false;
         }
+
+        if (e.target.name != selectedTopic) {
+            window.scrollTo(0, 0);
+        }
+
+        selectedTopic = e.target.name;
 
         const buttons = document.querySelectorAll('.categoryButton');
 
@@ -112,13 +225,6 @@ buttons.forEach((button) => {
         })
 
         const selected = document.getElementsByName(selectedTopic)[0];
-        if (e.target.innerHTML == '⚡') {
-            selected.parentNode.classList.add('selectedCategory');
-            selected.parentNode.classList.remove('unselectedCategory');
-        } else {
-            selected.classList.add('selectedCategory');
-            selected.classList.remove('unselectedCategory');
-        }
         selected.classList.add('selectedCategory');
         selected.classList.remove('unselectedCategory');
 
@@ -128,150 +234,76 @@ buttons.forEach((button) => {
     })
 })
 
-const searchBar = document.getElementById('searchBar')
-searchBar.addEventListener('keyup', () => {
-    const input = searchBar.value.toUpperCase();
+function changeToGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
 
-    if (input == '' || input == null) {
-        loadTopic();
-        return;
+    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
+}
+
+function noGif(ele) {
+    const game = ele.getAttribute("name");
+    const data = games[game];
+
+    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
+}
+
+function createGameButton(game, pin) {
+    const data = games[game];
+
+    let classlist = data.tags.join(' ');
+
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+
+    const gameDate = new Date(data.date_added);
+
+    let gameBtn = '';
+
+    let buttons = '';
+
+    let onclick = `location.href = 'class.php?class=${game}'`;
+    if (data.tags.includes("gamepass") && !gamepass) {
+        buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>";
+        onclick = "lockedGame()";
     }
 
-    document.getElementById('load-games').style.display = 'none';
-    gamesDiv.innerHTML = '';
+    if (pin == "pin") {
+        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+    }
 
-    Object.keys(games).forEach((game) => {
-        if (game.toUpperCase().includes(input)) {
-            if (selectedTopic == 'all') {
-                const data = games[game];
-                const sectionLetter = game[0].toLowerCase();
-                let existingSection = document.getElementById(sectionLetter);
+    if (gameDate > weekAgo) {
+        classlist += ' new';
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
+    }
 
-                if (existingSection == null) {
-                    const section = document.createElement('section')
-                    section.id = sectionLetter
-                    gamesDiv.appendChild(section)
-                    existingSection = section
-                }
+    if (pin != "suggested") {
+        classlist += ' all';
+    }
 
-                const gameBtn = document.createElement('button')
-                gameBtn.game = game
-                gameBtn.classList = data.tags.join(' ')
-                const gameDate = new Date(data.date_added)
+    if (pin != "hidden") {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
+            ${buttons}
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    } else {
+        gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="${onclick}" class="${classlist}">
+            ${buttons}
+            <div class="innerGameDiv">${game}</div>
+        </div>
+        `;
+    }
 
-                const weekAgo = new Date();
-                weekAgo.setDate(weekAgo.getDate() - 7);
+    return (gameBtn);
+}
 
-                if (gameDate > weekAgo) {
-                    gameBtn.classList.add('new')
-                }
-                gameBtn.addEventListener('click', () => {
-                    window.location.href = `class.html?class=${game}`
-                })
-                gameBtn.classList.add('gameButton', 'all', 'not-selectable')
-
-                const gameImg = document.createElement('img')
-                gameImg.src = data.image
-                gameBtn.appendChild(gameImg)
-
-                const gameText = document.createElement('div')
-                const gameTitle = document.createElement('p')
-                gameTitle.innerText = game
-                gameText.appendChild(gameTitle)
-
-                const gameDesc = document.createElement('p2')
-                gameDesc.innerText = data.description
-                gameText.appendChild(gameDesc)
-
-                gameBtn.appendChild(gameText)
-                existingSection.appendChild(gameBtn)
-            } else if (games[game].tags.includes(selectedTopic)) {
-                const data = games[game];
-                const sectionLetter = game[0].toLowerCase();
-                let existingSection = document.getElementById(sectionLetter);
-
-                if (existingSection == null) {
-                    const section = document.createElement('section')
-                    section.id = sectionLetter
-                    gamesDiv.appendChild(section)
-                    existingSection = section
-                }
-
-                const gameBtn = document.createElement('button')
-                gameBtn.game = game
-                gameBtn.classList = data.tags.join(' ')
-                const gameDate = new Date(data.date_added)
-
-                const weekAgo = new Date();
-                weekAgo.setDate(weekAgo.getDate() - 7);
-
-                if (gameDate > weekAgo) {
-                    gameBtn.classList.add('new')
-                }
-                gameBtn.addEventListener('click', () => {
-                    window.location.href = `class.html?class=${game}`
-                })
-                gameBtn.classList.add('gameButton', 'all', 'not-selectable')
-
-                const gameImg = document.createElement('img')
-                gameImg.src = data.image
-                gameBtn.appendChild(gameImg)
-
-                const gameText = document.createElement('div')
-                const gameTitle = document.createElement('p')
-                gameTitle.innerText = game
-                gameText.appendChild(gameTitle)
-
-                const gameDesc = document.createElement('p2')
-                gameDesc.innerText = data.description
-                gameText.appendChild(gameDesc)
-
-                gameBtn.appendChild(gameText)
-                existingSection.appendChild(gameBtn)
-            }
+function lockedGame() {
+    swal("You must have Game Pass to play this game", { buttons: { cancel: "Cancel", gamepass: { text: "Game Pass", value: "gamepass" } }, }).then((value) => {
+        if (value == 'gamepass') {
+            window.open('gamepass.php', '_self');
         }
     });
-})
-
-window.addEventListener('scroll', () => {
-    let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-
-    if (window.scrollY + window.innerHeight >= _docHeight + -300 && hasLoaded == false) {
-        hasLoaded = true;
-        setTimeout(() => {
-            displayGames();
-        }, 5);
-    }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
-        games = retrievedGames;
-        loadTopic();
-    });
-
-
-    document.getElementById('searchBar').style.backgroundImage = `url(assets/images/magnifying-${localStorage.getItem("theme")}.svg)`;
-});
-
-function loadTopic() {
-    displayedGames = 0;
-    gamesDiv.innerHTML = '';
-    document.getElementById('load-games').style.display = '';
-
-    sorted = sortObject(games);
-
-    if (selectedTopic != 'all') {
-        let gamesWithTopic = {};
-
-        for (let game in sorted) {
-            if (sorted[game].tags.includes(selectedTopic)) {
-                gamesWithTopic[game] = sorted[game];
-            }
-        }
-
-        sorted = gamesWithTopic;
-    }
-
-    displayGames();
 }

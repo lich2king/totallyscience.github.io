@@ -1,0 +1,268 @@
+/* // READY */
+
+html {
+    overflow-x: hidden;
+}
+
+#nameheader {
+    margin-top: 80px;
+    text-align: center;
+    color: var(--light-color);
+    font-size: 1.5vw;
+    font-family: 'Rubik';
+}
+
+#accountoptions {
+    margin-top: 150px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountoption {
+    width: 100%;
+    display: flex;
+    gap: 1vw;
+    margin-left: 43%;
+}
+
+.accountoption input {
+    width: 1%;
+    height: 1%;
+}
+
+.accountoption p {
+    margin: 0%;
+    margin-bottom: 1.25vh;
+    color: var(--light-color);
+    font-weight: 900;
+    font-size: 1vw;
+    font-family: 'Rubik';
+}
+
+.accountoption p .span {
+    font-weight: 100;
+}
+
+#highscores {
+    margin-top: 12vh;
+}
+
+#highscores,
+#recents {
+    margin-left: 3vw;
+}
+
+#recents {
+    margin-top: 10vh;
+}
+
+.label {
+    font-size: 1.5vw;
+    font-family: 'Rubik';
+    color: var(--light-color);
+}
+
+.biccontainer {
+    height: 150px;
+    width: 100vw;
+    overflow-y: hidden;
+    display: flex;
+    flex: 1;
+    gap: 0;
+}
+
+.container {
+    width: 80vw;
+    height: 120px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 15px;
+    gap: 2vw;
+    margin-right: 4vw;
+    margin-bottom: 5vh;
+}
+
+.highcontainer {
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 15px;
+    gap: 2vw;
+    margin-right: 4vw;
+    margin-bottom: 5vh;
+}
+
+.highcontainer p {
+    color: var(--light-color);
+}
+
+.highscore {
+    background-color: #340060;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.highscore:hover {
+    transform: scale(1.05);
+}
+
+.highscore h1,
+.highscore p {
+    margin: 0;
+}
+
+.highscore img {
+    width: 70px;
+    margin-bottom: 1vh;
+}
+
+.highscore h1 {
+    font-size: 20px;
+    font-family: 'Rubik';
+    color: var(--light-color);
+    margin-bottom: 0.5vh;
+}
+
+.highscore p {
+    font-size: 20px;
+    font-family: 'Rubik';
+    color: var(--light-color);
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+
+#gameDiv {
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#arrow {
+    align-self: center;
+    min-width: 225px;
+    max-width: 225px;
+    max-height: 120px;
+    min-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+}
+
+#arrow input {
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 75px;
+    min-height: 75px;
+    border-radius: 30px;
+    transition: 0.1s;
+}
+
+#arrow input:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#gameDiv input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#gameDiv {
+    position: relative;
+}
+
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    color: var(--light-color);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+#gameDiv:hover div {
+    visibility: visible;
+    opacity: 1;
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+
+.logout {
+    color: red;
+    opacity: 0.9;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logout:hover {
+    opacity: 1;
+}
+
+
+/*Game pass lock icon on game*/
+
+#gameDiv:hover>button {
+    opacity: 1;
+    top: -10%;
+}
+
+#gamelock {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#gamelock:hover {
+    transform: scale(1.05);
+}
+
+#gamelock img {
+    width: 80px;
+    height: 100px;
+}

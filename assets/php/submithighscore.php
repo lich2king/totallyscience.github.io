@@ -1,71 +1,55 @@
 <?php
-$servername = "localhost";
-$username = "u483325885_user";
-$password = "Totally_password4321";
-$database = "u483325885_database";
+  // READY
 
-$data = json_decode(file_get_contents('php://input'), true);
+  include 'config.php';
 
-$user = $data['username'];
-$game = $data['gameName'];
-$score = $data['score'];
-$imageFile = $data['imageFile'];
+  $data = json_decode(file_get_contents('php://input'), true);
 
+  $user = $data['username'];
+  $game = $data['gameName'];
+  $score = $data['score'];
+  $imageFile = $data['imageFile'];
+  $uid = $data['uid'];
 
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $database);
+    
+  // Check connection
+  if ($conn->connect_error) {
+    die("connection failed"); //. $conn->connect_error);
+  }
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-  
-// Check connection
-if ($conn->connect_error) {
-  die("connection failed"); //. $conn->connect_error);
-}
+  $highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
 
-
-$highscoreresult = $conn->query("SELECT * FROM highscores WHERE game = '$game'");
-    //die($userresult);
-if($highscoreresult->num_rows == 0) {
+  if ($highscoreresult->num_rows == 0) {
     // row not found, do stuff...
     uploadHighscore();
-} else {
+  } else {
     // do other stuff...
 
     $row = $highscoreresult -> fetch_row();
     
     $prevScore = $row[1];
-    if((float)$score > (float)$prevScore)
-    {
+    if((float)$score > (float)$prevScore) {
         uploadHighscore();
-    }
-    else
-    {
+    } else {
       echo("*Score is not greater than current highscore");
     }
-}
-
-
-function uploadHighscore()
-{
-  global $game, $score, $user, $imageFile, $conn;
-  
-  $sql = "INSERT INTO highscore_requests (game, score, username, image)
-  VALUES ('$game', '$score', '$user', '$imageFile')";
-      
-  if ($conn->query($sql) === TRUE) {
-      echo ("Success, your score will be reviewed shortly");
-      //echo "New record created successfully";
-  } else {
-      //echo "Error: " . $sql . "<br>" . $conn->error;
-      //echo "Error";
   }
-}
 
+
+  function uploadHighscore() {
+    global $game, $score, $user, $imageFile, $uid, $conn;
     
+    $sql = "INSERT INTO highscore_requests (game, score, username, image, uid)
+    VALUES ('$game', '$score', '$user', '$imageFile', '$uid')";
+        
+    if ($conn->query($sql) === TRUE) {
+      echo ("Success, your score will be reviewed shortly");
+    } else {
+      echo ("Error");
+    }
+  }
 
-    
-
-
-   
-$conn->close();
-
+  $conn->close();
 ?>

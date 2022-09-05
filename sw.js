@@ -9,6 +9,12 @@ const URLS_TO_CACHE = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
+      await fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => response.json()).then((retrievedGames) => {
+        for (game in retrievedGames) {
+          URLS_TO_CACHE.push(retrievedGames[game].image.slice(1));
+        }
+      });
+
       const cache = await caches.open(CACHE_NAME + '_v' + OFFLINE_VERSION);
       // Setting {cache: 'reload'} in the new request will ensure that the
       // response isn't fulfilled from the HTTP cache; i.e., it will be from
@@ -49,7 +55,7 @@ self.addEventListener('fetch', (e) => {
   if (e.request.url.startsWith('https://pagead')) return;
   if (e.request.url.startsWith('https://www.googletag')) return;
 
-  if (e.request.url.startsWith('https://video-serve')) return;
+  if (e.request.url.startsWith('https://api.pushnami.com')) return;
   if (e.request.url.startsWith('https://o413355.ingest.sentry.io')) return;
 
   e.respondWith((async () => {

@@ -1,5 +1,6 @@
-// deprecate github domain
-//if (location.host.includes('github')) location.replace('https://tsmain.co'); 
+// READY
+
+if (location.host.includes('github')) location.replace('https://tsmain.co');
 
 // init user prefs
 if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
@@ -23,6 +24,15 @@ if (localStorage.getItem('disguise') == null) {
     } else if (localStorage.getItem('disguise') == 'canvas') {
         title.innerHTML = 'Dashboard';
         favicon.href = './assets/images/disguises/canvasicon.jpg';
+    } else if (localStorage.getItem('disguise') == 'g') {
+        title.innerHTML = 'Google';
+        favicon.href = './assets/images/disguises/googleicon.png';
+    } else if (localStorage.getItem('disguise') == 'calc') {
+        title.innerHTML = 'Calculator';
+        favicon.href = './assets/images/disguises/calculator.png';
+    } else if (localStorage.getItem('disguise') == 'wiki') {
+        title.innerHTML = 'Wikipedia';
+        favicon.href = './assets/images/disguises/wikipedia.png';
     }
 }
 
@@ -32,7 +42,7 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
-    window.open('/mobile/index.html', '_self')
+    //window.open('/mobile/index', '_self')
 }
 
 // panic button
@@ -46,7 +56,7 @@ window.addEventListener('load', () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
-    
+
     // scroll button
     const scrollButton = document.getElementById('scrollb');
 
@@ -60,4 +70,23 @@ window.addEventListener('load', () => {
             }
         })
     }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let gamepass = false;
+    //if user has gamepass, hide gamePassAd element
+    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+        if (res == 'true') {
+            gamepass = true;
+            document.getElementById('gamePassAd').style = "display: none";
+        } else {
+            //if domain is not totallyscience.co, make sure user has game pass
+            if (location.hostname != "totallyscience.co" && !(this.location.href.includes("gamepass")) && !(this.location.href.includes("signup")) && !(this.location.href.includes("login")) && !(this.location.href.includes("profile"))) {
+                this.location.href = "gamepass.php?gpdomain=1"
+            }
+        }
+    });
+
 });
