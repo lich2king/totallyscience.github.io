@@ -75,10 +75,16 @@ window.addEventListener('load', () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    let gamepass = false;
     //if user has gamepass, hide gamePassAd element
     fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
         if (res == 'true') {
+            gamepass = true;
             document.getElementById('gamePassAd').style = "display: none";
         }
     });
+    //if domain is not totallyscience.co, make sure user has game pass
+    if (location.hostname != "totallyscience.co" && gamepass == false) {
+        this.location.href = "gamepass.php?gpdomain=1"
+    }
 });
