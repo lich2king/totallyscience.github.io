@@ -50,7 +50,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=Learn%202To%20Fly', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Learn%20To%20Fly', '_self')" class="featureButton button">Play Now</button>
             </div>
         </div>
 
