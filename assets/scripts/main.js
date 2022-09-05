@@ -97,4 +97,8 @@ function hideAds() {
     for (var i = 0; i < ads.length; i++) {
         ads[i].setAttribute('style', 'display: none');
     }
+    const otherads = document.getElementsByClassName("ad-container");
+    for (var i = 0; i < otherads.length; i++) {
+        otherads[i].setAttribute('style', 'display: none');
+    }
 }
