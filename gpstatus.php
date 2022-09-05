@@ -23,11 +23,11 @@
         <br>
         <p>Enjoy your list of Private Links:</p>
         <ul>
-            <li><a href="https://actuallyhistory.com" target="_blank">ActuallyHistory.com</a></li>
-            <li><a href="https://actuallyhistory.com" target="_blank">MathPlace.com</a></li>
-            <li><a href="https://actuallyhistory.com" target="_blank">FunnyScience.org</a></li>
-            <li><a href="https://actuallyhistory.com" target="_blank">ActuallyHistory.com</a></li>
-            <li><a href="https://actuallyhistory.com" target="_blank">MathPlace.com</a></li>
+            <li><a href="https://actuallyspanish.com" target="_blank">ActuallySpanish.com</a></li>
+            <li><a href="https://actuallymath.com" target="_blank">ActuallyMath.com</a></li>
+            <li><a href="https://literallygeometry.com" target="_blank">LiterallyGeometry.com</a></li>
+            <li><a href="https://totallymath.org" target="_blank">TotallyMath.org</a></li>
+            <li><a href="https://totallyphysics.com" target="_blank">TotallyPhysics.com</a></li>
         </ul>
         <a class="unsubscribe" onclick="unsubscribe()" id="unsubscribe">Unsubscribe</a>
     </div>
