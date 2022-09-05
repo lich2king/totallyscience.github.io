@@ -81,10 +81,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if (res == 'true') {
             gamepass = true;
             document.getElementById('gamePassAd').style = "display: none";
+        } else {
+            //if domain is not totallyscience.co, make sure user has game pass
+            if (location.hostname != "totallyscience.co") {
+                this.location.href = "gamepass.php?gpdomain=1"
+            }
         }
     });
-    //if domain is not totallyscience.co, make sure user has game pass
-    if (location.hostname != "totallyscience.co" && gamepass == false) {
-        //this.location.href = "gamepass.php?gpdomain=1"
-    }
+
 });
