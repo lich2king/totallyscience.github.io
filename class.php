@@ -12,27 +12,17 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+        crossorigin="anonymous"></script>
+    <!-- NextToGameFrame -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210" data-ad-slot="3780993293"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     <div id="gameframe">
         <div class="game">
-            <script async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
-                crossorigin="anonymous"></script>
-            <!-- NextToGameFrame -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
             <iframe id="iframe" src=""></iframe>
-            <script async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
-                crossorigin="anonymous"></script>
-            <!-- NextToGameFrame -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
 
         <div class="options">
@@ -57,6 +47,14 @@
             </div>
         </div>
     </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+        crossorigin="anonymous"></script>
+    <!-- NextToGameFrame -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210" data-ad-slot="3780993293"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
     <div id="info">
         <div>
