@@ -16,6 +16,18 @@
 
     <div id="startcontent">
         <div id="feature">
+            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+                <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')" class="featureButton button">Play Now</button>
+            </div>
             <div style="background-image: url(./assets/images/featuredimg/smashkarts.jpg);" class="imageTest fade">
                 <div class="arrows">
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
@@ -39,18 +51,6 @@
                     </div>
                 </div>
                 <button onclick="window.open('class.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton button">Play Now</button>
-            </div>
-            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
-                </div>
-                <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')" class="featureButton button">Play Now</button>
             </div>
         </div>
 
