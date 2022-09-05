@@ -38,7 +38,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=Retro%20Bowl', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=smash%20karts', '_self')" class="featureButton button">Play Now</button>
             </div>
             <div style="background-image: url(./assets/images/featuredimg/learn2fly.jpg); display:none;" class="imageTest fade">
                 <div class="arrows">
@@ -50,7 +50,7 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=learn%202%20fly', '_self')" class="featureButton button">Play Now</button>
             </div>
         </div>
 
