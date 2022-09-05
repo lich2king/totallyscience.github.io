@@ -117,7 +117,7 @@ else if ($step == 3) {
 
             fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
-                document.getElementById('usertext').innerText = 'Confirmation Code From Email';
+                document.getElementById('usertext').innerText = 'Before resetting your password, type the confirmation code from your email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
                 document.getElementById('username').value = '';
                 document.getElementById('username').placeholder = '*****';
