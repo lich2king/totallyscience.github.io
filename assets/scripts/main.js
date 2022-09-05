@@ -117,7 +117,7 @@ function waitForElm(selector) {
 
 
 function hideAds() {
-    waitForElm('.adsbygoogle').then((elm) => {
+    /*waitForElm('.adsbygoogle').then((elm) => {
         const ads = document.getElementsByClassName("adsbygoogle");
         for (var i = 0; i < ads.length; i++) {
             ads[i].setAttribute('style', 'display: none');
@@ -136,5 +136,16 @@ function hideAds() {
                 moreAds[i].setAttribute('style', 'display: none');
             }
         }
-    });
+    });*/
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onload = function() {
+        callFunctionFromScript();
+    }
+    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+    script.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
+    script.async = true;
+
+    head.appendChild(script);
 }
