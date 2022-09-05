@@ -22,6 +22,9 @@ if ($password != null && $password != '') {
     if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'")) {
         $row = $userresult -> fetch_row();
         $usersPass = $row[2];
+        $usersSalt = $row[10];
+
+        $password = $password.$usersSalt;
 
         if (password_verify($password, $usersPass)) {
             if ($userresult = $conn->query("SELECT * FROM accounts WHERE Email = '$newEmail'"))
