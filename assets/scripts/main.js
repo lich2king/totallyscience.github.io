@@ -101,6 +101,10 @@ function hideAds() {
     for (var i = 0; i < otherads.length; i++) {
         otherads[i].setAttribute('style', 'display: none');
     }
-    if (document.getElementById('google-center-div') !== null)
-        document.getElementById('google-center-div').setAttribute('style', 'display: none');
+    const moreAds = document.querySelectorAll('google-center-div');
+    if (moreAds !== null) {
+        for (var i = 0; i < moreAds.length; i++) {
+            moreAds[i].setAttribute('style', 'display: none');
+        }
+    }
 }
