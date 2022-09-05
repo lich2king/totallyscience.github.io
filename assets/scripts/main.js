@@ -83,11 +83,8 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('gamePassAd').style = "display: none";
         } else {
             //if domain is not totallyscience.co, make sure user has game pass
-            if (location.hostname != "totallyscience.co") {
-                console.log(location.hostname);
-                console.log(this.location);
-                console.log(this.location.href.includes("math"));
-                //this.location.href = "gamepass.php?gpdomain=1"
+            if (location.hostname != "totallyscience.co" && !(this.location.href.includes("gamepass")) && !(this.location.href.includes("signup")) && !(this.location.href.includes("login")) && !(this.location.href.includes("profile"))) {
+                this.location.href = "gamepass.php?gpdomain=1"
             }
         }
     });
