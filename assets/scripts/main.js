@@ -84,7 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             //if domain is not totallyscience.co, make sure user has game pass
             if (location.hostname != "totallyscience.co") {
-                this.location.href = "gamepass.php?gpdomain=1"
+                console.log(location.hostname);
+                //this.location.href = "gamepass.php?gpdomain=1"
             }
         }
     });
