@@ -24,8 +24,17 @@ function dropDownFaq(id) {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const unsubscribed = urlParams.get('unsubscribe');
+const gpdomain = urlParams.get('gpdomain');
+
 if (unsubscribed == 1) {
     swal('You have successfully unsubscribed.');
+}
+if (gpdomain == 1) {
+    swal("This link is only accessible if you have Game Pass", { buttons: { login: { text: "Login", value: "login" }, gp: { text: "Game Pass", value: "gp" } }, }).then((value) => {
+        if (value == 'login') {
+            window.open('login', '_self');
+        }
+    });
 }
 
 let loggedIn = false;

@@ -46,7 +46,7 @@ else
     else
     {
       //redirect user to page to renew their subscription
-      header('Location: ../../gpstatus.php');
+      header('Location: ../../../gpstatus.php');
       exit;
     }
 }

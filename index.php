@@ -5,7 +5,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v8'>
+    <link rel='stylesheet' href='assets/styles/index.css?v9'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,30 +16,6 @@
 
     <div id="startcontent">
         <div id="feature">
-            <div style="background-image: url(./assets/images/retrobowlfeature.png);" class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">RETRO BOWL</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
-                </div>
-                <button onclick="window.open('class.php?class=Retro%20Bowl', '_self')" class="featureButton button">Play Now</button>
-            </div>
-            <div style="background-image: url(./assets/images/impossiblefeaturedimage.png); display:none;" class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">IMPOSSIBLE QUIZ</h1>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
-                </div>
-                <button onclick="window.open('class.php?class=The%20Impossible%20Quiz', '_self')" class="featureButton button">Play Now</button>
-            </div>
             <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
                 <div class="arrows">
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
@@ -51,6 +27,30 @@
                     </div>
                 </div>
                 <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')" class="featureButton button">Play Now</button>
+            </div>
+            <div style="background-image: url(./assets/images/featuredimg/smashkarts.jpg);" class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">SMASH KARTS</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+                <button onclick="window.open('class.php?class=Smash%20Karts', '_self')" class="featureButton button">Play Now</button>
+            </div>
+            <div style="background-image: url(./assets/images/featuredimg/learn2fly.jpg); display:none;" class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">LEARN 2 FLY</h1>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+                <button onclick="window.open('class.php?class=Learn%20To%20Fly', '_self')" class="featureButton button">Play Now</button>
             </div>
         </div>
 
@@ -104,73 +104,43 @@
 
     <div id="extraCategories">
         <div id="extraCategory" onclick="window.open('classes.php?category=stickman', '_self')">
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjDjKTvljf2ZWNwwFDGJbRwCvmbWL9xKghA&usqp=CAU" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/henrystickmin.png);"></div>
             <p>Henry Stickmin Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=fnaf', '_self')">
-            <div>
-                <img src="https://play-lh.googleusercontent.com/myJ2kwywsCRglKkZuHBq6Aku9PX7HB75v-8KbnTK9JOPU6z0hpD9xtvjiTGqrn-e4eI" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/fnaf.png);"></div>
             <p>Five Nights at Freddy's Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=fnf', '_self')">
-            <div>
-                <img src="https://i1.sndcdn.com/avatars-fKIWZo5CKgieiX3m-HeK5MA-t240x240.jpg" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/fnf.jpg);"></div>
             <p>Friday Night Funkin' Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=vex', '_self')">
-            <div>
-                <img src="https://files.gamezhero.com/game/de4/d2c/de4d2c1e1953443a/images/240/vex.jpg" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/vex.jpg);"></div>
             <p>Vex Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
-            <div>
-                <img src="https://lh3.googleusercontent.com/47RcwWXXnAimVJKSGsj-DKfIQKCwocry-TNO-m5G13eXEJM6NDoG6Y6uuhvzR7qehg" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/cars.png);"></div>
             <p>Car Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=multiplayer', '_self')">
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/444/444183.png" />
-            </div>
-            
+            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>  
             <p>Multiplayer Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=running', '_self')">
-            <div>
-                <img src="https://files.gamezhero.com/game/44d/e0a/44de0ad44e6a08ac/images/240/angrygranrunbrazil.jpg" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/running.jpg);"></div>
             <p>Running Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=puzzle', '_self')">
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5aL_3E5VL51rb9AcbFYYolnT_5Q6V-aura8bcQ0q9winWetUD2pFPpVxEh1_LqBpm-E&usqp=CAU" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/puzzle.jpg);"></div>
             <p>Puzzle Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=arcade', '_self')">
-            <div>
-                <img src="https://media.istockphoto.com/vectors/retro-80s-video-game-joystick-controller-vector-id165555994?k=20&m=165555994&s=170667a&w=0&h=BSWOQbVEcsYeZKKqzSNPUEOtBeLp0heVNqknBaJby9g=" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/arcade.jpg);"></div>
             <p>Arcade Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=clicker', '_self')">
-            <div>
-                <img src="https://clicker-games.com/images/home.png" />
-            </div>
-
+            <div style="background-image: url(assets/images/extracats/clicker.png);"></div>
             <p>Clicker Games</p>
         </div>
     </div>
