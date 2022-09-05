@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const gameScore = highscores[score][2];
                 const highscoreDiv = `
                     <div class="highscore">
-                        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/70434/trophy-clipart-xl.png">
+                        <img src="../images/icons/trophy.png">
                         <h1>${game}</h1>
                         <p>${numFormatter(gameScore)}</p>
                     </div>
