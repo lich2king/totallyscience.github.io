@@ -104,43 +104,43 @@
 
     <div id="extraCategories">
         <div id="extraCategory" onclick="window.open('classes.php?category=stickman', '_self')">
-            <div style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjDjKTvljf2ZWNwwFDGJbRwCvmbWL9xKghA&usqp=CAU);"></div>
+            <div style="background-image: url(assets/images/extracats/henrystickmin.png);"></div>
             <p>Henry Stickmin Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=fnaf', '_self')">
-            <div style="background-image: url(https://play-lh.googleusercontent.com/myJ2kwywsCRglKkZuHBq6Aku9PX7HB75v-8KbnTK9JOPU6z0hpD9xtvjiTGqrn-e4eI);"></div>
+            <div style="background-image: url(assets/images/extracats/fnaf.png);"></div>
             <p>Five Nights at Freddy's Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=fnf', '_self')">
-            <div style="background-image: url(https://i1.sndcdn.com/avatars-fKIWZo5CKgieiX3m-HeK5MA-t240x240.jpg);"></div>
+            <div style="background-image: url(assets/images/extracats/fnf.jpg);"></div>
             <p>Friday Night Funkin' Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=vex', '_self')">
-            <div style="background-image: url(https://files.gamezhero.com/game/de4/d2c/de4d2c1e1953443a/images/240/vex.jpg);"></div>
+            <div style="background-image: url(assets/images/extracats/vex.jpg);"></div>
             <p>Vex Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
-            <div style="background-image: url(https://lh3.googleusercontent.com/47RcwWXXnAimVJKSGsj-DKfIQKCwocry-TNO-m5G13eXEJM6NDoG6Y6uuhvzR7qehg);"></div>
+            <div style="background-image: url(assets/images/extracats/cars.png);"></div>
             <p>Car Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=multiplayer', '_self')">
-            <div style="background-image: url(https://cdn-icons-png.flaticon.com/512/444/444183.png);"></div>  
+            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>  
             <p>Multiplayer Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=running', '_self')">
-            <div style="background-image: url(https://files.gamezhero.com/game/44d/e0a/44de0ad44e6a08ac/images/240/angrygranrunbrazil.jpg);"></div>
+            <div style="background-image: url(assets/images/extracats/running.jpg);"></div>
             <p>Running Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=puzzle', '_self')">
-            <div style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5aL_3E5VL51rb9AcbFYYolnT_5Q6V-aura8bcQ0q9winWetUD2pFPpVxEh1_LqBpm-E&usqp=CAU);"></div>
+            <div style="background-image: url(assets/images/extracats/puzzle.jpg);"></div>
             <p>Puzzle Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=arcade', '_self')">
-            <div style="background-image: url(https://media.istockphoto.com/vectors/retro-80s-video-game-joystick-controller-vector-id165555994?k=20&m=165555994&s=170667a&w=0&h=BSWOQbVEcsYeZKKqzSNPUEOtBeLp0heVNqknBaJby9g=);"></div>
+            <div style="background-image: url(assets/images/extracats/arcade.jpg);"></div>
             <p>Arcade Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=clicker', '_self')">
-            <div style="background-image: url(https://clicker-games.com/images/home.png);"></div>
+            <div style="background-image: url(assets/images/extracats/clicker.png);"></div>
             <p>Clicker Games</p>
         </div>
     </div>
