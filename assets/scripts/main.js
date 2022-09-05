@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (location.hostname != "totallyscience.co") {
                 console.log(location.hostname);
                 console.log(this.location);
-                console.log(this.location.includes("math"));
+                console.log(this.location.href.includes("math"));
                 //this.location.href = "gamepass.php?gpdomain=1"
             }
         }
