@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (res == 'true') {
             gamepass = true;
             document.getElementById('gamePassAd').style = "display: none";
-            hideAds();
         } else {
+            showAds();
             //if domain is not totallyscience.co, make sure user has game pass
             if (location.hostname != "totallyscience.co" && !(this.location.href.includes("gamepass")) && !(this.location.href.includes("signup")) && !(this.location.href.includes("login")) && !(this.location.href.includes("profile"))) {
                 this.location.href = "gamepass.php?gpdomain=1"
@@ -94,49 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function waitForElm(selector) {
-    return new Promise(resolve => {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-
-        const observer = new MutationObserver(mutations => {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    });
-}
-
-
-
-function hideAds() {
-    /*waitForElm('.adsbygoogle').then((elm) => {
-        const ads = document.getElementsByClassName("adsbygoogle");
-        for (var i = 0; i < ads.length; i++) {
-            ads[i].setAttribute('style', 'display: none');
-        }
-    });
-    waitForElm('ad-container').then((elm) => {
-        const ads = document.getElementsByClassName("ad-container");
-        for (var i = 0; i < ads.length; i++) {
-            ads[i].setAttribute('style', 'display: none');
-        }
-    });
-    waitForElm('#google-center-div').then((elm) => {
-        const moreAds = document.querySelectorAll('#google-center-div');
-        if (moreAds !== null) {
-            for (var i = 0; i < moreAds.length; i++) {
-                moreAds[i].setAttribute('style', 'display: none');
-            }
-        }
-    });*/
+function showAds() {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
