@@ -44,12 +44,12 @@
             });
         }   
 
-        fetch(`assets/gamepassmisc/lastpay.php`).then((response) => response.text()).then((res) => {
+        fetch(`assets/gamepass/misc/lastpay.php`).then((response) => response.text()).then((res) => {
             console.log(res);
             document.getElementById("dateSpan").innerHTML = res;
         });
 
-        fetch(`assets/gamepassmisc/renewtrue.php`).then((response) => response.text()).then((res) => {
+        fetch(`assets/gamepass/misc/renewtrue.php`).then((response) => response.text()).then((res) => {
             if(res == '0')
             {
                 document.getElementById("renewSpan").innerHTML = 'end';
@@ -62,7 +62,7 @@
         {
             swal("Are you sure you want to Renew your subscription?", {buttons: {cancel: "Cancel", renew: { text: "Renew", value: "renew" }},}).then((value) => {
                 if (value == 'renew') {
-                    fetch(`assets/gamepassapi/renew.php`).then((response) => response.text()).then((res) => {
+                    fetch(`assets/gamepass/api/renew.php`).then((response) => response.text()).then((res) => {
                         window.open("gpstatus.php", "_self");
                     });                    
                 }
