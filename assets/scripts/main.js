@@ -97,5 +97,4 @@ function hideAds() {
     for (var i = 0; i < ads.length; i++) {
         ads[i].setAttribute('style', 'display: none');
     }
-    console.log("her");
 }
