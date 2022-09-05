@@ -15,6 +15,7 @@ const pinButtonImg = pinButton.firstChild;
 let likeCount = 0;
 let loggedIn = false;
 let verified = false;
+let gamePass = false;
 let games;
 
 window.addEventListener('load', () => {
@@ -47,6 +48,12 @@ window.addEventListener('load', () => {
     fetch(`assets/php/verified.php`).then((response) => response.text()).then((res) => {
         if (res == '1') {
             verified = true;
+        }
+    });
+
+    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
+        if (res == 'true') {
+            gamePass = true;
         }
     });
 
@@ -186,17 +193,26 @@ function noGif(ele) {
 }
 
 document.getElementById("fullscreen").addEventListener('click', () => {
-    var elem = document.getElementById("iframe");
+    if (gamePass) {
+        var elem = document.getElementById("iframe");
 
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } else {
+        swal("You must have Game Pass to go fullscreen", { buttons: { cancel: "Cancel", gp: { text: "Game Pass", value: "gp" } }, }).then((value) => {
+            if (value == 'gp') {
+                window.open('gamepass', '_self');
+            }
+        });
     }
+
 });
 
 document.addEventListener('DOMContentLoaded', () => {
