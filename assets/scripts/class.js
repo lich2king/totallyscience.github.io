@@ -93,8 +93,6 @@ window.addEventListener('load', () => {
             document.getElementById('currentHighscore').innerText = currentHighscore;
         } else document.getElementById('currentHighscore').innerText = '0';
     });
-
-    addGameData(); //increment game views by 1
 });
 
 //Like Button
@@ -220,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         games = retrievedGames;
         isGamePassGame();
         suggestGames();
+        addGameData(); //increment game views by 1
     });
 });
 
