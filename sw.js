@@ -4,6 +4,9 @@ const CACHE_NAME = "ts_cache";
 const URLS_TO_CACHE = [
     //logo
     '/assets/images/logo.png',
+    '/assets/images/featuredimg/learn2fly.jpg',
+    '/assets/images/featuredimg/smashkarts.jpg',
+    '/assets/images/basketballstarsfeature.jpeg'
 ];
 
 self.addEventListener("install", (event) => {
