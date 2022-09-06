@@ -83,6 +83,11 @@ async function GetUser() {
             username = res["username"];
             uid = res["id"];
         } else {
+            swal("You must login to submit a highscore", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
+                if (value == 'login') {
+                    window.open('signup.php', '_self');
+                }
+            });
             username = "";
         }
     });
