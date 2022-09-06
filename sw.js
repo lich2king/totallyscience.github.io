@@ -1,5 +1,5 @@
 // SERVICE WORKER HAS TO BE IN MAIN DIRECTORY
-const OFFLINE_VERSION = 2;
+const OFFLINE_VERSION = 3;
 const CACHE_NAME = "ts_cache";
 const URLS_TO_CACHE = [
     //logo
