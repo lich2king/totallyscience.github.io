@@ -52,7 +52,7 @@ fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((r
     }
 });
 
-fetch(`assets/php/verified.php`).then((response) => response.text()).then((res) => {
+fetch(`../assets/php/verified.php`).then((response) => response.text()).then((res) => {
     if (res == '1') {
         verified = true;
     }
