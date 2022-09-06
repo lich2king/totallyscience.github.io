@@ -3,6 +3,7 @@
 let imageFile = '';
 let username = '';
 let uid = '';
+let loggedIn = false;
 
 window.addEventListener('load', function() {
     document.querySelector('input[type="file"]').addEventListener('change', function() {
@@ -37,41 +38,49 @@ window.addEventListener('load', function() {
 
 
 async function SubmitHighscore() {
-    const gameName = document.getElementById('gamesSelect').value
-    const score = document.getElementById('scoreText').value
-    document.getElementById('errorText').style.color = "red";
+    if (loggedIn) {
+        const gameName = document.getElementById('gamesSelect').value
+        const score = document.getElementById('scoreText').value
+        document.getElementById('errorText').style.color = "red";
 
-    if (username == '') {
-        document.getElementById('errorText').innerHTML = "*You must <a href='./signup'>sign up</a> to submit a highscore";
-    } else if (gameName == '') {
-        document.getElementById('errorText').innerText = "*You must choose the game";
-    } else if (score == '') {
-        document.getElementById('errorText').innerText = "*You must state your score";
-    } else if (imageFile == '' || document.getElementById("fileUpload").files.length < 1) {
-        document.getElementById('errorText').innerText = "*You must upload a screen shot of your score";
-    } else if (isNaN(score)) {
-        document.getElementById('errorText').innerText = "*The score must be a number";
-    } else {
-        document.getElementById('errorText').innerText = "";
+        if (username == '') {
+            document.getElementById('errorText').innerHTML = "*You must <a href='./signup'>sign up</a> to submit a highscore";
+        } else if (gameName == '') {
+            document.getElementById('errorText').innerText = "*You must choose the game";
+        } else if (score == '') {
+            document.getElementById('errorText').innerText = "*You must state your score";
+        } else if (imageFile == '' || document.getElementById("fileUpload").files.length < 1) {
+            document.getElementById('errorText').innerText = "*You must upload a screen shot of your score";
+        } else if (isNaN(score)) {
+            document.getElementById('errorText').innerText = "*The score must be a number";
+        } else {
+            document.getElementById('errorText').innerText = "";
 
-        let data = {
-            username,
-            gameName,
-            score,
-            imageFile,
-            uid
-        }
-        data = JSON.stringify(data);
-
-        result = await fetch('./assets/php/submithighscore.php', {
-            method: 'POST',
-            body: data
-        }).then((response) => response.text()).then((res) => {
-            if (res.toLowerCase().includes('success')) {
-                document.getElementById('errorText').style.color = "green";
+            let data = {
+                username,
+                gameName,
+                score,
+                imageFile,
+                uid
             }
-            console.log(res);
-            document.getElementById('errorText').innerHTML = res;
+            data = JSON.stringify(data);
+
+            result = await fetch('./assets/php/submithighscore.php', {
+                method: 'POST',
+                body: data
+            }).then((response) => response.text()).then((res) => {
+                if (res.toLowerCase().includes('success')) {
+                    document.getElementById('errorText').style.color = "green";
+                }
+                console.log(res);
+                document.getElementById('errorText').innerHTML = res;
+            });
+        }
+    } else {
+        swal("You must login to submit a highscore", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
+            if (value == 'login') {
+                window.open('signup.php', '_self');
+            }
         });
     }
 }
@@ -79,13 +88,11 @@ async function SubmitHighscore() {
 async function GetUser() {
     await fetch(`./assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
         if (res != "null") {
+            loggedIn = true;
             res = JSON.parse(res);;
             username = res["username"];
             uid = res["id"];
         } else {
-            swal("You must login to submit a highscore", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
-                window.open('signup.php', '_self');
-            });
             username = "";
         }
     });
