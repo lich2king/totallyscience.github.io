@@ -7,7 +7,7 @@ require_once('stripe-php-9.4.0/init.php');
 
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'http://mathstudyplace.com/gamepass.php';
+$YOUR_DOMAIN = 'http://totallyscience.co/gamepass.php';
 
 try {
   if (!isset($_COOKIE['logintoken'])) {

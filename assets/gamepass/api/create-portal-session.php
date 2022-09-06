@@ -6,7 +6,7 @@ require_once('stripe-php-9.4.0/init.php');
 
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'http://mathstudyplace.com/gamepass/success.php';
+$YOUR_DOMAIN = 'http://totallyscience.co/gamepass/success.php';
 
 try {
   $checkout_session = \Stripe\Checkout\Session::retrieve($_POST['session_id']);
