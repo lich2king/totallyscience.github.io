@@ -38,6 +38,8 @@ if (gpdomain == 1) {
 }
 
 let loggedIn = false;
+let verified = false;
+
 
 fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
     res = JSON.parse(res);
@@ -50,9 +52,23 @@ fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((r
     }
 });
 
+fetch(`assets/php/verified.php`).then((response) => response.text()).then((res) => {
+    if (res == '1') {
+        verified = true;
+    }
+});
+
 function subscribe(form) {
     if (loggedIn) {
-        document.forms[form].submit();
+        if (verified) {
+            document.forms[form].submit();
+        } else {
+            swal("You must verify your email before purchasing Game Pass", { buttons: { cancel: "Cancel", verify: { text: "Verify", value: "verify" } }, }).then((value) => {
+                if (value == 'verify') {
+                    window.open('verify', '_self');
+                }
+            });
+        }
     } else {
         swal("You must sign up before purchasing Game Pass", { buttons: { cancel: "Cancel", signup: { text: "Signup", value: "signup" } }, }).then((value) => {
             if (value == 'signup') {
