@@ -106,7 +106,7 @@ function noGif(ele) {
 
 function logout() {
     fetch(`assets/php/logout.php`).then(() => {
-        location.href = 'login.php';
+        location.href = 'login';
     });
 }
 
@@ -139,7 +139,7 @@ function createGameButton(game, pin) {
     let gameBtn = '';
 
     gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'class.php?class=${game}'" class="${classlist} all">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist} all">
             <div class="innerGameDiv">${game}</div>
         </div>
         `;
@@ -150,6 +150,6 @@ function createGameButton(game, pin) {
 function cookieLoaded() {
     if (gamePass == 'true') {
         document.getElementById('membership').innerHTML = 'GAMEPASS';
-        document.getElementById('membershiplink').setAttribute('onclick', "location.href = 'gpstatus.php'");
+        document.getElementById('membershiplink').setAttribute('onclick', "location.href = 'gpstatus'");
     }
 }

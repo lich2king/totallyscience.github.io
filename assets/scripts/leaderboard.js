@@ -23,7 +23,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
             const name = highscores[score][1];
             const gameScore = highscores[score][2];
             const highscoreDiv = `
-                <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game}'">
+                <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
                     <div class="text">
                         <h1>${game}</h1>
 
@@ -50,7 +50,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
                 if (game == gameName) highscored = true;
             }
             if (highscored) {
-                document.getElementsByName(`${gameName}`)[0].scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+                document.getElementsByName(`${gameName}`)[0].scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
             } else {
                 document.getElementById("nohighscore").style.display = '';
                 document.getElementById("nohighscore").innerText = `No current highscore set for ${gameName}`;
@@ -62,7 +62,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
 //search bar
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keyup', () => {
-    document.getElementById('top').scrollIntoView({block: "start", inline: "nearest"});
+    document.getElementById('top').scrollIntoView({ block: "start", inline: "nearest" });
 
     const input = searchBar.value.toUpperCase();
     const highscoreDivs = document.getElementsByClassName("highscore");

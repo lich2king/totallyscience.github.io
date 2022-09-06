@@ -344,7 +344,7 @@ function createGameButton(game, pin) {
     let gameBtn = '';
     let buttons = '';
 
-    let onclick = `location.href = 'class.php?class=${game}'`;
+    let onclick = `location.href = 'class?class=${game}'`;
     if (data.tags.includes("gamepass") && !gamepass) {
         buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
         onclick = "lockedGame()";
@@ -385,7 +385,7 @@ function createGameButton(game, pin) {
 function lockedGame() {
     swal("You must have Game Pass to play this game", { buttons: { cancel: "Cancel", gamepass: { text: "Game Pass", value: "gamepass" } }, }).then((value) => {
         if (value == 'gamepass') {
-            window.open('gamepass.php', '_self');
+            window.open('gamepass', '_self');
         }
     });
 }

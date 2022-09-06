@@ -56,7 +56,7 @@ function subscribe(form) {
     } else {
         swal("You must sign up before purchasing Game Pass", { buttons: { cancel: "Cancel", signup: { text: "Signup", value: "signup" } }, }).then((value) => {
             if (value == 'signup') {
-                window.open('signup.php', '_self');
+                window.open('signup', '_self');
             }
         });
     }

@@ -14,7 +14,7 @@
 
     <div>
         <h1>GAME <span>PASS</span></h1>
-        <button onclick="location.href = 'gamepass.php'">Get It Now</button>
+        <button onclick="location.href = 'gamepass'">Get It Now</button>
     </div>
 
     <div>
@@ -58,8 +58,8 @@
         <div class="footSection">
             <h1>Legal</h1>
 
-            <p><a href="termsofuse.php">Terms of Use</a></p>
-            <p><a href="privacypolicy.php">Privacy Policy</a></p>
+            <p><a href="termsofuse">Terms of Use</a></p>
+            <p><a href="privacypolicy">Privacy Policy</a></p>
         </div>
     </div>
 

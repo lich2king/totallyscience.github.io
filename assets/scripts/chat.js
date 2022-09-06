@@ -205,7 +205,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
 
             function getSecondsDiff(startDate, endDate) {
                 const msInSecond = 1000;
-                
+
                 return Math.round(
                     Math.abs(endDate.getTime() - startDate.getTime()) / msInSecond,
                 );
@@ -286,7 +286,7 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                         } catch (err) {
                             console.log(err);
                         }
-                        });
+                    });
                 }
             });
         }
