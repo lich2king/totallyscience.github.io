@@ -6,7 +6,8 @@ const URLS_TO_CACHE = [
     '/assets/images/logo.png',
     '/assets/images/featuredimg/learn2fly.jpg',
     '/assets/images/featuredimg/smashkarts.jpg',
-    '/assets/images/basketballstarsfeature.jpeg'
+    '/assets/images/basketballstarsfeature.jpeg',
+    '/assets/images/icons/loading.gif'
 ];
 
 self.addEventListener("install", (event) => {
