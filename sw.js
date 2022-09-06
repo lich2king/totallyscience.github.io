@@ -59,7 +59,7 @@ self.addEventListener('fetch', (e) => {
   if (e.request.url.startsWith('https://pagead')) return;
   if (e.request.url.startsWith('https://www.googletag')) return;
   if (e.request.url.startsWith('https://static.cloudflare')) return;
-  if (e.request.url.startsWith('https://google-analytics.com')) return;
+  if (e.request.url.startsWith('https://www.google-analytics.com')) return;
 
   if (e.request.url.startsWith('https://api.pushnami.com')) return;
   if (e.request.url.startsWith('https://trc.pushnami.com')) return;
