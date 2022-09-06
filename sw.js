@@ -58,8 +58,12 @@ self.addEventListener("activate", (event) => {
 self.addEventListener('fetch', (e) => {
   if (e.request.url.startsWith('https://pagead')) return;
   if (e.request.url.startsWith('https://www.googletag')) return;
+  if (e.request.url.startsWith('https://static.cloudflare')) return;
+  if (e.request.url.startsWith('https://google-analytics.com')) return;
 
   if (e.request.url.startsWith('https://api.pushnami.com')) return;
+  if (e.request.url.startsWith('https://trc.pushnami.com')) return;
+  if (e.request.url.startsWith('https://psp.pushnami.com')) return;
   if (e.request.url.startsWith('https://o413355.ingest.sentry.io')) return;
 
   e.respondWith((async () => {
