@@ -8,8 +8,8 @@
 
     <div>
         <img
-            src="assets/images/icons/save.png" />
-        <p>Save Games</p>
+            src="assets/images/icons/fullscreen.png" />
+        <p>Fullscreen</p>
     </div>
 
     <div>
