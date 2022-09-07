@@ -127,7 +127,27 @@ else if ($step == 3) {
         }
     });
 
+    function getSecondsDiff(startDate, endDate) {
+        const msInSecond = 1000;
+
+        return Math.round(
+            Math.abs(endDate.getTime() - startDate.getTime()) / msInSecond,
+        );
+    }
+
     function sendEmailConfirm() {
+        let lastChanged = localStorage.getItem('lastChanged');
+        if (lastChanged) {
+            let lastChanged = (JSON.stringify(lastChanged));
+
+            if (getSecondsDiff(lastMessage, new Date()) < 60 * 3) {
+                errorText.innerText = 'please wait before sending another email';
+                return;
+            }
+        }
+
+        localStorage.setItem('lastChanged' JSON.stringify(new Date()))
+
         username = document.getElementById('username').value;
         const errorText = document.getElementById('errorText');
 
