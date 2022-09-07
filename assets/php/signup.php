@@ -42,20 +42,7 @@
   }
   else {
     $sql = "INSERT INTO accounts (Username, Email, Password, GradYear, PwSalt) VALUES ('$user', '$email', '$pass', '$grad', '$salt')";
-      
-    if ($conn->query($sql) === TRUE) {
-      $from = "help@totallyscience.co";
-      $subject = "Totally Science Confirmation Code";
-      $code = rand(10000,99999);
-      $message = "Your confirmation code is " . $code;
-      $headers = "From:" . $from;
-
-      $conn->query("UPDATE accounts SET code = '$code' WHERE Username = '$user'");
-  
-      if (mail($email, $subject, $message, $headers)) {
-        echo "Success";
-      };
-    }
+    echo "Success";
       
     $conn->close();
   }
