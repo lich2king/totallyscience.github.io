@@ -143,6 +143,8 @@ else if ($step == 3) {
                 document.getElementById('username').value = '';
                 document.getElementById('username').placeholder = '*****';
                 localStorage.setItem('tempusername', username);
+            } else {
+                console.log(res);
             }
         });
     }
