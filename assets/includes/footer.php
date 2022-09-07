@@ -1,6 +1,6 @@
 <!-- // READY -->
 
-<div id="gamePassAd">
+<div id="gamePassAd" style="display:none;">
     <div>
         <img src="assets/images/icons/lock.png" />
         <p>More Games</p>

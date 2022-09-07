@@ -95,6 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function showAds() {
+    document.getElementById('gamePassAd').setAttribute('style', 'display:');
+
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
