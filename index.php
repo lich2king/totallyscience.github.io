@@ -54,9 +54,17 @@
             </div>
         </div>
 
-        <div id="scisuggests"></div>
+        <div id="scisuggests">
+            <div style="background-image: url(./assets/images/icons/preload.gif)" id="gameDiv"></div>
+            <div style="background-image: url(./assets/images/icons/preload.gif)" id="gameDiv"></div>
+            <div style="background-image: url(./assets/images/icons/preload.gif)" id="gameDiv"></div>
+            <div style="background-image: url(./assets/images/icons/preload.gif)" id="gameDiv"></div>
+            <div style="background-image: url(./assets/images/icons/preload.gif)" id="gameDiv"></div>
+            <div style="background-image: url(./assets/images/icons/preload.gif)" id="gameDiv"></div>
+        </div>
     </div>
 
+    
 
     <div id="info">
         <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
