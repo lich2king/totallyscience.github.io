@@ -24,7 +24,7 @@
     gtag('config', 'G-Y14RZLW8H8');
 </script>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 (function(document, window){
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -36,7 +36,7 @@
     };
     document.getElementsByTagName("head")[0].appendChild(script);
 })(document, window);
-</script>
+</script>-->
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
