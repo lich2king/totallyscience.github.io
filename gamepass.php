@@ -14,14 +14,15 @@
 
     <div class="gamepass-header">
         <h1>GAME <span style="color: var(--accent-color)">PASS</span></h1>
+        <h1>BACK TO SCHOOL DISCOUNT <span style="color: var(--accent-color)">40% OFF</span></h1>
     </div>
 
     <div class="product-container">
         <div class="p-view">
             <div class="c-item">
                 <h1>Monthly</h1>
-                <h3>$4.99 <span>/ month</span>
-                    <p style="font-weight:lighter; padding:0; margin-top:0;">Paid each month</p>
+                <h3><span style="text-decoration: line-through">$4.99</span> $2.99 <span>/ month</span>
+                    <p style="font-weight:lighter; padding:0; margin-top:0;">Paid monthly</p>
                 </h3>
                 <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
@@ -36,8 +37,8 @@
         <div class="p-view">
             <div class="c-item">
                 <h1>Annual</h1>
-                <h3>$3.99 <span>/ month</span>
-                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
+                <h3><span style="text-decoration: line-through">$3.99</span> $1.99 <span>/ month</span>
+                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $28.69</p>
                 </h3>
                 <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="annualForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
@@ -140,7 +141,7 @@
         <div class="p-view">
             <div class="c-item">
                 <h1>Monthly</h1>
-                <h3>$4.99 <span>/ month</span>
+                <h3><span style="text-decoration: line-through">$4.99</span> $2.99 <span>/ month</span>
                     <p style="font-weight:lighter; padding:0; margin-top:0;">Paid each month</p>
                 </h3>
                 <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="monthlyForm">
@@ -156,8 +157,8 @@
         <div class="p-view">
             <div class="c-item">
                 <h1>Annual</h1>
-                <h3>$3.99 <span>/ month</span>
-                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $47.88</p>
+                <h3><span style="text-decoration: line-through">$3.99</span> $1.99 <span>/ month</span>
+                    <p style="font-weight:lighter; padding:0; margin-top:0;">Billed yearly as $28.69</p>
                 </h3>
                 <form action="assets/gamepass/api/create-checkout-session.php" method="POST" id="annualForm">
                     <!-- Add a hidden field with the lookup_key of your Price -->
