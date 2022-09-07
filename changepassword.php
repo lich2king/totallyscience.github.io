@@ -96,7 +96,7 @@ else if ($step == 3) {
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;" id="back-login"><a href="login">back to login</a></p>
+    <p style="text-align: center;" id="back-login"><a href="login">Back to login</a></p>
 </body>
 
 
@@ -189,7 +189,7 @@ else if ($step == 3) {
             if (res.startsWith('success')) {
                 location.href = 'profile.php';
             } else {
-                errorText.innerText = 'error changing password';
+                errorText.innerText = 'Error changing password';
                 location.reload();
             }
         });

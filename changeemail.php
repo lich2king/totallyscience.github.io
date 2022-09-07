@@ -37,12 +37,12 @@ if ($password != null && $password != '') {
                     echo 'success';
                 } else {
                     //username is already taken
-                    die('email is already in use');
+                    die('Email is already in use');
                 }
             }
         }
         else {
-            die("invalid password");
+            die("Invalid password");
         }
     }
     else {
