@@ -127,14 +127,6 @@ else if ($step == 3) {
         }
     });
 
-    function getSecondsDiff(startDate, endDate) {
-        const msInSecond = 1000;
-
-        return Math.round(
-            Math.abs(endDate.getTime() - startDate.getTime()) / msInSecond,
-        );
-    }
-
     function sendEmailConfirm() {
         let lastChanged = localStorage.getItem('lastChanged');
         if (lastChanged) {
@@ -165,6 +157,14 @@ else if ($step == 3) {
                 localStorage.setItem('tempusername', username);
             }
         });
+    }
+
+    function getSecondsDiff(startDate, endDate) {
+        const msInSecond = 1000;
+
+        return Math.round(
+            Math.abs(endDate.getTime() - startDate.getTime()) / msInSecond,
+        );
     }
 
     function submitConfirmCode() {
