@@ -14,7 +14,7 @@ const pinButtonImg = pinButton.firstChild;
 
 let likeCount = 0;
 let loggedIn = false;
-let verified = false;
+let verified = true;
 let gamePass = false;
 let games;
 
