@@ -8,10 +8,9 @@
 
     <link rel='stylesheet' href='assets/styles/game.css?v10'>
     <style>
-        #ad {
-            width: 10vw;
-            height: 75vh;
-            overflow: hidden;
+        .ad {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
