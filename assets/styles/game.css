@@ -26,11 +26,6 @@ html {
     overflow: hidden;
 }
 
-#outsiddeadcontainer {
-    background-color: aqua;
-    text-align: center;
-}
-
 #gameframe .gameDisplay {
     margin: auto;
     width: 70vw;
