@@ -15,7 +15,7 @@
 
     <div id="gameframe">
         <div class="ad">
-            <div id="adsrc">
+            <!--<div id="adsrc">
                 <script async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
                     crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-            </div>
+            </div>-->
             <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:100vh; border: none;"
                 src=""></iframe>
         </div>
