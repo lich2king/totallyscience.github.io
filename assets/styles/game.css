@@ -28,12 +28,7 @@ html {
 
 #outsideadcontainer {
     background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50vw;
-    height: 10vh;
-    overflow: hidden;
+    text-align: center;
 }
 
 #gameframe .gameDisplay {
