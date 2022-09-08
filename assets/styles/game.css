@@ -19,6 +19,11 @@ html {
     margin-right: 2vw;
 }
 
+#adframe {
+    height: 100%;
+    width: 100%;
+}
+
 #gameframe .gameDisplay {
     margin: auto;
     width: 70vw;
