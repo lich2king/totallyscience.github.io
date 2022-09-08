@@ -25,8 +25,8 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <iframe class="adframe" scrolling="no" style="width:10vw; height:100vh; border: none;"
-                src="https://p.actuallyhistory.com/index#aHR0cHM6Ly90b3RhbGx5c2NpZW5jZS5jby9hZHRlc3QucGhw"></iframe>
+            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:100vh; border: none;"
+                src=""></iframe>
         </div>
 
         <div class="gameDisplay">
@@ -69,7 +69,7 @@
             </script>
         </div>
     </div>
-    <iframe style="width:100vw; height:40vh; border: none;" src="https://totallyscience.co/adtest.php"></iframe>
+    <iframe style="display:none; width:100vw; height:40vh; border: none;" src=""></iframe>
     <!--<div id="outsiddeadcontainer">
         
     </div>
