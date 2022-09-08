@@ -12,7 +12,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+    
     <div id="gameframe">
         <div class="ad">
             <!--<script async
@@ -66,6 +66,7 @@
             </script>
         </div>
     </div>
+    <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
 
     <div id="info">
         <div>
