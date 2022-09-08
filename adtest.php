@@ -7,7 +7,15 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/game.css?v10'>
-    
+    <style>
+        #ad {
+            width: 10vw;
+            height: 75vh;
+            overflow: hidden;
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+    </style>
 </head>
 
 <body>
