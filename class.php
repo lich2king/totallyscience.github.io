@@ -66,7 +66,10 @@
             </script>
         </div>
     </div>
-    <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+    <div align="center">
+        <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+    </div>
+    
 
     <div id="info">
         <div>
