@@ -315,7 +315,7 @@ function loadAds() {
         let adFrames = document.getElementsByClassName("adframe");
         for (let i = 0; i < adFrames.length; i++) {
             adFrames[i].style.display = '';
-            adFrames[i].src = `https://p.' + ${window.location.host} + '/index#' + ${btoa("https://totallyscience.co/adtest.php")}`
+            adFrames[i].src = `https://p.${window.location.host}/index#${btoa("https://totallyscience.co/adtest.php")}`
         }
     }
 }
