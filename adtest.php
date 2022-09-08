@@ -12,8 +12,6 @@
             width: 10vw;
             height: 75vh;
             overflow: hidden;
-            margin-left: 2vw;
-            margin-right: 2vw;
         }
     </style>
 </head>
