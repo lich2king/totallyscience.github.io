@@ -313,7 +313,7 @@ function loadAds() {
     if (location.hostname != "totallyscience.co") {
         let adDivs = document.getElementsByClassName("adsrc");
         for (let i = 0; i < adDivs.length; i++) {
-            adDivs[i].style.display = '';
+            adDivs[i].style.display = 'none';
         }
         let adFrames = document.getElementsByClassName("adframe");
         for (let i = 0; i < adFrames.length; i++) {
