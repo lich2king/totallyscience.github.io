@@ -22,10 +22,10 @@
                 data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>-->
-            
+            </script>-->    
+            <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
         </div>
-        <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+        
         <div class="gameDisplay">
             <div class="game">
                 <iframe id="iframe" src=""></iframe>
