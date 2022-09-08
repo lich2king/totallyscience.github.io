@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/game.css?v16'>
+    <link rel='stylesheet' href='assets/styles/game.css?v17'>
 </head>
 
 <body>
@@ -66,7 +66,7 @@
             </script>
         </div>
     </div>
-    <div id="outsideadcontainer">
+    <div id="outsiddeadcontainer">
         <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
     </div>
     
