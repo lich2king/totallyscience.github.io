@@ -72,7 +72,7 @@
                 src=""></iframe>
         </div>
     </div>
-    <iframe style="display:none; width:100vw; height:40vh; border: none;" src=""></iframe>
+    <iframe class="adframe" style="display:none; width:100vw; height:40vh; border: none;" src=""></iframe>
     <!--<div id="outsiddeadcontainer">
         
     </div>
