@@ -23,7 +23,7 @@
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script> -->
-            <iframe id="" style="width:15vw; height:100vh; border: none;" src="https://p.totallyscience.co/index#btoa(https://totallyscience.co/adtest.php)"></iframe>
+            <iframe id="" style="width:15vw; height:100vh; border: none;" src="https://p.totallyscience.co/index#aHR0cHM6Ly90b3RhbGx5c2NpZW5jZS5jby9hZHRlc3QucGhw"></iframe>
         </div>
         
         <div class="gameDisplay">
