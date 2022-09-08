@@ -69,7 +69,7 @@
     <div id="outsiddeadcontainer">
         
     </div>
-    <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+    <iframe id="adframe" scrolling="no" src="https://totallyscience.co/adtest.php"></iframe>
     
 
     <div id="info">
