@@ -25,7 +25,7 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:100vh; border: none;"
+            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:50vh; border: none;"
                 src=""></iframe>
         </div>
 
@@ -68,7 +68,7 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:100vh; border: none;"
+            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:50vh; border: none;"
                 src=""></iframe>
         </div>
     </div>
