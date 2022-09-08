@@ -9,9 +9,7 @@
     <link rel='stylesheet' href='assets/styles/game.css?v10'>
     <style>
         .ad {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align:center;
             width: 100%;
             height: 100%;
         }
