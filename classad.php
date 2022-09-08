@@ -14,7 +14,9 @@
 
     
     <div id="gameframe">
-        <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+        <div class="ad">
+            <iframe id="adframe" src="https://totallyscience.co/adtest.php"></iframe>
+        </div>
         <div class="gameDisplay">
             <div class="game">
                 <iframe id="iframe" src=""></iframe>
