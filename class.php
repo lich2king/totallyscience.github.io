@@ -66,7 +66,7 @@
             </script>
         </div>
     </div>
-    <iframe style="width:100vw; height:40vh;" src="https://totallyscience.co/adtest.php"></iframe>
+    <iframe style="width:100vw; height:40vh; border: none;" src="https://totallyscience.co/adtest.php"></iframe>
     <!--<div id="outsiddeadcontainer">
         
     </div>
