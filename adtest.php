@@ -10,9 +10,6 @@
 </head>
 
 <body>
-    <?php include "assets/includes/navbar.php" ?>
-
-
     <script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
                 crossorigin="anonymous"></script>
@@ -24,10 +21,7 @@
     </script>
 
 
-    <?php include "assets/includes/footer.php" ?>
-
-
-    <script src="assets/scripts/class.js?v60"></script>
+    <script src="assets/scripts/main.js?v23"></script>
 </body>
 
 </html>
