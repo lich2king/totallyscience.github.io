@@ -24,6 +24,8 @@ html {
     width: 100%;
     border: none;
     overflow: hidden;
+    min-width: fit-content;
+    min-height: fit-content;
 }
 
 #gameframe .gameDisplay {
