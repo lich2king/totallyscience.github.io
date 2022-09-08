@@ -191,24 +191,16 @@ function noGif(ele) {
 }
 
 document.getElementById("fullscreen").addEventListener('click', () => {
-    if (gamePass) {
-        var elem = document.getElementById("iframe");
+    var elem = document.getElementById("iframe");
 
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-    } else {
-        swal("You must have Game Pass to go fullscreen", { buttons: { cancel: "Cancel", gp: { text: "Game Pass", value: "gp" } }, }).then((value) => {
-            if (value == 'gp') {
-                window.open('gamepass', '_self');
-            }
-        });
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
     }
 
 });
