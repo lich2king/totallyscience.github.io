@@ -15,7 +15,7 @@
 
     <div id="gameframe">
         <div class="ad">
-            <!--<div id="adsrc">
+            <!--<div class="adsrc">
                 <script async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
                     crossorigin="anonymous"></script>
@@ -58,7 +58,7 @@
         </div>
 
         <div class="ad">
-            <div id="adsrc">
+            <div class="adsrc">
                 <script async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
                     crossorigin="anonymous"></script>

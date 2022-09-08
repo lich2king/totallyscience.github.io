@@ -311,7 +311,10 @@ function isGamePassGame() {
 
 function loadAds() {
     if (location.hostname != "totallyscience.co") {
-        document.getElementById("adsrc").setAttribute("style", "display:none");
+        let adDivs = document.getElementsByClassName("adsrc");
+        for (let i = 0; i < adDivs.length; i++) {
+            adDivs[i].style.display = '';
+        }
         let adFrames = document.getElementsByClassName("adframe");
         for (let i = 0; i < adFrames.length; i++) {
             adFrames[i].style.display = '';
