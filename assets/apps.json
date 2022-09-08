@@ -57,5 +57,11 @@
         "date_added": "2022-02-25T23:48:32.617Z",
         "type": "proxy",
         "iframe_url": "https://github.com/"
+    },
+    "Ad Test": {
+        "image": "assets/apps/icons/github.svg",
+        "date_added": "2022-02-25T23:48:32.617Z",
+        "type": "proxy",
+        "iframe_url": "https://totallyscience.co/adtest.php"
     }
 }
