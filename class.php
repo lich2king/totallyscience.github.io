@@ -12,20 +12,23 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    
+
     <div id="gameframe">
         <div class="ad">
-            <!--<script async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
-                crossorigin="anonymous"></script>
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script> -->
-            <iframe id="" scrolling="no" style="width:10vw; height:100vh; border: none;" src="https://p.actuallyhistory.com/index#aHR0cHM6Ly90b3RhbGx5c2NpZW5jZS5jby9hZHRlc3QucGhw"></iframe>
+            <div id="adsrc">
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                    data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <iframe class="adframe" scrolling="no" style="width:10vw; height:100vh; border: none;"
+                src="https://p.actuallyhistory.com/index#aHR0cHM6Ly90b3RhbGx5c2NpZW5jZS5jby9hZHRlc3QucGhw"></iframe>
         </div>
-        
+
         <div class="gameDisplay">
             <div class="game">
                 <iframe id="iframe" src=""></iframe>
@@ -71,7 +74,7 @@
         
     </div>
     <iframe id="adframe" scrolling="no" src="https://totallyscience.co/adtest.php"></iframe>-->
-    
+
 
     <div id="info">
         <div>

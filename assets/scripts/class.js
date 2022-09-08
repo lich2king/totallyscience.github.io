@@ -93,6 +93,8 @@ window.addEventListener('load', () => {
             document.getElementById('currentHighscore').innerText = currentHighscore;
         } else document.getElementById('currentHighscore').innerText = '0';
     });
+
+    loadAds();
 });
 
 //Like Button
@@ -304,5 +306,15 @@ function isGamePassGame() {
                 window.location.href = '../classes.php';
             }
         });
+    }
+}
+
+function loadAds() {
+    if (location.hostname != "totallyscience.co") {
+        document.getElementById("adsrc").setAttribute("style", "display:none");
+        let adFrames = document.getElementsByClassName("adframe");
+        for (let i = 0; i < adFrames.length; i++) {
+            adFrames[i].style.display = '';
+        }
     }
 }
