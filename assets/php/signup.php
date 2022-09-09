@@ -42,7 +42,10 @@
   }
   else {
     $sql = "INSERT INTO accounts (Username, Email, Password, GradYear, PwSalt) VALUES ('$user', '$email', '$pass', '$grad', '$salt')";
-    echo "Success";
+
+    if ($conn->query($sql) === TRUE) {
+      echo "Success";
+    }
       
     $conn->close();
   }
