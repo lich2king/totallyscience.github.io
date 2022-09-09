@@ -73,10 +73,6 @@
         </div>
     </div>
     <iframe class="adframe" style="display:none; width:100vw; height:40vh; border: none;" src=""></iframe>
-    <!--<div id="outsiddeadcontainer">
-        
-    </div>
-    <iframe id="adframe" scrolling="no" src="https://totallyscience.co/adtest.php"></iframe>-->
 
 
     <div id="info">
