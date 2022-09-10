@@ -60,7 +60,7 @@
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-<link rel="stylesheet" href="assets/styles/main.css?v7">
+<link rel="stylesheet" href="assets/styles/main.css?v8">
 <link rel="icon" href="assets/images/logo.png">
 
 <title>Totally Science</title>
