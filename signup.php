@@ -94,28 +94,6 @@
             return false;
         };
 
-        async function userTaken() {
-            user = document.getElementById('username').value;
-            email = document.getElementById('email').value;
-            pass = document.getElementById('password').value;
-            grad = document.getElementById('gradSelect').value;
-
-            return await fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=0&emailvalid=0`).then((response) => response.text()).then((res) => {
-                return res == 'found';
-            });
-        };
-
-        async function emailTaken() {
-            user = document.getElementById('username').value;
-            email = document.getElementById('email').value;
-            pass = document.getElementById('password').value;
-            grad = document.getElementById('gradSelect').value;
-
-            return await fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=0`).then((response) => response.text()).then((res) => {
-                return res == 'found';
-            });
-        };
-
         async function SubmitSignUp() {
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
@@ -140,10 +118,6 @@
                 errorText.innerText = '*You cannot use a #';
             } else if (pass.length < 5) {
                 errorText.innerText = '*Password must be at least 5 characters';
-            } else if (await userTaken()) {
-                errorText.innerText = '*Username is taken';
-            } else if (await emailTaken()) {
-                errorText.innerText = '*Email is taken';
             } else {
                 errorText.innerText = '';
                 const user = document.getElementById('username').value;
@@ -151,7 +125,7 @@
                 const pass = document.getElementById('password').value;
                 const grad = document.getElementById('gradSelect').value;
 
-                fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}&uservalid=1&emailvalid=1`).then((response) => response.text()).then((res) => {
+                fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}`).then((response) => response.text()).then((res) => {
                     if (res == 'Success') {
                         errorText.style.color = 'green';
                         errorText.innerText = '*Account successfully created';

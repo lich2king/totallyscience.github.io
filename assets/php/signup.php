@@ -7,13 +7,17 @@
   $email = htmlspecialchars($_GET["email"]);
   $pass = htmlspecialchars($_GET["password"]);
   $grad = htmlspecialchars($_GET["gradyear"]);
-  $uservalid = htmlspecialchars($_GET["uservalid"]);
-  $emailvalid = htmlspecialchars($_GET["emailvalid"]);
 
+  if (!$user) {
+    die("username is required");
+  } else if (!$email) {
+    die("email is required");
+  } else if (!$pass) {
+    die("password is required");
+  }
 
   $salt = rand(10000,99999);
   $pass = $pass.$salt;
-
   $pass = password_hash($pass, PASSWORD_DEFAULT);
 
   // Create connection
@@ -23,30 +27,25 @@
   if ($conn->connect_error) {
     die("connection failed");
   }
+  
+  $userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'");
 
-  if($uservalid != '1') {
-    $userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'");
-
-    if ($userresult->num_rows == 0) {
-      echo("not found");
-    } else {
-      echo("found");
-    }
-  } else if($emailvalid != '1') {
+  if ($userresult->num_rows == 0) {
     $userresult = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
-    if ($userresult->num_rows == 0) {
-      echo("not found");
-    } else {
-      echo("found");
-    }
-  }
-  else {
-    $sql = "INSERT INTO accounts (Username, Email, Password, GradYear, PwSalt) VALUES ('$user', '$email', '$pass', '$grad', '$salt')";
 
-    if ($conn->query($sql) === TRUE) {
-      echo "Success";
+    if ($userresult->num_rows == 0) {
+      $sql = "INSERT INTO accounts (Username, Email, Password, GradYear, PwSalt) VALUES ('$user', '$email', '$pass', '$grad', '$salt')";
+
+      if ($conn->query($sql) === TRUE) {
+        echo "Success";
+      }
+    } else {
+      die("email already in use");
     }
-      
-    $conn->close();
+    
+  } else {
+    die("username already in use");
   }
+  
+  $conn->close();
 ?>
