@@ -9,7 +9,7 @@
     </div>
 
     <div id="middlebar">
-        <p>Totally Science</p>
+        <h1>Totally Science</h1>
     </div>
 
     <div id="rightbar">

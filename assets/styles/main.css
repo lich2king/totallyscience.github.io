@@ -122,7 +122,7 @@ label {
     height: 100%;
 }
 
-#middlebar p {
+#middlebar h1 {
     font-family: 'Spline Sans', sans-serif;
     font-size: 30px;
     color: var(--light-color);

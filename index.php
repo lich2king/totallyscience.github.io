@@ -6,9 +6,6 @@
 <head>
     <?php include "assets/includes/head.php" ?>
     <link rel='stylesheet' href='assets/styles/index.css?v9'>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -21,7 +18,7 @@
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h1>
+                    <h2 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h2>
                     <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
@@ -33,7 +30,7 @@
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">SMASH KARTS</h1>
+                    <h2 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">SMASH KARTS</h2>
                     <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
@@ -45,7 +42,7 @@
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h1 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">LEARN 2 FLY</h1>
+                    <h2 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">LEARN 2 FLY</h2>
                     <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
