@@ -116,6 +116,7 @@
     }
     
     #verticalAds {
+        position: fixed;
         top: 80px;
         height: 100vh;
         width: 100vw;
