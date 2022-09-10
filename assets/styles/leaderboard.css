@@ -121,6 +121,7 @@
         flex: 1;
         align-items: center;
         justify-items: center;
+        margin-top: 50px;
     }
     
     #verticalAds .contain-left {
