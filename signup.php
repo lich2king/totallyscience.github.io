@@ -136,7 +136,7 @@
                             }
                         });
                     } else {
-                        errorText.innerText = '*Error creating account';
+                        errorText.innerText = res;
                     }
                 });
             }
