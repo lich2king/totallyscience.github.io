@@ -31,7 +31,7 @@
         <button class="button" id="save-button" onclick="submit()">Save</button>
     </div>
 
-    <div class="adsrc" style="text-align:center; margin-top:50px;">
+    <div class="adsrc" style="text-align:center; margin-bottom:50px;">
             <script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
                 crossorigin="anonymous"></script>
