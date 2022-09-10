@@ -202,6 +202,16 @@
         "iframe_url": "https://fnfcdn.com/sonic-exe-1-5/"
     },
 
+    "Friday Night Funkin VS Shaggy 2.5 Mod": {
+        "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
+        "image": "./assets/game_images/fnfshaggy.jpg",
+        "controls": "Use the arrow keys to play notes",
+        "tags": ["fnf"],
+        "date_added": "2021-12-22T04:56:36.982Z",
+        "developer": "Cameron Taylor",
+        "iframe_url": "https://fnfcdn.com/shaggy-2-5/"
+    },
+
     "FNAF 2": {
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
         "image": "./assets/game_images/Fnf.jpeg",
