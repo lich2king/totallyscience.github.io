@@ -19,6 +19,15 @@
         <br>
         <button class="button">Join Public Chatroom</button>
         <p id="errorText" class="error"></p>
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+            crossorigin="anonymous"></script>
+        <!-- Horizontal Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
     <div id="chat">
