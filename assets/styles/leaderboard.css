@@ -60,7 +60,6 @@
     }
     
     #highscoreContents {
-        position: relative;
         z-index: 11;
         /*must be greater than ad z index*/
     }
