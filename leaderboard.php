@@ -26,7 +26,7 @@
 
     <div id="highscores"></div>
 
-    <div id="verticalAds">
+    <!--<div id="verticalAds">
         <div class="contain-left">
             <div class="left">
                 <script async
@@ -51,7 +51,7 @@
                 </script>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <?php include "assets/includes/footer.php" ?>
 
