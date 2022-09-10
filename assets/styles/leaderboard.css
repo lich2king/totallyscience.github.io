@@ -58,6 +58,12 @@
         transform: scale(1.025);
     }
     
+    #highscoreContents {
+        position: relative;
+        z-index: 11;
+        /*must be greater than ad z index*/
+    }
+    
     #highscore .text {
         width: 50%;
         height: 100%;
