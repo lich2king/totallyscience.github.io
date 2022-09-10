@@ -37,9 +37,6 @@
     }
     
     #highscores {
-        position: relative;
-        z-index: 10;
-        /*needs to be higher than the ads*/
         margin-top: 80px;
         width: 100vw;
         margin-bottom: 20vh;
