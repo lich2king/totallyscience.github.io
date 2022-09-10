@@ -142,12 +142,16 @@
     }
     
     .left {
+        position: relative;
+        z-index: 11;
         margin-left: 15%;
         width: 15vw;
         height: 80vh;
     }
     
     .right {
+        position: relative;
+        z-index: 11;
         margin-right: 15%;
         width: 15vw;
         height: 80vh;
