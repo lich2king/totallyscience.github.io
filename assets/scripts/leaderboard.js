@@ -24,20 +24,17 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
             const gameScore = highscores[score][2];
             const highscoreDiv = `
                 <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
-                    <div id="highscoreContents" style="height:100%">
-                        <div class="text">
-                            <h1>${game}</h1>
+                    <div class="text">
+                        <h1>${game}</h1>
 
-                            <h2>${gameScore}</h2>
+                        <h2>${gameScore}</h2>
 
-                            <p>${name}</p>
-                        </div>
-
-                        <div class="image">
-                            <div style="background-image: url('${games[game].image}');"></div>
-                        </div>
+                        <p>${name}</p>
                     </div>
-                    
+
+                    <div class="image">
+                        <div style="background-image: url('${games[game].image}');"></div>
+                    </div>
                 </div>
             `;
 
