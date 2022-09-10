@@ -2,12 +2,30 @@
 
 <meta property="og:title" content="Totally Science">
 <meta property="og:site_name" content="Totally Science">
-<meta property="og:url" content="">
+<meta property="og:url" content="https://totallyscience.co">
 <meta property="og:description" content="The best place for 'Learning Science!'">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="-gcWvd6d4OTZeFW4HWaIIZTNKnnOfAx15pEw_XDAH2o" />
+<meta name="url" content="https://totallyscience.co">
+<meta name="owner" content="Zach Yadegari">
+<meta name="designer" content="Zach Yadegari">
+<meta name="robots" content="index, follow">
+<meta name="twitter:title" content="Totally Science">
+<meta name="DC.format" content="text/html" scheme="DCTERMS.DCMIType">
+<meta name="DC.publisher" content="Totally Science" scheme="DCTERMS.DCMIType">
+<meta name="DC.description" content="The best place for 'Learning Science!'" scheme="DCTERMS.DCMIType">
+<meta name="DC.subject" content="totally science, games, gaming, online games, unblocked games" scheme="DCTERMS.DCMIType">
+<meta name="DC.creator" content="Zach Yadegari">
+<meta name="subject" content="totally science, games, gaming, online games, unblocked games">
+<meta name="keywords" content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online">
+<meta name="twitter:description" content="The best place for 'Learning Science!'">
+<meta name="twitter:url" content="https://totallyscience.co">
+<meta name="twitter:image" content="https://totallyscience.co/assets/images/logo.png">
+<meta name='description' content="The best place for 'Learning Science!'">
+<meta name="theme-color" content="#f75dfc">
+<link rel="canonical" href="index.html">
 
 <!--Google Adsense-->
 <!--<script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
@@ -40,7 +58,6 @@
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
 <link rel="stylesheet" href="assets/styles/main.css?v6">
 <link rel="icon" href="assets/images/logo.png">
