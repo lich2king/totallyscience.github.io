@@ -44,6 +44,8 @@
     }
     
     #highscore {
+        position: relative;
+        z-index: 3;
         text-align: center;
         background-color: var(--accent-color);
         margin: auto;
