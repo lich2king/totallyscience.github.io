@@ -238,6 +238,8 @@ label {
 /*#region Footer */
 
 #gamePassAd {
+    position: relative;
+    z-index: 9999;
     box-sizing: initial;
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -295,6 +297,8 @@ label {
 }
 
 footer {
+    position: relative;
+    z-index: 9999;
     width: 100vw;
     height: 25vh;
     background-color: #1C1C1C;

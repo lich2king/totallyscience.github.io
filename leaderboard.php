@@ -24,7 +24,88 @@
         <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span> <img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
-    <div id="highscores"></div>
+    <div id="highscores">
+    <div class="highscore" name="Crossy Road" id="highscore" onclick="location.href = 'class.php?class=Crossy Road'">
+                    <div class="text">
+                        <h1>Crossy Road</h1>
+
+                        <h2>296</h2>
+
+                        <p>Aj {loves milfs}</p>
+                    </div>
+
+                    <div class="image">
+                        <div style="background-image: url('./assets/game_images/crossyroad.jpg');"></div>
+                    </div>
+                </div>
+                <div class="highscore" name="Crossy Road" id="highscore" onclick="location.href = 'class.php?class=Crossy Road'">
+                    <div class="text">
+                        <h1>Crossy Road</h1>
+
+                        <h2>296</h2>
+
+                        <p>Aj {loves milfs}</p>
+                    </div>
+
+                    <div class="image">
+                        <div style="background-image: url('./assets/game_images/crossyroad.jpg');"></div>
+                    </div>
+                </div>
+                <div class="highscore" name="Crossy Road" id="highscore" onclick="location.href = 'class.php?class=Crossy Road'">
+                    <div class="text">
+                        <h1>Crossy Road</h1>
+
+                        <h2>296</h2>
+
+                        <p>Aj {loves milfs}</p>
+                    </div>
+
+                    <div class="image">
+                        <div style="background-image: url('./assets/game_images/crossyroad.jpg');"></div>
+                    </div>
+                </div>
+                <div class="highscore" name="Crossy Road" id="highscore" onclick="location.href = 'class.php?class=Crossy Road'">
+                    <div class="text">
+                        <h1>Crossy Road</h1>
+
+                        <h2>296</h2>
+
+                        <p>Aj {loves milfs}</p>
+                    </div>
+
+                    <div class="image">
+                        <div style="background-image: url('./assets/game_images/crossyroad.jpg');"></div>
+                    </div>
+                </div>
+                
+    </div>
+
+    <div id="verticalAds">
+        <div class="contain-left">
+            <div class="left">
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                    data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        <div class="contain-right">
+            <div class="right">
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                    data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
 
     <?php include "assets/includes/footer.php" ?>
 
