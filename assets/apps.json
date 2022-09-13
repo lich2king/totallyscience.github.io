@@ -52,6 +52,12 @@
         "type": "proxy",
         "iframe_url": "https://netflix.com/"
     },
+    "Reddit": {
+        "image": "assets/apps/icons/reddit.png",
+        "date_added": "2022-09-13T23:48:32.617Z",
+        "type": "proxy",
+        "iframe_url": "https://www.reddit.com/"
+    },
     "Github": {
         "image": "assets/apps/icons/github.svg",
         "date_added": "2022-02-25T23:48:32.617Z",
