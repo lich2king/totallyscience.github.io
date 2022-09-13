@@ -317,7 +317,7 @@
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
         "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Rob Kay",
         "iframe_url": "assets/games/slope/index.html"
@@ -859,7 +859,7 @@
         "description": "You have limited attempts to find the word. Goodluck!",
         "image": "./assets/game_images/wordle.png",
         "controls": "Use the keyboard to type",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-01-27T15:05:28.200Z",
         "developer": "Josh Wardle",
         "iframe_url": "assets/games/wordle/index.html"
@@ -913,7 +913,7 @@
         "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex5.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["gamepass", "vex"],
+        "tags": ["gamepass", "vex", "mobile"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Gogy Games",
         "iframe_url": "assets/games/Vex5/index.html"
@@ -931,7 +931,7 @@
         "description": "The fourth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex4.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["vex"],
+        "tags": ["vex", "mobile"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "assets/games/vex4/index.html"
@@ -940,7 +940,7 @@
         "description": "The third platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex3.jpeg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["vex"],
+        "tags": ["vex", "mobile"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "assets/games/vex3/index.html"
@@ -958,7 +958,7 @@
         "description": "A futuristic, fast-paced racing game where you control a hovercraft.",
         "image": "./assets/game_images/hexgl.jpg",
         "controls": "[Arrow Keys] - turn\n[Up Arrow] - accelerate\n[a] - left brake\n[d] - right brake",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "BKcore",
         "iframe_url": "assets/games/hexgl/index.html"
@@ -1012,7 +1012,7 @@
         "description": "Try to score a basket by using only one key with different variations from each other! Changing fields, changing players and changing balls do not surprise you! The one who reaches 5 score first, wins the game.",
         "image": "./assets/game_images/basket-random.jpg",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
-        "tags": ["2", "sport"],
+        "tags": ["2", "sport", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Two Player Games",
         "iframe_url": "assets/games/basket-random/index.html"
@@ -1021,7 +1021,7 @@
         "description": "Changing conditions occur in every round. Sometimes the boxing field changes and sometimes the boxers. Adapt to every random feature and hit accurately. The one who reaches 5 score first, wins the game!",
         "image": "./assets/game_images/boxingrandom.jpg",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
-        "tags": ["2", "sport"],
+        "tags": ["2", "sport", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Two Player Games",
         "iframe_url": "assets/games/boxing-random/index.html"
@@ -1039,7 +1039,7 @@
         "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
         "image": "./assets/game_images/geometry-dash-remastered.jpg",
         "controls": "[Space] - jump",
-        "tags": ["gamepass"],
+        "tags": ["gamepass", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Arabask",
         "iframe_url": "assets/games/geometry-dash-remastered/index.html"
@@ -1075,7 +1075,7 @@
         "description": "A motorbike racing game with summer as the main theme. This 5th part in the Moto X3M series has 22 new challenging levels. Race your motorbike through pools and beaches and discover all the new obstacles in this sequel in the Moto X3M series.",
         "image": "./assets/game_images/motox3mpool.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
-        "tags": ["car", "gamepass"],
+        "tags": ["car", "gamepass", "mobile"],
         "date_added": "22022-09-04T22:35:18.770Z",
         "developer": "MadPuffers",
         "iframe_url": "assets/games/moto-x3m-pool-party/index.html"
@@ -1084,7 +1084,7 @@
         "description": "Moto X3M Spooky Land is a stunt motor bike game and is the sixth release in the Moto X3M series. This time with a complete halloween theme where you drive your motor through spooky halloween levels and you have to perform all kinds of stunts to dodge objects of hazards coming your way.",
         "image": "./assets/game_images/motox3mspooky.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
-        "tags": ["car", "gamepass"],
+        "tags": ["car", "gamepass", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "MadPuffers",
         "iframe_url": "assets/games/moto-x3m-spooky-land/index.html"
@@ -1093,7 +1093,7 @@
         "description": "Speed with your motorbike across icy mountains in Moto X3M 4: Winter! This motorbike game dares you to drive on bridges made of candy canes and other sweet treats. Ride a motorcycle past snowmen and Christmas trees with Rudolph the Red-Nosed Reindeer and Santa Claus!",
         "image": "./assets/game_images/motox3mwinter.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
-        "tags": ["car", "gamepass"],
+        "tags": ["car", "gamepass", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "MadPuffers",
         "iframe_url": "assets/games/moto-x3m-winter/index.html"
@@ -1111,7 +1111,7 @@
         "description": "Try to score a goal by using only one key with different variations from each other! Sometimes you will play on a iced field or you will play on a beach. The goal of the game is, to score five goals.",
         "image": "./assets/game_images/soccer-random.jpg",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
-        "tags": ["2", "sport"],
+        "tags": ["2", "sport", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Two Player Games",
         "iframe_url": "assets/games/soccer-random/index.html"
@@ -1120,7 +1120,7 @@
         "description": "You play as a swinging stickman through hundreds of challenging levels. This fun, colorful stickman game offers over 100 challenging levels. Unlock unique characters along the way to switch things up while you swing. Pay attention to the angle and direction of your swing to make it to the finish line! Can you control your swing?",
         "image": "./assets/game_images/stickmanhook.jpg",
         "controls": "[Space] - swing \nIf the play button doesn't work, press SPACE",
-        "tags": ["gamepass"],
+        "tags": ["gamepass", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Madbox",
         "iframe_url": "assets/games/stickman-hook/Stickman Hook.html"
@@ -1156,7 +1156,7 @@
         "description": "Stay afloat in the ultimate water-skiing competition! This adventure game lets you play against one, two, or three friends on the same device. In Tube Jumpers, you must bounce upwards to avoid waves, sharks, and other dangers in the water!",
         "image": "./assets/game_images/tubejumpers.jpg",
         "controls": "[w] - Player 1 \n[i] - Player 2",
-        "tags": ["2"],
+        "tags": ["2", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "New Eich Games",
         "iframe_url": "assets/games/tube-jumpers/index.html"
@@ -1165,7 +1165,7 @@
         "description": "With fun ragdoll physics and a variety of variations, each match will be different. The playing court, ball and players may change. The important thing is to be able to get score under all conditions.",
         "image": "./assets/game_images/volley-random.jpg",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
-        "tags": ["2", "sport"],
+        "tags": ["2", "sport", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Two Player Games",
         "iframe_url": "assets/games/volley-random/index.html"
@@ -1192,7 +1192,7 @@
         "description": "Launch the penguin as far as you can. At first, it will be very hard, but you can slowly fly a longer distance, make more money, and buy all the upgrades.",
         "image": "./assets/game_images/learntofly.jpg",
         "controls": "[Arrow Keys] - tilt up and down",
-        "tags": [""],
+        "tags": ["mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Light Bringer Games",
         "iframe_url": "assets/games/learntofly.html"
@@ -1210,7 +1210,7 @@
         "description": "Cut the rope to feed candy to the green monster! Om Nom is hungry for large pieces of candy. Your mission is to feed him as quickly as possible. You can collect stars in each level for bonus points. Slice every rope at the right time to win!",
         "image": "./assets/game_images/cuttherope.jpg",
         "controls": "[Swipe] - cut",
-        "tags": ["puzzle"],
+        "tags": ["puzzle", "mobile"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "ZEPTOLAB",
         "iframe_url": "assets/games/cut-the-rope/index.html"
