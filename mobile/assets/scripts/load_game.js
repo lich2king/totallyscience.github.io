@@ -2,7 +2,7 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const gameName = urlParams.get('class')
 
-fetch(`https://totallyscience.co/assets/php/game_stats.php/?type=views&name=${gameName}`)
+//fetch(`https://totallyscience.co/assets/php/game_stats.php/?type=views&name=${gameName}`)
 
 fetch(`../assets/games.json?date=${new Date().getTime()}`)
     .then((response) => response.json())

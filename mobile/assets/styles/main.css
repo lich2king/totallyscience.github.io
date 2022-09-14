@@ -35,6 +35,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
+    margin-top: 20px;
 }
 
 h1,
@@ -130,4 +131,26 @@ label {
 #gameDiv:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+
+/*search bar*/
+
+input[type='text'] {
+    width: 45vw;
+    height: 50px;
+    box-sizing: border-box;
+    border: 2px solid var(--dark-color);
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: var(--light-color);
+    outline: none;
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+    background-size: 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 50px;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 3%;
+    color: var(--dark-color);
 }

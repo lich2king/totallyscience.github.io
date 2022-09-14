@@ -78,7 +78,7 @@ function createGameButton(game, pin) {
 
     let buttons = '';
 
-    let onclick = `location.href = 'class?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game}'`;
 
     if (gameDate > weekAgo) {
         classlist += ' new';
@@ -101,3 +101,49 @@ function createGameButton(game, pin) {
 
     return (gameBtn);
 }
+
+function search() {
+    document.getElementById("searchBarSection").style.display = "";
+    document.getElementById("searchBar").focus();
+}
+
+function noSearch() {
+    document.getElementById("searchBarSection").style.display = "none";
+}
+
+
+
+const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('keyup', () => {
+    scrollTo(0, 0);
+
+    let input = (searchBar.value.toUpperCase()).split(' ').join('');;
+
+    if (input == '' || input == null) {
+        loadTopic();
+        return;
+    }
+
+    const gameButtons = document.getElementsByClassName("mobile");
+
+    let gameShown = false;
+    Array.from(gameButtons).forEach(game => {
+        var name = game.getAttribute("name").toUpperCase();
+        name = name.split(' ').join('');
+
+        if (name.includes(input)) {
+            game.setAttribute('style', `background-image: url(../${games[game.getAttribute('name')].image})`)
+            gameShown = true;
+        } else {
+            game.setAttribute('style', 'display:none')
+        }
+    });
+    if (!gameShown) {
+        document.getElementById("noSearch").style.display = '';
+    } else {
+        document.getElementById("noSearch").style.display = 'none';
+    }
+    if (gamesDiv.innerHTML == '') {
+        document.getElementById("noSearch").style.display = '';
+    }
+})
