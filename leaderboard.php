@@ -16,7 +16,7 @@
 
     <div id="searchDiv">
         <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search by game">
-        <div style="text-align:center; margin-top: 20px; margin-bottom: 50px; z-index: 3;">
+        <div style="text-align:center; margin-top: 20px; margin-bottom: 50px;">
             <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span> <img
                 style="padding-left:0.5vw" width="16vw"
                 src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
