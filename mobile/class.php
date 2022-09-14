@@ -1,60 +1,31 @@
+<!-- // READY -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta property="og:title" content="Totally Science">
-    <meta property="og:site_name" content="Totally Science">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="The best place for 'Learning Science!'">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
-
-    <title>Totally Science</title>
-    <link rel='stylesheet' href='assets/styles/game.css'>
-    <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="icon" href="assets/images/logo.png">
-    <!--Google Adsense-->
-    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-Y14RZLW8H8');
-    </script>
+    <?php include "../assets/includes/head.php" ?>
+    <link rel='stylesheet' href='assets/styles/game.css?v9'>
 </head>
 
 <body>
-
     <section id="fixedElementsSection">
         <div id="fixedElements">
-            <button onclick="window.open('index.html', '_self')" id="backarrow"><img id="backarrowLogo" src="../assets/images/backarrow-light.svg"></button>
+            <button onclick="window.open('index.php', '_self')" id="backarrow"><img id="backarrowLogo" src="../assets/images/backarrow-light.svg"></button>
             <button onclick="openSchoolSite()" id="alert"><img id="alertIcon" src="../assets/images/exclamation-light.svg"></button>
         </div>
     </section>
 
-
-    <section id="game">
-        <div id="gameDiv">
-            <iframe src="" width="80%" height="80%" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
+    <section id="gameContainer">
+        <div id="gameFrameDiv">
+            <iframe src="" width="80vw" height="80vh" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
         </div>
     </section>
 
+        
 
-    <section id="report">
-        <p>Is this game not working? Let us know!</p>
-        <button id="report-btn">Report</button>
-    </section>
-
-
-    <script src="assets/scripts/main.js?v6"></script>
-    <script src="assets/scripts/load_game.js?1"></script>
+    <script src="assets/scripts/main.js?v63"></script>
+    <script src="assets/scripts/load_game.js?v63"></script>
 </body>
 
 </html>

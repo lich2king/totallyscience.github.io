@@ -66,8 +66,8 @@ label {
 #fixedElements button {
     z-index: 99;
     position: fixed;
-    width: 12vh;
-    height: 12vh;
+    width: 80px;
+    height: 80px;
     background-color: var(--accent-color);
     border: 0px;
     border-radius: 8px;
@@ -76,12 +76,12 @@ label {
 }
 
 #fixedElements button img {
-    width: 8vh;
-    height: 8vh;
+    width: 60px;
+    height: 60px;
 }
 
 #alert {
-    margin-top: 12.5vh;
+    margin-top: 90px;
 }
 
 
