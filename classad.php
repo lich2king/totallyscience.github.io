@@ -31,7 +31,7 @@
                     </div>
                     <div class="undertext">
                         <button onclick="OpenHighscore()" class="text-button"><img
-                                src="https://www.nicepng.com/png/full/37-375088_icons-health-trophy-trophy-icon-white-png.png"></button>
+                                src="assets/images/icons/trophy-icon.png"></button>
                         <div id="currentHighscore">...</div>
                     </div>
                     <!--<button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
