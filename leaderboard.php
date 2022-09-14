@@ -16,6 +16,11 @@
 
     <div id="searchDiv">
         <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search by game">
+        <div style="text-align:center; margin-top: 20px; margin-bottom: 50px; z-index: 3;">
+            <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span> <img
+                style="padding-left:0.5vw" width="16vw"
+                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+        </div>
     </div>
 
     <h1 id="nohighscore" style="display:none"></h1>
@@ -23,11 +28,7 @@
     
 
     <div id="highscores">
-        <div style="text-align:center; margin-top: 20px; margin-bottom: 50px; z-index: 3;">
-            <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span> <img
-                style="padding-left:0.5vw" width="16vw"
-                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
-        </div>
+        
         <div id="verticalAds">
             <div class="contain-left">
                 <div class="left">
