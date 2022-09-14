@@ -11,7 +11,7 @@
 <body>
     <section id="fixedElementsSection">
         <div id="fixedElements">
-            <button onclick="window.open('index.php', '_self')" id="backarrow"><img id="backarrowLogo" src="../assets/images/backarrow-light.svg"></button>
+            <button onclick="window.open('index', '_self')" id="backarrow"><img id="backarrowLogo" src="../assets/images/backarrow-light.svg"></button>
             <button onclick="openSchoolSite()" id="alert"><img id="alertIcon" src="../assets/images/exclamation-light.svg"></button>
         </div>
     </section>
