@@ -59,6 +59,17 @@
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://browser.sentry-cdn.com/7.12.1/bundle.tracing.min.js" integrity="sha384-+5SuXMl3TMl8hMxuOnzV/WA9uCrxgqfg5AeYcRa3Xgt5+IicBBuHRUoYgHU741xO" crossorigin="anonymous"></script>
+<script>
+    Sentry.init({
+    dsn: "https://ee9aa27951244138b295702d9a1d9443@o1410974.ingest.sentry.io/6749153",
+    integrations: [new Sentry.BrowserTracing()],
+
+    // We recommend adjusting this value in production, or using tracesSampler
+    // for finer control
+    tracesSampleRate: 1.0,
+    });
+</script>
 
 <link rel="stylesheet" href="assets/styles/main.css?v8">
 <link rel="icon" href="assets/images/logo.png">
