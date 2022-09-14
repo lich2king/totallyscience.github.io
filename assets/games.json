@@ -1184,7 +1184,7 @@
         "image": "./assets/game_images/crossyroadspace.png",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
         "tags": ["mobile", "gamepass"],
-        "date_added": "2022-09-04T22:35:18.770Z",
+        "date_added": "2022-09-14T13:39:38.733Z",
         "developer": "Hipster Whale",
         "iframe_url": "assets/games/tam-crossyroad/index.html?world=space"
     },
