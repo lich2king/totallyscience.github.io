@@ -154,3 +154,17 @@ input[type='text'] {
     margin-bottom: 3%;
     color: var(--dark-color);
 }
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#newbanner img {
+    width: 80px;
+    height: 80px;
+}
