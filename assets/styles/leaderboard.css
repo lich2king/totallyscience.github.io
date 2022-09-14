@@ -21,14 +21,7 @@
         text-align: center;
         margin-top: 20px;
         margin-bottom: 50px;
-        margin-top: 80px;
-        text-align: center;
-        height: 50px;
-        z-index: 12;
-        padding-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--background-color);
-        top: 60px;
+        z-index: 5;
     }
     
     input[type='text'] {
