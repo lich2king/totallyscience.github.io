@@ -19,3 +19,17 @@
     margin-bottom: 0%;
     resize: vertical;
 }
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#newbanner img {
+    width: 80px;
+    height: 80px;
+}
