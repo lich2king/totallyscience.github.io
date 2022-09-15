@@ -67,6 +67,18 @@
         <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
     </div>
 
+    <div class="adsrc" style="text-align:center; margin-top:50px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+                crossorigin="anonymous"></script>
+            <!-- Horizontal Ad -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
     <div id="searchcatParent">
         <div id="searchcat">
             <div id="firstcatrow">
