@@ -138,6 +138,9 @@ searchBar.addEventListener('keyup', () => {
             game.setAttribute('style', 'display:none')
         }
     });
+
+    // noSearch doesn't exist?
+    /*
     if (!gameShown) {
         document.getElementById("noSearch").style.display = '';
     } else {
@@ -146,4 +149,5 @@ searchBar.addEventListener('keyup', () => {
     if (gamesDiv.innerHTML == '') {
         document.getElementById("noSearch").style.display = '';
     }
+    */
 })
