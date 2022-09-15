@@ -12,6 +12,9 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
+    
+    <div id="apps"></div>
+
     <div class="adsrc" style="text-align:center; margin-top:50px;">
             <script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
@@ -23,7 +26,6 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-    <div id="apps"></div>
 
     <?php include "assets/includes/footer.php" ?>
 
