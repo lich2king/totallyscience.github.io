@@ -54,6 +54,8 @@ window.addEventListener('load', () => {
     fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
         if (res == 'true') {
             gamePass = true;
+        } else {
+            loadAds();
         }
     });
 
@@ -93,8 +95,6 @@ window.addEventListener('load', () => {
             document.getElementById('currentHighscore').innerText = currentHighscore;
         } else document.getElementById('currentHighscore').innerText = '0';
     });
-
-    loadAds();
 });
 
 //Like Button
