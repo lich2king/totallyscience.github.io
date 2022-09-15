@@ -30,7 +30,7 @@
     </div>
 
 
-    <script src="assets/scripts/main.js?v23"></script>
+    <script src="assets/scripts/main.js?v24"></script>
 </body>
 
 </html>

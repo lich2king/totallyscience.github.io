@@ -101,7 +101,7 @@ function showAds() {
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.onload = function() {
-        callFunctionFromScript();
+        //callFunctionFromScript();
     }
     script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
     script.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
