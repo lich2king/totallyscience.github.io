@@ -54,6 +54,8 @@ window.addEventListener('load', () => {
     fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
         if (res == 'true') {
             gamePass = true;
+        } else {
+            loadAds();
         }
     });
 
@@ -69,7 +71,13 @@ window.addEventListener('load', () => {
         document.getElementById('description').innerText = gameData.description;
         document.getElementById('controls').innerText = gameData.controls;
         document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
-        document.getElementById('iframe').src = gameData.iframe_url;
+
+        if (gameData.type == 'proxy') {
+            document.getElementById('iframe').src = 'https://p.' + window.location.host + '/index#' + btoa(gameData.iframe_url);
+        } else {
+            document.getElementById('iframe').src = gameData.iframe_url;
+        }
+
         document.getElementById('iframe').focus();
 
         if (id) {
@@ -93,8 +101,6 @@ window.addEventListener('load', () => {
             document.getElementById('currentHighscore').innerText = currentHighscore;
         } else document.getElementById('currentHighscore').innerText = '0';
     });
-
-    loadAds();
 });
 
 //Like Button

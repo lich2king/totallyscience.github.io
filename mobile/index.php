@@ -22,10 +22,22 @@
         </div>
     </section>
 
-    <div id="games">
+    <div class="adsrc" style="text-align:center;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3486863589051210"
+        crossorigin="anonymous"></script>
+        <!-- Mobile ad -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3486863589051210"
+        data-ad-slot="1083058639"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
-        
+    <div id="games"></div>
 
     <script src="assets/scripts/main.js?v64"></script>
     <script src="assets/scripts/mobile.js?v64"></script>

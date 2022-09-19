@@ -100,9 +100,6 @@ function showAds() {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.onload = function() {
-        callFunctionFromScript();
-    }
     script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
     script.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
     script.async = true;

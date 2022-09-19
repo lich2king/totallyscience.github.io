@@ -21,6 +21,7 @@
         <iframe class="iframeloader" id="app_frame" style="border: none; position: relative; z-index: 2; overflow: hidden;" width=100% height=100% src=""></iframe>
     </div>
 
+    <script src="assets/scripts/main.js?v27"></script>
     <script src="assets/scripts/app.js"></script>
 </body>
 

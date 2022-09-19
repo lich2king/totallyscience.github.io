@@ -28,8 +28,6 @@
 <meta name="theme-color" content="#f75dfc">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--Google Adsense-->
-<!--<script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
 <script>
