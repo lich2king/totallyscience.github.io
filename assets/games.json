@@ -1335,7 +1335,7 @@
         "iframe_url": "assets/games/riddleschool5/index.html"
     },
 
-    "Fall Boys ": {
+    "Fall Boys": {
         "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
         "image": "./assets/game_images/fallboys.png",
         "controls": "[WASD] - move\n[Space] - jump",
