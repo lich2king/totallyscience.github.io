@@ -55,6 +55,7 @@
 })(document, window);
 </script>-->
 
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-3486863589051210" async="true"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://browser.sentry-cdn.com/7.12.1/bundle.tracing.min.js" integrity="sha384-+5SuXMl3TMl8hMxuOnzV/WA9uCrxgqfg5AeYcRa3Xgt5+IicBBuHRUoYgHU741xO" crossorigin="anonymous"></script>
