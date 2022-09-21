@@ -15,7 +15,6 @@ const pinButtonImg = pinButton.firstChild;
 let likeCount = 0;
 let loggedIn = false;
 let verified = true;
-let gamePass = false;
 let games;
 
 window.addEventListener('load', () => {
@@ -48,14 +47,6 @@ window.addEventListener('load', () => {
     fetch(`assets/php/verified.php`).then((response) => response.text()).then((res) => {
         if (res == '1') {
             verified = true;
-        }
-    });
-
-    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
-        if (res == 'true') {
-            gamePass = true;
-        } else {
-            loadAds();
         }
     });
 
@@ -199,7 +190,6 @@ document.getElementById("fullscreen").addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
-        isGamePassGame();
         suggestGames();
         addGameData(); //increment game views by 1
     });
@@ -218,7 +208,7 @@ function suggestGames() {
         currentTags.forEach(function(game) {
             let gameTags = games[randGame]["tags"];
             gameTags.forEach(function(currentgame) {
-                if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'gamepass' && game != 'new' && game != 'popular') {
+                if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
             });
@@ -284,30 +274,3 @@ window.addEventListener('click', () => {
     //fix some text inputs not working (eaglercraft)
     document.getElementById('iframe').focus();
 });
-
-function isGamePassGame() {
-    if (games[gameName].tags.includes('gamepass')) {
-        //check if user has gamepass
-        //if not, kick them outta the game!
-        fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
-            if (res != 'true') {
-                //they don't have gamepass, get them outta here!
-                window.location.href = '../classes.php';
-            }
-        });
-    }
-}
-
-function loadAds() {
-    if (location.hostname != "totallyscience.co") {
-        let adDivs = document.getElementsByClassName("adsrc");
-        for (let i = 0; i < adDivs.length; i++) {
-            adDivs[i].style.display = 'none';
-        }
-        let adFrames = document.getElementsByClassName("adframe");
-        for (let i = 0; i < adFrames.length; i++) {
-            adFrames[i].style.display = '';
-            adFrames[i].src = `https://p.${window.location.host}/index#${btoa("https://totallyscience.co/adtest.php")}`
-        }
-    }
-}

@@ -50,7 +50,6 @@ let games;
 let sorted;
 let hasLoaded = false;
 let loggedIn = false;
-let gamepass = false;
 
 let sortObject = (obj) =>
     Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {})
@@ -72,12 +71,6 @@ async function loadCookies() {
             if (isLoggedIn == 'true') {
                 loggedIn = true;
             }
-        }
-    });
-
-    await fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
-        if (res == 'true') {
-            gamepass = true;
         }
     });
 
@@ -269,7 +262,7 @@ function suggestGames() {
         for (let x = displayedGames; x < displayedGames + 3; x++) {
             let randGame = randomProperty(games);
 
-            while (randomGames.includes(randGame) || pinnedGames.includes(randGame) || games[randGame].tags.includes("gamepass")) {
+            while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
                 randGame = randomProperty(games);
             }
 
@@ -345,10 +338,6 @@ function createGameButton(game, pin) {
     let buttons = '';
 
     let onclick = `location.href = 'class?class=${game}'`;
-    if (data.tags.includes("gamepass") && !gamepass) {
-        buttons += "<button id='gamelock'><img src='/assets/images/icons/locked.png'></button>"
-        onclick = "lockedGame()";
-    }
 
     if (pin == "pin") {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>"
@@ -380,12 +369,4 @@ function createGameButton(game, pin) {
     }
 
     return (gameBtn);
-}
-
-function lockedGame() {
-    swal("You must have Game Pass to play this game", { buttons: { cancel: "Cancel", gamepass: { text: "Game Pass", value: "gamepass" } }, }).then((value) => {
-        if (value == 'gamepass') {
-            window.open('gamepass', '_self');
-        }
-    });
 }

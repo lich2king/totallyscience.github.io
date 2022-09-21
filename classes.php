@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/classes.css?v3'>
+    <link rel='stylesheet' href='assets/styles/classes.css?v4'>
 </head>
 
 <body>
@@ -36,7 +36,6 @@
                 <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
                 <button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button>
-                <button name="gamepass" onclick="" class="unselectedCategory categoryButton">GamePass</button>
             </div>
         </div>
 

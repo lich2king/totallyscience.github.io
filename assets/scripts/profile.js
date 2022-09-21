@@ -4,7 +4,6 @@ let username;
 let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
-let gamePass = 'false';
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
@@ -29,13 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('emailSpan').innerText = res['email'];
             });
         } else location.href = 'signup.php';
-    });
-
-    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
-        if (res == 'true') {
-            gamePass = 'true';
-            cookieLoaded();
-        }
     });
 
     //Load highscores
@@ -145,11 +137,4 @@ function createGameButton(game, pin) {
         `;
 
     return (gameBtn);
-}
-
-function cookieLoaded() {
-    if (gamePass == 'true') {
-        document.getElementById('membership').innerHTML = 'GAMEPASS';
-        document.getElementById('membershiplink').setAttribute('onclick', "location.href = 'gpstatus'");
-    }
 }

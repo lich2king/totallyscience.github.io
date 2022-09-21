@@ -29,11 +29,6 @@
         </div>
 
         <div class="accountoption">
-            <p>Membership: <span class="span" id="membership">FREE</span></p>
-            <input id="membershiplink" onclick="location.href = 'gamepass.php'" type="image" src="assets/images/icons/edit.png">
-        </div>
-
-        <div class="accountoption">
             <a class="logout" onclick="logout();">Logout</a>
         </div>
     </div>

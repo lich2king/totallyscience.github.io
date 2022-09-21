@@ -232,7 +232,7 @@ input[type='text'] {
 
 /*#endregion*/
 
-h1 {
+#topText h1 {
     margin-top: 80px;
     color: var(--light-color);
     text-align: center;
