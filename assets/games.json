@@ -1117,15 +1117,6 @@
         "developer": "Two Player Games",
         "iframe_url": "assets/games/soccer-random/index.html"
     },
-    "Stickman Hook": {
-        "description": "You play as a swinging stickman through hundreds of challenging levels. This fun, colorful stickman game offers over 100 challenging levels. Unlock unique characters along the way to switch things up while you swing. Pay attention to the angle and direction of your swing to make it to the finish line! Can you control your swing?",
-        "image": "./assets/game_images/stickmanhook.jpg",
-        "controls": "[Space] - swing \nIf the play button doesn't work, press SPACE",
-        "tags": ["mobile"],
-        "date_added": "2022-09-21T01:46:18.659Z",
-        "developer": "Madbox",
-        "iframe_url": "assets/games/stickman-hook/Stickman Hook.html"
-    },
     "Superhot": {
         "description": "A first-person shooter game where time moves once you move. Shoot and move around to see your bullets fly off. Stand still and your bullets will stop moving too. This counts for enemy fire as well! Move around and shoot your enemies. Stand still and look for the best ways to move and dodge incoming fire.",
         "image": "./assets/game_images/superhot.jpg",
