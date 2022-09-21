@@ -112,7 +112,7 @@
     </div>
 
     <div style="text-align:center">
-        <button class="button" onclick="window.open('classes.php', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+        <button class="button" onclick="window.open('classes', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
