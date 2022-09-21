@@ -141,24 +141,15 @@ pinButton.addEventListener("webkitAnimationEnd", function() {
 });
 pinButton.addEventListener('click', function() {
     if (loggedIn) {
-        if (verified) {
-            if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-                fetch(`assets/php/class_pin/pinclass.php?name=${gameName}`).then((response) => response.text()).then((res) => {
-                    if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                    else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
-                });
-            } else {
-                fetch(`assets/php/class_pin/unpinclass.php?name=${gameName}`);
-                pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
-            }
-        } else {
-            swal("You must verify your email to pin the game", { buttons: { cancel: "Cancel", verify: { text: "Verify", value: "verify" } }, }).then((value) => {
-                if (value == 'verify') {
-                    window.open('profile.php', '_self');
-                }
+        if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
+            fetch(`assets/php/class_pin/pinclass.php?name=${gameName}`).then((response) => response.text()).then((res) => {
+                if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+                else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
             });
+        } else {
+            fetch(`assets/php/class_pin/unpinclass.php?name=${gameName}`);
+            pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
         }
-
     } else {
         swal("You must login to pin the game", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
             if (value == 'login') {
