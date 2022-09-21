@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loggedIn != 'true') location.href = 'signup.php';
 
             fetch(`assets/php/verified.php`).then((response) => response.text()).then((verified) => {
-                if (verified == 0) location.href = 'verify.php';
+                //if (verified == 0) location.href = 'verify.php';
 
                 document.getElementById('usernameSpan').innerText = username;
                 document.getElementById('emailSpan').innerText = res['email'];
