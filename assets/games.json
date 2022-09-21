@@ -1344,6 +1344,17 @@
         "developer": "UNKNOWN",
         "type": "proxy",
         "iframe_url": "https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html"
+    },
+
+    "Run 3": {
+        "description": "Try to stay on the track for as long as you can. You can choose from two different modes when playing. In infinite mode, you run for as long as you can. It's your job to try and keep your character from drifting into the vastness of outer space.",
+        "image": "./assets/game_images/run3.jpeg",
+        "controls": "[WASD] - move\n[Space] - jump",
+        "tags": ["running"],
+        "date_added": "2022-09-21T01:46:18.659Z",
+        "developer": "Joseph Cloutier",
+        "type": "proxy",
+        "iframe_url": "https://player03.com/run/3/beta/"
     }
 
 
