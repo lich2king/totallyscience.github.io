@@ -106,24 +106,16 @@ window.addEventListener('load', () => {
 //Like Button
 likeButton.addEventListener('click', function() {
     if (loggedIn) {
-        if (verified) {
-            if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
-                likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-                likeCount += 1;
-                fetch(`assets/php/class_likes/likeclass.php?name=${gameName}`);
-                UpdateLikeCount();
-            } else {
-                likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
-                likeCount -= 1;
-                fetch(`assets/php/class_likes/unlikeclass.php?name=${gameName}`);
-                UpdateLikeCount();
-            }
+        if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
+            likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+            likeCount += 1;
+            fetch(`assets/php/class_likes/likeclass.php?name=${gameName}`);
+            UpdateLikeCount();
         } else {
-            swal("You must verify your email to pin the game", { buttons: { cancel: "Cancel", verify: { text: "Verify", value: "verify" } }, }).then((value) => {
-                if (value == 'verify') {
-                    window.open('profile.php', '_self');
-                }
-            });
+            likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
+            likeCount -= 1;
+            fetch(`assets/php/class_likes/unlikeclass.php?name=${gameName}`);
+            UpdateLikeCount();
         }
     } else {
         swal("You must login to like the game", { buttons: { cancel: "Cancel", login: { text: "Login", value: "login" } }, }).then((value) => {
