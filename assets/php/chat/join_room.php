@@ -31,10 +31,6 @@
 
   if ($userresult = $connacc->query("SELECT * FROM accounts WHERE Username = '$name'")) {
     $row = $userresult -> fetch_row();
-
-    if ($row[6] == false) {
-      die("you must verify your email to join chat.");
-    }
   } else {
     echo 'fail';
   }
