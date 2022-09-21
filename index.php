@@ -99,7 +99,6 @@
                 <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
                 <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
                 <button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button>
-                <button name="gamepass" onclick="" class="unselectedCategory categoryButton">GamePass</button>
             </div>
         </div>
 

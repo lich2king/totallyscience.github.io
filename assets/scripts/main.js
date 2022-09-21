@@ -75,28 +75,12 @@ window.addEventListener('load', () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    let gamepass = false;
-    //if user has gamepass, hide gamePassAd element
-    fetch(`assets/php/hasGamePass.php`).then((response) => response.text()).then((res) => {
-        if (res == 'true') {
-            gamepass = true;
-            document.getElementById('gamePassAd').style = "display: none";
-        } else {
-            showAds();
-            //if domain is not totallyscience.co, make sure user has game pass
-            if (location.hostname != "totallyscience.co" && location.hostname != "localhost" && !(this.location.href.includes("gamepass")) && !(this.location.href.includes("signup")) && !(this.location.href.includes("login")) && !(this.location.href.includes("profile"))) {
-                //this.location.href = "gamepass?gpdomain=1"
-            }
-        }
-    });
-
+    showAds();
 });
 
 
 
 function showAds() {
-    document.getElementById('gamePassAd').setAttribute('style', 'display:');
-
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
