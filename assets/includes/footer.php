@@ -34,7 +34,7 @@
     <div class="footSections">
         <div class="footSection">
             <h1>Contact Us</h1>
-            <p><a href="">help@totallyscience.co</a></p>
+            <p><a href="mailto: help@totallyscience">help@totallyscience.co</a></p>
         </div>
 
         <div class="footSection">
