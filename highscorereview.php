@@ -76,6 +76,10 @@
             -webkit-box-shadow: 3px 3px 5px 6px var(--box-shadow-color);
             box-shadow: 3px 3px 5px 3px var(--box-shadow-color);
         }
+
+        p, h1 {
+            color: var(--light-color);
+        }
     </style>
 </head>
 
