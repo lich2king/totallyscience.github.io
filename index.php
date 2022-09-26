@@ -215,6 +215,7 @@
     </div>
 
     <div id="about">
+        <br><br>
         <h1><span>About</span> Totally Science</h1>
         <p><span>Totally Science</span> is a website that offers unblocked games and proxy apps for school use. Totally
             Science was
