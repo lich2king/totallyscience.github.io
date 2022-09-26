@@ -579,3 +579,20 @@ input[type='text'] {
     font-size: 1vw;
     font-family: 'Rubik', sans-serif;
 }
+
+#about {
+    color: var(--light-color);
+    padding-left: 25%;
+    padding-right: 25%;
+    line-height: 25px;
+}
+
+#about span {
+    color: var(--accent-color);
+}
+
+#about h2 {
+    font-size: 20px;
+    color: var(--accent-color);
+    font-weight: 200;
+}
