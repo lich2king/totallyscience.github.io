@@ -5,7 +5,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v9'>
+    <link rel='stylesheet' href='assets/styles/index.css?v10'>
 </head>
 
 <body>
@@ -13,41 +13,76 @@
 
     <div id="startcontent">
         <div id="feature">
-            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;" class="imageTest fade">
+            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;"
+                class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h2 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">BASKETBALL STARS</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
+                    <h2 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">BASKETBALL STARS</h2>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')"
+                    class="featureButton button">Play Now</button>
             </div>
             <div style="background-image: url(./assets/images/featuredimg/smashkarts.jpg);" class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h2 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">SMASH KARTS</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
+                    <h2 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">SMASH KARTS</h2>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=Smash%20Karts', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Smash%20Karts', '_self')"
+                    class="featureButton button">Play Now</button>
             </div>
-            <div style="background-image: url(./assets/images/featuredimg/learn2fly.jpg); display:none;" class="imageTest fade">
+            <div style="background-image: url('https://e8x4d3t2.rocketcdn.me/wp-content/uploads/2017/05/retipster-blog-image-50-websites-to-post-2019-03-12.png'); display:none;"
+                class="imageTest fade">
                 <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw" onclick="plusSlides(-1)">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
                         <img src="/assets/images/left-arrow.png">
                     </div>
-                    <h2 id="gametext" style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;" class="stroke-text smooth-16">LEARN 2 FLY</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;" class="arrw" onclick="plusSlides(1)">
+                    <h2 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">ADVERTISE HERE</h2>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=Learn%20To%20Fly', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('mailto: help@totallyscience', '_blank')"
+                    class="featureButton button">Contact Us</button>
+            </div>
+            <div style="background-image: url(./assets/images/featuredimg/learn2fly.jpg); display:none;"
+                class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h2 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">LEARN 2 FLY</h2>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+                <button onclick="window.open('class.php?class=Learn%20To%20Fly', '_self')"
+                    class="featureButton button">Play Now</button>
             </div>
         </div>
 
@@ -61,20 +96,21 @@
         </div>
     </div>
 
-    
+
 
     <div id="info">
-        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
+        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
+                style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
     </div>
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
-            <!-- Horizontal Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+        <!-- Horizontal Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <div id="searchcatParent">
         <div id="searchcat">
@@ -112,17 +148,19 @@
     </div>
 
     <div style="text-align:center">
-        <button class="button" onclick="window.open('classes', '_self')"><span>ALL GAMES</span><img style="padding-left:0.5vw" width="16vw" src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
+        <button class="button" onclick="window.open('classes', '_self')"><span>ALL GAMES</span><img
+                style="padding-left:0.5vw" width="16vw"
+                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
-            <!-- Horizontal Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+        <!-- Horizontal Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <div id="extraCategories">
         <div id="extraCategory" onclick="window.open('classes.php?category=stickman', '_self')">
@@ -146,7 +184,7 @@
             <p>Car Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=multiplayer', '_self')">
-            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>  
+            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>
             <p>Multiplayer Games</p>
         </div>
         <div id="extraCategory" onclick="window.open('classes.php?category=running', '_self')">
@@ -165,6 +203,77 @@
             <div style="background-image: url(assets/images/extracats/clicker.png);"></div>
             <p>Clicker Games</p>
         </div>
+    </div>
+
+    <div class="adsrc" style="text-align:center; margin-top:50px;">
+        <!-- Horizontal Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div id="about">
+        <br><br>
+        <h1><span>About</span> Totally Science</h1>
+        <p><span>Totally Science</span> is a website that offers unblocked games and proxy apps for school use. Totally
+            Science was
+            founded in January 2022 with the aim of giving users the best experience of <span>unblocked games and
+                unblocked
+                proxy apps at school</span>. At Totally Science, you can play games with your friends without being
+            blocked or
+            having any other problems. You can play games all the time on your computer or phone device at school or
+            work.
+            You also do not need to install any additional software or know any plugins. People can play many other
+            games,
+            such as racing, shooting, mind games, sports, or slope games...</p>
+        <br>
+        <h1>Totally Science <span>Apps</span></h1>
+        <p>Currently, Totally Science offers web proxy services for many popular applications, including <span>YouTube,
+                Discord,
+                Tiktok, Google, Twitch, Spotify, Mathway, Netflix, Github, and others.</span></p>
+        <br>
+        <h1>Totally Science <span>Games</span></h1>
+        <p>There are many outstanding unblocked games nowadays, and Totally Science currently offers more than 100 of
+            the most popular games covering many genres like racing, shooting, intelligence, and many more. The games
+            Totally Science offers are developed on HTML5, Unity, and many other platforms. Among them are some
+            outstanding
+            games, such as:</span></p>
+        <ul>
+            <li>1v1 LoL</li>
+            <li>Five Nights at Freddy's ( FNAF series )</li>
+            <li>2048</li>
+            <li>Retro Bowl</li>
+            <li>Drift Boss</li>
+            <li>Slope</li>
+            <li>Minecraft</li>
+            <li>Basketball Stars</li>
+            <li>Smash Karts</li>
+            <li>Fall Guys</li>
+            <li>Among Us</li>
+        </ul>
+        <br>
+        <h1>Totally Science Official <span>Domains</span></h1>
+        <ul>
+            <li>definitelyscience.com</li>
+            <li>literallyhistory.org</li>
+            <li>literallymath.com</li>
+            <li>mathplace.co</li>
+            <li>mathstudyplace.com</li>
+            <li>sidthescientist.com</li>
+            <li>spanishstudy.co</li>
+            <li>studyscienceteacher.com</li>
+            <li>totallyalgebra.com</li>
+            <li>totallysocialstudies.com</li>
+            <li>studymathteacher.com</li>
+            <li>historicallyscience.com</li>
+            <li>actuallyphysics.com</li>
+            <li>actuallyhistory.com</li>
+            <li>funnymath.org</li>
+            <li>crazyalgebra.com</li>
+        </ul>
+        <br><br>
     </div>
 
     <?php include "assets/includes/footer.php" ?>

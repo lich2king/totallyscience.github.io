@@ -16,7 +16,6 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
         let users = [];
         let colors = [];
         let url;
-        let lastMessage;
 
         joinChat.children[0].value = localStorage.getItem('chatRoom');
         joinChat.children[2].addEventListener('click', () => {
@@ -70,16 +69,6 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     } catch (error) {
                         if (error) {
                             joinChat.style.display = '';
-
-                            if (res1 == 'you must verify your email to join chat.') {
-                                swal('You must verify your email to join the chat', { buttons: { cancel: 'Cancel', login: { text: 'Verify', value: "verify" } }, }).then((value) => {
-                                    if (value == 'verify') {
-                                        window.open('verify.php', '_self');
-                                    }
-                                });
-
-                                return;
-                            }
                             return errorText.innerText = res1;
                         }
                     }
@@ -217,8 +206,6 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                     messageinput.value = '';
 
                     window.scrollTo(0, document.body.scrollHeight);
-
-                    lastMessage = new Date();
 
                     try {
                         fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {

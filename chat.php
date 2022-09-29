@@ -195,7 +195,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/chat.js?v50"></script>
+    <script src="assets/scripts/chat.js?v51"></script>
 </body>
 
 </html>

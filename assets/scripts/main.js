@@ -75,7 +75,7 @@ window.addEventListener('load', () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    showAds();
+    //showAds();
 });
 
 
