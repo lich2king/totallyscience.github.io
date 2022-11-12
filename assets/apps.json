@@ -63,5 +63,11 @@
         "date_added": "2022-02-25T23:48:32.617Z",
         "type": "proxy",
         "iframe_url": "https://github.com/"
+    },
+    "Geforce Now": {
+        "image": "assets/apps/icons/geforce.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
+        "iframe_url": "https://www.nvidia.com/en-us/geforce-now/"
     }
 }
