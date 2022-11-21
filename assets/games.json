@@ -1346,6 +1346,16 @@
         "developer": "Joseph Cloutier",
         "type": "proxy",
         "iframe_url": "https://player03.com/run/3/beta/"
+    },
+
+    "Roblox": {
+        "description": "Roblox is the ultimate virtual universe that lets you create, share experiences with friends, and be anything you can imagine. Join millions of people and discover an infinite variety of immersive experiences created by a global community!",
+        "image": "./assets/game_images/roblox.png",
+        "controls": "[WASD] - move\n[Space] - jump",
+        "tags": ["multiplayer"],
+        "date_added": "2022-11-21T00:22:54.989Z",
+        "developer": "Roblox Corporation",
+        "iframe_url": "https://mathsspot.com/"
     }
 
 
