@@ -49,24 +49,6 @@
                 <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')"
                     class="featureButton button">Play Now</button>
             </div>
-            <div style="background-image: url('https://e8x4d3t2.rocketcdn.me/wp-content/uploads/2017/05/retipster-blog-image-50-websites-to-post-2019-03-12.png'); display:none;"
-                class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
-                        onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h2 id="gametext"
-                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
-                        class="stroke-text smooth-16">ADVERTISE HERE</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
-                        class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
-                </div>
-                <button onclick="window.open('mailto: help@totallyscience', '_blank')"
-                    class="featureButton button">Contact Us</button>
-            </div>
             <div style="background-image: url(./assets/images/featuredimg/smashkarts.jpg); display:none;"
                 class="imageTest fade">
                 <div class="arrows">
