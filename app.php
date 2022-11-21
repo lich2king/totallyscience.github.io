@@ -33,7 +33,7 @@
     </div>
 
     <script src="assets/scripts/main.js?v27"></script>
-    <script src="assets/scripts/app.js"></script>
+    <script src="assets/scripts/app.js?1"></script>
 </body>
 
 </html>

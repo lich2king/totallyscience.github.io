@@ -1,4 +1,5 @@
 // READY
+document.getElementById("appsnav").classList.add("selected");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
