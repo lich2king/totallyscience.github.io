@@ -34,7 +34,7 @@
                 <button onclick="window.open('class.php?class=Roblox', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
-            <div style="background-image: url(./assets/images/worldcup.jpg); display:none;" class="imageTest fade">
+            <!--<div style="background-image: url(./assets/images/worldcup.jpg); display:none;" class="imageTest fade">
                 <div class="arrows">
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
                         onclick="plusSlides(-1)">
@@ -50,7 +50,7 @@
                 </div>
                 <button onclick="window.open('class.php?app=World%20Cup', '_self')" class="featureButton button">Watch
                     Now</button>
-            </div>
+            </div>-->
             <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;"
                 class="imageTest fade">
                 <div class="arrows">

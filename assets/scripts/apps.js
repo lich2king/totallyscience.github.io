@@ -2,7 +2,7 @@
 
 document.getElementById('appsnav').classList.add('selected');
 
-fetch(`assets/apps.json?v4`)
+fetch(`assets/apps.json?v5`)
     .then((response) => response.json())
     .then((apps) => {
         const appContainer = document.getElementById('apps');
