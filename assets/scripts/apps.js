@@ -1,13 +1,14 @@
 // READY
 
-document.getElementById("appsnav").classList.add("selected");
+document.getElementById('appsnav').classList.add('selected');
 
-fetch(`assets/apps.json?v3`).then((response) => response.json()).then((apps) => {
-    const appContainer = document.getElementById('apps');
+fetch(`assets/apps.json?v4`)
+    .then((response) => response.json())
+    .then((apps) => {
+        const appContainer = document.getElementById('apps');
 
-    for (const [name, data] of Object.entries(apps)) {
-
-        const appDiv = `
+        for (const [name, data] of Object.entries(apps)) {
+            const appDiv = `
             <div onclick="window.open('app?app=${name}', '_self')" class="card game">
                 <img src="${data.image}" style="background-color: #ffffff;">
                 <h1>${name}</h1>
@@ -15,6 +16,6 @@ fetch(`assets/apps.json?v3`).then((response) => response.json()).then((apps) => 
             </div>
         `;
 
-        appContainer.innerHTML += appDiv;
-    }
-});
+            appContainer.innerHTML += appDiv;
+        }
+    });
