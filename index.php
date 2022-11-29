@@ -6,7 +6,9 @@
 <head>
     <?php include "assets/includes/head.php" ?>
     <link rel='stylesheet' href='assets/styles/index.css?v10'>
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons" async="async"></script>
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
+        async="async"></script>
 </head>
 
 <body>
@@ -14,7 +16,8 @@
 
     <div id="startcontent">
         <div id="feature">
-            <div style="background-image: url(./assets/images/featuredimg/roblox.jpg); display:none;" class="imageTest fade">
+            <div style="background-image: url(./assets/images/featuredimg/roblox.jpg); display:none;"
+                class="imageTest fade">
                 <div class="arrows">
                     <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
                         onclick="plusSlides(-1)">
@@ -28,8 +31,25 @@
                         <img src="/assets/images/right-arrow.png">
                     </div>
                 </div>
-                <button onclick="window.open('class.php?class=Roblox', '_self')"
-                    class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Roblox', '_self')" class="featureButton button">Play
+                    Now</button>
+            </div>
+            <div style="background-image: url(./assets/images/worldcup.jpg); display:none;" class="imageTest fade">
+                <div class="arrows">
+                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
+                        onclick="plusSlides(-1)">
+                        <img src="/assets/images/left-arrow.png">
+                    </div>
+                    <h2 id="gametext"
+                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
+                        class="stroke-text smooth-16">FIFA WORLD CUP</h2>
+                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
+                        class="arrw" onclick="plusSlides(1)">
+                        <img src="/assets/images/right-arrow.png">
+                    </div>
+                </div>
+                <button onclick="window.open('class.php?app=World%20Cup', '_self')" class="featureButton button">Watch
+                    Now</button>
             </div>
             <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;"
                 class="imageTest fade">
@@ -82,8 +102,10 @@
 
 
     <div id="info">
-        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
-        <p>Show your support by <span style="color: var(--accent-color);">sharing</span> Totally Science with friends</p>
+        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
+                style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
+        <p>Show your support by <span style="color: var(--accent-color);">sharing</span> Totally Science with friends
+        </p>
         <div class="sharethis-inline-share-buttons"></div>
     </div>
 
