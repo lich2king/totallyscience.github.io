@@ -26,7 +26,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/apps.js?v4"></script>
+    <script src="assets/scripts/apps.js?v5"></script>
 </body>
 
 </html>
