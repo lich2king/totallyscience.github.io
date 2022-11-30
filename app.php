@@ -6,12 +6,6 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <style>
-    .iframeloader {
-        background: url(./assets/images/icons/loading.gif) center center no-repeat;
-        background-size: 5vw;
-    }
-    </style>
 </head>
 
 <body>
