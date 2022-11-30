@@ -11,6 +11,12 @@
         "type": "proxy",
         "iframe_url": "https://google.com/"
     },
+    "World Cup": {
+        "image": "assets/apps/icons/worldcup.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
+        "iframe_url": "https://www.foxsports.com/soccer/2022-fifa-world-cup"
+    },
     "Discord": {
         "image": "assets/apps/icons/discord.png",
         "date_added": "2022-02-18T23:39:49.471Z",
