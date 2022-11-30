@@ -8,7 +8,7 @@
 
     <style>
     .iframeloader {
-        background: url(./assets/images/loadinggif.gif) center center no-repeat;
+        background: url(./assets/images/icons/loading.gif) center center no-repeat;
         background-size: 5vw;
     }
     </style>
@@ -25,10 +25,10 @@
         </div>
         <div style="margin-top: 55px; overflow: hidden; height: 91vh; width: 15vw;">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                    data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
 
