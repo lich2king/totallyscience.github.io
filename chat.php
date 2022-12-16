@@ -191,7 +191,13 @@
         <input style="display: none;" id="messageinput" placeholder="Message..." onclick=""></input>
         <button style="display: none;" id="leavebtn" onclick="location.reload();">Leave</button>
     </div>
-
+    <div id="fixedad">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <?php include "assets/includes/footer.php" ?>
 

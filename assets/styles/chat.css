@@ -57,7 +57,7 @@ ul {
     list-style-type: none;
 }
 
-li:nth-child( odd) {
+li:nth-child(odd) {
     background-color: var(--dark-accent);
 }
 
@@ -94,4 +94,12 @@ li {
 
 #leavebtn:hover {
     transform: scale(1.05);
+}
+
+#fixedad {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    height: 80vh;
+    width: 20vw;
 }
