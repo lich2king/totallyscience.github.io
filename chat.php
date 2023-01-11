@@ -11,7 +11,7 @@
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="joinChat">
-        <p>THE CHATROOM IS TEMPORARILY DISABLED</p>
+        <p>THE CHATROOM IS TEMPORARILY DISABLED. WE ARE WORKING ON SCALING IT TO SUPPORT MORE USERS</p>
         <!--<input type="text" placeholder="Room Code...">
         <br>
         <button class="button">Join Room</button>
