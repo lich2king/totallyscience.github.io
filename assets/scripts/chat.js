@@ -1,227 +1,96 @@
-document.getElementById("chatnav").classList.add("selected");
+document.getElementById('chatnav').classList.add('selected');
 
-fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-    res = JSON.parse(res);
+fetch(`assets/php/getCookie.php`)
+    .then((response) => response.text())
+    .then((res) => {
+        res = JSON.parse(res);
 
-    let loggedIn = res ? res['isLoggedIn'] : 'false';
+        let loggedIn = res ? res['isLoggedIn'] : 'false';
 
-    if (loggedIn == 'true' || location.host == 'localhost:3000') {
-        const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
-        const errorText = document.getElementById('errorText');
-        const joinChat = document.getElementById('joinChat');
-        const messageList = document.getElementById('messages');
-        const messageinput = document.getElementById('messageinput');
-        const leavebtn = document.getElementById('leavebtn');
+        if (loggedIn == 'true' || location.host == 'localhost:3000') {
+            const randomColor = () =>
+                Math.floor(Math.random() * 16777215).toString(16);
+            const errorText = document.getElementById('errorText');
+            const joinChat = document.getElementById('joinChat');
+            const messageList = document.getElementById('messages');
+            const messageinput = document.getElementById('messageinput');
+            const leavebtn = document.getElementById('leavebtn');
 
-        let users = [];
-        let colors = [];
-        let url;
+            let users = [];
+            let colors = [];
+            let url;
 
-        joinChat.children[0].value = localStorage.getItem('chatRoom');
-        joinChat.children[2].addEventListener('click', () => {
-            url = 'join_room';
-            joinChatroom();
-        });
-        joinChat.children[4].addEventListener('click', () => {
-            url = 'create_room';
-            joinChatroom();
-        });
-        joinChat.children[6].addEventListener('click', () => {
-            url = 'join_room';
-            joinChatroom('Totally Science');
-        });
+            joinChat.children[0].value = localStorage.getItem('chatRoom');
+            joinChat.children[2].addEventListener('click', () => {
+                url = 'join_room';
+                joinChatroom();
+            });
+            joinChat.children[4].addEventListener('click', () => {
+                url = 'create_room';
+                joinChatroom();
+            });
+            joinChat.children[6].addEventListener('click', () => {
+                url = 'join_room';
+                joinChatroom('Totally Science');
+            });
 
+            var HTMLUtils = new (function () {
+                var rules = [
+                    { replacement: '&', expression: /&amp;/g },
+                    { replacement: '<', expression: /&lt;/g },
+                    { replacement: '>', expression: /&gt;/g },
+                    { replacement: '"', expression: /&quot;/g },
+                ];
+                this.escape = function (html) {
+                    var result = html;
+                    for (var i = 0; i < rules.length; ++i) {
+                        var rule = rules[i];
+                        result = result.replace(
+                            rule.expression,
+                            rule.replacement
+                        );
+                    }
+                    return result;
+                };
+            })();
 
-        var HTMLUtils = new function() {
-            var rules = [
-                { replacement: '&', expression: /&amp;/g },
-                { replacement: '<', expression: /&lt;/g },
-                { replacement: '>', expression: /&gt;/g },
-                { replacement: '"', expression: /&quot;/g },
-            ];
-            this.escape = function(html) {
-                var result = html;
-                for (var i = 0; i < rules.length; ++i) {
-                    var rule = rules[i];
-                    result = result.replace(rule.expression, rule.replacement);
+            function joinChatroom(code) {
+                let roominput;
+
+                if (code) {
+                    roominput = code;
+                } else {
+                    roominput = joinChat.children[0].value;
                 }
-                return result;
-            }
-        };
 
-        function joinChatroom(code) {
-            let roominput;
+                joinChat.style.display = 'none';
 
-            if (code) {
-                roominput = code;
-            } else {
-                roominput = joinChat.children[0].value;
-            }
-
-            joinChat.style.display = 'none';
-
-            try {
-                fetch(`assets/php/chat/${url}.php?id=${roominput}`).then((response) => response.text()).then((res1) => {
-                    let jsonRes;
-
-                    try {
-                        jsonRes = JSON.parse(res1);
-                    } catch (error) {
-                        if (error) {
-                            joinChat.style.display = '';
-                            return errorText.innerText = res1;
-                        }
-                    }
-
-                    if (jsonRes) {
-                        localStorage.setItem('chatRoom', roominput);
-
-                        //display chatroom id
-                        messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
-                        messageList.children[0].children[0].textContent = 'Room Code:';
-
-                        document.querySelector('footer').style.display = 'none';
-
-                        //display messages
-                        jsonRes.reverse();
-                        for (msg in jsonRes) {
-                            let curmsg = jsonRes[msg];
-
-                            if (curmsg[1] == 'Server') {
-                                let foundUser = users.find(user => curmsg[2].startsWith(user));
-
-                                if (foundUser) {
-                                    curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
-                                } else {
-                                    users.push(curmsg[2].split(" ")[0]);
-                                    colors.push(randomColor());
-
-                                    curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
-                                }
-                            } else if (users.includes(curmsg[1].trim())) {
-                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                            } else {
-                                users.push(curmsg[1].trim());
-                                colors.push(randomColor());
-
-                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
-                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                            }
-
-                            messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
-                        }
-
-                        messageinput.style = '';
-                        leavebtn.style = '';
-
-                        setInterval(() => {
-                            try {
-                                fetch(`assets/php/chat/get_chat.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text()).then((res3) => {
-                                    let jsonRes;
-                                    try {
-                                        jsonRes = JSON.parse(res3);
-                                    } catch (error) {
-                                        if (error) {
-                                            return alert(res3);
-                                        }
-                                    }
-
-                                    if (jsonRes) {
-                                        //display chatroom id
-                                        messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
-                                        messageList.children[0].children[0].textContent = 'Room Code:';
-
-                                        //display messages
-                                        jsonRes.reverse();
-                                        for (msg in jsonRes) {
-                                            let curmsg = jsonRes[msg];
-
-                                            if (curmsg[1] == 'Server') {
-                                                let foundUser = users.find(user => curmsg[2].startsWith(user));
-
-                                                if (foundUser) {
-                                                    curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
-                                                } else {
-                                                    users.push(curmsg[2].split(" ")[0]);
-                                                    colors.push(randomColor());
-
-                                                    curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
-                                                }
-                                            } else if (users.includes(curmsg[1].trim())) {
-                                                curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                                            } else {
-                                                users.push(curmsg[1].trim());
-                                                colors.push(randomColor());
-
-                                                curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
-                                                messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
-                                            }
-
-                                            messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
-                                        }
-                                    }
-                                });
-                            } catch (err) {
-                                console.log(err);
-                            }
-                        }, 2000);
-
-                        window.addEventListener('beforeunload', function() {
-                            try {
-                                fetch(`assets/php/chat/leave_room.php?id=${localStorage.getItem('chatRoom')}`).then((response) => response.text());
-                            } catch (err) {
-                                console.log(err);
-                            }
-                        });
-                    } else {
-                        alert(res1)
-
-                        joinChat.style.display = '';
-                    }
-                });
-            } catch (err) {
-                console.log(err);
-
-                joinChat.style.display = '';
-            }
-
-            function getSecondsDiff(startDate, endDate) {
-                const msInSecond = 1000;
-
-                return Math.round(
-                    Math.abs(endDate.getTime() - startDate.getTime()) / msInSecond,
-                );
-            }
-
-            messageinput.addEventListener("keyup", (event) => {
-                if (event.key === 'Enter') {
-                    event.preventDefault();
-                    messageinp = messageinput.value.replace("'", '"');
-                    messageinput.value = '';
-
-                    window.scrollTo(0, document.body.scrollHeight);
-
-                    try {
-                        fetch(`assets/php/chat/send_message.php?id=${localStorage.getItem('chatRoom')}&message=${messageinp}`).then((response) => response.text()).then((res2) => {
+                try {
+                    fetch(`assets/php/chat/${url}.php?id=${roominput}`)
+                        .then((response) => response.text())
+                        .then((res1) => {
                             let jsonRes;
+
                             try {
-                                jsonRes = JSON.parse(res2);
+                                jsonRes = JSON.parse(res1);
                             } catch (error) {
                                 if (error) {
-                                    return alert(res2)
+                                    joinChat.style.display = '';
+                                    return (errorText.innerText = res1);
                                 }
                             }
 
                             if (jsonRes) {
+                                localStorage.setItem('chatRoom', roominput);
+
                                 //display chatroom id
-                                messageList.children[0].children[1].textContent = localStorage.getItem('chatRoom');
-                                messageList.children[0].children[0].textContent = 'Room Code:';
+                                messageList.children[0].children[1].textContent =
+                                    localStorage.getItem('chatRoom');
+                                messageList.children[0].children[0].textContent =
+                                    'Room Code:';
+
+                                document.querySelector('footer').style.display =
+                                    'none';
 
                                 //display messages
                                 jsonRes.reverse();
@@ -229,42 +98,404 @@ fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res)
                                     let curmsg = jsonRes[msg];
 
                                     if (curmsg[1] == 'Server') {
-                                        let foundUser = users.find(user => curmsg[2].startsWith(user));
+                                        let foundUser = users.find((user) =>
+                                            curmsg[2].startsWith(user)
+                                        );
 
                                         if (foundUser) {
-                                            curmsg[2] = `<span3 style="color: #${colors[users.indexOf(foundUser)]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                            curmsg[2] = `<span3 style="color: #${
+                                                colors[users.indexOf(foundUser)]
+                                            }">${HTMLUtils.escape(
+                                                curmsg[2]
+                                            )}</span3>`;
+                                            messageList.children[
+                                                parseInt(msg) + 1
+                                            ].children[1].innerHTML =
+                                                HTMLUtils.escape(
+                                                    curmsg[1] + ': '
+                                                ) + curmsg[2];
                                         } else {
-                                            users.push(curmsg[2].split(" ")[0]);
+                                            users.push(curmsg[2].split(' ')[0]);
                                             colors.push(randomColor());
 
-                                            curmsg[2] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[2])}</span3>`;
-                                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = HTMLUtils.escape(curmsg[1] + ': ') + curmsg[2];
+                                            curmsg[2] = `<span3 style="color: #${
+                                                colors[colors.length - 1]
+                                            }">${HTMLUtils.escape(
+                                                curmsg[2]
+                                            )}</span3>`;
+                                            messageList.children[
+                                                parseInt(msg) + 1
+                                            ].children[1].innerHTML =
+                                                HTMLUtils.escape(
+                                                    curmsg[1] + ': '
+                                                ) + curmsg[2];
                                         }
-                                    } else if (users.includes(curmsg[1].trim())) {
-                                        curmsg[1] = `<span3 style="color: #${colors[users.indexOf(curmsg[1].trim())]}">${HTMLUtils.escape(curmsg[1])}</span3>`;
-                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                    } else if (
+                                        users.includes(curmsg[1].trim())
+                                    ) {
+                                        curmsg[1] = `<span3 style="color: #${
+                                            colors[
+                                                users.indexOf(curmsg[1].trim())
+                                            ]
+                                        }">${HTMLUtils.escape(
+                                            curmsg[1]
+                                        )}</span3>`;
+                                        messageList.children[
+                                            parseInt(msg) + 1
+                                        ].children[1].innerHTML =
+                                            curmsg[1] +
+                                            HTMLUtils.escape(': ' + curmsg[2]);
                                     } else {
                                         users.push(curmsg[1].trim());
                                         colors.push(randomColor());
 
-                                        curmsg[1] = `<span3 style="color: #${colors[colors.length - 1]}">${HTMLUtils.escape(curmsg[1].trim())}</span3>`;
-                                        messageList.children[parseInt(msg) + 1].children[1].innerHTML = curmsg[1] + HTMLUtils.escape(': ' + curmsg[2]);
+                                        curmsg[1] = `<span3 style="color: #${
+                                            colors[colors.length - 1]
+                                        }">${HTMLUtils.escape(
+                                            curmsg[1].trim()
+                                        )}</span3>`;
+                                        messageList.children[
+                                            parseInt(msg) + 1
+                                        ].children[1].innerHTML =
+                                            curmsg[1] +
+                                            HTMLUtils.escape(': ' + curmsg[2]);
                                     }
 
-                                    messageList.children[parseInt(msg) + 1].children[0].textContent = curmsg[0];
+                                    messageList.children[
+                                        parseInt(msg) + 1
+                                    ].children[0].textContent = curmsg[0];
                                 }
+
+                                messageinput.style = '';
+                                leavebtn.style = '';
+
+                                setInterval(() => {
+                                    try {
+                                        fetch(
+                                            `assets/php/chat/get_chat.php?id=${localStorage.getItem(
+                                                'chatRoom'
+                                            )}`
+                                        )
+                                            .then((response) => response.text())
+                                            .then((res3) => {
+                                                let jsonRes;
+                                                try {
+                                                    jsonRes = JSON.parse(res3);
+                                                } catch (error) {
+                                                    if (error) {
+                                                        return alert(res3);
+                                                    }
+                                                }
+
+                                                if (jsonRes) {
+                                                    //display chatroom id
+                                                    messageList.children[0].children[1].textContent =
+                                                        localStorage.getItem(
+                                                            'chatRoom'
+                                                        );
+                                                    messageList.children[0].children[0].textContent =
+                                                        'Room Code:';
+
+                                                    //display messages
+                                                    jsonRes.reverse();
+                                                    for (msg in jsonRes) {
+                                                        let curmsg =
+                                                            jsonRes[msg];
+
+                                                        if (
+                                                            curmsg[1] ==
+                                                            'Server'
+                                                        ) {
+                                                            let foundUser =
+                                                                users.find(
+                                                                    (user) =>
+                                                                        curmsg[2].startsWith(
+                                                                            user
+                                                                        )
+                                                                );
+
+                                                            if (foundUser) {
+                                                                curmsg[2] = `<span3 style="color: #${
+                                                                    colors[
+                                                                        users.indexOf(
+                                                                            foundUser
+                                                                        )
+                                                                    ]
+                                                                }">${HTMLUtils.escape(
+                                                                    curmsg[2]
+                                                                )}</span3>`;
+                                                                messageList.children[
+                                                                    parseInt(
+                                                                        msg
+                                                                    ) + 1
+                                                                ].children[1].innerHTML =
+                                                                    HTMLUtils.escape(
+                                                                        curmsg[1] +
+                                                                            ': '
+                                                                    ) +
+                                                                    curmsg[2];
+                                                            } else {
+                                                                users.push(
+                                                                    curmsg[2].split(
+                                                                        ' '
+                                                                    )[0]
+                                                                );
+                                                                colors.push(
+                                                                    randomColor()
+                                                                );
+
+                                                                curmsg[2] = `<span3 style="color: #${
+                                                                    colors[
+                                                                        colors.length -
+                                                                            1
+                                                                    ]
+                                                                }">${HTMLUtils.escape(
+                                                                    curmsg[2]
+                                                                )}</span3>`;
+                                                                messageList.children[
+                                                                    parseInt(
+                                                                        msg
+                                                                    ) + 1
+                                                                ].children[1].innerHTML =
+                                                                    HTMLUtils.escape(
+                                                                        curmsg[1] +
+                                                                            ': '
+                                                                    ) +
+                                                                    curmsg[2];
+                                                            }
+                                                        } else if (
+                                                            users.includes(
+                                                                curmsg[1].trim()
+                                                            )
+                                                        ) {
+                                                            curmsg[1] = `<span3 style="color: #${
+                                                                colors[
+                                                                    users.indexOf(
+                                                                        curmsg[1].trim()
+                                                                    )
+                                                                ]
+                                                            }">${HTMLUtils.escape(
+                                                                curmsg[1]
+                                                            )}</span3>`;
+                                                            messageList.children[
+                                                                parseInt(msg) +
+                                                                    1
+                                                            ].children[1].innerHTML =
+                                                                curmsg[1] +
+                                                                HTMLUtils.escape(
+                                                                    ': ' +
+                                                                        curmsg[2]
+                                                                );
+                                                        } else {
+                                                            users.push(
+                                                                curmsg[1].trim()
+                                                            );
+                                                            colors.push(
+                                                                randomColor()
+                                                            );
+
+                                                            curmsg[1] = `<span3 style="color: #${
+                                                                colors[
+                                                                    colors.length -
+                                                                        1
+                                                                ]
+                                                            }">${HTMLUtils.escape(
+                                                                curmsg[1].trim()
+                                                            )}</span3>`;
+                                                            messageList.children[
+                                                                parseInt(msg) +
+                                                                    1
+                                                            ].children[1].innerHTML =
+                                                                curmsg[1] +
+                                                                HTMLUtils.escape(
+                                                                    ': ' +
+                                                                        curmsg[2]
+                                                                );
+                                                        }
+
+                                                        messageList.children[
+                                                            parseInt(msg) + 1
+                                                        ].children[0].textContent =
+                                                            curmsg[0];
+                                                    }
+                                                }
+                                            });
+                                    } catch (err) {
+                                        console.log(err);
+                                    }
+                                }, 5000);
+
+                                window.addEventListener(
+                                    'beforeunload',
+                                    function () {
+                                        try {
+                                            fetch(
+                                                `assets/php/chat/leave_room.php?id=${localStorage.getItem(
+                                                    'chatRoom'
+                                                )}`
+                                            ).then((response) =>
+                                                response.text()
+                                            );
+                                        } catch (err) {
+                                            console.log(err);
+                                        }
+                                    }
+                                );
                             } else {
-                                alert(res)
+                                alert(res1);
+
+                                joinChat.style.display = '';
                             }
                         });
-                    } catch (err) {
-                        console.log(err);
-                    }
+                } catch (err) {
+                    console.log(err);
+
+                    joinChat.style.display = '';
                 }
-            });
+
+                function getSecondsDiff(startDate, endDate) {
+                    const msInSecond = 1000;
+
+                    return Math.round(
+                        Math.abs(endDate.getTime() - startDate.getTime()) /
+                            msInSecond
+                    );
+                }
+
+                messageinput.addEventListener('keyup', (event) => {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        messageinp = messageinput.value.replace("'", '"');
+                        messageinput.value = '';
+
+                        window.scrollTo(0, document.body.scrollHeight);
+
+                        try {
+                            fetch(
+                                `assets/php/chat/send_message.php?id=${localStorage.getItem(
+                                    'chatRoom'
+                                )}&message=${messageinp}`
+                            )
+                                .then((response) => response.text())
+                                .then((res2) => {
+                                    let jsonRes;
+                                    try {
+                                        jsonRes = JSON.parse(res2);
+                                    } catch (error) {
+                                        if (error) {
+                                            return alert(res2);
+                                        }
+                                    }
+
+                                    if (jsonRes) {
+                                        //display chatroom id
+                                        messageList.children[0].children[1].textContent =
+                                            localStorage.getItem('chatRoom');
+                                        messageList.children[0].children[0].textContent =
+                                            'Room Code:';
+
+                                        //display messages
+                                        jsonRes.reverse();
+                                        for (msg in jsonRes) {
+                                            let curmsg = jsonRes[msg];
+
+                                            if (curmsg[1] == 'Server') {
+                                                let foundUser = users.find(
+                                                    (user) =>
+                                                        curmsg[2].startsWith(
+                                                            user
+                                                        )
+                                                );
+
+                                                if (foundUser) {
+                                                    curmsg[2] = `<span3 style="color: #${
+                                                        colors[
+                                                            users.indexOf(
+                                                                foundUser
+                                                            )
+                                                        ]
+                                                    }">${HTMLUtils.escape(
+                                                        curmsg[2]
+                                                    )}</span3>`;
+                                                    messageList.children[
+                                                        parseInt(msg) + 1
+                                                    ].children[1].innerHTML =
+                                                        HTMLUtils.escape(
+                                                            curmsg[1] + ': '
+                                                        ) + curmsg[2];
+                                                } else {
+                                                    users.push(
+                                                        curmsg[2].split(' ')[0]
+                                                    );
+                                                    colors.push(randomColor());
+
+                                                    curmsg[2] = `<span3 style="color: #${
+                                                        colors[
+                                                            colors.length - 1
+                                                        ]
+                                                    }">${HTMLUtils.escape(
+                                                        curmsg[2]
+                                                    )}</span3>`;
+                                                    messageList.children[
+                                                        parseInt(msg) + 1
+                                                    ].children[1].innerHTML =
+                                                        HTMLUtils.escape(
+                                                            curmsg[1] + ': '
+                                                        ) + curmsg[2];
+                                                }
+                                            } else if (
+                                                users.includes(curmsg[1].trim())
+                                            ) {
+                                                curmsg[1] = `<span3 style="color: #${
+                                                    colors[
+                                                        users.indexOf(
+                                                            curmsg[1].trim()
+                                                        )
+                                                    ]
+                                                }">${HTMLUtils.escape(
+                                                    curmsg[1]
+                                                )}</span3>`;
+                                                messageList.children[
+                                                    parseInt(msg) + 1
+                                                ].children[1].innerHTML =
+                                                    curmsg[1] +
+                                                    HTMLUtils.escape(
+                                                        ': ' + curmsg[2]
+                                                    );
+                                            } else {
+                                                users.push(curmsg[1].trim());
+                                                colors.push(randomColor());
+
+                                                curmsg[1] = `<span3 style="color: #${
+                                                    colors[colors.length - 1]
+                                                }">${HTMLUtils.escape(
+                                                    curmsg[1].trim()
+                                                )}</span3>`;
+                                                messageList.children[
+                                                    parseInt(msg) + 1
+                                                ].children[1].innerHTML =
+                                                    curmsg[1] +
+                                                    HTMLUtils.escape(
+                                                        ': ' + curmsg[2]
+                                                    );
+                                            }
+
+                                            messageList.children[
+                                                parseInt(msg) + 1
+                                            ].children[0].textContent =
+                                                curmsg[0];
+                                        }
+                                    } else {
+                                        alert(res);
+                                    }
+                                });
+                        } catch (err) {
+                            console.log(err);
+                        }
+                    }
+                });
+            }
+        } else {
+            errorText.innerText = 'You must be logged in to use chat.';
         }
-    } else {
-        errorText.innerText = 'You must be logged in to use chat.';
-    }
-});
+    });
