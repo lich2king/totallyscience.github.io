@@ -11,13 +11,14 @@
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="joinChat">
-        <input type="text" placeholder="Room Code...">
+        <p>THE CHATROOM IS TEMPORARILY DISABLED</p>
+        <!--<input type="text" placeholder="Room Code...">
         <br>
         <button class="button">Join Room</button>
         <br>
         <button class="button">Create Room</button>
         <br>
-        <button class="button">Join Public Chatroom</button>
+        <button class="button">Join Public Chatroom</button>-->
         <p id="errorText" class="error"></p>
         <div class="adsrc" style="text-align:center; margin-top:50px;">
             <!-- Horizontal Ad -->
@@ -201,7 +202,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/chat.js?v52"></script>
+    <!--<script src="assets/scripts/chat.js?v52"></script>-->
 </body>
 
 </html>
