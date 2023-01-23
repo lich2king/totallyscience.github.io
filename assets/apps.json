@@ -44,7 +44,7 @@
     "Firefox": {
         "image": "assets/apps/icons/firefox.png",
         "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "assets/apps/firefox.html"
+        "iframe_url": "https://ffxlive.vercel.app/firefox"
     },
     "Mathway": {
         "image": "assets/apps/icons/mathway.png",
