@@ -21,7 +21,7 @@
                     <h2 class="gametext stroke-text smooth-16">CHESS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class.php?class=Chess', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class?class=Chess', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
             <div class="featureSlot fade"
@@ -31,18 +31,17 @@
                     <h2 class="gametext stroke-text smooth-16">VEX 3</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class.php?class=Vex%203', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class?class=Vex%203', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/cookieclicker.jpg); display:none;">
+                style="background-image: url(./assets/images/featuredimg/bloonstd4.jpg); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">COOKIE CLICKER</h2>
+                    <h2 class="gametext stroke-text smooth-16">BLOONS TD 4</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class.php?class=Cookie%20Clicker', '_self')"
-                    class="featureButton button">Play
+                <button onclick="window.open('class?class=Bloons%20TD%204', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
         </div>
