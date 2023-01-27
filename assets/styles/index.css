@@ -1,5 +1,3 @@
-/* // READY */
-
 html {
     overflow-x: hidden;
 }
@@ -212,42 +210,35 @@ html {
     justify-self: center;
 }
 
-.imageTest {
-    border: 3px solid var(--accent-color);
+.featureSlot {
+    position: relative;
+
     display: flex;
-    padding-left: 5%;
     flex: 1;
-    /* background-color: rgb(76, 76, 76);
-    background-blend-mode:overlay; */
-    width: 700px;
-    height: 400px;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid var(--accent-color);
+    border-radius: 40px;
+
+    height: 50vh;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 40px;
-    color: white;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.featureButton {
+#feature .featureSlot .overlay {
     position: absolute;
-    margin-top: 275px;
-    margin-right: 50px;
-}
+    width: 105%;
+    height: 100%;
 
-.arrows {
     display: flex;
-    flex: 1;
-    margin-right: 5%;
-    font-size: 40px;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
-.arrows img {
+#feature .featureSlot .overlay .arrow {
     width: 50px;
     height: 80px;
     opacity: 0.8;
@@ -255,8 +246,19 @@ html {
     transition: all 0.1s;
 }
 
-.arrows img:hover {
+#feature .featureSlot .overlay .arrow:hover {
     opacity: 1;
+    transform: scale(1.05);
+}
+
+#feature .featureSlot .overlay .gametext {
+    font-size: 3.5vw;
+}
+
+.featureButton {
+    position: absolute;
+    margin-top: 275px;
+    margin-right: 50px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -266,7 +268,7 @@ html {
         justify-content: center;
         margin-top: 0;
     }
-    #gametext {
+    .gametext {
         font-size: 40px;
         padding-left: 10%;
         padding-right: 10%;
@@ -276,7 +278,7 @@ html {
         font-size: 15px;
         flex: 1;
     }
-    .imageTest {
+    .featureSlot {
         max-width: 80%;
         max-height: 50%;
     }

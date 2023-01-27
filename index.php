@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,73 +14,22 @@
 
     <div id="startcontent">
         <div id="feature">
-            <!-- <div style="background-image: url(./assets/images/featuredimg/roblox.jpg); display:none;"
-                class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
-                        onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h2 id="gametext"
-                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
-                        class="stroke-text smooth-16">ROBLOX</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
-                        class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
-                </div>
-                <button onclick="window.open('class.php?class=Roblox', '_self')" class="featureButton button">Play
-                    Now</button>
-            </div> -->
-            <!--<div style="background-image: url(./assets/images/worldcup.jpg); display:none;" class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
-                        onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h2 id="gametext"
-                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
-                        class="stroke-text smooth-16">FIFA WORLD CUP</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
-                        class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
-                </div>
-                <button onclick="window.open('class.php?app=World%20Cup', '_self')" class="featureButton button">Watch
-                    Now</button>
-            </div>-->
-            <div style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;"
-                class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
-                        onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h2 id="gametext"
-                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
-                        class="stroke-text smooth-16">BASKETBALL STARS</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
-                        class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;">
+                <div class="overlay">
+                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                    <h2 class="gametext stroke-text smooth-16">BASKETBALL STARS</h2>
+                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
                 <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')"
                     class="featureButton button">Play Now</button>
             </div>
-            <div style="background-image: url(./assets/images/featuredimg/smashkarts.jpg); display:none;"
-                class="imageTest fade">
-                <div class="arrows">
-                    <div style="padding: 10px;display: flex; flex:1; align-content:flex-start;" class="arrw"
-                        onclick="plusSlides(-1)">
-                        <img src="/assets/images/left-arrow.png">
-                    </div>
-                    <h2 id="gametext"
-                        style="min-width: 100%; display: flex; flex:1; align-content:center; jusitfy-content:center; text-align:center;"
-                        class="stroke-text smooth-16">SMASH KARTS</h2>
-                    <div style="padding: 10px; display: flex; flex:1; align-content:flex-end; justify-content: flex-end;"
-                        class="arrw" onclick="plusSlides(1)">
-                        <img src="/assets/images/right-arrow.png">
-                    </div>
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/smashkarts.jpg); display:none;">
+                <div class="overlay">
+                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                    <h2 class="gametext stroke-text smooth-16">SMASH KARTS</h2>
+                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
                 <button onclick="window.open('class.php?class=Smash%20Karts', '_self')"
                     class="featureButton button">Play Now</button>
