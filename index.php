@@ -15,24 +15,35 @@
     <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/basketballstarsfeature.jpeg); display:none;">
+                style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">BASKETBALL STARS</h2>
+                    <h2 class="gametext stroke-text smooth-16">CHESS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class.php?class=Basketball%20Stars', '_self')"
-                    class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Chess', '_self')" class="featureButton button">Play
+                    Now</button>
             </div>
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/smashkarts.jpg); display:none;">
+                style="background-image: url(./assets/images/featuredimg/vex-3.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">SMASH KARTS</h2>
+                    <h2 class="gametext stroke-text smooth-16">VEX 3</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class.php?class=Smash%20Karts', '_self')"
-                    class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Vex%203', '_self')" class="featureButton button">Play
+                    Now</button>
+            </div>
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/cookieclicker.jpg); display:none;">
+                <div class="overlay">
+                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                    <h2 class="gametext stroke-text smooth-16">COOKIE CLICKER</h2>
+                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
+                </div>
+                <button onclick="window.open('class.php?class=Cookie%20Clicker', '_self')"
+                    class="featureButton button">Play
+                    Now</button>
             </div>
         </div>
 
