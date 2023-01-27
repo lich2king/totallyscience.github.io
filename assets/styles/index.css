@@ -212,35 +212,42 @@ html {
     justify-self: center;
 }
 
-.featureSlot {
-    position: relative;
-
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-
+.imageTest {
     border: 3px solid var(--accent-color);
-    border-radius: 40px;
-
-    height: 50vh;
-
+    display: flex;
+    padding-left: 5%;
+    flex: 1;
+    /* background-color: rgb(76, 76, 76);
+    background-blend-mode:overlay; */
+    width: 700px;
+    height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#feature .featureSlot .overlay {
-    position: absolute;
-    width: 105%;
-    height: 100%;
-
-    display: flex;
+    border-radius: 40px;
+    color: white;
+    font-size: 25px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-#feature .featureSlot .overlay .arrow {
+.featureButton {
+    position: absolute;
+    margin-top: 275px;
+    margin-right: 50px;
+}
+
+.arrows {
+    display: flex;
+    flex: 1;
+    margin-right: 5%;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows img {
     width: 50px;
     height: 80px;
     opacity: 0.8;
@@ -248,19 +255,8 @@ html {
     transition: all 0.1s;
 }
 
-#feature .featureSlot .overlay .arrow:hover {
+.arrows img:hover {
     opacity: 1;
-    transform: scale(1.05);
-}
-
-#feature .featureSlot .overlay .gametext {
-    font-size: 3.5vw;
-}
-
-.featureButton {
-    position: absolute;
-    margin-top: 275px;
-    margin-right: 50px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -270,7 +266,7 @@ html {
         justify-content: center;
         margin-top: 0;
     }
-    .gametext {
+    #gametext {
         font-size: 40px;
         padding-left: 10%;
         padding-right: 10%;
@@ -280,7 +276,7 @@ html {
         font-size: 15px;
         flex: 1;
     }
-    .featureSlot {
+    .imageTest {
         max-width: 80%;
         max-height: 50%;
     }
