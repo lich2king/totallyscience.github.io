@@ -439,8 +439,6 @@ function checkReward() {
     console.log('checking');
     if (loggedIn) {
         console.log('loggedin');
-        var startTimer = false;
-        var endTime;
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         if (localStorage.getItem('rewardTimer') != null) {
@@ -458,13 +456,11 @@ function checkReward() {
                             console.log('set local storage');
                             console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
-                            endTime = dbRewardTime;
-                            startTimer = true;
+                            startTimer(dbRewardTime);
                         }
                     });
             } else {
-                endTime = rewardTime;
-                startTimer = true;
+                startTimer(rewardTime);
             }
         } else {
             console.log('did not find local storage');
@@ -486,36 +482,10 @@ function checkReward() {
                             console.log('set local storage');
                             console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
-                            endTime = dbRewardTime;
-                            startTimer = true;
-                            console.log('Should have started timer');
-                            console.log(startTimer);
+                            startTimer(dbRewardTime);
                         }
                     }
                 });
-        }
-        console.log(startTimer);
-        if (startTimer) {
-            console.log('starting timer...');
-            setInterval(function () {
-                var currentTime = Math.floor(Date.now() / 1000);
-                var remainingTime = endTime - currentTime;
-
-                var seconds = Math.floor(remainingTime % 60)
-                    .toString()
-                    .padStart(2, '0');
-                var minutes = Math.floor((remainingTime / 60) % 60)
-                    .toString()
-                    .padStart(2, '0');
-                var hours = Math.floor((remainingTime / (60 * 60)) % 24)
-                    .toString()
-                    .padStart(2, '0');
-
-                console.log(endTime);
-                console.log(hours + ':' + minutes + ':' + seconds);
-                // document.getElementById('rewardTimer').innerHTML =
-                //     hours + ':' + minutes + ':' + seconds;
-            }, 1000);
         }
     } else {
         console.log('Signup to claim');
@@ -523,3 +493,26 @@ function checkReward() {
 }
 
 //var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
+
+function startTimer(endTime) {
+    console.log('starting timer...');
+    setInterval(function () {
+        var currentTime = Math.floor(Date.now() / 1000);
+        var remainingTime = endTime - currentTime;
+
+        var seconds = Math.floor(remainingTime % 60)
+            .toString()
+            .padStart(2, '0');
+        var minutes = Math.floor((remainingTime / 60) % 60)
+            .toString()
+            .padStart(2, '0');
+        var hours = Math.floor((remainingTime / (60 * 60)) % 24)
+            .toString()
+            .padStart(2, '0');
+
+        console.log(endTime);
+        console.log(hours + ':' + minutes + ':' + seconds);
+        // document.getElementById('rewardTimer').innerHTML =
+        //     hours + ':' + minutes + ':' + seconds;
+    }, 1000);
+}
