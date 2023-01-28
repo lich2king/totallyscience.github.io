@@ -450,7 +450,7 @@ function checkReward() {
 
             if (timeDifference <= 0) {
                 fetch(`assets/php/points/checkrewardtimer.php`)
-                    .then((dbRewardTime) => response.json())
+                    .then((dbRewardTime) => dbRewardTime.json())
                     .then((dbRewardTime) => {
                         timeDifference =
                             new Date(dbRewardTime).getTime() -
@@ -469,7 +469,7 @@ function checkReward() {
         } else {
             console.log('did not find local storage');
             fetch(`assets/php/points/checkrewardtimer.php`)
-                .then((dbRewardTime) => response.json())
+                .then((dbRewardTime) => dbRewardTime.json())
                 .then((dbRewardTime) => {
                     timeDifference =
                         new Date(dbRewardTime).getTime() -
