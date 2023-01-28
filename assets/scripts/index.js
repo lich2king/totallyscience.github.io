@@ -450,7 +450,7 @@ function checkReward() {
 
             if (timeDifference <= 0) {
                 fetch(`assets/php/points/checkrewardtimer.php`).then(
-                    (dbRewardTime) => {
+                    (dbRewardTime) => response.json()).then((dbRewardTime) => {
                         timeDifference =
                             new Date(dbRewardTime).getTime() -
                             currentTime.getTime();
@@ -463,13 +463,13 @@ function checkReward() {
                             endTime = new Date(dbRewardTime);
                             startTimer = true;
                         }
-                    }
+                    });
                 );
             }
         } else {
             console.log('did not find local storage');
             fetch(`assets/php/points/checkrewardtimer.php`).then(
-                (dbRewardTime) => {
+                (dbRewardTime) => response.json()).then((dbRewardTime) => {
                     timeDifference =
                         new Date(dbRewardTime).getTime() -
                         currentTime.getTime();
