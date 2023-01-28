@@ -441,7 +441,7 @@ function checkReward() {
         console.log('loggedin');
         var startTimer = false;
         var endTime;
-        var currentTime = Date.now();
+        var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         if (localStorage.getItem('rewardTimer') != null) {
             console.log('found local storage');
