@@ -589,6 +589,8 @@ function setRewardDayBar() {
             .then((rewardDay) => {
                 day = rewardDay;
 
+                console.log(rewardDay);
+
                 document.getElementById('rewardDayBar').style = `width: ${
                     (100 / 7) * (day + 1)
                 }%`;
