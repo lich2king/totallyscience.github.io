@@ -465,6 +465,8 @@ function checkReward() {
                             startTimer = true;
                         }
                     });
+            } else {
+                startTimer = true;
             }
         } else {
             console.log('did not find local storage');
