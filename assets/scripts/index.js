@@ -577,18 +577,20 @@ function claimReward() {
         });
 }
 
-async function setRewardDayBar() {
+function setRewardDayBar() {
     let day = 0;
-
-    if (loggedIn) {
-        day = await (
-            await fetch(`assets/php/points/checkrewardday.php`)
-        ).text();
-    }
-
-    console.log(day);
-
     document.getElementById('rewardDayBar').style = `width: ${
         (100 / 7) * (day + 1)
     }%`;
+
+    if (loggedIn) {
+        fetch(`assets/php/points/checkrewardday.php`)
+            .then((rewardDay) => rewardDay.text())
+            .then((rewardDay) => {
+                day = 0;
+                document.getElementById('rewardDayBar').style = `width: ${
+                    (100 / 7) * (day + 1)
+                }%`;
+            });
+    }
 }
