@@ -591,13 +591,13 @@ function setRewardDayBar() {
 
                 let w = (100 / 7) * (day + 1);
 
+                document.getElementById('rewardDayBar').style = `width: ${w}%`;
+
                 if (day == 6) {
                     w = 100;
                     document.getElementById('rewardDayBar').style +=
-                        'border-top-right-radius: 15px; border-bottom-right-radius: 15px;';
+                        'border-top-right-radius: 15px; border-bottom-right-radius: 15px; ';
                 }
-
-                document.getElementById('rewardDayBar').style = `width: ${w}%`;
             });
     } else {
         let w = (100 / 7) * (day + 1);
