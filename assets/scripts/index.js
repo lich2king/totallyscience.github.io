@@ -570,8 +570,8 @@ function claimReward() {
         .then((response) => {
             alert(response);
             if (response == 'Success') {
-                //update bar
                 //update score in navbar
+                setRewardDayBar();
             }
             document.getElementById('dailyRewardPopup').style.display = 'none';
         });
@@ -596,4 +596,6 @@ function setRewardDayBar() {
         let w = (100 / 7) * (day + 1);
         document.getElementById('rewardDayBar').style = `width: ${w}%`;
     }
+
+    //update score in nav bar
 }

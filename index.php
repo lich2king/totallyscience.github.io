@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v13'>
+    <link rel='stylesheet' href='assets/styles/index.css?v14'>
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script>
@@ -14,7 +14,7 @@
 
     <div id="pointsbar" style="display: none">
         <div class="backbar">
-            <div id="rewardDayBar" class="bar" style="width:14%"></div>
+            <div id="rewardDayBar" class="bar" style="width:0%"></div>
             <div class="dayCon">
                 <p>Day 1</p>
                 <p>Day 2</p>
@@ -341,7 +341,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v100"></script>
+    <script src="assets/scripts/index.js?v101"></script>
 </body>
 
 </html>
