@@ -586,6 +586,8 @@ async function setRewardDayBar() {
         ).text();
     }
 
+    console.log(day);
+
     document.getElementById('rewardDayBar').style = `width: ${
         (100 / 7) * (day + 1)
     }%`;
