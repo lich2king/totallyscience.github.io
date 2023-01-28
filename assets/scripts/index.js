@@ -567,9 +567,11 @@ function claimReward() {
     fetch(`assets/php/points/claimreward.php`)
         .then((response) => response.text())
         .then((response) => {
+            alert(response);
             if (response == 'Success') {
                 //update bar
                 //update score in navbar
             }
+            document.getElementById('dailyRewardPopup').style.display = 'none';
         });
 }
