@@ -479,6 +479,7 @@ function checkReward() {
                         //REMOVE THIS WHEN THE TIME IS RIGHT
                         fetch(`assets/php/points/resettimer.php`);
                     } else {
+                        console.log(dbRewardTime);
                         if (currentTime > dbRewardTime) {
                             console.log('Claim reward');
                         } else {
