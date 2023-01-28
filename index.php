@@ -272,21 +272,21 @@
             <div class="row">
                 <div>
                     <div class="circle">
-                        <img class="popCheck"
+                        <img class="popCheck" style="visibility: hidden;"
                             src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
                     </div>
                     <p>Day 1</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="popCheck"
+                        <img class="popCheck" style="visibility: hidden;"
                             src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
                     </div>
                     <p>Day 2</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="popCheck"
+                        <img class="popCheck" style="visibility: hidden;"
                             src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
                     </div>
                     <p>Day 3</p>
