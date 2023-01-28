@@ -579,9 +579,6 @@ function claimReward() {
 
 function setRewardDayBar() {
     let day = 0;
-    document.getElementById('rewardDayBar').style = `width: ${
-        (100 / 7) * (day + 1)
-    }%`;
 
     if (loggedIn) {
         fetch(`assets/php/points/checkrewardday.php`)
@@ -595,5 +592,8 @@ function setRewardDayBar() {
 
                 document.getElementById('rewardDayBar').style = `width: ${w}%`;
             });
+    } else {
+        let w = (100 / 7) * (day + 1);
+        document.getElementById('rewardDayBar').style = `width: ${w}%`;
     }
 }
