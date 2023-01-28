@@ -584,11 +584,11 @@ function setRewardDayBar() {
         fetch(`assets/php/points/checkrewardday.php`)
             .then((rewardDay) => rewardDay.text())
             .then((rewardDay) => {
-                day = rewardDay;
+                day = parseInt(rewardDay);
 
                 console.log(rewardDay);
                 console.log(day);
-                let w = (100 / 7) * (rewardDay + 1);
+                let w = (100 / 7) * (day + 1);
 
                 document.getElementById('rewardDayBar').style = `width: ${w}%`;
             });
