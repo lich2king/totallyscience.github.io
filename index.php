@@ -14,7 +14,7 @@
 
     <div id="pointsbar" style="display: none">
         <div class="backbar">
-            <div class="bar"></div>
+            <div id="rewardDayBar" class="bar" style="width:14%"></div>
             <div class="dayCon">
                 <p>Day 1</p>
                 <p>Day 2</p>

@@ -30,7 +30,6 @@ html {
 #pointsbar .backbar .bar {
     position: absolute;
     background-color: var(--accent-color);
-    width: 50%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;

@@ -437,6 +437,7 @@ function createGameButton(game, pin) {
 
 function checkReward() {
     console.log('checking');
+    setRewardDayBar();
     if (loggedIn) {
         console.log('loggedin');
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
@@ -574,4 +575,18 @@ function claimReward() {
             }
             document.getElementById('dailyRewardPopup').style.display = 'none';
         });
+}
+
+async function setRewardDayBar() {
+    let day = 0;
+
+    if (loggedIn) {
+        day = await (
+            await fetch(`assets/php/points/checkrewardday.php`)
+        ).text();
+    }
+
+    document.getElementById('rewardDayBar').style = `width: ${
+        (100 / 7) * (day + 1)
+    }%`;
 }
