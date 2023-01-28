@@ -334,7 +334,7 @@
 
             </div>
         </div>
-        <button onclick="" class="button">Claim Reward</button>
+        <button onclick="claimReward()" class="button">Claim Reward</button>
         <p class="ignore">Or ignore the free reward</p>
     </div>
 
