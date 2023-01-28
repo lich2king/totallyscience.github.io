@@ -438,11 +438,13 @@ function createGameButton(game, pin) {
 function checkReward() {
     console.log('checking');
     if (loggedIn) {
+        console.log('loggedin');
         let startTimer = false;
         let endTime;
         var currentTime = new Date();
 
         if (localStorage.getItem('rewardTimer') != null) {
+            console.log('found local storage');
             const rewardTime = new Date(localStorage.getItem('rewardTimer'));
             var timeDifference = rewardTime.getTime() - currentTime.getTime();
 
@@ -464,6 +466,7 @@ function checkReward() {
                 );
             }
         } else {
+            console.log('did not find local storage');
             fetch(`assets/php/points/checkrewardtimer.php`).then(
                 (dbRewardTime) => {
                     timeDifference =
@@ -481,6 +484,7 @@ function checkReward() {
             );
         }
         if (startTimer) {
+            console.log('starting timer...');
             setInterval(function () {
                 var remainingTime = endTime - new Date().getTime();
 
