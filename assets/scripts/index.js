@@ -436,6 +436,7 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
+    console.log('checking');
     if (loggedIn) {
         let startTimer = false;
         let endTime;
