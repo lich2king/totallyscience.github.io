@@ -488,6 +488,8 @@ function checkReward() {
                             localStorage.setItem('rewardTimer', dbRewardTime);
                             endTime = dbRewardTime;
                             startTimer = true;
+                            console.log('Should have started timer');
+                            console.log(startTimer);
                         }
                     }
                 });
