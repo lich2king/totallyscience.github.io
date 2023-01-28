@@ -458,6 +458,7 @@ function checkReward() {
                             console.log('Claim reward');
                         } else {
                             console.log('set local storage');
+                            console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
                             endTime = new Date(dbRewardTime);
                             startTimer = true;
