@@ -82,6 +82,7 @@ async function loadCookies() {
     //when done
     loadTopic();
     suggestGames();
+    checkReward();
 }
 
 function loadTopic() {
@@ -434,20 +435,72 @@ function createGameButton(game, pin) {
 //if it is over, check database
 //if database says it is not over, set local storage to correct time and keep counting
 
-// var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
+function checkReward() {
+    if (loggedIn) {
+        let startTimer = false;
+        let endTime;
+        var currentTime = new Date();
 
-// setInterval(function () {
-//     var remainingTime = endTime - new Date().getTime();
-//     var seconds = Math.floor((remainingTime / 1000) % 60)
-//         .toString()
-//         .padStart(2, '0');
-//     var minutes = Math.floor((remainingTime / 1000 / 60) % 60)
-//         .toString()
-//         .padStart(2, '0');
-//     var hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24)
-//         .toString()
-//         .padStart(2, '0');
+        if (localStorage.getItem('rewardTimer') != null) {
+            const rewardTime = new Date(localStorage.getItem('rewardTimer'));
+            var timeDifference = rewardTime.getTime() - currentTime.getTime();
 
-//     document.getElementById('rewardTimer').innerHTML =
-//         hours + ':' + minutes + ':' + seconds;
-// }, 1000);
+            if (timeDifference <= 0) {
+                fetch(`assets/php/points/checkrewardtimer.php`).then(
+                    (dbRewardTime) => {
+                        timeDifference =
+                            new Date(dbRewardTime).getTime() -
+                            currentTime.getTime();
+                        if (timeDifference <= 0) {
+                            console.log('Claim reward');
+                        } else {
+                            console.log('set local storage');
+                            localStorage.setItem('rewardTimer', dbRewardTime);
+                            endTime = new Date(dbRewardTime);
+                            startTimer = true;
+                        }
+                    }
+                );
+            }
+        } else {
+            fetch(`assets/php/points/checkrewardtimer.php`).then(
+                (dbRewardTime) => {
+                    timeDifference =
+                        new Date(dbRewardTime).getTime() -
+                        currentTime.getTime();
+                    if (timeDifference <= 0) {
+                        console.log('Claim reward');
+                    } else {
+                        console.log('set local storage');
+                        localStorage.setItem('rewardTimer', dbRewardTime);
+                        endTime = new Date(dbRewardTime);
+                        startTimer = true;
+                    }
+                }
+            );
+        }
+        if (startTimer) {
+            setInterval(function () {
+                var remainingTime = endTime - new Date().getTime();
+
+                var seconds = Math.floor((remainingTime / 1000) % 60)
+                    .toString()
+                    .padStart(2, '0');
+                var minutes = Math.floor((remainingTime / 1000 / 60) % 60)
+                    .toString()
+                    .padStart(2, '0');
+                var hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24)
+                    .toString()
+                    .padStart(2, '0');
+
+                console.log(hours + ':' + minutes + ':' + seconds);
+                // document.getElementById('rewardTimer').innerHTML =
+                //     hours + ':' + minutes + ':' + seconds;
+            }, 1000);
+        }
+    } else {
+        console.log('Signup to claim');
+    }
+}
+
+//var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
