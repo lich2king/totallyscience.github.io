@@ -489,6 +489,7 @@ function checkReward() {
         }
     } else {
         console.log('Signup to claim');
+        console.log('get rid of unneccessary padding when done with this');
     }
 }
 
