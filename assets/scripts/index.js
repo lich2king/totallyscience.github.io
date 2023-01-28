@@ -451,6 +451,7 @@ function checkReward() {
                 fetch(`assets/php/points/checkrewardtimer.php`)
                     .then((dbRewardTime) => dbRewardTime.text())
                     .then((dbRewardTime) => {
+                        console.log(dbRewardTime);
                         if (currentTime > dbRewardTime) {
                             console.log('Claim reward');
                         } else {
