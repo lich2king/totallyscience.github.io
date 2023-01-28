@@ -567,7 +567,7 @@ function claimReward() {
     fetch(`assets/php/points/claimreward.php`)
         .then((response) => response.text())
         .then((response) => {
-            if (response == 'success') {
+            if (response == 'Success') {
                 //update bar
                 //update score in navbar
             }
