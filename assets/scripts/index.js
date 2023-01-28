@@ -439,8 +439,8 @@ function checkReward() {
     console.log('checking');
     if (loggedIn) {
         console.log('loggedin');
-        let startTimer = false;
-        let endTime;
+        var startTimer = false;
+        var endTime;
         var currentTime = new Date();
 
         if (localStorage.getItem('rewardTimer') != null) {
@@ -503,6 +503,7 @@ function checkReward() {
                     .toString()
                     .padStart(2, '0');
 
+                console.log(endTime);
                 console.log(hours + ':' + minutes + ':' + seconds);
                 // document.getElementById('rewardTimer').innerHTML =
                 //     hours + ':' + minutes + ':' + seconds;
