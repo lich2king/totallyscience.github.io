@@ -492,6 +492,7 @@ function checkReward() {
                     }
                 });
         }
+        console.log(startTimer);
         if (startTimer) {
             console.log('starting timer...');
             setInterval(function () {
