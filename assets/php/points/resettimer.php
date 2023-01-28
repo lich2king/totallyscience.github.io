@@ -18,7 +18,7 @@
   $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
   //first check if the user has a game pass account
-  $query = "UPDATE accounts SET DailyReward = DATE_ADD(UTC_TIMESTAMP(), INTERVAL 24 HOUR)  WHERE ID = '$userid'";
+  $query = "UPDATE accounts SET DailyReward = UNIX_TIMESTAMP() + 86400  WHERE ID = '$userid'";
   $result = mysqli_query($conn, $query);
 
   $conn->close();
