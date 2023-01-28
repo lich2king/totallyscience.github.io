@@ -660,3 +660,132 @@ input[type='text'] {
     color: var(--accent-color);
     font-weight: 200;
 }
+
+/*Daily reward popup css */
+
+#dailyRewardPopup {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    background-color: #8b1299;
+    z-index: 100;
+    transform: translate(50%, -50%);
+    width: 500px;
+    height: 600px;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    color: var(--light-color);
+}
+
+#dailyRewardPopup h1 {
+    font-style: italic;
+    font-size: 2.5rem;
+    margin: 0%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+#dailyRewardPopup .timerCon {
+    width: 80%;
+    height: 7%;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 10px 10px #00000042;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dailyRewardPopup .timerCon p {
+    font-size: 1.3rem;
+}
+
+#dailyRewardPopup .points {
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-top: 5%;
+    -webkit-filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
+}
+
+#dailyRewardPopup .days {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+#dailyRewardPopup .days .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#dailyRewardPopup .days .row div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#dailyRewardPopup .days .row div p {
+    margin: 0%;
+}
+
+#dailyRewardPopup .days .row div .circle {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 10px 10px #00000042;
+}
+
+#dailyRewardPopup .days .row img {
+    width: 50px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+#dailyRewardPopup .days .row div .treasure {
+    position: absolute;
+    width: 40px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    -webkit-filter: drop-shadow(0px 0px 15px rgb(172, 255, 47));
+    animation: treasure-animation 1s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes treasure-animation {
+    0% {
+        -webkit-filter: drop-shadow(0px 0px 5px rgb(172, 255, 47));
+    }
+    50% {
+        -webkit-filter: drop-shadow(0px 0px 15px rgb(172, 255, 47));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 5px rgb(172, 255, 47));
+    }
+}
+
+#dailyRewardPopup button {
+    margin-top: auto;
+    box-shadow: 0px 10px 10px #00000042;
+    margin-bottom: 30px;
+}
+
+#dailyRewardPopup .ignore {
+    margin: 0%;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+}

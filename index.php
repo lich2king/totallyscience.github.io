@@ -80,7 +80,10 @@
                 style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
         <p>Show your support by <span style="color: var(--accent-color);">sharing</span> Totally Science with friends
         </p>
-        <div class="sharethis-inline-share-buttons"></div>
+        <div style="z-index=-5;">
+            <div class="sharethis-inline-share-buttons"></div>
+        </div>
+
     </div>
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
@@ -256,9 +259,89 @@
         <br><br>
     </div>
 
+
+    <div id="dailyRewardPopup" style="display:none">
+        <h1>
+            Daily Reward
+        </h1>
+        <div class="timerCon">
+            <p>Next reward in <span id="popTimer">23:59:59</span></p>
+        </div>
+        <p class="points">+<span id="popPoints">100</span> points!</p>
+        <div class="days">
+            <div class="row">
+                <div>
+                    <div class="circle">
+                        <img class="popCheck"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 1</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img class="popCheck"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 2</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img class="popCheck"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 3</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img class="popCheck" style="visibility: hidden;"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 4</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div>
+                    <div class="circle">
+                        <img class="popCheck" style="visibility: hidden;"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 5</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img class="popCheck" style="visibility: hidden;"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 6</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img class="treasure" style=""
+                            src="https://clipartix.com/wp-content/uploads/2016/07/Free-treasure-chest-clipart-the-cliparts-2.png">
+                        <img class="popCheck" style="visibility:hidden"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p>Day 7</p>
+                </div>
+                <div style="visibility:hidden">
+                    <div class="circle">
+                        <img style="visibility: hidden;"
+                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                    </div>
+                    <p></p>
+                </div>
+
+            </div>
+        </div>
+        <button onclick="" class="button">Claim Reward</button>
+        <p class="ignore">Or ignore the free reward</p>
+    </div>
+
+
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v85"></script>
+    <script src="assets/scripts/index.js?v86"></script>
 </body>
 
 </html>

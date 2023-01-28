@@ -517,3 +517,53 @@ function startTimer(endTime) {
         //     hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
+
+function rewardPop() {
+    document.getElementById('dailyRewardPopup').style.display = '';
+
+    let points = 100;
+    //figure out how many points to give with a db call...
+
+    fetch(`assets/php/points/checkrewardtimer.php`)
+        .then((rewardDay) => dbRewardTime.text())
+        .then((rewardDay) => {
+            if (rewardDay == 6) {
+                points = 1000;
+            }
+            document.getElementById('popPoints').innerHTML = points;
+            for (let i = 0; i <= rewardDay; i++) {
+                document.getElementsByClassName('popCheck')[i].style =
+                    'visibility: visible;';
+            }
+            for (let i = 6; i > rewardDay; i--) {
+                document.getElementsByClassName('popCheck')[i].style =
+                    'visibility: hidden;';
+            }
+        });
+
+    var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
+    setInterval(function () {
+        var currentTime = Math.floor(Date.now() / 1000);
+        var remainingTime = endTime - currentTime;
+
+        var seconds = Math.floor(remainingTime % 60)
+            .toString()
+            .padStart(2, '0');
+        var minutes = Math.floor((remainingTime / 60) % 60)
+            .toString()
+            .padStart(2, '0');
+        var hours = Math.floor((remainingTime / (60 * 60)) % 24)
+            .toString()
+            .padStart(2, '0');
+
+        // console.log(endTime);
+        // console.log(hours + ':' + minutes + ':' + seconds);
+        document.getElementById('popTimer').innerHTML =
+            hours + ':' + minutes + ':' + seconds;
+    }, 1000);
+}
+
+function acceptReward() {
+    //check that the time is up for the reward
+    //give the correct points, then reset the timer
+}
