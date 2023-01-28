@@ -461,11 +461,12 @@ function checkReward() {
                             console.log('set local storage');
                             console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
-                            endTime = new Date(dbRewardTime);
+                            endTime = new Date(dbRewardTime).getTime();
                             startTimer = true;
                         }
                     });
             } else {
+                endTime = rewardTime.getTime();
                 startTimer = true;
             }
         } else {
@@ -482,7 +483,7 @@ function checkReward() {
                         console.log('set local storage');
                         console.log(dbRewardTime);
                         localStorage.setItem('rewardTimer', dbRewardTime);
-                        endTime = new Date(dbRewardTime);
+                        endTime = new Date(dbRewardTime).getTime();
                         startTimer = true;
                     }
                 });
