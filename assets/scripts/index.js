@@ -524,8 +524,8 @@ function rewardPop() {
     let points = 100;
     //figure out how many points to give with a db call...
 
-    fetch(`assets/php/points/checkrewardtimer.php`)
-        .then((rewardDay) => dbRewardTime.text())
+    fetch(`assets/php/points/checkrewardday.php`)
+        .then((rewardDay) => rewardDay.text())
         .then((rewardDay) => {
             if (rewardDay == 6) {
                 points = 1000;
