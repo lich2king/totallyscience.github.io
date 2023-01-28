@@ -22,7 +22,7 @@
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];
 
-  die($result);
+  echo($result);
 
   $conn->close();
 ?>
