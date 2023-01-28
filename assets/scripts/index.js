@@ -428,3 +428,26 @@ function createGameButton(game, pin) {
 
     return gameBtn;
 }
+
+//check for local storage of daily reward
+//if it is not over, set endTime to local storage time then count
+//if it is over, check database
+//if database says it is not over, set local storage to correct time and keep counting
+
+// var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
+
+// setInterval(function () {
+//     var remainingTime = endTime - new Date().getTime();
+//     var seconds = Math.floor((remainingTime / 1000) % 60)
+//         .toString()
+//         .padStart(2, '0');
+//     var minutes = Math.floor((remainingTime / 1000 / 60) % 60)
+//         .toString()
+//         .padStart(2, '0');
+//     var hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24)
+//         .toString()
+//         .padStart(2, '0');
+
+//     document.getElementById('rewardTimer').innerHTML =
+//         hours + ':' + minutes + ':' + seconds;
+// }, 1000);

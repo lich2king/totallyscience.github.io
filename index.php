@@ -12,7 +12,24 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div id="startcontent">
+    <!-- <div id="pointsbar">
+        <div class="backbar">
+            <div class="bar"></div>
+            <div class="dayCon">
+                <p>Day 1</p>
+                <p>Day 2</p>
+                <p>Day 3</p>
+                <p>Day 4</p>
+                <p>Day 5</p>
+                <p>Day 6</p>
+                <img
+                    src="https://clipartix.com/wp-content/uploads/2016/07/Free-treasure-chest-clipart-the-cliparts-2.png">
+            </div>
+        </div>
+        <p class='timerText'>Daily Reward In <span id="rewardTimer">23:59:59</span></p>
+    </div> -->
+
+    <div id="startcontent" style="margin-top:100px">
         <div id="feature">
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
