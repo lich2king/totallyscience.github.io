@@ -441,33 +441,28 @@ function checkReward() {
         console.log('loggedin');
         var startTimer = false;
         var endTime;
-        var currentTime = new Date();
+        var currentTime = Date.now();
 
         if (localStorage.getItem('rewardTimer') != null) {
             console.log('found local storage');
-            const rewardTime = new Date(localStorage.getItem('rewardTimer'));
-            var timeDifference =
-                new Date(rewardTime).getTime() - currentTime.getTime();
+            const rewardTime = localStorage.getItem('rewardTimer');
 
-            if (timeDifference <= 0) {
+            if (currentTime > rewardTime) {
                 fetch(`assets/php/points/checkrewardtimer.php`)
                     .then((dbRewardTime) => dbRewardTime.text())
                     .then((dbRewardTime) => {
-                        timeDifference =
-                            new Date(dbRewardTime).getTime() -
-                            currentTime.getTime();
-                        if (timeDifference <= 0) {
+                        if (currentTime > dbRewardTime) {
                             console.log('Claim reward');
                         } else {
                             console.log('set local storage');
                             console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
-                            endTime = new Date(dbRewardTime).getTime();
+                            endTime = dbRewardTime;
                             startTimer = true;
                         }
                     });
             } else {
-                endTime = new Date(rewardTime).getTime();
+                endTime = rewardTime;
                 startTimer = true;
             }
         } else {
@@ -475,7 +470,7 @@ function checkReward() {
             fetch(`assets/php/points/checkrewardtimer.php`)
                 .then((dbRewardTime) => dbRewardTime.text())
                 .then((dbRewardTime) => {
-                    if (dbRewardTime == '0000-00-00 00:00:00') {
+                    if (dbRewardTime == 0) {
                         //offer reward
                         console.log(
                             'Reward should be offered here and then when they accept, timer will be reset!'
@@ -483,16 +478,13 @@ function checkReward() {
                         //REMOVE THIS WHEN THE TIME IS RIGHT
                         fetch(`assets/php/points/resettimer.php`);
                     } else {
-                        timeDifference =
-                            new Date(dbRewardTime).getTime() -
-                            currentTime.getTime();
-                        if (timeDifference <= 0) {
+                        if (currentTime > dbRewardTime) {
                             console.log('Claim reward');
                         } else {
                             console.log('set local storage');
                             console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
-                            endTime = new Date(dbRewardTime).getTime();
+                            endTime = dbRewardTime;
                             startTimer = true;
                         }
                     }
@@ -501,15 +493,16 @@ function checkReward() {
         if (startTimer) {
             console.log('starting timer...');
             setInterval(function () {
-                var remainingTime = endTime - new Date().getTime();
+                var currentTime = Math.floor(Date.now() / 1000);
+                var remainingTime = endTime - currentTime;
 
-                var seconds = Math.floor((remainingTime / 1000) % 60)
+                var seconds = Math.floor(remainingTime % 60)
                     .toString()
                     .padStart(2, '0');
-                var minutes = Math.floor((remainingTime / 1000 / 60) % 60)
+                var minutes = Math.floor((remainingTime / 60) % 60)
                     .toString()
                     .padStart(2, '0');
-                var hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24)
+                var hours = Math.floor((remainingTime / (60 * 60)) % 24)
                     .toString()
                     .padStart(2, '0');
 
