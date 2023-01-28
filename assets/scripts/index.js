@@ -446,7 +446,8 @@ function checkReward() {
         if (localStorage.getItem('rewardTimer') != null) {
             console.log('found local storage');
             const rewardTime = new Date(localStorage.getItem('rewardTimer'));
-            var timeDifference = rewardTime.getTime() - currentTime.getTime();
+            var timeDifference =
+                new Date(rewardTime).getTime() - currentTime.getTime();
 
             if (timeDifference <= 0) {
                 fetch(`assets/php/points/checkrewardtimer.php`)
@@ -466,7 +467,7 @@ function checkReward() {
                         }
                     });
             } else {
-                endTime = rewardTime.getTime();
+                endTime = new Date(rewardTime).getTime();
                 startTimer = true;
             }
         } else {
