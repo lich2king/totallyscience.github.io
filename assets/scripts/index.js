@@ -591,10 +591,9 @@ function setRewardDayBar() {
 
                 console.log(rewardDay);
                 console.log(day);
+                let w = (100 / 7) * (day + 1);
 
-                document.getElementById('rewardDayBar').style = `width: ${
-                    (100 / 7) * (day + 1)
-                }%`;
+                document.getElementById('rewardDayBar').style = `width: ${w}%`;
             });
     }
 }
