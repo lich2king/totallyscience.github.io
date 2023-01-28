@@ -511,14 +511,14 @@ function startTimer(endTime) {
             .toString()
             .padStart(2, '0');
 
-        console.log(endTime);
-        console.log(hours + ':' + minutes + ':' + seconds);
-        // document.getElementById('rewardTimer').innerHTML =
-        //     hours + ':' + minutes + ':' + seconds;
+        //console.log(hours + ':' + minutes + ':' + seconds);
+        document.getElementById('rewardTimer').innerHTML =
+            hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
 
 function rewardPop() {
+    document.getElementById('pointsbar').style.display = '';
     document.getElementById('dailyRewardPopup').style.display = '';
 
     let points = 100;
@@ -563,7 +563,13 @@ function rewardPop() {
     }, 1000);
 }
 
-function acceptReward() {
-    //check that the time is up for the reward
-    //give the correct points, then reset the timer
+function claimReward() {
+    fetch(`assets/php/points/claimreward.php`)
+        .then((response) => response.text())
+        .then((response) => {
+            if (response == 'success') {
+                //update bar
+                //update score in navbar
+            }
+        });
 }

@@ -12,7 +12,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <!-- <div id="pointsbar">
+    <div id="pointsbar" style="display: none">
         <div class="backbar">
             <div class="bar"></div>
             <div class="dayCon">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <p class='timerText'>Daily Reward In <span id="rewardTimer">23:59:59</span></p>
-    </div> -->
+    </div>
 
     <div id="startcontent" style="margin-top:100px">
         <div id="feature">
