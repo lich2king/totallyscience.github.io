@@ -475,17 +475,26 @@ function checkReward() {
             fetch(`assets/php/points/checkrewardtimer.php`)
                 .then((dbRewardTime) => dbRewardTime.text())
                 .then((dbRewardTime) => {
-                    timeDifference =
-                        new Date(dbRewardTime).getTime() -
-                        currentTime.getTime();
-                    if (timeDifference <= 0) {
-                        console.log('Claim reward');
+                    if (dbRewardTime == '0000-00-00 00:00:00') {
+                        //offer reward
+                        console.log(
+                            'Reward should be offered here and then when they accept, timer will be reset!'
+                        );
+                        //REMOVE THIS WHEN THE TIME IS RIGHT
+                        fetch(`assets/php/points/resettimer.php`);
                     } else {
-                        console.log('set local storage');
-                        console.log(dbRewardTime);
-                        localStorage.setItem('rewardTimer', dbRewardTime);
-                        endTime = new Date(dbRewardTime).getTime();
-                        startTimer = true;
+                        timeDifference =
+                            new Date(dbRewardTime).getTime() -
+                            currentTime.getTime();
+                        if (timeDifference <= 0) {
+                            console.log('Claim reward');
+                        } else {
+                            console.log('set local storage');
+                            console.log(dbRewardTime);
+                            localStorage.setItem('rewardTimer', dbRewardTime);
+                            endTime = new Date(dbRewardTime).getTime();
+                            startTimer = true;
+                        }
                     }
                 });
         }

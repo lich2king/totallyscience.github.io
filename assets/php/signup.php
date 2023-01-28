@@ -34,6 +34,8 @@
     $userresult = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
 
     if ($userresult->num_rows == 0) {
+      $user = mysqli_real_escape_string($conn, $user);
+      $email = mysqli_real_escape_string($conn, $email);
       $sql = "INSERT INTO accounts (Username, Email, Password, GradYear, PwSalt) VALUES ('$user', '$email', '$pass', '$grad', '$salt')";
 
       if ($conn->query($sql) === TRUE) {
