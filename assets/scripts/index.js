@@ -452,6 +452,7 @@ function checkReward() {
                         console.log(dbRewardTime);
                         if (currentTime > dbRewardTime) {
                             console.log('Claim reward');
+                            rewardPop();
                         } else {
                             console.log('set local storage');
                             console.log(dbRewardTime);
@@ -469,15 +470,17 @@ function checkReward() {
                 .then((dbRewardTime) => {
                     if (dbRewardTime == 0) {
                         //offer reward
-                        console.log(
+                        alert(
                             'Reward should be offered here and then when they accept, timer will be reset!'
                         );
+                        rewardPop();
                         //REMOVE THIS WHEN THE TIME IS RIGHT
                         fetch(`assets/php/points/resettimer.php`);
                     } else {
                         console.log(dbRewardTime);
                         if (currentTime > dbRewardTime) {
                             console.log('Claim reward');
+                            rewardPop();
                         } else {
                             console.log('set local storage');
                             console.log(dbRewardTime);
@@ -488,6 +491,7 @@ function checkReward() {
                 });
         }
     } else {
+        rewardPop();
         console.log('Signup to claim');
         console.log('get rid of unneccessary padding when done with this');
     }
@@ -501,6 +505,11 @@ function startTimer(endTime) {
     rewardTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
+
+        if (remainingTime < 0) {
+            clearInterval(rewardTimerInterval);
+            return;
+        }
 
         var seconds = Math.floor(remainingTime % 60)
             .toString()
@@ -523,6 +532,9 @@ function rewardPop() {
     document.getElementById('pointsbar').style.display = '';
     document.getElementById('dailyRewardPopup').style.display = '';
     document.getElementById('pointsCon').style.display = '';
+
+    clearInterval(rewardTimerInterval);
+    document.getElementById('rewardTimer').innerHTML = '00:00:00';
 
     let points = 100;
     //figure out how many points to give with a db call...
@@ -548,10 +560,6 @@ function rewardPop() {
     popTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
-
-        if (remainingTime < 0) {
-            remainingTime = 0;
-        }
 
         var seconds = Math.floor(remainingTime % 60)
             .toString()
