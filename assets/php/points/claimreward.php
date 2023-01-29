@@ -19,11 +19,12 @@
 
   $query = "SELECT DailyReward, RewardDay FROM accounts WHERE ID = '$userid'";
   $result = mysqli_query($conn, $query);
-  $rewardTimer = ($result -> fetch_row())[0];
+  
   $rewardDay = ($result -> fetch_row())[1];
+  $rewardTimer = ($result -> fetch_row())[0];
   $points = 100;
 
-  die( $rewardTimer);
+  die($rewardTimer);
 
   //check if it has been 24 hours
   if(time() > $rewardTimer) //time() gets unix time in seconds
