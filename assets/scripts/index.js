@@ -227,48 +227,48 @@ async function displayGames() {
     }
 }
 
-const searchBar = document.getElementById('searchBar');
-searchBar.addEventListener('keyup', () => {
-    document.getElementById('info').scrollIntoView({
-        block: 'start',
-        inline: 'nearest',
-    });
+// const searchBar = document.getElementById('searchBar');
+// searchBar.addEventListener('keyup', () => {
+//     document.getElementById('info').scrollIntoView({
+//         block: 'start',
+//         inline: 'nearest',
+//     });
 
-    let input = searchBar.value.toUpperCase().split(' ').join('');
+//     let input = searchBar.value.toUpperCase().split(' ').join('');
 
-    if (input == '' || input == null) {
-        loadTopic();
-        return;
-    }
+//     if (input == '' || input == null) {
+//         loadTopic();
+//         return;
+//     }
 
-    const gameButtons = document.getElementsByClassName('all');
+//     const gameButtons = document.getElementsByClassName('all');
 
-    let gameShown = false;
-    Array.from(gameButtons).forEach((game) => {
-        var name = game.getAttribute('name').toUpperCase();
-        name = name.split(' ').join('');
+//     let gameShown = false;
+//     Array.from(gameButtons).forEach((game) => {
+//         var name = game.getAttribute('name').toUpperCase();
+//         name = name.split(' ').join('');
 
-        if (name.includes(input) && game.classList.contains(selectedTopic)) {
-            game.setAttribute(
-                'style',
-                `background-image: url(${
-                    games[game.getAttribute('name')].image
-                })`
-            );
-            gameShown = true;
-        } else {
-            game.setAttribute('style', 'display:none');
-        }
-    });
-    if (!gameShown) {
-        document.getElementById('noSearch').style.display = '';
-    } else {
-        document.getElementById('noSearch').style.display = 'none';
-    }
-    if (gamesDiv.innerHTML == '') {
-        document.getElementById('noSearch').style.display = '';
-    }
-});
+//         if (name.includes(input) && game.classList.contains(selectedTopic)) {
+//             game.setAttribute(
+//                 'style',
+//                 `background-image: url(${
+//                     games[game.getAttribute('name')].image
+//                 })`
+//             );
+//             gameShown = true;
+//         } else {
+//             game.setAttribute('style', 'display:none');
+//         }
+//     });
+//     if (!gameShown) {
+//         document.getElementById('noSearch').style.display = '';
+//     } else {
+//         document.getElementById('noSearch').style.display = 'none';
+//     }
+//     if (gamesDiv.innerHTML == '') {
+//         document.getElementById('noSearch').style.display = '';
+//     }
+// });
 
 // Category buttons
 const buttons = document.querySelectorAll('.categoryButton');
@@ -295,7 +295,7 @@ buttons.forEach((button) => {
         selected.classList.add('selectedCategory');
         selected.classList.remove('unselectedCategory');
 
-        document.getElementById('searchBar').value = '';
+        // document.getElementById('searchBar').value = '';
 
         loadTopic();
     });
