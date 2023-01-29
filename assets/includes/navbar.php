@@ -6,6 +6,7 @@
         <div class="nav-button" id="leaderboardnav"><a href="leaderboard">&#127942; Leaderboard</a></div>
         <div class="nav-button" id="chatnav"><a href="chat">&#128172; Chat</a></div>
         <div class="nav-button" id="appsnav"><a href="apps">&#127922; Apps</a></div>
+        <div class="nav-button" tooltip="Coming soon!" flow="down" id="shopnav"><a>&#128722; Shop</a></div>
     </div>
 
     <div id="middlebar">
