@@ -438,7 +438,6 @@ function createGameButton(game, pin) {
 function checkReward() {
     setRewardDayBar('initial');
     if (loggedIn) {
-        console.log('loggedin');
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         if (localStorage.getItem('rewardTimer') != null) {
@@ -454,7 +453,6 @@ function checkReward() {
                             console.log('Claim reward');
                             rewardPop();
                         } else {
-                            console.log('set local storage');
                             console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
                             startTimer(dbRewardTime);
@@ -469,21 +467,12 @@ function checkReward() {
                 .then((dbRewardTime) => dbRewardTime.text())
                 .then((dbRewardTime) => {
                     if (dbRewardTime == 0) {
-                        //offer reward
-                        alert(
-                            'Reward should be offered here and then when they accept, timer will be reset!'
-                        );
                         rewardPop();
-                        //REMOVE THIS WHEN THE TIME IS RIGHT
-                        fetch(`assets/php/points/resettimer.php`);
                     } else {
                         console.log(dbRewardTime);
                         if (currentTime > dbRewardTime) {
-                            console.log('Claim reward');
                             rewardPop();
                         } else {
-                            console.log('set local storage');
-                            console.log(dbRewardTime);
                             localStorage.setItem('rewardTimer', dbRewardTime);
                             startTimer(dbRewardTime);
                         }
@@ -491,7 +480,13 @@ function checkReward() {
                 });
         }
     } else {
-        rewardPop();
+        if (localStorage.getItem('ignoreReward') != null) {
+            if (!localStorage.getItem('ignoreReward')) {
+                rewardPop();
+            }
+        } else {
+            rewardPop();
+        }
         console.log('Signup to claim');
         console.log('get rid of unneccessary padding when done with this');
     }
@@ -529,32 +524,40 @@ function startTimer(endTime) {
 
 var popTimerInterval;
 function rewardPop() {
-    document.getElementById('pointsbar').style.display = '';
     document.getElementById('dailyRewardPopup').style.display = '';
-    document.getElementById('pointsCon').style.display = '';
 
     clearInterval(rewardTimerInterval);
     document.getElementById('rewardTimer').innerHTML = '00:00:00';
 
-    let points = 100;
-    //figure out how many points to give with a db call...
+    if (loggedIn) {
+        document.getElementById('ignoreReward').style.display = 'none';
 
-    fetch(`assets/php/points/checkrewardday.php`)
-        .then((rewardDay) => rewardDay.text())
-        .then((rewardDay) => {
-            if (rewardDay == 6) {
-                points = 1000;
-            }
-            document.getElementById('popPoints').innerHTML = points;
-            for (let i = 0; i <= rewardDay; i++) {
-                document.getElementsByClassName('popCheck')[i].style =
-                    'visibility: visible;';
-            }
-            for (let i = 6; i > rewardDay; i--) {
-                document.getElementsByClassName('popCheck')[i].style =
-                    'visibility: hidden;';
-            }
-        });
+        let points = 100;
+        //figure out how many points to give with a db call...
+
+        fetch(`assets/php/points/checkrewardday.php`)
+            .then((rewardDay) => rewardDay.text())
+            .then((rewardDay) => {
+                if (rewardDay == 6) {
+                    points = 1000;
+                }
+                document.getElementById('popPoints').innerHTML = points;
+                for (let i = 0; i <= rewardDay; i++) {
+                    document.getElementsByClassName('popCheck')[i].style =
+                        'visibility: visible;';
+                }
+                for (let i = 6; i > rewardDay; i--) {
+                    document.getElementsByClassName('popCheck')[i].style =
+                        'visibility: hidden;';
+                }
+            });
+    } else {
+        document.getElementById('ignoreReward').style.display = '';
+        document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
+        document
+            .getElementById('claimRewardB')
+            .setAttribute('onclick', "window.location.href='/signup'");
+    }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
     popTimerInterval = setInterval(function () {
@@ -571,11 +574,14 @@ function rewardPop() {
             .toString()
             .padStart(2, '0');
 
-        // console.log(endTime);
-        // console.log(hours + ':' + minutes + ':' + seconds);
         document.getElementById('popTimer').innerHTML =
             hours + ':' + minutes + ':' + seconds;
     }, 1000);
+}
+
+function ignorePopReward() {
+    localStorage.setItem('ignoreReward', true);
+    document.getElementById('dailyRewardPopup').style.display = 'none';
 }
 
 function claimReward() {
@@ -585,7 +591,6 @@ function claimReward() {
             if (response == 'Success') {
                 setRewardDayBar('update');
                 collectPoints();
-                //reset daily timer
                 resetRewardTimer();
             }
             document.getElementById('dailyRewardPopup').style.display = 'none';

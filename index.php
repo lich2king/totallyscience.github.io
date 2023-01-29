@@ -12,7 +12,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div id="pointsbar" style="display: none">
+    <div id="pointsbar">
         <div class="backbar">
             <div id="rewardDayBar" class="bar" style="width:0%"></div>
             <div class="dayCon">
@@ -26,10 +26,10 @@
                     src="https://clipartix.com/wp-content/uploads/2016/07/Free-treasure-chest-clipart-the-cliparts-2.png">
             </div>
         </div>
-        <p class='timerText'>Daily Reward In <span id="rewardTimer">23:59:59</span></p>
+        <p class='timerText'>Daily Reward In <span id="rewardTimer">00:00:00</span></p>
     </div>
 
-    <div id="startcontent" style="margin-top:100px">
+    <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
@@ -334,14 +334,14 @@
 
             </div>
         </div>
-        <button onclick="claimReward()" class="button">Claim Reward</button>
-        <p class="ignore">Or ignore the free reward</p>
+        <button onclick="claimReward()" class="button" id="claimRewardB">Claim Reward</button>
+        <p class="ignore" onclick="ignorePopReward()" id="ignoreReward">Or ignore the free reward</p>
     </div>
 
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v111"></script>
+    <script src="assets/scripts/index.js?v113"></script>
 </body>
 
 </html>

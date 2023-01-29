@@ -13,7 +13,7 @@
     </div>
 
     <div id="rightbar">
-        <div class="points" style="display:none" id="pointsCon">
+        <div class="points">
             <p><span id="pointsDisplay">0</span> pts</p>
         </div>
 
