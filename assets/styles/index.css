@@ -342,30 +342,21 @@ html {
     z-index: 1;
     position: sticky;
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background-color: var(--background-color);
     top: 60px;
     /**/
-    margin-top: 5vh;
-    width: 100vw;
+    margin-top: 3vh;
     height: 10vh;
-    margin-bottom: 10vh;
     text-align: center;
     /*Flex*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-#firstcatrow {
-    width: 100vw;
-    height: 5vh;
-    /*Grid*/
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
-    gap: 1vw;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #nextcatrow {
@@ -410,18 +401,16 @@ input[type='text'] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.25vw;
     font-family: 'Rubik';
     cursor: pointer;
     background-color: var(--accent-color);
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 20px;
     transition: opacity 0.3s ease;
-}
 
-.categoryButton span {
-    font-size: 1.7vw;
+    height: 40px;
+    font-size: 1.2rem;
 }
 
 /*@media (min-width: 1200px) {

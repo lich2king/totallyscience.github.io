@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v19'>
+    <link rel='stylesheet' href='assets/styles/index.css?v20'>
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script>
@@ -74,7 +74,7 @@
 
 
 
-    <div id="info">
+    <!-- <div id="info">
         <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
                 style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
         <p>Show your support by <span style="color: var(--accent-color);">sharing</span> Totally Science with friends
@@ -83,10 +83,9 @@
             <div class="sharethis-inline-share-buttons"></div>
         </div>
 
-    </div>
+    </div> -->
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
-        <!-- Horizontal Ad -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
             data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
@@ -96,28 +95,24 @@
 
     <div id="searchcatParent">
         <div id="searchcat">
-            <div id="firstcatrow">
-                <button name="all" onclick="" class="selectedCategory categoryButton">All</button>
-                <button name="new" onclick="" class="unselectedCategory categoryButton">New</button>
-                <button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button>
-                <button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button>
-                <button name="car" onclick="" class="unselectedCategory categoryButton">Car</button>
-                <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search">
-                <button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button>
-                <button name="card" onclick="" class="unselectedCategory categoryButton">Card</button>
-                <button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button>
-                <button name="fnf" onclick="" class="unselectedCategory categoryButton">FNF</button>
-                <button name="multiplayer" onclick="" class="unselectedCategory categoryButton">Multiplayer</button>
-            </div>
-            <div id="nextcatrow">
-                <button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button>
-                <button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button>
-                <button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button>
-                <button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button>
-                <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
-                <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
-                <button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button>
-            </div>
+            <button name="all" onclick="" class="selectedCategory categoryButton">All</button>
+            <button name="new" onclick="" class="unselectedCategory categoryButton">New</button>
+            <button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button>
+            <button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button>
+            <button name="car" onclick="" class="unselectedCategory categoryButton">Car</button>
+            <!-- <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search"> -->
+            <button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button>
+            <button name="card" onclick="" class="unselectedCategory categoryButton">Card</button>
+            <button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button>
+            <button name="fnf" onclick="" class="unselectedCategory categoryButton">FNF</button>
+            <button name="multiplayer" onclick="" class="unselectedCategory categoryButton">Multiplayer</button>
+            <button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button>
+            <button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button>
+            <button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button>
+            <button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button>
+            <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
+            <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
+            <button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button>
         </div>
 
 
@@ -331,7 +326,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v124"></script>
+    <script src="assets/scripts/index.js?v125"></script>
 </body>
 
 </html>

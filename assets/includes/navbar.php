@@ -14,10 +14,19 @@
     </div>
 
     <div id="rightbar">
+
+        <div class="searchbar">
+            <p onclick="window.location.href='/classes?search=true'"><img src="assets/images/magnifying-light.svg">
+                Search...</p>
+        </div>
+
         <div class="points">
             <p><span id="pointsDisplay">0</span> pts</p>
         </div>
 
+        <div class="nav-button" tooltip="Press this key to return to Google Classroom! " flow="down" id="shusheomji">
+            <img src="https://img.icons8.com/color/480/tilde-key.png">
+        </div>
 
         <a id="discord" href="https://discord.gg/6kTskTSTFM" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33.867 33.867" fill="#8a8a8a">

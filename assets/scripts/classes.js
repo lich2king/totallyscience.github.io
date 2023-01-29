@@ -17,6 +17,14 @@ let loggedIn = false;
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category');
+const search = urlParams.get('search');
+
+if (search != null) {
+    const input = document.getElementById('searchBar');
+    input.focus();
+    input.select();
+}
+
 if (category != null) {
     selectedTopic = category;
 

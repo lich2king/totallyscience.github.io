@@ -138,6 +138,29 @@ label {
     padding-right: 1vw;
 }
 
+#rightbar .searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 20px;
+    width: 230px;
+}
+
+#rightbar .searchbar p {
+    padding: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 125px;
+    background-color: var(--light-color);
+    border-radius: 7px;
+    color: var(--dark-color);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #rightbar .points {
     display: flex;
     align-items: center;
@@ -152,6 +175,7 @@ label {
     background-color: var(--accent-color);
     border-radius: 7px;
     color: var(--light-color);
+    white-space: nowrap;
 }
 
 #rightbar p {
@@ -397,6 +421,16 @@ a {
 
 #shopnav a {
     color: rgba(255, 255, 255, 0.5);
+}
+
+#shusheomji img {
+    width: 35px;
+}
+
+#searchbar {
+    width: 20px;
+    height: 15px;
+    background-color: #333;
 }
 
 /*Tool tip!*/
