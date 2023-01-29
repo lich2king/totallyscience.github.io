@@ -34,7 +34,7 @@ html {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
-    transition: all 1s ease-out;
+    /* transition: all 1s ease-out; */
 }
 
 #pointsbar .backbar .dayCon {
