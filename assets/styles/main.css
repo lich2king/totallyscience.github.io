@@ -78,11 +78,7 @@ label {
     line-height: 40px;
     letter-spacing: 0.05rem;
     color: var(--light-color);
-    min-width: 90px;
-}
-
-#leaderboardnav a {
-    min-width: 150px;
+    white-space: nowrap;
 }
 
 #discord {
