@@ -97,12 +97,7 @@ function loadTopic() {
 
         Array.from(gameButtons).forEach((game) => {
             if (game.classList.contains(selectedTopic)) {
-                game.setAttribute(
-                    'style',
-                    `background-image: url(${
-                        games[game.getAttribute('name')].image
-                    })`
-                );
+                game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
             } else {
                 game.setAttribute('style', 'display:none');
             }
@@ -149,12 +144,8 @@ async function displayGames() {
 
             for (let i = 0; i < 10; i++) {
                 if (document.getElementsByName(popularGames[i][0])) {
-                    document
-                        .getElementsByName(popularGames[i][0])[0]
-                        .classList.add('popular');
-                    document.getElementsByName(
-                        popularGames[i][0]
-                    )[0].innerHTML +=
+                    document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+                    document.getElementsByName(popularGames[i][0])[0].innerHTML +=
                         "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
                 }
             }
@@ -173,54 +164,25 @@ async function displayGames() {
                     .then((res) => {
                         let recentGames = res.split(';');
                         recentGames = recentGames.slice(1);
-                        const recentContainer =
-                            document.getElementById('recentContainer');
+                        const recentContainer = document.getElementById('recentContainer');
                         for (like in likedgames) {
-                            if (
-                                document.getElementsByName(
-                                    likedgames[like][0]
-                                ) != null
-                            ) {
+                            if (document.getElementsByName(likedgames[like][0]) != null) {
+                                console.log(document.getElementsByName(likedgames[like][0]));
                                 //line below accounts for suggested/pinned games
-                                if (
-                                    document
-                                        .getElementsByName(
-                                            likedgames[like][0]
-                                        )[0]
-                                        .classList.contains('all')
-                                ) {
-                                    document
-                                        .getElementsByName(
-                                            likedgames[like][0]
-                                        )[0]
-                                        .classList.add('liked');
+                                if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+                                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
                                 } else {
-                                    document
-                                        .getElementsByName(
-                                            likedgames[like][0]
-                                        )[1]
-                                        .classList.add('liked');
+                                    document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
                                 }
                             }
                         }
                         for (let i = 0; i < recentGames.length; i++) {
-                            if (
-                                document.getElementsByName(recentGames[i])
-                                    .length > 0
-                            ) {
+                            if (document.getElementsByName(recentGames[i]).length > 0) {
                                 //line below accounts for suggested/pinned games
-                                if (
-                                    document
-                                        .getElementsByName(recentGames[i])[0]
-                                        .classList.contains('all')
-                                ) {
-                                    document
-                                        .getElementsByName(recentGames[i])[0]
-                                        .classList.add('recent');
+                                if (document.getElementsByName(recentGames[i])[0].classList.contains('all')) {
+                                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
                                 } else {
-                                    document
-                                        .getElementsByName(recentGames[i])[1]
-                                        .classList.add('recent');
+                                    document.getElementsByName(recentGames[i])[1].classList.add('recent');
                                 }
                             }
                         }
@@ -315,10 +277,7 @@ function suggestGames() {
             for (let x = displayedGames; x < displayedGames + 3; x++) {
                 let randGame = randomProperty(games);
 
-                while (
-                    randomGames.includes(randGame) ||
-                    pinnedGames.includes(randGame)
-                ) {
+                while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
                     randGame = randomProperty(games);
                 }
 
@@ -334,10 +293,7 @@ function suggestGames() {
                 for (let i = 0; i < generateGames; i++) {
                     let randGame = randomProperty(games);
 
-                    while (
-                        randomGames.includes(randGame) ||
-                        pinnedGames.includes(randGame)
-                    ) {
+                    while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
                         randGame = randomProperty(games);
                     }
 
@@ -399,14 +355,12 @@ function createGameButton(game, pin) {
     let onclick = `location.href = 'class?class=${game}'`;
 
     if (pin == 'pin') {
-        buttons +=
-            "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
     }
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons +=
-            "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
     }
 
     if (pin != 'suggested' && pin != 'pin') {
@@ -519,8 +473,7 @@ function startTimer(endTime) {
             .padStart(2, '0');
 
         //console.log(hours + ':' + minutes + ':' + seconds);
-        document.getElementById('rewardTimer').innerHTML =
-            hours + ':' + minutes + ':' + seconds;
+        document.getElementById('rewardTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
 
@@ -545,28 +498,22 @@ function rewardPop() {
                 }
                 document.getElementById('popPoints').innerHTML = points;
                 for (let i = 0; i <= rewardDay; i++) {
-                    document.getElementsByClassName('popCheck')[i].style =
-                        'visibility: visible;';
+                    document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
                 }
                 for (let i = 6; i > rewardDay; i--) {
-                    document.getElementsByClassName('popCheck')[i].style =
-                        'visibility: hidden;';
+                    document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
                 }
             });
     } else {
         for (let i = 0; i <= 0; i++) {
-            document.getElementsByClassName('popCheck')[i].style =
-                'visibility: visible;';
+            document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
         }
         for (let i = 6; i > 6; i--) {
-            document.getElementsByClassName('popCheck')[i].style =
-                'visibility: hidden;';
+            document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
         }
         document.getElementById('ignoreReward').style.display = '';
         document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
-        document
-            .getElementById('claimRewardB')
-            .setAttribute('onclick', "window.location.href='/signup'");
+        document.getElementById('claimRewardB').setAttribute('onclick', "window.location.href='/signup'");
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
@@ -584,8 +531,7 @@ function rewardPop() {
             .toString()
             .padStart(2, '0');
 
-        document.getElementById('popTimer').innerHTML =
-            hours + ':' + minutes + ':' + seconds;
+        document.getElementById('popTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
 
@@ -655,12 +601,8 @@ function animateBar(day) {
 
     if (day == 6) {
         w = 100;
-        document.getElementById(
-            'rewardDayBar'
-        ).style.borderTopRightRadius = `15px`;
-        document.getElementById(
-            'rewardDayBar'
-        ).style.borderBottomRightRadius = `15px`;
+        document.getElementById('rewardDayBar').style.borderTopRightRadius = `15px`;
+        document.getElementById('rewardDayBar').style.borderBottomRightRadius = `15px`;
     }
 }
 
@@ -672,12 +614,7 @@ function collectPoints() {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             console.log(currentVal);
             console.log(points);
-            counter(
-                'pointsDisplay',
-                parseInt(currentVal),
-                parseInt(points),
-                2000
-            );
+            counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);
         });
 }
 
