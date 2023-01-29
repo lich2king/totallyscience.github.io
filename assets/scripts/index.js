@@ -552,6 +552,14 @@ function rewardPop() {
                 }
             });
     } else {
+        for (let i = 0; i <= 1; i++) {
+            document.getElementsByClassName('popCheck')[i].style =
+                'visibility: visible;';
+        }
+        for (let i = 6; i > 6; i--) {
+            document.getElementsByClassName('popCheck')[i].style =
+                'visibility: hidden;';
+        }
         document.getElementById('ignoreReward').style.display = '';
         document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
         document
