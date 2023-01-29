@@ -552,7 +552,7 @@ function rewardPop() {
                 }
             });
     } else {
-        for (let i = 0; i <= 1; i++) {
+        for (let i = 0; i <= 0; i++) {
             document.getElementsByClassName('popCheck')[i].style =
                 'visibility: visible;';
         }
