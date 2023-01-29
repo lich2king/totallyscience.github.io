@@ -21,20 +21,22 @@
   $result = mysqli_query($conn, $query);
   $rewardTimer = ($result -> fetch_row())[0];
   $rewardDay = ($result -> fetch_row())[1];
-  
+  $points = 100;
+
   //check if it has been 24 hours
   if(time() > $rewardTimer) //time() gets unix time in seconds
   {
       if($rewardDay >= 6)
       {
         $rewardDay = 0;
+        $points = 1000;
       }
       else
       {
         $rewardDay = $rewardDay + 1;
       }
 
-      $query = "UPDATE accounts SET DailyReward = UNIX_TIMESTAMP() + 86400, RewardDay = $rewardDay WHERE ID = '$userid'";
+      $query = "UPDATE accounts SET DailyReward = UNIX_TIMESTAMP() + 86400, RewardDay = $rewardDay, Points=Points+$points WHERE ID = '$userid'";
       if(mysqli_query($conn, $query))
       {
         die("Success");
