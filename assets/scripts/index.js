@@ -436,7 +436,6 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
-    setRewardDayBar('initial');
     if (loggedIn) {
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
@@ -479,6 +478,7 @@ function checkReward() {
                     }
                 });
         }
+        setRewardDayBar('initial');
     } else {
         if (localStorage.getItem('ignoreReward') != null) {
             if (!localStorage.getItem('ignoreReward')) {
@@ -589,9 +589,9 @@ function claimReward() {
         .then((response) => response.text())
         .then((response) => {
             if (response == 'Success') {
-                setRewardDayBar('update');
-                collectPoints();
                 resetRewardTimer();
+                collectPoints();
+                setRewardDayBar('update');
             }
             document.getElementById('dailyRewardPopup').style.display = 'none';
             clearInterval(popTimerInterval);
