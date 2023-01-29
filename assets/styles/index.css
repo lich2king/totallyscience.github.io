@@ -3,7 +3,7 @@ html {
 }
 
 #pointsbar {
-    margin-top: 100px;
+    margin-top: 95px;
 
     width: 100vw;
 
@@ -88,45 +88,27 @@ html {
     text-align: center;
     justify-content: center;
     align-content: center;
-    text-shadow: var(--stroke-width) 0 0 var(--stroke-color),
-        calc(var(--stroke-width) * -1) 0 0 var(--stroke-color),
-        0 var(--stroke-width) 0 var(--stroke-color),
-        0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
+    text-shadow: var(--stroke-width) 0 0 var(--stroke-color), calc(var(--stroke-width) * -1) 0 0 var(--stroke-color),
+        0 var(--stroke-width) 0 var(--stroke-color), 0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
 }
 
 .smooth-16 {
-    text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827)
-            0 var(--stroke-color),
-        calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071)
-            0 var(--stroke-color),
-        calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239)
-            0 var(--stroke-color),
-        calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0
-            var(--stroke-color),
-        calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0
-            var(--stroke-color);
+    text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color);
 }
 
 #gameDiv {
