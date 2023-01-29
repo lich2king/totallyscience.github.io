@@ -618,7 +618,12 @@ function collectPoints() {
         .then((points) => {
             localStorage.setItem('tspoints', points);
             let currentVal = document.getElementById('pointsDisplay').innerText;
-            counter('pointsDisplay', currentVal, points, 2000);
+            counter(
+                'pointsDisplay',
+                parseInt(currentVal),
+                parseInt(points),
+                2000
+            );
         });
 }
 
