@@ -17,10 +17,12 @@
 <meta name="DC.format" content="text/html" scheme="DCTERMS.DCMIType">
 <meta name="DC.publisher" content="Totally Science" scheme="DCTERMS.DCMIType">
 <meta name="DC.description" content="The best place for 'Learning Science!'" scheme="DCTERMS.DCMIType">
-<meta name="DC.subject" content="totally science, games, gaming, online games, unblocked games" scheme="DCTERMS.DCMIType">
+<meta name="DC.subject" content="totally science, games, gaming, online games, unblocked games"
+    scheme="DCTERMS.DCMIType">
 <meta name="DC.creator" content="Zach Yadegari">
 <meta name="subject" content="totally science, games, gaming, online games, unblocked games">
-<meta name="keywords" content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online">
+<meta name="keywords"
+    content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online">
 <meta name="twitter:description" content="The best place for 'Learning Science!'">
 <meta name="twitter:url" content="https://totallyscience.co">
 <meta name="twitter:image" content="https://totallyscience.co/assets/images/logo.png">
@@ -31,14 +33,14 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
 
-    gtag('config', 'G-Y14RZLW8H8');
+gtag('config', 'G-Y14RZLW8H8');
 </script>
 
 <!--<script type="text/javascript">
@@ -55,23 +57,26 @@
 })(document, window);
 </script>-->
 
-<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-3486863589051210" async="true"></script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    data-ad-client="ca-pub-3486863589051210" async="true"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://browser.sentry-cdn.com/7.12.1/bundle.tracing.min.js" integrity="sha384-+5SuXMl3TMl8hMxuOnzV/WA9uCrxgqfg5AeYcRa3Xgt5+IicBBuHRUoYgHU741xO" crossorigin="anonymous"></script>
+<script src="https://browser.sentry-cdn.com/7.12.1/bundle.tracing.min.js"
+    integrity="sha384-+5SuXMl3TMl8hMxuOnzV/WA9uCrxgqfg5AeYcRa3Xgt5+IicBBuHRUoYgHU741xO" crossorigin="anonymous">
+</script>
 <script>
-    Sentry.init({
+Sentry.init({
     dsn: "https://ee9aa27951244138b295702d9a1d9443@o1410974.ingest.sentry.io/6749153",
     integrations: [new Sentry.BrowserTracing()],
 
     // We recommend adjusting this value in production, or using tracesSampler
     // for finer control
     tracesSampleRate: 1.0,
-    });
+});
 </script>
 
 
-<link rel="stylesheet" href="assets/styles/main.css?v8">
+<link rel="stylesheet" href="assets/styles/main.css?v9">
 <link rel="icon" href="assets/images/logo.png">
 
 <title>Totally Science</title>
