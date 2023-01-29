@@ -29,9 +29,7 @@ if (category != null) {
     selectedTopic = category;
 
     document.getElementById('topText').style.display = '';
-    document.getElementById(
-        'topText'
-    ).innerText = `${category.toUpperCase()} Games`;
+    document.getElementById('topText').innerText = `${category.toUpperCase()} Games`;
     document.getElementsByName('all')[0].classList.add('unselectedCategory');
     document.getElementsByName('all')[0].classList.remove('selectedCategory');
     document.getElementById('searchcat').style.marginTop = '20px';
@@ -88,12 +86,7 @@ async function loadTopic() {
 
         Array.from(gameButtons).forEach((game) => {
             if (game.classList.contains(selectedTopic)) {
-                game.setAttribute(
-                    'style',
-                    `background-image: url(${
-                        games[game.getAttribute('name')].image
-                    })`
-                );
+                game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
             } else {
                 game.setAttribute('style', 'display:none');
             }
@@ -140,12 +133,8 @@ async function displayGames() {
 
             for (let i = 0; i < 10; i++) {
                 if (document.getElementsByName(popularGames[i][0])) {
-                    document
-                        .getElementsByName(popularGames[i][0])[0]
-                        .classList.add('popular');
-                    document.getElementsByName(
-                        popularGames[i][0]
-                    )[0].innerHTML +=
+                    document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+                    document.getElementsByName(popularGames[i][0])[0].innerHTML +=
                         "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
                 }
             }
@@ -162,10 +151,8 @@ async function displayGames() {
                 var likedgames = JSON.parse(res);
 
                 for (like in likedgames) {
-                    if (document.getElementsByName(likedgames[like][0])) {
-                        document
-                            .getElementsByName(likedgames[like][0])[0]
-                            .classList.add('liked');
+                    if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                        document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
                     }
                 }
             });
@@ -177,9 +164,7 @@ async function displayGames() {
 
                 for (let i = 0; i < recentGames.length; i++) {
                     if (document.getElementsByName(recentGames[i]).length > 0) {
-                        document
-                            .getElementsByName(recentGames[i])[0]
-                            .classList.add('recent');
+                        document.getElementsByName(recentGames[i])[0].classList.add('recent');
                     }
                 }
             });
@@ -205,12 +190,7 @@ searchBar.addEventListener('keyup', () => {
         name = name.split(' ').join('');
 
         if (name.includes(input) && game.classList.contains(selectedTopic)) {
-            game.setAttribute(
-                'style',
-                `background-image: url(${
-                    games[game.getAttribute('name')].image
-                })`
-            );
+            game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
             gameShown = true;
         } else {
             game.setAttribute('style', 'display:none');
@@ -290,14 +270,12 @@ function createGameButton(game, pin) {
     let onclick = `location.href = 'class?class=${game}'`;
 
     if (pin == 'pin') {
-        buttons +=
-            "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
     }
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons +=
-            "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
     }
 
     if (pin != 'suggested') {
