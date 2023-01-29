@@ -494,11 +494,11 @@ function checkReward() {
 }
 
 //var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
-
+var rewardTimerInterval;
 function startTimer(endTime) {
     console.log('starting timer...');
     clearInterval(rewardTimerInterval);
-    var rewardTimerInterval = setInterval(function () {
+    rewardTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -518,6 +518,7 @@ function startTimer(endTime) {
     }, 1000);
 }
 
+var popTimerInterval;
 function rewardPop() {
     document.getElementById('pointsbar').style.display = '';
     document.getElementById('dailyRewardPopup').style.display = '';
@@ -544,7 +545,7 @@ function rewardPop() {
         });
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    var popTimerInterval = setInterval(function () {
+    popTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
