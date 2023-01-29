@@ -130,7 +130,7 @@
     </div>
 
     <div style="text-align:center">
-        <button class="button" onclick="window.open('classes', '_self')"><span>ALL GAMES</span><img
+        <button class="button" onclick="window.open('classes', '_self')"><span>MORE GAMES</span><img
                 style="padding-left:0.5vw" width="16vw"
                 src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
     </div>
