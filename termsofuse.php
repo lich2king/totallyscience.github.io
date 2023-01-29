@@ -16,7 +16,7 @@
         <h1>Terms of Use</h1>
         <h2>General Terms of Use for TotallyScience's Content</h2>
         <p>By accessing or using the site, you agree to be bound by this agreement and the terms of our privacy policy
-            at https://totallyscience.co/privacypolicy" which are incorporated by this reference. This agreement
+            at https://totallyscience.co/privacypolicy which are incorporated by this reference. This agreement
             shall remain in full force and effect while
             you use any of the TotallyScience family of sites.</p>
         <p>DO NOT USE THIS SITE WHEN YOU ARE IN A CLASS SESSION. THIS SITE SHOULD BE ACCESSED AND ENJOYED DURING BREAK
