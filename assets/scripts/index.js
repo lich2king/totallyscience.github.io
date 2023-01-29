@@ -618,6 +618,8 @@ function collectPoints() {
         .then((points) => {
             localStorage.setItem('tspoints', points);
             let currentVal = document.getElementById('pointsDisplay').innerText;
+            console.log(currentVal);
+            console.log(points);
             counter(
                 'pointsDisplay',
                 parseInt(currentVal),
