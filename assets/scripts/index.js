@@ -478,8 +478,7 @@ function checkReward() {
                     }
                 });
         }
-
-        setTimeout(setRewardDayBar('initial'), 0);
+        //setRewardDayBar('initial');
     } else {
         if (localStorage.getItem('ignoreReward') != null) {
             if (!localStorage.getItem('ignoreReward')) {
