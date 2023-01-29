@@ -17,7 +17,7 @@
     
   $userid = json_decode($_COOKIE['logintoken'], true)['id'];
 
-  $query = "SELECT DailyReward FROM accounts WHERE ID = '$userid'";
+  $query = "SELECT DailyReward, RewardDay FROM accounts WHERE ID = '$userid'";
   $result = mysqli_query($conn, $query);
   $rewardTimer = ($result -> fetch_row())[0];
   $rewardDay = ($result -> fetch_row())[1];
