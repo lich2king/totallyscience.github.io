@@ -3,11 +3,17 @@
 if (location.host.includes('github')) location.replace('https://tsmain.co');
 
 // init user prefs
-if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
-if (localStorage.getItem('theme') == null) localStorage.setItem('theme', 'light');
+if (localStorage.getItem('website') == null)
+    localStorage.setItem('website', 'https://classroom.google.com/');
+if (localStorage.getItem('theme') == null)
+    localStorage.setItem('theme', 'light');
 
 document.body.setAttribute('theme', localStorage.getItem('theme'));
-document.getElementById('settings').children[0].src = `/assets/images/settings-${localStorage.getItem('theme')}.svg`;
+document.getElementById(
+    'settings'
+).children[0].src = `/assets/images/settings-${localStorage.getItem(
+    'theme'
+)}.svg`;
 
 if (localStorage.getItem('disguise') == null) {
     localStorage.setItem('disguise', 'none');
@@ -42,15 +48,20 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
-    window.open('/mobile/index', '_self')
+    window.open('/mobile/index', '_self');
 }
 
 // panic button
-window.addEventListener('keydown', (e) => {
-    if (e.key == '`') window.open(this.localStorage.getItem('website'), '_blank', );
-}, false);
+window.addEventListener(
+    'keydown',
+    (e) => {
+        if (e.key == '`')
+            window.open(this.localStorage.getItem('website'), '_blank');
+    },
+    false
+);
 
-// page load init 
+// page load init
 window.addEventListener('load', () => {
     // register service worker
     if ('serviceWorker' in navigator) {
@@ -63,30 +74,68 @@ window.addEventListener('load', () => {
     if (scrollButton) {
         // When the user scrolls down 20px from the top of the document, show the button
         window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            if (
+                document.body.scrollTop > 400 ||
+                document.documentElement.scrollTop > 400
+            ) {
                 scrollButton.style.display = 'block';
             } else {
                 scrollButton.style.display = 'none';
             }
-        })
+        });
     }
 });
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function () {
     //showAds();
 });
-
-
 
 function showAds() {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+    script.src =
+        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
     script.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
     script.async = true;
 
     head.appendChild(script);
+}
+
+checkedLoggedIn();
+
+let userLoggedIn = false;
+async function checkedLoggedIn() {
+    await fetch(`assets/php/getCookie.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            res = JSON.parse(res);
+            if (res != null) {
+                const isLoggedIn = res['isLoggedIn'];
+
+                if (isLoggedIn == 'true') {
+                    userLoggedIn = true;
+                }
+            }
+        });
+    setPoints();
+}
+
+function setPoints() {
+    //Move this to main.js
+    if (userLoggedIn) {
+        if (localStorage.getItem('tspoints') != null) {
+            document.getElementById('pointsDisplay').innerText =
+                localStorage.getItem('tspoints');
+        } else {
+            fetch(`assets/php/points/checkpoints.php`)
+                .then((points) => points.text())
+                .then((points) => {
+                    localStorage.setItem('tspoints', points);
+                    document.getElementById('pointsDisplay').innerText = points;
+                });
+        }
+    } else {
+        document.getElementById('pointsDisplay').innerText = 0;
+    }
 }

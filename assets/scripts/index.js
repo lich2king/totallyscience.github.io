@@ -521,6 +521,7 @@ function startTimer(endTime) {
 function rewardPop() {
     document.getElementById('pointsbar').style.display = '';
     document.getElementById('dailyRewardPopup').style.display = '';
+    document.getElementById('pointsCon').style.display = '';
 
     let points = 100;
     //figure out how many points to give with a db call...
@@ -570,8 +571,8 @@ function claimReward() {
         .then((response) => {
             alert(response);
             if (response == 'Success') {
-                //update score in navbar
                 setRewardDayBar();
+                collectPoints();
             }
             document.getElementById('dailyRewardPopup').style.display = 'none';
         });
@@ -609,4 +610,29 @@ function setRewardDayBar() {
     }
 
     //update score in nav bar
+}
+
+function collectPoints() {
+    fetch(`assets/php/points/checkpoints.php`)
+        .then((points) => points.text())
+        .then((points) => {
+            localStorage.setItem('tspoints', points);
+            let currentVal = document.getElementById('pointsDisplay').innerText;
+            counter('pointsDisplay', currentVal, points, 2000);
+        });
+}
+
+function counter(id, start, end, duration) {
+    let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, step);
 }

@@ -137,6 +137,22 @@ label {
     padding-right: 1vw;
 }
 
+#rightbar .points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+#rightbar .points p {
+    padding: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--accent-color);
+    border-radius: 7px;
+    color: var(--light-color);
+}
+
 #rightbar p {
     font-size: 17px;
 }
