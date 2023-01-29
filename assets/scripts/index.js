@@ -276,7 +276,7 @@ const buttons = document.querySelectorAll('.categoryButton');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         if (e.target.name != selectedTopic) {
-            document.getElementById('info').scrollIntoView({
+            document.getElementById('adScroll').scrollIntoView({
                 block: 'start',
                 inline: 'nearest',
             });

@@ -85,7 +85,7 @@
 
     </div> -->
 
-    <div class="adsrc" style="text-align:center; margin-top:50px;">
+    <div id="adScroll" class="adsrc" style="text-align:center; margin-top:50px;">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
             data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
@@ -326,7 +326,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v126"></script>
+    <script src="assets/scripts/index.js?v127"></script>
 </body>
 
 </html>
