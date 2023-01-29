@@ -436,6 +436,7 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
+    setRewardDayBar('initial');
     if (loggedIn) {
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
@@ -478,7 +479,6 @@ function checkReward() {
                     }
                 });
         }
-        setRewardDayBar('initial');
     } else {
         if (localStorage.getItem('ignoreReward') != null) {
             if (!localStorage.getItem('ignoreReward')) {
