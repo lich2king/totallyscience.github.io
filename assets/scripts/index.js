@@ -436,8 +436,7 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
-    console.log('checking');
-    setRewardDayBar();
+    setRewardDayBar('initial');
     if (loggedIn) {
         console.log('loggedin');
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
@@ -544,9 +543,13 @@ function rewardPop() {
         });
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    setInterval(function () {
+    var popTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
+
+        if (remainingTime < 0) {
+            remainingTime = 0;
+        }
 
         var seconds = Math.floor(remainingTime % 60)
             .toString()
@@ -569,47 +572,71 @@ function claimReward() {
     fetch(`assets/php/points/claimreward.php`)
         .then((response) => response.text())
         .then((response) => {
-            alert(response);
             if (response == 'Success') {
-                setRewardDayBar();
+                setRewardDayBar('update');
                 collectPoints();
+                //reset daily timer
+                resetRewardTimer();
             }
             document.getElementById('dailyRewardPopup').style.display = 'none';
+            clearInterval(popTimerInterval);
         });
 }
 
-function setRewardDayBar() {
+function resetRewardTimer() {
+    fetch(`assets/php/points/checkrewardtimer.php`)
+        .then((dbRewardTime) => dbRewardTime.text())
+        .then((dbRewardTime) => {
+            localStorage.setItem('rewardTimer', dbRewardTime);
+            startTimer(dbRewardTime);
+        });
+}
+
+function setRewardDayBar(mode) {
     let day = 0;
 
     if (loggedIn) {
-        fetch(`assets/php/points/checkrewardday.php`)
-            .then((rewardDay) => rewardDay.text())
-            .then((rewardDay) => {
-                day = parseInt(rewardDay);
-
-                console.log(rewardDay);
-                console.log(day);
-
-                let w = (100 / 7) * (day + 1);
-
-                document.getElementById('rewardDayBar').style.width = `${w}%`;
-
-                if (day == 6) {
-                    w = 100;
-                    document.getElementById(
-                        'rewardDayBar'
-                    ).style.borderTopRightRadius = `15px`;
-                    document.getElementById(
-                        'rewardDayBar'
-                    ).style.borderBottomRightRadius = `15px`;
-                }
-            });
+        if (mode == 'update') {
+            fetch(`assets/php/points/checkrewardday.php`)
+                .then((rewardDay) => rewardDay.text())
+                .then((rewardDay) => {
+                    localStorage.setItem('rewardDay', rewardDay);
+                    day = parseInt(rewardDay);
+                    animateBar(day);
+                });
+        } else {
+            if (localStorage.getItem('rewardDay') != null) {
+                day = parseInt(localStorage.getItem('rewardDay'));
+                animateBar(day);
+            } else {
+                fetch(`assets/php/points/checkrewardday.php`)
+                    .then((rewardDay) => rewardDay.text())
+                    .then((rewardDay) => {
+                        localStorage.setItem('rewardDay', rewardDay);
+                        day = parseInt(rewardDay);
+                        animateBar(day);
+                    });
+            }
+        }
     } else {
-        let w = (100 / 7) * (day + 1);
-        document.getElementById('rewardDayBar').style = `width: ${w}%`;
+        animateBar(0);
     }
+}
 
-    //update score in nav bar
+function animateBar(day) {
+    let w = (100 / 7) * (day + 1);
+
+    document.getElementById('rewardDayBar').style.width = `${w}%`;
+
+    if (day == 6) {
+        w = 100;
+        document.getElementById(
+            'rewardDayBar'
+        ).style.borderTopRightRadius = `15px`;
+        document.getElementById(
+            'rewardDayBar'
+        ).style.borderBottomRightRadius = `15px`;
+    }
 }
 
 function collectPoints() {
