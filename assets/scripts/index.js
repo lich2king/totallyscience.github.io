@@ -497,7 +497,8 @@ function checkReward() {
 
 function startTimer(endTime) {
     console.log('starting timer...');
-    setInterval(function () {
+    clearInterval(rewardTimerInterval);
+    var rewardTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
