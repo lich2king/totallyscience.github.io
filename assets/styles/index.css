@@ -49,7 +49,7 @@ html {
 }
 
 #pointsbar .backbar .dayCon img {
-    width: 75px;
+    width: 4vw;
     -webkit-filter: drop-shadow(0px 0px 15px rgb(172, 255, 47));
     animation: shadow-animation 2s ease-in-out infinite;
 }
