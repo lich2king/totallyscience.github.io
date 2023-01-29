@@ -50,11 +50,11 @@
         </div>
     </div>
 
-    <div style = "padding-bottom: 14vh"></div>
-    
+    <div style="padding-bottom: 14vh"></div>
+
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/classes.js?v52"></script>
+    <script src="assets/scripts/classes.js?v53"></script>
 </body>
 
 </html>
