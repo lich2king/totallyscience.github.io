@@ -23,7 +23,7 @@
   $rewardDay = ($result -> fetch_row())[1];
   $points = 100;
 
-  die($rewardDay+1);
+  die($rewardDay);
 
   //check if it has been 24 hours
   if(time() > $rewardTimer) //time() gets unix time in seconds
