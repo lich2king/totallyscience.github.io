@@ -460,7 +460,6 @@ function checkReward() {
                     });
             } else {
                 startTimer(rewardTime);
-                alert('start now please');
             }
         } else {
             console.log('did not find local storage');
