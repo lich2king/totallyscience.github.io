@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v17'>
+    <link rel='stylesheet' href='assets/styles/index.css?v18'>
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script>
@@ -22,8 +22,7 @@
                 <p>Day 4</p>
                 <p>Day 5</p>
                 <p>Day 6</p>
-                <img
-                    src="https://clipartix.com/wp-content/uploads/2016/07/Free-treasure-chest-clipart-the-cliparts-2.png">
+                <img src="assets/images/chest.png" style="pointer-events: none;">
             </div>
         </div>
         <p class='timerText'>Daily Reward In <span id="rewardTimer">...</span></p>
@@ -272,29 +271,25 @@
             <div class="row">
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 1</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 2</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 3</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 4</p>
                 </div>
@@ -303,31 +298,26 @@
             <div class="row">
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 5</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 6</p>
                 </div>
                 <div>
                     <div class="circle">
-                        <img class="treasure" style=""
-                            src="https://clipartix.com/wp-content/uploads/2016/07/Free-treasure-chest-clipart-the-cliparts-2.png">
-                        <img class="popCheck" style="visibility:hidden"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img class="treasure" style="" src="assets/images/chest.png">
+                        <img class="popCheck" style="visibility:hidden" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 7</p>
                 </div>
                 <div style="visibility:hidden">
                     <div class="circle">
-                        <img style="visibility: hidden;"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png">
+                        <img style="visibility: hidden;" src="assets/images/icons/check.webp">
                     </div>
                     <p></p>
                 </div>
