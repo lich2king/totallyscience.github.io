@@ -177,7 +177,9 @@ async function displayGames() {
                             document.getElementById('recentContainer');
                         for (like in likedgames) {
                             if (
-                                document.getElementsByName(likedgames[like][0])
+                                document.getElementsByName(
+                                    likedgames[like][0]
+                                ) != null
                             ) {
                                 //line below accounts for suggested/pinned games
                                 if (
