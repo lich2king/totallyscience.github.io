@@ -26,7 +26,7 @@
                     src="https://clipartix.com/wp-content/uploads/2016/07/Free-treasure-chest-clipart-the-cliparts-2.png">
             </div>
         </div>
-        <p class='timerText'>Daily Reward In <span id="rewardTimer">00:00:00</span></p>
+        <p class='timerText'>Daily Reward In <span id="rewardTimer"></span></p>
     </div>
 
     <div id="startcontent">
