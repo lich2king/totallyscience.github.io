@@ -166,7 +166,7 @@ async function displayGames() {
                         recentGames = recentGames.slice(1);
                         const recentContainer = document.getElementById('recentContainer');
                         for (like in likedgames) {
-                            if (document.getElementsByName(likedgames[like][0]) != null) {
+                            if (document.getElementsByName(likedgames[like][0]).length > 0) {
                                 console.log(document.getElementsByName(likedgames[like][0]));
                                 //line below accounts for suggested/pinned games
                                 if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
