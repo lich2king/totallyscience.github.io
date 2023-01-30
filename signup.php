@@ -15,7 +15,7 @@
     <div style="padding-top: 90px;"></div>
 
 
-    <p style="text-align: center; color: red;" id="errorText"></p>
+
     <p style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
     <form id="survey" action="javascript:SubmitSignUp()">
         <div>
@@ -57,7 +57,7 @@
         </div>
         <button class="button" id="save-button">Sign Up</button>
     </form>
-
+    <p style="text-align: center; color: red;" id="errorText"></p>
 
 
     <svg id="scrollb" onclick='window.scrollTo({top: 0, behavior: "smooth"});' xmlns="http://www.w3.org/2000/svg"
