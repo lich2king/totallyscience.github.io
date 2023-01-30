@@ -32,7 +32,7 @@
 
     "Chess": {
         "description": "Online board game where your could play against a friend or the computer.",
-        "image": "./assets/game_images/chess-icon.png",
+        "image": "./assets/game_images/chess.png",
         "controls": "Use your mouse to drag the piece you want to move",
         "tags": ["2", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -72,7 +72,7 @@
 
     "Cupcake2048": {
         "description": "The cupcake edition of the classic 2048 game. Mix cupcakes together to create new ones!",
-        "image": "./assets/game_images/cupcake2048.png",
+        "image": "./assets/game_images/2048cupcake.jpg",
         "controls": "Arrow keys to slide tiles",
         "tags": ["puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -82,7 +82,7 @@
 
     "Ducklife": {
         "description": "The future of the farm is in your hands! Train your duck then compete in challenges to save the farm.",
-        "image": "./assets/game_images/ducklife.jpeg",
+        "image": "./assets/game_images/ducklife1.jpeg",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -102,7 +102,7 @@
 
     "Ducklife 3": {
         "description": "Collect coins and purchase upgrades to help your duck become world champion.",
-        "image": "./assets/game_images/ducklife3.jpeg",
+        "image": "./assets/game_images/ducklife3.png",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -112,7 +112,7 @@
 
     "Ducklife 4": {
         "description": "Raise a duck to become a professional racer! You can choose an egg to hatch, and customize its appearance.",
-        "image": "./assets/game_images/ducklife4.jpeg",
+        "image": "./assets/game_images/ducklife4.png",
         "controls": "Arrow keys to move",
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -648,7 +648,7 @@
     },
     "Ball Blast": {
         "description": "Shoot the balls and upgrade your cannon, how long can you survive?",
-        "image": "./assets/game_images/ballblast.png",
+        "image": "./assets/game_images/ballsblast.png",
         "controls": "[Drag] - move\n[Click] - shoot",
         "tags": ["mobile", "scratch"],
         "date_added": "2022-01-09T18:11:41.637Z",
@@ -722,7 +722,7 @@
     },
     "1v1 LOL": {
         "description": "Eliminate all other opponents and become the last survivor!",
-        "image": "./assets/game_images/1v1.jpg",
+        "image": "./assets/game_images/1v1lol.png",
         "controls": "[WASD] - run\n[LShift] - crouch\n[Click] - shoot\n[Right-click] - aim",
         "tags": ["multiplayer"],
         "date_added": "2022-01-13T03:19:02.226Z",
@@ -812,7 +812,7 @@
     },
     "Clash Royale": {
         "description": "Command your Vikings and destroy the enemy's base in Clash of Vikings. The base is guarded by two towers.",
-        "image": "./assets/game_images/clashroyale.jpg",
+        "image": "./assets/game_images/clashvikings.jpg",
         "controls": "Click and drag",
         "tags": ["mobile", "multiplayer"],
         "date_added": "2022-01-19T03:06:46.159Z",
@@ -902,7 +902,7 @@
     },
     "Cookie Clicker": {
         "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
-        "image": "./assets/game_images/cookieclicker.jpeg",
+        "image": "./assets/game_images/cookieclicker.png",
         "controls": "Click with the mouse",
         "tags": ["mobile", "clicker"],
         "date_added": "2022-02-10T14:51:17.859Z",
@@ -947,7 +947,7 @@
     },
     "Fireboy and Watergirl": {
         "description": "Help Fireboy and Watergirl work together to get through each maze to the exit.",
-        "image": "./assets/game_images/fireboyandwatergirl.jpeg",
+        "image": "./assets/game_images/fireboyandwatergirl.avif",
         "controls": "[Arrow Keys] - move FireBoy\n[WASD] - move WaterGirl",
         "tags": ["2"],
         "date_added": "2022-02-20T21:02:01.524Z",
@@ -992,7 +992,7 @@
     },
     "Bloons TD 4": {
         "description": "A classic tower defense game initially released in Flash. Defend the path by placing various defenses tactically around the map.",
-        "image": "./assets/game_images/bloonstd4.jpg",
+        "image": "./assets/game_images/bloons.png",
         "controls": "[Click] - interact",
         "tags": [""],
         "date_added": "2022-03-03T02:19:54.536Z",

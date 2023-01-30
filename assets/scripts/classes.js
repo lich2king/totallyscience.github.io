@@ -216,11 +216,12 @@ buttons.forEach((button) => {
             customcategory = false;
         }
 
-        if (e.target.name != selectedTopic) {
-            window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
+        if (e.target.name == selectedTopic) {
+            selectedTopic = 'all';
+        } else {
+            selectedTopic = e.target.name;
         }
-
-        selectedTopic = e.target.name;
 
         const buttons = document.querySelectorAll('.categoryButton');
 

@@ -238,14 +238,16 @@ const buttons = document.querySelectorAll('.categoryButton');
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        if (e.target.name != selectedTopic) {
-            document.getElementById('adScroll').scrollIntoView({
-                block: 'start',
-                inline: 'nearest',
-            });
-        }
+        document.getElementById('adScroll').scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+        });
 
-        selectedTopic = e.target.name;
+        if (e.target.name == selectedTopic) {
+            selectedTopic = 'all';
+        } else {
+            selectedTopic = e.target.name;
+        }
 
         const buttons = document.querySelectorAll('.categoryButton');
 
