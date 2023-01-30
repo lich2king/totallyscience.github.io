@@ -24,9 +24,9 @@
             <p><span id="pointsDisplay">0</span> pts</p>
         </div>
 
-        <div class="nav-button" onclick="window.open('https:/\/classroom.google.com', '_blank')"
-            tooltip="Press this key to return to Google Classroom! " flow="down" id="shusheomji">
-            <img src="https://img.icons8.com/color/480/tilde-key.png">
+        <div class="nav-button" tooltip="Press this key to return to Google Classroom! " flow="down" id="shusheomji">
+            <img style="cursor:pointer;" onclick="window.open('https:/\/classroom.google.com', '_blank')"
+                src="https://img.icons8.com/color/480/tilde-key.png">
         </div>
 
         <a id="discord" href="https://discord.gg/6kTskTSTFM" target="_blank">
