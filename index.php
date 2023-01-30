@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v22'>
+    <link rel='stylesheet' href='assets/styles/index.css?v23'>
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script>
@@ -25,8 +25,10 @@
                 <img src="assets/images/chest.png" style="pointer-events: none;">
             </div>
         </div>
-        <p class='timerText'>Daily Reward In <span id="rewardTimer">...</span></p>
+        <p class='timerText'>Daily Reward In <span id="rewardTimer"></span><span class="loader"></span></p>
     </div>
+
+
 
     <div id="startcontent">
         <div id="feature">

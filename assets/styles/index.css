@@ -18,6 +18,8 @@ html {
     margin-left: 4%;
     align-self: flex-start;
     color: var(--light-color);
+    display: flex;
+    align-items: center;
 }
 
 #pointsbar .backbar {
@@ -765,4 +767,26 @@ input[type='text'] {
     margin-bottom: 15px;
     cursor: pointer;
     opacity: 0.8;
+}
+
+/* Loading Spinner */
+.loader {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--accent-color);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
