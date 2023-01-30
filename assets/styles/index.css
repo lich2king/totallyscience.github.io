@@ -20,6 +20,7 @@ html {
     color: var(--light-color);
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 #pointsbar .backbar {
@@ -771,7 +772,6 @@ input[type='text'] {
 
 /* Loading Spinner */
 .loader {
-    margin-left: 10px;
     width: 15px;
     height: 15px;
     border: 3px solid var(--accent-color);
