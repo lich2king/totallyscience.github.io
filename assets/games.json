@@ -12,7 +12,7 @@
 
     "Papas Pizzeria": {
         "description": "Ever wanted to have your own pizza restraunt? Here you go!",
-        "image": "./assets/game_images/papaspizza.png",
+        "image": "./assets/game_images/papaspizza.jpg",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
         "tags": ["featured", "flash"],
         "date_added": "2021-12-30T04:56:36.982Z",
@@ -142,7 +142,7 @@
 
     "Factory Balls": {
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
-        "image": "./assets/game_images/factoryballsforever.jpeg",
+        "image": "./assets/game_images/factoryballs.jpg",
         "controls": "Drag balls with mouse",
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -335,7 +335,7 @@
 
     "Street Fighter": {
         "description": "A classic fighting game. You will engage in one-on-one close quarter combat against your opponent.",
-        "image": "./assets/game_images/streetfighter.png",
+        "image": "./assets/game_images/streetfighter.jpg",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
         "tags": [""],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -355,7 +355,7 @@
 
     "Tanuki Sunset": {
         "description": "Play as a racoon on a skateboard. Drift at turns and collect coins. Try to beat the highscore!",
-        "image": "./assets/game_images/tanukisunset.jpeg",
+        "image": "./assets/game_images/tanukisunset.jpg",
         "controls": "[Arrow Keys] - turn\n[Space] - drift",
         "tags": ["car", "running"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -440,7 +440,7 @@
     },
     "Breaking The Bank": {
         "description": "Attempt to break into a bank, built in the middle of a desert.",
-        "image": "./assets/game_images/breakingthebank.jpeg",
+        "image": "./assets/game_images/breakingthebank.avif",
         "controls": "Click with the mouse",
         "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -839,7 +839,7 @@
     },
     "Doge Miner": {
         "description": "Your mission is to get to the moon! To get there cost 50,000,000,000 dogecoin. Goodluck!",
-        "image": "./assets/game_images/dogeminer.jpg",
+        "image": "./assets/game_images/dogeminer.avif",
         "controls": "Click",
         "tags": ["clicker"],
         "date_added": "2022-01-23T17:31:14.954Z",

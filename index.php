@@ -25,7 +25,7 @@
                 <img src="assets/images/chest.png" style="pointer-events: none;">
             </div>
         </div>
-        <p class='timerText'>Daily Reward In <span id="rewardTimer"></span><span class="loader"></span></p>
+        <p class='timerText'><span class="loader"></span>Daily Reward In <span id="rewardTimer"></span></p>
     </div>
 
 
