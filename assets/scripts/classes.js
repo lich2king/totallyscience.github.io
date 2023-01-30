@@ -43,7 +43,7 @@ let sortObject = (obj) =>
         .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json?1`)
+    fetch(`assets/games.json?2`)
         .then((response) => response.json())
         .then((retrievedGames) => {
             games = retrievedGames;
