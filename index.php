@@ -126,11 +126,11 @@
         </div>
     </div>
 
-    <div style="text-align:center">
+    <!-- <div style="text-align:center">
         <button class="button" onclick="window.open('classes', '_self')"><span>MORE GAMES</span><img
                 style="padding-left:0.5vw" width="16vw"
                 src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
-    </div>
+    </div> -->
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
         <!-- Horizontal Ad -->
@@ -328,7 +328,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v132"></script>
+    <script src="assets/scripts/index.js?v133"></script>
 </body>
 
 </html>
