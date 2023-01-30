@@ -24,7 +24,7 @@
             <p><span id="pointsDisplay">0</span> pts</p>
         </div>
 
-        <div class="nav-button" onclick="window.open('classroom.google.com', '_blank')"
+        <div class="nav-button" onclick="window.open('https:/\/classroom.google.com', '_blank')"
             tooltip="Press this key to return to Google Classroom! " flow="down" id="shusheomji">
             <img src="https://img.icons8.com/color/480/tilde-key.png">
         </div>
