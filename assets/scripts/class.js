@@ -77,7 +77,7 @@ window.addEventListener('load', () => {
 
             if (gameData.type == 'proxy') {
                 document.getElementById('iframe').src =
-                    'https://p.' + window.location.host + '/index#' + btoa(gameData.iframe_url);
+                    'https://p.' + window.location.host + '#' + btoa(gameData.iframe_url);
             } else {
                 document.getElementById('iframe').src = gameData.iframe_url;
             }
