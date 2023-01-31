@@ -29,7 +29,6 @@ html {
     transform: scale(1.05);
 }
 
-
 /*#endregion*/
 
 #info {
@@ -42,7 +41,6 @@ html {
     font-size: 1.5vw;
     font-family: 'Rubik', sans-serif;
 }
-
 
 /*#region categories + seach*/
 
@@ -87,7 +85,6 @@ html {
     justify-content: center;
 }
 
-
 /* searchbar */
 
 input[type='text'] {
@@ -109,7 +106,6 @@ input[type='text'] {
     margin-bottom: 3%;
     color: var(--dark-color);
 }
-
 
 /* category selection */
 
@@ -134,7 +130,6 @@ input[type='text'] {
     font-size: 1.7vw;
 }
 
-
 /*@media (min-width: 1200px) {
     .categoryButton {
         font-size: 1.25vw;
@@ -152,9 +147,7 @@ input[type='text'] {
     opacity: 0.45;
 }
 
-
 /*#endregion*/
-
 
 /*#region games*/
 
@@ -221,14 +214,14 @@ input[type='text'] {
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.2s linear;
     transition: visibility 0s, opacity 0.2s linear;
+    margin: 0%;
 }
 
-#gameDiv:hover div {
+#gameDiv:hover .innerGameDiv {
     visibility: visible;
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
 }
-
 
 /*#endregion*/
 
@@ -250,7 +243,7 @@ input[type='text'] {
     font-family: 'Rubik', sans-serif;
 }
 
-#gameDiv:hover>#gamelock {
+#gameDiv:hover > #gamelock {
     opacity: 1;
     top: -10%;
 }

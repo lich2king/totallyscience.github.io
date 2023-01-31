@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v27'>
+    <link rel='stylesheet' href='assets/styles/index.css?v28'>
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script>
@@ -97,24 +97,25 @@
 
     <div id="searchcatParent">
         <div id="searchcat">
-            <button name="all" onclick="" class="selectedCategory categoryButton">All</button>
-            <button name="new" onclick="" class="unselectedCategory categoryButton">New</button>
-            <button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button>
-            <button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button>
-            <button name="car" onclick="" class="unselectedCategory categoryButton">Car</button>
+            <h1><button name="all" onclick="" class="selectedCategory categoryButton">All</button></h1>
+            <h1><button name="new" onclick="" class="unselectedCategory categoryButton">New</button></h1>
+            <h1><button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button></h1>
+            <h1><button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button></h1>
+            <h1><button name="car" onclick="" class="unselectedCategory categoryButton">Car</button></h1>
             <!-- <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search"> -->
-            <button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button>
-            <button name="card" onclick="" class="unselectedCategory categoryButton">Card</button>
-            <button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button>
-            <button name="fnf" onclick="" class="unselectedCategory categoryButton">FNF</button>
-            <button name="multiplayer" onclick="" class="unselectedCategory categoryButton">Multiplayer</button>
-            <button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button>
-            <button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button>
-            <button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button>
-            <button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button>
-            <button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button>
-            <button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button>
-            <button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button>
+            <h1><button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button></h1>
+            <h1><button name="card" onclick="" class="unselectedCategory categoryButton">Card</button></h1>
+            <h1><button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button></h1>
+            <h1><button name="fnf" onclick="" class="unselectedCategory categoryButton">FNF</button></h1>
+            <h1><button name="multiplayer" onclick="" class="unselectedCategory categoryButton">Multiplayer</button>
+            </h1>
+            <h1><button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button></h1>
+            <h1><button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button></h1>
+            <h1><button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button></h1>
+            <h1><button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button></h1>
+            <h1><button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button></h1>
+            <h1><button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button></h1>
+            <h1><button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button></h1>
         </div>
 
 
@@ -328,7 +329,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v134"></script>
+    <script src="assets/scripts/index.js?v135"></script>
 </body>
 
 </html>

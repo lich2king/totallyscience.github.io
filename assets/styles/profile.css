@@ -220,9 +220,10 @@ html {
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.2s linear;
     transition: visibility 0s, opacity 0.2s linear;
+    margin: 0%;
 }
 
-#gameDiv:hover div {
+#gameDiv:hover .innerGameDiv {
     visibility: visible;
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
@@ -239,10 +240,9 @@ html {
     opacity: 1;
 }
 
-
 /*Game pass lock icon on game*/
 
-#gameDiv:hover>button {
+#gameDiv:hover > button {
     opacity: 1;
     top: -10%;
 }

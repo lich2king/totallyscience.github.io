@@ -287,14 +287,14 @@ function createGameButton(game, pin) {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
-            <div class="innerGameDiv">${game}</div>
+            <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
     } else {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
-            <div class="innerGameDiv">${game}</div>
+            <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
     }

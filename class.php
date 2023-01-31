@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v20'>
+    <link rel='stylesheet' href='assets/styles/class.css?v21'>
 </head>
 
 <body>
@@ -39,7 +39,8 @@
                         <div id="likeCount">...</div>
                     </div>
                     <div class="undertext">
-                        <button onclick="OpenHighscore()" class="text-button"><img src="assets/images/icons/trophy-icon.png"></button>
+                        <button onclick="OpenHighscore()" class="text-button"><img
+                                src="assets/images/icons/trophy-icon.png"></button>
                         <div id="currentHighscore">...</div>
                     </div>
                     <!--<button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
@@ -97,7 +98,7 @@
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v68"></script>
+    <script src="assets/scripts/class.js?v69"></script>
 </body>
 
 </html>

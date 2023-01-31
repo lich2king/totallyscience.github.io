@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v9'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v10'>
 </head>
 
 <body>
@@ -68,7 +68,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v44"></script>
+    <script src="assets/scripts/profile.js?v45"></script>
 </body>
 
 </html>

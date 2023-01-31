@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/classes.css?v4'>
+    <link rel='stylesheet' href='assets/styles/classes.css?v5'>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/classes.js?v57"></script>
+    <script src="assets/scripts/classes.js?v58"></script>
 </body>
 
 </html>

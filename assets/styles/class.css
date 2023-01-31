@@ -38,7 +38,7 @@ html {
     width: 100%;
     height: 70vh;
     background-color: rgb(25, 31, 38);
-    background-image: url("../../assets/images/icons/loading.gif");
+    background-image: url('../../assets/images/icons/loading.gif');
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
@@ -154,7 +154,7 @@ html {
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale3d(1.0, 1.0, 1);
+        -webkit-transform: scale3d(1, 1, 1);
     }
 }
 
@@ -213,7 +213,7 @@ html {
 
 #info .break {
     height: 1vh;
-    width: .1vw;
+    width: 0.1vw;
 }
 
 #moregames {
@@ -282,9 +282,10 @@ html {
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.2s linear;
     transition: visibility 0s, opacity 0.2s linear;
+    margin: 0%;
 }
 
-#gameDiv:hover div {
+#gameDiv:hover .innerGameDiv {
     visibility: visible;
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;

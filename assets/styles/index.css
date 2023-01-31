@@ -89,11 +89,27 @@ html {
     text-align: center;
     justify-content: center;
     align-content: center;
-    text-shadow: var(--stroke-width) 0 0 var(--stroke-color), calc(var(--stroke-width) * -1) 0 0 var(--stroke-color), 0 var(--stroke-width) 0 var(--stroke-color), 0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
+    text-shadow: var(--stroke-width) 0 0 var(--stroke-color), calc(var(--stroke-width) * -1) 0 0 var(--stroke-color),
+        0 var(--stroke-width) 0 var(--stroke-color), 0 calc(var(--stroke-width) * -1) 0 var(--stroke-color);
 }
 
 .smooth-16 {
-    text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color);
+    text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color),
+        calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color);
 }
 
 #gameDiv {
@@ -146,9 +162,7 @@ html {
     text-shadow: var(--dark-color) 1px 0 10px;
 }
 
-
 /*#endregion*/
-
 
 /*#region animation for feature*/
 
@@ -177,9 +191,7 @@ html {
     }
 }
 
-
 /*#endregion*/
-
 
 /*#region suggested games*/
 
@@ -203,8 +215,8 @@ html {
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 1262px) {}
-
+@media screen and (max-width: 1262px) {
+}
 
 /*#endregion*/
 
@@ -297,7 +309,6 @@ html {
     }
 }
 
-
 /*#region categories + seach*/
 
 #searchcatParent {
@@ -325,6 +336,11 @@ html {
     padding-right: 40px;
 }
 
+#searchcat h1 {
+    padding: 0%;
+    margin: 0%;
+}
+
 #nextcatrow {
     margin-top: 2vh;
     width: 91vw;
@@ -335,7 +351,6 @@ html {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 /* searchbar */
 
@@ -359,7 +374,6 @@ input[type='text'] {
     color: var(--dark-color);
 }
 
-
 /* category selection */
 
 .categoryButton {
@@ -380,7 +394,6 @@ input[type='text'] {
     font-size: 1.2rem;
 }
 
-
 /*@media (min-width: 1200px) {
     .categoryButton {
         font-size: 1.25vw;
@@ -398,9 +411,7 @@ input[type='text'] {
     opacity: 0.45;
 }
 
-
 /*#endregion*/
-
 
 /*#region games*/
 
@@ -467,15 +478,16 @@ input[type='text'] {
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.2s linear;
     transition: visibility 0s, opacity 0.2s linear;
+    margin: 0%;
 }
 
-#gameDiv:hover div {
+#gameDiv:hover .innerGameDiv {
     visibility: visible;
     opacity: 1;
     text-shadow: var(--dark-color) 1px 0 10px;
 }
 
-#gameDiv:hover>#gamelock {
+#gameDiv:hover > #gamelock {
     opacity: 1;
     top: -10%;
 }
@@ -533,9 +545,7 @@ input[type='text'] {
     height: 80px;
 }
 
-
 /*#endregion*/
-
 
 /*#region extracategories*/
 
@@ -592,7 +602,6 @@ input[type='text'] {
     background-color: var(--accent-color);
 }
 
-
 /*#endregion*/
 
 #noSearch {
@@ -623,7 +632,6 @@ input[type='text'] {
     color: var(--accent-color);
     font-weight: 200;
 }
-
 
 /*Daily reward popup css */
 
@@ -756,7 +764,6 @@ input[type='text'] {
     cursor: pointer;
     opacity: 0.8;
 }
-
 
 /* Loading Spinner */
 
