@@ -495,7 +495,7 @@ function rewardPop() {
         fetch(`assets/php/points/checkrewardday.php`)
             .then((rewardDay) => rewardDay.text())
             .then((rewardDay) => {
-                if (rewardDay == 5) {
+                if (rewardDay == 6) {
                     points = 1000;
                 }
                 document.getElementById('popPoints').innerHTML = points;

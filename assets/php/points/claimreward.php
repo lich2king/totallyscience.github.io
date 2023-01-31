@@ -28,10 +28,6 @@
   //check if it has been 24 hours
   if(time() > $rewardTimer) //time() gets unix time in seconds
   {
-      if($rewardDay == 5)
-      {
-        $points = 1000;
-      }
       if($rewardDay >= 6)
       {
         $rewardDay = 0;
