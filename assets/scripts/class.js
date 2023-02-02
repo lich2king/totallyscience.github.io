@@ -17,6 +17,8 @@ let loggedIn = false;
 let verified = true;
 let games;
 
+document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName}`;
+
 window.addEventListener('load', () => {
     //Check if user is logged in
     fetch(`assets/php/getCookie.php`)
@@ -75,7 +77,7 @@ window.addEventListener('load', () => {
 
             if (gameData.type == 'proxy') {
                 document.getElementById('iframe').src =
-                    'https://p.' + window.location.host + '/index#' + btoa(gameData.iframe_url);
+                    'https://p.' + window.location.host + '#' + btoa(gameData.iframe_url);
             } else {
                 document.getElementById('iframe').src = gameData.iframe_url;
             }
@@ -111,7 +113,7 @@ window.addEventListener('load', () => {
 });
 
 //Like Button
-likeButton.addEventListener('click', function () {
+likeButton.addEventListener('click', function() {
     if (loggedIn) {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
@@ -135,19 +137,19 @@ likeButton.addEventListener('click', function () {
     }
 });
 
-likeButton.addEventListener('click', function () {
+likeButton.addEventListener('click', function() {
     likeButton.classList.add('button-click');
 });
-likeButton.addEventListener('webkitAnimationEnd', function () {
+likeButton.addEventListener('webkitAnimationEnd', function() {
     likeButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function () {
+pinButton.addEventListener('click', function() {
     pinButton.classList.add('button-click');
 });
-pinButton.addEventListener('webkitAnimationEnd', function () {
+pinButton.addEventListener('webkitAnimationEnd', function() {
     pinButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function () {
+pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
             fetch(`assets/php/class_pin/pinclass.php?name=${gameName}`)
@@ -227,9 +229,9 @@ function suggestGames() {
         let randGame = Object.keys(games)[x];
         let sameTag = false;
 
-        currentTags.forEach(function (game) {
+        currentTags.forEach(function(game) {
             let gameTags = games[randGame]['tags'];
-            gameTags.forEach(function (currentgame) {
+            gameTags.forEach(function(currentgame) {
                 if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
@@ -257,7 +259,7 @@ function suggestGames() {
 
     document.getElementById('suggestedGames').innerHTML = '';
 
-    randomGames.forEach(function (game) {
+    randomGames.forEach(function(game) {
         const gameBtn = `
             <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]['image']})" id="gameDiv" onclick="location.href = 'class?class=${game}'">
                 <h1 class="innerGameDiv">${game}</h1>
@@ -268,7 +270,7 @@ function suggestGames() {
     });
 }
 
-var randomProperty = function (object) {
+var randomProperty = function(object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };

@@ -3,10 +3,10 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v28'>
-    <script type="text/javascript"
+    <link rel='stylesheet' href='assets/styles/index.css?v29'>
+    <!-- <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
-        async="async"></script>
+        async="async"></script> -->
 </head>
 
 <body>
