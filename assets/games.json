@@ -169,7 +169,7 @@
         "date_added": "2023-02-02T22:25:27.029Z",
         "developer": "Cameron Taylor",
         "type": "proxy",
-        "iframe_url": "./assets/games/fridaynightfunkin/index.html"
+        "iframe_url": "/assets/games/fridaynightfunkin/index.html"
     },
 
     "Friday Night Funkin VS Tricky HD Mod": {
