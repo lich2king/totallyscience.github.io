@@ -39,7 +39,7 @@
                     <h2 class="gametext stroke-text smooth-16">BALDIS BASICS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class?class=Bloons%20TD%204', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class?class=Baldis%20Basics', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
             <div class="featureSlot fade"
