@@ -33,6 +33,16 @@
     <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
+                <div class="overlay">
+                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                    <h2 class="gametext stroke-text smooth-16">BALDIS BASICS</h2>
+                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
+                </div>
+                <button onclick="window.open('class?class=Bloons%20TD%204', '_self')" class="featureButton button">Play
+                    Now</button>
+            </div>
+            <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
@@ -52,16 +62,7 @@
                 <button onclick="window.open('class?class=Vex%203', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
-            <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/bloonstd.jpg); display:none;">
-                <div class="overlay">
-                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">BLOONS TD 4</h2>
-                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
-                </div>
-                <button onclick="window.open('class?class=Bloons%20TD%204', '_self')" class="featureButton button">Play
-                    Now</button>
-            </div>
+
         </div>
 
         <div id="scisuggests">
