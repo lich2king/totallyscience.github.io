@@ -1372,5 +1372,14 @@
         "date_added": "2023-02-03T00:28:34.403Z",
         "developer": "Nitrome",
         "iframe_url": "assets/games/bad-ice-cream-3/index.html"
+    },
+    "Baldis Basics": {
+        "description": "The first Baldi Basics online session doesn’t seem spooky at all. A goofy-looking elementary school teacher welcomes the protagonist to class. The surroundings are bright and well lit, the music is cheerful. Nothing appears threatening or alarming at first. However, something vile and unnerving is happening behind the scenes. Only the bravest souls will be able to handle what lies ahead.\n\nBaldi’s Basics is not like most other online games on our Totally Science website. It is a weird combination of an educational learning game and a horror story. The gameplay might seem a bit boring at first, but there is a scary plot that will shock you! School is out and you have returned to collect some notebooks for a friend. You will meet a creepy teacher called Baldi, who likes to give simple challenges to his students and doesn’t like wrong answers. Enter each classroom, open notebooks and solve fun trivia problems to make Baldi happy. If your answer is correct, Baldi will give you a coin as a reward for your knowledge. If your answer is wrong though, strange things will happen and you should better start running for your life. Because, this teacher has some serious mental issues and making him angry is not a good idea! To complete the Baldi’s Basics game at Totally Science, you will need to collect all 7 notebooks and get to the exit in one piece.",
+        "image": "./assets/game_images/baldisbasics.png",
+        "controls": "Move - [WASD] or [Arrow keys]\nRun - [Shift]\nPick up items - [Left-click]\nUse items - [Right-click]",
+        "tags": ["puzzle", "horror"],
+        "date_added": "2023-02-03T00:28:34.403Z",
+        "developer": "Nitrome",
+        "iframe_url": "assets/games/baldis-basics/index.html"
     }
 }
