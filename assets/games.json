@@ -1347,7 +1347,7 @@
     },
     "Bad Ice Cream": {
         "description": "Bad Ice-Cream is a fun 2-player puzzle game where you play as an Ice Cream. Choose a flavor, and add fruit to your ice cream! This sub-zero Pacman mod features cool graphics and tasty desserts. Travel through each maze-like level, and collect fruit for points. Clear all fruit without getting caught, and enjoy your tasty treat! Use your ice-breaking powers to smash blocks of ice or create your own icy barriers for protection. Go ahead, eat all the fruits!",
-        "image": "./assets/game_images/badicecream.jpg",
+        "image": "./assets/game_images/badicecream.jpg?1",
         "controls": "Move - [WASD] or [Arrow keys]\nFreeze or Break Ice - [F] or [Space]",
         "tags": ["2", "puzzle"],
         "date_added": "2023-02-03T00:28:34.403Z",
