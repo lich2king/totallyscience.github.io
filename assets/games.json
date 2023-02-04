@@ -1381,5 +1381,14 @@
         "date_added": "2023-02-03T00:28:34.403Z",
         "developer": "Nitrome",
         "iframe_url": "assets/games/baldis-basics/index.html"
+    },
+    "Just Fall": {
+        "description": "Just Fall LOL is not just a penguin game; it's also an online multiplayer game with friends. Players play as penguins and compete in hexagonal arenas to see who can be the champion of the race.\n\nThis game has simple rules. You need to use arrow keys to play with the cute penguin, move, jump and slide. Besides, you can choose 1 of 12 different colors to decorate your character's skin and various game modes.\n\nIn each game, you will randomly match with another player or invite friends to form a group of 8 people. Your task is to control the penguin and hold out on the ice for as long as possible. Icebergs will fall after people walk on them. It would be best if you stayed away from the holes. Be the last person to fall into the sea to put your name on the leaderboard.",
+        "image": "./assets/game_images/justfall.jpg",
+        "controls": "Move - [WASD] or [Arrow keys]\nJump - [Space]",
+        "tags": ["running", "multiplayer", "io"],
+        "date_added": "2023-02-03T00:28:34.403Z",
+        "developer": "Nitrome",
+        "iframe_url": "assets/games/baldis-basics/index.html"
     }
 }
