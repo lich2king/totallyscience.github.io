@@ -32,6 +32,17 @@
 
     <div id="startcontent">
         <div id="feature">
+
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
+                <div class="overlay">
+                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                    <h2 class="gametext stroke-text smooth-16">JUST FALL</h2>
+                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
+                </div>
+                <button onclick="window.open('class?class=Just%20Fall', '_self')" class="featureButton button">Play
+                    Now</button>
+            </div>
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
                 <div class="overlay">
