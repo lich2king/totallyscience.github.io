@@ -1387,8 +1387,8 @@
         "image": "./assets/game_images/justfall.jpg",
         "controls": "Move - [WASD] or [Arrow keys]\nJump - [Space]",
         "tags": ["running", "multiplayer", "io"],
-        "date_added": "2023-02-03T00:28:34.403Z",
-        "developer": "Nitrome",
+        "date_added": "2023-02-04T18:50:05.472Z",
+        "developer": "UNKNOWN",
         "iframe_url": "assets/games/just-fall/index.html"
     }
 }
