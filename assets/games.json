@@ -1390,14 +1390,5 @@
         "date_added": "2023-02-04T18:50:05.472Z",
         "developer": "UNKNOWN",
         "iframe_url": "assets/games/just-fall/index.html"
-    },
-    "Awesome Tanks 2": {
-        "description": "Awesome Tanks 2 is an engaging fighting game. Your task is to defeat enemy tanks, collect coins, and destroy the enemy base in order to clear each level. Collect coins along the way and use them to upgrade your tank with better armor, weapons, visibility and more.\nYou destroy rival tanks using cannons, flamethrowers, lasers, missiles and more with weapon upgrades. Don't forget to upgrade weapons to improve your fighting power. Need a performance upgrade, especially armor, which will help protect your tank against heavy fire. Movement speed is also useful for dodging, especially against oncoming missiles.\nIn each level, you'll be surrounded by darkness. You'll need to move and discover the place. The problem is, enemy tanks are lurking around every corner, so you better be on your guard. To be able to play in the next level you need to destroy all enemies. You can destroy the boxes you can see around to get more coins. The boxes are always essential, collect them all to get more power. But sometimes it's a trap, like a bomb, get away from it quickly.\nAs you progress, it gets harder and harder to earn rewards. You can choose the difficulty of the game. Your achievements will be recognized, so play as hard as you can.",
-        "image": "./assets/game_images/awesome-tanks-2.jpg",
-        "controls": "Move - [WASD] or [Arrow keys]\nFire - [Left-Click]\nSwitch Weapon - [Number Keys]",
-        "tags": ["running", "multiplayer", "io"],
-        "date_added": "2023-02-04T18:50:05.472Z",
-        "developer": "Alexander Gette",
-        "iframe_url": "assets/games/awesometanks2/index.html"
     }
 }
