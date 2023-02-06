@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
         if (appData == null) window.location.href = '../apps';
 
-        if (appData.type == 'proxy') appFrame.src = 'https://p.' + window.location.host + '#' + btoa(appData.iframe_url);
+        if (appData.type == 'proxy') appFrame.src = 'https://a.' + window.location.host + '#' + btoa(appData.iframe_url);
         else appFrame.src = appData.iframe_url;
     }).catch((err) => {
         if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
