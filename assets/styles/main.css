@@ -12,12 +12,6 @@
     --error-color: #cf1a32;
 }
 
-[theme='dark'] {
-    --light-color: #000000;
-    --dark-color: #ffffff;
-    --box-shadow-color: #000000;
-}
-
 html {
     overflow-x: hidden;
     /* prevent highlight */
