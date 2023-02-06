@@ -13,7 +13,7 @@
 
     <div style="display: flex;">
         <div style="margin-top: 55px; overflow: hidden; height: 91vh; width: 85vw;">
-            <embed class="iframeloader" id="app_frame" style="border: none; position: relative; z-index: 2; overflow: hidden;" width=100% height=100% src=""></embed>
+            <iframe class="iframeloader" id="app_frame" style="border: none; position: relative; z-index: 2; overflow: hidden;" width=100% height=100% src=""></iframe>
         </div>
         <div style="margin-top: 55px; overflow: hidden; height: 91vh; width: 15vw;">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
