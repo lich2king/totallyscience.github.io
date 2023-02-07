@@ -58,8 +58,9 @@
             fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                 console.log(res)
                 if (res.startsWith('{')) {
-                    console.log('hi')
+                    console.log(document.cookie)
                     document.cookie = 'logintoken=' + res;
+                    console.log(document.cookie)
 
                     location.href = 'profile.php';
                 } else {
