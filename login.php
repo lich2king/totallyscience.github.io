@@ -58,6 +58,8 @@
             fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
                 if (res.startsWith('{')) {
                     localStorage.setItem('logintoken', res);
+                    
+                    //add success message
 
                     setTimeout(() => {
                         location.href = 'profile.php';
