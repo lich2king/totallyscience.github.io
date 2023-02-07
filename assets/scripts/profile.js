@@ -22,58 +22,57 @@ document.addEventListener('DOMContentLoaded', () => {
     } else location.href = 'signup.php';
 
     //Load highscores
-    fetch(`assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
-            if (res != '[]') {
-                res = JSON.parse(res);
-                highscores = res;
-                for (score in highscores) {
+    fetcher(`assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
+        if (res != '[]') {
+            res = JSON.parse(res);
+            highscores = res;
+
+            for (score in highscores) {
                 const game = highscores[score][0];
-                const name = highscores[score][1];
                 const gameScore = highscores[score][2];
                 const highscoreDiv = `
-                <div class="highscore">
-                    <img src="../assets/images/icons/trophy.png">
-                    <h1>${game}</h1>
-                    <p>${numFormatter(gameScore)}</p>
-                </div>
-            `;
+                    <div class="highscore">
+                        <img src="../assets/images/icons/trophy.png">
+                        <h1>${game}</h1>
+                        <p>${numFormatter(gameScore)}</p>
+                    </div>
+                `;
 
                 scoresDiv.innerHTML += highscoreDiv;
             }
         } else document.getElementById('noscores').setAttribute('style', 'display: ');
     });
 
-    //Load liked games
-    fetch(`assets/php/class_likes/personallikes.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            let likedgames = JSON.parse(res);
-            const likeContainer = document.getElementById('likedcontainer');
+    // load liked games
+    fetcher(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+        const likeContainer = document.getElementById('likedcontainer');
 
-            for (like in likedgames) {
-                let game = likedgames[like][0];
-                if (games[game] != null) {
-                    const gameButton = createGameButton(game);
-                    likeContainer.innerHTML += gameButton;
-                }
+        let likedgames = JSON.parse(res);
+
+        for (like in likedgames) {
+            let game = likedgames[like][0];
+            if (games[game] != null) {
+                const gameButton = createGameButton(game);
+                likeContainer.innerHTML += gameButton;
             }
-        });
+        }
+    });
 
-    //Load recent games
-    fetch(`assets/php/recent_classes/recentclasses.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            let recentGames = res.split(';');
-            recentGames = recentGames.slice(1);
-            const recentContainer = document.getElementById('recentContainer');
+    // load recent games
+    fetcher(`assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
+        const recentContainer = document.getElementById('recentContainer');
 
-            for (let i = 0; i < recentGames.length; i++) {
-                if (games[recentGames[i]] != null) {
-                    const gameButton = createGameButton(recentGames[i]);
-                    recentContainer.innerHTML += gameButton;
-                }
+        let recentGames = res.split(';');
+
+        recentGames = recentGames.slice(1);
+
+        for (let i = 0; i < recentGames.length; i++) {
+            if (games[recentGames[i]] != null) {
+                const gameButton = createGameButton(recentGames[i]);
+                recentContainer.innerHTML += gameButton;
             }
-        });
+        }
+    });
 });
 
 function changeToGif(ele) {

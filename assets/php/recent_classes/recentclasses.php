@@ -11,11 +11,11 @@
     die("connection failed"); //. $conn->connect_error);
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  if (!isset($_GET['auth'])) {
     die("no cookie");
   }
 
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $userid = json_decode($_GET['auth'], true)['id'];
   $query = "SELECT `RecentGames` FROM `accounts` WHERE id='$userid'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];

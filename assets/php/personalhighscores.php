@@ -11,11 +11,11 @@
     die("connection failed"); //. $conn->connect_error);
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  if (!isset($_GET['auth'])) {
     die("no cookie");
   }
 
-  $uid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $uid = json_decode($_GET['auth'], true)['id'];
   $query = "SELECT * FROM highscores WHERE uid='$uid'";
   $result = mysqli_query($conn, $query);
   $highscores = array ();

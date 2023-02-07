@@ -8,14 +8,14 @@
     
   // Check connection
   if ($conn->connect_error) {
-    die("connection failed"); //. $conn->connect_error);
+    die("connection failed");
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  if (!isset($_GET['auth'])) {
     die("no cookie");
   }
 
-  $user = json_decode($_COOKIE['logintoken'], true)['id'];
+  $user = json_decode($_GET['auth'], true)['id'];
 
   $query = "SELECT `game` FROM `liked_games` WHERE id='$user'";
   $result = mysqli_query($conn, $query);
