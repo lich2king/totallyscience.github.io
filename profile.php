@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +66,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v45"></script>
+    <script src="assets/scripts/profile.js?v46"></script>
 </body>
 
 </html>
