@@ -30,11 +30,7 @@
         'id' => $row[7]
       );
 
-      $cookie_name = "logintoken";
-      $cookie_value = json_encode($data);
-
-      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-      echo("Success");
+      echo(json_encode($data));
     }
     else {
       echo("Username or Password is Incorrect");

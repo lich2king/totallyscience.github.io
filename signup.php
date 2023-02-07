@@ -137,7 +137,9 @@
 
                     fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) =>
                         response.text()).then((res) => {
-                        if (res == 'Success') {
+                        if (res.startsWith('{')) {
+                            document.cookie = 'logintoken=' + res;
+
                             location.href = 'profile.php';
                         }
                     });
