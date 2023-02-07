@@ -58,6 +58,7 @@
             const errorText = document.getElementById('errorText');
           
             fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
+                console.log(res)
                 if (res.startsWith('{')) {
                     document.cookie = 'logintoken=' + res;
 
