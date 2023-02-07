@@ -1,13 +1,4 @@
-let cookies = document.cookie.split(';');
-let authCookie;
-
-for (cookie in cookies) {
-    if (cookies[cookie].trim().startsWith('logintoken')) {
-        authCookie = cookies[cookie].trim().slice(4);
-    }
-}
-
-// READY
+let authCookie = JSON.parse(localStorage.getItem('logintoken'));
 
 if (location.host.includes('github')) location.replace('https://tsmain.co');
 
