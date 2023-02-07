@@ -96,18 +96,16 @@ if ($password != null && $password != '') {
 
 
 <script>
-    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res);
+    res = JSON.parse(authCookie);
 
-        let loggedIn = 'false';
+    let loggedIn = 'false';
 
-        if (res != null) {
-            loggedIn = res['isLoggedIn'];
-        }
-        if (loggedIn != 'true') {
-            location.href = 'profile.php';
-        }
-    });
+    if (res != null) {
+        loggedIn = res['isLoggedIn'];
+    }
+    if (loggedIn != 'true') {
+        location.href = 'profile.php';
+    }
 
     function newUsername() {
         const username = document.getElementById('username').value;

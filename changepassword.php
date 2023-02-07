@@ -103,19 +103,18 @@ else if ($step == 3) {
 <script>
     let username;
 
-    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res);
+    res = JSON.parse(authCookie);
 
-        let loggedIn = 'false';
+    let loggedIn = 'false';
 
-        if (res != null) {
-            loggedIn = res['isLoggedIn'];
-        }
-        if (loggedIn == 'true') {
-            document.getElementById('back-login').style.display = 'none';
-            username = res['username'];
+    if (res != null) {
+        loggedIn = res['isLoggedIn'];
+    }
+    if (loggedIn == 'true') {
+        document.getElementById('back-login').style.display = 'none';
+        username = res['username'];
 
-            fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
+        fetch(`changepassword.php?username=${username}&step=1`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 document.getElementById('usertext').innerText = 'Before resetting your password, type the confirmation code sent to your email';
                 document.getElementById('survey').action = 'javascript:submitConfirmCode()';
@@ -124,8 +123,7 @@ else if ($step == 3) {
                 localStorage.setItem('tempusername', username);
             }
         });
-        }
-    });
+    }
 
     function sendEmailConfirm() {
         username = document.getElementById('username').value;

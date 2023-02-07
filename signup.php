@@ -67,8 +67,7 @@
     </svg>
 
     <script>
-    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res);
+        res = JSON.parse(authCookie);
 
         let loggedIn = 'false';
 
@@ -78,77 +77,76 @@
         if (loggedIn == 'true') {
             location.href = 'profile.php';
         }
-    });
 
-    const validateEmail = (email) => {
-        return String(email)
-            .toLowerCase()
-            .match(
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            );
-    };
+        const validateEmail = (email) => {
+            return String(email)
+                .toLowerCase()
+                .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        };
 
-    async function containsHash() {
-        user = document.getElementById('username').value;
-        email = document.getElementById('email').value;
-        pass = document.getElementById('password').value;
+        async function containsHash() {
+            user = document.getElementById('username').value;
+            email = document.getElementById('email').value;
+            pass = document.getElementById('password').value;
 
-        if (user.includes('#') || email.includes('#') || pass.includes('#')) return true;
+            if (user.includes('#') || email.includes('#') || pass.includes('#')) return true;
 
-        return false;
-    };
+            return false;
+        };
 
-    async function SubmitSignUp() {
-        const user = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const pass = document.getElementById('password').value;
-        const confirmpass = document.getElementById('confirmpassword').value;
-        const errorText = document.getElementById('errorText');
-        const grad = document.getElementById('gradSelect').value;
-
-        if (user == '') {
-            errorText.innerText = '*Missing username';
-        } else if (email == '') {
-            errorText.innerText = '*Missing email';
-        } else if (pass == '') {
-            errorText.innerText = '*Missing password';
-        } else if (confirmpass == '') {
-            errorText.innerText = '*Missing password confirmation';
-        } else if (confirmpass != pass) {
-            errorText.innerText = `*Passwords don't match`;
-        } else if (!validateEmail(email)) {
-            errorText.innerText = '*Email is not valid';
-        } else if (await containsHash()) {
-            errorText.innerText = '*You cannot use a #';
-        } else if (pass.length < 5) {
-            errorText.innerText = '*Password must be at least 5 characters';
-        } else {
-            errorText.innerText = '';
+        async function SubmitSignUp() {
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const pass = document.getElementById('password').value;
+            const confirmpass = document.getElementById('confirmpassword').value;
+            const errorText = document.getElementById('errorText');
             const grad = document.getElementById('gradSelect').value;
 
-            fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}`).then((
-                response) => response.text()).then((res) => {
-                if (res == 'Success') {
-                    errorText.style.color = 'green';
-                    errorText.innerText = '*Account successfully created';
+            if (user == '') {
+                errorText.innerText = '*Missing username';
+            } else if (email == '') {
+                errorText.innerText = '*Missing email';
+            } else if (pass == '') {
+                errorText.innerText = '*Missing password';
+            } else if (confirmpass == '') {
+                errorText.innerText = '*Missing password confirmation';
+            } else if (confirmpass != pass) {
+                errorText.innerText = `*Passwords don't match`;
+            } else if (!validateEmail(email)) {
+                errorText.innerText = '*Email is not valid';
+            } else if (await containsHash()) {
+                errorText.innerText = '*You cannot use a #';
+            } else if (pass.length < 5) {
+                errorText.innerText = '*Password must be at least 5 characters';
+            } else {
+                errorText.innerText = '';
+                const user = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const pass = document.getElementById('password').value;
+                const grad = document.getElementById('gradSelect').value;
 
-                    fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) =>
-                        response.text()).then((res) => {
-                        if (res.startsWith('{')) {
-                            document.cookie = 'logintoken=' + res;
+                fetch(`assets/php/signup.php?username=${user}&email=${email}&password=${pass}&gradyear=${grad}`).then((
+                    response) => response.text()).then((res) => {
+                    if (res == 'Success') {
+                        errorText.style.color = 'green';
+                        errorText.innerText = '*Account successfully created';
 
-                            location.href = 'profile.php';
-                        }
-                    });
-                } else {
-                    errorText.innerText = res;
-                }
-            });
+                        fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) =>
+                            response.text()).then((res) => {
+                            if (res.startsWith('{')) {
+                                document.cookie = 'logintoken=' + res;
+
+                                location.href = 'profile.php';
+                            }
+                        });
+                    } else {
+                        errorText.innerText = res;
+                    }
+                });
+            }
         }
-    }
     </script>
     <div style="padding-bottom: 10vh;"></div>
 

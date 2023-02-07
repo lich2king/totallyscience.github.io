@@ -85,8 +85,7 @@ if ($password != null && $password != '') {
 
 
 <script>
-    fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-        res = JSON.parse(res);
+        res = JSON.parse(authCookie);
 
         let loggedIn = 'false';
 
@@ -96,7 +95,6 @@ if ($password != null && $password != '') {
         if (loggedIn != 'true') {
             location.href = 'profile.php';
         }
-    });
 
     function newEmail() {
         const email = document.getElementById('email').value;

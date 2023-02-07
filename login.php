@@ -37,19 +37,17 @@
     </svg>
     
     <script>
-        fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-            res = JSON.parse(res);
-    
-            let loggedIn = 'false';
+        res = JSON.parse(authCookie);
 
-            if (res != null) {
-                loggedIn = res['isLoggedIn'];
-            }
-    
-            if (loggedIn == "true") {
-                location.href = 'profile.php';
-            }
-        });
+        let loggedIn = 'false';
+
+        if (res != null) {
+            loggedIn = res['isLoggedIn'];
+        }
+
+        if (loggedIn == "true") {
+            location.href = 'profile.php';
+        }
     
     
         function SubmitLogin() {
@@ -62,11 +60,9 @@
                 if (res.startsWith('{')) {
                     document.cookie = 'logintoken=' + res;
 
-                    errorText.style = 'text-align: center; color: green;';
-                    errorText.innerText = ('*' + res);
                     location.href = 'profile.php';
                 } else {
-                    errorText.innerText = ('*'+ res);
+                    errorText.innerText = res;
                 }
             });
         }
