@@ -18,10 +18,8 @@ function fetcher(endpoint, options) {
         }
         updatedOptions.body = {
             ...options ? options.body : null,
-            'auth': JSON.stringify(authToken)
+            'auth': authToken
         }
-        //post needed for body
-        updatedOptions.method = 'POST';
     }
     return fetch(`${activeServer}${endpoint}`, updatedOptions)
 }
