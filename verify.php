@@ -64,13 +64,6 @@
                 }
             });
         }
-
-        function logout()
-        {
-            fetch(`assets/php/logout.php`).then(() => {
-                location.href = 'login';
-            });
-        }
     </script>
 </body>
 

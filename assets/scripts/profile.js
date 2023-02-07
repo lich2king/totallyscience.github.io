@@ -90,12 +90,6 @@ function noGif(ele) {
     if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
-function logout() {
-    fetch(`assets/php/logout.php`).then(() => {
-        location.href = 'login';
-    });
-}
-
 // converts number to string representation with K and M.
 // toFixed(d) returns a string that has exactly 'd' digits
 // after the decimal place, rounding if necessary.

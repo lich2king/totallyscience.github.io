@@ -103,3 +103,8 @@ function setPoints() {
         });
     }
 }
+
+function logout() {
+    localStorage.removeItem('authToken');
+    location.reload();
+}
