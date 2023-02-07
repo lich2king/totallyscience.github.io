@@ -1,3 +1,4 @@
+let cookies = document.cookie.split(';');
 let authCookie;
 
 for (cookie in cookies) {
