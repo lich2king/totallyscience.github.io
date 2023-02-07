@@ -1,4 +1,4 @@
-let authCookie = JSON.parse(localStorage.getItem('logintoken'));
+const authCookie = localStorage.getItem('logintoken');
 
 if (location.host.includes('github')) location.replace('https://tsmain.co');
 
