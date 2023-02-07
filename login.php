@@ -59,7 +59,9 @@
                 if (res.startsWith('{')) {
                     localStorage.setItem('logintoken', res);
 
-                    location.href = 'profile.php';
+                    setTimeout(() => {
+                        location.href = 'profile.php';
+                    }, 500);
                 } else {
                     errorText.innerText = res;
                 }
