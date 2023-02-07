@@ -1,56 +1,47 @@
-// READY
-
 let username;
 let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json`)
-        .then((response) => response.json())
-        .then((retrievedGames) => {
-            games = retrievedGames;
-        });
+    fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
+        games = retrievedGames;
+    });
 
-    fetch(`assets/php/getCookie.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            res = JSON.parse(res);
-            if (res != null) {
-                const loggedIn = res['isLoggedIn'];
-                username = res['username'];
-                uid = res['id'];
+    res = JSON.parse(authCookie);
+    
+    if (res != null) {
+        const loggedIn = res['isLoggedIn'];
+        username = res['username'];
+        uid = res['id'];
 
-                if (loggedIn != 'true') location.href = 'signup.php';
+        if (loggedIn != 'true') location.href = 'signup.php';
 
-                document.getElementById('usernameSpan').innerText = username;
-                document.getElementById('emailSpan').innerText = res['email'];
-            } else location.href = 'signup.php';
-        });
+        document.getElementById('usernameSpan').innerText = username;
+        document.getElementById('emailSpan').innerText = res['email'];
+    } else location.href = 'signup.php';
 
     //Load highscores
-    fetch(`assets/php/personalhighscores.php`)
-        .then((response) => response.text())
-        .then((res) => {
+    fetch(`assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
             if (res != '[]') {
                 res = JSON.parse(res);
                 highscores = res;
                 for (score in highscores) {
-                    const game = highscores[score][0];
-                    const name = highscores[score][1];
-                    const gameScore = highscores[score][2];
-                    const highscoreDiv = `
-                    <div class="highscore">
-                        <img src="../assets/images/icons/trophy.png">
-                        <h1>${game}</h1>
-                        <p>${numFormatter(gameScore)}</p>
-                    </div>
-                `;
+                const game = highscores[score][0];
+                const name = highscores[score][1];
+                const gameScore = highscores[score][2];
+                const highscoreDiv = `
+                <div class="highscore">
+                    <img src="../assets/images/icons/trophy.png">
+                    <h1>${game}</h1>
+                    <p>${numFormatter(gameScore)}</p>
+                </div>
+            `;
 
-                    scoresDiv.innerHTML += highscoreDiv;
-                }
-            } else document.getElementById('noscores').setAttribute('style', 'display: ');
-        });
+                scoresDiv.innerHTML += highscoreDiv;
+            }
+        } else document.getElementById('noscores').setAttribute('style', 'display: ');
+    });
 
     //Load liked games
     fetch(`assets/php/class_likes/personallikes.php`)
