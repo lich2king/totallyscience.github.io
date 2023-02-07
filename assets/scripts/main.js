@@ -86,38 +86,20 @@ window.addEventListener('load', () => {
             else scrollButton.style.display = 'none';
         });
     }
-});
-// ------------------------------ fix
-checkedLoggedIn();
-
-let userLoggedIn = false;
-async function checkedLoggedIn() {
-    res = JSON.parse(authToken);
-
-    if (res != null) {
-        const isLoggedIn = res['isLoggedIn'];
-
-        if (isLoggedIn == 'true') {
-            userLoggedIn = true;
-        }
-    }
 
     setPoints();
-}
-// ------------------------------ fix
+});
 
 // update points in navbar
 function setPoints() {
-    if (userLoggedIn) {
-        if (localStorage.getItem('tspoints') != null) {
-            document.getElementById('pointsDisplay').innerText = localStorage.getItem('tspoints');
-        } else {
-            fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
-                localStorage.setItem('tspoints', points);
-                document.getElementById('pointsDisplay').innerText = points;
-            });
-        }
+    if (localStorage.getItem('tspoints') != null) {
+        document.getElementById('pointsDisplay').innerText = localStorage.getItem('tspoints');
     } else {
-        document.getElementById('pointsDisplay').innerText = 0;
+        fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
+            if (points.startsWith('error')) return;
+
+            localStorage.setItem('tspoints', points);
+            document.getElementById('pointsDisplay').innerText = points;
+        });
     }
 }

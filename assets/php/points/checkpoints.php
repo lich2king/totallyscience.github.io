@@ -6,11 +6,11 @@
     
   // Check connection
   if ($conn->connect_error) {
-    die("connection failed"); //. $conn->connect_error);
+    die("error: connection failed");
   }
 
   if (!isset($_GET['auth'])) {
-    die("no cookie");
+    die("error: no cookie");
   }
     
   $userid = json_decode($_GET['auth'], true)['id'];
