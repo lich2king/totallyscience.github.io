@@ -53,18 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loadCookies() {
-    await fetch(`assets/php/getCookie.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            res = JSON.parse(res);
-            if (res != null) {
-                const isLoggedIn = res['isLoggedIn'];
+    res = JSON.parse(authToken);
 
-                if (isLoggedIn == 'true') {
-                    loggedIn = true;
-                }
-            }
-        });
+    if (res != null) {
+        const isLoggedIn = res['isLoggedIn'];
+
+        if (isLoggedIn == 'true') {
+            loggedIn = true;
+        }
+    }
 
     //when done
     loadTopic();

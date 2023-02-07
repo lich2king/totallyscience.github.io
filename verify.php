@@ -34,20 +34,18 @@
     </svg>
     
     <script>
-        fetch(`assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-            res = JSON.parse(res);
-    
-            let loggedIn = 'false';
+        res = JSON.parse(authToken);
 
-            if (res != null) {
-                document.getElementById("email").innerHTML = res['email'];
-                loggedIn = res['isLoggedIn'];
-            }
-    
-            if (loggedIn != "true") {
-                location.href = 'login.php';
-            }
-        });
+        let loggedIn = 'false';
+
+        if (res != null) {
+            document.getElementById("email").innerHTML = res['email'];
+            loggedIn = res['isLoggedIn'];
+        }
+
+        if (loggedIn != "true") {
+            location.href = 'login.php';
+        }
 
         fetch('assets/php/sendVerification.php');
     

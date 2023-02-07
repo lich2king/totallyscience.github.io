@@ -41,16 +41,14 @@ let loggedIn = false;
 let verified = false;
 
 
-fetch(`../assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-    res = JSON.parse(res);
-    if (res != null) {
-        const isLoggedIn = res['isLoggedIn'];
+res = JSON.parse(res);
+if (res != null) {
+    const isLoggedIn = res['isLoggedIn'];
 
-        if (isLoggedIn == 'true') {
-            loggedIn = true;
-        }
+    if (isLoggedIn == 'true') {
+        loggedIn = true;
     }
-});
+}
 
 fetch(`../assets/php/verified.php`).then((response) => response.text()).then((res) => {
     if (res == '1') {

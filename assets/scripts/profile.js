@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         games = retrievedGames;
     });
 
-    res = JSON.parse(authCookie);
+    res = JSON.parse(authToken);
     
     if (res != null) {
         const loggedIn = res['isLoggedIn'];

@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include '../config.php';
 
   // Create connection
@@ -11,11 +9,11 @@
     die("connection failed"); //. $conn->connect_error);
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  if (!isset($_GET['auth'])) {
     die("no cookie");
   }
     
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $userid = json_decode($_GET['auth'], true)['id'];
 
   //first check if the user has a game pass account
   $query = "SELECT Points FROM accounts WHERE ID = '$userid'";

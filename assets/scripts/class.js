@@ -21,36 +21,32 @@ document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameN
 
 window.addEventListener('load', () => {
     //Check if user is logged in
-    fetch(`assets/php/getCookie.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            res = JSON.parse(res);
+        res = JSON.parse(authToken);
 
-            let userloggedIn = 'false';
+        let userloggedIn = 'false';
 
-            if (res != null) userloggedIn = res['isLoggedIn'];
+        if (res != null) userloggedIn = res['isLoggedIn'];
 
-            if (userloggedIn == 'true') {
-                loggedIn = true;
+        if (userloggedIn == 'true') {
+            loggedIn = true;
 
-                //check if user liked the game previously
-                fetch(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
-                    .then((response) => response.text())
-                    .then((res) => {
-                        if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-                    });
+            //check if user liked the game previously
+            fetch(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
+                .then((response) => response.text())
+                .then((res) => {
+                    if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+                });
 
-                //check if user pinned the game previously
-                fetch(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
-                    .then((response) => response.text())
-                    .then((res) => {
-                        if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                    });
+            //check if user pinned the game previously
+            fetch(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
+                .then((response) => response.text())
+                .then((res) => {
+                    if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+                });
 
-                //add to recent games list
-                fetch(`assets/php/recent_classes/addclass.php?name=${gameName}`);
-            }
-        });
+            //add to recent games list
+            fetch(`assets/php/recent_classes/addclass.php?name=${gameName}`);
+        }
 
     fetch(`assets/php/verified.php`)
         .then((response) => response.text())

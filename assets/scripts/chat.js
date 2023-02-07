@@ -1,9 +1,7 @@
 document.getElementById('chatnav').classList.add('selected');
 
-fetch(`assets/php/getCookie.php`)
-    .then((response) => response.text())
-    .then((res) => {
-        res = JSON.parse(res);
+
+        res = JSON.parse(authToken);
 
         let loggedIn = res ? res['isLoggedIn'] : 'false';
 
@@ -498,4 +496,3 @@ fetch(`assets/php/getCookie.php`)
         } else {
             errorText.innerText = 'You must be logged in to use chat.';
         }
-    });

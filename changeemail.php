@@ -85,7 +85,7 @@ if ($password != null && $password != '') {
 
 
 <script>
-        res = JSON.parse(authCookie);
+        res = JSON.parse(authToken);
 
         let loggedIn = 'false';
 

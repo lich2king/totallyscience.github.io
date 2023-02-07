@@ -1,11 +1,33 @@
-const authCookie = localStorage.getItem('logintoken');
+const liveServer = 'https://api.' + location.host;
+const localServer = 'http://localhost:5001';
+const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1')  ? localServer : liveServer;
 
-if (location.host.includes('github')) location.replace('https://tsmain.co');
+const authToken = localStorage.getItem('authToken');
+
+// util for fetching backend scripts.
+function fetcher(endpoint, options) {
+    let updatedOptions = { ...options };
+
+    if (authToken) {
+        updatedOptions.headers = {
+            ...options ? options.headers : null,
+            // x-access-token is for node version
+            //'x-access-token': authToken,
+            // not sure if this actually works as expected -- hopefully reduces preflight requests?
+            'Access-Control-Max-Age': 86400
+        }
+        updatedOptions.body = {
+            ...options ? options.body : null,
+            'auth': JSON.stringify(authToken)
+        }
+    }
+    return fetch(`${activeServer}${endpoint}`, updatedOptions)
+}
 
 // init user prefs
-if (localStorage.getItem('website') == null)
-    localStorage.setItem('website', 'https://classroom.google.com/');
+if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
 
+// update favicon and title with user disguise
 if (localStorage.getItem('disguise') == null) {
     localStorage.setItem('disguise', 'none');
 } else {
@@ -43,14 +65,9 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
 }
 
 // panic button
-window.addEventListener(
-    'keydown',
-    (e) => {
-        if (e.key == '`')
-            window.open(this.localStorage.getItem('website'), '_blank');
-    },
-    false
-);
+window.addEventListener('keydown', (e) => {
+    if (e.key == '`') window.open(this.localStorage.getItem('website'), '_blank');
+}, false);
 
 // page load init
 window.addEventListener('load', () => {
@@ -65,66 +82,40 @@ window.addEventListener('load', () => {
     if (scrollButton) {
         // When the user scrolls down 20px from the top of the document, show the button
         window.addEventListener('scroll', () => {
-            if (
-                document.body.scrollTop > 400 ||
-                document.documentElement.scrollTop > 400
-            ) {
-                scrollButton.style.display = 'block';
-            } else {
-                scrollButton.style.display = 'none';
-            }
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) scrollButton.style.display = 'block';
+            else scrollButton.style.display = 'none';
         });
     }
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    //showAds();
-});
-
-function showAds() {
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src =
-        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-    script.setAttribute('data-ad-client', 'ca-pub-3486863589051210');
-    script.async = true;
-
-    head.appendChild(script);
-}
-
+// ------------------------------ fix
 checkedLoggedIn();
 
 let userLoggedIn = false;
 async function checkedLoggedIn() {
-    await fetch(`assets/php/getCookie.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            res = JSON.parse(res);
-            if (res != null) {
-                const isLoggedIn = res['isLoggedIn'];
+    res = JSON.parse(authToken);
 
-                if (isLoggedIn == 'true') {
-                    userLoggedIn = true;
-                }
-            }
-        });
+    if (res != null) {
+        const isLoggedIn = res['isLoggedIn'];
+
+        if (isLoggedIn == 'true') {
+            userLoggedIn = true;
+        }
+    }
+
     setPoints();
 }
+// ------------------------------ fix
 
+// update points in navbar
 function setPoints() {
-    //Move this to main.js
     if (userLoggedIn) {
         if (localStorage.getItem('tspoints') != null) {
-            document.getElementById('pointsDisplay').innerText =
-                localStorage.getItem('tspoints');
+            document.getElementById('pointsDisplay').innerText = localStorage.getItem('tspoints');
         } else {
-            fetch(`assets/php/points/checkpoints.php`)
-                .then((points) => points.text())
-                .then((points) => {
-                    localStorage.setItem('tspoints', points);
-                    document.getElementById('pointsDisplay').innerText = points;
-                });
+            fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
+                localStorage.setItem('tspoints', points);
+                document.getElementById('pointsDisplay').innerText = points;
+            });
         }
     } else {
         document.getElementById('pointsDisplay').innerText = 0;

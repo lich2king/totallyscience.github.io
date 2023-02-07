@@ -190,14 +190,14 @@
         }
 
         function GetUser() {
-            fetch(`./assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-                if (res != "null") {
-                    res = JSON.parse(res);
-                    username = res["username"]
-                } else {
-                    username = ""
-                }
-            });
+            res = JSON.parse(authToken);
+
+            if (res != "null") {
+                res = JSON.parse(res);
+                username = res["username"]
+            } else {
+                username = ""
+            }
         }
 
 

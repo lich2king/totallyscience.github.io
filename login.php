@@ -35,7 +35,7 @@
     </svg>
     
     <script>
-        res = JSON.parse(authCookie);
+        res = JSON.parse(authToken);
 
         let loggedIn = 'false';
 

@@ -103,7 +103,7 @@ else if ($step == 3) {
 <script>
     let username;
 
-    res = JSON.parse(authCookie);
+    res = JSON.parse(authToken);
 
     let loggedIn = 'false';
 

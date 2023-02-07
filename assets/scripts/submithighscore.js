@@ -86,16 +86,16 @@ async function SubmitHighscore() {
 }
 
 async function GetUser() {
-    await fetch(`./assets/php/getCookie.php`).then((response) => response.text()).then((res) => {
-        if (res != "null") {
-            loggedIn = true;
-            res = JSON.parse(res);;
-            username = res["username"];
-            uid = res["id"];
-        } else {
-            username = "";
-        }
-    });
+    res = JSON.parse(authToken);
+    
+    if (res != "null") {
+        loggedIn = true;
+        res = JSON.parse(res);;
+        username = res["username"];
+        uid = res["id"];
+    } else {
+        username = "";
+    }
 }
 
 
