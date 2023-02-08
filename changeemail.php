@@ -95,6 +95,7 @@ if ($password != null && $password != '') {
     <p style="text-align: center;" id="back-login"><a href="profile.php" style="color: var(--light-color)">Back to profile</a></p>
 </body>
 
+<?php include "assets/includes/footer.php" ?>
 
 <script>
         res = JSON.parse(authToken);
