@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include '../config.php';
 
   // Create connection
@@ -8,14 +6,14 @@
     
   // Check connection
   if ($conn->connect_error) {
-    die("connection failed"); //. $conn->connect_error);
+    die("connection failed");
   }
 
-  if (!isset($_GET['auth'])) {
+  if (!isset($_POST['auth'])) {
     die("no cookie");
   }
 
-  $userid = json_decode($_GET['auth'], true)['id'];
+  $userid = json_decode($_POST['auth'], true)['id'];
   $query = "SELECT `RecentGames` FROM `accounts` WHERE id='$userid'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];
