@@ -17,19 +17,20 @@
   }
 
   $uid = json_decode($data['auth'], true)['id'];
-  $query = "SELECT * FROM highscores WHERE uid='$uid'";
-  $result = mysqli_query($conn, $query);
-  $highscores = array ();
+  echo $uid;
+  //$query = "SELECT * FROM highscores WHERE uid='$uid'";
+  //$result = mysqli_query($conn, $query);
+  //$highscores = array ();
 
-  while ($row = mysqli_fetch_assoc($result)) {
-    $game = $row["game"];
-    $score = $row["score"];
-    $name = $row["name"];
+  //while ($row = mysqli_fetch_assoc($result)) {
+    //$game = $row["game"];
+    //$score = $row["score"];
+    //$name = $row["name"];
 
-    array_push($highscores, array($game, $name, $score));
-  }
+    //array_push($highscores, array($game, $name, $score));
+  //}
 
-  echo(json_encode($highscores));    
+  //echo(json_encode($highscores));    
 
   $conn->close();
 ?>
