@@ -22,8 +22,9 @@ function fetcher(endpoint, options) {
         }
         //post needed for body
         updatedOptions.method = 'POST';
+        console.log(updatedOptions.body)
     }
-    return fetch(`${activeServer}${endpoint}`, updatedOptions)
+    return fetch(`${activeServer}${endpoint}`, updatedOptions);
 }
 
 // init user prefs
