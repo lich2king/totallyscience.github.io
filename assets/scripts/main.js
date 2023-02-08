@@ -24,7 +24,10 @@ function fetcher(endpoint, options) {
         //post needed for body
         updatedOptions.method = 'post';
     }
-    return fetch(`${activeServer}${endpoint}`, updatedOptions);
+    //add active server when using node version
+    //return fetch(`${activeServer}${endpoint}`, updatedOptions);
+
+    return fetch(`${endpoint}`, updatedOptions);
 }
 
 // init user prefs
