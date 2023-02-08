@@ -69,7 +69,7 @@ if ($password != null && $password != '') {
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='./assets/styles/account.css?v1'>
+    <link rel='stylesheet' href='./assets/styles/account.css?v2'>
 </head>
 
 <body>
