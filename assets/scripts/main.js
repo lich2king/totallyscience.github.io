@@ -17,12 +17,12 @@ function fetcher(endpoint, options) {
             'Access-Control-Max-Age': 86400,
             'Content-Type': 'application/json'
         }
-        updatedOptions.body = {
+        updatedOptions.body = JSON.stringify({
             ...options ? options.body : null,
-            'auth': authToken
-        }
+            'auth': JSON.parse(authToken)
+        })
         //post needed for body
-        updatedOptions.method = 'POST';
+        updatedOptions.method = 'post';
     }
     return fetch(`${activeServer}${endpoint}`, updatedOptions);
 }
