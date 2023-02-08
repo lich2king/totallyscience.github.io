@@ -12,12 +12,15 @@ if ($conn->connect_error) {
 $password = htmlspecialchars($_GET["password"]);
 $newEmail = htmlspecialchars($_GET["email"]);
 
+$json = file_get_contents('php://input');
+$data = json_decode($json, TRUE);
+
 if ($password != null && $password != '') {
-    if (!isset($_COOKIE['logintoken'])) {
+    if (!isset($data['auth'])) {
         die("no cookie");
     }
       
-    $id = json_decode($_COOKIE['logintoken'], true)['id'];
+    $id = $data['auth']['id'];
     
     if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'")) {
         $row = $userresult -> fetch_row();
@@ -33,6 +36,15 @@ if ($password != null && $password != '') {
                     //username is new
                     $conn->query("UPDATE accounts SET Email = '$newEmail' WHERE id = '$id'");
                     $conn->query("UPDATE accounts SET Verified = false WHERE id = '$id'");
+
+                    $data = array(
+                        'isLoggedIn' => 'true',
+                        'username' => $row[0],
+                        'email' => $row[1],
+                        'id' => $row[7]
+                    );
+                
+                    echo(json_encode($data));
 
                     echo 'success';
                 } else {
@@ -106,9 +118,15 @@ if ($password != null && $password != '') {
             return;
         }
 
-        fetch(`changeemail.php?password=${password}&email=${email}`).then((response) => response.text()).then((res) => {
-            if (res.startsWith('success')) {
-                location.href = 'profile.php';
+        fetcher(`changeemail.php?password=${password}&email=${email}`).then((response) => response.text()).then((res) => {
+            if (res.startsWith('{')) {
+                localStorage.setItem('authToken', res);
+                
+                //add success message
+
+                setTimeout(() => {
+                    location.href = 'profile.php';
+                }, 500);
             } else {
                 errorText.innerText = res;
             }
