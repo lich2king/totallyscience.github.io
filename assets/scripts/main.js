@@ -14,15 +14,15 @@ function fetcher(endpoint, options) {
             // x-access-token is for node version
             //'x-access-token': authToken,
             // not sure if this actually works as expected -- hopefully reduces preflight requests?
-            'Access-Control-Max-Age': 86400
+            'Access-Control-Max-Age': 86400,
+            'Content-Type': 'application/json'
         }
         updatedOptions.body = {
             ...options ? options.body : null,
-            'auth': JSON.parse(authToken)
+            'auth': authToken
         }
         //post needed for body
         updatedOptions.method = 'POST';
-        console.log(updatedOptions.body)
     }
     return fetch(`${activeServer}${endpoint}`, updatedOptions);
 }
