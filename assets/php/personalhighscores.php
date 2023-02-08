@@ -16,7 +16,7 @@
     die("no cookie");
   }
 
-  $uid = json_decode($data['auth'], true)['id'];
+  $uid = json_decode($data['auth'], true);
   echo $uid;
   //$query = "SELECT * FROM highscores WHERE uid='$uid'";
   //$result = mysqli_query($conn, $query);
