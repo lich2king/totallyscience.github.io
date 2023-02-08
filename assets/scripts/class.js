@@ -57,37 +57,33 @@ window.addEventListener('load', () => {
         });
 
     //get game data for iframe etc
-    fetch(`assets/games.json?date=${new Date().getTime()}`)
-        .then((response) => {
-            if (response.ok) return response.json();
-            else console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
-        })
-        .then((games) => {
-            const gameData = games[gameName];
+    fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
+        if (response.ok) return response.json();
+        else console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
+    }).then((games) => {
+        const gameData = games[gameName];
 
-            if (gameData == null) window.location.href = '../classes.php';
+        if (gameData == null) window.location.href = '../classes.php';
 
-            document.getElementById('description').innerText = gameData.description;
-            document.getElementById('controls').innerText = gameData.controls;
-            document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
+        document.getElementById('description').innerText = gameData.description;
+        document.getElementById('controls').innerText = gameData.controls;
+        document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
 
-            if (gameData.type == 'proxy') {
-                document.getElementById('iframe').src =
-                    'https://p.' + window.location.host + '#' + btoa(gameData.iframe_url);
-            } else {
-                document.getElementById('iframe').src = gameData.iframe_url;
-            }
+        if (gameData.type == 'proxy') {
+            document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+        } else {
+            document.getElementById('iframe').src = gameData.iframe_url;
+        }
 
-            document.getElementById('iframe').focus();
+        document.getElementById('iframe').focus();
 
-            if (id) {
-                document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
-                console.log(gameData.iframe_url + '?id=' + id);
-            }
-        })
-        .catch((err) => {
-            if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
-        });
+        if (id) {
+            document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
+            console.log(gameData.iframe_url + '?id=' + id);
+        }
+    }).catch((err) => {
+        if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
+    });
 
     //get like count
     fetch(`assets/php/class_likes/getlikes.php?name=${gameName}`)
