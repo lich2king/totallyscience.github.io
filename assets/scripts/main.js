@@ -18,7 +18,7 @@ function fetcher(endpoint, options) {
         }
         updatedOptions.body = {
             ...options ? options.body : null,
-            'auth': authToken
+            'auth': JSON.parse(authToken)
         }
         //post needed for body
         updatedOptions.method = 'POST';
