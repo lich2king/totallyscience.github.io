@@ -62,8 +62,6 @@
         </div>
     </div>
 
-    <div style="padding-bottom: 10vh;"></div>
-
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/profile.js?v49"></script>
