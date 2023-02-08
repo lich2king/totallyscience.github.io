@@ -16,7 +16,7 @@
     die("no cookie");
   }
 
-  $user = json_decode($data['auth'], true)['id'];
+  $user = $data['auth']['id'];
 
   $query = "SELECT `game` FROM `liked_games` WHERE id='$user'";
   $result = mysqli_query($conn, $query);

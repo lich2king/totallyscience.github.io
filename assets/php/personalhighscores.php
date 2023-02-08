@@ -16,21 +16,21 @@
     die("no cookie");
   }
 
-  echo $data['auth']['id'];
-  //$uid = json_decode($data['auth'], true);//['id'];
-  //$query = "SELECT * FROM highscores WHERE uid='$uid'";
-  //$result = mysqli_query($conn, $query);
-  //$highscores = array ();
+  $user = $data['auth']['id'];
 
-  //while ($row = mysqli_fetch_assoc($result)) {
-    //$game = $row["game"];
-    //$score = $row["score"];
-    //$name = $row["name"];
+  $query = "SELECT * FROM highscores WHERE uid='$user'";
+  $result = mysqli_query($conn, $query);
+  $highscores = array ();
 
-    //array_push($highscores, array($game, $name, $score));
-  //}
+  while ($row = mysqli_fetch_assoc($result)) {
+    $game = $row["game"];
+    $score = $row["score"];
+    $name = $row["name"];
 
-  //echo(json_encode($highscores));    
+    array_push($highscores, array($game, $name, $score));
+  }
+
+  echo(json_encode($highscores));    
 
   $conn->close();
 ?>

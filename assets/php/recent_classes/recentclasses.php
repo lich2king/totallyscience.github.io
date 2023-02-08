@@ -16,8 +16,9 @@
     die("no cookie");
   }
 
-  $userid = json_decode($data['auth'], true)['id'];
-  $query = "SELECT `RecentGames` FROM `accounts` WHERE id='$userid'";
+  $user = $data['auth']['id'];
+
+  $query = "SELECT `RecentGames` FROM `accounts` WHERE id='$user'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];
 
