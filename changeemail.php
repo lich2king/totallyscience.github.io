@@ -69,13 +69,11 @@ if ($password != null && $password != '') {
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='./assets/styles/account.css'>
+    <link rel='stylesheet' href='./assets/styles/account.css?v1'>
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
-
-    <div style="padding-top: 90px;"></div>
 
     <form id="survey" action="javascript:newEmail()">
         <div>
@@ -92,7 +90,7 @@ if ($password != null && $password != '') {
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;" id="back-login"><a href="profile.php" style="color: var(--light-color)">Back to profile</a></p>
+    <p style="text-align: center; margin-bottom: 35vh;" id="back-login"><a href="profile.php" style="color: var(--light-color)">Back to profile</a></p>
 </body>
 
 <?php include "assets/includes/footer.php" ?>
