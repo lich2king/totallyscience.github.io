@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include 'config.php';
 
   // Create connection
@@ -8,14 +6,17 @@
     
   // Check connection
   if ($conn->connect_error) {
-    die("connection failed"); //. $conn->connect_error);
+    die("connection failed");
   }
 
-  if (!isset($_GET['auth'])) {
+  $json = file_get_contents('php://input');
+  $data = json_decode($json);
+
+  if (!isset($data['auth'])) {
     die("no cookie");
   }
 
-  $uid = json_decode($_GET['auth'], true)['id'];
+  $uid = json_decode($data['auth'], true)['id'];
   $query = "SELECT * FROM highscores WHERE uid='$uid'";
   $result = mysqli_query($conn, $query);
   $highscores = array ();

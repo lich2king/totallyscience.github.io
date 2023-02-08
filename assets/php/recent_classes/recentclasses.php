@@ -9,11 +9,14 @@
     die("connection failed");
   }
 
-  if (!isset($_POST['auth'])) {
+  $json = file_get_contents('php://input');
+  $data = json_decode($json);
+
+  if (!isset($data['auth'])) {
     die("no cookie");
   }
 
-  $userid = json_decode($_POST['auth'], true)['id'];
+  $userid = json_decode($data['auth'], true)['id'];
   $query = "SELECT `RecentGames` FROM `accounts` WHERE id='$userid'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];

@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include '../config.php';
 
   // Create connection
@@ -11,11 +9,14 @@
     die("connection failed");
   }
 
-  if (!isset($_GET['auth'])) {
+  $json = file_get_contents('php://input');
+  $data = json_decode($json);
+
+  if (!isset($data['auth'])) {
     die("no cookie");
   }
 
-  $user = json_decode($_GET['auth'], true)['id'];
+  $user = json_decode($data['auth'], true)['id'];
 
   $query = "SELECT `game` FROM `liked_games` WHERE id='$user'";
   $result = mysqli_query($conn, $query);
