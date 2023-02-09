@@ -394,23 +394,19 @@ function checkReward() {
         var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         if (localStorage.getItem('rewardTimer') != null) {
-            console.log('found local storage');
             const rewardTime = localStorage.getItem('rewardTimer');
 
             if (currentTime > rewardTime) {
-                fetch(`assets/php/points/checkrewardtimer.php`)
-                    .then((dbRewardTime) => dbRewardTime.text())
-                    .then((dbRewardTime) => {
+                fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
+                    if (currentTime > dbRewardTime) {
+                        console.log('Claim reward');
+                        rewardPop();
+                    } else {
                         console.log(dbRewardTime);
-                        if (currentTime > dbRewardTime) {
-                            console.log('Claim reward');
-                            rewardPop();
-                        } else {
-                            console.log(dbRewardTime);
-                            localStorage.setItem('rewardTimer', dbRewardTime);
-                            startTimer(dbRewardTime);
-                        }
-                    });
+                        localStorage.setItem('rewardTimer', dbRewardTime);
+                        startTimer(dbRewardTime);
+                    }
+                });
             } else {
                 startTimer(rewardTime);
             }

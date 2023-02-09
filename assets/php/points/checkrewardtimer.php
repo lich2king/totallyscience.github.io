@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include '../config.php';
 
   // Create connection
@@ -11,14 +9,17 @@
     die("connection failed"); //. $conn->connect_error);
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
     die("no cookie");
   }
     
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $id = $data['auth']['id'];
 
   //first check if the user has a game pass account
-  $query = "SELECT DailyReward FROM accounts WHERE ID = '$userid'";
+  $query = "SELECT DailyReward FROM accounts WHERE ID = '$id'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];
 
