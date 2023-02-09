@@ -11,13 +11,16 @@
     die("connection failed"); //. $conn->connect_error);
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
     die("no cookie");
   }
     
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $id = $data['auth']['id'];
 
-  $query = "SELECT DailyReward, RewardDay FROM accounts WHERE ID = '$userid'";
+  $query = "SELECT DailyReward, RewardDay FROM accounts WHERE ID = '$id'";
   $result = mysqli_query($conn, $query);
   $row = $result->fetch_array();
   $rewardTimer = $row[0];
@@ -37,7 +40,7 @@
         $rewardDay = $rewardDay + 1;
       }
 
-      $query = "UPDATE accounts SET DailyReward = UNIX_TIMESTAMP() + 86400, RewardDay = $rewardDay, Points=Points+$points WHERE ID = '$userid'";
+      $query = "UPDATE accounts SET DailyReward = UNIX_TIMESTAMP() + 86400, RewardDay = $rewardDay, Points=Points+$points WHERE ID = '$id'";
       if(mysqli_query($conn, $query))
       {
         die("Success");

@@ -9,14 +9,17 @@
     die("error: connection failed");
   }
 
-  if (!isset($_GET['auth'])) {
-    die("error: no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+    die("no cookie");
   }
     
-  $userid = json_decode($_GET['auth'], true)['id'];
+  $id = $data['auth']['id'];
 
   //first check if the user has a game pass account
-  $query = "SELECT Points FROM accounts WHERE ID = '$userid'";
+  $query = "SELECT Points FROM accounts WHERE ID = '$id'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];
 

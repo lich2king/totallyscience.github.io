@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include '../config.php';
 
   // Create connection
@@ -11,12 +9,16 @@
     die("connection failed");
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
     die("no cookie");
   }
+  
+  $id = $data['auth']['id'];
 
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
-  $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
+  $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$id'";
   $result = mysqli_query($conn, $query);
   $result = ($result -> fetch_row())[0];
 
