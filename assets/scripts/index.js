@@ -382,39 +382,23 @@ function createGameButton(game, pin) {
 function checkReward() {
     setRewardDayBar('initial');
     if (loggedIn) {
-        var currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
+        const rewardTime = localStorage.getItem('rewardTimer');
 
-        if (localStorage.getItem('rewardTimer') != null) {
-            const rewardTime = localStorage.getItem('rewardTimer');
+        let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
-            if (currentTime > rewardTime) {
-                fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
-                    if (currentTime > dbRewardTime) {
-                        rewardPop();
-                    } else {
-                        localStorage.setItem('rewardTimer', dbRewardTime);
-                        
-                        startTimer(dbRewardTime);
-                    }
-                });
-            } else {
-                startTimer(rewardTime);
+        // return out of function and start timer if the saved time has not been passed
+        if (rewardTime && currentTime < rewardTime) return startTimer(rewardTime);
+        
+        fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
+            if (rewardTime && currentTime > dbRewardTime) {
+                rewardPop();
+            } else if (rewardTime) {
+                localStorage.setItem('rewardTimer', dbRewardTime);
+                startTimer(dbRewardTime);
+            } else if (dbRewardTime == 0) {
+                rewardPop();
             }
-        } else {
-            fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
-                if (dbRewardTime == 0) {
-                    rewardPop();
-                } else {
-                    console.log(dbRewardTime);
-                    if (currentTime > dbRewardTime) {
-                        rewardPop();
-                    } else {
-                        localStorage.setItem('rewardTimer', dbRewardTime);
-                        startTimer(dbRewardTime);
-                    }
-                }
-            });
-        }
+        });
     } else {
         if (localStorage.getItem('ignoreReward') != null) {
             if (!localStorage.getItem('ignoreReward')) {
@@ -429,7 +413,6 @@ function checkReward() {
 //var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
 var rewardTimerInterval;
 function startTimer(endTime) {
-    console.log('starting timer...');
     clearInterval(rewardTimerInterval);
     rewardTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
@@ -450,7 +433,6 @@ function startTimer(endTime) {
             .toString()
             .padStart(2, '0');
 
-        //console.log(hours + ':' + minutes + ':' + seconds);
         document.getElementById('rewardTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
