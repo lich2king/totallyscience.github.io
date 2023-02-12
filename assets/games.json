@@ -247,7 +247,7 @@
     "Jetpack Joyride": {
         "description": "Dodge fire and missiles, while collecting coins through all the havoc.",
         "image": "./assets/game_images/jetpackjoyride.png",
-        "controls": "Hold space to go up",
+        "controls": "Go up - [Left - Click]",
         "tags": ["scratch"],
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "Halfbrick Studios",
