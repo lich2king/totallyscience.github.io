@@ -98,13 +98,13 @@ window.addEventListener('load', () => {
 
 // update points in navbar
 function setPoints() {
-    if (localStorage.getItem('tspoints') != null) {
-        document.getElementById('pointsDisplay').innerText = localStorage.getItem('tspoints');
+    if (localStorage.getItem('tsp') != null) {
+        document.getElementById('pointsDisplay').innerText = localStorage.getItem('tsp');
     } else {
         fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
             if (points.startsWith('error')) return;
 
-            localStorage.setItem('tspoints', points);
+            localStorage.setItem('tsp', points);
             document.getElementById('pointsDisplay').innerText = points;
         });
     }

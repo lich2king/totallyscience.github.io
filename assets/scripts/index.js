@@ -382,7 +382,7 @@ function createGameButton(game, pin) {
 function checkReward() {
     setRewardDayBar('initial');
     if (loggedIn) {
-        const rewardTime = localStorage.getItem('rewardTimer');
+        const rewardTime = localStorage.getItem('tsrewardtimer');
 
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
@@ -393,7 +393,7 @@ function checkReward() {
             if (rewardTime && currentTime > dbRewardTime) {
                 rewardPop();
             } else if (rewardTime) {
-                localStorage.setItem('rewardTimer', dbRewardTime);
+                localStorage.setItem('tsrewardtimer', dbRewardTime);
                 startTimer(dbRewardTime);
             } else if (dbRewardTime == 0) {
                 rewardPop();
@@ -433,7 +433,7 @@ function startTimer(endTime) {
             .toString()
             .padStart(2, '0');
 
-        document.getElementById('rewardTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
+        document.getElementById('tsrewardtimer').innerHTML = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
 
@@ -442,7 +442,7 @@ function rewardPop() {
     document.getElementById('dailyRewardPopup').style.display = '';
 
     clearInterval(rewardTimerInterval);
-    document.getElementById('rewardTimer').innerHTML = '00:00:00';
+    document.getElementById('tsrewardtimer').innerHTML = '00:00:00';
 
     if (loggedIn) {
         document.getElementById('ignoreReward').style.display = 'none';
@@ -512,7 +512,7 @@ function claimReward() {
 
 function resetRewardTimer() {
     fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
-        localStorage.setItem('rewardTimer', dbRewardTime);
+        localStorage.setItem('tsrewardtimer', dbRewardTime);
         startTimer(dbRewardTime);
     });
 }
@@ -558,7 +558,7 @@ function animateBar(day) {
 
 function collectPoints() {
     fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
-        localStorage.setItem('tspoints', points);
+        localStorage.setItem('tsp', points);
         let currentVal = document.getElementById('pointsDisplay').innerText;
         
         counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);

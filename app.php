@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <script src="assets/scripts/main.js?v35"></script>
+    <script src="assets/scripts/main.js?v36"></script>
     <script src="assets/scripts/app.js?7"></script>
 </body>
 
