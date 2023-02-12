@@ -392,6 +392,7 @@ function createGameButton(game, pin) {
 
 function checkReward() {
     console.log('Estoy aqui');
+    console.log(loggedIn);
     setRewardDayBar('initial');
     if (loggedIn) {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
