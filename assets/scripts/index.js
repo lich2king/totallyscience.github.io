@@ -398,7 +398,6 @@ function checkReward() {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         // return out of function and start timer if the saved time has not been passed
-        if (rewardTime && currentTime < rewardTime) return startTimer(rewardTime);
 
         fetcher(`assets/php/points/checkrewardtimer.php`)
             .then((dbRewardTime) => dbRewardTime.text())
