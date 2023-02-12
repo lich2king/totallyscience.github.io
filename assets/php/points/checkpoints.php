@@ -13,7 +13,7 @@
   $data = json_decode($json, TRUE);
 
   if (!isset($data['auth'])) {
-    die("no cookie");
+    die("error: no cookie");
   }
     
   $id = $data['auth']['id'];
