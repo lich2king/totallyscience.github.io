@@ -566,6 +566,8 @@ function animateBar(day) {
     let w = (100 / 7) * (day + 1);
 
     document.getElementById('rewardDayBar').style.width = `${w}%`;
+    document.getElementById('rewardDayBar').style.borderTopRightRadius = `0px`;
+    document.getElementById('rewardDayBar').style.borderBottomRightRadius = `0px`;
 
     if (day == 6) {
         w = 100;
