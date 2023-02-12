@@ -391,6 +391,7 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
+    console.log('Estoy aqui');
     setRewardDayBar('initial');
     if (loggedIn) {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
