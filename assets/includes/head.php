@@ -61,7 +61,7 @@ gtag('config', 'G-Y14RZLW8H8');
     data-ad-client="ca-pub-3486863589051210" async="true"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://browser.sentry-cdn.com/7.12.1/bundle.tracing.min.js"
+<!-- <script src="https://browser.sentry-cdn.com/7.12.1/bundle.tracing.min.js"
     integrity="sha384-+5SuXMl3TMl8hMxuOnzV/WA9uCrxgqfg5AeYcRa3Xgt5+IicBBuHRUoYgHU741xO" crossorigin="anonymous">
 </script>
 <script>
@@ -73,7 +73,7 @@ Sentry.init({
     // for finer control
     tracesSampleRate: 1.0,
 });
-</script>
+</script> -->
 
 
 <link rel="stylesheet" href="assets/styles/main.css?v14">
