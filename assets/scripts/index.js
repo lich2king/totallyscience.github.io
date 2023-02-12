@@ -457,6 +457,7 @@ function rewardPop() {
     document.getElementById('tsrewardtimer').innerHTML = '00:00:00';
 
     if (loggedIn) {
+        console.log('Popped logged in');
         document.getElementById('ignoreReward').style.display = 'none';
 
         let points = 100;
@@ -477,6 +478,7 @@ function rewardPop() {
                 }
             });
     } else {
+        console.log('Popped not logged in');
         for (let i = 0; i <= 0; i++) {
             document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
         }
@@ -486,6 +488,7 @@ function rewardPop() {
         document.getElementById('ignoreReward').style.display = '';
         document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
         document.getElementById('claimRewardB').setAttribute('onclick', "window.location.href='/signup'");
+        console.log('Popped finsihed not logged in');
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
