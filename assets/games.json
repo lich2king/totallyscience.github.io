@@ -249,9 +249,9 @@
         "image": "./assets/game_images/jetpackjoyride.png",
         "controls": "Hold space to go up",
         "tags": ["scratch"],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "DarkLava",
-        "iframe_url": "https://scratch.mit.edu/projects/177334143/embed"
+        "date_added": "2023-02-12T18:19:09.462Z",
+        "developer": "Halfbrick Studios",
+        "iframe_url": "https://g.megamathstuff.com/jetpack-joyride/index.html"
     },
 
     "Minigolf": {
@@ -1399,5 +1399,32 @@
         "date_added": "2023-02-04T18:50:05.472Z",
         "developer": "Alexander Gette",
         "iframe_url": "assets/games/awesometanks2/index.html"
+    },
+    "Death Run 3D": {
+        "description": "Death Run 3D is a thrilling first-person running game in which you will have to run in a neon tunnel and avoid all obstacles to try to get the highest score.\n\nControl and avoid all obstacles in the tunnel to gain the best score in first-person view! You will run automatically inside a tube with many various blocks which almost can move. They will cause you various challenges and difficulties due to their unpredictable change and your max speed. You think the game is easy. However, it is not easy to master. The race is endless until you hit a block in the tube.\n\nTry to get the highest score in this infinite game. You can check your rank on the worldwide leaderboard. Raise your name on the top of the leaderboard to show your skills! You can try getting over yourself and with other players around the world.",
+        "image": "./assets/game_images/deathrun3d.jpg",
+        "controls": "Move - [WASD] or [Arrow keys]",
+        "tags": ["running", "multiplayer", "io"],
+        "date_added": "2023-02-12T18:19:09.462Z",
+        "developer": "UNKNOWN",
+        "iframe_url": "https://g.megamathstuff.com/death-run-3d/index.html"
+    },
+    "Bitlife": {
+        "description": "How will you live your BitLife?\n\nWill you try to make all the right choices in an attempt to become a model citizen sometime before you die? You could marry the love of your life, have kids, and pick up a good education along the way.\n\nOr will you play choices that horrify your parents? You could descend into a life of crime, fall in love or go on adventures, start prison...",
+        "image": "./assets/game_images/bitlife.png",
+        "controls": "Interact - [Left-Click]",
+        "tags": [""],
+        "date_added": "2023-02-12T18:19:09.462Z",
+        "developer": "CandyWriter",
+        "iframe_url": "https://g.megamathstuff.com/bitlife/index.html"
+    },
+    "Cluster Rush": {
+        "description": "Cluster Rush is a first-person run-and-jump game inspired by Clustertruck, a well-known Steam title. Jump from truck to truck and reach the gates to finish each level.",
+        "image": "./assets/game_images/clusterrush.jpg",
+        "controls": "Move - [WASD] or [Arrow keys]\nJump - [Space]",
+        "tags": ["running"],
+        "date_added": "2023-02-12T18:19:09.462Z",
+        "developer": "LandFall Games",
+        "iframe_url": "https://g.megamathstuff.com/cluster-rush/index.html"
     }
 }
