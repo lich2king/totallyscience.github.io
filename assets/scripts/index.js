@@ -538,6 +538,7 @@ function setRewardDayBar(mode) {
     let day = 0;
 
     if (loggedIn) {
+        console.log('Logged in in Set reward day bnar');
         if (mode == 'update') {
             fetcher(`assets/php/points/checkrewardday.php`)
                 .then((rewardDay) => rewardDay.text())
@@ -554,7 +555,8 @@ function setRewardDayBar(mode) {
                 });
         }
     } else {
-        animateBar(0);
+        console.log('Animating');
+        animateBar(day);
     }
 }
 
