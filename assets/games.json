@@ -245,7 +245,7 @@
     },
 
     "Jetpack Joyride": {
-        "description": "Dodge fire and missiles, while collecting coins through all the havoc.",
+        "description": "In Jetpack Joyride you dodge fire and missiles, while collecting coins through all the havoc.",
         "image": "./assets/game_images/jetpackjoyride.png",
         "controls": "Go up - [Left - Click]",
         "tags": ["scratch"],
