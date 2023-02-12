@@ -1,6 +1,7 @@
 const liveServer = 'https://api.' + location.host;
 const localServer = 'http://localhost:5001';
-const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1')  ? localServer : liveServer;
+const activeServer =
+    location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 
 const authToken = localStorage.getItem('authToken');
 
@@ -10,17 +11,17 @@ function fetcher(endpoint, options) {
 
     if (authToken) {
         updatedOptions.headers = {
-            ...options ? options.headers : null,
+            ...(options ? options.headers : null),
             // x-access-token is for node version
             //'x-access-token': authToken,
             // not sure if this actually works as expected -- hopefully reduces preflight requests?
             'Access-Control-Max-Age': 86400,
-            'Content-Type': 'application/json'
-        }
+            'Content-Type': 'application/json',
+        };
         updatedOptions.body = JSON.stringify({
-            ...options ? options.body : null,
-            'auth': JSON.parse(authToken)
-        })
+            ...(options ? options.body : null),
+            auth: JSON.parse(authToken),
+        });
         //post needed for body
         updatedOptions.method = 'post';
     }
@@ -71,9 +72,13 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
 }
 
 // panic button
-window.addEventListener('keydown', (e) => {
-    if (e.key == '`') window.open(this.localStorage.getItem('website'), '_blank');
-}, false);
+window.addEventListener(
+    'keydown',
+    (e) => {
+        if (e.key == '`') window.open(this.localStorage.getItem('website'), '_blank');
+    },
+    false
+);
 
 // page load init
 window.addEventListener('load', () => {
@@ -88,7 +93,8 @@ window.addEventListener('load', () => {
     if (scrollButton) {
         // When the user scrolls down 20px from the top of the document, show the button
         window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) scrollButton.style.display = 'block';
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)
+                scrollButton.style.display = 'block';
             else scrollButton.style.display = 'none';
         });
     }
@@ -98,16 +104,12 @@ window.addEventListener('load', () => {
 
 // update points in navbar
 function setPoints() {
-    if (localStorage.getItem('tspoints') != null) {
-        document.getElementById('pointsDisplay').innerText = localStorage.getItem('tspoints');
-    } else {
-        fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
+    fetcher(`assets/php/points/checkpoints.php`)
+        .then((points) => points.text())
+        .then((points) => {
             if (points.startsWith('error')) return;
-
-            localStorage.setItem('tspoints', points);
             document.getElementById('pointsDisplay').innerText = points;
         });
-    }
 }
 
 function logout() {
