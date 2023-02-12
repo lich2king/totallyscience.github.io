@@ -51,13 +51,18 @@ let sorted;
 let hasLoaded = false;
 let loggedIn = false;
 
-let sortObject = (obj) => Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {});
+let sortObject = (obj) =>
+    Object.keys(obj)
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => response.json()).then((retrievedGames) => {
-        games = retrievedGames;
-        loadCookies();
-    });
+    fetch(`assets/games.json?date=${new Date().getTime()}`)
+        .then((response) => response.json())
+        .then((retrievedGames) => {
+            games = retrievedGames;
+            loadCookies();
+        });
 });
 
 async function loadCookies() {
@@ -130,50 +135,56 @@ async function displayGames() {
         gamesDiv.innerHTML += gameBtn;
     }
 
-    await fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
-        let popularGames = JSON.parse(res);
+    await fetch(`/assets/php/getpopulargames.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let popularGames = JSON.parse(res);
 
-        for (let i = 0; i < 10; i++) {
-            if (document.getElementsByName(popularGames[i][0])) {
-                document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
-                document.getElementsByName(popularGames[i][0])[0].innerHTML +=
-                    "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+            for (let i = 0; i < 10; i++) {
+                if (document.getElementsByName(popularGames[i][0])) {
+                    document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+                    document.getElementsByName(popularGames[i][0])[0].innerHTML +=
+                        "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+                }
             }
-        }
-    });
+        });
 
     //only get recent and liked games if logged in
     if (loggedIn) {
         //all games are generated... now add the liked and recent tags to the games
-        fetcher(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-            var likedgames = JSON.parse(res);
+        fetcher(`/assets/php/class_likes/personallikes.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                var likedgames = JSON.parse(res);
 
-            fetcher(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
-                let recentGames = res.split(';');
-                recentGames = recentGames.slice(1);
+                fetcher(`/assets/php/recent_classes/recentclasses.php`)
+                    .then((response) => response.text())
+                    .then((res) => {
+                        let recentGames = res.split(';');
+                        recentGames = recentGames.slice(1);
 
-                for (like in likedgames) {
-                    if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                        //line below accounts for suggested/pinned games
-                        if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
-                            document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                        } else {
-                            document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+                        for (like in likedgames) {
+                            if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                                //line below accounts for suggested/pinned games
+                                if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+                                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                                } else {
+                                    document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+                                }
+                            }
                         }
-                    }
-                }
-                for (let i = 0; i < recentGames.length; i++) {
-                    if (document.getElementsByName(recentGames[i]).length > 0) {
-                        //line below accounts for suggested/pinned games
-                        if (document.getElementsByName(recentGames[i])[0].classList.contains('all')) {
-                            document.getElementsByName(recentGames[i])[0].classList.add('recent');
-                        } else {
-                            document.getElementsByName(recentGames[i])[1].classList.add('recent');
+                        for (let i = 0; i < recentGames.length; i++) {
+                            if (document.getElementsByName(recentGames[i]).length > 0) {
+                                //line below accounts for suggested/pinned games
+                                if (document.getElementsByName(recentGames[i])[0].classList.contains('all')) {
+                                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
+                                } else {
+                                    document.getElementsByName(recentGames[i])[1].classList.add('recent');
+                                }
+                            }
                         }
-                    }
-                }
+                    });
             });
-        });
     }
 }
 
@@ -382,23 +393,22 @@ function createGameButton(game, pin) {
 function checkReward() {
     setRewardDayBar('initial');
     if (loggedIn) {
-        const rewardTime = localStorage.getItem('tsrewardtimer');
-
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         // return out of function and start timer if the saved time has not been passed
         if (rewardTime && currentTime < rewardTime) return startTimer(rewardTime);
-        
-        fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
-            if (rewardTime && currentTime > dbRewardTime) {
-                rewardPop();
-            } else if (rewardTime) {
-                localStorage.setItem('tsrewardtimer', dbRewardTime);
-                startTimer(dbRewardTime);
-            } else if (dbRewardTime == 0) {
-                rewardPop();
-            }
-        });
+
+        fetcher(`assets/php/points/checkrewardtimer.php`)
+            .then((dbRewardTime) => dbRewardTime.text())
+            .then((dbRewardTime) => {
+                if (currentTime > dbRewardTime) {
+                    rewardPop();
+                } else if (dbRewardTime == 0) {
+                    rewardPop();
+                } else {
+                    startTimer(dbRewardTime);
+                }
+            });
     } else {
         if (localStorage.getItem('ignoreReward') != null) {
             if (!localStorage.getItem('ignoreReward')) {
@@ -450,18 +460,20 @@ function rewardPop() {
         let points = 100;
         //figure out how many points to give with a db call...
 
-        fetcher(`assets/php/points/checkrewardday.php`).then((rewardDay) => rewardDay.text()).then((rewardDay) => {
-            if (rewardDay == 6) {
-                points = 1000;
-            }
-            document.getElementById('popPoints').innerHTML = points;
-            for (let i = 0; i <= rewardDay; i++) {
-                document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
-            }
-            for (let i = 6; i > rewardDay; i--) {
-                document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
-            }
-        });
+        fetcher(`assets/php/points/checkrewardday.php`)
+            .then((rewardDay) => rewardDay.text())
+            .then((rewardDay) => {
+                if (rewardDay == 6) {
+                    points = 1000;
+                }
+                document.getElementById('popPoints').innerHTML = points;
+                for (let i = 0; i <= rewardDay; i++) {
+                    document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
+                }
+                for (let i = 6; i > rewardDay; i--) {
+                    document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
+                }
+            });
     } else {
         for (let i = 0; i <= 0; i++) {
             document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
@@ -499,22 +511,25 @@ function ignorePopReward() {
 }
 
 function claimReward() {
-    fetcher(`assets/php/points/claimreward.php`).then((response) => response.text()).then((response) => {
-        if (response == 'Success') {
-            resetRewardTimer();
-            collectPoints();
-            setRewardDayBar('update');
-        }
-        document.getElementById('dailyRewardPopup').style.display = 'none';
-        clearInterval(popTimerInterval);
-    });
+    fetcher(`assets/php/points/claimreward.php`)
+        .then((response) => response.text())
+        .then((response) => {
+            if (response == 'Success') {
+                resetRewardTimer();
+                collectPoints();
+                setRewardDayBar('update');
+            }
+            document.getElementById('dailyRewardPopup').style.display = 'none';
+            clearInterval(popTimerInterval);
+        });
 }
 
 function resetRewardTimer() {
-    fetcher(`assets/php/points/checkrewardtimer.php`).then((dbRewardTime) => dbRewardTime.text()).then((dbRewardTime) => {
-        localStorage.setItem('tsrewardtimer', dbRewardTime);
-        startTimer(dbRewardTime);
-    });
+    fetcher(`assets/php/points/checkrewardtimer.php`)
+        .then((dbRewardTime) => dbRewardTime.text())
+        .then((dbRewardTime) => {
+            startTimer(dbRewardTime);
+        });
 }
 
 function setRewardDayBar(mode) {
@@ -522,22 +537,19 @@ function setRewardDayBar(mode) {
 
     if (loggedIn) {
         if (mode == 'update') {
-            fetcher(`assets/php/points/checkrewardday.php`).then((rewardDay) => rewardDay.text()).then((rewardDay) => {
-                localStorage.setItem('rewardDay', rewardDay);
-                day = parseInt(rewardDay);
-                animateBar(day);
-            });
-        } else {
-            if (localStorage.getItem('rewardDay') != null) {
-                day = parseInt(localStorage.getItem('rewardDay'));
-                animateBar(day);
-            } else {
-                fetcher(`assets/php/points/checkrewardday.php`).then((rewardDay) => rewardDay.text()).then((rewardDay) => {
-                    localStorage.setItem('rewardDay', rewardDay);
+            fetcher(`assets/php/points/checkrewardday.php`)
+                .then((rewardDay) => rewardDay.text())
+                .then((rewardDay) => {
                     day = parseInt(rewardDay);
                     animateBar(day);
                 });
-            }
+        } else {
+            fetcher(`assets/php/points/checkrewardday.php`)
+                .then((rewardDay) => rewardDay.text())
+                .then((rewardDay) => {
+                    day = parseInt(rewardDay);
+                    animateBar(day);
+                });
         }
     } else {
         animateBar(0);
@@ -557,12 +569,13 @@ function animateBar(day) {
 }
 
 function collectPoints() {
-    fetcher(`assets/php/points/checkpoints.php`).then((points) => points.text()).then((points) => {
-        localStorage.setItem('tsp', points);
-        let currentVal = document.getElementById('pointsDisplay').innerText;
-        
-        counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);
-    });
+    fetcher(`assets/php/points/checkpoints.php`)
+        .then((points) => points.text())
+        .then((points) => {
+            let currentVal = document.getElementById('pointsDisplay').innerText;
+
+            counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);
+        });
 }
 
 function counter(id, start, end, duration) {
