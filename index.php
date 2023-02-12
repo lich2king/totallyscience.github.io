@@ -338,7 +338,6 @@
         <p class="ignore" onclick="ignorePopReward()" id="ignoreReward">Or ignore the free reward</p>
     </div>
 
-
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/index.js?v143"></script>
