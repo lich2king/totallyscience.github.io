@@ -445,7 +445,7 @@ function startTimer(endTime) {
             .toString()
             .padStart(2, '0');
 
-        document.getElementById('tsrewardtimer').innerHTML = hours + ':' + minutes + ':' + seconds;
+        document.getElementById('rewardTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
 
@@ -454,7 +454,7 @@ function rewardPop() {
     document.getElementById('dailyRewardPopup').style.display = '';
 
     clearInterval(rewardTimerInterval);
-    document.getElementById('tsrewardtimer').innerHTML = '00:00:00';
+    document.getElementById('rewardTimer').innerHTML = '00:00:00';
 
     if (loggedIn) {
         console.log('Popped logged in');
