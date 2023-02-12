@@ -12,3 +12,4 @@ video.unrulymedia.com, 895733750, DIRECT
 sovrn.com, 357833, DIRECT, fafdf38b16bf6b2b
 lijit.com, 357833, DIRECT, fafdf38b16bf6b2b
 lijit.com, 357833-eb, DIRECT, fafdf38b16bf6b2b
+ad.plus, 22753484437, DIRECT 
