@@ -1,7 +1,6 @@
 const liveServer = 'https://api.' + location.host;
 const localServer = 'http://localhost:5001';
-const activeServer =
-    location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
+const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 
 const authToken = localStorage.getItem('authToken');
 
