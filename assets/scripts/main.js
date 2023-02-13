@@ -107,7 +107,7 @@ function setPoints() {
         .then((points) => points.text())
         .then((points) => {
             if (points.startsWith('error')) return;
-            if (isNaN(points)) {
+            if (!isNaN(points)) {
                 document.getElementById('pointsDisplay').innerText = points;
             }
         });
