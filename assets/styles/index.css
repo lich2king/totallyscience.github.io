@@ -282,7 +282,7 @@ html {
 
 .featureButton {
     position: absolute;
-    margin-top: 275px;
+    margin-top: 30%;
 }
 
 @media screen and (max-width: 1150px) {
