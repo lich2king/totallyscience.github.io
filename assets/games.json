@@ -1435,5 +1435,14 @@
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "Shock-Value",
         "iframe_url": "https://g.megamathstuff.com/interactivebuddy.html"
+    },
+    "Basket Bros": {
+        "description": "BasketBros is a side-scrolling basketball game in which you compete against formidable opponents. In this frantic basketball game, you'll soar through the air and slam all over the place to win!\n\nBasketBros game was created by Blue Wizard Digital. This is a fast-paced basketball game for two players that you can play with a friend over the weekend to relax and have fun. You can choose your favorite character from the table before starting the game; although you will have to unlock the majority of the characters in the game, you will receive four free character slots in order to participate in the battle.",
+        "image": "./assets/game_images/basketbros.png",
+        "controls": "Move - [WASD] or [Arrow Keys]\nShoot/Punch - [G] or [L]",
+        "tags": ["sport"],
+        "date_added": "2023-02-12T18:19:09.462Z",
+        "developer": "Blue Wizard Digital",
+        "iframe_url": "https://g.megamathstuff.com/basketbros-io/index.html"
     }
 }
