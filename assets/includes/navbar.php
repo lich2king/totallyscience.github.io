@@ -17,7 +17,7 @@
 
         <div class="searchbar">
             <p onclick="window.location.href='/classes?search=true'"><img src="assets/images/magnifying-light.svg">
-                Search...</p>
+                Search Games</p>
         </div>
 
         <div class="points">
