@@ -1426,5 +1426,14 @@
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "LandFall Games",
         "iframe_url": "https://g.megamathstuff.com/cluster-rush/index.html"
+    },
+    "Interative Buddy": {
+        "description": "Interactive Buddy is an arcade game where you interact with your virtual buddy. For every interaction, you earn money to buy new weapons, skins, and more!\n\nHit the buddy with hammers and blades, shoot him with pistols and rifles, let him explode with grenades and even drop flames on him! Let off some steam and get rid of any anger!",
+        "image": "./assets/game_images/kickthebuddy.webp",
+        "controls": "Interact - [Left-Click]",
+        "tags": ["clicker"],
+        "date_added": "2023-02-12T18:19:09.462Z",
+        "developer": "Shock-Value",
+        "iframe_url": "https://g.megamathstuff.com/interactivebuddy.html"
     }
 }
