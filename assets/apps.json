@@ -5,6 +5,12 @@
         "type": "proxy",
         "iframe_url": "https://www.youtube.com/"
     },
+    "Chat GPT": {
+        "image": "assets/apps/icons/chatgpt.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
+        "iframe_url": "https://chat.openai.com/"
+    },
     "Google": {
         "image": "assets/apps/icons/google.png",
         "date_added": "2022-02-18T23:39:49.471Z",
