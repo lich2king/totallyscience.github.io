@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v29'>
+    <link rel='stylesheet' href='assets/styles/index.css?v30'>
     <!-- <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script> -->
@@ -108,42 +108,14 @@
     </div>
 
     <div id="searchcatParent">
-        <div id="searchcat">
-            <h1><button name="all" onclick="" class="selectedCategory categoryButton">All</button></h1>
-            <h1><button name="new" onclick="" class="unselectedCategory categoryButton">New</button></h1>
-            <h1><button name="popular" onclick="" class="unselectedCategory categoryButton">Popular</button></h1>
-            <h1><button name="2" onclick="" class="unselectedCategory categoryButton">2 Player</button></h1>
-            <h1><button name="car" onclick="" class="unselectedCategory categoryButton">Car</button></h1>
-            <!-- <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search"> -->
-            <h1><button name="stickman" onclick="" class="unselectedCategory categoryButton">Stickman</button></h1>
-            <h1><button name="card" onclick="" class="unselectedCategory categoryButton">Card</button></h1>
-            <h1><button name="hard" onclick="" class="unselectedCategory categoryButton">Hard</button></h1>
-            <h1><button name="fnf" onclick="" class="unselectedCategory categoryButton">FNF</button></h1>
-            <h1><button name="multiplayer" onclick="" class="unselectedCategory categoryButton">Multiplayer</button>
-            </h1>
-            <h1><button name="fnaf" onclick="" class="unselectedCategory categoryButton">FNAF</button></h1>
-            <h1><button name="emulator" onclick="" class="unselectedCategory categoryButton">Emulator</button></h1>
-            <h1><button name="puzzle" onclick="" class="unselectedCategory categoryButton">Puzzle</button></h1>
-            <h1><button name="scratch" onclick="" class="unselectedCategory categoryButton">Scratch</button></h1>
-            <h1><button name="sport" onclick="" class="unselectedCategory categoryButton">Sport</button></h1>
-            <h1><button name="recent" onclick="" class="unselectedCategory categoryButton">Recent</button></h1>
-            <h1><button name="liked" onclick="" class="unselectedCategory categoryButton">Liked</button></h1>
-        </div>
-
-
-        <div id="games">
-        </div>
+       
+        <div id="games"></div>
+        
 
         <div id="noSearch" style="display:none">
             <p>You search terms did not match any games...</p>
         </div>
     </div>
-
-    <!-- <div style="text-align:center">
-        <button class="button" onclick="window.open('classes', '_self')"><span>MORE GAMES</span><img
-                style="padding-left:0.5vw" width="16vw"
-                src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png"></button>
-    </div> -->
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
         <!-- Horizontal Ad -->
@@ -155,19 +127,19 @@
     </div>
 
     <div id="extraCategories">
-        <div id="extraCategory" onclick="window.open('classes.php?category=stickman', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=escape', '_self')">
             <div style="background-image: url(assets/images/extracats/henrystickmin.png);"></div>
             <p>Henry Stickmin Games</p>
         </div>
-        <div id="extraCategory" onclick="window.open('classes.php?category=fnaf', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=horror', '_self')">
             <div style="background-image: url(assets/images/extracats/fnaf.png);"></div>
             <p>Five Nights at Freddy's Games</p>
         </div>
-        <div id="extraCategory" onclick="window.open('classes.php?category=fnf', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=music', '_self')">
             <div style="background-image: url(assets/images/extracats/fnf.jpg);"></div>
             <p>Friday Night Funkin' Games</p>
         </div>
-        <div id="extraCategory" onclick="window.open('classes.php?category=vex', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
             <div style="background-image: url(assets/images/extracats/vex.jpg);"></div>
             <p>Vex Games</p>
         </div>
@@ -179,7 +151,7 @@
             <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>
             <p>Multiplayer Games</p>
         </div>
-        <div id="extraCategory" onclick="window.open('classes.php?category=running', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
             <div style="background-image: url(assets/images/extracats/running.jpg);"></div>
             <p>Running Games</p>
         </div>
@@ -187,7 +159,7 @@
             <div style="background-image: url(assets/images/extracats/puzzle.jpg);"></div>
             <p>Puzzle Games</p>
         </div>
-        <div id="extraCategory" onclick="window.open('classes.php?category=arcade', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=casual', '_self')">
             <div style="background-image: url(assets/images/extracats/arcade.jpg);"></div>
             <p>Arcade Games</p>
         </div>
@@ -340,7 +312,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v152"></script>
+    <script src="assets/scripts/index.js?v153"></script>
 </body>
 
 </html>

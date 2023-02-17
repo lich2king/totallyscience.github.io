@@ -53,8 +53,8 @@ let loggedIn = false;
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -106,14 +106,46 @@ function loadTopic() {
 }
 
 async function displayGames() {
+    //First check if there are any new games... if so, put them in the new games category
+
+    let categories = ["multiplayer", "car", "casual", "action", "shooting", "puzzle", "classic", "sport", "clicker", "escape", "2", "horror", "hard", "music", "flash"];
+    let categoriesNames = ["Multiplayer", "Driving", "Casual", "Action", "Shooting", "Puzzle", "Classic", "Sport", "Clicker", "Escape", "2 Player", "Horror", "Impossible", "Music", "Flash"];
+
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+
+
+
+    //Then for each category (except mobile and a few others), make the category container then add games
+
+
+    for (let i = 0; i < categories.length; i++) {
+
+
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`
+
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        gamesContainer.id = (`${categories[i]}GamesCon`);
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+
+        row.appendChild(gamesContainer);
+        gamesDiv.appendChild(row);
+    }
+
+
+
+
+    let newGames = [];
+    let miscGames = [];
     for (let x = 0; x < Object.keys(sorted).length; x++) {
+
         let keys = Object.keys(sorted);
-
         const name = keys[x];
-        const data = sorted[keys[x]];
 
-        let classlist = '';
-        classlist = data.tags.join(' ');
+        const data = sorted[keys[x]];
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
@@ -121,71 +153,182 @@ async function displayGames() {
         const gameDate = new Date(data.date_added);
 
         if (gameDate > weekAgo) {
-            classlist += ' new';
+            newGames.push(name);
         }
 
-        let gameBtn;
-        // if (x >= maxGames) {
-        //     gameBtn = createGameButton(name, 'hidden');
-        // } else {
-        //     gameBtn = createGameButton(name);
-        // }
-        gameBtn = createGameButton(name);
-
-        gamesDiv.innerHTML += gameBtn;
-    }
-
-    await fetch(`/assets/php/getpopulargames.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            let popularGames = JSON.parse(res);
-
-            for (let i = 0; i < 10; i++) {
-                if (document.getElementsByName(popularGames[i][0])) {
-                    document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
-                    document.getElementsByName(popularGames[i][0])[0].innerHTML +=
-                        "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
-                }
+        //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+        let hasCategory = false;
+        for (let i = 0; i < categories.length; i++) {
+            if (data.tags.join(' ').includes(categories[i])) {
+                hasCategory = true;
+                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
             }
-        });
+        }
+        if (!hasCategory) {
+            //give them misc
+            miscGames.push(name);
+        }
+    }
+    if (newGames.length > 0) {
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < newGames.length; i++) {
+            console.log(newGames[i]);
+            gamesContainer.innerHTML += createGameButton(newGames[i]);
+            console.log(row);
+        }
+        row.appendChild(gamesContainer);
+        gamesDiv.prepend(row);
+        gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
+    }
+    if (miscGames.length > 0) {
+        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes?category=random">View More</a></h1>`;
+
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < miscGames.length; i++) {
+            console.log(miscGames[i]);
+            gamesContainer.innerHTML += createGameButton(miscGames[i]);
+            console.log(row);
+        }
+        row.appendChild(gamesContainer);
+        gamesDiv.appendChild(row);
+    }
+    // if (loggedIn) {
+    //     fetcher(`/assets/php/class_likes/personallikes.php`)
+    //         .then((response) => response.text())
+    //         .then((res) => {
+    //             var likedgames = JSON.parse(res);
+
+    //             if (likedgames.length > 0) {
+
+    //                 gamesDiv.innerHTML += `<h1>Liked Games <a href="">View More Do I?</a></h1>`
+
+    //                 let row = document.createElement("div");
+    //                 row.classList.add("horizontalCon");
+    //                 let gamesContainer = document.createElement("div");
+    //                 gamesContainer.classList.add("gamesCon");
+    //                 //add the arrows to the horizontal Con
+    //                 row.innerHTML += arrowContainer;
+
+    //                 for (like in likedgames) {
+    //                     if (document.getElementsByName(likedgames[like][0]).length > 0) {
+    //                         //line below accounts for suggested/pinned games
+    //                         console.log(like);
+    //                         gamesContainer.innerHTML += createGameButton(like);
+    //                         // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+    //                         //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+    //                         // } else {
+    //                         //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+    //                         // }
+    //                     }
+    //                 }
+    //                 row.appendChild(gamesContainer);
+    //                 gamesDiv.appendChild(row);
+    //             }
+    //         });
+    //     //Get recent games
+    // }
+    //Get popular games
+
+
+
+
+
+
+    //Make new games last 3 weeks
+    //UNSORT THE GAMES
+    // for (let x = 0; x < Object.keys(sorted).length; x++) {
+    //     let keys = Object.keys(sorted);
+
+    //     const name = keys[x];
+    //     const data = sorted[keys[x]];
+
+    //     let classlist = '';
+    //     classlist = data.tags.join(' ');
+
+    //     const weekAgo = new Date();
+    //     weekAgo.setDate(weekAgo.getDate() - 7);
+
+    //     const gameDate = new Date(data.date_added);
+
+    //     if (gameDate > weekAgo) {
+    //         classlist += ' new';
+    //     }
+
+    //     let gameBtn;
+    //     // if (x >= maxGames) {
+    //     //     gameBtn = createGameButton(name, 'hidden');
+    //     // } else {
+    //     //     gameBtn = createGameButton(name);
+    //     // }
+    //     gameBtn = createGameButton(name);
+
+    //     gamesDiv.innerHTML += gameBtn;
+    // }
+
+    // await fetch(`/assets/php/getpopulargames.php`)
+    //     .then((response) => response.text())
+    //     .then((res) => {
+    //         let popularGames = JSON.parse(res);
+
+    //         for (let i = 0; i < 10; i++) {
+    //             if (document.getElementsByName(popularGames[i][0])) {
+    //                 document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
+    //                 document.getElementsByName(popularGames[i][0])[0].innerHTML +=
+    //                     "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+    //             }
+    //         }
+    //     });
 
     //only get recent and liked games if logged in
-    if (loggedIn) {
-        //all games are generated... now add the liked and recent tags to the games
-        fetcher(`/assets/php/class_likes/personallikes.php`)
-            .then((response) => response.text())
-            .then((res) => {
-                var likedgames = JSON.parse(res);
+    // if (loggedIn) {
+    //     //all games are generated... now add the liked and recent tags to the games
+    //     fetcher(`/assets/php/class_likes/personallikes.php`)
+    //         .then((response) => response.text())
+    //         .then((res) => {
+    //             var likedgames = JSON.parse(res);
 
-                fetcher(`/assets/php/recent_classes/recentclasses.php`)
-                    .then((response) => response.text())
-                    .then((res) => {
-                        let recentGames = res.split(';');
-                        recentGames = recentGames.slice(1);
+    //             fetcher(`/assets/php/recent_classes/recentclasses.php`)
+    //                 .then((response) => response.text())
+    //                 .then((res) => {
+    //                     let recentGames = res.split(';');
+    //                     recentGames = recentGames.slice(1);
 
-                        for (like in likedgames) {
-                            if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                                //line below accounts for suggested/pinned games
-                                if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
-                                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                                } else {
-                                    document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
-                                }
-                            }
-                        }
-                        for (let i = 0; i < recentGames.length; i++) {
-                            if (document.getElementsByName(recentGames[i]).length > 0) {
-                                //line below accounts for suggested/pinned games
-                                if (document.getElementsByName(recentGames[i])[0].classList.contains('all')) {
-                                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
-                                } else {
-                                    document.getElementsByName(recentGames[i])[1].classList.add('recent');
-                                }
-                            }
-                        }
-                    });
-            });
-    }
+    //                     for (like in likedgames) {
+    //                         if (document.getElementsByName(likedgames[like][0]).length > 0) {
+    //                             //line below accounts for suggested/pinned games
+    //                             if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+    //                                 document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+    //                             } else {
+    //                                 document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+    //                             }
+    //                         }
+    //                     }
+    //                     for (let i = 0; i < recentGames.length; i++) {
+    //                         if (document.getElementsByName(recentGames[i]).length > 0) {
+    //                             //line below accounts for suggested/pinned games
+    //                             if (document.getElementsByName(recentGames[i])[0].classList.contains('all')) {
+    //                                 document.getElementsByName(recentGames[i])[0].classList.add('recent');
+    //                             } else {
+    //                                 document.getElementsByName(recentGames[i])[1].classList.add('recent');
+    //                             }
+    //                         }
+    //                     }
+    //                 });
+    //         });
+    // }
+    addArrowListeners();
 }
 
 // const searchBar = document.getElementById('searchBar');
@@ -319,7 +462,7 @@ function suggestGames() {
         });
 }
 
-var randomProperty = function (object) {
+var randomProperty = function(object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -341,10 +484,14 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
+    //console.log(game);
+
+    //console.log(data.tags.join(' '));
+
     let classlist = data.tags.join(' ');
 
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
 
@@ -423,9 +570,10 @@ function checkReward() {
 
 //var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
 var rewardTimerInterval;
+
 function startTimer(endTime) {
     clearInterval(rewardTimerInterval);
-    rewardTimerInterval = setInterval(function () {
+    rewardTimerInterval = setInterval(function() {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -449,6 +597,7 @@ function startTimer(endTime) {
 }
 
 var popTimerInterval;
+
 function rewardPop() {
     document.getElementById('dailyRewardPopup').style.display = '';
 
@@ -491,7 +640,7 @@ function rewardPop() {
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    popTimerInterval = setInterval(function () {
+    popTimerInterval = setInterval(function() {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -557,7 +706,6 @@ function setRewardDayBar(mode) {
                 });
         }
     } else {
-        console.log('Animating');
         animateBar(day);
     }
 }
@@ -599,4 +747,36 @@ function counter(id, start, end, duration) {
                 clearInterval(timer);
             }
         }, step);
+}
+
+
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            console.log(e.target);
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+
+
 }

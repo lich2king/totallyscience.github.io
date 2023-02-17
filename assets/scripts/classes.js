@@ -19,6 +19,11 @@ const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category');
 const search = urlParams.get('search');
 
+
+let categories = ["multiplayer", "car", "casual", "action", "shooting", "puzzle", "classic", "sport", "clicker", "escape", "2", "horror", "hard", "music", "flash"];
+let categoriesNames = ["Multiplayer", "Driving", "Casual", "Action", "Shooting", "Puzzle", "Classic", "Sport", "Clicker", "Escape", "2 Player", "Horror", "Impossible", "Music", "Flash"];
+
+
 if (search != null) {
     const input = document.getElementById('searchBar');
     input.focus();
@@ -26,21 +31,24 @@ if (search != null) {
 }
 
 if (category != null) {
+
     selectedTopic = category;
 
     document.getElementById('topText').style.display = '';
-    document.getElementById('topText').innerText = `${category.toUpperCase()} Games`;
-    document.getElementsByName('all')[0].classList.add('unselectedCategory');
-    document.getElementsByName('all')[0].classList.remove('selectedCategory');
-    document.getElementById('searchcat').style.marginTop = '20px';
+    if (categoriesNames[categories.indexOf(category)] > -1) {
+        document.getElementById('topText').innerText = `${categoriesNames[categories.indexOf(category)].toUpperCase()} Games`;
+    } else {
+        document.getElementById('topText').innerText = `${category.toUpperCase()} Games`;
+    }
+    document.getElementById('searchcat').style.display = 'none';
 
     customcategory = true;
 }
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -79,9 +87,14 @@ async function loadTopic() {
             //solves the problem of doing the category parameter on url
             await displayGames();
         }
-        const gameButtons = document.getElementsByClassName('all');
+
+        const filteredGameCon = document.getElementById('filteredGames');
+
+        const gameButtons = filteredGameCon.querySelectorAll('.all');
 
         Array.from(gameButtons).forEach((game) => {
+            console.log(game);
+            console.log(game.classList);
             if (game.classList.contains(selectedTopic)) {
                 game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
             } else {
@@ -95,14 +108,49 @@ async function loadTopic() {
 }
 
 async function displayGames() {
+    //First check if there are any new games... if so, put them in the new games category
+
+
+
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+
+
+
+    //Then for each category (except mobile and a few others), make the category container then add games
+
+
+
+    for (let i = 0; i < categories.length; i++) {
+
+
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`
+
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        gamesContainer.id = (`${categories[i]}GamesCon`);
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+
+        row.appendChild(gamesContainer);
+        gamesDiv.appendChild(row);
+    }
+
+
+
+
+    let newGames = [];
+    let miscGames = [];
+
+    const filteredGameCon = document.getElementById('filteredGames');
+
     for (let x = 0; x < Object.keys(sorted).length; x++) {
+
         let keys = Object.keys(sorted);
-
         const name = keys[x];
-        const data = sorted[keys[x]];
 
-        let classlist = '';
-        classlist = data.tags.join(' ');
+        const data = sorted[keys[x]];
 
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
@@ -110,53 +158,131 @@ async function displayGames() {
         const gameDate = new Date(data.date_added);
 
         if (gameDate > weekAgo) {
-            classlist += ' new';
+            newGames.push(name);
         }
 
-        let gameBtn;
-        if (customcategory) {
-            gameBtn = createGameButton(name, 'hidden');
-        } else {
-            gameBtn = createGameButton(name);
-        }
+        filteredGameCon.innerHTML += createGameButton(name, "filtered");
+        console.log("Filtered in:");
+        console.log(name);
 
-        gamesDiv.innerHTML += gameBtn;
-    }
-
-    fetch(`/assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
-        let popularGames = JSON.parse(res);
-
-        for (let i = 0; i < 10; i++) {
-            if (document.getElementsByName(popularGames[i][0])) {
-                document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
-                document.getElementsByName(popularGames[i][0])[0].innerHTML +=
-                    "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+        //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+        let hasCategory = false;
+        for (let i = 0; i < categories.length; i++) {
+            console.log(name);
+            if (data.tags.join(' ').includes(categories[i])) {
+                hasCategory = true;
+                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
             }
         }
-    });
+        if (!hasCategory) {
+            //give them misc
+            miscGames.push(name);
+        }
+    }
+    if (newGames.length > 0) {
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < newGames.length; i++) {
+            console.log(newGames[i]);
+            gamesContainer.innerHTML += createGameButton(newGames[i]);
+            console.log(row);
+        }
+        row.appendChild(gamesContainer);
+        gamesDiv.prepend(row);
+        gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
+    }
+    if (miscGames.length > 0) {
+        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes.php?category=random">View More</a></h1>`;
 
-    //only get recent and liked games if logged in
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < miscGames.length; i++) {
+            console.log(miscGames[i]);
+            gamesContainer.innerHTML += createGameButton(miscGames[i]);
+            console.log(row);
+        }
+        row.appendChild(gamesContainer);
+        gamesDiv.appendChild(row);
+    }
+
+    //popular games
+    let row = document.createElement("div");
+    row.classList.add("horizontalCon");
+    let gamesContainer = document.createElement("div");
+    gamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    row.innerHTML += arrowContainer;
+    //for each popular game, add the game to the horizontalCon
+
+    await fetch(`/assets/php/getpopulargames.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let popularGames = JSON.parse(res);
+
+            for (let i = 0; i < 10; i++) {
+                const gameName = popularGames[i][0];
+                if (gameName != null) {
+                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                }
+            }
+        });
+
+    row.appendChild(gamesContainer);
+    gamesDiv.prepend(row);
+    gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
+
+
+
     if (loggedIn) {
-        fetcher(`/assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-            var likedgames = JSON.parse(res);
+        fetcher(`/assets/php/class_likes/personallikes.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                var likedgames = JSON.parse(res);
 
-            for (like in likedgames) {
-                if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                }
-            }
-        });
-        fetcher(`/assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
-            let recentGames = res.split(';');
-            recentGames = recentGames.slice(1);
+                if (likedgames.length > 0) {
 
-            for (let i = 0; i < recentGames.length; i++) {
-                if (document.getElementsByName(recentGames[i]).length > 0) {
-                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
+                    gamesDiv.innerHTML += `<h1>Liked Games <a href="">View More</a></h1>`
+
+                    let row = document.createElement("div");
+                    row.classList.add("horizontalCon");
+                    let gamesContainer = document.createElement("div");
+                    gamesContainer.classList.add("gamesCon");
+                    //add the arrows to the horizontal Con
+                    row.innerHTML += arrowContainer;
+
+                    for (like in likedgames) {
+                        if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                            //line below accounts for suggested/pinned games
+                            console.log(like);
+                            gamesContainer.innerHTML += createGameButton(like);
+                            // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+                            //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                            // } else {
+                            //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+                            // }
+                        }
+                    }
+                    row.appendChild(gamesContainer);
+                    gamesDiv.appendChild(row);
                 }
-            }
-        });
+            });
+        //Get recent games
     }
+    //Get popular games
+
+    //Make new games last 3 weeks
+    //UNSORT THE GAMES
+    addArrowListeners();
 }
 
 const searchBar = document.getElementById('searchBar');
@@ -165,12 +291,7 @@ searchBar.addEventListener('keyup', () => {
 
     let input = searchBar.value.toUpperCase().split(' ').join('');
 
-    if (input == '' || input == null) {
-        loadTopic();
-        return;
-    }
-
-    const gameButtons = document.getElementsByClassName('all');
+    const gameButtons = document.getElementById("filteredGames").getElementsByClassName('all');
 
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
@@ -178,10 +299,10 @@ searchBar.addEventListener('keyup', () => {
         name = name.split(' ').join('');
 
         if (name.includes(input) && game.classList.contains(selectedTopic)) {
-            game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
+            game.style.display = "";
             gameShown = true;
         } else {
-            game.setAttribute('style', 'display:none');
+            game.style.display = "none";
         }
     });
     if (!gameShown) {
@@ -194,39 +315,6 @@ searchBar.addEventListener('keyup', () => {
     }
 });
 
-// Category buttons
-const buttons = document.querySelectorAll('.categoryButton');
-buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        if (customcategory) {
-            document.getElementById('topText').style.display = 'none';
-            document.getElementById('searchcat').style.marginTop = '80px';
-            customcategory = false;
-        }
-
-        window.scrollTo(0, 0);
-        if (e.target.name == selectedTopic) {
-            selectedTopic = 'all';
-        } else {
-            selectedTopic = e.target.name;
-        }
-
-        const buttons = document.querySelectorAll('.categoryButton');
-
-        buttons.forEach((btn) => {
-            btn.classList.add('unselectedCategory');
-            btn.classList.remove('selectedCategory');
-        });
-
-        const selected = document.getElementsByName(selectedTopic)[0];
-        selected.classList.add('selectedCategory');
-        selected.classList.remove('unselectedCategory');
-
-        document.getElementById('searchBar').value = '';
-
-        loadTopic();
-    });
-});
 
 function changeToGif(ele) {
     const game = ele.getAttribute('name');
@@ -247,10 +335,14 @@ function createGameButton(game, pin) {
 
     let classlist = data.tags.join(' ');
 
+
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
+
+
+
 
     let gameBtn = '';
 
@@ -260,6 +352,23 @@ function createGameButton(game, pin) {
 
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+    }
+    if (pin == 'hot') {
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+    }
+
+    if (pin == "filtered") {
+        let hasCategory = false;
+        for (let i = 0; i < categories.length; i++) {
+            if (data.tags.join(' ').includes(categories[i])) {
+                hasCategory = true;
+            }
+        }
+        if (!hasCategory) {
+            classlist += " random";
+        }
+
+
     }
 
     if (gameDate > weekAgo) {
@@ -271,7 +380,7 @@ function createGameButton(game, pin) {
         classlist += ' all';
     }
 
-    if (pin != 'hidden') {
+    if (pin != 'hidden' && pin != 'filtered') {
         gameBtn = `
         <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
@@ -280,7 +389,7 @@ function createGameButton(game, pin) {
         `;
     } else {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="${onclick}" class="${classlist}">
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image}); display: none;" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -288,4 +397,34 @@ function createGameButton(game, pin) {
     }
 
     return gameBtn;
+}
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            console.log(e.target);
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+
+
 }
