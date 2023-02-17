@@ -204,6 +204,33 @@ async function displayGames() {
         row.appendChild(gamesContainer);
         gamesDiv.appendChild(row);
     }
+
+    //popular games
+    let row = document.createElement("div");
+    row.classList.add("horizontalCon");
+    let gamesContainer = document.createElement("div");
+    gamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    row.innerHTML += arrowContainer;
+    //for each popular game, add the game to the horizontalCon
+
+    await fetch(`/assets/php/getpopulargames.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let popularGames = JSON.parse(res);
+
+            for (let i = 0; i < 10; i++) {
+                const gameName = popularGames[i][0];
+                if (gameName != null) {
+                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                }
+            }
+        });
+
+    row.appendChild(gamesContainer);
+    gamesDiv.prepend(row);
+    gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
+
     // if (loggedIn) {
     //     fetcher(`/assets/php/class_likes/personallikes.php`)
     //         .then((response) => response.text())
@@ -502,6 +529,10 @@ function createGameButton(game, pin) {
 
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+    }
+
+    if (pin == 'hot') {
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
     }
 
     if (gameDate > weekAgo) {
