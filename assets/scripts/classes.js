@@ -333,7 +333,10 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
-    console.log(data);
+    if (data == null) {
+        return
+    }
+
     let classlist = data.tags.join(' ');
 
 
