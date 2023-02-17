@@ -441,7 +441,7 @@ function suggestGames() {
         .then((res) => {
             let randomGames = [];
 
-            for (let x = displayedGames; x < displayedGames + 6; x++) {
+            for (let x = displayedGames; x < displayedGames + 3; x++) {
                 let randGame = randomProperty(games);
 
                 while (randomGames.includes(randGame)) {
