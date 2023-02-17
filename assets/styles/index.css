@@ -142,6 +142,8 @@ html {
     justify-content: flex-end;
 }
 
+
+/* 
 #scisuggests img {
     width: 13vw;
     height: 13vh;
@@ -151,7 +153,7 @@ html {
 
 #scisuggests img:hover {
     transform: scale(1.05);
-}
+} */
 
 @media screen and (max-width: 1262px) {}
 
