@@ -435,18 +435,16 @@ buttons.forEach((button) => {
 });
 
 function suggestGames() {
-    let pinnedGames = [];
     //check previously pinned games
     fetcher(`assets/php/class_pin/getpinnedclasses.php`)
         .then((response) => response.text())
         .then((res) => {
-            pinnedGames = res.split(';');
             let randomGames = [];
 
-            for (let x = displayedGames; x < displayedGames + 3; x++) {
+            for (let x = displayedGames; x < displayedGames + 6; x++) {
                 let randGame = randomProperty(games);
 
-                while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
+                while (randomGames.includes(randGame)) {
                     randGame = randomProperty(games);
                 }
 
@@ -454,35 +452,15 @@ function suggestGames() {
             }
 
             //first pinned game is always going to be '' so length will always be atleast 1
-            pinnedGames = pinnedGames.slice(1);
-            let totalPinned = pinnedGames.length;
-
-            if (pinnedGames.length < 3) {
-                let generateGames = 3 - pinnedGames.length;
-                for (let i = 0; i < generateGames; i++) {
-                    let randGame = randomProperty(games);
-
-                    while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
-                        randGame = randomProperty(games);
-                    }
-
-                    pinnedGames.push(randGame);
-                }
-            }
 
             document.getElementById('scisuggests').innerHTML = '';
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 6; i++) {
                 let game = randomGames[i];
                 let gameBtn = createGameButton(game, 'suggested');
 
                 document.getElementById('scisuggests').innerHTML += gameBtn;
-                game = pinnedGames[i];
 
-                if (i <= totalPinned - 1) {
-                    gameBtn = createGameButton(game, 'pin');
-                } else {
-                    gameBtn = createGameButton(game, 'suggested');
-                }
+                gameBtn = createGameButton(game, 'suggested');
 
                 document.getElementById('scisuggests').innerHTML += gameBtn;
             }
