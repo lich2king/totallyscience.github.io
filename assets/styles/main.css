@@ -691,7 +691,7 @@ a {
     top: -10%;
 }
 
-#pin {
+#gameDiv #pin {
     position: absolute;
     top: -10%;
     left: 85%;
@@ -701,11 +701,11 @@ a {
     cursor: pointer;
 }
 
-#pin:hover {
+#gameDiv #pin:hover {
     transform: scale(1.1);
 }
 
-#pin img {
+#gameDiv #pin img {
     width: 40px;
     height: 40px;
 }
