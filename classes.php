@@ -40,7 +40,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/classes.js?v65"></script>
+    <script src="assets/scripts/classes.js?v66"></script>
 </body>
 
 </html>

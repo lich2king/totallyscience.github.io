@@ -404,6 +404,7 @@ function createGameButton(game, pin) {
 }
 
 function addArrowListeners() {
+    console.log("called");
 
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
         document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
