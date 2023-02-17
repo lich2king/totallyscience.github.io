@@ -169,6 +169,23 @@ async function displayGames() {
             miscGames.push(name);
         }
     }
+    if (newGames.length > 0) {
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < newGames.length; i++) {
+            console.log(newGames[i]);
+            gamesContainer.innerHTML += createGameButton(newGames[i]);
+            console.log(row);
+        }
+        row.appendChild(gamesContainer);
+        gamesDiv.prepend(row);
+        gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
+    }
     if (miscGames.length > 0) {
         gamesDiv.innerHTML += `<h1>Random Games <a href="/classes?category=random">View More</a></h1>`;
 
@@ -213,24 +230,6 @@ async function displayGames() {
     row.appendChild(gamesContainer);
     gamesDiv.prepend(row);
     gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
-
-    if (newGames.length > 0) {
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-        //for each element in newGames, add the game to the horizontalCon
-        for (let i = 0; i < newGames.length; i++) {
-            console.log(newGames[i]);
-            gamesContainer.innerHTML += createGameButton(newGames[i]);
-            console.log(row);
-        }
-        row.appendChild(gamesContainer);
-        gamesDiv.prepend(row);
-        gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
-    }
 
     // if (loggedIn) {
     //     fetcher(`/assets/php/class_likes/personallikes.php`)
