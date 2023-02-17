@@ -76,7 +76,7 @@ Sentry.init({
 </script> -->
 
 
-<link rel="stylesheet" href="assets/styles/main.css?v15">
+<link rel="stylesheet" href="assets/styles/main.css?v17">
 <link rel="icon" href="assets/images/logo.png">
 
 <title>Totally Science</title>

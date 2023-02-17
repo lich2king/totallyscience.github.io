@@ -96,56 +96,6 @@ html {
     text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color);
 }
 
-#gameDiv {
-    min-width: 225px;
-    max-width: 225px;
-    max-height: 120px;
-    min-height: 120px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 15vw;
-    height: 15vh; */
-    border-radius: 30px;
-    text-align: center;
-    transition: 0.1s;
-}
-
-#gameDiv input {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-}
-
-#gameDiv:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-#gameDiv {
-    position: relative;
-}
-
-#gameDiv .innerGameDiv {
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.9vw;
-    font-family: 'Rubik';
-    font-weight: 700;
-    color: var(--light-color);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: visibility 0s, opacity 0.2s linear;
-    transition: visibility 0s, opacity 0.2s linear;
-}
-
-#gameDiv:hover div {
-    visibility: visible;
-    opacity: 1;
-    text-shadow: var(--dark-color) 1px 0 10px;
-}
-
 
 /*#endregion*/
 
@@ -192,6 +142,8 @@ html {
     justify-content: flex-end;
 }
 
+
+/* 
 #scisuggests img {
     width: 13vw;
     height: 13vh;
@@ -201,7 +153,7 @@ html {
 
 #scisuggests img:hover {
     transform: scale(1.05);
-}
+} */
 
 @media screen and (max-width: 1262px) {}
 
@@ -408,136 +360,6 @@ input[type='text'] {
 
 
 /*#region games*/
-
-#games {
-    padding: 2%;
-    /* z-index: 0;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 3vw;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10vh; */
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    gap: 2vw;
-    flex-wrap: wrap;
-    /* 304 x 162  */
-}
-
-#gameDiv {
-    min-width: 225px;
-    max-width: 225px;
-    max-height: 120px;
-    min-height: 120px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 15vw;
-    height: 15vh; */
-    border-radius: 30px;
-    text-align: center;
-    transition: 0.1s;
-}
-
-#gameDiv input {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-}
-
-#gameDiv:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-#gameDiv {
-    position: relative;
-}
-
-#gameDiv .innerGameDiv {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-family: 'Rubik';
-    font-weight: 700;
-    color: var(--light-color);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: visibility 0s, opacity 0.2s linear;
-    transition: visibility 0s, opacity 0.2s linear;
-    margin: 0%;
-}
-
-#gameDiv:hover .innerGameDiv {
-    visibility: visible;
-    opacity: 1;
-    text-shadow: var(--dark-color) 1px 0 10px;
-}
-
-#gameDiv:hover>#gamelock {
-    opacity: 1;
-    top: -10%;
-}
-
-#pin {
-    position: absolute;
-    top: -10%;
-    left: 85%;
-    border: none;
-    background-color: transparent;
-    transition: all 0.1s;
-    cursor: pointer;
-}
-
-#pin:hover {
-    transform: scale(1.1);
-}
-
-#pin img {
-    width: 40px;
-    height: 40px;
-}
-
-#gamelock {
-    position: absolute;
-    top: 5%;
-    left: 32%;
-    border: none;
-    background-color: transparent;
-    transition: all 0.1s;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-#gamelock:hover {
-    transform: scale(1.05);
-}
-
-#gamelock img {
-    width: 80px;
-    height: 100px;
-}
-
-#newbanner {
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#newbanner img {
-    width: 80px;
-    height: 80px;
-}
 
 
 /*#endregion*/
