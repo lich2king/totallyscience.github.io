@@ -229,7 +229,7 @@ async function displayGames() {
         .then((res) => {
             let popularGames = JSON.parse(res);
 
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 15; i++) {
                 const gameName = popularGames[i][0];
                 if (gameName != null) {
                     gamesContainer.innerHTML += createGameButton(gameName, "hot");
