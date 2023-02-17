@@ -243,41 +243,41 @@ async function displayGames() {
 
 
 
-    if (loggedIn) {
-        fetcher(`/assets/php/class_likes/personallikes.php`)
-            .then((response) => response.text())
-            .then((res) => {
-                var likedgames = JSON.parse(res);
+    // if (loggedIn) {
+    //     fetcher(`/assets/php/class_likes/personallikes.php`)
+    //         .then((response) => response.text())
+    //         .then((res) => {
+    //             var likedgames = JSON.parse(res);
 
-                if (likedgames.length > 0) {
+    //             if (likedgames.length > 0) {
 
-                    gamesDiv.innerHTML += `<h1>Liked Games <a href="">View More</a></h1>`
+    //                 gamesDiv.innerHTML += `<h1>Liked Games <a href="">View More</a></h1>`
 
-                    let row = document.createElement("div");
-                    row.classList.add("horizontalCon");
-                    let gamesContainer = document.createElement("div");
-                    gamesContainer.classList.add("gamesCon");
-                    //add the arrows to the horizontal Con
-                    row.innerHTML += arrowContainer;
+    //                 let row = document.createElement("div");
+    //                 row.classList.add("horizontalCon");
+    //                 let gamesContainer = document.createElement("div");
+    //                 gamesContainer.classList.add("gamesCon");
+    //                 //add the arrows to the horizontal Con
+    //                 row.innerHTML += arrowContainer;
 
-                    for (like in likedgames) {
-                        if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                            //line below accounts for suggested/pinned games
-                            console.log(like);
-                            gamesContainer.innerHTML += createGameButton(like);
-                            // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
-                            //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                            // } else {
-                            //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
-                            // }
-                        }
-                    }
-                    row.appendChild(gamesContainer);
-                    gamesDiv.appendChild(row);
-                }
-            });
-        //Get recent games
-    }
+    //                 for (like in likedgames) {
+    //                     if (document.getElementsByName(likedgames[like][0]).length > 0) {
+    //                         //line below accounts for suggested/pinned games
+    //                         console.log(like);
+    //                         gamesContainer.innerHTML += createGameButton(like);
+    //                         // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+    //                         //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+    //                         // } else {
+    //                         //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+    //                         // }
+    //                     }
+    //                 }
+    //                 row.appendChild(gamesContainer);
+    //                 gamesDiv.appendChild(row);
+    //             }
+    //         });
+    //     //Get recent games
+    // }
     //Get popular games
 
     //Make new games last 3 weeks
