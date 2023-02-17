@@ -333,9 +333,7 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
-    if (data == null) {
-        return
-    }
+    console.log(game);
 
     let classlist = data.tags.join(' ');
 
@@ -344,7 +342,6 @@ function createGameButton(game, pin) {
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
-
 
 
 
