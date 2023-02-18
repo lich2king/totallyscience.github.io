@@ -116,6 +116,9 @@
             <p>You search terms did not match any games...</p>
         </div>
     </div>
+    
+    <script async src="https://cdn.ad.plus/player/adplus.js"></script> <script data-playerPro="current">(function(){var s=document.querySelector('script[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"22753484437", "C_WEBSITE":"totallyscience.co"}});})();</script>
+
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
         <!-- Horizontal Ad -->
