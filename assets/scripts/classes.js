@@ -215,6 +215,7 @@ async function displayGames() {
         fetcher(`/assets/php/recent_classes/recentclasses.php`)
             .then((response) => response.text())
             .then((res) => {
+                console.log(res);
                 let recentGames = res.split(';');
                 recentGames = recentGames.slice(1);
 
@@ -222,7 +223,7 @@ async function displayGames() {
                     console.log(recentGames[i]);
                     const gameName = recentGames[i];
                     if (gameName != null) {
-                        recentGamesContainer.innerHTML += createGameButton(gameName, "hot");
+                        recentGamesContainer.innerHTML += createGameButton(gameName);
                     }
                 }
             });
