@@ -198,6 +198,37 @@ async function displayGames() {
         gamesDiv.appendChild(row);
     }
 
+
+    //recent games
+    let recentRow = document.createElement("div");
+    recentRow.classList.add("horizontalCon");
+    let recentGamesContainer = document.createElement("div");
+    recentGamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    row.innerHTML += arrowContainer;
+
+
+    //for each popular game, add the game to the horizontalCon
+
+    fetcher(`/assets/php/recent_classes/recentclasses.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let recentGames = res.split(';');
+            recentGames = recentGames.slice(1);
+
+            for (let i = 0; i < recentGames.length; i++) {
+                const gameName = recentGames[i];
+                if (gameName != null) {
+                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                }
+            }
+        });
+
+    recentRow.appendChild(recentGamesContainer);
+    gamesDiv.prepend(row);
+    gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+
+
     //popular games
     let row = document.createElement("div");
     row.classList.add("horizontalCon");
@@ -205,6 +236,8 @@ async function displayGames() {
     gamesContainer.classList.add("gamesCon");
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
+
+
     //for each popular game, add the game to the horizontalCon
 
     await fetch(`/assets/php/getpopulargames.php`)
