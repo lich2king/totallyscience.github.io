@@ -225,6 +225,7 @@ async function displayGames() {
                         recentGamesContainer.innerHTML += createGameButton(gameName);
                     }
                 }
+                console.log(recentGamesContainer);
             });
 
         recentRow.appendChild(recentGamesContainer);
