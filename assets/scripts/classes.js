@@ -212,9 +212,11 @@ async function displayGames() {
         //add the arrows to the horizontal Con
         recentRow.innerHTML += arrowContainer;
 
+        console.log("ghh");
         fetcher(`/assets/php/recent_classes/recentclasses.php`)
             .then((response) => response.text())
             .then((res) => {
+                console.log("ghh");
                 console.log(res);
                 let recentGames = res.split(';');
                 recentGames = recentGames.slice(1);
