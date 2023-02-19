@@ -210,7 +210,7 @@ async function displayGames() {
         let recentGamesContainer = document.createElement("div");
         recentGamesContainer.classList.add("gamesCon");
         //add the arrows to the horizontal Con
-        recentGamesContainer.innerHTML += arrowContainer;
+        recentRow.innerHTML += arrowContainer;
 
         fetcher(`/assets/php/recent_classes/recentclasses.php`)
             .then((response) => response.text())
