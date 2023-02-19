@@ -200,33 +200,37 @@ async function displayGames() {
 
 
     //recent games
-    let recentRow = document.createElement("div");
-    recentRow.classList.add("horizontalCon");
-    let recentGamesContainer = document.createElement("div");
-    recentGamesContainer.classList.add("gamesCon");
-    //add the arrows to the horizontal Con
-    row.innerHTML += arrowContainer;
+
 
 
     //for each popular game, add the game to the horizontalCon
+    if (loggedIn) {
+        let recentRow = document.createElement("div");
+        recentRow.classList.add("horizontalCon");
+        let recentGamesContainer = document.createElement("div");
+        recentGamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
 
-    fetcher(`/assets/php/recent_classes/recentclasses.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            let recentGames = res.split(';');
-            recentGames = recentGames.slice(1);
+        fetcher(`/assets/php/recent_classes/recentclasses.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                let recentGames = res.split(';');
+                recentGames = recentGames.slice(1);
 
-            for (let i = 0; i < recentGames.length; i++) {
-                const gameName = recentGames[i];
-                if (gameName != null) {
-                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                for (let i = 0; i < recentGames.length; i++) {
+                    const gameName = recentGames[i];
+                    if (gameName != null) {
+                        gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                    }
                 }
-            }
-        });
+            });
 
-    recentRow.appendChild(recentGamesContainer);
-    gamesDiv.prepend(row);
-    gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+        recentRow.appendChild(recentGamesContainer);
+        gamesDiv.prepend(row);
+        gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+    }
+
 
 
     //popular games
