@@ -227,7 +227,7 @@ async function displayGames() {
             });
 
         recentRow.appendChild(recentGamesContainer);
-        gamesDiv.prepend(row);
+        gamesDiv.prepend(recentRow);
         gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
     }
 
