@@ -93,8 +93,6 @@ async function loadTopic() {
         const gameButtons = filteredGameCon.querySelectorAll('.all');
 
         Array.from(gameButtons).forEach((game) => {
-            console.log(game);
-            console.log(game.classList);
             if (game.classList.contains(selectedTopic)) {
                 game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
             } else {
@@ -162,13 +160,10 @@ async function displayGames() {
         }
 
         filteredGameCon.innerHTML += createGameButton(name, "filtered");
-        console.log("Filtered in:");
-        console.log(name);
 
         //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
         let hasCategory = false;
         for (let i = 0; i < categories.length; i++) {
-            console.log(name);
             if (data.tags.join(' ').includes(categories[i])) {
                 hasCategory = true;
                 document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
@@ -190,7 +185,6 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < miscGames.length; i++) {
-            console.log(miscGames[i]);
             gamesContainer.innerHTML += createGameButton(miscGames[i]);
             console.log(row);
         }
@@ -275,9 +269,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < newGames.length; i++) {
-            console.log(newGames[i]);
             gamesContainer.innerHTML += createGameButton(newGames[i]);
-            console.log(row);
         }
         row.appendChild(gamesContainer);
         gamesDiv.prepend(row);
@@ -375,7 +367,6 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
-    console.log(game);
 
     let classlist = data.tags.join(' ');
 
@@ -443,7 +434,6 @@ function createGameButton(game, pin) {
 }
 
 function addArrowListeners() {
-    console.log("called");
 
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
         document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
@@ -457,7 +447,6 @@ function addArrowListeners() {
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
         document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
-            console.log(e.target);
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
