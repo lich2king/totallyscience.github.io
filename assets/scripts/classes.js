@@ -186,7 +186,6 @@ async function displayGames() {
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < miscGames.length; i++) {
             gamesContainer.innerHTML += createGameButton(miscGames[i]);
-            console.log(row);
         }
         row.appendChild(gamesContainer);
         gamesDiv.appendChild(row);
