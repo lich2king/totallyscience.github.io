@@ -223,7 +223,7 @@ async function displayGames() {
                     const gameName = recentGames[i];
                     if (gameName != null) {
                         recentGamesContainer.innerHTML += createGameButton(gameName);
-                        console.log(createGameButton(gameName));
+                        console.log(recentGamesContainer);
                     }
                 }
             });
