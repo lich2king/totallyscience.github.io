@@ -219,6 +219,7 @@ async function displayGames() {
                 recentGames = recentGames.slice(1);
 
                 for (let i = 0; i < recentGames.length; i++) {
+                    console.log(recentGames[i]);
                     const gameName = recentGames[i];
                     if (gameName != null) {
                         recentGamesContainer.innerHTML += createGameButton(gameName, "hot");
