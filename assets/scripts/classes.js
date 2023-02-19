@@ -229,6 +229,7 @@ async function displayGames() {
 
         recentRow.appendChild(recentGamesContainer);
         gamesDiv.prepend(recentRow);
+        console.log(recentGamesContainer);
         console.log("here");
         console.log(gamesDiv);
         gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
