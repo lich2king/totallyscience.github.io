@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', async() => {
                     }
                 }
             }
+            console.log(likedGamesContainer);
         });
 
     recentRow.appendChild(recentGamesContainer);
