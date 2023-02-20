@@ -226,11 +226,10 @@ async function displayGames() {
                 length = likedgames.length;
                 if (likedgames.length > 0) {
                     for (like in likedgames) {
-                        console.log(like);
+                        console.log(likedgames[like][0]);
                         if (document.getElementsByName(likedgames[like][0]).length > 0) {
                             //line below accounts for suggested/pinned games
-                            console.log(like);
-                            recentGamesContainer.innerHTML += createGameButton(like);
+                            recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
                             // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
                             //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
                             // } else {
