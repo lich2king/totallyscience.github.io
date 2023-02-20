@@ -315,7 +315,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v18"></script>
+    <script src="assets/scripts/index.js?v19"></script>
 </body>
 
 </html>

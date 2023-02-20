@@ -181,9 +181,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < miscGames.length; i++) {
-            console.log(miscGames[i]);
             gamesContainer.innerHTML += createGameButton(miscGames[i]);
-            console.log(row);
         }
         row.appendChild(gamesContainer);
         gamesDiv.appendChild(row);
@@ -226,6 +224,7 @@ async function displayGames() {
                 length = likedgames.length;
                 if (likedgames.length > 0) {
                     for (like in likedgames) {
+                        console.log(like);
                         if (document.getElementsByName(likedgames[like][0]).length > 0) {
                             //line below accounts for suggested/pinned games
                             console.log(like);
@@ -287,9 +286,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < newGames.length; i++) {
-            console.log(newGames[i]);
             gamesContainer.innerHTML += createGameButton(newGames[i]);
-            console.log(row);
         }
         row.appendChild(gamesContainer);
         gamesDiv.prepend(row);
@@ -634,8 +631,6 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
-    console.log('Estoy aqui');
-    console.log(loggedIn);
     setRewardDayBar('initial');
     if (loggedIn) {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
@@ -701,7 +696,6 @@ function rewardPop() {
     document.getElementById('rewardTimer').innerHTML = '00:00:00';
 
     if (loggedIn) {
-        console.log('Popped logged in');
         document.getElementById('ignoreReward').style.display = 'none';
 
         let points = 100;
@@ -722,7 +716,6 @@ function rewardPop() {
                 }
             });
     } else {
-        console.log('Popped not logged in');
         for (let i = 0; i <= 0; i++) {
             document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
         }
@@ -732,7 +725,6 @@ function rewardPop() {
         document.getElementById('ignoreReward').style.display = '';
         document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
         document.getElementById('claimRewardB').setAttribute('onclick', "window.location.href='/signup'");
-        console.log('Popped finsihed not logged in');
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
@@ -785,7 +777,6 @@ function setRewardDayBar(mode) {
     let day = 0;
 
     if (loggedIn) {
-        console.log('Logged in in Set reward day bnar');
         if (mode == 'update') {
             fetcher(`assets/php/points/checkrewardday.php`)
                 .then((rewardDay) => rewardDay.text())
@@ -861,7 +852,6 @@ function addArrowListeners() {
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
         document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
-            console.log(e.target);
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
