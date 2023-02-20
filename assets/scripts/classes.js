@@ -205,11 +205,15 @@ async function displayGames() {
         //add the arrows to the horizontal Con
         recentRow.innerHTML += arrowContainer;
 
+        let length = 0;
+
         await fetcher(`/assets/php/recent_classes/recentclasses.php`)
             .then((response) => response.text())
             .then((res) => {
                 let recentGames = res.split(';');
                 recentGames = recentGames.slice(1);
+
+                length = recentGames.length;
 
                 for (let i = 0; i < recentGames.length; i++) {
                     console.log(recentGames[i]);
@@ -221,12 +225,14 @@ async function displayGames() {
                 console.log(recentGamesContainer);
             });
 
-        recentRow.appendChild(recentGamesContainer);
-        gamesDiv.prepend(recentRow);
-        console.log(recentGamesContainer);
-        console.log("here");
-        console.log(gamesDiv);
-        gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+        if (length > 5) {
+            recentRow.appendChild(recentGamesContainer);
+            gamesDiv.prepend(recentRow);
+            console.log(recentGamesContainer);
+            console.log("here");
+            console.log(gamesDiv);
+            gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+        }
     }
 
 
