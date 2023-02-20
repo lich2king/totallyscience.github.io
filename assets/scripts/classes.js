@@ -231,7 +231,7 @@ async function displayGames() {
             console.log(recentGamesContainer);
             console.log("here");
             console.log(gamesDiv);
-            gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+            gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
         }
     }
 
