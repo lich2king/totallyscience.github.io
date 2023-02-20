@@ -3,6 +3,8 @@ let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
 
+
+
 document.addEventListener('DOMContentLoaded', async() => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
@@ -44,6 +46,8 @@ document.addEventListener('DOMContentLoaded', async() => {
     });
 
     const gamesDiv = document.getElementById("games");
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+
 
     //load liked and recent games
     let recentRow = document.createElement("div");
