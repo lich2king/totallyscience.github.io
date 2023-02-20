@@ -330,6 +330,11 @@ searchBar.addEventListener('keyup', () => {
 
     let input = searchBar.value.toUpperCase().split(' ').join('');
 
+    document.getElementById("filteredGames").style.display = 'none';
+    if (input != '') {
+        document.getElementById("filteredGames").style.display = '';
+    }
+
     const gameButtons = document.getElementById("filteredGames").getElementsByClassName('all');
 
     let gameShown = false;
