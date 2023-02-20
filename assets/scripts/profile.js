@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     res = JSON.parse(authToken);
-    
+
     if (res != null) {
         const loggedIn = res['isLoggedIn'];
         username = res['username'];
@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // load liked games
+
+
     fetcher(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
         const likeContainer = document.getElementById('likedcontainer');
 
