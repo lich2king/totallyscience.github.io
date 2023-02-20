@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async() => {
                 for (like in likedgames) {
                     console.log(likedgames[like][0]);
                     if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                        recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
+                        likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
                     }
                 }
             }
@@ -101,10 +101,9 @@ document.addEventListener('DOMContentLoaded', async() => {
 
     recentRow.appendChild(recentGamesContainer);
     likedRow.appendChild(likedGamesContainer);
-    gamesDiv.prepend(recentRow);
     gamesDiv.prepend(likedRow);
-
     gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+    gamesDiv.prepend(recentRow);
     gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
 
 
