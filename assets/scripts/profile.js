@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', async() => {
     gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
     gamesDiv.prepend(recentRow);
     gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+
+    addArrowListeners();
 });
 
 function changeToGif(ele) {
@@ -153,4 +155,33 @@ function createGameButton(game, pin) {
         `;
 
     return gameBtn;
+}
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+
+
 }
