@@ -216,7 +216,7 @@ async function displayGames() {
         //         }
         //         console.log(recentGamesContainer);
         //     });
-        fetcher(`/assets/php/class_likes/personallikes.php`)
+        await fetcher(`/assets/php/class_likes/personallikes.php`)
             .then((response) => response.text())
             .then((res) => {
                 var likedgames = JSON.parse(res);
