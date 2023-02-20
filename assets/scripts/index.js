@@ -228,13 +228,7 @@ async function displayGames() {
                     for (like in likedgames) {
                         console.log(likedgames[like][0]);
                         if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                            //line below accounts for suggested/pinned games
                             recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
-                            // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
-                            //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                            // } else {
-                            //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
-                            // }
                         }
                     }
                 }
