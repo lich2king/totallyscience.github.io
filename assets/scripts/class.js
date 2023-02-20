@@ -231,12 +231,12 @@ function suggestGames() {
         });
         if (gameName == randGame) sameTag = false;
 
-        if (sameTag && displayedGames < 5) {
+        if (sameTag && displayedGames < 15) {
             randomGames.push(randGame);
             displayedGames++;
-        } else if (displayedGames >= 5) break;
+        } else if (displayedGames >= 15) break;
     }
-    while (displayedGames < 5) {
+    while (displayedGames < 15) {
         for (let x = 0; x < 5 - displayedGames; x++) {
             let randGame = randomProperty(games);
 
@@ -251,15 +251,31 @@ function suggestGames() {
 
     document.getElementById('suggestedGames').innerHTML = '';
 
-    randomGames.forEach(function(game) {
-        const gameBtn = `
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]['image']})" id="gameDiv" onclick="location.href = 'class?class=${game}'">
-                <h1 class="innerGameDiv">${game}</h1>
-            </div>
-        `;
 
-        document.getElementById('suggestedGames').innerHTML += gameBtn;
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+    let gamesDiv = document.getElementById('games');
+
+    gamesDiv.innerHTML += `<h1>Suggested Games</h1>`;
+
+    let row = document.createElement("div");
+    row.classList.add("horizontalCon");
+    let gamesContainer = document.createElement("div");
+    gamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    row.innerHTML += arrowContainer;
+    //for each element in newGames, add the game to the horizontalCon
+    for (let i = 0; i < miscGames.length; i++) {
+        gamesContainer.innerHTML += createGameButton(miscGames[i]);
+    }
+
+    randomGames.forEach(function(game) {
+        gamesContainer.innerHTML += createGameButton(game);
     });
+
+    row.appendChild(gamesContainer);
+    gamesDiv.appendChild(row);
+
+    addArrowListeners();
 }
 
 var randomProperty = function(object) {
@@ -290,3 +306,55 @@ window.addEventListener('click', () => {
     //fix some text inputs not working (eaglercraft)
     document.getElementById('iframe').focus();
 });
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+}
+
+function createGameButton(game, pin) {
+    const data = games[game];
+    if (data == null)
+        return '';
+
+    let classlist = data.tags.join(' ');
+
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+
+    const gameDate = new Date(data.date_added);
+
+    if (gameDate > weekAgo) classlist += ' new';
+
+    let gameBtn = '';
+
+    gameBtn = `
+        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist} all">
+            <h1 class="innerGameDiv">${game}</h1>
+        </div>
+        `;
+
+    return gameBtn;
+}

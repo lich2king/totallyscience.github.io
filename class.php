@@ -87,10 +87,14 @@
         <div class="gamesDiv" id="suggestedGames"></div>
     </div>
 
+    <div id="games">
+
+    </div>
+
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v73"></script>
+    <script src="assets/scripts/class.js?v74"></script>
 </body>
 
 </html>
