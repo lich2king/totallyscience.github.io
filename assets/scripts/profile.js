@@ -71,13 +71,11 @@ document.addEventListener('DOMContentLoaded', async() => {
 
 
             for (let i = 0; i < recentGames.length; i++) {
-                console.log(recentGames[i]);
                 const gameName = recentGames[i];
                 if (gameName != null) {
                     recentGamesContainer.innerHTML += createGameButton(gameName);
                 }
             }
-            console.log(recentGamesContainer);
         });
 
     await fetcher(`/assets/php/class_likes/personallikes.php`)
@@ -85,13 +83,13 @@ document.addEventListener('DOMContentLoaded', async() => {
         .then((res) => {
             var likedgames = JSON.parse(res);
 
-            console.log(likedgames);
 
             if (likedgames.length > 0) {
                 for (like in likedgames) {
                     console.log(likedgames[like][0]);
                     if (document.getElementsByName(likedgames[like][0]).length > 0) {
                         likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
+                        console.log(likedGamesContainer);
                     }
                 }
             }
