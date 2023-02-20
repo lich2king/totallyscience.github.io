@@ -189,6 +189,41 @@ async function displayGames() {
         gamesDiv.appendChild(row);
     }
 
+
+    //recent games
+    if (loggedIn) {
+        let recentRow = document.createElement("div");
+        recentRow.classList.add("horizontalCon");
+        let recentGamesContainer = document.createElement("div");
+        recentGamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        recentRow.innerHTML += arrowContainer;
+
+        await fetcher(`/assets/php/recent_classes/recentclasses.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                let recentGames = res.split(';');
+                recentGames = recentGames.slice(1);
+
+                for (let i = 0; i < recentGames.length; i++) {
+                    console.log(recentGames[i]);
+                    const gameName = recentGames[i];
+                    if (gameName != null) {
+                        recentGamesContainer.innerHTML += createGameButton(gameName);
+                    }
+                }
+                console.log(recentGamesContainer);
+            });
+
+        recentRow.appendChild(recentGamesContainer);
+        gamesDiv.prepend(recentRow);
+        console.log(recentGamesContainer);
+        console.log("here");
+        console.log(gamesDiv);
+        gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+    }
+
+
     //popular games
     let row = document.createElement("div");
     row.classList.add("horizontalCon");
