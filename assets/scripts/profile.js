@@ -90,10 +90,6 @@ document.addEventListener('DOMContentLoaded', async() => {
                     if (likedgames[like][0].length > 0) {
                         likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
                     }
-                    // if (likedgames[like][0] != null) {
-                    //     likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
-                    //     console.log(likedGamesContainer);
-                    // }
                 }
             }
             console.log(likedGamesContainer);
@@ -105,40 +101,6 @@ document.addEventListener('DOMContentLoaded', async() => {
     gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
     gamesDiv.prepend(recentRow);
     gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
-
-
-    // load liked games
-
-
-    // fetcher(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-    //     const likeContainer = document.getElementById('likedcontainer');
-
-    //     let likedgames = JSON.parse(res);
-
-    //     for (like in likedgames) {
-    //         let game = likedgames[like][0];
-    //         if (games[game] != null) {
-    //             const gameButton = createGameButton(game);
-    //             likeContainer.innerHTML += gameButton;
-    //         }
-    //     }
-    // });
-
-    // // load recent games
-    // fetcher(`assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
-    //     const recentContainer = document.getElementById('recentContainer');
-
-    //     let recentGames = res.split(';');
-
-    //     recentGames = recentGames.slice(1);
-
-    //     for (let i = 0; i < recentGames.length; i++) {
-    //         if (games[recentGames[i]] != null) {
-    //             const gameButton = createGameButton(recentGames[i]);
-    //             recentContainer.innerHTML += gameButton;
-    //         }
-    //     }
-    // });
 });
 
 function changeToGif(ele) {

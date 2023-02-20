@@ -568,6 +568,9 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
+    if (data == null)
+        return '';
+
     //console.log(game);
 
     //console.log(data.tags.join(' '));
