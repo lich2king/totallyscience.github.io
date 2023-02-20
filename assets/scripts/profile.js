@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', async() => {
             let recentGames = res.split(';');
             recentGames = recentGames.slice(1);
 
-            length = recentGames.length;
 
             for (let i = 0; i < recentGames.length; i++) {
                 console.log(recentGames[i]);
@@ -88,7 +87,6 @@ document.addEventListener('DOMContentLoaded', async() => {
 
             console.log(likedgames);
 
-            length = likedgames.length;
             if (likedgames.length > 0) {
                 for (like in likedgames) {
                     console.log(likedgames[like][0]);
