@@ -255,7 +255,7 @@ function suggestGames() {
     let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
     let gamesDiv = document.getElementById('games');
 
-    gamesDiv.innerHTML += `<h1>Suggested Games</h1>`;
+    gamesDiv.innerHTML += `<h1>Recommended Games</h1>`;
 
     let row = document.createElement("div");
     row.classList.add("horizontalCon");

@@ -82,11 +82,6 @@
         </div>
     </div>
 
-    <div id="moregames">
-        <h1>Recommended</h1>
-        <div class="gamesDiv" id="suggestedGames"></div>
-    </div>
-
     <div id="games">
 
     </div>
@@ -94,7 +89,7 @@
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v75"></script>
+    <script src="assets/scripts/class.js?v76"></script>
 </body>
 
 </html>
