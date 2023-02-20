@@ -72,19 +72,14 @@ html {
 #gameframe .options .left div {
     color: white;
     font-family: 'Rubik';
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     /* text-shadow: var(--dark-color) 1px 0 10px; */
     height: 0.5rem;
 }
 
-#gameframe .options .left .game-button {
-    margin-left: 1vw;
-    height: 20px;
-}
-
 #gameframe .options .left .text-button {
     margin-left: 1vw;
-    height: 20px;
+    height: 25px;
 }
 
 #gameframe .options .right {
