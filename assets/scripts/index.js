@@ -201,22 +201,43 @@ async function displayGames() {
 
         let length = 0;
 
-        await fetcher(`/assets/php/recent_classes/recentclasses.php`)
+        // await fetcher(`/assets/php/recent_classes/recentclasses.php`)
+        //     .then((response) => response.text())
+        //     .then((res) => {
+        //         let recentGames = res.split(';');
+        //         recentGames = recentGames.slice(1);
+
+        //         length = recentGames.length;
+
+        //         for (let i = 0; i < recentGames.length; i++) {
+        //             console.log(recentGames[i]);
+        //             const gameName = recentGames[i];
+        //             if (gameName != null) {
+        //                 recentGamesContainer.innerHTML += createGameButton(gameName);
+        //             }
+        //         }
+        //         console.log(recentGamesContainer);
+        //     });
+        fetcher(`/assets/php/class_likes/personallikes.php`)
             .then((response) => response.text())
             .then((res) => {
-                let recentGames = res.split(';');
-                recentGames = recentGames.slice(1);
+                var likedgames = JSON.parse(res);
 
-                length = recentGames.length;
-
-                for (let i = 0; i < recentGames.length; i++) {
-                    console.log(recentGames[i]);
-                    const gameName = recentGames[i];
-                    if (gameName != null) {
-                        recentGamesContainer.innerHTML += createGameButton(gameName);
+                length = likedgames.length;
+                if (likedgames.length > 0) {
+                    for (like in likedgames) {
+                        if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                            //line below accounts for suggested/pinned games
+                            console.log(like);
+                            recentGamesContainer.innerHTML += createGameButton(like);
+                            // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
+                            //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
+                            // } else {
+                            //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
+                            // }
+                        }
                     }
                 }
-                console.log(recentGamesContainer);
             });
 
         if (length > 5) {
@@ -225,7 +246,7 @@ async function displayGames() {
             console.log(recentGamesContainer);
             console.log("here");
             console.log(gamesDiv);
-            gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+            gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
         }
     }
 
