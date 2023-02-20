@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', async() => {
             if (likedgames.length > 0) {
                 for (like in likedgames) {
                     console.log(likedgames[like][0].length);
-                    if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                    if (likedgames[like][0] != null) {
                         likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
                         console.log(likedGamesContainer);
                     }
