@@ -264,10 +264,6 @@ function suggestGames() {
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
     //for each element in newGames, add the game to the horizontalCon
-    for (let i = 0; i < miscGames.length; i++) {
-        gamesContainer.innerHTML += createGameButton(miscGames[i]);
-    }
-
     randomGames.forEach(function(game) {
         gamesContainer.innerHTML += createGameButton(game);
     });
