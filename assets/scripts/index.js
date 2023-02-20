@@ -221,6 +221,8 @@ async function displayGames() {
             .then((res) => {
                 var likedgames = JSON.parse(res);
 
+                console.log(likedgames);
+
                 length = likedgames.length;
                 if (likedgames.length > 0) {
                     for (like in likedgames) {
