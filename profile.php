@@ -66,7 +66,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v59"></script>
+    <script src="assets/scripts/profile.js?v60"></script>
 </body>
 
 </html>
