@@ -3,7 +3,7 @@ let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async() => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
     });
@@ -43,38 +43,99 @@ document.addEventListener('DOMContentLoaded', () => {
         } else document.getElementById('noscores').setAttribute('style', 'display: ');
     });
 
+    const gamesDiv = document.getElementById("games");
+
+    //load liked and recent games
+    let recentRow = document.createElement("div");
+    let likedRow = document.createElement("div");
+    recentRow.classList.add("horizontalCon");
+    likedRow.classList.add("horizontalCon");
+    let recentGamesContainer = document.createElement("div");
+    let likedGamesContainer = document.createElement("div");
+    recentGamesContainer.classList.add("gamesCon");
+    likedGamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    recentRow.innerHTML += arrowContainer;
+    likedRow.innerHTML += arrowContainer;
+
+
+    await fetcher(`/assets/php/recent_classes/recentclasses.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let recentGames = res.split(';');
+            recentGames = recentGames.slice(1);
+
+            length = recentGames.length;
+
+            for (let i = 0; i < recentGames.length; i++) {
+                console.log(recentGames[i]);
+                const gameName = recentGames[i];
+                if (gameName != null) {
+                    recentGamesContainer.innerHTML += createGameButton(gameName);
+                }
+            }
+            console.log(recentGamesContainer);
+        });
+
+    await fetcher(`/assets/php/class_likes/personallikes.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            var likedgames = JSON.parse(res);
+
+            console.log(likedgames);
+
+            length = likedgames.length;
+            if (likedgames.length > 0) {
+                for (like in likedgames) {
+                    console.log(likedgames[like][0]);
+                    if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                        recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
+                    }
+                }
+            }
+        });
+
+    recentRow.appendChild(recentGamesContainer);
+    likedRow.appendChild(likedGamesContainer);
+    gamesDiv.prepend(recentRow);
+    gamesDiv.prepend(likedRow);
+
+    gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+    gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+
+
     // load liked games
 
 
-    fetcher(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-        const likeContainer = document.getElementById('likedcontainer');
+    // fetcher(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
+    //     const likeContainer = document.getElementById('likedcontainer');
 
-        let likedgames = JSON.parse(res);
+    //     let likedgames = JSON.parse(res);
 
-        for (like in likedgames) {
-            let game = likedgames[like][0];
-            if (games[game] != null) {
-                const gameButton = createGameButton(game);
-                likeContainer.innerHTML += gameButton;
-            }
-        }
-    });
+    //     for (like in likedgames) {
+    //         let game = likedgames[like][0];
+    //         if (games[game] != null) {
+    //             const gameButton = createGameButton(game);
+    //             likeContainer.innerHTML += gameButton;
+    //         }
+    //     }
+    // });
 
-    // load recent games
-    fetcher(`assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
-        const recentContainer = document.getElementById('recentContainer');
+    // // load recent games
+    // fetcher(`assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
+    //     const recentContainer = document.getElementById('recentContainer');
 
-        let recentGames = res.split(';');
+    //     let recentGames = res.split(';');
 
-        recentGames = recentGames.slice(1);
+    //     recentGames = recentGames.slice(1);
 
-        for (let i = 0; i < recentGames.length; i++) {
-            if (games[recentGames[i]] != null) {
-                const gameButton = createGameButton(recentGames[i]);
-                recentContainer.innerHTML += gameButton;
-            }
-        }
-    });
+    //     for (let i = 0; i < recentGames.length; i++) {
+    //         if (games[recentGames[i]] != null) {
+    //             const gameButton = createGameButton(recentGames[i]);
+    //             recentContainer.innerHTML += gameButton;
+    //         }
+    //     }
+    // });
 });
 
 function changeToGif(ele) {
