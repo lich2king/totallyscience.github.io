@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((response) => response.json())
         .then((retrievedGames) => {
             games = retrievedGames;
-            suggestGames();
+            //suggestGames();
             addGameData(); //increment game views by 1
         });
 });
