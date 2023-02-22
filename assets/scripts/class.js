@@ -48,14 +48,6 @@ window.addEventListener('load', () => {
         fetch(`assets/php/recent_classes/addclass.php?name=${gameName}`);
     }
 
-    fetch(`assets/php/verified.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            if (res == '1') {
-                verified = true;
-            }
-        });
-
     //get game data for iframe etc
     fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
         if (response.ok) return response.json();

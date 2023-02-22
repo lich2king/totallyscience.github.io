@@ -313,7 +313,7 @@
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#sims2"
     },
 
-    "Slope": {
+    "Slope 1": {
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
         "image": "./assets/game_images/slope.png",
         "controls": "[Arrow Keys] - Move",
