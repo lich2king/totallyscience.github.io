@@ -229,7 +229,7 @@ function suggestGames() {
         } else if (displayedGames >= 15) break;
     }
     while (displayedGames < 15) {
-        for (let x = 0; x < 5 - displayedGames; x++) {
+        for (let x = 0; x < 15 - displayedGames; x++) {
             let randGame = randomProperty(games);
 
             while (randomGames.includes(randGame)) {
