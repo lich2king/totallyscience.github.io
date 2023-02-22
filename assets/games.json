@@ -130,7 +130,7 @@
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
     },
 
-    "Eaglercraft": {
+    "Minecraft": {
         "description": "Minecraft eaglercraft 1.5.2 for the web",
         "image": "./assets/game_images/minecraft.png",
         "controls": "WASD to move, space to jump",
