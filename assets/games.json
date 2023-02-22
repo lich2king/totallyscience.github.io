@@ -120,7 +120,7 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1"
     },
 
-    "Elastic Man": {
+    "Minecraft": {
         "description": "Satisfying game where you can squish, pull, and distort Morty's head.",
         "image": "./assets/game_images/elasticman.jpeg",
         "controls": "Drag features with mouse or touch-screen",
@@ -130,15 +130,7 @@
         "iframe_url": "https://www.adultswim.com/etcetera/elastic-man/app.html"
     },
 
-    "Minecraft": {
-        "description": "Minecraft eaglercraft 1.5.2 for the web",
-        "image": "./assets/game_images/minecraft.png",
-        "controls": "WASD to move, space to jump",
-        "tags": ["multiplayer"],
-        "date_added": "22022-09-04T22:35:18.770Z",
-        "developer": "lax1dude",
-        "iframe_url": ""
-    },
+
 
     "Factory Balls": {
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
