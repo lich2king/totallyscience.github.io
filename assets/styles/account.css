@@ -55,3 +55,7 @@ body {
 #resEmail:hover {
     color: var(--accent-color);
 }
+
+#loginInstead {
+    margin-bottom: 0%;
+}

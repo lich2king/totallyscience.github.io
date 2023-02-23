@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='./assets/styles/account.css?v1'>
+    <link rel='stylesheet' href='./assets/styles/account.css?v2'>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 
     <div style="padding-top: 90px;"></div>
 
-    <p style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
+    <p id="loginInstead" style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
     <form id="survey" action="javascript:SubmitSignUp()">
         <div>
             <label for="username">Username</label><br>
