@@ -27,6 +27,7 @@ window.addEventListener('load', () => {
 
     if (res != null) userloggedIn = res['isLoggedIn'];
 
+    console.log(userloggedIn);
     if (userloggedIn == 'true') {
         loggedIn = true;
 
