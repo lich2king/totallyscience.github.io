@@ -31,13 +31,11 @@ window.addEventListener('load', () => {
     if (userloggedIn == 'true') {
         loggedIn = true;
 
-        console.log(loggedIn);
 
         //check if user liked the game previously
         fetcher(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
             .then((response) => response.text())
             .then((res) => {
-                console.log(res);
                 if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             });
 
@@ -45,7 +43,6 @@ window.addEventListener('load', () => {
         fetcher(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
             .then((response) => response.text())
             .then((res) => {
-                console.log(res);
                 if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
             });
 
