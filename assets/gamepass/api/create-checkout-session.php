@@ -35,11 +35,14 @@ try {
     'cancel_url' => $YOUR_DOMAIN . '/gamepass.php',
   ]);
 
-  if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
   }
-  
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+
+  $userid = $data['auth']['id'];
   $customerid = $checkout_session['customer'];
   $monthly = 0;
   if($_POST['lookup_key'] == 'gpmonthly')

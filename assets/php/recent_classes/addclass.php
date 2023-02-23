@@ -1,6 +1,4 @@
 <?php
-  // READY
-
   include '../config.php';
 
   // Create connection
@@ -8,7 +6,7 @@
     
   // Check connection
   if ($conn->connect_error) {
-    die("connection failed"); //. $conn->connect_error);
+    die("connection failed");
   }
 
   $gameName = htmlspecialchars($_GET["name"]);
