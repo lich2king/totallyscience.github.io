@@ -148,7 +148,7 @@ async function displayGames() {
         const data = sorted[keys[x]];
 
         const weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7);
+        weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
         const gameDate = new Date(data.date_added);
 
