@@ -20,7 +20,7 @@
       die("error: no cookie");
   }
 
-  $user = $data['auth']['id'];
+  $userid = $data['auth']['id'];
 
   $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
   $result = mysqli_query($conn, $query);
