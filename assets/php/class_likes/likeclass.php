@@ -13,11 +13,14 @@
 
   $gameName = htmlspecialchars($_GET["name"]);
 
-  if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
   }
 
-  $user = json_decode($_COOKIE['logintoken'], true)['id'];
+  $user = $data['auth']['id'];
 
   //first check if the user has not already liked the game
   $query = "SELECT * FROM liked_games WHERE ID = '$user' AND Game = '$gameName'";

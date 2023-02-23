@@ -12,13 +12,16 @@ if ($conn->connect_error) {
 $password = htmlspecialchars($_GET["password"]);
 $newUsername = htmlspecialchars($_GET["username"]);
 
+$json = file_get_contents('php://input');
+$data = json_decode($json, TRUE);
+
+if (!isset($data['auth'])) {
+    die("error: no cookie");
+}
+
+$id = $data['auth']['id'];
+
 if ($password != null && $password != '') {
-    if (!isset($_COOKIE['logintoken'])) {
-        die("no cookie");
-    }
-      
-    $id = json_decode($_COOKIE['logintoken'], true)['id'];
-    
     if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'")) {
         $row = $userresult -> fetch_row();
         $usersPass = $row[2];

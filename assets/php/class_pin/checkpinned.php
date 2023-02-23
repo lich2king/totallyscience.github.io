@@ -13,11 +13,14 @@
 
   $gameName = htmlspecialchars($_GET["name"]);
 
-  if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
   }
 
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+  $user = $data['auth']['id'];
 
   $query = "SELECT `PinnedGames` FROM `accounts` WHERE id='$userid'";
   $result = mysqli_query($conn, $query);

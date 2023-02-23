@@ -6,7 +6,7 @@
     
   // Check connection
   if ($conn->connect_error) {
-    die("connection failed"); //. $conn->connect_error);
+    die("connection failed");
   }
 
   $json = file_get_contents('php://input');

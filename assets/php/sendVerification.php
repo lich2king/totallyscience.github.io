@@ -11,7 +11,14 @@
     die("connection failed");
   }
 
-  $id = json_decode($_COOKIE['logintoken'], true)['id'];
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
+  }
+
+  $id = $data['auth']['id'];
   $from = "help@totallyscience.co";
   $subject = "Totally Science Confirmation Code";
   $code = rand(10000,99999);

@@ -3,11 +3,14 @@
 
   include '../config.php';
 
-  if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
   }
-    
-  $name = json_decode($_COOKIE['logintoken'], true)['username'];
+
+  $name = $data['auth']['username'];
   $roomid = htmlspecialchars($_GET["id"]);
 
   if (!$roomid || !$name) {
