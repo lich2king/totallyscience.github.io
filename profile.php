@@ -31,8 +31,10 @@
         </div>
     </div>
 
+    <div id="games">
+    </div>
 
-    <div id="recents">
+    <!-- <div id="recents">
         <h1 class="label">Recent Games</h1>
         <div class="biccontainer">
             <div class="container" id="recentContainer">
@@ -53,7 +55,7 @@
                 <input type="image" src="assets/images/right-arrow.png" />
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id="highscores">
         <h1 class="label">Your Highscores</h1>
@@ -64,7 +66,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v49"></script>
+    <script src="assets/scripts/profile.js?v64"></script>
 </body>
 
 </html>

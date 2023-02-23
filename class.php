@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v21'>
+    <link rel='stylesheet' href='assets/styles/class.css?v25'>
 </head>
 
 <body>
@@ -33,18 +33,10 @@
 
             <div class="options">
                 <div class="left">
-                    <div class="undertext">
-                        <button id="like" class="text-button button-effect-a"><img
-                                src="assets/images/icons/likeoutline.png"></button>
-                        <div id="likeCount">...</div>
-                    </div>
-                    <div class="undertext">
-                        <button onclick="OpenHighscore()" class="text-button"><img
-                                src="assets/images/icons/trophy-icon.png"></button>
-                        <div id="currentHighscore">...</div>
-                    </div>
-                    <!--<button id="save" class="game-button"><img src="assets/images/icons/saveicon.png"></button>
-                <button class="game-button"><img src="assets/images/icons/upload.png"></button>-->
+                    <button id="like" class="text-button button-effect-a"><img src="assets/images/icons/likeoutline.png"></button>
+                    <div id="likeCount">...</div>
+                    <button onclick="OpenHighscore()" class="text-button"><img src="assets/images/icons/trophy-icon.png"></button>
+                    <div id="currentHighscore">...</div>
                 </div>
                 <div class="right">
                     <button id="pin" class="game-button button-effect-a"><img
@@ -90,15 +82,14 @@
         </div>
     </div>
 
-    <div id="moregames">
-        <h1>Recommended</h1>
-        <div class="gamesDiv" id="suggestedGames"></div>
+    <div id="games">
+
     </div>
 
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v72"></script>
+    <script src="assets/scripts/class.js?v83"></script>
 </body>
 
 </html>

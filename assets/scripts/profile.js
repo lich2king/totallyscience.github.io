@@ -3,13 +3,15 @@ let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
 
-document.addEventListener('DOMContentLoaded', () => {
+
+
+document.addEventListener('DOMContentLoaded', async() => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
     });
 
     res = JSON.parse(authToken);
-    
+
     if (res != null) {
         const loggedIn = res['isLoggedIn'];
         username = res['username'];
@@ -43,36 +45,64 @@ document.addEventListener('DOMContentLoaded', () => {
         } else document.getElementById('noscores').setAttribute('style', 'display: ');
     });
 
-    // load liked games
-    fetcher(`assets/php/class_likes/personallikes.php`).then((response) => response.text()).then((res) => {
-        const likeContainer = document.getElementById('likedcontainer');
+    const gamesDiv = document.getElementById("games");
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
 
-        let likedgames = JSON.parse(res);
 
-        for (like in likedgames) {
-            let game = likedgames[like][0];
-            if (games[game] != null) {
-                const gameButton = createGameButton(game);
-                likeContainer.innerHTML += gameButton;
+    //load liked and recent games
+    let recentRow = document.createElement("div");
+    let likedRow = document.createElement("div");
+    recentRow.classList.add("horizontalCon");
+    likedRow.classList.add("horizontalCon");
+    let recentGamesContainer = document.createElement("div");
+    let likedGamesContainer = document.createElement("div");
+    recentGamesContainer.classList.add("gamesCon");
+    likedGamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    recentRow.innerHTML += arrowContainer;
+    likedRow.innerHTML += arrowContainer;
+
+
+    await fetcher(`/assets/php/recent_classes/recentclasses.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let recentGames = res.split(';');
+            recentGames = recentGames.slice(1);
+
+
+            for (let i = 0; i < recentGames.length; i++) {
+                const gameName = recentGames[i];
+                if (gameName != null) {
+                    recentGamesContainer.innerHTML += createGameButton(gameName);
+                }
             }
-        }
-    });
+        });
 
-    // load recent games
-    fetcher(`assets/php/recent_classes/recentclasses.php`).then((response) => response.text()).then((res) => {
-        const recentContainer = document.getElementById('recentContainer');
+    await fetcher(`/assets/php/class_likes/personallikes.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            var likedgames = JSON.parse(res);
 
-        let recentGames = res.split(';');
 
-        recentGames = recentGames.slice(1);
-
-        for (let i = 0; i < recentGames.length; i++) {
-            if (games[recentGames[i]] != null) {
-                const gameButton = createGameButton(recentGames[i]);
-                recentContainer.innerHTML += gameButton;
+            if (likedgames.length > 0) {
+                for (like in likedgames) {
+                    console.log(likedgames[like][0]);
+                    if (likedgames[like][0].length > 0) {
+                        likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
+                    }
+                }
             }
-        }
-    });
+            console.log(likedGamesContainer);
+        });
+
+    recentRow.appendChild(recentGamesContainer);
+    likedRow.appendChild(likedGamesContainer);
+    gamesDiv.prepend(likedRow);
+    gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+    gamesDiv.prepend(recentRow);
+    gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
+
+    addArrowListeners();
 });
 
 function changeToGif(ele) {
@@ -104,6 +134,8 @@ function numFormatter(num) {
 
 function createGameButton(game, pin) {
     const data = games[game];
+    if (data == null)
+        return '';
 
     let classlist = data.tags.join(' ');
 
@@ -123,4 +155,33 @@ function createGameButton(game, pin) {
         `;
 
     return gameBtn;
+}
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+
+
 }
