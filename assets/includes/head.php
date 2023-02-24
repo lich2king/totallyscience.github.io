@@ -3,7 +3,7 @@
 <meta property="og:title" content="Totally Science">
 <meta property="og:site_name" content="Totally Science">
 <meta property="og:url" content="https://totallyscience.co">
-<meta property="og:description" content="Welcome to Totally Science - your one-stop destination for free online games! IO games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
+<meta property="og:description" content="Welcome to Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
 <meta charset="UTF-8">
