@@ -338,9 +338,9 @@
         "image": "./assets/game_images/streetfighter.jpg",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
         "tags": ["misc", "fighting", "action"],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "ouroboroz",
-        "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#super_street_fighter_3_alpha"
+        "date_added": "2023-02-24T05:05:26.223Z",
+        "developer": "Nintendo",
+        "iframe_url": "./assets/games/streetfighter.html"
     },
 
     "Solitaire": {
