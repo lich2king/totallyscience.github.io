@@ -53,4 +53,4 @@ gtag('config', 'G-Y14RZLW8H8');
 <link rel="stylesheet" href="assets/styles/main.css?v20">
 <link rel="icon" href="assets/images/logo.png">
 
-<title>Totally Science</title>
+<title>Totally Science - Free Online Unblocked Games</title>
