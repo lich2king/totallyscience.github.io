@@ -33,7 +33,7 @@
     <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/tutorly/banner.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/tutorly/banner.png);">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16"></h2>
