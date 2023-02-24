@@ -32,7 +32,7 @@ const autoSwitch = () => {
                 autoPlusSlides(1);
                 autoSwitch();
             }
-        }, 2500);
+        }, 3000);
     }
 };
 

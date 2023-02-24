@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v31'>
+    <link rel='stylesheet' href='assets/styles/index.css?v32'>
     <!-- <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script> -->
@@ -32,7 +32,16 @@
 
     <div id="startcontent">
         <div id="feature">
-
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/tutorly/banner.png); display:none;">
+                <div class="overlay">
+                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
+                    <h2 class="gametext stroke-text smooth-16"></h2>
+                    <h3>An AI powered homework assistant. Can answer any type of question and even writes essays of any grade level!</h3>
+                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
+                </div>
+                <button style="background-color:#ee6c4d" onclick="window.open('https:/\/tutorly.ai/?via=totallyscience', '_blank')" class="featureButton button">Do my HW</button>
+            </div>
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
                 <div class="overlay">
@@ -43,6 +52,7 @@
                 <button onclick="window.open('class?class=Just%20Fall', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
+            
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
                 <div class="overlay">
