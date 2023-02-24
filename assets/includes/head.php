@@ -3,7 +3,7 @@
 <meta property="og:title" content="Totally Science">
 <meta property="og:site_name" content="Totally Science">
 <meta property="og:url" content="https://totallyscience.co">
-<meta property="og:description" content="The best place for 'Learning Science!'">
+<meta property="og:description" content="Welcome to Totally Science - your one-stop destination for free online games! With hundreds of games to choose from, including idle, puzzle, sports, and shooting games, there's something for everyone. And why &quot;Totally Science,&quot; you ask? Let's just say it's our little secret for bypassing school blockers. So sit back, relax, and have fun learning...science?">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://totallyscience.co/assets/images/logo.png">
 <meta charset="UTF-8">
