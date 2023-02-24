@@ -16,17 +16,17 @@
 <meta name="twitter:title" content="Totally Science">
 <meta name="DC.format" content="text/html" scheme="DCTERMS.DCMIType">
 <meta name="DC.publisher" content="Totally Science" scheme="DCTERMS.DCMIType">
-<meta name="DC.description" content="The best place for 'Learning Science!'" scheme="DCTERMS.DCMIType">
+<meta name="DC.description" content="Welcome to Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?" scheme="DCTERMS.DCMIType">
 <meta name="DC.subject" content="totally science, games, gaming, online games, unblocked games"
     scheme="DCTERMS.DCMIType">
 <meta name="DC.creator" content="Zach Yadegari">
 <meta name="subject" content="totally science, games, gaming, online games, unblocked games">
 <meta name="keywords"
-    content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online">
-<meta name="twitter:description" content="The best place for 'Learning Science!'">
+    content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online, roblox unblocked">
+<meta name="twitter:description" content="Welcome to Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="twitter:url" content="https://totallyscience.co">
 <meta name="twitter:image" content="https://totallyscience.co/assets/images/logo.png">
-<meta name='description' content="The best place for 'Learning Science!'">
+<meta name='description' content="Welcome to Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="theme-color" content="#f75dfc">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
