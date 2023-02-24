@@ -25,7 +25,7 @@
     content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online, roblox unblocked">
 <meta name="twitter:description" content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="twitter:url" content="https://totallyscience.co">
-<meta name="twitter:image" content="https://totallyscience.co/assets/images/logo.png">
+<meta name="twitter:image" content="https://totallyscience.co/assets/images/totally-science-logo.png">
 <meta name='description' content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="theme-color" content="#f75dfc">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
