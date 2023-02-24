@@ -428,15 +428,17 @@ function createGameButton(game, pin) {
 
     if (pin != 'hidden' && pin != 'filtered') {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
+        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
+            <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
     } else {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image}); display: none;" id="gameDiv" onclick="${onclick}" class="${classlist}">
+        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
+            <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;

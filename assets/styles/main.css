@@ -645,6 +645,22 @@ a {
     border-radius: 20px;
     text-align: center;
     transition: 0.1s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameDiv img {
+    object-fit: cover;
+    border-radius: 20px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    pointer-events: none;
 }
 
 #gameDiv input {

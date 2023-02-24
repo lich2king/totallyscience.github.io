@@ -339,7 +339,9 @@ function createGameButton(game, pin) {
     let gameBtn = '';
 
     gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist} all">
+        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
+            ${buttons}
+            <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
