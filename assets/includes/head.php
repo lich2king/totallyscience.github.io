@@ -50,6 +50,10 @@ gtag('config', 'G-Y14RZLW8H8');
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
+<!-- Lazy loading -->
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+
+
 <link rel="stylesheet" href="assets/styles/main.css?v20">
 <link rel="icon" href="assets/images/logo.png">
 

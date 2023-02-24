@@ -322,6 +322,7 @@ async function displayGames() {
     //Make new games last 3 weeks
     //UNSORT THE GAMES
     addArrowListeners();
+    findLazyImages();
 }
 
 const searchBar = document.getElementById('searchBar');
@@ -431,7 +432,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -441,7 +442,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -478,4 +479,28 @@ function addArrowListeners() {
     }
 
 
+}
+
+function findLazyImages() {
+    // Get all the lazy images
+    const lazyImages = document.querySelectorAll('.lazy');
+
+    // Create a new Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Replace the src attribute with the data-src attribute
+                entry.target.src = entry.target.dataset.src;
+                // Remove the lazy class
+                entry.target.classList.remove('lazy');
+                // Stop observing the image
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    // Observe all the lazy images
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
 }
