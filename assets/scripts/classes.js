@@ -485,21 +485,22 @@ function findLazyImages() {
     // Get all the lazy images
     const lazyImages = document.querySelectorAll('.lazy');
 
-    // Create a new Intersection Observer
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Replace the src attribute with the data-src attribute
                 entry.target.src = entry.target.dataset.src;
-                // Remove the lazy class
                 entry.target.classList.remove('lazy');
-                // Stop observing the image
                 observer.unobserve(entry.target);
             }
         });
+    }, {
+        // Start loading the images when they are 25% visible
+        threshold: 0.25,
+
+        // Start loading the images when they are 500 pixels away from the viewport
+        rootMargin: '500px 0px'
     });
 
-    // Observe all the lazy images
     lazyImages.forEach(image => {
         observer.observe(image);
     });
