@@ -432,7 +432,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -442,7 +442,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
