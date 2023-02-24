@@ -494,8 +494,8 @@ function findLazyImages() {
             }
         });
     }, {
-        // Start loading the images when they are 25% visible
-        threshold: 0.25,
+        // Start loading the images when they are 10% visible
+        threshold: 0.1,
 
         // Start loading the images when they are 500 pixels away from the viewport
         rootMargin: '500px 0px'
