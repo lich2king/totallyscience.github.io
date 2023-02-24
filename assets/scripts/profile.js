@@ -150,7 +150,6 @@ function createGameButton(game, pin) {
 
     gameBtn = `
         <div name="${game}" id="gameDiv" onclick=location.href = 'class?class=${game}'" class="${classlist}">
-            ${buttons}
             <div class="imageCon">
                 <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
