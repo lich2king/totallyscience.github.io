@@ -5,7 +5,7 @@
 <meta property="og:url" content="https://totallyscience.co">
 <meta property="og:description" content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://totallyscience.co/assets/images/imageedit_5_5333277159.png">
+<meta property="og:image" content="https://totallyscience.co/assets/images/totally-science-logo-transparent-scaled.png">
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="-gcWvd6d4OTZeFW4HWaIIZTNKnnOfAx15pEw_XDAH2o" />
 <meta name="url" content="https://totallyscience.co">
@@ -25,7 +25,7 @@
     content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online, roblox unblocked">
 <meta name="twitter:description" content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="twitter:url" content="https://totallyscience.co">
-<meta name="twitter:image" content="https://totallyscience.co/assets/images/imageedit_5_5333277159.png">
+<meta name="twitter:image" content="https://totallyscience.co/assets/images/totally-science-logo-transparent-scaled.png">
 <meta name='description' content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="theme-color" content="#f75dfc">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +55,6 @@ gtag('config', 'G-Y14RZLW8H8');
 
 
 <link rel="stylesheet" href="assets/styles/main.css?v21">
-<link rel="icon" href="assets/images/imageedit_5_5333277159.png">
+<link rel="icon" href="assets/images/totally-science-logo-transparent-scaled.png">
 
 <title>Totally Science - Free Online Unblocked Games</title>
