@@ -430,7 +430,9 @@ function createGameButton(game, pin) {
         gameBtn = `
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
-            <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+            <div class="imageCon">
+                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+            </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
@@ -438,7 +440,9 @@ function createGameButton(game, pin) {
         gameBtn = `
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
-            <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+            <div class="imageCon">
+                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+            </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;

@@ -29,6 +29,12 @@
     </div>
 
 
+    <div name="Cluster Rush" id="gameDiv" onclick="location.href = 'class?class=Cluster Rush'" class="action new all">
+            <div class="imageCon">
+                <img src="./assets/game_images/clusterrush.jpg" alt="Totally Science Cluster Rush" title="Totally Science Cluster Rush">
+            </div>
+            <h1 class="innerGameDiv">Cluster Rush</h1>
+        </div>
 
     <div id="startcontent">
         <div id="feature">
@@ -325,7 +331,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v25"></script>
+    <script src="assets/scripts/index.js?v26"></script>
 </body>
 
 </html>
