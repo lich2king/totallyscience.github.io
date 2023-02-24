@@ -271,6 +271,7 @@ async function displayGames() {
         gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
     addArrowListeners();
+    findLazyImages();
 }
 
 function suggestGames() {
@@ -391,17 +392,17 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
     } else {
         gameBtn = `
-        <div name="${game}" id="gameDiv" style="display: none" onclick="${onclick}" class="${classlist}">
+        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -651,4 +652,29 @@ function addArrowListeners() {
     }
 
 
+}
+
+function findLazyImages() {
+    // Get all the lazy images
+    const lazyImages = document.querySelectorAll('.lazy');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+                entry.target.classList.remove('lazy');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        // Start loading the images when they are 25% visible
+        threshold: 0.25,
+
+        // Start loading the images when they are 500 pixels away from the viewport
+        rootMargin: '500px 0px'
+    });
+
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
 }
