@@ -40,7 +40,7 @@
                     <h3>An AI powered homework assistant. Can answer any type of question and even writes essays of any grade level!</h3>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button style="background-color:#ee6c4d" onclick="window.open('https:/\/tutorly.ai/?via=totallyscience', '_blank')" class="featureButton button">Do my HW 🚀 </button>
+                <button style="background-color:#ee6c4d" onclick="window.open('https:/\/tutorly.ai/?via=totallyscience', '_blank')" class="featureButton button">Do my HW 🚀</button>
             </div>
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
