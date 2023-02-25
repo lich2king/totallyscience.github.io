@@ -87,12 +87,14 @@
                 <div class="ad">
                     <!-- Description -->
                     <ins class="adsbygoogle"
-                        style="display:inline-block;width:300px;height:400px"
-                        data-ad-client="ca-pub-3486863589051210"
-                        data-ad-slot="2299000285"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                        style="display:block"
+     data-ad-client="ca-pub-3486863589051210"
+     data-ad-slot="2299000285"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 </div>
             </div>
         </div>
