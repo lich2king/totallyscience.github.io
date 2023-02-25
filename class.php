@@ -87,7 +87,7 @@
                 <div class="ad">
                     <!-- Description -->
                     <ins class="adsbygoogle"
-                        style="display:inline-block;width:275px;height:350px"
+                        style="display:inline-block;width:300px;height:400px"
                         data-ad-client="ca-pub-3486863589051210"
                         data-ad-slot="2299000285"></ins>
                     <script>
