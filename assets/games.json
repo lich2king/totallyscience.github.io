@@ -875,7 +875,7 @@
     },
     "Crossy Road": {
         "description": "8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
-        "image": "./assets/game_images/crossyroad.jpg",
+        "image": "./assets/game_images/crossyroad.png",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
         "tags": ["mobile", "action"],
         "date_added": "2022-02-02T01:28:28.388Z",
