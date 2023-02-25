@@ -22,7 +22,7 @@
 
     "Drift Boss": {
         "description": "Simple but addictive car drifting game. Collect coins and upgrade your car.",
-        "image": "./assets/game_images/driftboss.jpeg",
+        "image": "./assets/game_images/driftboss.png",
         "controls": "Click space to turn",
         "tags": ["car", "mobile", "casual"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -235,7 +235,7 @@
 
     "Geometry Dash": {
         "description": "Dodge spikes and don't die!",
-        "image": "./assets/game_images/geometrydash.png",
+        "image": "./assets/game_images/geometrydash.wbp",
         "controls": "Click space to jump",
         "tags": ["mobile", "scratch", "casual", "music"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -315,7 +315,7 @@
 
     "Slope": {
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
-        "image": "./assets/game_images/slope.png",
+        "image": "./assets/game_images/slope.jpeg",
         "controls": "[Arrow Keys] - Move",
         "tags": ["mobile", "casual"],
         "date_added": "2022-02-03T00:03:23.213Z",
@@ -395,7 +395,7 @@
 
     "Worlds Hardest Game": {
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
-        "image": "./assets/game_images/whg.jpeg",
+        "image": "./assets/game_images/worldshardestgame.png",
         "controls": "[Arrow Keys] - move",
         "tags": ["hard"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -512,7 +512,7 @@
     },
     "Among Us": {
         "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
-        "image": "./assets/game_images/amongus.jpg",
+        "image": "./assets/game_images/amongus.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": ["mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
@@ -677,7 +677,7 @@
     },
     "Parking Fury 3D": {
         "description": "Avoid cops, steal cars, and drive around in this beautiful beach scenery.",
-        "image": "./assets/game_images/parkingfury3d.jpeg",
+        "image": "./assets/game_images/parkingfury.avif",
         "controls": "[WASD] - drive\n[CTRL] - steal car",
         "tags": ["car"],
         "date_added": "2022-01-10T18:17:09.107Z",
@@ -1010,7 +1010,7 @@
     },
     "Boxing Random": {
         "description": "Changing conditions occur in every round. Sometimes the boxing field changes and sometimes the boxers. Adapt to every random feature and hit accurately. The one who reaches 5 score first, wins the game!",
-        "image": "./assets/game_images/boxingrandom.jpg",
+        "image": "./assets/game_images/boxingrandom.avif",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
         "tags": ["2", "sport"],
         "date_added": "2022-09-04T22:35:18.770Z",
@@ -1318,7 +1318,7 @@
 
     "Fall Boys": {
         "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
-        "image": "./assets/game_images/fallboys.png",
+        "image": "./assets/game_images/fallboys.avif",
         "controls": "[WASD] - move\n[Space] - jump",
         "tags": ["multiplayer"],
         "date_added": "2022-09-20T01:11:08.448Z",
