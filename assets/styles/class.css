@@ -5,7 +5,7 @@ html {
 }
 
 #gameframe {
-    margin-top: 80px;
+    margin-top: 20px;
     /* margin-bottom: 20px; */
     width: 100vw;
     display: flex;
@@ -20,11 +20,12 @@ html {
     margin-right: 2vw;
     border-radius: 10px;
     background-color: white;
+    margin-top: 9vh;
 }
 
 .sideBarAd {
-    height: 550px;
-    width: 50px;
+    /* height: 550px;
+    width: 50px; */
 }
 
 #adframe {
