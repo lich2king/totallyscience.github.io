@@ -195,12 +195,13 @@ html {
 }
 
 #info .segmentAd .ad {
-    width: 300px;
+    width: 320px;
     height: 100px;
     margin-right: 15px;
     border-radius: 20px;
     overflow: hidden;
     background-color: aliceblue;
+    text-align: center;
 }
 
 .descAd {
