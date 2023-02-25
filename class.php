@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v31'>
+    <link rel='stylesheet' href='assets/styles/class.css?v32'>
 </head>
 
 <body>
@@ -58,21 +58,12 @@
                 src=""></iframe> -->
         </div>
     </div>
-    <div class="adsrc" style="text-align:center;">
-        <!-- Horizontal Ad
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script> -->
-        <!-- Under game -->
+    <div class="adsrc adhorz" style="text-align:center;">
+    <!-- Under the Game -->
         <ins class="adsbygoogle"
-            style="display:block"
+            style="display:inline-block;width:800px;height:100px"
             data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="3824383684"
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-        </ins>
+            data-ad-slot="3824383684"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>

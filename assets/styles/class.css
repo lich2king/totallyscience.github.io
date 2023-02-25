@@ -204,3 +204,10 @@ html {
     height: 1vh;
     width: 0.1vw;
 }
+
+.adhorz {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 100px;
+}
