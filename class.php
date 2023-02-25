@@ -59,14 +59,25 @@
         </div>
     </div>
     <div class="adsrc" style="text-align:center;">
-        <!-- Horizontal Ad -->
+        <!-- Horizontal Ad
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
             data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
+        </script> -->
+        <!-- Under game -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-3486863589051210"
+            data-ad-slot="3824383684"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <iframe class="adframe" style="display:none; width:100vw; height:60vh; border: none;" src=""></iframe>
+    <!-- <iframe class="adframe" style="display:none; width:100vw; height:60vh; border: none;" src=""></iframe> -->
 
 
     <div id="info">
