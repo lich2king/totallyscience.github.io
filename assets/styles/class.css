@@ -201,6 +201,7 @@ html {
     height: 350px;
     margin-right: 15px;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 #info h1,
