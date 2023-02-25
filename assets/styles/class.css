@@ -200,12 +200,14 @@ html {
     margin-right: 15px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: aliceblue;
+    background-color: var(--light-color);
     text-align: center;
+    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+    padding: 1%;
 }
 
 .descAd {
-    width: 320px;
+    width: 301px;
     height: 100px;
 }
 
