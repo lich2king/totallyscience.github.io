@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v44'>
+    <link rel='stylesheet' href='assets/styles/class.css?v45'>
 </head>
 
 <body>
