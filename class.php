@@ -88,13 +88,13 @@
                     <!-- Description -->
                     <ins class="adsbygoogle"
                         style="display:block"
-     data-ad-client="ca-pub-3486863589051210"
-     data-ad-slot="2299000285"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+                        data-ad-client="ca-pub-3486863589051210"
+                        data-ad-slot="2299000285"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
         </div>
