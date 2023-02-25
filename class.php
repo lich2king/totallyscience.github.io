@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v47'>
+    <link rel='stylesheet' href='assets/styles/class.css?v48'>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <div id="gameframe">
         <div class="ad">
             <div class="adsrc">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
                     data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
@@ -48,7 +48,7 @@
 
         <div class="ad">
             <div class="adsrc">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
                     data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
