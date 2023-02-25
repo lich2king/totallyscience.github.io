@@ -85,9 +85,8 @@
                     <p id="developer"></p>
                 </div>
                 <div class="ad">
-                    <div class="adsrc">
-                        <!-- Description -->
-                        <ins class="adsbygoogle descAd"
+                    <!-- Description -->
+                    <ins class="adsbygoogle descAd"
                             style="display:block"
                             data-ad-client="ca-pub-3486863589051210"
                             data-ad-slot="2299000285"
@@ -96,7 +95,6 @@
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
-                    </div>
                 </div>
             </div>
         </div>
