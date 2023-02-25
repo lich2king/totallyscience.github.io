@@ -191,7 +191,6 @@ html {
 }
 
 #info .segmentAd .text {
-    background-color: red;
     flex-grow: 2;
     width: 50vw;
 }
