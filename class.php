@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v32'>
+    <link rel='stylesheet' href='assets/styles/class.css?v33'>
 </head>
 
 <body>
@@ -72,15 +72,29 @@
 
 
     <div id="info">
-        <div>
-            <h1>Description</h1>
-            <p id="description"></p>
-            <div class="break"></div>
-            <h1>Controls</h1>
-            <p id="controls"></p>
-            <div class="break"></div>
-            <h1>Created By</h1>
-            <p id="developer"></p>
+        <div class="container">
+            <div class="segmentAd">
+                <div class="text">
+                    <h1>Description</h1>
+                    <p id="description"></p>
+                    <div class="break"></div>
+                    <h1>Controls</h1>
+                    <p id="controls"></p>
+                    <div class="break"></div>
+                    <h1>Created By</h1>
+                    <p id="developer"></p>
+                </div>
+                <div class="ad">
+                    <!-- Description -->
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:275px;height:350px"
+                        data-ad-client="ca-pub-3486863589051210"
+                        data-ad-slot="2299000285"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 
