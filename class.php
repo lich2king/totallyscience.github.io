@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v25'>
+    <link rel='stylesheet' href='assets/styles/class.css?v26'>
 </head>
 
 <body>
@@ -22,8 +22,8 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:60vh; border: none;"
-                src=""></iframe>
+            <!-- <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:60vh; border: none;"
+                src=""></iframe> -->
         </div>
 
         <div class="gameDisplay">
@@ -54,8 +54,8 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:50vh; border: none;"
-                src=""></iframe>
+            <!-- <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:50vh; border: none;"
+                src=""></iframe> -->
         </div>
     </div>
     <div class="adsrc" style="text-align:center;">
