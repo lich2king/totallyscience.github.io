@@ -163,7 +163,7 @@
 
     "Friday Night Funkin": {
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
-        "image": "./assets/game_images/fridaynightfunkin.png",
+        "image": "./assets/game_images/fridaynightfunkin.jpeg",
         "controls": "Use the arrow keys to play notes",
         "tags": ["music"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -246,7 +246,7 @@
 
     "Jetpack Joyride": {
         "description": "In Jetpack Joyride you dodge fire and missiles, while collecting coins through all the havoc.",
-        "image": "./assets/game_images/jetpackjoyride.png",
+        "image": "./assets/game_images/jetpackjoyride.jpeg",
         "controls": "Go up - [Left - Click]",
         "tags": ["scratch", "casual"],
         "date_added": "2023-02-12T18:19:09.462Z",
@@ -422,7 +422,7 @@
     },
     "Escaping The Prison": {
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
-        "image": "./assets/game_images/escapingtheprison.jpeg",
+        "image": "./assets/game_images/escapingprison.avif",
         "controls": "Click with the mouse",
         "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -485,7 +485,7 @@
     },
     "Paper.io": {
         "description": "Invade as many lands as possible and become the biggest on the server!",
-        "image": "./assets/game_images/paperio.jpeg",
+        "image": "./assets/game_images/paperio.avif",
         "controls": "[Move Mouse] - move\nor\n[Arrow Keys] - move",
         "tags": ["multiplayer"],
         "date_added": "2022-01-04T15:15:33.894Z",
@@ -603,7 +603,7 @@
     },
     "Storm the House 2": {
         "description": "A free tower defense game. Those pesky stickfigures are at it again! Defend your castle!",
-        "image": "./assets/game_images/stormthehouse2.jpg",
+        "image": "./assets/game_images/stormthehouse.png",
         "controls": "[Click] - shoot\n[Space] - reload",
         "tags": ["stickman", "flash", "clicker"],
         "date_added": "2022-01-09T18:11:41.637Z",
@@ -749,7 +749,7 @@
     },
     "Sans Fight": {
         "description": "Sans is the final boss of the Genocide Route in Undertale.",
-        "image": "./assets/game_images/sansfight.jpg",
+        "image": "./assets/game_images/sansfight.jpeg",
         "controls": "[WASD] - move\n[Space] - select",
         "tags": ["hard", "music"],
         "date_added": "2022-01-13T03:19:02.226Z",
@@ -1001,7 +1001,7 @@
     },
     "Basket Random": {
         "description": "Try to score a basket by using only one key with different variations from each other! Changing fields, changing players and changing balls do not surprise you! The one who reaches 5 score first, wins the game.",
-        "image": "./assets/game_images/basket-random.jpg",
+        "image": "./assets/game_images/basketrandom.png",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
         "tags": ["2", "sport"],
         "date_added": "2022-09-04T22:35:18.770Z",
