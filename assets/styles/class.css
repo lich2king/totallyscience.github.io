@@ -18,7 +18,7 @@ html {
     overflow: hidden;
     margin-left: 2vw;
     margin-right: 2vw;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-top: 9vh;
 }
 
@@ -31,7 +31,7 @@ html {
     width: 70vw;
     background-color: rgb(25, 31, 38);
     border: 3px solid var(--accent-color);
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -175,7 +175,7 @@ html {
 }
 
 #info div {
-    border-radius: 25px;
+    border-radius: 20px;
     padding-top: 2vh;
     padding-bottom: 2vh;
     padding-left: 1vw;
