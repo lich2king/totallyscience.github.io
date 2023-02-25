@@ -15,13 +15,15 @@
 
     <div id="gameframe">
         <div class="ad">
-            <div class="adsrc">
-                <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                    data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+            <ins class="adsbygoogle sideBarAd"
+     style="display:block"
+     data-ad-client="ca-pub-3486863589051210"
+     data-ad-slot="3780993293"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
             <!-- <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:60vh; border: none;"
                 src=""></iframe> -->
         </div>
