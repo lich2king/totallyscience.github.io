@@ -235,7 +235,7 @@
 
     "Geometry Dash": {
         "description": "Dodge spikes and don't die!",
-        "image": "./assets/game_images/geometrydash.wbp",
+        "image": "./assets/game_images/geometrydash.webp",
         "controls": "Click space to jump",
         "tags": ["mobile", "scratch", "casual", "music"],
         "date_added": "2021-12-22T04:56:36.982Z",
