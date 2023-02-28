@@ -1435,5 +1435,14 @@
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "Blue Wizard Digital",
         "iframe_url": "https://g.megamathstuff.com/basketbros-io/index.html"
+    },
+    "Bob the Robber 2": {
+        "description": "Bob the Robber is a fun adventure game where you play as a thief named Bob to steal everything. Avoid Patrolling guards, laser sensors, and security cameras.\n\nReach the goal in each level and escape safely! Disarm cameras, hide from guards, disable traps and much more!",
+        "image": "./assets/game_images/bobtherobber.jpeg",
+        "controls": "Move - [Arrow Keys]\nLook inside objects for money - [Up Arrow]",
+        "tags": ["escape", "classic"],
+        "date_added": "2023-02-28T14:01:14.476Z",
+        "developer": "Funtomic",
+        "iframe_url": "https://g.megamathstuff.com/bobtherobber2/index.html"
     }
 }
