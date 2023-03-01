@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v55'>
+    <link rel='stylesheet' href='assets/styles/class.css?v59'>
 </head>
 
 <body>
@@ -33,9 +33,11 @@
 
             <div class="options">
                 <div class="left">
-                    <button id="like" class="text-button button-effect-a"><img src="assets/images/icons/likeoutline.png"></button>
+                    <button id="like" class="text-button button-effect-a"><img
+                            src="assets/images/icons/likeoutline.png"></button>
                     <div id="likeCount">...</div>
-                    <button onclick="OpenHighscore()" class="text-button"><img src="assets/images/icons/trophy-icon.png"></button>
+                    <button onclick="OpenHighscore()" class="text-button"><img
+                            src="assets/images/icons/trophy-icon.png"></button>
                     <div id="currentHighscore">...</div>
                 </div>
                 <div class="right">
@@ -59,13 +61,11 @@
         </div>
     </div>
     <div class="adsrc adhorz" style="text-align:center;">
-    <!-- Under the Game -->
-        <ins class="adsbygoogle"
-            style="display:inline-block;width:800px;height:100px"
-            data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="3824383684"></ins>
+        <!-- Under the Game -->
+        <ins class="adsbygoogle" style="display:inline-block;width:800px;height:100px"
+            data-ad-client="ca-pub-3486863589051210" data-ad-slot="3824383684"></ins>
         <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
     <!-- <iframe class="adframe" style="display:none; width:100vw; height:60vh; border: none;" src=""></iframe> -->
@@ -86,15 +86,11 @@
                 </div>
                 <div class="ad">
                     <!-- Description -->
-                    <ins class="adsbygoogle descAd"
-                            style="display:block"
-                            data-ad-client="ca-pub-3486863589051210"
-                            data-ad-slot="2299000285"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                    <ins class="adsbygoogle descAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                        data-ad-slot="2299000285" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
         </div>

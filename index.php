@@ -37,10 +37,13 @@
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16"></h2>
-                    <h3>An AI powered homework assistant. Can answer any type of question and even writes essays of any grade level!</h3>
+                    <h3>An AI powered homework assistant. Can answer any type of question and even writes essays of any
+                        grade level!</h3>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button style="background-color:#ee6c4d" onclick="window.open('https:/\/tutorly.ai/?via=totallyscience', '_blank')" class="featureButton button">Do my HW 🚀</button>
+                <button style="background-color:#ee6c4d"
+                    onclick="window.open('https:/\/tutorly.ai/?via=totallyscience', '_blank')"
+                    class="featureButton button">Do my HW 🚀</button>
             </div>
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
@@ -52,7 +55,7 @@
                 <button onclick="window.open('class?class=Just%20Fall', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
-            
+
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
                 <div class="overlay">
@@ -118,16 +121,30 @@
     </div>
 
     <div id="searchcatParent">
-       
+
         <div id="games"></div>
-        
+
 
         <div id="noSearch" style="display:none">
             <p>You search terms did not match any games...</p>
         </div>
     </div>
-    
-    <script async src="https://cdn.ad.plus/player/adplus.js"></script> <script data-playerPro="current">(function(){var s=document.querySelector('script[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"22753484437", "C_WEBSITE":"totallyscience.co"}});})();</script>
+
+    <script async src="https://cdn.ad.plus/player/adplus.js"></script>
+    <script data-playerPro="current">
+    (function() {
+        var s = document.querySelector('script[data-playerPro="current"]');
+        s.removeAttribute("data-playerPro");
+        (playerPro = window.playerPro || []).push({
+            id: "z2I717k6zq5b",
+            after: s,
+            appParams: {
+                "C_NETWORK_CODE": "22753484437",
+                "C_WEBSITE": "totallyscience.co"
+            }
+        });
+    })();
+    </script>
 
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
