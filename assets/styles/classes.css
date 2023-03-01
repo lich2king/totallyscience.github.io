@@ -218,3 +218,11 @@ input[type='text'] {
     justify-content: center;
     margin-top: 50px;
 }
+
+#adhorz {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 100px;
+    margin-top: 30px;
+}
