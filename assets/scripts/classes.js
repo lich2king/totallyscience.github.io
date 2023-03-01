@@ -85,7 +85,7 @@ async function loadTopic() {
     if (selectedTopic != 'all') {
         if (customcategory) {
             //solves the problem of doing the category parameter on url
-            document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${category.toUpperCase()} Games || Play ${category.toUpperCase()} Games on Totally Science`;
+            document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${category.toUpperCase()} Games || Play ${category} Games on Totally Science`;
             await displayGames();
         }
 
