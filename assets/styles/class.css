@@ -175,7 +175,7 @@ html {
 
 #info {
     margin: auto;
-    padding-top: 10vh;
+    padding-top: 30px;
     width: 70vw;
     margin-bottom: 50px;
 }
@@ -243,4 +243,5 @@ html {
     transform: translateX(-50%);
     width: 800px;
     height: 100px;
+    margin-top: 30px;
 }
