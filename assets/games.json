@@ -40,6 +40,16 @@
         "iframe_url": "https://www.hoodamath.com/mobile/games/chess/game.html?nocheckorient=1"
     },
 
+    "Chess.com": {
+        "description": "Online board game where your could play against a friend or the computer.",
+        "image": "./assets/game_images/chess.png",
+        "controls": "Use your mouse to drag the piece you want to move",
+        "tags": ["2", "mobile", "puzzle"],
+        "date_added": "2021-12-22T04:56:36.982Z",
+        "developer": "chess.com",
+        "iframe_url": "https://chess.com"
+    },
+
     "2048": {
         "description": "2048 is an easy and fun puzzle game. Join the numbers and get to the 2048 tile.",
         "image": "./assets/game_images/2048.png",
