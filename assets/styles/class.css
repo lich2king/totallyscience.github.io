@@ -19,7 +19,8 @@ html {
     margin-left: 2vw;
     margin-right: 2vw;
     border-radius: 10px;
-    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+    /* background-color: white;
+    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35); */
 }
 
 .sideBarAd {
