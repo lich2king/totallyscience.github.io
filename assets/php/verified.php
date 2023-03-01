@@ -11,11 +11,14 @@
     die("connection failed");
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+  
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
   }
-
-  $user = json_decode($_COOKIE['logintoken'], true)['username'];
+  
+  $user = $data['auth']['username'];
 
   $userresult = $conn->query("SELECT * FROM accounts WHERE Username = '$user'");
 

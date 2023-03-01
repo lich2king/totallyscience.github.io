@@ -47,14 +47,14 @@
             location.href = 'login.php';
         }
 
-        fetch('assets/php/sendVerification.php');
+        fetcher('assets/php/sendVerification.php');
     
     
         function submitConfirmCode() {
             const code = document.getElementById('code').value;
             const errorText = document.getElementById('errorText');
           
-            fetch(`assets/php/verify.php?code=${code}`).then((response) => response.text()).then((res) => {
+            fetcher(`assets/php/verify.php?code=${code}`).then((response) => response.text()).then((res) => {
                 if (res == 'success') {
                     errorText.style = 'text-align: center; color: green;';
                     errorText.innerText = ('*' + res);

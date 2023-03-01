@@ -6,7 +6,7 @@ const authToken = localStorage.getItem('authToken');
 
 // util for fetching backend scripts.
 function fetcher(endpoint, options) {
-    let updatedOptions = { ...options };
+    let updatedOptions = {...options };
 
     if (authToken) {
         updatedOptions.headers = {
@@ -107,7 +107,9 @@ function setPoints() {
         .then((points) => points.text())
         .then((points) => {
             if (points.startsWith('error')) return;
-            document.getElementById('pointsDisplay').innerText = points;
+            if (!isNaN(points)) {
+                document.getElementById('pointsDisplay').innerText = points;
+            }
         });
 }
 

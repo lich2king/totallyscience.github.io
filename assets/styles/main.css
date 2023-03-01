@@ -15,11 +15,11 @@
 html {
     overflow-x: hidden;
     /* prevent highlight */
-    -webkit-user-select: none;
+    /* -webkit-user-select: none; */
     /* Safari */
-    -ms-user-select: none;
+    /* -ms-user-select: none; */
     /* IE 10 and IE 11 */
-    user-select: none;
+    /* user-select: none; */
     /* Standard syntax */
 }
 
@@ -148,8 +148,8 @@ label {
     background-color: var(--light-color);
     border-radius: 7px;
     color: var(--dark-color);
+    white-space: nowrap;
     cursor: pointer;
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -236,18 +236,21 @@ label {
     cursor: pointer;
 }
 
+
 /*#region scrollbar*/
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
+
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-    background: var(--dark-accent);
-    border-radius: 10px;
+    background: transparent;
+    border-radius: 15px;
 }
+
 
 /* Handle */
 
@@ -256,15 +259,19 @@ label {
     border-radius: 10px;
 }
 
+
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
     background: #bc47c0;
 }
 
+
 /*#endregion*/
 
+
 /*#region Footer */
+
 footer {
     margin-top: 18vh;
     position: relative;
@@ -321,6 +328,7 @@ footer .bottomFoot {
     font-size: 0.8vw;
     font-family: 'Rubik';
 }
+
 
 /*#endregion*/
 
@@ -399,8 +407,8 @@ select {
     transform: scale(1.05);
 }
 
-.button > img,
-.button > span {
+.button>img,
+.button>span {
     vertical-align: middle;
 }
 
@@ -427,18 +435,26 @@ a {
     background-color: #333;
 }
 
+
 /*Tool tip!*/
 
+
 /* START TOOLTIP STYLES */
+
 [tooltip] {
-    position: relative; /* opinion 1 */
+    position: relative;
+    /* opinion 1 */
 }
 
+
 /* Applies to all tooltips */
+
 [tooltip]::before,
 [tooltip]::after {
-    text-transform: none; /* opinion 2 */
-    font-size: 0.9em; /* opinion 3 */
+    text-transform: none;
+    /* opinion 2 */
+    font-size: 0.9em;
+    /* opinion 3 */
     line-height: 0.7;
     user-select: none;
     pointer-events: none;
@@ -446,18 +462,21 @@ a {
     display: none;
     opacity: 0;
 }
+
 [tooltip]::before {
     content: '';
-    border: 4px solid transparent; /* opinion 4 */
-    z-index: 1001; /* absurdity 1 */
+    border: 4px solid transparent;
+    /* opinion 4 */
+    z-index: 1001;
+    /* absurdity 1 */
 }
-[tooltip]::after {
-    content: attr(tooltip); /* magic! */
 
+[tooltip]::after {
+    content: attr(tooltip);
+    /* magic! */
     /* most of the rest of this is opinion */
     font-family: Rubik;
     text-align: center;
-
     /* 
       Let the content set the size of the tooltips 
       but this will also keep them from being obnoxious
@@ -472,32 +491,41 @@ a {
     box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
     background: #333;
     color: #fff;
-    z-index: 1000; /* absurdity 2 */
+    z-index: 1000;
+    /* absurdity 2 */
 }
 
+
 /* Make the tooltips respond to hover */
+
 [tooltip]:hover::before,
 [tooltip]:hover::after {
     display: block;
 }
 
+
 /* don't show empty tooltips */
+
 [tooltip='']::before,
 [tooltip='']::after {
     display: none !important;
 }
 
+
 /* FLOW: UP */
+
 [tooltip]:not([flow])::before,
 [tooltip][flow^='up']::before {
     bottom: 100%;
     border-bottom-width: 0;
     border-top-color: #333;
 }
+
 [tooltip]:not([flow])::after,
 [tooltip][flow^='up']::after {
     bottom: calc(100% + 5px);
 }
+
 [tooltip]:not([flow])::before,
 [tooltip]:not([flow])::after,
 [tooltip][flow^='up']::before,
@@ -506,22 +534,28 @@ a {
     transform: translate(-50%, -0.5em);
 }
 
+
 /* FLOW: DOWN */
+
 [tooltip][flow^='down']::before {
     top: 100%;
     border-top-width: 0;
     border-bottom-color: #333;
 }
+
 [tooltip][flow^='down']::after {
     top: calc(100% + 5px);
 }
+
 [tooltip][flow^='down']::before,
 [tooltip][flow^='down']::after {
     left: 50%;
     transform: translate(-50%, 0.5em);
 }
 
+
 /* FLOW: LEFT */
+
 [tooltip][flow^='left']::before {
     top: 50%;
     border-right-width: 0;
@@ -529,13 +563,16 @@ a {
     left: calc(0em - 5px);
     transform: translate(-0.5em, -50%);
 }
+
 [tooltip][flow^='left']::after {
     top: 50%;
     right: calc(100% + 5px);
     transform: translate(-0.5em, -50%);
 }
 
+
 /* FLOW: RIGHT */
+
 [tooltip][flow^='right']::before {
     top: 50%;
     border-left-width: 0;
@@ -543,13 +580,16 @@ a {
     right: calc(0em - 5px);
     transform: translate(0.5em, -50%);
 }
+
 [tooltip][flow^='right']::after {
     top: 50%;
     left: calc(100% + 5px);
     transform: translate(0.5em, -50%);
 }
 
+
 /* KEYFRAMES */
+
 @keyframes tooltips-vert {
     to {
         opacity: 0.9;
@@ -564,7 +604,9 @@ a {
     }
 }
 
+
 /* FX All The Things */
+
 [tooltip]:not([flow]):hover::before,
 [tooltip]:not([flow]):hover::after,
 [tooltip][flow^='up']:hover::before,
@@ -581,4 +623,261 @@ a {
     animation: tooltips-horz 300ms ease-out forwards;
 }
 
+
 /* end tool*/
+
+
+/*#region games*/
+
+#gameDiv {
+    /* box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; */
+    min-width: 220px;
+    min-height: 120px;
+    max-width: 220px;
+    max-height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 15vw;
+    height: 15vh; */
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.1s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameDiv .imageCon {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameDiv .imageCon img {
+    object-fit: cover;
+    border-radius: 20px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#gameDiv input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#gameDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    outline: 3px solid var(--accent-color);
+    z-index: 1;
+}
+
+#gameDiv {
+    position: relative;
+}
+
+#gameDiv .innerGameDiv {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    color: var(--light-color);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+    margin: 0%;
+}
+
+#gameDiv:hover .innerGameDiv {
+    visibility: visible;
+    opacity: 1;
+    text-shadow: var(--dark-color) 1px 0 10px;
+}
+
+#gameDiv:hover>#gamelock {
+    opacity: 1;
+    top: -10%;
+}
+
+#gameDiv #pin {
+    position: absolute;
+    top: -10%;
+    left: 85%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+#gameDiv #pin:hover {
+    transform: scale(1.1);
+}
+
+#gameDiv #pin img {
+    width: 40px;
+    height: 40px;
+}
+
+#gamelock {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#gamelock:hover {
+    transform: scale(1.05);
+}
+
+#gamelock img {
+    width: 80px;
+    height: 100px;
+}
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#newbanner img {
+    width: 80px;
+    height: 80px;
+}
+
+
+/*#endregion*/
+
+.horizontalCon {
+    text-align: center;
+    width: 100vw;
+    position: relative;
+}
+
+.horizontalCon .gamesCon {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100vw;
+    /* background-color: aqua; */
+    padding-top: 7px;
+    padding-bottom: 7px;
+    gap: 10px;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.horizontalCon .gamesCon #gameDiv:nth-child(1) {
+    margin-left: 2%;
+}
+
+.horizontalCon .gamesCon::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.horizontalCon .arrowsCon {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.horizontalCon .arrowsCon>* {
+    pointer-events: auto;
+}
+
+.arrowsCon .arrowCon {
+    cursor: pointer;
+    height: 120px;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.arrowsCon .arrowCon .arrow {
+    width: 25px;
+    transition: transform .1s;
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.arrowsCon .arrowCon:hover>.arrow,
+.arrowCon {
+    transform: scale(1.08);
+}
+
+.horizontalCon:hover>.arrowsCon .arrowCon {
+    background-color: #00000067;
+}
+
+.horizontalCon:hover>.arrowsCon .arrowCon .arrow {
+    /* visibility: visible !important; */
+    opacity: 1 !important;
+}
+
+.arrowsCon>.arrowCon:hover {
+    background-color: #000000b9 !important;
+}
+
+#games {
+    padding: 2%;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    gap: 7.5px;
+}
+
+#games h1 {
+    margin-right: auto;
+    color: var(--light-color);
+    font-size: 1.3rem;
+    margin-bottom: 0%;
+    margin-top: 15px;
+}
+
+#games h1 a {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}

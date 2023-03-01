@@ -14,7 +14,7 @@
         "description": "Ever wanted to have your own pizza restraunt? Here you go!",
         "image": "./assets/game_images/papaspizza.jpg",
         "controls": "Use your mouse to click buttons, not make keyboard controls.\nThere is also a tutorial.",
-        "tags": ["featured", "flash"],
+        "tags": ["featured", "flash", "classic"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Flipline Studios",
         "iframe_url": "https://g.megamathstuff.com/papaspizzeria.html"
@@ -22,9 +22,9 @@
 
     "Drift Boss": {
         "description": "Simple but addictive car drifting game. Collect coins and upgrade your car.",
-        "image": "./assets/game_images/driftboss.jpeg",
+        "image": "./assets/game_images/driftboss.png",
         "controls": "Click space to turn",
-        "tags": ["car", "mobile"],
+        "tags": ["car", "mobile", "casual"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Math Playground",
         "iframe_url": "https://www.mathplayground.com/drift-boss-v3/index.html"
@@ -84,7 +84,7 @@
         "description": "The future of the farm is in your hands! Train your duck then compete in challenges to save the farm.",
         "image": "./assets/game_images/ducklife1.jpeg",
         "controls": "Arrow keys to move",
-        "tags": [""],
+        "tags": ["misc", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
@@ -94,7 +94,7 @@
         "description": "Increase your skills via the mini games and win all the races to become the  world champion.",
         "image": "./assets/game_images/ducklife2.jpeg",
         "controls": "Arrow keys to move",
-        "tags": [""],
+        "tags": ["misc", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
@@ -104,7 +104,7 @@
         "description": "Collect coins and purchase upgrades to help your duck become world champion.",
         "image": "./assets/game_images/ducklife3.png",
         "controls": "Arrow keys to move",
-        "tags": [""],
+        "tags": ["misc", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-3-evolution/game.html?nocheckorient=1"
@@ -114,7 +114,7 @@
         "description": "Raise a duck to become a professional racer! You can choose an egg to hatch, and customize its appearance.",
         "image": "./assets/game_images/ducklife4.png",
         "controls": "Arrow keys to move",
-        "tags": [""],
+        "tags": ["misc", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1"
@@ -137,14 +137,14 @@
         "tags": ["multiplayer"],
         "date_added": "22022-09-04T22:35:18.770Z",
         "developer": "lax1dude",
-        "iframe_url": "https://g.megamathstuff.com/eaglercraft/index.html"
+        "iframe_url": "./assets/games/eaglercraft/index.html"
     },
 
     "Factory Balls": {
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
         "image": "./assets/game_images/factoryballs.jpg",
         "controls": "Drag balls with mouse",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Bontegames",
         "iframe_url": "https://www.hoodamath.com/mobile/games/factory-balls-forever/game.html?nocheckorient=1"
@@ -154,7 +154,7 @@
         "description": "Dodge the tubes and try to beat the high score!",
         "image": "./assets/game_images/Flappy_Bird_icon.png",
         "controls": "Click space to fly higher",
-        "tags": ["mobile", "scratch"],
+        "tags": ["mobile", "scratch", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "HyperPixel",
         "iframe_url": "https://scratch.mit.edu/projects/17828009/embed",
@@ -163,9 +163,9 @@
 
     "Friday Night Funkin": {
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
-        "image": "./assets/game_images/fridaynightfunkin.png",
+        "image": "./assets/game_images/fridaynightfunkin.jpeg",
         "controls": "Use the arrow keys to play notes",
-        "tags": ["fnf"],
+        "tags": ["music"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "type": "proxy",
@@ -176,7 +176,7 @@
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fnftricky.jpg",
         "controls": "Use the arrow keys to play notes",
-        "tags": ["fnf"],
+        "tags": ["music"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "iframe_url": "https://fnfcdn.com/tricky-hd/"
@@ -186,7 +186,7 @@
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fnfstickman.jpg",
         "controls": "Use the arrow keys to play notes",
-        "tags": ["fnf"],
+        "tags": ["music"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "iframe_url": "https://fnfcdn.com/stickman/"
@@ -196,7 +196,7 @@
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fnfsonic.jpg",
         "controls": "Use the arrow keys to play notes",
-        "tags": ["fnf"],
+        "tags": ["music"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "iframe_url": "https://fnfcdn.com/sonic-exe-1-5/"
@@ -206,7 +206,7 @@
         "description": "A fun and unique music rhythm game to test your musical knowledge and reflexes.",
         "image": "./assets/game_images/fnfshaggy.jpg",
         "controls": "Use the arrow keys to play notes",
-        "tags": ["fnf"],
+        "tags": ["music"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Cameron Taylor",
         "iframe_url": "https://fnfcdn.com/shaggy-2-5/"
@@ -216,7 +216,7 @@
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
         "image": "./assets/game_images/Fnf.jpeg",
         "controls": "Use the mouse to interact with objects",
-        "tags": ["mobile", "fnaf", "scratch"],
+        "tags": ["mobile", "horror", "scratch"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "FOXY_203",
         "iframe_url": "https://scratch.mit.edu/projects/469219637/embed/",
@@ -227,7 +227,7 @@
         "description": "Fight in the space war between the Sith Empire and the Galactic Republic.",
         "image": "./assets/game_images/galacticwars.png",
         "controls": "Arrow keys to move\nClick 'n' to fire",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Shotaro_Ishinomori",
         "iframe_url": "https://g.megamathstuff.com/galacticwars/index.html"
@@ -235,9 +235,9 @@
 
     "Geometry Dash": {
         "description": "Dodge spikes and don't die!",
-        "image": "./assets/game_images/geometrydash.png",
+        "image": "./assets/game_images/geometrydash.webp",
         "controls": "Click space to jump",
-        "tags": ["mobile", "scratch"],
+        "tags": ["mobile", "scratch", "casual", "music"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/105500895/embed",
@@ -246,9 +246,9 @@
 
     "Jetpack Joyride": {
         "description": "In Jetpack Joyride you dodge fire and missiles, while collecting coins through all the havoc.",
-        "image": "./assets/game_images/jetpackjoyride.png",
+        "image": "./assets/game_images/jetpackjoyride.jpeg",
         "controls": "Go up - [Left - Click]",
-        "tags": ["scratch"],
+        "tags": ["scratch", "casual"],
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "Halfbrick Studios",
         "iframe_url": "https://g.megamathstuff.com/jetpack-joyride/index.html"
@@ -268,7 +268,7 @@
         "description": "Blast away the orcs and elves! Knock them out to get more balls and power up your damage multiplier.",
         "image": "./assets/game_images/orcsvselves.jpeg",
         "controls": "Use mouse to aim\nClick to shoot",
-        "tags": [""],
+        "tags": ["misc", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Fountainhead Entertainment",
         "iframe_url": "https://priceless-easley-1cae17.netlify.com/"
@@ -297,7 +297,7 @@
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/rollingvortex.jpeg",
         "controls": "[Arrow Keys] - Move",
-        "tags": ["mobile", "running"],
+        "tags": ["mobile", "action", "casual"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Voodoo",
         "iframe_url": "https://www.hoodamath.com/mobile/games/rolly-vortex/game.html?nocheckorient=1"
@@ -307,7 +307,7 @@
         "description": "Follow the story or just live your own life. In here you could do and be whatever you want.",
         "image": "./assets/game_images/sims.jpeg",
         "controls": "[Arrow Keys] - Move\n[x]+[z] - interact",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "ouroboroz",
         "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#sims2"
@@ -315,9 +315,9 @@
 
     "Slope": {
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
-        "image": "./assets/game_images/slope.png",
+        "image": "./assets/game_images/slope.jpeg",
         "controls": "[Arrow Keys] - Move",
-        "tags": ["mobile"],
+        "tags": ["mobile", "casual"],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Rob Kay",
         "iframe_url": "https://g.megamathstuff.com/slope/index.html"
@@ -337,17 +337,17 @@
         "description": "A classic fighting game. You will engage in one-on-one close quarter combat against your opponent.",
         "image": "./assets/game_images/streetfighter.jpg",
         "controls": "[Enter]  - Start\n[Arrow Keys] - Move\n[z]+[x]+[c]+[j] - Attack",
-        "tags": [""],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "ouroboroz",
-        "iframe_url": "http://ouroboroz.github.io/gba/launcher.html#super_street_fighter_3_alpha"
+        "tags": ["misc", "fighting", "action"],
+        "date_added": "2023-02-24T05:05:26.223Z",
+        "developer": "Nintendo",
+        "iframe_url": "./assets/games/streetfighter.html"
     },
 
     "Solitaire": {
         "description": "Fun and easy to pick up on card game.",
         "image": "./assets/game_images/solitaire.png",
         "controls": "Click and drag with the mouse",
-        "tags": ["card", "mobile"],
+        "tags": ["card", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Google",
         "iframe_url": "https://www.google.com/logos/fnbx/solitaire/standalone.html"
@@ -357,7 +357,7 @@
         "description": "Play as a racoon on a skateboard. Drift at turns and collect coins. Try to beat the highscore!",
         "image": "./assets/game_images/tanukisunset.jpg",
         "controls": "[Arrow Keys] - turn\n[Space] - drift",
-        "tags": ["car", "running"],
+        "tags": ["car", "action"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Rewind Games",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1756009/WebGL/index.html"
@@ -377,7 +377,7 @@
         "description": "Rotate the shapes to fit them perfectly together. Don't let them reach the top.",
         "image": "./assets/game_images/tetris.png",
         "controls": "[Arrow Keys] - rotate shape\n[Space] - instant place",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
         "iframe_url": "https://g.megamathstuff.com/Tetris-main/Tetris-main/index.html"
@@ -387,7 +387,7 @@
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
         "image": "./assets/game_images/uno.jpeg",
         "controls": "Click and drag with the mouse",
-        "tags": ["card", "mobile", "multiplayer"],
+        "tags": ["card", "mobile", "multiplayer", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Code This Lab",
         "iframe_url": "https://g.megamathstuff.com/uno/index.html"
@@ -395,7 +395,7 @@
 
     "Worlds Hardest Game": {
         "description": "Here it is. The worlds HARDEST game. Think you stand a chance?",
-        "image": "./assets/game_images/whg.jpeg",
+        "image": "./assets/game_images/worldshardestgame.png",
         "controls": "[Arrow Keys] - move",
         "tags": ["hard"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -415,14 +415,14 @@
         "description": "More explosive arena style action! Battle against the AI or with friends in this cartoony platform shooter.",
         "image": "./assets/game_images/gunmayhem.jpeg",
         "controls": "[Arrow Keys] - move\n[z] - shoot\n[x] - bomb",
-        "tags": ["2", "flash"],
+        "tags": ["2", "flash", "shooting", "action"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Armor Games",
         "iframe_url": "https://g.megamathstuff.com/gunmayhem.html"
     },
     "Escaping The Prison": {
         "description": "Stick figure game where you... Well, escape the prison! You must use everything at your disposal to escape!",
-        "image": "./assets/game_images/escapingtheprison.jpeg",
+        "image": "./assets/game_images/escapingprison.avif",
         "controls": "Click with the mouse",
         "tags": ["stickman", "flash"],
         "date_added": "2021-12-28T04:56:36.982Z",
@@ -433,7 +433,7 @@
         "description": "Free-to-play arena-style browser-based tactical fps.",
         "image": "./assets/game_images/krunker.png",
         "controls": "[WASD] - move\n[Click] - shoot\n[Drag Mouse] - aim",
-        "tags": [""],
+        "tags": ["misc", "action", "shooting"],
         "date_added": "2021-12-30T04:56:36.982Z",
         "developer": "Yendis Entertainment",
         "iframe_url": "https://browserfps.com/"
@@ -442,7 +442,7 @@
         "description": "Attempt to break into a bank, built in the middle of a desert.",
         "image": "./assets/game_images/breakingthebank.avif",
         "controls": "Click with the mouse",
-        "tags": ["stickman", "flash"],
+        "tags": ["stickman", "flash", "escape"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "https://g.megamathstuff.com/breakinbank.html"
@@ -451,7 +451,7 @@
         "description": "Help Henry Stickmin break into a museum and execute a diamond heist.",
         "image": "./assets/game_images/stealdiamond.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickman", "flash"],
+        "tags": ["stickman", "flash", "escape"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "https://g.megamathstuff.com/stealdiamond.html"
@@ -460,7 +460,7 @@
         "description": "Try not to fail during a deadly mission in the sky! Infiltrating the Airship dares you to make risky decisions.",
         "image": "./assets/game_images/infiltratingairship.jpeg",
         "controls": "Click with the mouse",
-        "tags": ["stickman", "flash"],
+        "tags": ["stickman", "flash", "escape"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "https://g.megamathstuff.com/infiltrateairship.html"
@@ -469,7 +469,7 @@
         "description": "You are trapped inside a small prison cell, and you have to escape not just your cell, but the whole prison!",
         "image": "./assets/game_images/fleeingcomplex.jpg",
         "controls": "Click with the mouse",
-        "tags": ["stickman", "flash"],
+        "tags": ["stickman", "flash", "escape"],
         "date_added": "2021-12-28T04:56:36.982Z",
         "developer": "Puffballs United",
         "iframe_url": "https://g.megamathstuff.com/fleecomplex.html"
@@ -478,14 +478,14 @@
         "description": "Simple and fun platformer game. Try to beat levels in record breaking times!",
         "image": "./assets/game_images/appelplatformer.png",
         "controls": "[Arrow Keys] - move",
-        "tags": ["scratch"],
+        "tags": ["scratch", "action"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/60917032/embed"
     },
     "Paper.io": {
         "description": "Invade as many lands as possible and become the biggest on the server!",
-        "image": "./assets/game_images/paperio.jpeg",
+        "image": "./assets/game_images/paperio.avif",
         "controls": "[Move Mouse] - move\nor\n[Arrow Keys] - move",
         "tags": ["multiplayer"],
         "date_added": "2022-01-04T15:15:33.894Z",
@@ -496,32 +496,23 @@
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
         "image": "./assets/game_images/snake.png",
         "controls": "[Arrow Keys] - move",
-        "tags": ["mobile"],
+        "tags": ["mobile", "casual"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Google",
         "iframe_url": "https://g.megamathstuff.com/google-snake/index.html"
-    },
-    "Golf Blast": {
-        "description": "Get the ball in the hole in as little swings possible.",
-        "image": "./assets/game_images/golfblast.jpeg",
-        "controls": "Drag and click with mouse",
-        "tags": ["mobile"],
-        "date_added": "2022-01-04T15:15:33.894Z",
-        "developer": "Gamedistribution",
-        "iframe_url": "https://html5.gamedistribution.com/rvvASMiM/3f20410dc7e440c2869b0d1d502ae828/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwOi8vZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20vIiwicGFyZW50RG9tYWluIjoiZnJhbWUuZmxhc2hnYW1lczI0Ny5jb20iLCJ0b3BEb21haW4iOiJmbGFzaGdhbWVzMjQ3LmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjQifQ%253D%253D"
     },
     "Happy Wheels": {
         "description": "Side-scrolling, physics-based, obstacle course game. Try to get to the end without dying!",
         "image": "./assets/game_images/happywheels.png",
         "controls": "[Arrow Keys] - move\n[Space] - grab/boost/jump\n[z] - exit vehicle",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2022-01-04T15:15:33.894Z",
         "developer": "Total Jerk Face",
         "iframe_url": "https://g.megamathstuff.com/happywheels/index.html"
     },
     "Among Us": {
         "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
-        "image": "./assets/game_images/amongus.jpg",
+        "image": "./assets/game_images/amongus.jpeg",
         "controls": "[Arrow Keys] - move",
         "tags": ["mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
@@ -541,7 +532,7 @@
         "description": "An Indie RPG and a spin-off of the Five Nights at Freddy's series.",
         "image": "./assets/game_images/fnafworld.jpg",
         "controls": "[WASD] - move\n[Click] - interact",
-        "tags": ["fnaf", "scratch"],
+        "tags": ["horror", "scratch"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "GamingRaccoon44",
         "iframe_url": "https://scratch.mit.edu/projects/96095372/embed"
@@ -550,7 +541,7 @@
         "description": "30 years after the events that took place in 5 Nights at Freddy's.",
         "image": "./assets/game_images/fnaf3.png",
         "controls": "[Space] - close vents\n[Click] - interact",
-        "tags": ["fnaf", "scratch"],
+        "tags": ["horror", "scratch"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Fnafphoneguy123",
         "iframe_url": "https://scratch.mit.edu/projects/431671044/embed"
@@ -578,7 +569,7 @@
         "description": "An endless obstacle running game. This game trains visual perception, and reaction time.",
         "image": "./assets/game_images/cubefield.jpg",
         "controls": "[WASD] - move",
-        "tags": ["flash", "running"],
+        "tags": ["flash", "action", "casual"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "YoArcade",
         "iframe_url": "https://g.megamathstuff.com/cubedodge.html"
@@ -587,7 +578,7 @@
         "description": "Deal or no Deal. Try your luck in finding the $1,000,000 briefcase in this game based on the hit TV game show!",
         "image": "./assets/game_images/dealornodeal.jpg",
         "controls": "[WASD] - move",
-        "tags": ["flash"],
+        "tags": ["flash", "clicker"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Iwin",
         "iframe_url": "https://g.megamathstuff.com/dealornodeal.html"
@@ -596,7 +587,7 @@
         "description": "Swing from object to object with your webs. Try to get as far as you can and beat your highscore!",
         "image": "./assets/game_images/webswinger.jpg",
         "controls": "[Click] - shoot web",
-        "tags": ["flash"],
+        "tags": ["flash", "action"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "D O P I",
         "iframe_url": "https://g.megamathstuff.com/webswinger.html"
@@ -612,9 +603,9 @@
     },
     "Storm the House 2": {
         "description": "A free tower defense game. Those pesky stickfigures are at it again! Defend your castle!",
-        "image": "./assets/game_images/stormthehouse2.jpg",
+        "image": "./assets/game_images/stormthehouse.png",
         "controls": "[Click] - shoot\n[Space] - reload",
-        "tags": ["stickman", "flash"],
+        "tags": ["stickman", "flash", "clicker"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Ivory",
         "iframe_url": "https://g.megamathstuff.com/stormthehouse2.html"
@@ -632,7 +623,7 @@
         "description": "Dodge the objects coming toward you in this endless tunnel. Beat your highscore!",
         "image": "./assets/game_images/tunnelrush.jpg",
         "controls": "[Arrow Keys] - turn",
-        "tags": ["running"],
+        "tags": ["action"],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "Deer Cat",
         "iframe_url": "https://g.megamathstuff.com/tunnelrush/index.html"
@@ -641,7 +632,7 @@
         "description": "Complete the following challenges inspired by the popular show Squid Games.",
         "image": "./assets/game_images/squidgames.png",
         "controls": "Click and drag based on the directions given",
-        "tags": ["mobile"],
+        "tags": ["mobile", "escape"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "Vakhtangi1980",
         "iframe_url": "https://squid-games-2.vakhtangi1980.repl.co/"
@@ -650,7 +641,7 @@
         "description": "Shoot the balls and upgrade your cannon, how long can you survive?",
         "image": "./assets/game_images/ballsblast.png",
         "controls": "[Drag] - move\n[Click] - shoot",
-        "tags": ["mobile", "scratch"],
+        "tags": ["mobile", "scratch", "casual"],
         "date_added": "2022-01-09T18:11:41.637Z",
         "developer": "AnimationsScratch",
         "iframe_url": "https://scratch.mit.edu/projects/472077983/embed",
@@ -669,7 +660,7 @@
         "description": "Pop the bubbles by matching the correct colors. Try to beat all the levels!",
         "image": "./assets/game_images/bubblepopper.png",
         "controls": "[Click] - shoot bubble",
-        "tags": ["mobile", "scratch"],
+        "tags": ["mobile", "scratch", "misc", "clicker"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Griffpatch",
         "iframe_url": "https://scratch.mit.edu/projects/222972802/embed",
@@ -679,14 +670,14 @@
         "description": "Here tests are taken upon highly durable robots using the newest weapon technologies.",
         "image": "./assets/game_images/happyroom.png",
         "controls": "[Click] - interact",
-        "tags": [""],
+        "tags": ["misc", "clicker"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Mana Potion Studios",
         "iframe_url": "https://happy-room.vakhtangi1980.repl.co/"
     },
     "Parking Fury 3D": {
         "description": "Avoid cops, steal cars, and drive around in this beautiful beach scenery.",
-        "image": "./assets/game_images/parkingfury3d.jpeg",
+        "image": "./assets/game_images/parkingfury.avif",
         "controls": "[WASD] - drive\n[CTRL] - steal car",
         "tags": ["car"],
         "date_added": "2022-01-10T18:17:09.107Z",
@@ -697,7 +688,7 @@
         "description": "The classic Five Nights at Freddy's game. Don't get too scared!",
         "image": "./assets/game_images/fnaf1.png",
         "controls": "Click and drag with mouse",
-        "tags": ["fnaf", "scratch"],
+        "tags": ["horror", "scratch"],
         "date_added": "2022-01-10T18:17:09.107Z",
         "developer": "Scottgames",
         "iframe_url": "https://g.vseigru.net/scratch/app/?id=217819833&turbo=false"
@@ -724,7 +715,7 @@
         "description": "Eliminate all other opponents and become the last survivor!",
         "image": "./assets/game_images/1v1lol.png",
         "controls": "[WASD] - run\n[LShift] - crouch\n[Click] - shoot\n[Right-click] - aim",
-        "tags": ["multiplayer"],
+        "tags": ["multiplayer", "shooting"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "JustPlay",
         "iframe_url": "https://g.megamathstuff.com/1v1lol/index.html"
@@ -742,7 +733,7 @@
         "description": "A pixel-style shooting game. Shoot famous characters off the roof.",
         "image": "./assets/game_images/rooftopsnipers.jpeg",
         "controls": "[w] - jump\n[e] - shoot",
-        "tags": ["multiplayer", "2"],
+        "tags": ["multiplayer", "2", "shooting", "action"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "New Eich Games",
         "iframe_url": "https://g.megamathstuff.com/rooftop-snipers-main/index.html"
@@ -758,9 +749,9 @@
     },
     "Sans Fight": {
         "description": "Sans is the final boss of the Genocide Route in Undertale.",
-        "image": "./assets/game_images/sansfight.jpg",
+        "image": "./assets/game_images/sansfight.jpeg",
         "controls": "[WASD] - move\n[Space] - select",
-        "tags": ["hard"],
+        "tags": ["hard", "music"],
         "date_added": "2022-01-13T03:19:02.226Z",
         "developer": "Gotoanddie",
         "iframe_url": "https://gotoanddie.github.io/c2-sans-fight/"
@@ -769,7 +760,7 @@
         "description": "The final chapter of FNAF radically changes its location and gameplay while upping the level of thrill even further.",
         "image": "./assets/game_images/fnaf4.jpeg",
         "controls": "Use mouse to interact\n[Space] - flashlight\nFlick mouse down to look behind you\n[Click] - close/open door\n[x] - hide tips",
-        "tags": ["fnaf", "scratch"],
+        "tags": ["horror", "scratch"],
         "date_added": "2022-01-18T01:09:58.739Z",
         "developer": "Kk32423",
         "iframe_url": "https://scratch.mit.edu/projects/88676888/embed"
@@ -823,7 +814,7 @@
         "description": "A side-view Minecraft-inspired game with a Scratch cat character! Mine, mine, mine!",
         "image": "./assets/game_images/minercat.png",
         "controls": "[Arrow keys] - move\n[Click] - mine",
-        "tags": ["scratch"],
+        "tags": ["scratch", "clicker"],
         "date_added": "2022-01-20T20:31:34.561Z",
         "developer": "Coltroc",
         "iframe_url": "https://scratch.mit.edu/projects/351793769/embed"
@@ -850,7 +841,7 @@
         "description": "Shoot the tower to make it disappear until the last block while avoiding the black area.",
         "image": "./assets/game_images/stackbump.png",
         "controls": "[Click] - shoot",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2022-01-23T17:31:14.954Z",
         "developer": "3kh0",
         "iframe_url": "https://g.megamathstuff.com/stack-bump-3d-main/stack-bump-3d-main/index.html"
@@ -877,16 +868,16 @@
         "description": "Race three others to the extraction point. This is no ordinary race as you can only jump your way to the finish line.",
         "image": "./assets/game_images/getawayshootout.jpg",
         "controls": "PLAYER ONE\n[w] - jump left\n[r] - jump right\n[r] - power-up\n\nPLAYER TWO\n[i] - jump left\n[o] - jump right\n[p] - power-up",
-        "tags": ["2", "multiplayer"],
+        "tags": ["2", "multiplayer", "shooting", "action"],
         "date_added": "2022-01-31T03:38:27.104Z",
         "developer": "New Eich Games",
         "iframe_url": "https://g.megamathstuff.com/GetawayShootout-master/GetawayShootout-master/index.html"
     },
     "Crossy Road": {
         "description": "8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
-        "image": "./assets/game_images/crossyroad.jpg",
+        "image": "./assets/game_images/crossyroad.png",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
-        "tags": ["mobile", "running"],
+        "tags": ["mobile", "action"],
         "date_added": "2022-02-02T01:28:28.388Z",
         "developer": "Hipster Whale",
         "iframe_url": "https://g.megamathstuff.com/tam-crossyroad/index.html?world=original"
@@ -895,7 +886,7 @@
         "description": "A classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.",
         "image": "./assets/game_images/subwaysurfers.jpeg",
         "controls": "[Arrow Keys] - move\n[Space] - use hoverboard",
-        "tags": ["mobile", "running"],
+        "tags": ["mobile", "action", "action"],
         "date_added": "2022-02-03T00:03:23.213Z",
         "developer": "Skyflyer",
         "iframe_url": "https://g.megamathstuff.com/surfers2/index.html"
@@ -913,7 +904,7 @@
         "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex5.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["vex", "mobile"],
+        "tags": ["vex", "mobile", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "Gogy Games",
         "iframe_url": "https://g.megamathstuff.com/Vex5/index.html"
@@ -922,7 +913,7 @@
         "description": "A point-and-click survival horror video game created to fit in the FNAF series.",
         "image": "./assets/game_images/sisterloco.jpg",
         "controls": "[Click] - interact\n[w] - move in vent\nMUST TURN VOLUME ON TO HEAR TASKS",
-        "tags": ["fnaf", "scratch"],
+        "tags": ["horror", "scratch"],
         "date_added": "2022-02-10T14:51:17.859Z",
         "developer": "Codyjax",
         "iframe_url": "https://scratch.mit.edu/projects/125366612/embed"
@@ -931,7 +922,7 @@
         "description": "The fourth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex4.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["vex", "mobile"],
+        "tags": ["vex", "mobile", "action"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "https://g.megamathstuff.com/vex4/index.html"
@@ -940,7 +931,7 @@
         "description": "The third platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex3.jpeg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["vex", "mobile"],
+        "tags": ["vex", "mobile", "action"],
         "date_added": "2022-02-20T21:02:01.524Z",
         "developer": "Kizi",
         "iframe_url": "https://g.megamathstuff.com/vex3/index.html"
@@ -976,7 +967,7 @@
         "description": "Try to out smart the cat! Don't let him escape.",
         "image": "./assets/game_images/cattrap.jpg",
         "controls": "Click to place a wall",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2022-02-27T17:05:02.924Z",
         "developer": "Llerah",
         "iframe_url": "https://g.megamathstuff.com/cattrap.html"
@@ -985,7 +976,7 @@
         "description": "100 player 2D real-time massive multiplayer Battle Royale game in your browser, inspired by PUBG/Fortnite.",
         "image": "./assets/game_images/zombs-royale.jpg",
         "controls": "[WASD] or [Arrow Keys] - move\n[Click] - attack\n[e] - interact\n[Space] - deploy",
-        "tags": [""],
+        "tags": ["misc", "shooting"],
         "date_added": "2022-03-03T02:19:54.536Z",
         "developer": "CraftedVRTX",
         "iframe_url": "https://alloy.craftedvrtx.repl.co/go/_aHR0cHM6Ly96b21ic3JveWFsZS5pbw==_/"
@@ -994,7 +985,7 @@
         "description": "A classic tower defense game initially released in Flash. Defend the path by placing various defenses tactically around the map.",
         "image": "./assets/game_images/bloons.png",
         "controls": "[Click] - interact",
-        "tags": [""],
+        "tags": ["misc", "action"],
         "date_added": "2022-03-03T02:19:54.536Z",
         "developer": "AddictingGames",
         "iframe_url": "https://g.megamathstuff.com/bloonstd5/index.html"
@@ -1003,14 +994,14 @@
         "description": "A fun musical skill game. You are a ball rolling over a track with tons of hazards to make you fall.",
         "image": "./assets/game_images/rollingsky.jpeg",
         "controls": "[Arrow Keys] - move\n[Mouse] - move",
-        "tags": [""],
+        "tags": ["misc", "action"],
         "date_added": "2022-05-16T16:12:45.844Z",
         "developer": "Cheetah Games",
         "iframe_url": "https://g.megamathstuff.com/webgl-rollingsky/index.html"
     },
     "Basket Random": {
         "description": "Try to score a basket by using only one key with different variations from each other! Changing fields, changing players and changing balls do not surprise you! The one who reaches 5 score first, wins the game.",
-        "image": "./assets/game_images/basket-random.jpg",
+        "image": "./assets/game_images/basketrandom.png",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
         "tags": ["2", "sport"],
         "date_added": "2022-09-04T22:35:18.770Z",
@@ -1019,7 +1010,7 @@
     },
     "Boxing Random": {
         "description": "Changing conditions occur in every round. Sometimes the boxing field changes and sometimes the boxers. Adapt to every random feature and hit accurately. The one who reaches 5 score first, wins the game!",
-        "image": "./assets/game_images/boxingrandom.jpg",
+        "image": "./assets/game_images/boxingrandom.avif",
         "controls": "[w] - Player 1 \n[Up Arrow] - Player 2",
         "tags": ["2", "sport"],
         "date_added": "2022-09-04T22:35:18.770Z",
@@ -1030,7 +1021,7 @@
         "description": "2D puzzle action game where saving coins is important! Aiming for a goal using items. Make a way with blocks.",
         "image": "./assets/game_images/economical.jpg",
         "controls": "[w] - jump \n[a] - left\n[d] - right\n[Click] - place block",
-        "tags": [""],
+        "tags": ["misc"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Koganegames",
         "iframe_url": "https://g.megamathstuff.com/economical/index.html"
@@ -1048,7 +1039,7 @@
         "description": "Hypersnake is a skill game where you have to collect balls to grow your snake and find the path of least resistance to make it as far as possible. How far can you go in Hypersnake?",
         "image": "./assets/game_images/hypersnake.jpg",
         "controls": "[Mouse] - move",
-        "tags": ["mobile"],
+        "tags": ["mobile", "action"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "BuyHTML5",
         "iframe_url": "https://g.megamathstuff.com/Hypersnake/HYPERSNAKE.html"
@@ -1120,7 +1111,7 @@
         "description": "A first-person shooter game where time moves once you move. Shoot and move around to see your bullets fly off. Stand still and your bullets will stop moving too. This counts for enemy fire as well! Move around and shoot your enemies. Stand still and look for the best ways to move and dodge incoming fire.",
         "image": "./assets/game_images/superhot.jpg",
         "controls": "[WASD] - move \n[Click] - shoot",
-        "tags": [""],
+        "tags": ["misc", "shooting"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "SUPERHOT Team",
         "iframe_url": "https://g.megamathstuff.com/superhot/index.html"
@@ -1129,7 +1120,7 @@
         "description": "An infinite runner where the player must escape from his enemy and avoid all the obstacles and traps that are found along the way. Traverse cliffs, forests and even mines, and help this fearless treasure hunter escape with the gold idol. But hurry up! The evil monkey monsters are chasing you!",
         "image": "./assets/game_images/templerun.jpg",
         "controls": "[AD] or [Left/Right arrows] - move \n[w] or [Up arrow] - jump \n[s] or [Down arrow] - slide down",
-        "tags": ["mobile", "running"],
+        "tags": ["mobile", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "Imangi",
         "iframe_url": "https://g.megamathstuff.com/temple-run-2/index.html"
@@ -1138,7 +1129,7 @@
         "description": "A shooting game built in the same style as SuperHot, and features the same thrilling action that keeps you determined to beat each level.",
         "image": "./assets/game_images/timeshooter2.png",
         "controls": "[WASD] - move \n[Left-Click] - shoot \n[Right-Click] - throw",
-        "tags": [""],
+        "tags": ["misc", "shooting"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "GoGoMan",
         "iframe_url": "https://g.megamathstuff.com/time-shooter-2/index.html"
@@ -1147,7 +1138,7 @@
         "description": "Stay afloat in the ultimate water-skiing competition! This adventure game lets you play against one, two, or three friends on the same device. In Tube Jumpers, you must bounce upwards to avoid waves, sharks, and other dangers in the water!",
         "image": "./assets/game_images/tubejumpers.jpg",
         "controls": "[w] - Player 1 \n[i] - Player 2",
-        "tags": ["2"],
+        "tags": ["2", "misc"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "New Eich Games",
         "iframe_url": "https://g.megamathstuff.com/tube-jumpers/index.html"
@@ -1165,7 +1156,7 @@
         "description": "You play a zombie robot, which was given the task to destroy the zombies. Therefore, you are running around, buying new weapons and shooting at everything that moves.",
         "image": "./assets/game_images/zombotron.jpg",
         "controls": "[WASD] - move \n[Click] - shoot \n[q] - change weapons \n[h] - heal \n[e] - interact",
-        "tags": [""],
+        "tags": ["shooting"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Ant Karlov",
         "iframe_url": "https://g.megamathstuff.com/zombotron-2/index.html"
@@ -1174,7 +1165,7 @@
         "description": "The space version of Crossy Road, the 8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
         "image": "./assets/game_images/crossyroadspace.png",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
-        "tags": ["mobile"],
+        "tags": ["mobile", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "Hipster Whale",
         "iframe_url": "https://g.megamathstuff.com/tam-crossyroad/index.html?world=space"
@@ -1183,7 +1174,7 @@
         "description": "Launch the penguin as far as you can. At first, it will be very hard, but you can slowly fly a longer distance, make more money, and buy all the upgrades.",
         "image": "./assets/game_images/learntofly.jpg",
         "controls": "[Arrow Keys] - tilt up and down",
-        "tags": [""],
+        "tags": ["misc", "clicker", "classic"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Light Bringer Games",
         "iframe_url": "https://g.megamathstuff.com/learntofly.html"
@@ -1192,7 +1183,7 @@
         "description": "A fun, level-based shooting game, where you and your brother Simon will need to defend your treasure from enemies of all kinds!",
         "image": "./assets/game_images/raftwars.jpg",
         "controls": "[Click] - shoot",
-        "tags": [""],
+        "tags": ["misc", "shooting", "classic"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Martijn Kunst",
         "iframe_url": "https://g.megamathstuff.com/raftwars.html"
@@ -1210,7 +1201,7 @@
         "description": "The sixth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/game_images/vex6.jpg",
         "controls": "[Arrow Keys] - move",
-        "tags": ["vex"],
+        "tags": ["vex", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "Gogy Games",
         "iframe_url": "https://g.megamathstuff.com/vex6/index.html"
@@ -1219,7 +1210,7 @@
         "description": "Smash Karts is a 3D driving game where the objective is to collect surprise boxes and survive using whatever you find in them: Bullets, grenades, even rockets?! Buckle up, wear your helmet, reload your guns and eliminate your opponents!",
         "image": "./assets/game_images/smashkarts.jpg",
         "controls": "[Arrow Keys] or [WASD] - move",
-        "tags": ["multiplayer"],
+        "tags": ["multiplayer", "io", "action"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "Tall Team",
         "iframe_url": "https://g.megamathstuff.com/smashkarts/index.html"
@@ -1279,7 +1270,7 @@
         "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
         "image": "./assets/game_images/riddleschool.jpg",
         "controls": "[Click] - interact",
-        "tags": ["stickman", "puzzle"],
+        "tags": ["stickman", "puzzle", "escape"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "JonBro",
         "iframe_url": "https://g.megamathstuff.com/riddleschool/index.html"
@@ -1289,7 +1280,7 @@
         "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
         "image": "./assets/game_images/riddleschool2.jpg",
         "controls": "[Click] - interact",
-        "tags": ["stickman", "puzzle"],
+        "tags": ["stickman", "puzzle", "escape"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "JonBro",
         "iframe_url": "https://g.megamathstuff.com/riddleschool2/index.html"
@@ -1299,7 +1290,7 @@
         "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
         "image": "./assets/game_images/riddleschool3.jpg",
         "controls": "[Click] - interact",
-        "tags": ["stickman", "puzzle"],
+        "tags": ["stickman", "puzzle", "escape"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "JonBro",
         "iframe_url": "https://g.megamathstuff.com/riddleschool3/index.html"
@@ -1309,7 +1300,7 @@
         "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
         "image": "./assets/game_images/riddleschool4.jpg",
         "controls": "[Click] - interact",
-        "tags": ["stickman", "puzzle"],
+        "tags": ["stickman", "puzzle", "escape"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "JonBro",
         "iframe_url": "https://g.megamathstuff.com/riddleschool4/index.html"
@@ -1319,7 +1310,7 @@
         "description": "A fun game of mystery and puzzle solving and the first title in the Riddle School series. You are stuck in school in a boring class and you want to escape! You must interact with various objects in the classrooms and hallway and try to deceive and confuse the teachers and try to leave the school and your boring class!",
         "image": "./assets/game_images/riddleschool5.jpg",
         "controls": "[Click] - interact",
-        "tags": ["stickman", "puzzle"],
+        "tags": ["stickman", "puzzle", "escape"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "JonBro",
         "iframe_url": "https://g.megamathstuff.com/riddleschool5/index.html"
@@ -1327,7 +1318,7 @@
 
     "Fall Boys": {
         "description": "A multiplayer battle royale obstacle course. Be the last one standing!",
-        "image": "./assets/game_images/fallboys.png",
+        "image": "./assets/game_images/fallboys.avif",
         "controls": "[WASD] - move\n[Space] - jump",
         "tags": ["multiplayer"],
         "date_added": "2022-09-20T01:11:08.448Z",
@@ -1340,7 +1331,7 @@
         "description": "Try to stay on the track for as long as you can. You can choose from two different modes when playing. In infinite mode, you run for as long as you can. It's your job to try and keep your character from drifting into the vastness of outer space.",
         "image": "./assets/game_images/run3.jpeg",
         "controls": "[WASD] - move\n[Space] - jump",
-        "tags": ["running"],
+        "tags": ["action"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "Joseph Cloutier",
         "type": "proxy",
@@ -1350,7 +1341,7 @@
         "description": "Bad Ice-Cream is a fun 2-player puzzle game where you play as an Ice Cream. Choose a flavor, and add fruit to your ice cream! This sub-zero Pacman mod features cool graphics and tasty desserts. Travel through each maze-like level, and collect fruit for points. Clear all fruit without getting caught, and enjoy your tasty treat! Use your ice-breaking powers to smash blocks of ice or create your own icy barriers for protection. Go ahead, eat all the fruits!",
         "image": "./assets/game_images/badicecream.jpg?1",
         "controls": "Move - [WASD] or [Arrow keys]\nFreeze or Break Ice - [F] or [Space]",
-        "tags": ["2", "puzzle"],
+        "tags": ["2"],
         "date_added": "2023-02-03T00:28:34.403Z",
         "developer": "Nitrome",
         "iframe_url": "https://g.megamathstuff.com/bad-ice-cream/index.html"
@@ -1359,7 +1350,7 @@
         "description": "Bad Ice-Cream 2 is a 2-player puzzle game developed by Nitrome. Choose a flavor, and add fruit to your ice cream! Go to war with soft-serve ice cream and hungry foes on icy battlefields! In Bad Ice-Cream 2, you will play as a rogue dessert that refuses to be eaten. Choose your favorite frozen flavor, and find the fruit in ice block mazes! Clear all fruit without getting caught, and enjoy your tasty treat! Use your ice-breaking powers to smash blocks of ice or create your own icy barriers for protection. Go ahead, eat all the fruits!",
         "image": "./assets/game_images/badicecream2.jpg",
         "controls": "Move - [WASD] or [Arrow keys]\nFreeze or Break Ice - [Q] or [Space]",
-        "tags": ["2", "puzzle"],
+        "tags": ["2"],
         "date_added": "2023-02-03T00:28:34.403Z",
         "developer": "Nitrome",
         "iframe_url": "https://g.megamathstuff.com/bad-ice-cream-2/index.html"
@@ -1368,7 +1359,7 @@
         "description": "Bad Ice-Cream is a fun 2-player puzzle game where you play as an Ice Cream. Choose a flavor, and add fruit to your ice cream! This sub-zero Pacman mod features cool graphics and tasty desserts. Travel through each maze-like level, and collect fruit for points. Clear all fruit without getting caught, and enjoy your tasty treat! Use your ice-breaking powers to smash blocks of ice or create your own icy barriers for protection. Go ahead, eat all the fruits!\n\nBad Ice-Cream is developed by Nitrome. They released the game in December 2010. There are 40 levels to beat. Every level has different themes and challenges. The game has remained to be popular to this day! Enjoy your frosty adventures alone or together with a friend here on Totally Science!",
         "image": "./assets/game_images/badicecream3.jpg",
         "controls": "Move - [WASD] or [Arrow keys]\nFreeze or Break Ice - [Space]",
-        "tags": ["2", "puzzle"],
+        "tags": ["2"],
         "date_added": "2023-02-03T00:28:34.403Z",
         "developer": "Nitrome",
         "iframe_url": "https://g.megamathstuff.com/bad-ice-cream-3/index.html"
@@ -1377,7 +1368,7 @@
         "description": "The first Baldi Basics online session doesn’t seem spooky at all. A goofy-looking elementary school teacher welcomes the protagonist to class. The surroundings are bright and well lit, the music is cheerful. Nothing appears threatening or alarming at first. However, something vile and unnerving is happening behind the scenes. Only the bravest souls will be able to handle what lies ahead.\n\nBaldi’s Basics is not like most other online games on our Totally Science website. It is a weird combination of an educational learning game and a horror story. The gameplay might seem a bit boring at first, but there is a scary plot that will shock you! School is out and you have returned to collect some notebooks for a friend. You will meet a creepy teacher called Baldi, who likes to give simple challenges to his students and doesn’t like wrong answers. Enter each classroom, open notebooks and solve fun trivia problems to make Baldi happy. If your answer is correct, Baldi will give you a coin as a reward for your knowledge. If your answer is wrong though, strange things will happen and you should better start running for your life. Because, this teacher has some serious mental issues and making him angry is not a good idea! To complete the Baldi’s Basics game at Totally Science, you will need to collect all 7 notebooks and get to the exit in one piece.",
         "image": "./assets/game_images/baldisbasics.png",
         "controls": "Move - [WASD] or [Arrow keys]\nRun - [Shift]\nPick up items - [Left-click]\nUse items - [Right-click]",
-        "tags": ["puzzle", "horror"],
+        "tags": ["puzzle", "horror", "escape"],
         "date_added": "2023-02-03T00:28:34.403Z",
         "developer": "Nitrome",
         "iframe_url": "https://g.megamathstuff.com/baldis-basics/index.html"
@@ -1386,7 +1377,7 @@
         "description": "Just Fall LOL is not just a penguin game; it's also an online multiplayer game with friends. Players play as penguins and compete in hexagonal arenas to see who can be the champion of the race.\n\nThis game has simple rules. You need to use arrow keys to play with the cute penguin, move, jump and slide. Besides, you can choose 1 of 12 different colors to decorate your character's skin and various game modes.\n\nIn each game, you will randomly match with another player or invite friends to form a group of 8 people. Your task is to control the penguin and hold out on the ice for as long as possible. Icebergs will fall after people walk on them. It would be best if you stayed away from the holes. Be the last person to fall into the sea to put your name on the leaderboard.",
         "image": "./assets/game_images/justfall.jpg",
         "controls": "Move - [WASD] or [Arrow keys]\nJump - [Space]",
-        "tags": ["running", "multiplayer", "io"],
+        "tags": ["action", "multiplayer", "io"],
         "date_added": "2023-02-04T18:50:05.472Z",
         "developer": "UNKNOWN",
         "iframe_url": "https://g.megamathstuff.com/just-fall/index.html"
@@ -1395,7 +1386,7 @@
         "description": "Awesome Tanks 2 is an engaging fighting game. Your task is to defeat enemy tanks, collect coins, and destroy the enemy base in order to clear each level. Collect coins along the way and use them to upgrade your tank with better armor, weapons, visibility and more.\nYou destroy rival tanks using cannons, flamethrowers, lasers, missiles and more with weapon upgrades. Don't forget to upgrade weapons to improve your fighting power. Need a performance upgrade, especially armor, which will help protect your tank against heavy fire. Movement speed is also useful for dodging, especially against oncoming missiles.\nIn each level, you'll be surrounded by darkness. You'll need to move and discover the place. The problem is, enemy tanks are lurking around every corner, so you better be on your guard. To be able to play in the next level you need to destroy all enemies. You can destroy the boxes you can see around to get more coins. The boxes are always essential, collect them all to get more power. But sometimes it's a trap, like a bomb, get away from it quickly.\nAs you progress, it gets harder and harder to earn rewards. You can choose the difficulty of the game. Your achievements will be recognized, so play as hard as you can.",
         "image": "./assets/game_images/awesome-tanks-2.jpg",
         "controls": "Move - [WASD] or [Arrow keys]\nFire - [Left-Click]\nSwitch Weapon - [Number Keys]",
-        "tags": ["running", "multiplayer", "io"],
+        "tags": ["misc", "action"],
         "date_added": "2023-02-04T18:50:05.472Z",
         "developer": "Alexander Gette",
         "iframe_url": "https://g.megamathstuff.com/awesometanks2/index.html"
@@ -1404,7 +1395,7 @@
         "description": "Death Run 3D is a thrilling first-person running game in which you will have to run in a neon tunnel and avoid all obstacles to try to get the highest score.\n\nControl and avoid all obstacles in the tunnel to gain the best score in first-person view! You will run automatically inside a tube with many various blocks which almost can move. They will cause you various challenges and difficulties due to their unpredictable change and your max speed. You think the game is easy. However, it is not easy to master. The race is endless until you hit a block in the tube.\n\nTry to get the highest score in this infinite game. You can check your rank on the worldwide leaderboard. Raise your name on the top of the leaderboard to show your skills! You can try getting over yourself and with other players around the world.",
         "image": "./assets/game_images/deathrun3d.jpg",
         "controls": "Move - [WASD] or [Arrow keys]",
-        "tags": ["running", "multiplayer", "io"],
+        "tags": ["casual"],
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "UNKNOWN",
         "iframe_url": "https://g.megamathstuff.com/death-run-3d/index.html"
@@ -1413,7 +1404,7 @@
         "description": "How will you live your BitLife?\n\nWill you try to make all the right choices in an attempt to become a model citizen sometime before you die? You could marry the love of your life, have kids, and pick up a good education along the way.\n\nOr will you play choices that horrify your parents? You could descend into a life of crime, fall in love or go on adventures, start prison...",
         "image": "./assets/game_images/bitlife.png",
         "controls": "Interact - [Left-Click]",
-        "tags": [""],
+        "tags": ["misc", "mobile", "clicker"],
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "CandyWriter",
         "iframe_url": "https://g.megamathstuff.com/bitlife/index.html"
@@ -1422,7 +1413,7 @@
         "description": "Cluster Rush is a first-person run-and-jump game inspired by Clustertruck, a well-known Steam title. Jump from truck to truck and reach the gates to finish each level.",
         "image": "./assets/game_images/clusterrush.jpg",
         "controls": "Move - [WASD] or [Arrow keys]\nJump - [Space]",
-        "tags": ["running"],
+        "tags": ["action"],
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "LandFall Games",
         "iframe_url": "https://g.megamathstuff.com/cluster-rush/index.html"
@@ -1431,7 +1422,7 @@
         "description": "Interactive Buddy is an arcade game where you interact with your virtual buddy. For every interaction, you earn money to buy new weapons, skins, and more!\n\nHit the buddy with hammers and blades, shoot him with pistols and rifles, let him explode with grenades and even drop flames on him! Let off some steam and get rid of any anger!",
         "image": "./assets/game_images/kickthebuddy.webp",
         "controls": "Interact - [Left-Click]",
-        "tags": ["clicker"],
+        "tags": ["clicker", "shooting", "misc"],
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "Shock-Value",
         "iframe_url": "https://g.megamathstuff.com/interactivebuddy.html"
@@ -1444,5 +1435,14 @@
         "date_added": "2023-02-12T18:19:09.462Z",
         "developer": "Blue Wizard Digital",
         "iframe_url": "https://g.megamathstuff.com/basketbros-io/index.html"
+    },
+    "Bob the Robber 2": {
+        "description": "Bob the Robber is a fun adventure game where you play as a thief named Bob to steal everything. Avoid Patrolling guards, laser sensors, and security cameras.\n\nReach the goal in each level and escape safely! Disarm cameras, hide from guards, disable traps and much more!",
+        "image": "./assets/game_images/bobtherobber.jpeg",
+        "controls": "Move - [Arrow Keys]\nLook inside objects for money - [Up Arrow]",
+        "tags": ["escape", "classic"],
+        "date_added": "2023-02-28T14:01:14.476Z",
+        "developer": "Funtomic",
+        "iframe_url": "https://g.megamathstuff.com/bobtherobber2/index.html"
     }
 }

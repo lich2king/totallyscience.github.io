@@ -34,6 +34,7 @@
       if($rewardDay >= 6)
       {
         $rewardDay = 0;
+        $points = 1000;
       }
       else
       {

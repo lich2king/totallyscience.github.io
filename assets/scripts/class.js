@@ -21,40 +21,34 @@ document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameN
 
 window.addEventListener('load', () => {
     //Check if user is logged in
-        res = JSON.parse(authToken);
+    res = JSON.parse(authToken);
 
-        let userloggedIn = 'false';
+    let userloggedIn = 'false';
 
-        if (res != null) userloggedIn = res['isLoggedIn'];
+    if (res != null) userloggedIn = res['isLoggedIn'];
 
-        if (userloggedIn == 'true') {
-            loggedIn = true;
+    console.log(userloggedIn);
+    if (userloggedIn == 'true') {
+        loggedIn = true;
 
-            //check if user liked the game previously
-            fetch(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
-                .then((response) => response.text())
-                .then((res) => {
-                    if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-                });
 
-            //check if user pinned the game previously
-            fetch(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
-                .then((response) => response.text())
-                .then((res) => {
-                    if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                });
+        //check if user liked the game previously
+        fetcher(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
+            .then((response) => response.text())
+            .then((res) => {
+                if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+            });
 
-            //add to recent games list
-            fetch(`assets/php/recent_classes/addclass.php?name=${gameName}`);
-        }
+        //check if user pinned the game previously
+        fetcher(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
+            .then((response) => response.text())
+            .then((res) => {
+                if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+            });
 
-    fetch(`assets/php/verified.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            if (res == '1') {
-                verified = true;
-            }
-        });
+        //add to recent games list
+        fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
+    }
 
     //get game data for iframe etc
     fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
@@ -63,7 +57,7 @@ window.addEventListener('load', () => {
     }).then((games) => {
         const gameData = games[gameName];
 
-        if (gameData == null) window.location.href = '../classes.php';
+        if (gameData == null) window.location.href = '../classes';
 
         document.getElementById('description').innerText = gameData.description;
         document.getElementById('controls').innerText = gameData.controls;
@@ -110,12 +104,12 @@ likeButton.addEventListener('click', function() {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             likeCount += 1;
-            fetch(`assets/php/class_likes/likeclass.php?name=${gameName}`);
+            fetcher(`assets/php/class_likes/likeclass.php?name=${gameName}`);
             UpdateLikeCount();
         } else {
             likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
             likeCount -= 1;
-            fetch(`assets/php/class_likes/unlikeclass.php?name=${gameName}`);
+            fetcher(`assets/php/class_likes/unlikeclass.php?name=${gameName}`);
             UpdateLikeCount();
         }
     } else {
@@ -144,14 +138,14 @@ pinButton.addEventListener('webkitAnimationEnd', function() {
 pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-            fetch(`assets/php/class_pin/pinclass.php?name=${gameName}`)
+            fetcher(`assets/php/class_pin/pinclass.php?name=${gameName}`)
                 .then((response) => response.text())
                 .then((res) => {
                     if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
                     else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
                 });
         } else {
-            fetch(`assets/php/class_pin/unpinclass.php?name=${gameName}`);
+            fetcher(`assets/php/class_pin/unpinclass.php?name=${gameName}`);
             pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
         }
     } else {
@@ -231,13 +225,13 @@ function suggestGames() {
         });
         if (gameName == randGame) sameTag = false;
 
-        if (sameTag && displayedGames < 5) {
+        if (sameTag && displayedGames < 15) {
             randomGames.push(randGame);
             displayedGames++;
-        } else if (displayedGames >= 5) break;
+        } else if (displayedGames >= 15) break;
     }
-    while (displayedGames < 5) {
-        for (let x = 0; x < 5 - displayedGames; x++) {
+    while (displayedGames < 15) {
+        for (let x = 0; x < 15 - displayedGames; x++) {
             let randGame = randomProperty(games);
 
             while (randomGames.includes(randGame)) {
@@ -249,17 +243,27 @@ function suggestGames() {
         }
     }
 
-    document.getElementById('suggestedGames').innerHTML = '';
 
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+    let gamesDiv = document.getElementById('games');
+
+    gamesDiv.innerHTML += `<h1>Recommended Games</h1>`;
+
+    let row = document.createElement("div");
+    row.classList.add("horizontalCon");
+    let gamesContainer = document.createElement("div");
+    gamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    row.innerHTML += arrowContainer;
+    //for each element in newGames, add the game to the horizontalCon
     randomGames.forEach(function(game) {
-        const gameBtn = `
-            <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${games[game]['image']})" id="gameDiv" onclick="location.href = 'class?class=${game}'">
-                <h1 class="innerGameDiv">${game}</h1>
-            </div>
-        `;
-
-        document.getElementById('suggestedGames').innerHTML += gameBtn;
+        gamesContainer.innerHTML += createGameButton(game);
     });
+
+    row.appendChild(gamesContainer);
+    gamesDiv.appendChild(row);
+
+    addArrowListeners();
 }
 
 var randomProperty = function(object) {
@@ -290,3 +294,58 @@ window.addEventListener('click', () => {
     //fix some text inputs not working (eaglercraft)
     document.getElementById('iframe').focus();
 });
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+}
+
+function createGameButton(game, pin) {
+    const data = games[game];
+    if (data == null)
+        return '';
+
+    let classlist = data.tags.join(' ');
+
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+
+    const gameDate = new Date(data.date_added);
+
+    if (gameDate > weekAgo) classlist += ' new';
+
+    let gameBtn = '';
+
+    gameBtn = `
+        <div name="${game}" id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist}">
+            <div class="imageCon">
+                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+            </div>
+            <h1 class="innerGameDiv">${game}</h1>
+        </div>
+        `;
+
+    return gameBtn;
+}

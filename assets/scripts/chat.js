@@ -64,7 +64,7 @@ document.getElementById('chatnav').classList.add('selected');
                 joinChat.style.display = 'none';
 
                 try {
-                    fetch(`assets/php/chat/${url}.php?id=${roominput}`)
+                    fetcher(`assets/php/chat/${url}.php?id=${roominput}`)
                         .then((response) => response.text())
                         .then((res1) => {
                             let jsonRes;
@@ -327,7 +327,7 @@ document.getElementById('chatnav').classList.add('selected');
                                     'beforeunload',
                                     function () {
                                         try {
-                                            fetch(
+                                            fetcher(
                                                 `assets/php/chat/leave_room.php?id=${localStorage.getItem(
                                                     'chatRoom'
                                                 )}`
@@ -369,7 +369,7 @@ document.getElementById('chatnav').classList.add('selected');
                         window.scrollTo(0, document.body.scrollHeight);
 
                         try {
-                            fetch(
+                            fetcher(
                                 `assets/php/chat/send_message.php?id=${localStorage.getItem(
                                     'chatRoom'
                                 )}&message=${messageinp}`

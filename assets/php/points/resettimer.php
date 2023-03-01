@@ -11,11 +11,14 @@
     die("connection failed"); //. $conn->connect_error);
   }
 
-  if (!isset($_COOKIE['logintoken'])) {
-    die("no cookie");
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+
+  if (!isset($data['auth'])) {
+      die("error: no cookie");
   }
-    
-  $userid = json_decode($_COOKIE['logintoken'], true)['id'];
+
+  $userid = $data['auth']['id'];
 
   //first check if the user has a game pass account
   $query = "UPDATE accounts SET DailyReward = UNIX_TIMESTAMP() + 86400  WHERE ID = '$userid'";

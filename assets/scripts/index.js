@@ -32,7 +32,7 @@ const autoSwitch = () => {
                 autoPlusSlides(1);
                 autoSwitch();
             }
-        }, 2500);
+        }, 3000);
     }
 };
 
@@ -53,8 +53,8 @@ let loggedIn = false;
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -106,163 +106,173 @@ function loadTopic() {
 }
 
 async function displayGames() {
-    for (let x = 0; x < Object.keys(sorted).length; x++) {
-        let keys = Object.keys(sorted);
+    //First check if there are any new games... if so, put them in the new games category
 
+    let categories = ["multiplayer", "car", "casual", "action", "shooting", "puzzle", "classic", "sport", "clicker", "escape", "2", "horror", "hard", "music", "flash"];
+    let categoriesNames = ["Multiplayer", "Driving", "Casual", "Action", "Shooting", "Puzzle", "Classic", "Sport", "Clicker", "Escape", "2 Player", "Horror", "Impossible", "Music", "Flash"];
+
+    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+
+
+
+    //Then for each category (except mobile and a few others), make the category container then add games
+
+
+    for (let i = 0; i < categories.length; i++) {
+
+
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`
+
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        gamesContainer.id = (`${categories[i]}GamesCon`);
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+
+        row.appendChild(gamesContainer);
+        gamesDiv.appendChild(row);
+    }
+
+
+
+
+    let newGames = [];
+    let miscGames = [];
+    for (let x = 0; x < Object.keys(sorted).length; x++) {
+
+        let keys = Object.keys(sorted);
         const name = keys[x];
+
         const data = sorted[keys[x]];
 
-        let classlist = '';
-        classlist = data.tags.join(' ');
-
         const weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7);
+        weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
         const gameDate = new Date(data.date_added);
 
         if (gameDate > weekAgo) {
-            classlist += ' new';
+            newGames.push(name);
         }
 
-        let gameBtn;
-        // if (x >= maxGames) {
-        //     gameBtn = createGameButton(name, 'hidden');
-        // } else {
-        //     gameBtn = createGameButton(name);
-        // }
-        gameBtn = createGameButton(name);
-
-        gamesDiv.innerHTML += gameBtn;
+        //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+        let hasCategory = false;
+        for (let i = 0; i < categories.length; i++) {
+            if (data.tags.join(' ').includes(categories[i])) {
+                hasCategory = true;
+                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
+            }
+        }
+        if (!hasCategory) {
+            //give them misc
+            miscGames.push(name);
+        }
     }
+
+    if (miscGames.length > 0) {
+        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes?category=random">View More</a></h1>`;
+
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < miscGames.length; i++) {
+            gamesContainer.innerHTML += createGameButton(miscGames[i]);
+        }
+        row.appendChild(gamesContainer);
+        gamesDiv.appendChild(row);
+    }
+
+
+    //liked games
+    if (loggedIn) {
+        let recentRow = document.createElement("div");
+        recentRow.classList.add("horizontalCon");
+        let recentGamesContainer = document.createElement("div");
+        recentGamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        recentRow.innerHTML += arrowContainer;
+
+        let length = 0;
+
+        await fetcher(`/assets/php/class_likes/personallikes.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                var likedgames = JSON.parse(res);
+
+                console.log(likedgames);
+
+                length = likedgames.length;
+                if (likedgames.length > 0) {
+                    for (like in likedgames) {
+                        console.log(likedgames[like][0]);
+                        if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                            recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
+                        }
+                    }
+                }
+            });
+
+        if (length > 5) {
+            recentRow.appendChild(recentGamesContainer);
+            gamesDiv.prepend(recentRow);
+            console.log(recentGamesContainer);
+            console.log("here");
+            console.log(gamesDiv);
+            gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+        }
+    }
+
+
+    //popular games
+    let row = document.createElement("div");
+    row.classList.add("horizontalCon");
+    let gamesContainer = document.createElement("div");
+    gamesContainer.classList.add("gamesCon");
+    //add the arrows to the horizontal Con
+    row.innerHTML += arrowContainer;
+    //for each popular game, add the game to the horizontalCon
 
     await fetch(`/assets/php/getpopulargames.php`)
         .then((response) => response.text())
         .then((res) => {
             let popularGames = JSON.parse(res);
 
-            for (let i = 0; i < 10; i++) {
-                if (document.getElementsByName(popularGames[i][0])) {
-                    document.getElementsByName(popularGames[i][0])[0].classList.add('popular');
-                    document.getElementsByName(popularGames[i][0])[0].innerHTML +=
-                        "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+            for (let i = 0; i < 15; i++) {
+                const gameName = popularGames[i][0];
+                if (gameName != null) {
+                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
                 }
             }
         });
 
-    //only get recent and liked games if logged in
-    if (loggedIn) {
-        //all games are generated... now add the liked and recent tags to the games
-        fetcher(`/assets/php/class_likes/personallikes.php`)
-            .then((response) => response.text())
-            .then((res) => {
-                var likedgames = JSON.parse(res);
+    row.appendChild(gamesContainer);
+    gamesDiv.prepend(row);
+    gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
 
-                fetcher(`/assets/php/recent_classes/recentclasses.php`)
-                    .then((response) => response.text())
-                    .then((res) => {
-                        let recentGames = res.split(';');
-                        recentGames = recentGames.slice(1);
 
-                        for (like in likedgames) {
-                            if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                                //line below accounts for suggested/pinned games
-                                if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
-                                    document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-                                } else {
-                                    document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
-                                }
-                            }
-                        }
-                        for (let i = 0; i < recentGames.length; i++) {
-                            if (document.getElementsByName(recentGames[i]).length > 0) {
-                                //line below accounts for suggested/pinned games
-                                if (document.getElementsByName(recentGames[i])[0].classList.contains('all')) {
-                                    document.getElementsByName(recentGames[i])[0].classList.add('recent');
-                                } else {
-                                    document.getElementsByName(recentGames[i])[1].classList.add('recent');
-                                }
-                            }
-                        }
-                    });
-            });
-    }
-}
-
-// const searchBar = document.getElementById('searchBar');
-// searchBar.addEventListener('keyup', () => {
-//     document.getElementById('info').scrollIntoView({
-//         block: 'start',
-//         inline: 'nearest',
-//     });
-
-//     let input = searchBar.value.toUpperCase().split(' ').join('');
-
-//     if (input == '' || input == null) {
-//         loadTopic();
-//         return;
-//     }
-
-//     const gameButtons = document.getElementsByClassName('all');
-
-//     let gameShown = false;
-//     Array.from(gameButtons).forEach((game) => {
-//         var name = game.getAttribute('name').toUpperCase();
-//         name = name.split(' ').join('');
-
-//         if (name.includes(input) && game.classList.contains(selectedTopic)) {
-//             game.setAttribute(
-//                 'style',
-//                 `background-image: url(${
-//                     games[game.getAttribute('name')].image
-//                 })`
-//             );
-//             gameShown = true;
-//         } else {
-//             game.setAttribute('style', 'display:none');
-//         }
-//     });
-//     if (!gameShown) {
-//         document.getElementById('noSearch').style.display = '';
-//     } else {
-//         document.getElementById('noSearch').style.display = 'none';
-//     }
-//     if (gamesDiv.innerHTML == '') {
-//         document.getElementById('noSearch').style.display = '';
-//     }
-// });
-
-// Category buttons
-const buttons = document.querySelectorAll('.categoryButton');
-
-buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        document.getElementById('adScroll').scrollIntoView({
-            block: 'start',
-            inline: 'nearest',
-        });
-
-        if (e.target.name == selectedTopic) {
-            selectedTopic = 'all';
-        } else {
-            selectedTopic = e.target.name;
+    if (newGames.length > 0) {
+        let row = document.createElement("div");
+        row.classList.add("horizontalCon");
+        let gamesContainer = document.createElement("div");
+        gamesContainer.classList.add("gamesCon");
+        //add the arrows to the horizontal Con
+        row.innerHTML += arrowContainer;
+        //for each element in newGames, add the game to the horizontalCon
+        for (let i = 0; i < newGames.length; i++) {
+            gamesContainer.innerHTML += createGameButton(newGames[i]);
         }
-
-        const buttons = document.querySelectorAll('.categoryButton');
-
-        buttons.forEach((btn) => {
-            btn.classList.add('unselectedCategory');
-            btn.classList.remove('selectedCategory');
-        });
-
-        const selected = document.getElementsByName(selectedTopic)[0];
-        selected.classList.add('selectedCategory');
-        selected.classList.remove('unselectedCategory');
-
-        // document.getElementById('searchBar').value = '';
-
-        loadTopic();
-    });
-});
+        row.appendChild(gamesContainer);
+        gamesDiv.prepend(row);
+        gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
+    }
+    addArrowListeners();
+    findLazyImages();
+}
 
 function suggestGames() {
     let pinnedGames = [];
@@ -319,7 +329,7 @@ function suggestGames() {
         });
 }
 
-var randomProperty = function (object) {
+var randomProperty = function(object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -341,10 +351,17 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
+    if (data == null)
+        return '';
+
+    //console.log(game);
+
+    //console.log(data.tags.join(' '));
+
     let classlist = data.tags.join(' ');
 
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
 
@@ -355,6 +372,10 @@ function createGameButton(game, pin) {
 
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+    }
+
+    if (pin == 'hot') {
+        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
     }
 
     if (gameDate > weekAgo) {
@@ -368,15 +389,21 @@ function createGameButton(game, pin) {
 
     if (pin != 'hidden') {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="background-image: url(${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
+        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
+            <div class="imageCon">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+            </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
     } else {
         gameBtn = `
-        <div onmouseout="(noGif(this));" onmouseover="changeToGif(this);" name="${game}" style="display: none" id="gameDiv" onclick="${onclick}" class="${classlist}">
+        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
+            <div class="imageCon">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+            </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
         `;
@@ -391,8 +418,6 @@ function createGameButton(game, pin) {
 //if database says it is not over, set local storage to correct time and keep counting
 
 function checkReward() {
-    console.log('Estoy aqui');
-    console.log(loggedIn);
     setRewardDayBar('initial');
     if (loggedIn) {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
@@ -423,9 +448,10 @@ function checkReward() {
 
 //var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
 var rewardTimerInterval;
+
 function startTimer(endTime) {
     clearInterval(rewardTimerInterval);
-    rewardTimerInterval = setInterval(function () {
+    rewardTimerInterval = setInterval(function() {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -449,6 +475,7 @@ function startTimer(endTime) {
 }
 
 var popTimerInterval;
+
 function rewardPop() {
     document.getElementById('dailyRewardPopup').style.display = '';
 
@@ -456,7 +483,6 @@ function rewardPop() {
     document.getElementById('rewardTimer').innerHTML = '00:00:00';
 
     if (loggedIn) {
-        console.log('Popped logged in');
         document.getElementById('ignoreReward').style.display = 'none';
 
         let points = 100;
@@ -477,7 +503,6 @@ function rewardPop() {
                 }
             });
     } else {
-        console.log('Popped not logged in');
         for (let i = 0; i <= 0; i++) {
             document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
         }
@@ -487,11 +512,10 @@ function rewardPop() {
         document.getElementById('ignoreReward').style.display = '';
         document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
         document.getElementById('claimRewardB').setAttribute('onclick', "window.location.href='/signup'");
-        console.log('Popped finsihed not logged in');
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    popTimerInterval = setInterval(function () {
+    popTimerInterval = setInterval(function() {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -540,7 +564,6 @@ function setRewardDayBar(mode) {
     let day = 0;
 
     if (loggedIn) {
-        console.log('Logged in in Set reward day bnar');
         if (mode == 'update') {
             fetcher(`assets/php/points/checkrewardday.php`)
                 .then((rewardDay) => rewardDay.text())
@@ -557,7 +580,6 @@ function setRewardDayBar(mode) {
                 });
         }
     } else {
-        console.log('Animating');
         animateBar(day);
     }
 }
@@ -599,4 +621,60 @@ function counter(id, start, end, duration) {
                 clearInterval(timer);
             }
         }, step);
+}
+
+
+
+function addArrowListeners() {
+
+    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            // gamesCon.scrollLeft -= 1100;
+            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+        });
+    }
+
+    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+            const parentElement = e.target.parentNode.parentNode;
+            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+
+            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
+            leftArrow.style += "visibility: visible";
+
+            // gamesCon.scrollLeft += 1100;
+            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
+            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+        });
+    }
+
+
+}
+
+function findLazyImages() {
+    // Get all the lazy images
+    const lazyImages = document.querySelectorAll('.lazy');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+                entry.target.classList.remove('lazy');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        // Start loading the images when they are 10% visible
+        threshold: 0.1,
+
+        // Start loading the images when they are 500 pixels away from the viewport
+        rootMargin: '500px 0px'
+    });
+
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
 }

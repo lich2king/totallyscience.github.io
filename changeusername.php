@@ -12,13 +12,16 @@ if ($conn->connect_error) {
 $password = htmlspecialchars($_GET["password"]);
 $newUsername = htmlspecialchars($_GET["username"]);
 
+$json = file_get_contents('php://input');
+$data = json_decode($json, TRUE);
+
+if (!isset($data['auth'])) {
+    die("error: no cookie");
+}
+
+$id = $data['auth']['id'];
+
 if ($password != null && $password != '') {
-    if (!isset($_COOKIE['logintoken'])) {
-        die("no cookie");
-    }
-      
-    $id = json_decode($_COOKIE['logintoken'], true)['id'];
-    
     if ($userresult = $conn->query("SELECT * FROM accounts WHERE id = '$id'")) {
         $row = $userresult -> fetch_row();
         $usersPass = $row[2];
@@ -117,7 +120,7 @@ if ($password != null && $password != '') {
             return;
         }
 
-        fetch(`changeusername.php?password=${password}&username=${username}`).then((response) => response.text()).then((res) => {
+        fetcher(`changeusername.php?password=${password}&username=${username}`).then((response) => response.text()).then((res) => {
             if (res.startsWith('success')) {
                 location.href = 'profile.php';
             } else {
