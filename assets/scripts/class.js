@@ -17,7 +17,7 @@ let loggedIn = false;
 let verified = true;
 let games;
 
-document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} on Totally Science`;
+document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
 
 window.addEventListener('load', () => {
     //Check if user is logged in
