@@ -617,3 +617,11 @@ input[type='text'] {
         transform: rotate(360deg);
     }
 }
+
+#adhorz {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 100px;
+    margin-top: 30px;
+}

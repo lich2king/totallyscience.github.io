@@ -3,7 +3,7 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/index.css?v33'>
+    <link rel='stylesheet' href='assets/styles/index.css?v34'>
     <!-- <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=634c748df2bbcb00196d7191&product=inline-share-buttons"
         async="async"></script> -->
@@ -112,9 +112,18 @@
 
     </div> -->
 
-    <div id="adScroll" class="adsrc" style="text-align:center; margin-top:50px;">
+    <!-- <div id="adScroll" class="adsrc" style="text-align:center; margin-top:50px;">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
             data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div> -->
+
+    <div class="adsrc adhorz" style="text-align:center;">
+        <!-- Under the Game -->
+        <ins class="adsbygoogle" style="display:inline-block;width:800px;height:100px"
+            data-ad-client="ca-pub-3486863589051210" data-ad-slot="3824383684"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
