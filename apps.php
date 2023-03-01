@@ -7,6 +7,8 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/apps.css?v2'>
+
+    <title>Apps - Totally Science - Free Online Unblocked Games</title>
 </head>
 
 <body>

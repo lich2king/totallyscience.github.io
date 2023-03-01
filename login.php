@@ -4,6 +4,8 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
+    <title>Login - Totally Science - Free Online Unblocked Games</title>
+
     <link rel='stylesheet' href='./assets/styles/account.css?v1'>
 </head>
 

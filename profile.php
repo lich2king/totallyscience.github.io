@@ -4,6 +4,8 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
+    <title>Profile - Totally Science - Free Online Unblocked Games</title>
+
     <link rel='stylesheet' href='assets/styles/profile.css?v10'>
 </head>
 

@@ -4,6 +4,8 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
+    <title>Submit Highscore - Totally Science - Free Online Unblocked Games</title>
+
     <link rel='stylesheet' href='assets/styles/submithighscore.css'>
 </head>
 

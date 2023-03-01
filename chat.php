@@ -4,6 +4,8 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
+    <title>Chat - Totally Science - Free Online Unblocked Games</title>
+
     <link rel='stylesheet' href='assets/styles/chat.css?v24'>
 </head>
 

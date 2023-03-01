@@ -6,6 +6,8 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
+    <title>Settings - Totally Science - Free Online Unblocked Games</title>
+
     <link rel='stylesheet' href='assets/styles/settings.css?v1'>
 </head>
 
