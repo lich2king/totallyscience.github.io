@@ -5,7 +5,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const appName = urlParams.get('app');
 
-document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${appName} Unblocked || Use ${gameName} unblocked on Totally Science`;
+document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${appName} Unblocked`;
 
 window.addEventListener('load', () => {
     document.getElementsByTagName('body')[0].style = 'overflow: hidden';
