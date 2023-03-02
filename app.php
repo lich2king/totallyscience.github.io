@@ -25,7 +25,7 @@
     </div>
 
     <script src="assets/scripts/main.js?v36"></script>
-    <script src="assets/scripts/app.js?8"></script>
+    <script src="assets/scripts/app.js?9"></script>
 </body>
 
 </html>
