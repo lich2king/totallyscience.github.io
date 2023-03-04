@@ -978,7 +978,7 @@
         "description": "Try to out smart the cat! Don't let him escape.",
         "image": "./assets/game_images/cattrap.jpg",
         "controls": "Click to place a wall",
-        "tags": ["misc"],
+        "tags": ["puzzle"],
         "date_added": "2022-02-27T17:05:02.924Z",
         "developer": "Llerah",
         "iframe_url": "https://g.megamathstuff.com/cattrap.html"
