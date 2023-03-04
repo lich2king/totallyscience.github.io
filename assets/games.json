@@ -1458,7 +1458,7 @@
     },
     "Angry Sharks": {
         "description": "In Angry Sharks, it's time to see what's going on under the ocean's surface. There is a whole different world under the sea after all. However, no matter how deep the ocean goes, it is not beyond humans' grasp. Are you ready to take control of a shark that is not quite what it seems?\n\nBecome the king of the ocean in this action-packed shark simulation game! Swim into fish to take a bite out of them. Eat fish to grow, but watch out for pufferfish which will hurt you badly! Also, be mindful to avoid nuclear waste barrels floating through the ocean. Grow to be the biggest shark you can be!",
-        "image": "./assets/game_images/angrysharks.jpeg",
+        "image": "./assets/game_images/angrysharks.jpg",
         "controls": "Move - [Left-Click]",
         "tags": [""],
         "date_added": "2023-02-28T14:01:14.476Z",
