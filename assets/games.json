@@ -1455,5 +1455,41 @@
         "date_added": "2023-02-28T14:01:14.476Z",
         "developer": "Funtomic",
         "iframe_url": "https://g.megamathstuff.com/bobtherobber2/index.html"
+    },
+    "Angry Sharks": {
+        "description": "In Angry Sharks, it's time to see what's going on under the ocean's surface. There is a whole different world under the sea after all. However, no matter how deep the ocean goes, it is not beyond humans' grasp. Are you ready to take control of a shark that is not quite what it seems?\n\nBecome the king of the ocean in this action-packed shark simulation game! Swim into fish to take a bite out of them. Eat fish to grow, but watch out for pufferfish which will hurt you badly! Also, be mindful to avoid nuclear waste barrels floating through the ocean. Grow to be the biggest shark you can be!",
+        "image": "./assets/game_images/angrysharks.jpeg",
+        "controls": "Move - [Left-Click]",
+        "tags": [""],
+        "date_added": "2023-02-28T14:01:14.476Z",
+        "developer": "Inlogic Software",
+        "iframe_url": "https://g.megamathstuff.com/angry-sharks/index.html"
+    },
+    "Aquapark.io": {
+        "description": "Aquapark.io is the ultimate water slide adventure game that takes you on a thrilling ride through multiple levels of challenging obstacles and water slides. With realistic physics and addictive gameplay, this game is perfect for anyone looking for a fun and exciting way to spend their free time. Race against your friends or other players from around the world to see who can reach the end of the slide first. Play now and experience the ultimate water slide adventure!",
+        "image": "./assets/game_images/aquaparkio.png",
+        "controls": "Move - [Drag Mouse] or [Arrow Keys] or [WASD]",
+        "tags": ["io", "multiplayer"],
+        "date_added": "2023-03-04T17:57:52.800Z",
+        "developer": "Edgar Frangulyan",
+        "iframe_url": "https://g.megamathstuff.com/aquapark-slides/index.html"
+    },
+    "Burger and Frights": {
+        "description": "Burger & Frights is a short horror game in which the player rides a bike throughout a dark forest. The game was inspired by games such as Rides with Strangers, and a certain horror movie by John Carpenter.",
+        "image": "./assets/game_images/burgerfrights.jpg",
+        "controls": "Move - [WASD]\nPause - [Escape]",
+        "tags": ["horror"],
+        "date_added": "2023-03-04T17:57:52.800Z",
+        "developer": "Donitz",
+        "iframe_url": "https://g.megamathstuff.com/burger-and-frights/index.html"
+    },
+    "Cannon Basketball 4": {
+        "description": "Cannon Basketball is a puzzle game that combines the amazing sport of basketball together with Angry-Birds-style gameplay. You control a cannon and during each level, you must fire basketballs from the cannon into the basket. The only issue is however is that the basket is blocked by a series of different obstacles such as wooden blanks and walls - you must keep firing balls to bust through any obstacle to reach the hoop.\n\n",
+        "image": "./assets/game_images/cannonbasketball.avif",
+        "controls": "Aim - [Drag Mouse]\nShoot - [Left-Click]",
+        "tags": ["sport"],
+        "date_added": "2023-03-04T17:57:52.800Z",
+        "developer": "Oleg Kuzyk",
+        "iframe_url": "https://g.megamathstuff.com/cannon-basketball-4/index.html"
     }
 }
