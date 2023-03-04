@@ -1041,7 +1041,7 @@
         "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
         "image": "./assets/game_images/geometry-dash-remastered.jpg",
         "controls": "[Space] - jump",
-        "tags": ["mobile"],
+        "tags": ["mobile", "music"],
         "date_added": "2022-09-21T01:46:18.659Z",
         "developer": "Arabask",
         "iframe_url": "https://g.megamathstuff.com/geometry-dash-remastered/index.html"
