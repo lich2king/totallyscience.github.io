@@ -100,26 +100,6 @@
     </div>
 
 
-
-    <!-- <div id="info">
-        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
-                style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
-        <p>Show your support by <span style="color: var(--accent-color);">sharing</span> Totally Science with friends
-        </p>
-        <div style="z-index=-5;">
-            <div class="sharethis-inline-share-buttons"></div>
-        </div>
-
-    </div> -->
-
-    <!-- <div id="adScroll" class="adsrc" style="text-align:center; margin-top:50px;">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div> -->
-
     <div class="adsrc adhorz" style="text-align:center;">
         <!-- Under the Game -->
         <ins class="adsbygoogle" style="display:inline-block;width:800px;height:100px"
@@ -257,7 +237,7 @@
             <li>Among Us</li>
         </ul>
         <br>
-        <h1>Totally Science Official <span>Domains</span></h1>
+        <h1>What are the Totally Science <span>Links?</span></h1>
         <ul>
             <li>definitelyscience.com</li>
             <li>literallyhistory.org</li>

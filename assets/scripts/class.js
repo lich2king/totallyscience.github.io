@@ -18,6 +18,7 @@ let verified = true;
 let games;
 
 document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
+document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
 
 window.addEventListener('load', () => {
     //Check if user is logged in
@@ -30,7 +31,6 @@ window.addEventListener('load', () => {
     console.log(userloggedIn);
     if (userloggedIn == 'true') {
         loggedIn = true;
-
 
         //check if user liked the game previously
         fetcher(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
@@ -51,33 +51,36 @@ window.addEventListener('load', () => {
     }
 
     //get game data for iframe etc
-    fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => {
-        if (response.ok) return response.json();
-        else console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
-    }).then((games) => {
-        const gameData = games[gameName];
+    fetch(`assets/games.json?date=${new Date().getTime()}`)
+        .then((response) => {
+            if (response.ok) return response.json();
+            else console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
+        })
+        .then((games) => {
+            const gameData = games[gameName];
 
-        if (gameData == null) window.location.href = '../classes';
+            if (gameData == null) window.location.href = '../classes';
 
-        document.getElementById('description').innerText = gameData.description;
-        document.getElementById('controls').innerText = gameData.controls;
-        document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
+            document.getElementById('description').innerText = gameData.description;
+            document.getElementById('controls').innerText = gameData.controls;
+            document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
 
-        if (gameData.type == 'proxy') {
-            document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
-        } else {
-            document.getElementById('iframe').src = gameData.iframe_url;
-        }
+            if (gameData.type == 'proxy') {
+                document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+            } else {
+                document.getElementById('iframe').src = gameData.iframe_url;
+            }
 
-        document.getElementById('iframe').focus();
+            document.getElementById('iframe').focus();
 
-        if (id) {
-            document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
-            console.log(gameData.iframe_url + '?id=' + id);
-        }
-    }).catch((err) => {
-        if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
-    });
+            if (id) {
+                document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
+                console.log(gameData.iframe_url + '?id=' + id);
+            }
+        })
+        .catch((err) => {
+            if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
+        });
 
     //get like count
     fetch(`assets/php/class_likes/getlikes.php?name=${gameName}`)
@@ -99,7 +102,7 @@ window.addEventListener('load', () => {
 });
 
 //Like Button
-likeButton.addEventListener('click', function() {
+likeButton.addEventListener('click', function () {
     if (loggedIn) {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
@@ -123,19 +126,19 @@ likeButton.addEventListener('click', function() {
     }
 });
 
-likeButton.addEventListener('click', function() {
+likeButton.addEventListener('click', function () {
     likeButton.classList.add('button-click');
 });
-likeButton.addEventListener('webkitAnimationEnd', function() {
+likeButton.addEventListener('webkitAnimationEnd', function () {
     likeButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function() {
+pinButton.addEventListener('click', function () {
     pinButton.classList.add('button-click');
 });
-pinButton.addEventListener('webkitAnimationEnd', function() {
+pinButton.addEventListener('webkitAnimationEnd', function () {
     pinButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function() {
+pinButton.addEventListener('click', function () {
     if (loggedIn) {
         if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
             fetcher(`assets/php/class_pin/pinclass.php?name=${gameName}`)
@@ -215,9 +218,9 @@ function suggestGames() {
         let randGame = Object.keys(games)[x];
         let sameTag = false;
 
-        currentTags.forEach(function(game) {
+        currentTags.forEach(function (game) {
             let gameTags = games[randGame]['tags'];
-            gameTags.forEach(function(currentgame) {
+            gameTags.forEach(function (currentgame) {
                 if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
@@ -243,20 +246,20 @@ function suggestGames() {
         }
     }
 
-
-    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
+    let arrowContainer =
+        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
     let gamesDiv = document.getElementById('games');
 
     gamesDiv.innerHTML += `<h1>Recommended Games</h1>`;
 
-    let row = document.createElement("div");
-    row.classList.add("horizontalCon");
-    let gamesContainer = document.createElement("div");
-    gamesContainer.classList.add("gamesCon");
+    let row = document.createElement('div');
+    row.classList.add('horizontalCon');
+    let gamesContainer = document.createElement('div');
+    gamesContainer.classList.add('gamesCon');
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
     //for each element in newGames, add the game to the horizontalCon
-    randomGames.forEach(function(game) {
+    randomGames.forEach(function (game) {
         gamesContainer.innerHTML += createGameButton(game);
     });
 
@@ -266,7 +269,7 @@ function suggestGames() {
     addArrowListeners();
 }
 
-var randomProperty = function(object) {
+var randomProperty = function (object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -296,9 +299,8 @@ window.addEventListener('click', () => {
 });
 
 function addArrowListeners() {
-
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -308,12 +310,12 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
             const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
-            leftArrow.style += "visibility: visible";
+            leftArrow.style += 'visibility: visible';
 
             // gamesCon.scrollLeft += 1100;
             const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
@@ -324,8 +326,7 @@ function addArrowListeners() {
 
 function createGameButton(game, pin) {
     const data = games[game];
-    if (data == null)
-        return '';
+    if (data == null) return '';
 
     let classlist = data.tags.join(' ');
 
