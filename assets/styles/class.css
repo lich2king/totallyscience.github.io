@@ -15,7 +15,7 @@ html {
 
 #gameframe .ad {
     width: 10vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-left: 2vw;
     margin-right: 2vw;
     border-radius: 10px;
