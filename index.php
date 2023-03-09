@@ -33,19 +33,6 @@
     <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/tutorly/banner.png);">
-                <div class="overlay">
-                    <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16"></h2>
-                    <h3>An AI powered homework assistant. Can answer any type of question and even writes essays of any
-                        grade level!</h3>
-                    <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
-                </div>
-                <button style="background-color:#ee6c4d"
-                    onclick="window.open('https:/\/tutorly.ai/?via=totallyscience', '_blank')"
-                    class="featureButton button">Do my HW 🚀</button>
-            </div>
-            <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
@@ -99,26 +86,6 @@
         </div>
     </div>
 
-
-
-    <!-- <div id="info">
-        <p><span style="max-width:40px;">&#129323;</span> To quickly return to Google Classroom, press <img
-                style="max-width:40px;" src="https://img.icons8.com/color/480/tilde-key.png"></p>
-        <p>Show your support by <span style="color: var(--accent-color);">sharing</span> Totally Science with friends
-        </p>
-        <div style="z-index=-5;">
-            <div class="sharethis-inline-share-buttons"></div>
-        </div>
-
-    </div> -->
-
-    <!-- <div id="adScroll" class="adsrc" style="text-align:center; margin-top:50px;">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div> -->
 
     <div class="adsrc adhorz" style="text-align:center;">
         <!-- Under the Game -->
@@ -257,7 +224,7 @@
             <li>Among Us</li>
         </ul>
         <br>
-        <h1>Totally Science Official <span>Domains</span></h1>
+        <h1>What are the Totally Science <span>Links?</span></h1>
         <ul>
             <li>definitelyscience.com</li>
             <li>literallyhistory.org</li>
@@ -351,7 +318,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v29"></script>
+    <script src="assets/scripts/index.js?v30"></script>
 </body>
 
 </html>

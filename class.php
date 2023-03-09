@@ -28,7 +28,7 @@
 
         <div class="gameDisplay">
             <div class="game">
-                <iframe id="iframe" src=""></iframe>
+                <iframe id="iframe" title="Totally Science Unblocked Game" src=""></iframe>
             </div>
 
             <div class="options">
@@ -103,7 +103,7 @@
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v93"></script>
+    <script src="assets/scripts/class.js?v94"></script>
 </body>
 
 </html>

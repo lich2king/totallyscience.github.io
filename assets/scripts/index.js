@@ -32,7 +32,7 @@ const autoSwitch = () => {
                 autoPlusSlides(1);
                 autoSwitch();
             }
-        }, 3000);
+        }, 2500);
     }
 };
 
@@ -53,8 +53,8 @@ let loggedIn = false;
 
 let sortObject = (obj) =>
     Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -108,26 +108,54 @@ function loadTopic() {
 async function displayGames() {
     //First check if there are any new games... if so, put them in the new games category
 
-    let categories = ["multiplayer", "car", "casual", "action", "shooting", "puzzle", "classic", "sport", "clicker", "escape", "2", "horror", "hard", "music", "flash"];
-    let categoriesNames = ["Multiplayer", "Driving", "Casual", "Action", "Shooting", "Puzzle", "Classic", "Sport", "Clicker", "Escape", "2 Player", "Horror", "Impossible", "Music", "Flash"];
+    let categories = [
+        'multiplayer',
+        'car',
+        'casual',
+        'action',
+        'shooting',
+        'puzzle',
+        'classic',
+        'sport',
+        'clicker',
+        'escape',
+        '2',
+        'horror',
+        'hard',
+        'music',
+        'flash',
+    ];
+    let categoriesNames = [
+        'Multiplayer',
+        'Driving',
+        'Casual',
+        'Action',
+        'Shooting',
+        'Puzzle',
+        'Classic',
+        'Sport',
+        'Clicker',
+        'Escape',
+        '2 Player',
+        'Horror',
+        'Impossible',
+        'Music',
+        'Flash',
+    ];
 
-    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
-
-
+    let arrowContainer =
+        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
 
     //Then for each category (except mobile and a few others), make the category container then add games
 
-
     for (let i = 0; i < categories.length; i++) {
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`;
 
-
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`
-
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
-        gamesContainer.id = (`${categories[i]}GamesCon`);
+        let row = document.createElement('div');
+        row.classList.add('horizontalCon');
+        let gamesContainer = document.createElement('div');
+        gamesContainer.classList.add('gamesCon');
+        gamesContainer.id = `${categories[i]}GamesCon`;
         //add the arrows to the horizontal Con
         row.innerHTML += arrowContainer;
 
@@ -135,13 +163,9 @@ async function displayGames() {
         gamesDiv.appendChild(row);
     }
 
-
-
-
     let newGames = [];
     let miscGames = [];
     for (let x = 0; x < Object.keys(sorted).length; x++) {
-
         let keys = Object.keys(sorted);
         const name = keys[x];
 
@@ -173,10 +197,10 @@ async function displayGames() {
     if (miscGames.length > 0) {
         gamesDiv.innerHTML += `<h1>Random Games <a href="/classes?category=random">View More</a></h1>`;
 
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
+        let row = document.createElement('div');
+        row.classList.add('horizontalCon');
+        let gamesContainer = document.createElement('div');
+        gamesContainer.classList.add('gamesCon');
         //add the arrows to the horizontal Con
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
@@ -187,13 +211,12 @@ async function displayGames() {
         gamesDiv.appendChild(row);
     }
 
-
     //liked games
     if (loggedIn) {
-        let recentRow = document.createElement("div");
-        recentRow.classList.add("horizontalCon");
-        let recentGamesContainer = document.createElement("div");
-        recentGamesContainer.classList.add("gamesCon");
+        let recentRow = document.createElement('div');
+        recentRow.classList.add('horizontalCon');
+        let recentGamesContainer = document.createElement('div');
+        recentGamesContainer.classList.add('gamesCon');
         //add the arrows to the horizontal Con
         recentRow.innerHTML += arrowContainer;
 
@@ -221,18 +244,17 @@ async function displayGames() {
             recentRow.appendChild(recentGamesContainer);
             gamesDiv.prepend(recentRow);
             console.log(recentGamesContainer);
-            console.log("here");
+            console.log('here');
             console.log(gamesDiv);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
         }
     }
 
-
     //popular games
-    let row = document.createElement("div");
-    row.classList.add("horizontalCon");
-    let gamesContainer = document.createElement("div");
-    gamesContainer.classList.add("gamesCon");
+    let row = document.createElement('div');
+    row.classList.add('horizontalCon');
+    let gamesContainer = document.createElement('div');
+    gamesContainer.classList.add('gamesCon');
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
     //for each popular game, add the game to the horizontalCon
@@ -245,7 +267,7 @@ async function displayGames() {
             for (let i = 0; i < 15; i++) {
                 const gameName = popularGames[i][0];
                 if (gameName != null) {
-                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                    gamesContainer.innerHTML += createGameButton(gameName, 'hot');
                 }
             }
         });
@@ -254,12 +276,11 @@ async function displayGames() {
     gamesDiv.prepend(row);
     gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
 
-
     if (newGames.length > 0) {
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
+        let row = document.createElement('div');
+        row.classList.add('horizontalCon');
+        let gamesContainer = document.createElement('div');
+        gamesContainer.classList.add('gamesCon');
         //add the arrows to the horizontal Con
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
@@ -329,7 +350,7 @@ function suggestGames() {
         });
 }
 
-var randomProperty = function(object) {
+var randomProperty = function (object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -351,8 +372,7 @@ function noGif(ele) {
 function createGameButton(game, pin) {
     const data = games[game];
 
-    if (data == null)
-        return '';
+    if (data == null) return '';
 
     //console.log(game);
 
@@ -451,7 +471,7 @@ var rewardTimerInterval;
 
 function startTimer(endTime) {
     clearInterval(rewardTimerInterval);
-    rewardTimerInterval = setInterval(function() {
+    rewardTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -515,7 +535,7 @@ function rewardPop() {
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    popTimerInterval = setInterval(function() {
+    popTimerInterval = setInterval(function () {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -623,12 +643,9 @@ function counter(id, start, end, duration) {
         }, step);
 }
 
-
-
 function addArrowListeners() {
-
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -638,43 +655,44 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
             const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
-            leftArrow.style += "visibility: visible";
+            leftArrow.style += 'visibility: visible';
 
             // gamesCon.scrollLeft += 1100;
             const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
             gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
         });
     }
-
-
 }
 
 function findLazyImages() {
     // Get all the lazy images
     const lazyImages = document.querySelectorAll('.lazy');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.src = entry.target.dataset.src;
-                entry.target.classList.remove('lazy');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        // Start loading the images when they are 10% visible
-        threshold: 0.1,
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.src = entry.target.dataset.src;
+                    entry.target.classList.remove('lazy');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            // Start loading the images when they are 10% visible
+            threshold: 0.1,
 
-        // Start loading the images when they are 500 pixels away from the viewport
-        rootMargin: '500px 0px'
-    });
+            // Start loading the images when they are 500 pixels away from the viewport
+            rootMargin: '500px 0px',
+        }
+    );
 
-    lazyImages.forEach(image => {
+    lazyImages.forEach((image) => {
         observer.observe(image);
     });
 }
