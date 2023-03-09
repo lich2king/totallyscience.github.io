@@ -86,11 +86,11 @@
                 </div>
                 <div class="ad">
                     <!-- Description -->
-                    <ins class="adsbygoogle descAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                    <!-- <ins class="adsbygoogle descAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
                         data-ad-slot="2299000285" data-ad-format="auto" data-full-width-responsive="true"></ins>
                     <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
         </div>
