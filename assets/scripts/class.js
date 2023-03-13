@@ -68,7 +68,7 @@ window.addEventListener('load', () => {
 
             document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
             document.querySelector('meta[name="DC.description"]').setAttribute("content", gameData.description);
-            document.querySelector('meta[name="og:description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[property="og:description"]').setAttribute("content", gameData.description);
             document.querySelector('meta[name="twitter:description"]').setAttribute("content", gameData.description);
 
             if (gameData.type == 'proxy') {
