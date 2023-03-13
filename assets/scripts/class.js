@@ -28,27 +28,6 @@ window.addEventListener('load', () => {
 
     if (res != null) userloggedIn = res['isLoggedIn'];
 
-    console.log(userloggedIn);
-    if (userloggedIn == 'true') {
-        loggedIn = true;
-
-        //check if user liked the game previously
-        fetcher(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
-            .then((response) => response.text())
-            .then((res) => {
-                if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-            });
-
-        //check if user pinned the game previously
-        fetcher(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
-            .then((response) => response.text())
-            .then((res) => {
-                if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-            });
-
-        //add to recent games list
-        fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
-    }
 
     //get game data for iframe etc
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -87,6 +66,27 @@ window.addEventListener('load', () => {
         .catch((err) => {
             if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
         });
+
+    if (userloggedIn == 'true') {
+        loggedIn = true;
+
+        //check if user liked the game previously
+        fetcher(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
+            .then((response) => response.text())
+            .then((res) => {
+                if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+            });
+
+        //check if user pinned the game previously
+        fetcher(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
+            .then((response) => response.text())
+            .then((res) => {
+                if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+            });
+
+        //add to recent games list
+        fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
+    }
 
     //get like count
     fetch(`assets/php/class_likes/getlikes.php?name=${gameName}`)
