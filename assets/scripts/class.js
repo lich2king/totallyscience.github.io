@@ -68,8 +68,8 @@ window.addEventListener('load', () => {
 
             console.log(document.querySelector('meta[name="description"]'));
             console.log(document.querySelector('meta[name="description"]').getAttribute("content"));
-
-            // document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
+            console.log(document.querySelector('meta[name="description"]').getAttribute("content"));
             // document.querySelector('meta[name="og:description"]').setAttribute("content", gameData.description);
             // document.querySelector('meta[name="twitter:description"]').setAttribute("content", gameData.description);
 
