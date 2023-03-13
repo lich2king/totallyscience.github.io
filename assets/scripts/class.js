@@ -61,9 +61,14 @@ window.addEventListener('load', () => {
 
             if (gameData == null) window.location.href = '../classes';
 
+            document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[name="og:description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[name="twitter:description"]').setAttribute("content", gameData.description);
+
             document.getElementById('description').innerText = gameData.description;
             document.getElementById('controls').innerText = gameData.controls;
-            document.getElementById('developer').innerText = `This game was created by ${gameData.developer}.`;
+            document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
+
 
             if (gameData.type == 'proxy') {
                 document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
@@ -102,7 +107,7 @@ window.addEventListener('load', () => {
 });
 
 //Like Button
-likeButton.addEventListener('click', function () {
+likeButton.addEventListener('click', function() {
     if (loggedIn) {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
@@ -126,19 +131,19 @@ likeButton.addEventListener('click', function () {
     }
 });
 
-likeButton.addEventListener('click', function () {
+likeButton.addEventListener('click', function() {
     likeButton.classList.add('button-click');
 });
-likeButton.addEventListener('webkitAnimationEnd', function () {
+likeButton.addEventListener('webkitAnimationEnd', function() {
     likeButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function () {
+pinButton.addEventListener('click', function() {
     pinButton.classList.add('button-click');
 });
-pinButton.addEventListener('webkitAnimationEnd', function () {
+pinButton.addEventListener('webkitAnimationEnd', function() {
     pinButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function () {
+pinButton.addEventListener('click', function() {
     if (loggedIn) {
         if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
             fetcher(`assets/php/class_pin/pinclass.php?name=${gameName}`)
@@ -218,9 +223,9 @@ function suggestGames() {
         let randGame = Object.keys(games)[x];
         let sameTag = false;
 
-        currentTags.forEach(function (game) {
+        currentTags.forEach(function(game) {
             let gameTags = games[randGame]['tags'];
-            gameTags.forEach(function (currentgame) {
+            gameTags.forEach(function(currentgame) {
                 if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
@@ -259,7 +264,7 @@ function suggestGames() {
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
     //for each element in newGames, add the game to the horizontalCon
-    randomGames.forEach(function (game) {
+    randomGames.forEach(function(game) {
         gamesContainer.innerHTML += createGameButton(game);
     });
 
@@ -269,7 +274,7 @@ function suggestGames() {
     addArrowListeners();
 }
 
-var randomProperty = function (object) {
+var randomProperty = function(object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -300,7 +305,7 @@ window.addEventListener('click', () => {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -310,7 +315,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
