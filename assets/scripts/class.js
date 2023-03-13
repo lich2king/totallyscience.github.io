@@ -61,14 +61,13 @@ window.addEventListener('load', () => {
 
             if (gameData == null) window.location.href = '../classes';
 
-            document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
-            document.querySelector('meta[name="og:description"]').setAttribute("content", gameData.description);
-            document.querySelector('meta[name="twitter:description"]').setAttribute("content", gameData.description);
-
             document.getElementById('description').innerText = gameData.description;
             document.getElementById('controls').innerText = gameData.controls;
             document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
+            document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[name="og:description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[name="twitter:description"]').setAttribute("content", gameData.description);
 
             if (gameData.type == 'proxy') {
                 document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
