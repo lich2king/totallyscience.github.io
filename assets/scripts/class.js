@@ -46,8 +46,8 @@ window.addEventListener('load', () => {
 
 
             let metaDesc = gameData.description;
-            if (gameData.description.length > 150) {
-                metaDesc = gameData.description.substr(0, 151);
+            if (gameData.description.length > 155) {
+                metaDesc = gameData.description.substr(0, 156);
             }
 
             document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
