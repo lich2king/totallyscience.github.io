@@ -7,7 +7,7 @@
     <?php include "assets/includes/head.php" ?>
     <title>Leaderboard - Totally Science - Free Online Unblocked Games</title>
 
-    <link rel='stylesheet' href='assets/styles/leaderboard.css?v27'>
+    <link rel='stylesheet' href='assets/styles/leaderboard.css?v28'>
 </head>
 
 <body>
