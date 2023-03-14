@@ -45,6 +45,11 @@ window.addEventListener('load', () => {
             document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
 
+            let metaDesc = gameData.description;
+            if (gameData.description.length > 150) {
+                metaDesc = gameData.description.substr(0, 151);
+            }
+
             document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
             document.querySelector('meta[name="DC.description"]').setAttribute("content", gameData.description);
             document.querySelector('meta[property="og:description"]').setAttribute("content", gameData.description);
