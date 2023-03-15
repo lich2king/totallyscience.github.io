@@ -53,8 +53,8 @@ let loggedIn = false;
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -334,15 +334,15 @@ function suggestGames() {
             document.getElementById('scisuggests').innerHTML = '';
             for (let i = 0; i < 3; i++) {
                 let game = randomGames[i];
-                let gameBtn = createGameButton(game, 'suggested');
+                let gameBtn = createGameButton(game, 'suggested', 'notlazy');
 
                 document.getElementById('scisuggests').innerHTML += gameBtn;
                 game = pinnedGames[i];
 
                 if (i <= totalPinned - 1) {
-                    gameBtn = createGameButton(game, 'pin');
+                    gameBtn = createGameButton(game, 'pin', 'notlazy');
                 } else {
-                    gameBtn = createGameButton(game, 'suggested');
+                    gameBtn = createGameButton(game, 'suggested', 'notlazy');
                 }
 
                 document.getElementById('scisuggests').innerHTML += gameBtn;
@@ -350,7 +350,7 @@ function suggestGames() {
         });
 }
 
-var randomProperty = function (object) {
+var randomProperty = function(object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -369,7 +369,7 @@ function noGif(ele) {
     if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
-function createGameButton(game, pin) {
+function createGameButton(game, pin, lazy) {
     const data = games[game];
 
     if (data == null) return '';
@@ -390,6 +390,10 @@ function createGameButton(game, pin) {
 
     let onclick = `location.href = 'class?class=${game}'`;
 
+    let backgroundImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
+    let lazyClass = "lazy";
+
+
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
     }
@@ -407,12 +411,17 @@ function createGameButton(game, pin) {
         classlist += ' all';
     }
 
+    if (lazy == "notlazy") {
+        backgroundImg = data.image;
+        lazyClass = "";
+    }
+
     if (pin != 'hidden') {
         gameBtn = `
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -422,7 +431,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -471,7 +480,7 @@ var rewardTimerInterval;
 
 function startTimer(endTime) {
     clearInterval(rewardTimerInterval);
-    rewardTimerInterval = setInterval(function () {
+    rewardTimerInterval = setInterval(function() {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -535,7 +544,7 @@ function rewardPop() {
     }
 
     var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    popTimerInterval = setInterval(function () {
+    popTimerInterval = setInterval(function() {
         var currentTime = Math.floor(Date.now() / 1000);
         var remainingTime = endTime - currentTime;
 
@@ -645,7 +654,7 @@ function counter(id, start, end, duration) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -655,7 +664,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -682,8 +691,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 
