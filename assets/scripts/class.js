@@ -50,10 +50,10 @@ window.addEventListener('load', () => {
                 metaDesc = gameData.description.substr(0, 156);
             }
 
-            document.querySelector('meta[name="description"]').setAttribute("content", gameData.description);
-            document.querySelector('meta[name="DC.description"]').setAttribute("content", gameData.description);
-            document.querySelector('meta[property="og:description"]').setAttribute("content", gameData.description);
-            document.querySelector('meta[name="twitter:description"]').setAttribute("content", gameData.description);
+            document.querySelector('meta[name="description"]').setAttribute("content", metaDesc);
+            document.querySelector('meta[name="DC.description"]').setAttribute("content", metaDesc);
+            document.querySelector('meta[property="og:description"]').setAttribute("content", metaDesc);
+            document.querySelector('meta[name="twitter:description"]').setAttribute("content", metaDesc);
 
             if (gameData.type == 'proxy') {
                 document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
