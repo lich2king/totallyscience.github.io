@@ -6,7 +6,7 @@
 
     <title>Chat - Totally Science - Free Online Unblocked Games</title>
 
-    <link rel='stylesheet' href='assets/styles/chat.css?v24'>
+    <link rel='stylesheet' href='assets/styles/chat.css?v25'>
 </head>
 
 <body>
@@ -192,6 +192,7 @@
     <script>
         window.addEventListener('load', () => {
             let menu = document.getElementById('menu');
+            let socket = io.connect(activeServer);
 
             // expects that the order/arrangement of children in menu are not altered.
             let code = menu.children[0];
@@ -210,19 +211,16 @@
 
             joinBtn.addEventListener('click', () => {
                 // join chatroom clicked
-                let socket = io.connect(activeServer);
 
                 socket.emit('join', { "username": authToken.username, "code": code });
             });
             createBtn.addEventListener('click', () => {
                 // create new chatroom clicked
-                let socket = io.connect(activeServer);
 
                 socket.emit('create', { "username": authToken.username });
             });
             joinPublicBtn.addEventListener('click', () => {
                 // join public chatroom clicked
-                let socket = io.connect(activeServer);
 
                 socket.emit('join', { "username": authToken.username, "code": 'TotallyScience' });
             });
