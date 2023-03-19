@@ -1,0 +1,65 @@
+#dispenserCon {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+}
+
+#dispenserCon img {
+    width: 400px;
+    height: 400px;
+}
+
+#dispenserCon button {
+    width: 160px;
+    padding: 4%;
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#minis {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    font-size: 1rem;
+
+    user-select: none;
+}
+
+#minis .miniCon {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.miniCon img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 20px;
+
+    /* filter: brightness(10%); */
+
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

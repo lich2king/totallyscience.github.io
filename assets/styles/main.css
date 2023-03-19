@@ -236,13 +236,11 @@ label {
     cursor: pointer;
 }
 
-
 /*#region scrollbar*/
 
 ::-webkit-scrollbar {
     width: 5px;
 }
-
 
 /* Track */
 
@@ -251,7 +249,6 @@ label {
     border-radius: 15px;
 }
 
-
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
@@ -259,16 +256,13 @@ label {
     border-radius: 10px;
 }
 
-
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
     background: #bc47c0;
 }
 
-
 /*#endregion*/
-
 
 /*#region Footer */
 
@@ -328,7 +322,6 @@ footer .bottomFoot {
     font-size: 0.8vw;
     font-family: 'Rubik';
 }
-
 
 /*#endregion*/
 
@@ -407,8 +400,8 @@ select {
     transform: scale(1.05);
 }
 
-.button>img,
-.button>span {
+.button > img,
+.button > span {
     vertical-align: middle;
 }
 
@@ -435,9 +428,7 @@ a {
     background-color: #333;
 }
 
-
 /*Tool tip!*/
-
 
 /* START TOOLTIP STYLES */
 
@@ -445,7 +436,6 @@ a {
     position: relative;
     /* opinion 1 */
 }
-
 
 /* Applies to all tooltips */
 
@@ -495,7 +485,6 @@ a {
     /* absurdity 2 */
 }
 
-
 /* Make the tooltips respond to hover */
 
 [tooltip]:hover::before,
@@ -503,14 +492,12 @@ a {
     display: block;
 }
 
-
 /* don't show empty tooltips */
 
 [tooltip='']::before,
 [tooltip='']::after {
     display: none !important;
 }
-
 
 /* FLOW: UP */
 
@@ -534,7 +521,6 @@ a {
     transform: translate(-50%, -0.5em);
 }
 
-
 /* FLOW: DOWN */
 
 [tooltip][flow^='down']::before {
@@ -553,7 +539,6 @@ a {
     transform: translate(-50%, 0.5em);
 }
 
-
 /* FLOW: LEFT */
 
 [tooltip][flow^='left']::before {
@@ -569,7 +554,6 @@ a {
     right: calc(100% + 5px);
     transform: translate(-0.5em, -50%);
 }
-
 
 /* FLOW: RIGHT */
 
@@ -587,7 +571,6 @@ a {
     transform: translate(0.5em, -50%);
 }
 
-
 /* KEYFRAMES */
 
 @keyframes tooltips-vert {
@@ -603,7 +586,6 @@ a {
         transform: translate(0, -50%);
     }
 }
-
 
 /* FX All The Things */
 
@@ -623,9 +605,7 @@ a {
     animation: tooltips-horz 300ms ease-out forwards;
 }
 
-
 /* end tool*/
-
 
 /*#region games*/
 
@@ -712,7 +692,7 @@ a {
     text-shadow: var(--dark-color) 1px 0 10px;
 }
 
-#gameDiv:hover>#gamelock {
+#gameDiv:hover > #gamelock {
     opacity: 1;
     top: -10%;
 }
@@ -770,7 +750,6 @@ a {
     height: 80px;
 }
 
-
 /*#endregion*/
 
 .horizontalCon {
@@ -816,7 +795,7 @@ a {
     pointer-events: none;
 }
 
-.horizontalCon .arrowsCon>* {
+.horizontalCon .arrowsCon > * {
     pointer-events: auto;
 }
 
@@ -832,28 +811,28 @@ a {
 
 .arrowsCon .arrowCon .arrow {
     width: 25px;
-    transition: transform .1s;
+    transition: transform 0.1s;
     /* visibility: hidden; */
     opacity: 0;
     transition: all 0.2s;
     pointer-events: none;
 }
 
-.arrowsCon .arrowCon:hover>.arrow,
+.arrowsCon .arrowCon:hover > .arrow,
 .arrowCon {
     transform: scale(1.08);
 }
 
-.horizontalCon:hover>.arrowsCon .arrowCon {
+.horizontalCon:hover > .arrowsCon .arrowCon {
     background-color: #00000067;
 }
 
-.horizontalCon:hover>.arrowsCon .arrowCon .arrow {
+.horizontalCon:hover > .arrowsCon .arrowCon .arrow {
     /* visibility: visible !important; */
     opacity: 1 !important;
 }
 
-.arrowsCon>.arrowCon:hover {
+.arrowsCon > .arrowCon:hover {
     background-color: #000000b9 !important;
 }
 
