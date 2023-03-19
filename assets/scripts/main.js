@@ -1,4 +1,4 @@
-const liveServer = 'https://api.' + location.host;
+const liveServer = 'https://api.megamathstuff.com';
 const localServer = 'http://localhost:5001';
 const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 

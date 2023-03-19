@@ -4,19 +4,19 @@ body {
     color: var(--dark-color);
 }
 
-#joinChat {
+#menu {
     margin-top: 120px;
     width: 100vw;
     text-align: center;
     margin-bottom: 40vh;
 }
 
-#joinChat button {
+#menu button {
     margin-bottom: 20px;
     padding: 15px;
 }
 
-#joinChat input {
+#menu input {
     padding: 20px;
 }
 

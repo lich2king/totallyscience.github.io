@@ -12,25 +12,15 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div id="joinChat">
-        <h1 style="color:white; font-size:25px;">THE CHATROOM IS TEMPORARILY DISABLED. WE ARE WORKING ON SCALING IT TO
-            SUPPORT MORE USERS.</h1>
-        <!--<input type="text" placeholder="Room Code...">
+    <div id="menu">
+        <input type="text" placeholder="Room Code">
         <br>
         <button class="button">Join Room</button>
         <br>
         <button class="button">Create Room</button>
         <br>
-        <button class="button">Join Public Chatroom</button>-->
+        <button class="button">Join Public Chatroom</button>
         <p id="errorText" class="error"></p>
-        <div class="adsrc" style="text-align:center; margin-top:50px;">
-            <!-- Horizontal Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
     </div>
 
     <div id="chat">
@@ -195,16 +185,58 @@
         <input style="display: none;" id="messageinput" placeholder="Message..." onclick=""></input>
         <button style="display: none;" id="leavebtn" onclick="location.reload();">Leave</button>
     </div>
-    <!--<div id="fixedad">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>-->
 
     <?php include "assets/includes/footer.php" ?>
 
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            let menu = document.getElementById('menu');
+
+            // expects that the order/arrangement of children in menu are not altered.
+            let code = menu.children[0];
+            let joinBtn = menu.children[2];
+            let createBtn = menu.children[4];
+            let joinPublicBtn = menu.children[6];
+            let error = menu.children[7];
+
+            // chat requires users to be logged in to access username data
+            if (!authToken) {
+                // redirect to login page if users are not logged in
+                error = 'you must be logged in to access chatrooms';
+
+                location.href = 'login.php';
+            }
+
+            joinBtn.addEventListener('click', () => {
+                // join chatroom clicked
+                let socket = io.connect(activeServer);
+
+                socket.emit('join', { "username": authToken.username, "code": code });
+            });
+            createBtn.addEventListener('click', () => {
+                // create new chatroom clicked
+                let socket = io.connect(activeServer);
+
+                socket.emit('create', { "username": authToken.username });
+            });
+            joinPublicBtn.addEventListener('click', () => {
+                // join public chatroom clicked
+                let socket = io.connect(activeServer);
+
+                socket.emit('join', { "username": authToken.username, "code": 'TotallyScience' });
+            });
+            
+            //handle socket events
+            socket.on('error', (data) => {
+                error.innerText = data.message;
+
+                setTimeout(() => {
+                    error.innerText = '';
+                }, 1000);
+            })
+        });
+    </script>
     <!--<script src="assets/scripts/chat.js?v52"></script>-->
 </body>
 
