@@ -44,8 +44,13 @@ gtag('config', 'G-Y14RZLW8H8');
 </script>
 
 
-<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    data-ad-client="ca-pub-3486863589051210" async="true"></script>
+<!-- <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    data-ad-client="ca-pub-3486863589051210" async="true"></script> -->
+
+    <!-- WG Universal adCode -->
+<script type="text/javascript" async>
+    !function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);
+</script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

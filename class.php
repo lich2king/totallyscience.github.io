@@ -16,11 +16,11 @@
     <div id="gameframe">
         <div class="ad">
             <div class="adsrc">
-                <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                <!-- <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
                     data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
             <!-- <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:60vh; border: none;"
                 src=""></iframe> -->
@@ -50,11 +50,11 @@
 
         <div class="ad">
             <div class="adsrc">
-                <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                <!-- <ins class="adsbygoogle sideBarAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
                     data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
             <!-- <iframe class="adframe" scrolling="no" style="display:none; width:10vw; height:50vh; border: none;"
                 src=""></iframe> -->
@@ -62,11 +62,11 @@
     </div>
     <div class="adsrc adhorz" style="text-align:center;">
         <!-- Under the Game -->
-        <ins class="adsbygoogle" style="display:inline-block;width:800px;height:100px"
+        <!-- <ins class="adsbygoogle" style="display:inline-block;width:800px;height:100px"
             data-ad-client="ca-pub-3486863589051210" data-ad-slot="3824383684"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        </script> -->
     </div>
     <!-- <iframe class="adframe" style="display:none; width:100vw; height:60vh; border: none;" src=""></iframe> -->
 
@@ -86,11 +86,11 @@
                 </div>
                 <div class="ad">
                     <!-- Description -->
-                    <ins class="adsbygoogle descAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
+                    <!-- <ins class="adsbygoogle descAd" style="display:block" data-ad-client="ca-pub-3486863589051210"
                         data-ad-slot="2299000285" data-ad-format="auto" data-full-width-responsive="true"></ins>
                     <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v94"></script>
+    <script src="assets/scripts/class.js?v105"></script>
 </body>
 
 </html>
