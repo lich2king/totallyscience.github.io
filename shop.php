@@ -16,8 +16,12 @@
 
 
     <div id="dispenserCon">
-        <img src="\assets\minis\Dispenser.gif">
-        <button class="button">1000 pts</button>
+        <video id="dispenserVid" width="320" height="176">
+            <source src="\assets\minis\Dispenser.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <!-- <img src="\assets\minis\Dispenser.gif"> -->
+        <button class="button" onclick="dispenseCharacter()">1000 pts</button>
     </div>
 
     <div id="minis">
@@ -25,69 +29,70 @@
             Common Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\!Avatar31.gif">
-            <img src="\assets\minis\!Avatar32.gif">
-            <img src="\assets\minis\!Avatar33.gif">
-            <img src="\assets\minis\!Avatar34.gif">
-            <img src="\assets\minis\!Avatar35.gif">
-            <img src="\assets\minis\!Avatar37.gif">
-            <img src="\assets\minis\!Avatar38.gif">
-            <img src="\assets\minis\!Avatar39.gif">
-            <img src="\assets\minis\!Avatar40.gif">
-            <img src="\assets\minis\!Avatar41.gif">
-            <img src="\assets\minis\!Avatar42.gif">
-            <img src="\assets\minis\!Avatar43.gif">
-            <img src="\assets\minis\!Avatar44.gif">
-            <img src="\assets\minis\!Avatar46.gif">
-            <img src="\assets\minis\!Avatar47.gif">
-            <img src="\assets\minis\!Avatar48.gif">
-            <img src="\assets\minis\!Avatar49.gif">
-            <img src="\assets\minis\!Avatar50.gif">
+            <img src="\assets\minis\JPGs\!Avatar31.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar32.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar33.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar34.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar35.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar37.jpg">
+            <img src="\assets\minis\JPGs\!Avatar38.jpg">
+            <img src="\assets\minis\JPGs\!Avatar39.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar40.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar41.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar42.jpg">
+            <img src="\assets\minis\JPGs\!Avatar43.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar44.jpg">
+            <img src="\assets\minis\JPGs\!Avatar46.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar47.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar48.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar49.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar50.jpg" class="locked">
         </div>
         <h1>
             Rare Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\!Avatar16.gif">
-            <img src="\assets\minis\!Avatar17.gif">
-            <img src="\assets\minis\!Avatar19.gif">
-            <img src="\assets\minis\!Avatar20.gif">
-            <img src="\assets\minis\!Avatar21.gif">
-            <img src="\assets\minis\!Avatar22.gif">
-            <img src="\assets\minis\!Avatar23.gif">
-            <img src="\assets\minis\!Avatar24.gif">
-            <img src="\assets\minis\!Avatar25.gif">
-            <img src="\assets\minis\!Avatar26.gif">
-            <img src="\assets\minis\!Avatar29.gif">
-            <img src="\assets\minis\!Avatar30.gif">
+            <img src="\assets\minis\JPGs\!Avatar16.jpg">
+            <img src="\assets\minis\JPGs\!Avatar19.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar20.jpg">
+            <img src="\assets\minis\JPGs\!Avatar21.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar22.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar23.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar24.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar25.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar26.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar29.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar30.jpg">
 
         </div>
         <h1>
             Epic Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\!Avatar06.gif">
-            <img src="\assets\minis\!Avatar07.gif">
-            <img src="\assets\minis\!Avatar08.gif">
-            <img src="\assets\minis\!Avatar10.gif">
-            <img src="\assets\minis\!Avatar11.gif">
-            <img src="\assets\minis\!Avatar12.gif">
-            <img src="\assets\minis\!Avatar13.gif">
-            <img src="\assets\minis\!Avatar14.gif">
-            <img src="\assets\minis\!Avatar15.gif">
+            <img src="\assets\minis\JPGs\!Avatar06.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar07.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar08.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar10.jpg">
+            <img src="\assets\minis\JPGs\!Avatar11.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar12.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar13.jpg">
+            <img src="\assets\minis\JPGs\!Avatar15.jpg" class="locked">
         </div>
         <h1>
             Legendary Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\!Avatar01.gif">
-            <img src="\assets\minis\!Avatar02.gif">
-            <img src="\assets\minis\!Avatar03.gif">
-            <img src="\assets\minis\!Avatar04.gif">
-            <img src="\assets\minis\!Avatar05.gif">
+            <img src="\assets\minis\JPGs\!Avatar01.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar02.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar03.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar04.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar05.jpg" class="locked">
         </div>
     </div>
 
+    <div id="prizeWon">
+        
+    </div>
 
     <?php #include "assets/includes/footer.php" ?>
 

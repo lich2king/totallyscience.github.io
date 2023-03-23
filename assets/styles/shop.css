@@ -5,15 +5,13 @@
     margin: auto;
     margin-top: 100px;
     border-radius: 10px;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
 }
 
-#dispenserCon img {
+#dispenserCon video {
     width: 400px;
     height: 400px;
 }
@@ -33,7 +31,6 @@
     margin-right: 50px;
     color: white;
     font-size: 1rem;
-
     user-select: none;
 }
 
@@ -42,7 +39,6 @@
     margin-right: 50px;
     color: white;
     font-size: 1rem;
-
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -51,15 +47,61 @@
 .miniCon img {
     width: 100px;
     height: 100px;
-
     border-radius: 20px;
-
-    /* filter: brightness(10%); */
-
     user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.miniCon img.locked {
+    filter: blur(3px) brightness(30%) grayscale(1);
+}
+
+#prizeWon {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 20px;
+    height: 20px;
+    -webkit-filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
+    transition: all 0.3s;
+    transform-origin: center;
+}
+
+#prizeWon.active {
+    width: 400px;
+    height: 400px;
+    animation: treasure-animation 1s ease-in-out infinite;
+}
+
+#prizeWon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    outline: solid 1px rgb(255, 252, 47);
+}
+
+@keyframes treasure-animation {
+    0% {
+        -webkit-filter: drop-shadow(0px 0px 30px var(--accent-color));
+        transform: translate(50%, -50%) rotate(13deg);
+    }
+    50% {
+        -webkit-filter: drop-shadow(0px 0px 55px var(--accent-color));
+        transform: translate(50%, -50%) rotate(-13deg);
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 30px var(--accent-color));
+        transform: translate(50%, -50%) rotate(13deg);
+    }
 }
