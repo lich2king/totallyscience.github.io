@@ -91,7 +91,6 @@
     </div>
 
     <div id="prizeWon">
-        
     </div>
 
     <?php #include "assets/includes/footer.php" ?>

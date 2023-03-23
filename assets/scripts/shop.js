@@ -14,7 +14,7 @@ document.getElementById('dispenserVid').addEventListener('ended', myHandler, fal
 function myHandler(e) {
     if (rollingDie) {
         document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/!Avatar31.jpg'>`;
-        document.getElementById('prizeWonImg').classList.add('active');
+        document.getElementById('prizeWon').classList.add('active');
     }
 }
 
