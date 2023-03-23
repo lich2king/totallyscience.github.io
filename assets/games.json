@@ -574,6 +574,7 @@
         "tags": ["car"],
         "date_added": "2022-01-05T23:45:35.270Z",
         "developer": "Ilya.kaminetsky",
+        "type": "proxy",
         "iframe_url": "https://v6p9d9t4.ssl.hwcdn.net/html/1792221/ItchIO/index.html"
     },
     "Cube Dodge": {
