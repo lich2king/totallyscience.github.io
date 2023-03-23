@@ -1,8 +1,4 @@
-
-            function joinChatroom(code) {
-
-
-                                
+  
 
                                 setInterval(() => {
                                     try {
