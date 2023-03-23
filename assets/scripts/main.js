@@ -11,8 +11,6 @@ function fetcher(endpoint, options) {
     if (authToken) {
         updatedOptions.headers = {
             ...(options ? options.headers : null),
-            // x-access-token is for node version
-            //'x-access-token': authToken,
             // not sure if this actually works as expected -- hopefully reduces preflight requests?
             'Access-Control-Max-Age': 86400,
             'Content-Type': 'application/json',

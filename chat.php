@@ -20,7 +20,7 @@
         <button class="button">Create Room</button>
         <br>
         <button class="button">Join Public Chatroom</button>
-        <p id="errorText" class="error"></p>
+        <p id="error" class="error"></p>
     </div>
 
     <div id="chat">
@@ -192,7 +192,7 @@
         window.addEventListener('load', () => {
             //document.getElementById('chatnav').classList.add('selected');
 
-            let menu = document.getElementById('menu');
+            const menu = document.getElementById('menu');
 
             // expects that the order/arrangement of children in menu are not altered.
             const messageList = document.getElementById('messages');
@@ -270,10 +270,17 @@
             });
         });
         async function joinRoom(inputCode, mode) {
+            const menu = document.getElementById('menu');
+
+            const messageList = document.getElementById('messages');
+            const messageInput = document.getElementById('messageInput');
+            const leaveBtn = document.getElementById('leavebtn');
+            const error = menu.children[7];
+
             // hide menu while loading
             menu.style.display = 'none';
 
-            let res = await fetcher(`${activeServer}/chat/${mode}`, { body: JSON.stringify({ roomCode: inputCode })});
+            let res = await fetcher(`${activeServer}/chat/${mode}`, { body: { roomCode: inputCode }});
 
             // alert user of any errors
             if (res.status == 400) {
@@ -286,10 +293,10 @@
                 let json = res.json();
 
                 // set last room entered in localstorage to populate values on page reload
-                localStorage.setItem('chatRoom', roomCode);
+                localStorage.setItem('chatRoom', inputCode);
 
                 // set displayed room code to the joined room
-                messageList.children[0].children[1].textContent = roomCode;
+                messageList.children[0].children[1].textContent = inputCode;
                 messageList.children[0].children[0].textContent = 'Room Code:';
 
                 // hide footer
