@@ -221,11 +221,11 @@
             
             joinBtn.addEventListener('click', async () => {
                 // join chatroom clicked
-                joinRoom(code, 'join');
+                joinRoom(code.value, 'join');
             });
             createBtn.addEventListener('click', async () => {
                 // create new chatroom clicked
-                joinRoom(code, 'create');
+                joinRoom(code.value, 'create');
             });
             joinPublicBtn.addEventListener('click', async () => {
                 // join public chatroom clicked
@@ -240,7 +240,7 @@
                     finalInput = messageInput.value.replace("'", '"');
                     messageInput.value = '';
 
-                    let res = await fetcher(`${activeServer}/chat/send`, { body: { roomCode: code, message: finalInput }});
+                    let res = await fetcher(`${activeServer}/chat/send`, { body: { roomCode: code.value, message: finalInput }});
 
                     if (res.status == 400) {
                         let errorMessage = await res.text();
@@ -326,7 +326,7 @@
             }
 
             window.addEventListener('beforeunload', () => {
-                fetcher(`${activeServer}/chat/leave`, { body: { roomCode: code }});
+                fetcher(`${activeServer}/chat/leave`, { body: { roomCode: code.value }});
             });
         }
 
