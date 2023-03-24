@@ -249,8 +249,12 @@
                     } else if (res.status == 200) {
                         let json = await res.json();
 
-                        //reverse order of messages
-                        json.messages.reverse();
+                        if (json.messages) {
+                            //reverse order of messages
+                            json.messages.reverse();
+                        } else {
+                            messageList.children[3].children[1] = `<span3 style="color: #333">No messages have been sent in this chatroom yet.</span3>`;
+                        }
 
                         for (msg in json.messages) {
                             let curMessage = json.messages[msg];
@@ -299,8 +303,12 @@
                 // hide footer
                 document.querySelector('footer').style.display = 'none';
 
-                //reverse order of messages
-                json.messages.reverse();
+                if (json.messages) {
+                    //reverse order of messages
+                    json.messages.reverse();
+                } else {
+                    messageList.children[3].children[1] = `<span3 style="color: #333">No messages have been sent in this chatroom yet.</span3>`;
+                }
 
                 for (msg in json.messages) {
                     let curMessage = json.messages[msg];
