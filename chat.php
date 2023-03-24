@@ -260,11 +260,11 @@
                             let curMessage = json.messages[msg];
 
                             // each user has a unique color in the chatroom
-                            let color = json.users[curMessage[0].name].color;
+                            let color = json.users[curMessage.name].color;
 
                             // add user message to list
-                            messageList.children[msg + 1].children[0].textContent = curMessage[0].name;
-                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage[1])}</span3>${HTMLUtils.escape(': ' + curMessage[2])}`;
+                            messageList.children[msg + 1].children[0].textContent = curMessage.name;
+                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
                         }
                     }
                 }
@@ -314,11 +314,11 @@
                     let curMessage = json.messages[msg];
 
                     // each user has a unique color in the chatroom
-                    let color = json.users[curMessage[0].name].color;
+                    let color = json.users[curMessage.name].color;
 
                     // add user message to list
-                    messageList.children[msg + 1].children[0].textContent = curMessage[0].name;
-                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage[1])}</span3>${HTMLUtils.escape(': ' + curMessage[2])}`;
+                    messageList.children[msg + 1].children[0].textContent = curMessage.name;
+                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
                 }
 
                 messageInput.style.display = 'block';
