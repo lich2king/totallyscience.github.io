@@ -29,19 +29,19 @@
             Common Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar31.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar31.jpg" >
             <img src="\assets\minis\JPGs\!Avatar32.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar33.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar34.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar35.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar37.jpg">
-            <img src="\assets\minis\JPGs\!Avatar38.jpg">
+            <img src="\assets\minis\JPGs\!Avatar37.jpg" class="locked">
+            <img src="\assets\minis\JPGs\!Avatar38.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar39.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar40.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar41.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar42.jpg">
+            <img src="\assets\minis\JPGs\!Avatar42.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar43.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar44.jpg">
+            <img src="\assets\minis\JPGs\!Avatar44.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar46.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar47.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar48.jpg" class="locked">
@@ -52,9 +52,9 @@
             Rare Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar16.jpg">
+            <img src="\assets\minis\JPGs\!Avatar16.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar19.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar20.jpg">
+            <img src="\assets\minis\JPGs\!Avatar20.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar21.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar22.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar23.jpg" class="locked">
@@ -62,7 +62,7 @@
             <img src="\assets\minis\JPGs\!Avatar25.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar26.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar29.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar30.jpg">
+            <img src="\assets\minis\JPGs\!Avatar30.jpg" class="locked">
 
         </div>
         <h1>
@@ -72,10 +72,10 @@
             <img src="\assets\minis\JPGs\!Avatar06.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar07.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar08.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar10.jpg">
+            <img src="\assets\minis\JPGs\!Avatar10.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar11.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar12.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar13.jpg">
+            <img src="\assets\minis\JPGs\!Avatar13.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar15.jpg" class="locked">
         </div>
         <h1>
@@ -89,7 +89,6 @@
             <img src="\assets\minis\JPGs\!Avatar05.jpg" class="locked">
         </div>
     </div>
-
     <div id="prizeWon">
     </div>
 
