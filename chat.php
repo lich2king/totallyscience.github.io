@@ -247,7 +247,7 @@
 
                         alert(errorMessage);
                     } else if (res.status == 200) {
-                        let json = res.json();
+                        let json = await res.json();
 
                         //reverse order of messages
                         json.messages.reverse();
@@ -287,7 +287,7 @@
                     error.innerText = '';
                 }, 1000);
             } else if (res.status == 200) {
-                let json = res.json();
+                let json = await res.json();
 
                 // set last room entered in localstorage to populate values on page reload
                 localStorage.setItem('chatRoom', inputCode);
