@@ -260,7 +260,7 @@
                             let curMessage = json.messages[msg];
 
                             // each user has a unique color in the chatroom
-                            let color = json.users[curMessage[0]].color;
+                            let color = json.users[curMessage[0].name].color;
 
                             // add user message to list
                             messageList.children[msg + 1].children[0].textContent = curMessage[0];
