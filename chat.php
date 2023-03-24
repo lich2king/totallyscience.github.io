@@ -182,7 +182,7 @@
                 <span2></span2>
             </li>
         </ul>
-        <input style="display: none;" id="messageInput" placeholder="Message..." onclick=""></input>
+        <input style="display: none;" id="messageinput" placeholder="Message..." onclick=""></input>
         <button style="display: none;" id="leavebtn" onclick="location.reload();">Leave</button>
     </div>
 
@@ -196,7 +196,7 @@
 
             // expects that the order/arrangement of children in menu are not altered.
             const messageList = document.getElementById('messages');
-            const messageInput = document.getElementById('messageInput');
+            const messageInput = document.getElementById('messageinput');
             const leaveBtn = document.getElementById('leavebtn');
             const code = menu.children[0];
             const joinBtn = menu.children[2];
@@ -253,7 +253,7 @@
                             //reverse order of messages
                             json.messages.reverse();
                         } else {
-                            messageList.children[3].children[1] = `<span3 style="color: #333">No messages have been sent in this chatroom yet.</span3>`;
+                            messageList.children[3].children[1].innerHTML = `<span3 style="color: #333">No messages have been sent in this chatroom yet.</span3>`;
                         }
 
                         for (msg in json.messages) {
@@ -274,7 +274,7 @@
             const menu = document.getElementById('menu');
 
             const messageList = document.getElementById('messages');
-            const messageInput = document.getElementById('messageInput');
+            const messageInput = document.getElementById('messageinput');
             const leaveBtn = document.getElementById('leavebtn');
             const error = menu.children[7];
 
