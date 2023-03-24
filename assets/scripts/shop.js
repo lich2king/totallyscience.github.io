@@ -41,6 +41,7 @@ var rollingDie = false;
 
 async function dispenseCharacter() {
     if (checkLoggedIn()) {
+        console.log(getPoints());
         if (await getPoints() >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
@@ -75,9 +76,7 @@ async function getPoints() {
             if (!isNaN(points)) {
                 return parseInt(points);
             }
-            console.log("HEre");
         });
-
 }
 
 function counter(id, start, end, duration) {
