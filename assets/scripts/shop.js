@@ -18,9 +18,58 @@ function myHandler(e) {
     }
 }
 
+
+
+
+
+
+//Everyone starts with first tomato mini
+//If logged in:
+//If you click the 1000pts button:
+//If you have enough points:
+//Play take away points animation, but don't take it away in php yet
+//Pick 1-10
+//40% common, 30% rare, 20% epic, 10% legendary
+//From the rarity, pick a random character
+//Check if the character is taken
+//If if it, pick a new one from the beginning
+//Else, unlock it in the css and play the prize animation
+//Take away points in the same php script that unlocks it
+
 var rollingDie = false;
 
+
 function dispenseCharacter() {
+    if (checkLoggedIn()) {
+        if (getPoints() >= 1000) {
+
+        } else {
+            alert("Not enough points!");
+        }
+    }
     rollingDie = true;
     playVid();
+}
+
+function checkLoggedIn() {
+    res = JSON.parse(authToken);
+
+    if (res != null) {
+        const isLoggedIn = res['isLoggedIn'];
+
+        if (isLoggedIn == 'true') {
+            return true;
+        }
+    }
+    return false;
+}
+
+function getPoints() {
+    fetcher(`assets/php/points/checkpoints.php`)
+        .then((points) => points.text())
+        .then((points) => {
+            if (points.startsWith('error')) location.reload();
+            return points;
+        });
+
 }
