@@ -41,7 +41,7 @@ var rollingDie = false;
 
 async function dispenseCharacter() {
     if (checkLoggedIn()) {
-        console.log(getPoints());
+        console.log(await getPoints());
         if (await getPoints() >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
