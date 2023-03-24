@@ -68,7 +68,7 @@ function checkLoggedIn() {
 }
 
 async function getPoints() {
-    fetcher(`assets/php/points/checkpoints.php`)
+    await fetcher(`assets/php/points/checkpoints.php`)
         .then((points) => points.text())
         .then((points) => {
             console.log(points);
