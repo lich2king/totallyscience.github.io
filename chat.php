@@ -218,10 +218,6 @@
             // settings colors for each user is currently done on the backend so this is unused
             // const randomColor = () =>
             //     Math.floor(Math.random() * 16777215).toString(16);
-
-            window.addEventListener('beforeunload', () => {
-                fetcher(`${activeServer}/chat/leave`, { body: JSON.stringify({ roomCode: code })});
-            });
             
             joinBtn.addEventListener('click', async () => {
                 // join chatroom clicked
@@ -235,6 +231,7 @@
                 // join public chatroom clicked
                 joinRoom('TotallyScience', 'join');
             });
+            
             messageInput.addEventListener('keyup', async (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
@@ -319,6 +316,10 @@
                 messageInput.style = '';
                 leavebtn.style = '';
             }
+
+            window.addEventListener('beforeunload', () => {
+                fetcher(`${activeServer}/chat/leave`, { body: JSON.stringify({ roomCode: code })});
+            });
         }
 
         let HTMLUtils = new (() => {
