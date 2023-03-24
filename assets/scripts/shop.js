@@ -70,6 +70,7 @@ async function getPoints() {
     fetcher(`assets/php/points/checkpoints.php`)
         .then((points) => points.text())
         .then((points) => {
+            console.log(points);
             if (points.startsWith('error')) location.reload();
             if (!isNaN(points)) {
                 return parseInt(points);
