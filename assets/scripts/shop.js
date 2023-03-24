@@ -71,7 +71,9 @@ async function getPoints() {
         .then((points) => points.text())
         .then((points) => {
             if (points.startsWith('error')) location.reload();
-            return points;
+            if (!isNaN(points)) {
+                return parseInt(points);
+            }
         });
 
 }
