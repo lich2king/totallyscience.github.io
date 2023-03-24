@@ -37,7 +37,7 @@ function myHandler(e) {
 //Take away points in the same php script that unlocks it
 
 var rollingDie = false;
-
+var tspoints = 0;
 
 async function dispenseCharacter() {
     if (checkLoggedIn()) {
@@ -76,7 +76,7 @@ async function getPoints() {
             console.log(points);
             if (points.startsWith('error')) location.reload();
             if (!isNaN(points)) {
-                var tspoints = parseInt(points);
+                tspoints = parseInt(points);
             }
         });
 }
