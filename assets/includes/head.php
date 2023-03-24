@@ -48,7 +48,7 @@
 
 <!-- WG Universal adCode -->
 <script type="text/javascript" async>
-    if (location.pathname != '/chat') {
+    if (location.pathname != '/chat' && location.pathname != '/chat.php') {
         !function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);
     }
 </script>
