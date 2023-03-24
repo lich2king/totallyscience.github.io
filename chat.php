@@ -247,20 +247,20 @@
 
                         alert(errorMessage);
                     } else if (res.status == 200) {
-                        let json = res.json();
+                        let json = await res.json();
 
                         //reverse order of messages
-                        json.reverse();
+                        json.messages.reverse();
 
                         for (msg in json.messages) {
-                            let curMessage = json.message[msg];
+                            let curMessage = json.messages[msg];
 
                             // each user has a unique color in the chatroom
                             let color = json.users[curMessage[0]].color;
 
                             // add user message to list
-                            messageList.children[msg + 1].children[0].textContent = curmsg[0];
-                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curmsg[1])}</span3>${HTMLUtils.escape(': ' + curmsg[2])}`;
+                            messageList.children[msg + 1].children[0].textContent = curMessage[0];
+                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage[1])}</span3>${HTMLUtils.escape(': ' + curMessage[2])}`;
                         }
                     }
                 }
@@ -287,7 +287,7 @@
                     error.innerText = '';
                 }, 1000);
             } else if (res.status == 200) {
-                let json = res.json();
+                let json = await res.json();
 
                 // set last room entered in localstorage to populate values on page reload
                 localStorage.setItem('chatRoom', inputCode);
@@ -300,21 +300,21 @@
                 document.querySelector('footer').style.display = 'none';
 
                 //reverse order of messages
-                json.reverse();
+                json.messages.reverse();
 
                 for (msg in json.messages) {
-                    let curMessage = json.message[msg];
+                    let curMessage = json.messages[msg];
 
                     // each user has a unique color in the chatroom
                     let color = json.users[curMessage[0]].color;
 
                     // add user message to list
-                    messageList.children[msg + 1].children[0].textContent = curmsg[0];
-                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curmsg[1])}</span3>${HTMLUtils.escape(': ' + curmsg[2])}`;
+                    messageList.children[msg + 1].children[0].textContent = curMessage[0];
+                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage[1])}</span3>${HTMLUtils.escape(': ' + curMessage[2])}`;
                 }
 
-                messageInput.style.display = '';
-                leavebtn.style.display = '';
+                messageInput.style.display = 'block';
+                leaveBtn.style.display = 'block';
             }
 
             window.addEventListener('beforeunload', () => {
