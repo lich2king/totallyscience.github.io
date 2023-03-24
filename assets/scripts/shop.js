@@ -44,12 +44,13 @@ async function dispenseCharacter() {
         if (await getPoints() >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+            playVid();
+            rollingDie = true;
         } else {
             alert("Not enough points!");
         }
     }
-    rollingDie = true;
-    playVid();
+
 }
 
 function checkLoggedIn() {
