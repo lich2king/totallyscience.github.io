@@ -240,7 +240,7 @@
                     finalInput = messageInput.value.replace("'", '"');
                     messageInput.value = '';
 
-                    let res = await fetcher(`${activeServer}/chat/send`, { body: JSON.stringify({ roomCode: code, message: finalInput })});
+                    let res = await fetcher(`${activeServer}/chat/send`, { body: { roomCode: code, message: finalInput }});
 
                     if (res.status == 400) {
                         let errorMessage = await res.text();
@@ -326,7 +326,7 @@
             }
 
             window.addEventListener('beforeunload', () => {
-                fetcher(`${activeServer}/chat/leave`, { body: JSON.stringify({ roomCode: code })});
+                fetcher(`${activeServer}/chat/leave`, { body: { roomCode: code }});
             });
         }
 
