@@ -313,8 +313,8 @@
                     messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curmsg[1])}</span3>${HTMLUtils.escape(': ' + curmsg[2])}`;
                 }
 
-                messageInput.style.display = '';
-                leavebtn.style.display = '';
+                messageInput.style.display = 'block';
+                leaveBtn.style.display = 'block';
             }
 
             window.addEventListener('beforeunload', () => {
