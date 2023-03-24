@@ -24,6 +24,8 @@
         </div>
     </div>
 
+    <p style="text-align: center;">powered by <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">ultraviolet</a></p>
+
     <script src="assets/scripts/main.js?v36"></script>
     <script src="assets/scripts/app.js?9"></script>
 </body>
