@@ -41,8 +41,8 @@ var rollingDie = false;
 
 async function dispenseCharacter() {
     if (checkLoggedIn()) {
-        console.log(await getPoints());
-        if (await getPoints() >= 1000) {
+        console.log(tspoints);
+        if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
             playVid();
@@ -67,16 +67,17 @@ function checkLoggedIn() {
     return false;
 }
 
+
+getPoints();
 async function getPoints() {
-    await fetcher(`assets/php/points/checkpoints.php`)
+    fetcher(`assets/php/points/checkpoints.php`)
         .then((points) => points.text())
         .then((points) => {
             console.log(points);
             if (points.startsWith('error')) location.reload();
             if (!isNaN(points)) {
-                return parseInt(points);
+                var tspoints = parseInt(points);
             }
-            return "l";
         });
 }
 
