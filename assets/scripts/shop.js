@@ -75,6 +75,7 @@ async function getPoints() {
             if (!isNaN(points)) {
                 return parseInt(points);
             }
+            console.log("HEre");
         });
 
 }
