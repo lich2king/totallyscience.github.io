@@ -12,19 +12,12 @@
     <?php include "assets/includes/navbar.php" ?>
 
     <div style="display: flex;">
-        <div style="margin-top: 55px; overflow: hidden; height: 91vh; width: 85vw;">
+        <div style="margin-top: 55px; overflow: hidden; height: 90vh; width: 100vw;">
             <iframe class="iframeloader" id="app_frame" style="border: none; position: relative; z-index: 2; overflow: hidden;" width=100% height=100% src=""></iframe>
-        </div>
-        <div style="margin-top: 55px; overflow: hidden; height: 91vh; width: 15vw;">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="3780993293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
     </div>
 
-    <p style="text-align: center;">powered by <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">ultraviolet</a></p>
+    <p style="text-align: center; color: whitesmoke;">powered by <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">ultraviolet</a></p>
 
     <script src="assets/scripts/main.js?v36"></script>
     <script src="assets/scripts/app.js?9"></script>
