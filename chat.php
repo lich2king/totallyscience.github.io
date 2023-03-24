@@ -250,10 +250,10 @@
                         let json = res.json();
 
                         //reverse order of messages
-                        json.reverse();
+                        json.messages.reverse();
 
                         for (msg in json.messages) {
-                            let curMessage = json.message[msg];
+                            let curMessage = json.messages[msg];
 
                             // each user has a unique color in the chatroom
                             let color = json.users[curMessage[0]].color;
