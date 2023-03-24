@@ -259,8 +259,8 @@
                             let color = json.users[curMessage[0]].color;
 
                             // add user message to list
-                            messageList.children[msg + 1].children[0].textContent = curmsg[0];
-                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curmsg[1])}</span3>${HTMLUtils.escape(': ' + curmsg[2])}`;
+                            messageList.children[msg + 1].children[0].textContent = curMessage[0];
+                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage[1])}</span3>${HTMLUtils.escape(': ' + curMessage[2])}`;
                         }
                     }
                 }
@@ -309,8 +309,8 @@
                     let color = json.users[curMessage[0]].color;
 
                     // add user message to list
-                    messageList.children[msg + 1].children[0].textContent = curmsg[0];
-                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curmsg[1])}</span3>${HTMLUtils.escape(': ' + curmsg[2])}`;
+                    messageList.children[msg + 1].children[0].textContent = curMessage[0];
+                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage[1])}</span3>${HTMLUtils.escape(': ' + curMessage[2])}`;
                 }
 
                 messageInput.style.display = 'block';
