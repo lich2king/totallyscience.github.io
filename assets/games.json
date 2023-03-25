@@ -148,7 +148,7 @@
         "tags": ["multiplayer"],
         "date_added": "22022-09-04T22:35:18.770Z",
         "developer": "lax1dude",
-        "iframe_url": "./assets/games/eaglercraft/index.html"
+        "iframe_url": "https://g.megamathstuff.com/eaglercraft/index.html"
     },
 
     "Factory Balls": {
@@ -351,7 +351,7 @@
         "tags": ["misc", "fighting", "action"],
         "date_added": "2023-02-24T05:05:26.223Z",
         "developer": "Nintendo",
-        "iframe_url": "./assets/games/streetfighter.html"
+        "iframe_url": "https://g.megamathstuff.com/streetfighter.html"
     },
 
     "Solitaire": {
