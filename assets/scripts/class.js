@@ -20,7 +20,7 @@ let games;
 document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
 document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
     //Check if user is logged in
     res = JSON.parse(authToken);
 
@@ -83,11 +83,9 @@ window.addEventListener('load', () => {
             });
 
         //check if user pinned the game previously
-        fetcher(`assets/php/class_pin/checkpinned.php?name=${gameName}`)
-            .then((response) => response.text())
-            .then((res) => {
-                if (res == 'pinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-            });
+        let res = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
+
+        if (res.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
 
         //add to recent games list
         fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
