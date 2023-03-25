@@ -85,6 +85,10 @@
     animation: treasure-animation 1s ease-in-out infinite;
 }
 
+#prizeWon.slideAway {
+    margin-top: 100vh;
+}
+
 #prizeWon img {
     width: 100%;
     height: 100%;

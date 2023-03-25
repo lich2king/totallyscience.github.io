@@ -1,5 +1,4 @@
-var vid = document.getElementById("dispenserVid");
-
+var vid = document.getElementById('dispenserVid');
 
 function playVid() {
     vid.play();
@@ -13,15 +12,11 @@ document.getElementById('dispenserVid').addEventListener('ended', myHandler, fal
 
 function myHandler(e) {
     if (rollingDie) {
+        characterFullScreen = true;
         document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/!Avatar31.jpg'>`;
         document.getElementById('prizeWon').classList.add('active');
     }
 }
-
-
-
-
-
 
 //Everyone starts with first tomato mini
 //If logged in:
@@ -38,6 +33,7 @@ function myHandler(e) {
 
 var rollingDie = false;
 var tspoints = 0;
+var characterFullScreen = false;
 
 async function dispenseCharacter() {
     if (checkLoggedIn()) {
@@ -48,10 +44,9 @@ async function dispenseCharacter() {
             playVid();
             rollingDie = true;
         } else {
-            alert("Not enough points!");
+            alert('Not enough points!');
         }
     }
-
 }
 
 function checkLoggedIn() {
@@ -66,7 +61,6 @@ function checkLoggedIn() {
     }
     return false;
 }
-
 
 getPoints();
 async function getPoints() {
@@ -95,3 +89,9 @@ function counter(id, start, end, duration) {
             }
         }, step);
 }
+
+document.body.addEventListener('click', function (evt) {
+    if (characterFullScreen) {
+        document.getElementById('prizeWon').classList.add('slideAway');
+    }
+});
