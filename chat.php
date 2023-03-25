@@ -281,9 +281,6 @@
             const leaveBtn = document.getElementById('leavebtn');
             const error = menu.children[7];
 
-            // hide menu while loading
-            menu.style.display = 'none';
-
             let res = await fetcher(`${activeServer}/chat/${mode}`, { body: { roomCode: inputCode }});
 
             // alert user of any errors
@@ -298,6 +295,9 @@
 
                 // set last room entered in localstorage to populate values on page reload
                 localStorage.setItem('chatRoom', inputCode);
+
+                // hide menu while loading
+                menu.style.display = 'none';
 
                 // set displayed room code to the joined room
                 messageList.children[0].children[1].textContent = inputCode;
