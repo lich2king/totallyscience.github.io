@@ -14,7 +14,6 @@
             left: 50%;
             transform: translate(-50%);
             top: 80px;
-            width: 800px;
         }
 
         #apps {
