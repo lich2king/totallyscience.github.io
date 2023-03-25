@@ -1,11 +1,8 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php include "assets/includes/head.php" ?>
-
 </head>
 
 <body>

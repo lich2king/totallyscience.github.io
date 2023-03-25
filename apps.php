@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,22 +7,21 @@
     <link rel='stylesheet' href='assets/styles/apps.css?v2'>
 
     <title>Apps - Totally Science - Free Online Unblocked Games</title>
+
+    <style>
+        .tn_banner {
+            text-align: center;
+            font-size: 15pt;
+        }
+    </style>
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
+    <a class="tn_banner" href="https://tnvpn.com/">Check out Titanium Network's VPN to browse the internet without censorship.</a>
 
     <div id="apps"></div>
-
-    <div class="adsrc" style="text-align:center; margin-top:50px; margin-bottom:50px;">
-        <!-- Horizontal Ad -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-            data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
 
     <?php include "assets/includes/footer.php" ?>
 
