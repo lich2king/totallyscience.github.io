@@ -446,24 +446,23 @@ function createGameButton(game, pin, lazy) {
 //if it is over, check database
 //if database says it is not over, set local storage to correct time and keep counting
 
-function checkReward() {
+async function checkReward() {
     setRewardDayBar('initial');
     if (loggedIn) {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         // return out of function and start timer if the saved time has not been passed
 
-        fetcher(`assets/php/points/checkrewardtimer.php`)
-            .then((dbRewardTime) => dbRewardTime.text())
-            .then((dbRewardTime) => {
-                if (currentTime > dbRewardTime) {
-                    rewardPop();
-                } else if (dbRewardTime == 0) {
-                    rewardPop();
-                } else {
-                    startTimer(dbRewardTime);
-                }
-            });
+        let res = await fetcher(`${activeServer}/points/check`);
+        let dbRewardTime = parseInt(await res.text());
+
+        if (currentTime > dbRewardTime) {
+            rewardPop();
+        } else if (dbRewardTime == 0) {
+            rewardPop();
+        } else {
+            startTimer(dbRewardTime);
+        }
     } else {
         if (localStorage.getItem('ignoreReward') != null) {
             if (!localStorage.getItem('ignoreReward')) {
@@ -581,12 +580,11 @@ function claimReward() {
         });
 }
 
-function resetRewardTimer() {
-    fetcher(`assets/php/points/checkrewardtimer.php`)
-        .then((dbRewardTime) => dbRewardTime.text())
-        .then((dbRewardTime) => {
-            startTimer(dbRewardTime);
-        });
+async function resetRewardTimer() {
+    let res = await fetcher(`${activeServer}/points/check`);
+    let dbRewardTime = parseInt(await res.text());
+
+    startTimer(dbRewardTime);
 }
 
 function setRewardDayBar(mode) {
