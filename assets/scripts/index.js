@@ -453,7 +453,7 @@ async function checkReward() {
 
         // return out of function and start timer if the saved time has not been passed
 
-        let res = await fetcher(`${activeServer}/points/check`);
+        let res = await fetcher(`${activeServer}/points/timer/check`);
         let dbRewardTime = parseInt(await res.text());
 
         if (currentTime > dbRewardTime) {
@@ -581,7 +581,7 @@ function claimReward() {
 }
 
 async function resetRewardTimer() {
-    let res = await fetcher(`${activeServer}/points/check`);
+    let res = await fetcher(`${activeServer}/points/timer/check`);
     let dbRewardTime = parseInt(await res.text());
 
     startTimer(dbRewardTime);
