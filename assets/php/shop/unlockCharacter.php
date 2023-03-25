@@ -37,7 +37,6 @@
 
   
   $mini = getMini();
-  echo("madee");
   echo("here");
   //take away 1000, update their profile to have the new character... then return the character
   
@@ -77,9 +76,13 @@
         $findMini = $Common[$item];
     }
 
+    echo($findMini);
+    die("madee");
+
     $query = "SELECT `Minis` FROM `accounts` WHERE id='$userid'";
     $result = mysqli_query($conn, $query);
     $result = ($result -> fetch_row())[0];
+    
 
     if (!function_exists('str_contains')) {
         function str_contains( $haystack, $needle) {
