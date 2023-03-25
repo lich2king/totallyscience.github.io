@@ -35,8 +35,9 @@
   $Rare = array("rarestormcloud","raresoccer","rarepopsicle","raremushroom","rareketchup","rareheart","rareflower","rearefire","raredonut","rarecup","rarecoffee","rarebooze");
   $Common = array("comapple","comberry","combread", "comcarrot","comdragonfruit","comegg", "comlemon","commilk","compeach", "compear","comavocado","compineapple", "compizza","comprickle","comstrawberry", "comstrawberrymale","comtomato","comwatermellon");
 
-  echo("madee");
+  
   $mini = getMini();
+  echo("madee");
   echo("here");
   //take away 1000, update their profile to have the new character... then return the character
   
