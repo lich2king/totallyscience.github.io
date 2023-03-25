@@ -147,19 +147,19 @@ pinButton.addEventListener('click', function() {
 pinButton.addEventListener('webkitAnimationEnd', function() {
     pinButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function() {
+pinButton.addEventListener('click', async () => {
     if (loggedIn) {
-        if (pinButtonImg.getAttribute('src') == 'assets/images/icons/pinoutline.png') {
-            fetcher(`assets/php/class_pin/pinclass.php?name=${gameName}`)
-                .then((response) => response.text())
-                .then((res) => {
-                    if (res == 'successpinned') pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-                    else if (res == 'maxpins') swal('You have pinned the max amount of games (3).');
-                });
-        } else {
-            fetcher(`assets/php/class_pin/unpinclass.php?name=${gameName}`);
-            pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
+        let res = await fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
+
+        if (res.status == 400) {
+            swal('You have pinned the max amount of games (3).');
         }
+
+        // check if it is pinned by checking current icon
+        // update icon to match chnaged state
+        let isPinned = pinButtonImg.getAttribute('src') == 'assets/images/icons/pin.png';
+
+        pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pinoutline.png' : 'assets/images/icons/pin.png');
     } else {
         swal('You must login to pin the game', {
             buttons: { cancel: 'Cancel', login: { text: 'Login', value: 'login' } },
