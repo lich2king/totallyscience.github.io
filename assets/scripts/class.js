@@ -117,12 +117,12 @@ likeButton.addEventListener('click', function() {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             likeCount += 1;
-            fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
+            fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
             UpdateLikeCount();
         } else {
             likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
             likeCount -= 1;
-            fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
+            fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
             UpdateLikeCount();
         }
     } else {
