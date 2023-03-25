@@ -77,7 +77,7 @@
         //Common
         $item = rand(1,count($Common));
         $findMini = $Common[$item];
-        die(rand(1,count($Common)));
+        die(count($Common));
         die($Common[$item]);
     }
 
