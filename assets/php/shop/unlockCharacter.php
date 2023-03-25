@@ -62,26 +62,21 @@
         //Legendary
         $item = rand(1,count($Legendary));
         $findMini = $Legendary[$item];
-        die($Legendary[$item]."lege");
     } else if ($rarity <= 3)
     {
         //Epic
         $item = rand(1,count($Epic));
         $findMini = $Epic[$item];
-        die($findMini."ep");
     } else if ($rarity <= 6)
     {
         //Rare
         $item = rand(1,count($Rare));
         $findMini = $Rare[$item];
-        die($findMini."rar");
     } else if ($rarity <= 10)
     {
         //Common
         $item = rand(1,count($Common));
         $findMini = $Common[$item];
-        die(count($Common));
-        die($Common[$item]);
     }
 
     die($findMini);
