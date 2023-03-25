@@ -565,18 +565,17 @@ function ignorePopReward() {
     document.getElementById('dailyRewardPopup').style.display = 'none';
 }
 
-function claimReward() {
-    fetcher(`assets/php/points/claimreward.php`)
-        .then((response) => response.text())
-        .then((response) => {
-            if (response == 'Success') {
-                resetRewardTimer();
-                collectPoints();
-                setRewardDayBar('update');
-            }
-            document.getElementById('dailyRewardPopup').style.display = 'none';
-            clearInterval(popTimerInterval);
-        });
+async function claimReward() {
+    let res = await fetcher(`${activeServer}/points/reward/claim`);
+
+    if (res.status == 200) {
+        resetRewardTimer();
+        collectPoints();
+        setRewardDayBar('update');
+    }
+
+    document.getElementById('dailyRewardPopup').style.display = 'none';
+    clearInterval(popTimerInterval);
 }
 
 async function resetRewardTimer() {
