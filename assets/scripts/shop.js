@@ -65,7 +65,8 @@ function checkLoggedIn() {
 getPoints();
 
 async function getPoints() {
-    let points = await fetcher(`${activeServer}/points/check`);
+    let res = await fetcher(`${activeServer}/points/check`);
+    let points = await res.text();
 
     tspoints = parseInt(points);
 }

@@ -101,7 +101,8 @@ window.addEventListener('load', () => {
 
 // update points in navbar
 async function setPoints() {
-    let points = await fetcher(`${activeServer}/points/check`);
+    let res = await fetcher(`${activeServer}/points/check`);
+    let points = await res.text();
 
     document.getElementById('pointsDisplay').innerText = points;
 }
