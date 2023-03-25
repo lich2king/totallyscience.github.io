@@ -37,7 +37,7 @@
 
   echo("madee");
   $mini = getMini();
-  die("here");
+  echo("here");
   //take away 1000, update their profile to have the new character... then return the character
   
   $query = "UPDATE accounts SET Points=Points-1000, Minis=CONCAT(Minis, ';$mini') WHERE ID = '$userid'";
