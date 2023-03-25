@@ -35,8 +35,9 @@
   $Rare = array("rarestormcloud","raresoccer","rarepopsicle","raremushroom","rareketchup","rareheart","rareflower","rearefire","raredonut","rarecup","rarecoffee","rarebooze");
   $Common = array("comapple","comberry","combread", "comcarrot","comdragonfruit","comegg", "comlemon","commilk","compeach", "compear","comavocado","compineapple", "compizza","comprickle","comstrawberry", "comstrawberrymale","comtomato","comwatermellon");
 
-  die("made");
+  echo("made");
   $mini = getMini();
+  die("here");
   //take away 1000, update their profile to have the new character... then return the character
   
   $query = "UPDATE accounts SET Points=Points-1000, Minis=CONCAT(Minis, ';$mini') WHERE ID = '$userid'";
