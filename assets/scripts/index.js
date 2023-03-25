@@ -297,7 +297,7 @@ async function displayGames() {
 
 async function suggestGames() {
     // retrieve all pinned games of user
-    let res = await fetcher(`${activeServer}/profile/pinned/get`, { body: { gameName: gameName } });
+    let res = await fetcher(`${activeServer}/profile/pinned/get`);
     let text = await res.text();
 
     let pinnedGames = text.split(';');
