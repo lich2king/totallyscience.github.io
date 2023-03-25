@@ -103,7 +103,7 @@
     <?php include "assets/includes/footer.php" ?>
 
 
-    <script src="assets/scripts/class.js?v113"></script>
+    <script src="assets/scripts/class.js?v114"></script>
 </body>
 
 </html>
