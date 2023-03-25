@@ -67,9 +67,7 @@ getPoints();
 async function getPoints() {
     let points = await fetcher(`${activeServer}/points/check`);
 
-    if (!isNaN(points)) {
-        tspoints = parseInt(points);
-    }
+    tspoints = parseInt(points);
 }
 
 function counter(id, start, end, duration) {

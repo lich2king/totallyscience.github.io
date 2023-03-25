@@ -103,9 +103,7 @@ window.addEventListener('load', () => {
 async function setPoints() {
     let points = await fetcher(`${activeServer}/points/check`);
 
-    if (!isNaN(points)) {
-        document.getElementById('pointsDisplay').innerText = points;
-    }
+    document.getElementById('pointsDisplay').innerText = points;
 }
 
 function logout() {
