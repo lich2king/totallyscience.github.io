@@ -36,7 +36,7 @@ var tspoints = 0;
 var characterFullScreen = false;
 
 async function dispenseCharacter() {
-    if (checkLoggedIn()) {
+    if (!rollingDie && checkLoggedIn()) {
         console.log(tspoints);
         if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
@@ -93,5 +93,10 @@ function counter(id, start, end, duration) {
 document.body.addEventListener('click', function (evt) {
     if (characterFullScreen) {
         document.getElementById('prizeWon').classList.add('slideAway');
+        setInterval(function () {
+            document.getElementById('prizeWon').classList.remove('active');
+            document.getElementById('prizeWon').classList.remove('slideAway');
+            document.getElementById('prizeWon').innerHTML = '';
+        }, 1500);
     }
 });
