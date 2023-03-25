@@ -163,7 +163,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <a class="tn_banner" target="_blank" href="https://tnvpn.com/">Check out Titanium Network's VPN to browse the internet without censorship.</a>
+    <a class="tn_banner" target="_blank" href="https://tnvpn.com/">Click here to check out Titanium Network's VPN and browse the internet without censorship.</a>
 
     <div id="apps"></div>
 
