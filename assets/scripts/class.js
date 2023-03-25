@@ -75,29 +75,30 @@ window.addEventListener('load', async () => {
     if (userloggedIn == 'true') {
         loggedIn = true;
 
-        //check if user liked the game previously
-        fetcher(`assets/php/class_likes/checkuserliked.php?name=${gameName}`)
-            .then((response) => response.text())
-            .then((res) => {
-                if (res == 'liked') likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-            });
+        // check if user has liked this games
+        let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
 
-        //check if user pinned the game previously
-        let res = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
+        // set like icon if user has liked it
+        if (likedRes.status = 200) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
 
-        if (res.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+
+        // check if user has pinned this game
+        let pinnedRes = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
+
+        // set pin icon if user has pinned it
+        if (pinnedRes.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+
 
         //add to recent games list
         fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
     }
 
-    //get like count
-    fetch(`assets/php/class_likes/getlikes.php?name=${gameName}`)
-        .then((response) => response.text())
-        .then((res) => {
-            likeCount = parseInt(res);
-            UpdateLikeCount();
-        });
+    // get total number of likes a game has
+    let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
+    let likedCountText = await likedCountRes.text();
+    likeCount = parseInt(likedCountText);
+        
+    UpdateLikeCount();
 
     //get current highscore
     fetch(`assets/php/class_likes/getclasshighscore.php?name=${gameName}`)
