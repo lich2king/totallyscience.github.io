@@ -453,7 +453,7 @@ async function checkReward() {
 
         // return out of function and start timer if the saved time has not been passed
 
-        let res = await fetcher(`${activeServer}/points/timer/check`);
+        let res = await fetcher(`${activeServer}/points/reward/check/time`);
         let dbRewardTime = parseInt(await res.text());
 
         if (currentTime > dbRewardTime) {
@@ -504,7 +504,7 @@ function startTimer(endTime) {
 
 var popTimerInterval;
 
-function rewardPop() {
+async function rewardPop() {
     document.getElementById('dailyRewardPopup').style.display = '';
 
     clearInterval(rewardTimerInterval);
@@ -516,20 +516,19 @@ function rewardPop() {
         let points = 100;
         //figure out how many points to give with a db call...
 
-        fetcher(`assets/php/points/checkrewardday.php`)
-            .then((rewardDay) => rewardDay.text())
-            .then((rewardDay) => {
-                if (rewardDay == 6) {
-                    points = 1000;
-                }
-                document.getElementById('popPoints').innerHTML = points;
-                for (let i = 0; i <= rewardDay; i++) {
-                    document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
-                }
-                for (let i = 6; i > rewardDay; i--) {
-                    document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
-                }
-            });
+        let res = await fetcher(`${activeServer}/points/reward/check/day`);
+        let rewardDay = parseInt(await res.text());
+
+        if (rewardDay == 6) {
+            points = 1000;
+        }
+        document.getElementById('popPoints').innerHTML = points;
+        for (let i = 0; i <= rewardDay; i++) {
+            document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
+        }
+        for (let i = 6; i > rewardDay; i--) {
+            document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
+        }
     } else {
         for (let i = 0; i <= 0; i++) {
             document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
@@ -581,30 +580,28 @@ function claimReward() {
 }
 
 async function resetRewardTimer() {
-    let res = await fetcher(`${activeServer}/points/timer/check`);
+    let res = await fetcher(`${activeServer}/points/reward/check/time`);
     let dbRewardTime = parseInt(await res.text());
 
     startTimer(dbRewardTime);
 }
 
-function setRewardDayBar(mode) {
+async function setRewardDayBar(mode) {
     let day = 0;
 
     if (loggedIn) {
         if (mode == 'update') {
-            fetcher(`assets/php/points/checkrewardday.php`)
-                .then((rewardDay) => rewardDay.text())
-                .then((rewardDay) => {
-                    day = parseInt(rewardDay);
-                    animateBar(day);
-                });
+            let res = await fetcher(`${activeServer}/points/reward/check/day`);
+            let rewardDay = parseInt(await res.text());
+            
+            day = parseInt(rewardDay);
+            animateBar(day);
         } else {
-            fetcher(`assets/php/points/checkrewardday.php`)
-                .then((rewardDay) => rewardDay.text())
-                .then((rewardDay) => {
-                    day = parseInt(rewardDay);
-                    animateBar(day);
-                });
+            let res = await fetcher(`${activeServer}/points/reward/check/day`);
+            let rewardDay = parseInt(await res.text());
+
+            day = parseInt(rewardDay);
+            animateBar(day);
         }
     } else {
         animateBar(day);
