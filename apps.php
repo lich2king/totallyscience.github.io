@@ -13,8 +13,8 @@
             position: absolute;
             left: 50%;
             transform: translate(-50%);
-            top: 100px;
-            width: auto;
+            top: 80px;
+            width: 800px;
         }
 
         #apps {
@@ -163,7 +163,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <a class="tn_banner" href="https://tnvpn.com/">Check out Titanium Network's VPN to browse the internet without censorship.</a>
+    <a class="tn_banner" target="_blank" href="https://tnvpn.com/">Check out Titanium Network's VPN to browse the internet without censorship.</a>
 
     <div id="apps"></div>
 
