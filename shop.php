@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/shop.css?v0'>
+    <link rel='stylesheet' href='assets/styles/shop.css?v1'>
 
     <title>Shop - Totally Science - Free Online Unblocked Games</title>
 </head>
@@ -29,7 +29,7 @@
             Common Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar31.jpg" >
+            <img src="\assets\minis\JPGs\!Avatar31.jpg">
             <img src="\assets\minis\JPGs\!Avatar32.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar33.jpg" class="locked">
             <img src="\assets\minis\JPGs\!Avatar34.jpg" class="locked">
