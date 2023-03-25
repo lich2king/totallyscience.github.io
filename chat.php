@@ -266,7 +266,7 @@
                             let time = new Date('curMessage.time');
 
                             // add user message to list
-                            messageList.children[parseInt(msg) + 1].children[0].textContent = `${time.toDateString()} ${time.toLocaleTimeString}`;
+                            messageList.children[parseInt(msg) + 1].children[0].textContent = `${time.toDateString()} ${time.toLocaleTimeString()}`;
                             messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLReplacements(curMessage.name)}</span3>${HTMLReplacements(': ' + curMessage.message)}`;
                         }
                     }
@@ -323,7 +323,7 @@
                     let time = new Date('curMessage.time');
 
                     // add user message to list
-                    messageList.children[parseInt(msg) + 1].children[0].textContent = `${time.toDateString()} ${time.toLocaleTimeString}`;
+                    messageList.children[parseInt(msg) + 1].children[0].textContent = `${time.toDateString()} ${time.toLocaleTimeString()}`;
                     messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLReplacements(curMessage.name)}</span3>${HTMLReplacements(': ' + curMessage.message)}`;
                 }
 
