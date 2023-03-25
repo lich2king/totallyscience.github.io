@@ -222,8 +222,7 @@ async function displayGames() {
 
         let length = 0;
 
-        let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
-        let likedgames = JSON.parse(userLikedRes);
+        let likedgames = await fetcher(`${activeServer}/profile/liked/get`);
 
         length = likedgames.length;
         if (likedgames.length > 0) {

@@ -78,8 +78,7 @@ document.addEventListener('DOMContentLoaded', async() => {
             }
         });
 
-    let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
-    let likedgames = JSON.parse(userLikedRes);
+    let likedgames = await fetcher(`${activeServer}/profile/liked/get`);
 
 
     if (likedgames.length > 0) {
