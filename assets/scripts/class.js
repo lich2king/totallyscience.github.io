@@ -153,13 +153,13 @@ pinButton.addEventListener('click', async () => {
 
         if (res.status == 400) {
             swal('You have pinned the max amount of games (3).');
+        } else {
+            // check if it is pinned by checking current icon
+            // update icon to match chnaged state
+            let isPinned = pinButtonImg.getAttribute('src') == 'assets/images/icons/pin.png';
+
+            pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pinoutline.png' : 'assets/images/icons/pin.png');
         }
-
-        // check if it is pinned by checking current icon
-        // update icon to match chnaged state
-        let isPinned = pinButtonImg.getAttribute('src') == 'assets/images/icons/pin.png';
-
-        pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pinoutline.png' : 'assets/images/icons/pin.png');
     } else {
         swal('You must login to pin the game', {
             buttons: { cancel: 'Cancel', login: { text: 'Login', value: 'login' } },
