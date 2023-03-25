@@ -93,5 +93,10 @@ function counter(id, start, end, duration) {
 document.body.addEventListener('click', function (evt) {
     if (characterFullScreen) {
         document.getElementById('prizeWon').classList.add('slideAway');
+        setInterval(function () {
+            document.getElementById('prizeWon').classList.remove('active');
+            document.getElementById('prizeWon').classList.remove('slideAway');
+            document.getElementById('prizeWon').innerHTML = '';
+        }, 1500);
     }
 });
