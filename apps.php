@@ -18,7 +18,7 @@
 
         #apps {
             margin: auto;
-            margin-top: 150px;
+            margin-top: 170px;
         }
         body, html {
             width: 100%;
