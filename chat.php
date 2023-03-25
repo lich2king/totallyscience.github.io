@@ -264,7 +264,7 @@
 
                             // add user message to list
                             messageList.children[parseInt(msg) + 1].children[0].textContent = curMessage.name;
-                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
+                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLReplacements(curMessage.time)}</span3>${HTMLReplacements(': ' + curMessage.message)}`;
                         }
                     }
                 }
@@ -318,7 +318,7 @@
 
                     // add user message to list
                     messageList.children[parseInt(msg) + 1].children[0].textContent = curMessage.name;
-                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
+                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLReplacements(curMessage.time)}</span3>${HTMLReplacements(': ' + curMessage.message)}`;
                 }
 
                 messageInput.style.display = 'block';
@@ -330,7 +330,7 @@
             });
         }
 
-        let HTMLUtils = new (() => {
+        function HTMLReplacements(html) {
             let rules = [
                 { replacement: '&', expression: /&amp;/g },
                 { replacement: '<', expression: /&lt;/g },
@@ -338,20 +338,16 @@
                 { replacement: '"', expression: /&quot;/g },
             ];
 
-            this.escape = (html) => {
-                let result = html;
+            let result = html;
 
-                for (let i = 0; i < rules.length; i += 1) {
-                    let rule = rules[i];
+            for (let i = 0; i < rules.length; i += 1) {
+                let rule = rules[i];
 
-                    result = result.replace(
-                        rule.expression,
-                        rule.replacement
-                    );
-                }
-                return result;
-            };
-        })();
+                result = result.replace(rule.expression, rule.replacement);
+            }
+
+            return result;
+        }
     </script>
 </body>
 
