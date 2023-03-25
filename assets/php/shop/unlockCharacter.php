@@ -35,16 +35,22 @@
   $Rare = array("rarestormcloud","raresoccer","rarepopsicle","raremushroom","rareketchup","rareheart","rareflower","rearefire","raredonut","rarecup","rarecoffee","rarebooze");
   $Common = array("comapple","comberry","combread", "comcarrot","comdragonfruit","comegg", "comlemon","commilk","compeach", "compear","comavocado","compineapple", "compizza","comprickle","comstrawberry", "comstrawberrymale","comtomato","comwatermellon");
 
-  
-  $mini = getMini();
-  //take away 1000, update their profile to have the new character... then return the character
-  
-  $query = "UPDATE accounts SET Points=Points-1000, Minis=CONCAT(Minis, ';$mini') WHERE ID = '$userid'";
-  if(mysqli_query($conn, $query))
-  {
-    die($mini);
-  }
 
+  $query = "SELECT Points FROM accounts WHERE ID = '$id'";
+  $points = mysqli_query($conn, $query);
+  $points = ($points -> fetch_row())[0];
+
+  if($points >= 1000)
+  {
+    $mini = getMini();
+    //take away 1000, update their profile to have the new character... then return the character
+
+    $query = "UPDATE accounts SET Points=Points-1000, Minis=CONCAT(Minis, ';$mini') WHERE ID = '$userid'";
+    if(mysqli_query($conn, $query))
+    {
+        die($mini);
+    }
+  }
 
 
 
