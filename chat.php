@@ -263,7 +263,7 @@
                             let color = json.users[curMessage.name].color;
                             
                             // create js date object to format time sent before displaying
-                            let time = new Date('curMessage.time');
+                            let time = new Date(curMessage.time);
 
                             // add user message to list
                             messageList.children[parseInt(msg) + 1].children[0].textContent = `${time.toDateString()} ${time.toLocaleTimeString()}`;
@@ -320,7 +320,7 @@
                     let color = json.users[curMessage.name].color;
 
                     // create js date object to format time sent before displaying
-                    let time = new Date('curMessage.time');
+                    let time = new Date(curMessage.time);
 
                     // add user message to list
                     messageList.children[parseInt(msg) + 1].children[0].textContent = `${time.toDateString()} ${time.toLocaleTimeString()}`;
