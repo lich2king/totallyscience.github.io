@@ -208,23 +208,18 @@ async function displayGames() {
 
         let length = 0;
 
-        await fetcher(`/assets/php/class_likes/personallikes.php`)
-            .then((response) => response.text())
-            .then((res) => {
-                var likedgames = JSON.parse(res);
+        let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
+        let likedgames = JSON.parse(userLikedRes);
 
-                console.log(likedgames);
-
-                length = likedgames.length;
-                if (likedgames.length > 0) {
-                    for (like in likedgames) {
-                        console.log(likedgames[like][0]);
-                        if (document.getElementsByName(likedgames[like][0]).length > 0) {
-                            recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
-                        }
-                    }
+        length = likedgames.length;
+        if (likedgames.length > 0) {
+            for (like in likedgames) {
+                console.log(likedgames[like][0]);
+                if (document.getElementsByName(likedgames[like][0]).length > 0) {
+                    recentGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
                 }
-            });
+            }
+        }
 
         if (length > 5) {
             recentRow.appendChild(recentGamesContainer);

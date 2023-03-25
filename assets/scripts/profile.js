@@ -78,22 +78,18 @@ document.addEventListener('DOMContentLoaded', async() => {
             }
         });
 
-    await fetcher(`/assets/php/class_likes/personallikes.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            var likedgames = JSON.parse(res);
+    let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
+    let likedgames = JSON.parse(userLikedRes);
 
 
-            if (likedgames.length > 0) {
-                for (like in likedgames) {
-                    console.log(likedgames[like][0]);
-                    if (likedgames[like][0] != null && likedgames[like][0].length > 0) {
-                        likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
-                    }
-                }
+    if (likedgames.length > 0) {
+        for (like in likedgames) {
+            console.log(likedgames[like][0]);
+            if (likedgames[like][0] != null && likedgames[like][0].length > 0) {
+                likedGamesContainer.innerHTML += createGameButton(likedgames[like][0]);
             }
-            console.log(likedGamesContainer);
-        });
+        }
+    }
 
     recentRow.appendChild(recentGamesContainer);
     likedRow.appendChild(likedGamesContainer);
