@@ -36,7 +36,7 @@
   $Common = array("comapple","comberry","combread", "comcarrot","comdragonfruit","comegg", "comlemon","commilk","compeach", "compear","comavocado","compineapple", "compizza","comprickle","comstrawberry", "comstrawberrymale","comtomato","comwatermellon");
 
 
-  $query = "SELECT Points FROM accounts WHERE ID = '$id'";
+  $query = "SELECT Points FROM accounts WHERE ID = '$userid'";
   $points = mysqli_query($conn, $query);
   $points = ($points -> fetch_row())[0];
 
