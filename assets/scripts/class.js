@@ -77,7 +77,7 @@ window.addEventListener('load', async () => {
         let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
 
         // set like icon if user has liked it
-        if ((likedRes.status = 200)) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+        if (likedRes.status == 200) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
 
         // check if user has pinned this game
         let pinnedRes = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
@@ -113,12 +113,12 @@ likeButton.addEventListener('click', function () {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
             likeCount += 1;
-            fetcher(`assets/php/class_likes/likeclass.php?name=${gameName}`);
+            fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
             UpdateLikeCount();
         } else {
             likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
             likeCount -= 1;
-            fetcher(`assets/php/class_likes/unlikeclass.php?name=${gameName}`);
+            fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
             UpdateLikeCount();
         }
     } else {
@@ -155,7 +155,7 @@ pinButton.addEventListener('click', async () => {
             // update icon to match chnaged state
             let isPinned = pinButtonImg.getAttribute('src') == 'assets/images/icons/pin.png';
 
-            pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pin.png' : 'assets/images/icons/pinoutline.png');
+            pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pinoutline.png' : 'assets/images/icons/pin.png');
         }
     } else {
         swal('You must login to pin the game', {
