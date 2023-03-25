@@ -79,13 +79,13 @@
         $findMini = $Common[$item];
     }
 
-    die($findMini);
-    die("fff");
+    
 
     $query = "SELECT `Minis` FROM `accounts` WHERE id='$userid'";
     $result = mysqli_query($conn, $query);
     $result = ($result -> fetch_row())[0];
     
+    die("fff");
 
     if (!function_exists('str_contains')) {
         function str_contains( $haystack, $needle) {
