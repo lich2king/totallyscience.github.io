@@ -188,7 +188,37 @@
 
     <?php include "assets/includes/footer.php" ?>
 
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script>
+        window.addEventListener('load', () => {
+            //document.getElementById('chatnav').classList.add('selected');
+
+            const socket = io();
+
+            // expects that the order/arrangement of children in menu are not altered.
+            const messageList = document.getElementById('messages');
+            const messageInput = document.getElementById('messageinput');
+            const leaveBtn = document.getElementById('leavebtn');
+            const menu = document.getElementById('menu');
+            const code = menu.children[0];
+            const joinBtn = menu.children[2];
+            const createBtn = menu.children[4];
+            const joinPublicBtn = menu.children[6];
+            const error = menu.children[7];
+
+            //display code from localstorage
+            code.value = localStorage.getItem('chatRoom') || '';
+
+            // chat requires users to be logged in to access username data
+            if (!authToken) {
+                // redirect to login page if users are not logged in
+                error = 'you must be logged in to access chatrooms';
+
+                location.href = 'login.php';
+            }
+
+        });
+        /*
         window.addEventListener('load', () => {
             //document.getElementById('chatnav').classList.add('selected');
 
@@ -359,6 +389,7 @@
 
             return result;
         }
+        */
     </script>
 </body>
 
