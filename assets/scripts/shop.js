@@ -36,7 +36,7 @@ var tspoints = 0;
 var characterFullScreen = false;
 
 async function dispenseCharacter() {
-    if (checkLoggedIn()) {
+    if (!rollingDie && checkLoggedIn()) {
         console.log(tspoints);
         if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
