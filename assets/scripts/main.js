@@ -100,15 +100,12 @@ window.addEventListener('load', () => {
 });
 
 // update points in navbar
-function setPoints() {
-    fetcher(`assets/php/points/checkpoints.php`)
-        .then((points) => points.text())
-        .then((points) => {
-            if (points.startsWith('error')) return;
-            if (!isNaN(points)) {
-                document.getElementById('pointsDisplay').innerText = points;
-            }
-        });
+async function setPoints() {
+    let points = await fetcher(`${activeServer}/points/check`);
+
+    if (!isNaN(points)) {
+        document.getElementById('pointsDisplay').innerText = points;
+    }
 }
 
 function logout() {

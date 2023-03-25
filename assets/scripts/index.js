@@ -627,14 +627,12 @@ function animateBar(day) {
     }
 }
 
-function collectPoints() {
-    fetcher(`assets/php/points/checkpoints.php`)
-        .then((points) => points.text())
-        .then((points) => {
-            let currentVal = document.getElementById('pointsDisplay').innerText;
+async function collectPoints() {
+    let points = await fetcher(`${activeServer}/points/check`);
 
-            counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);
-        });
+    let currentVal = document.getElementById('pointsDisplay').innerText;
+
+    counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);
 }
 
 function counter(id, start, end, duration) {
