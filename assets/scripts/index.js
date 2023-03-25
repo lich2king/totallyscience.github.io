@@ -628,7 +628,7 @@ function animateBar(day) {
 }
 
 async function collectPoints() {
-    let points = await (`${activeServer}/points/check`);
+    let points = await fetcher(`${activeServer}/points/check`);
 
     let currentVal = document.getElementById('pointsDisplay').innerText;
 
