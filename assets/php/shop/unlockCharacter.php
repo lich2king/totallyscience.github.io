@@ -20,14 +20,15 @@
   }
 
 
-  $json = file_get_contents('php://input');
-  $data = json_decode($json, TRUE);
+//   $json = file_get_contents('php://input');
+//   $data = json_decode($json, TRUE);
 
-  if (!isset($data['auth'])) {
-      die("error: no cookie");
-  }
+//   if (!isset($data['auth'])) {
+//       die("error: no cookie");
+//   }
 
-  $userid = $data['auth']['id'];
+  //$userid = $data['auth']['id'];
+  $userid = 15;
 
   $Legendary = array("legvr","legsun","legsuitcase", "leglemonade","legdollar");
   $Epic = array("epicworld","epicpc","epicmovie","epichotdog","epicdrink","epicdisco","epicboombox","epicbomb");
