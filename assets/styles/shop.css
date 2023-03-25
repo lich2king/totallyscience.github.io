@@ -86,6 +86,7 @@
 }
 
 #prizeWon.slideAway {
+    transition: all 1s;
     margin-top: 100vh;
 }
 
