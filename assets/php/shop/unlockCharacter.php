@@ -76,8 +76,8 @@
         $findMini = $Common[$item];
     }
 
-    echo($findMini);
-    die("madee");
+    die($findMini);
+    die("fff");
 
     $query = "SELECT `Minis` FROM `accounts` WHERE id='$userid'";
     $result = mysqli_query($conn, $query);
