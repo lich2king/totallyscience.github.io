@@ -80,6 +80,7 @@ window.addEventListener('load', async () => {
 
         // set like icon if user has liked it
         if (likedRes.status = 200) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
+        else likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
 
 
         // check if user has pinned this game
@@ -87,6 +88,7 @@ window.addEventListener('load', async () => {
 
         // set pin icon if user has pinned it
         if (pinnedRes.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
+        else pinButtonImg.setAttribute('src', 'assets/images/icons/pinoutline.png');
 
 
         //add to recent games list
