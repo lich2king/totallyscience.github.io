@@ -159,7 +159,7 @@ pinButton.addEventListener('click', async () => {
             // update icon to match chnaged state
             let isPinned = pinButtonImg.getAttribute('src') == 'assets/images/icons/pin.png';
 
-            pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/outlinepin.png' : 'assets/images/icons/pin.png');
+            pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pinoutline.png' : 'assets/images/icons/pin.png');
         }
     } else {
         swal('You must login to pin the game', {
