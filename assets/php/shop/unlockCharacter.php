@@ -50,6 +50,9 @@
 
 
   function getMini(){
+    global $Legendary, $Epic, $Rare, $Common, $userid;
+
+
     $rarity = rand(1,10);
 
     $findMini = '';
