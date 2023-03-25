@@ -327,15 +327,20 @@
                     messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLReplacements(curMessage.name)}</span3>${HTMLReplacements(': ' + curMessage.message)}`;
                 }
 
+                //show the message input box and leave chat button
                 messageInput.style.display = 'block';
                 leaveBtn.style.display = 'block';
             }
 
             window.addEventListener('beforeunload', () => {
+                const code = document.getElementById('menu').children[0];
+
                 fetcher(`${activeServer}/chat/leave`, { body: { roomCode: code.value }});
             });
         }
 
+        // this is used becuase .innerText is problematic for special chars but neccesary for security
+        // pulled from stackoverflow and modified
         function HTMLReplacements(html) {
             let rules = [
                 { replacement: '&', expression: /&amp;/g },
