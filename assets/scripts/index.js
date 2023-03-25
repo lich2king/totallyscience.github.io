@@ -295,59 +295,57 @@ async function displayGames() {
     findLazyImages();
 }
 
-function suggestGames() {
-    let pinnedGames = [];
-    //check previously pinned games
-    fetcher(`assets/php/class_pin/getpinnedclasses.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            pinnedGames = res.split(';');
-            let randomGames = [];
+async function suggestGames() {
+    // retrieve all pinned games of user
+    let res = await fetcher(`${activeServer}/profile/pinned/get`, { body: { gameName: gameName } });
+    let text = await res.text();
 
-            for (let x = displayedGames; x < displayedGames + 3; x++) {
-                let randGame = randomProperty(games);
+    let pinnedGames = text.split(';');
+    let randomGames = [];
 
-                while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
-                    randGame = randomProperty(games);
-                }
+    for (let x = displayedGames; x < displayedGames + 3; x++) {
+        let randGame = randomProperty(games);
 
-                randomGames.push(randGame);
+        while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
+            randGame = randomProperty(games);
+        }
+
+        randomGames.push(randGame);
+    }
+
+    //first pinned game is always going to be '' so length will always be atleast 1
+    pinnedGames = pinnedGames.slice(1);
+    let totalPinned = pinnedGames.length;
+
+    if (pinnedGames.length < 3) {
+        let generateGames = 3 - pinnedGames.length;
+        for (let i = 0; i < generateGames; i++) {
+            let randGame = randomProperty(games);
+
+            while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
+                randGame = randomProperty(games);
             }
 
-            //first pinned game is always going to be '' so length will always be atleast 1
-            pinnedGames = pinnedGames.slice(1);
-            let totalPinned = pinnedGames.length;
+            pinnedGames.push(randGame);
+        }
+    }
 
-            if (pinnedGames.length < 3) {
-                let generateGames = 3 - pinnedGames.length;
-                for (let i = 0; i < generateGames; i++) {
-                    let randGame = randomProperty(games);
+    document.getElementById('scisuggests').innerHTML = '';
+    for (let i = 0; i < 3; i++) {
+        let game = randomGames[i];
+        let gameBtn = createGameButton(game, 'suggested', 'notlazy');
 
-                    while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
-                        randGame = randomProperty(games);
-                    }
+        document.getElementById('scisuggests').innerHTML += gameBtn;
+        game = pinnedGames[i];
 
-                    pinnedGames.push(randGame);
-                }
-            }
+        if (i <= totalPinned - 1) {
+            gameBtn = createGameButton(game, 'pin', 'notlazy');
+        } else {
+            gameBtn = createGameButton(game, 'suggested', 'notlazy');
+        }
 
-            document.getElementById('scisuggests').innerHTML = '';
-            for (let i = 0; i < 3; i++) {
-                let game = randomGames[i];
-                let gameBtn = createGameButton(game, 'suggested', 'notlazy');
-
-                document.getElementById('scisuggests').innerHTML += gameBtn;
-                game = pinnedGames[i];
-
-                if (i <= totalPinned - 1) {
-                    gameBtn = createGameButton(game, 'pin', 'notlazy');
-                } else {
-                    gameBtn = createGameButton(game, 'suggested', 'notlazy');
-                }
-
-                document.getElementById('scisuggests').innerHTML += gameBtn;
-            }
-        });
+        document.getElementById('scisuggests').innerHTML += gameBtn;
+    }
 }
 
 var randomProperty = function(object) {
