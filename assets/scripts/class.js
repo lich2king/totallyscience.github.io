@@ -28,7 +28,6 @@ window.addEventListener('load', async () => {
 
     if (res != null) userloggedIn = res['isLoggedIn'];
 
-
     //get game data for iframe etc
     fetch(`assets/games.json?date=${new Date().getTime()}`)
         .then((response) => {
@@ -44,16 +43,15 @@ window.addEventListener('load', async () => {
             document.getElementById('controls').innerText = gameData.controls;
             document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
-
             let metaDesc = gameData.description;
             if (gameData.description.length > 155) {
                 metaDesc = gameData.description.substr(0, 156);
             }
 
-            document.querySelector('meta[name="description"]').setAttribute("content", metaDesc);
-            document.querySelector('meta[name="DC.description"]').setAttribute("content", metaDesc);
-            document.querySelector('meta[property="og:description"]').setAttribute("content", metaDesc);
-            document.querySelector('meta[name="twitter:description"]').setAttribute("content", metaDesc);
+            document.querySelector('meta[name="description"]').setAttribute('content', metaDesc);
+            document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
 
             if (gameData.type == 'proxy') {
                 document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
@@ -79,15 +77,13 @@ window.addEventListener('load', async () => {
         let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
 
         // set like icon if user has liked it
-        if (likedRes.status = 200) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-
+        if ((likedRes.status = 200)) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
 
         // check if user has pinned this game
         let pinnedRes = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
 
         // set pin icon if user has pinned it
         if (pinnedRes.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-
 
         //add to recent games list
         fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
@@ -97,7 +93,7 @@ window.addEventListener('load', async () => {
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
     likeCount = parseInt(likedCountText);
-        
+
     UpdateLikeCount();
 
     //get current highscore
@@ -112,7 +108,7 @@ window.addEventListener('load', async () => {
 });
 
 //Like Button
-likeButton.addEventListener('click', function() {
+likeButton.addEventListener('click', function () {
     if (loggedIn) {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
@@ -136,16 +132,16 @@ likeButton.addEventListener('click', function() {
     }
 });
 
-likeButton.addEventListener('click', function() {
+likeButton.addEventListener('click', function () {
     likeButton.classList.add('button-click');
 });
-likeButton.addEventListener('webkitAnimationEnd', function() {
+likeButton.addEventListener('webkitAnimationEnd', function () {
     likeButton.classList.remove('button-click');
 });
-pinButton.addEventListener('click', function() {
+pinButton.addEventListener('click', function () {
     pinButton.classList.add('button-click');
 });
-pinButton.addEventListener('webkitAnimationEnd', function() {
+pinButton.addEventListener('webkitAnimationEnd', function () {
     pinButton.classList.remove('button-click');
 });
 pinButton.addEventListener('click', async () => {
@@ -228,9 +224,9 @@ function suggestGames() {
         let randGame = Object.keys(games)[x];
         let sameTag = false;
 
-        currentTags.forEach(function(game) {
+        currentTags.forEach(function (game) {
             let gameTags = games[randGame]['tags'];
-            gameTags.forEach(function(currentgame) {
+            gameTags.forEach(function (currentgame) {
                 if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'new' && game != 'popular') {
                     sameTag = true;
                 }
@@ -269,7 +265,7 @@ function suggestGames() {
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
     //for each element in newGames, add the game to the horizontalCon
-    randomGames.forEach(function(game) {
+    randomGames.forEach(function (game) {
         gamesContainer.innerHTML += createGameButton(game);
     });
 
@@ -279,7 +275,7 @@ function suggestGames() {
     addArrowListeners();
 }
 
-var randomProperty = function(object) {
+var randomProperty = function (object) {
     var keys = Object.keys(object);
     return keys[Math.floor(keys.length * Math.random())];
 };
@@ -310,7 +306,7 @@ window.addEventListener('click', () => {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -320,7 +316,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
