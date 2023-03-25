@@ -263,8 +263,8 @@
                             let color = json.users[curMessage.name].color;
 
                             // add user message to list
-                            messageList.children[msg + 1].children[0].textContent = curMessage.name;
-                            messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
+                            messageList.children[parseInt(msg) + 1].children[0].textContent = curMessage.name;
+                            messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
                         }
                     }
                 }
@@ -317,8 +317,8 @@
                     let color = json.users[curMessage.name].color;
 
                     // add user message to list
-                    messageList.children[msg + 1].children[0].textContent = curMessage.name;
-                    messageList.children[msg + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
+                    messageList.children[parseInt(msg) + 1].children[0].textContent = curMessage.name;
+                    messageList.children[parseInt(msg) + 1].children[1].innerHTML = `<span3 style="color: #${color}">${HTMLUtils.escape(curMessage.time)}</span3>${HTMLUtils.escape(': ' + curMessage.message)}`;
                 }
 
                 messageInput.style.display = 'block';
