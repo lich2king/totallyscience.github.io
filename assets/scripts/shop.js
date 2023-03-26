@@ -93,6 +93,7 @@ function counter(id, start, end, duration) {
 document.body.addEventListener('click', function (evt) {
     if (characterFullScreen) {
         document.getElementById('prizeWon').classList.add('slideAway');
+        rollingDie = false;
         setInterval(function () {
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
