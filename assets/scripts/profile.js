@@ -23,27 +23,28 @@ document.addEventListener('DOMContentLoaded', async() => {
         document.getElementById('emailSpan').innerText = res['email'];
     } else location.href = 'signup.php';
 
-    //Load highscores
-    fetcher(`assets/php/personalhighscores.php`).then((response) => response.text()).then((res) => {
-        if (res != '[]') {
-            res = JSON.parse(res);
-            highscores = res;
+    // load user's highscores
+    let highscoreRes = await fetcher(`${activeServer}/profile/highscores/get`);
 
-            for (score in highscores) {
-                const game = highscores[score][0];
-                const gameScore = highscores[score][2];
-                const highscoreDiv = `
-                    <div class="highscore">
-                        <img src="../assets/images/icons/trophy.png">
-                        <h1>${game}</h1>
-                        <p>${numFormatter(gameScore)}</p>
-                    </div>
-                `;
+    if (res.status == 200) {
+        highscores = await res.json();
 
-                scoresDiv.innerHTML += highscoreDiv;
-            }
-        } else document.getElementById('noscores').setAttribute('style', 'display: ');
-    });
+        for (score in highscores) {
+            const game = highscores[score].game;
+            const gameScore = highscores[score].score;
+            const highscoreDiv = `
+                <div class="highscore">
+                    <img src="../assets/images/icons/trophy.png">
+                    <h1>${game}</h1>
+                    <p>${numFormatter(gameScore)}</p>
+                </div>
+            `;
+
+            scoresDiv.innerHTML += highscoreDiv;
+        }
+    } else if (res.status == 400) {
+        document.getElementById('noscores').setAttribute('style', 'display: ');
+    }
 
     const gamesDiv = document.getElementById("games");
     let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
