@@ -33,7 +33,7 @@
   $Epic = array("epicworld","epicpc","epicmovie","epichotdog","epicdrink","epicdisco","epicboombox","epicbomb");
   $Rare = array("rarestormcloud","raresoccer","rarepopsicle","raremushroom","rareketchup","rareheart","rareflower","rarefire","raredonut","rarecup","rarecoffee","rarebooze");
   $Common = array("comapple","comberry","combread", "comcarrot","comdragonfruit","comegg", "comlemon","commilk","compeach", "compear","comavocado","compineapple", "compizza","comprickle","comstrawberry", "comstrawberrymale","comtomato","comwatermellon");
-
+  $NominalRarity = "";
 
   $query = "SELECT Points FROM accounts WHERE ID = '$userid'";
   $points = mysqli_query($conn, $query);
@@ -47,14 +47,14 @@
     $query = "UPDATE accounts SET Points=Points-1000, Minis=CONCAT(Minis, ';$mini') WHERE ID = '$userid'";
     if(mysqli_query($conn, $query))
     {
-        die($mini);
+        die($NominalRarity.':'.$mini);
     }
   }
 
 
 
   function getMini(){
-    global $Legendary, $Epic, $Rare, $Common, $userid, $conn;
+    global $Legendary, $Epic, $Rare, $Common, $userid, $conn, $NominalRarity;
 
 
     $rarity = rand(1,10);
@@ -66,21 +66,25 @@
         //Legendary
         $item = rand(1,count($Legendary));
         $findMini = $Legendary[$item];
+        $NominalRarity = 'Legendary';
     } else if ($rarity <= 3)
     {
         //Epic
         $item = rand(1,count($Epic));
         $findMini = $Epic[$item];
+        $NominalRarity = 'Epic';
     } else if ($rarity <= 6)
     {
         //Rare
         $item = rand(1,count($Rare));
         $findMini = $Rare[$item];
+        $NominalRarity = 'Rare';
     } else if ($rarity <= 10)
     {
         //Common
         $item = rand(1,count($Common));
         $findMini = $Common[$item];
+        $NominalRarity = 'Common';
     }
 
     

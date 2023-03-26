@@ -15,6 +15,7 @@ async function myHandler(e) {
         await fetcher(`/assets/php/shop/unlockCharacter.php`)
             .then((response) => response.text())
             .then((res) => {
+                alert(res);
                 characterFullScreen = true;
                 document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${res}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
