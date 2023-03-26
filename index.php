@@ -223,26 +223,6 @@
             <li>Fall Guys</li>
             <li>Among Us</li>
         </ul>
-        <br>
-        <h1>What are the Totally Science <span>Links?</span></h1>
-        <ul>
-            <li>definitelyscience.com</li>
-            <li>literallyhistory.org</li>
-            <li>literallymath.com</li>
-            <li>mathplace.co</li>
-            <li>mathstudyplace.com</li>
-            <li>sidthescientist.com</li>
-            <li>spanishstudy.co</li>
-            <li>studyscienceteacher.com</li>
-            <li>totallyalgebra.com</li>
-            <li>totallysocialstudies.com</li>
-            <li>studymathteacher.com</li>
-            <li>historicallyscience.com</li>
-            <li>actuallyphysics.com</li>
-            <li>actuallyhistory.com</li>
-            <li>funnymath.org</li>
-            <li>crazyalgebra.com</li>
-        </ul>
         <br><br>
     </div>
 
