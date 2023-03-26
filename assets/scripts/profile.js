@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', async() => {
     if (highscoreRes.status == 200) {
         highscores = await highscoreRes.json();
 
-        for (score in highscores) {
+        for (let score = 0; score < highscores.length; score += 1) {
             if (!highscores[score]) continue;
-            
+
             const highscoreDiv = `
                 <div class="highscore">
                     <img src="../assets/images/icons/trophy.png">
