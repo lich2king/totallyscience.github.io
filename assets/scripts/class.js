@@ -98,14 +98,14 @@ window.addEventListener('load', async () => {
     UpdateLikeCount();
 
     //get current highscore
-    fetch(`assets/php/class_likes/getclasshighscore.php?name=${gameName}`)
-        .then((response) => response.text())
-        .then((res) => {
-            if (res != '') {
-                const currentHighscore = numFormatter(res);
-                document.getElementById('currentHighscore').innerText = currentHighscore;
-            } else document.getElementById('currentHighscore').innerText = '0';
-        });
+    let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
+    let text = await highscoreRes.text();
+
+    if (text != '') {
+        const currentHighscore = numFormatter(text);
+        
+        document.getElementById('currentHighscore').innerText = currentHighscore;
+    } else document.getElementById('currentHighscore').innerText = '0';
 });
 
 //Like Button
