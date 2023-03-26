@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', async() => {
     likedRow.innerHTML += arrowContainer;
 
 
-    let res = await fetcher(`${activeServer}/profile/recent/get`);
-    let text = await res.text();
+    let recentGamesres = await fetcher(`${activeServer}/profile/recent/get`);
+    let text = await recentGamesres.text();
 
     // split from string into array and slice the first element out (first element is an empty space)
     let recentGames = text.split(';').slice(1);
