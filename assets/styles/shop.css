@@ -82,7 +82,7 @@
 #prizeWon.active {
     width: 400px;
     height: 400px;
-    animation: treasure-animation 1s ease-in-out infinite;
+    animation: prize-animation 1s ease-in-out infinite;
 }
 
 #prizeWon.slideAway {
@@ -100,20 +100,20 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    outline: solid 1px rgb(255, 252, 47);
+    outline: solid 1px var(--rarityColor);
 }
 
-@keyframes treasure-animation {
+@keyframes prize-animation {
     0% {
-        -webkit-filter: drop-shadow(0px 0px 30px var(--accent-color));
+        -webkit-filter: drop-shadow(0px 0px 30px var(--rarityColor));
         transform: translate(50%, -50%) rotate(13deg);
     }
     50% {
-        -webkit-filter: drop-shadow(0px 0px 55px var(--accent-color));
+        -webkit-filter: drop-shadow(0px 0px 55px var(--rarityColor));
         transform: translate(50%, -50%) rotate(-13deg);
     }
     100% {
-        -webkit-filter: drop-shadow(0px 0px 30px var(--accent-color));
+        -webkit-filter: drop-shadow(0px 0px 30px var(--rarityColor));
         transform: translate(50%, -50%) rotate(13deg);
     }
 }

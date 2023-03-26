@@ -15,10 +15,20 @@ async function myHandler(e) {
         await fetcher(`/assets/php/shop/unlockCharacter.php`)
             .then((response) => response.text())
             .then((res) => {
-                alert(res);
+                let mini = res.split(':')[1];
+                let rarity = res.split(':')[0];
                 characterFullScreen = true;
-                document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${res}.jpg'>`;
+                document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
+                if (rarity == 'Common') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(120, 120, 120)');
+                } else if (rarity == 'Rare') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(0, 149, 37)');
+                } else if (rarity == 'Epic') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(178, 0, 191)');
+                } else if (rarity == 'Legendary') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(233, 241, 0)');
+                }
             });
     }
 }
