@@ -85,8 +85,9 @@ window.addEventListener('load', async () => {
         // set pin icon if user has pinned it
         if (pinnedRes.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
 
-        //add to recent games list
-        fetcher(`assets/php/recent_classes/addclass.php?name=${gameName}`);
+
+        // add to recently played games list
+        fetcher(`${activeServer}/profile/recent/set`, { body: { gameName: gameName } });
     }
 
     // get total number of likes a game has
