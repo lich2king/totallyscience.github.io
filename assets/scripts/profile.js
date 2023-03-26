@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', async() => {
     // load user's highscores
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/get`);
 
-    if (res.status == 200) {
-        highscores = await res.json();
+    if (highscoreRes.status == 200) {
+        highscores = await highscoreRes.json();
 
         for (score in highscores) {
             const game = highscores[score].game;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async() => {
 
             scoresDiv.innerHTML += highscoreDiv;
         }
-    } else if (res.status == 400) {
+    } else if (highscoreRes.status == 400) {
         document.getElementById('noscores').setAttribute('style', 'display: ');
     }
 
