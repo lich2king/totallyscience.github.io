@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', async() => {
         highscores = await highscoreRes.json();
 
         for (score in highscores) {
-            const game = highscores[score].game;
-            const gameScore = highscores[score].score;
+            if (!highscores[score]) continue;
+            
             const highscoreDiv = `
                 <div class="highscore">
                     <img src="../assets/images/icons/trophy.png">
-                    <h1>${game}</h1>
-                    <p>${numFormatter(gameScore)}</p>
+                    <h1>${highscores[score].game}</h1>
+                    <p>${numFormatter(highscores[score].score)}</p>
                 </div>
             `;
 
