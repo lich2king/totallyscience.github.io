@@ -63,20 +63,18 @@ document.addEventListener('DOMContentLoaded', async() => {
     likedRow.innerHTML += arrowContainer;
 
 
-    await fetcher(`/assets/php/recent_classes/recentclasses.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            let recentGames = res.split(';');
-            recentGames = recentGames.slice(1);
+    let res = await fetcher(`${activeServer}/profile/recent/get`);
+    let text = await res.text();
 
+    // split from string into array and slice the first element out (first element is an empty space)
+    let recentGames = text.split(';').slice(1);
 
-            for (let i = 0; i < recentGames.length; i++) {
-                const gameName = recentGames[i];
-                if (gameName != null) {
-                    recentGamesContainer.innerHTML += createGameButton(gameName);
-                }
-            }
-        });
+    for (let i = 0; i < recentGames.length; i++) {
+        const gameName = recentGames[i];
+        if (gameName != null) {
+            recentGamesContainer.innerHTML += createGameButton(gameName);
+        }
+    }
 
     let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
     let likedgames = await userLikedRes.json();
