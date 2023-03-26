@@ -29,64 +29,64 @@
             Common Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar31.jpg">
-            <img src="\assets\minis\JPGs\!Avatar32.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar33.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar34.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar35.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar37.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar38.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar39.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar40.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar41.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar42.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar43.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar44.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar46.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar47.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar48.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar49.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar50.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comwatermellon.jpg">
+            <img src="\assets\minis\JPGs\comtomato.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comstrawberrymale" class="locked">
+            <img src="\assets\minis\JPGs\comstrawberry.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comprickle.jpg" class="locked">
+            <img src="\assets\minis\JPGs\compizza.jpg" class="locked">
+            <img src="\assets\minis\JPGs\compineapple.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comavocado.jpg" class="locked">
+            <img src="\assets\minis\JPGs\compear.jpg" class="locked">
+            <img src="\assets\minis\JPGs\compeach.jpg" class="locked">
+            <img src="\assets\minis\JPGs\commilk.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comlemon.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comegg.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comdragonfruit.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comcarrot.jpg" class="locked">
+            <img src="\assets\minis\JPGs\combread.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comberry.jpg" class="locked">
+            <img src="\assets\minis\JPGs\comapple.jpg" class="locked">
         </div>
         <h1>
             Rare Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar16.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar19.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar20.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar21.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar22.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar23.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar24.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar25.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar26.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar29.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar30.jpg" class="locked">
-
+            <img src="\assets\minis\JPGs\rarestormcloud.jpg" class="locked">
+            <img src="\assets\minis\JPGs\raresoccer.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rarepopsicle.jpg" class="locked">
+            <img src="\assets\minis\JPGs\raremushroom.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rareketchup.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rareheart.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rareflower.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rarefire.jpg" class="locked">
+            <img src="\assets\minis\JPGs\raredonut.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rarecup.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rarecoffee.jpg" class="locked">
+            <img src="\assets\minis\JPGs\rarebooze.jpg" class="locked">
         </div>
         <h1>
             Epic Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar06.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar07.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar08.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar10.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar11.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar12.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar13.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar15.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicworld.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicpc.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicmovie.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epichotdog.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicdrink.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicdisco.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicboombox.jpg" class="locked">
+            <img src="\assets\minis\JPGs\epicbomb.jpg" class="locked">
         </div>
         <h1>
             Legendary Minis
         </h1>
         <div class="miniCon">
-            <img src="\assets\minis\JPGs\!Avatar01.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar02.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar03.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar04.jpg" class="locked">
-            <img src="\assets\minis\JPGs\!Avatar05.jpg" class="locked">
+            <img src="\assets\minis\JPGs\legdollar.jpg" class="locked">
+            <img src="\assets\minis\JPGs\leglemonade.jpg" class="locked">
+            <img src="\assets\minis\JPGs\legsuitcase.jpg" class="locked">
+            <img src="\assets\minis\JPGs\legsun.jpg" class="locked">
+            <img src="\assets\minis\JPGs\legvr.jpg" class="locked">
         </div>
     </div>
     <div id="prizeWon">
@@ -94,7 +94,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/shop.js?v28"></script>
+    <script src="assets/scripts/shop.js?v29"></script>
 </body>
 
 </html>

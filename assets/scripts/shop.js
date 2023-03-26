@@ -10,11 +10,15 @@ function pauseVid() {
 
 document.getElementById('dispenserVid').addEventListener('ended', myHandler, false);
 
-function myHandler(e) {
+async function myHandler(e) {
     if (rollingDie) {
-        characterFullScreen = true;
-        document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/!Avatar31.jpg'>`;
-        document.getElementById('prizeWon').classList.add('active');
+        await fetch(`/assets/php/shop/unlockCharacter.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                characterFullScreen = true;
+                document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${res}.jpg'>`;
+                document.getElementById('prizeWon').classList.add('active');
+            });
     }
 }
 

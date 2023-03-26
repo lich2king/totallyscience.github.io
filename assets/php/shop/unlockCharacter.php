@@ -31,7 +31,7 @@
 
   $Legendary = array("legvr","legsun","legsuitcase", "leglemonade","legdollar");
   $Epic = array("epicworld","epicpc","epicmovie","epichotdog","epicdrink","epicdisco","epicboombox","epicbomb");
-  $Rare = array("rarestormcloud","raresoccer","rarepopsicle","raremushroom","rareketchup","rareheart","rareflower","rearefire","raredonut","rarecup","rarecoffee","rarebooze");
+  $Rare = array("rarestormcloud","raresoccer","rarepopsicle","raremushroom","rareketchup","rareheart","rareflower","rarefire","raredonut","rarecup","rarecoffee","rarebooze");
   $Common = array("comapple","comberry","combread", "comcarrot","comdragonfruit","comegg", "comlemon","commilk","compeach", "compear","comavocado","compineapple", "compizza","comprickle","comstrawberry", "comstrawberrymale","comtomato","comwatermellon");
 
 
