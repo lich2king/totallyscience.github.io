@@ -12,7 +12,7 @@ document.getElementById('dispenserVid').addEventListener('ended', myHandler, fal
 
 async function myHandler(e) {
     if (rollingDie) {
-        await fetch(`/assets/php/shop/unlockCharacter.php`)
+        await fetcher(`/assets/php/shop/unlockCharacter.php`)
             .then((response) => response.text())
             .then((res) => {
                 characterFullScreen = true;
