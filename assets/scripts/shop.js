@@ -23,7 +23,7 @@ async function myHandler(e) {
                 if (rarity == 'Common') {
                     document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(120, 120, 120)');
                 } else if (rarity == 'Rare') {
-                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(0, 149, 37)');
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(0, 69, 149)');
                 } else if (rarity == 'Epic') {
                     document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(178, 0, 191)');
                 } else if (rarity == 'Legendary') {
