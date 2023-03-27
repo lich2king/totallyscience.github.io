@@ -10,9 +10,9 @@
         .tn_banner {
             text-align: center;
             font-size: 15pt;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
+            position: relative;
+            width: 70%;
+            left: 15%;
             top: 80px;
         }
 
