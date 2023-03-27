@@ -96,7 +96,7 @@
                 let text = await loginRes.text();
                 let authRecieved = JSON.parse(text);
 
-                localStorage.setItem('authToken', authRecieved);
+                localStorage.setItem('authToken', JSON.stringify(authRecieved));
 
                 location.href = 'profile.php';
             } else if (registerRes.status == 400) {
