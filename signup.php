@@ -100,7 +100,8 @@
 
                 location.href = 'profile.php';
             } else if (registerRes.status == 400) {
-                error.innerText = await registerRes.text();
+                let text = await registerRes.text();
+                error.innerText = text;
             }
         }
     }
