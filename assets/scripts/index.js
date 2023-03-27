@@ -1,4 +1,4 @@
-// READY
+let token = JSON.parse(authToken);
 
 document.getElementById('gamesnav').classList.add('selected');
 
@@ -49,8 +49,6 @@ let displayedGames = 0;
 let games;
 let sorted;
 let hasLoaded = false;
-let loggedIn = false;
-
 let sortObject = (obj) =>
     Object.keys(obj)
     .sort()
@@ -66,16 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loadCookies() {
-    res = JSON.parse(authToken);
-
-    if (res != null) {
-        const isLoggedIn = res['isLoggedIn'];
-
-        if (isLoggedIn == 'true') {
-            loggedIn = true;
-        }
-    }
-
     //when done
     loadTopic();
     suggestGames();
@@ -212,7 +200,7 @@ async function displayGames() {
     }
 
     //liked games
-    if (loggedIn) {
+    if (token) {
         let recentRow = document.createElement('div');
         recentRow.classList.add('horizontalCon');
         let recentGamesContainer = document.createElement('div');
@@ -440,7 +428,7 @@ function createGameButton(game, pin, lazy) {
 
 async function checkReward() {
     setRewardDayBar('initial');
-    if (loggedIn) {
+    if (token) {
         let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
         // return out of function and start timer if the saved time has not been passed
@@ -502,7 +490,7 @@ async function rewardPop() {
     clearInterval(rewardTimerInterval);
     document.getElementById('rewardTimer').innerHTML = '00:00:00';
 
-    if (loggedIn) {
+    if (token) {
         document.getElementById('ignoreReward').style.display = 'none';
 
         let points = 100;
@@ -580,7 +568,7 @@ async function resetRewardTimer() {
 async function setRewardDayBar(mode) {
     let day = 0;
 
-    if (loggedIn) {
+    if (token) {
         if (mode == 'update') {
             let res = await fetcher(`${activeServer}/points/reward/check/day`);
             let rewardDay = parseInt(await res.text());
