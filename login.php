@@ -58,6 +58,8 @@
                 let text = await loginRes.text();
                 let authRecieved = JSON.parse(text);
 
+                console.log(authRecieved)
+
                 localStorage.setItem('authToken', authRecieved);
 
                 errorText.style.color = 'green';
