@@ -41,38 +41,33 @@
     <?php include "assets/includes/footer.php" ?>
     
     <script>
-        res = JSON.parse(authToken);
+        let token = JSON.parse(authToken);
 
-        let loggedIn = 'false';
-
-        if (res != null) {
-            loggedIn = res['isLoggedIn'];
-        }
-
-        if (loggedIn == "true") {
+        if (token.username) {
             location.href = 'profile.php';
         }
-    
     
         function SubmitLogin() {
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
             const errorText = document.getElementById('errorText');
-          
-            fetch(`assets/php/login.php?username=${user}&password=${pass}`).then((response) => response.text()).then((res) => {
-                if (res.startsWith('{')) {
-                    localStorage.setItem('authToken', res);
-                    
-                    //add success message
 
-                    setTimeout(() => {
+            let loginRes = await fetcher(`${activeServer}/auth/login`, { body: { username: user, password: pass } });
+
+            if (loginRes.status == 200) {
+                let authRecieved = await loginRes.json();
+
+                localStorage.setItem('authToken', authRecieved);
+
+                errorText.style.color = 'green';
+                errorText.innerText = 'success';
+
+                setTimeout(() => {
                         location.href = 'profile.php';
-                    }, 500);
-                } else {
-                    errorText.innerText = res;
-                }
-            });
-        }
+                }, 500);
+            } else {
+                    errorText.innerText = await loginRes.text();
+            }
     </script>
 </body>
 
