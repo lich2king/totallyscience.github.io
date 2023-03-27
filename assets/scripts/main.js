@@ -24,6 +24,7 @@ function fetcher(endpoint, options) {
     }
     //add active server when using node version
     //return fetch(`${activeServer}${endpoint}`, updatedOptions);
+    console.log(updatedOptions)
 
     return fetch(`${endpoint}`, updatedOptions);
 }
