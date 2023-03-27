@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +6,25 @@
 
     <title>Settings - Totally Science - Free Online Unblocked Games</title>
 
-    <link rel='stylesheet' href='assets/styles/settings.css?v1'>
+    <style>
+        #settingoptions {
+            margin-top: 120px;
+            width: 100vw;
+            text-align: center;
+            margin-bottom: 20vh;
+        }
+
+        #settingoptions p {
+            color: var(--light-color);
+            font-size: 1.25vw;
+            font-family: 'Rubik';
+        }
+
+        #save-button {
+            padding: 15px;
+            font-size: 1.25vw;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,18 +49,32 @@
         <button class="button" id="save-button" onclick="submit()">Save</button>
     </div>
 
-    <div class="adsrc" style="text-align:center; margin-bottom:50px;">
-            <!-- Horizontal Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3486863589051210"
-                data-ad-slot="5628466741" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/settings.js?v2"></script>
+    <script>
+        const websiteInput = document.getElementById('website');
+        const saveBtn = document.getElementById('save-button');
+        const disguiseInput = document.getElementById('disguise');
+
+        websiteInput.value = localStorage.getItem('website');
+        disguiseInput.value = localStorage.getItem('disguise');
+
+        function submit() {
+            let websiteEntered = websiteInput.value;
+            let disguiseEntered = disguiseInput.value;
+
+            if (!(websiteEntered.includes('http'))) websiteEntered = `https://${websiteEntered}`;
+            
+            localStorage.setItem("website", websiteEntered);
+            localStorage.setItem("disguise", disguiseEntered);
+
+            saveBtn.innerHTML = "Saved.";
+
+            setTimeout(() => {
+                saveBtn.innerHTML = "Save";
+            }, 500);
+        }
+    </script>
 </body>
 
 </html>
