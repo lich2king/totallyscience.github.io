@@ -103,6 +103,7 @@
                 error.innerText = await registerRes.text();
             }
         }
+    }
     </script>
 </body>
 
