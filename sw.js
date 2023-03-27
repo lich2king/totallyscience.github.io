@@ -61,11 +61,6 @@ self.addEventListener('fetch', (e) => {
   if (e.request.url.startsWith('https://static.cloudflare')) return;
   if (e.request.url.startsWith('https://www.google-analytics.com')) return;
 
-  if (e.request.url.startsWith('https://api.pushnami.com')) return;
-  if (e.request.url.startsWith('https://trc.pushnami.com')) return;
-  if (e.request.url.startsWith('https://psp.pushnami.com')) return;
-  if (e.request.url.startsWith('https://o413355.ingest.sentry.io')) return;
-
   e.respondWith((async () => {
     const r = await caches.match(e.request);
     if (r) { return r; }

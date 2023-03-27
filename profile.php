@@ -33,31 +33,7 @@
         </div>
     </div>
 
-    <div id="games">
-    </div>
-
-    <!-- <div id="recents">
-        <h1 class="label">Recent Games</h1>
-        <div class="biccontainer">
-            <div class="container" id="recentContainer">
-            </div>
-            <div id="arrow" onclick="window.open('classes.php?category=recent', '_self')">
-                <input type="image" src="assets/images/right-arrow.png" />
-            </div>
-        </div>
-    </div>
-
-
-    <div id="recents">
-        <h1 class="label">Liked Games</h1>
-        <div class="biccontainer">
-            <div class="container" id="likedcontainer"></div>
-
-            <div id="arrow" onclick="window.open('classes.php?category=liked', '_self')">
-                <input type="image" src="assets/images/right-arrow.png" />
-            </div>
-        </div>
-    </div> -->
+    <div id="games"></div>
 
     <div id="highscores">
         <h1 class="label">Your Highscores</h1>

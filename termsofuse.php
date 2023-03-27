@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
