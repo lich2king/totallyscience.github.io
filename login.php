@@ -47,7 +47,7 @@
             location.href = 'profile.php';
         }
     
-        function SubmitLogin() {
+        async function SubmitLogin() {
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
             const errorText = document.getElementById('errorText');
