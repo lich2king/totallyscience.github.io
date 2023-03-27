@@ -18,12 +18,10 @@ function fetcher(endpoint, options) {
     //post needed for body
     updatedOptions.method = 'post';
 
-    if (authToken) {
-        updatedOptions.body = JSON.stringify({
-            ...(options ? options.body : null),
-            auth: JSON.parse(authToken),
-        });
-    }
+    updatedOptions.body = JSON.stringify({
+        ...(options ? options.body : null),
+        auth: authToken ? JSON.parse(authToken) : null,
+    });
 
     //add active server when using node version
     //return fetch(`${activeServer}${endpoint}`, updatedOptions);
