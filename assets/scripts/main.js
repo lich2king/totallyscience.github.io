@@ -104,7 +104,8 @@ async function setPoints() {
     let res = await fetcher(`${activeServer}/points/check`);
     let points = await res.text();
 
-    document.getElementById('pointsDisplay').innerText = points;
+    if (res.status == 200) document.getElementById('pointsDisplay').innerText = points;
+    else document.getElementById('pointsDisplay').innerText = 0;
 }
 
 function logout() {

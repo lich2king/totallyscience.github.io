@@ -16,7 +16,7 @@
 
     <p style="text-align: center; color: whitesmoke; font-size: 15pt;">powered by <a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet,</a> a Titanium Network proxy</p>
 
-    <script src="assets/scripts/main.js?v39"></script>
+    <script src="assets/scripts/main.js?v40"></script>
     <script src="assets/scripts/app.js?9"></script>
 </body>
 
