@@ -52,7 +52,7 @@
             const pass = document.getElementById('password').value;
             const errorText = document.getElementById('errorText');
 
-            let loginRes = await fetcher(`${activeServer}/auth/login`, { type: 'POST', body: { username: user, password: pass } });
+            let loginRes = await fetcher(`${activeServer}/auth/login`, { method: 'POST', body: { username: user, password: pass } });
 
             if (loginRes.status == 200) {
                 let authRecieved = await loginRes.json();
