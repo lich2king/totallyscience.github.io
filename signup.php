@@ -92,13 +92,13 @@
 
                 let loginRes = await fetcher(`${activeServer}/auth/login`, { body: { username: user, password: pass } });
 
-                if (loginRes.status == 200 ) {
-                    let authRecieved = await loginRes.json();
+                if (loginRes.status == 200) {
+                let text = await loginRes.text();
+                let authRecieved = JSON.parse(text);
 
-                    localStorage.setItem('authToken', authRecieved);
+                localStorage.setItem('authToken', authRecieved);
 
-                    location.href = 'profile.php';
-                }
+                location.href = 'profile.php';
             } else if (registerRes.status == 400) {
                 error.innerText = await registerRes.text();
             }

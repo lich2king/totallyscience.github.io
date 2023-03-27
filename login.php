@@ -55,12 +55,10 @@
             let loginRes = await fetcher(`${activeServer}/auth/login`, { body: { username: user, password: pass } });
 
             if (loginRes.status == 200) {
-                let text = await loginRes.text()
+                let text = await loginRes.text();
                 let authRecieved = JSON.parse(text);
 
-                console.log(authRecieved)
-
-                localStorage.setItem('authToken', authRecieved.token);
+                localStorage.setItem('authToken', authRecieved);
 
                 errorText.style.color = 'green';
                 errorText.innerText = 'success';
