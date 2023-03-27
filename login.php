@@ -55,7 +55,10 @@
             let loginRes = await fetcher(`${activeServer}/auth/login`, { body: { username: user, password: pass } });
 
             if (loginRes.status == 200) {
-                let authRecieved = await loginRes.json();
+                let text = await loginRes.text()
+                let authRecieved = JSON.parse(text);
+
+                console.log(authRecieved)
 
                 localStorage.setItem('authToken', authRecieved.token);
 
