@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async() => {
     let token = JSON.parse(authToken);
 
     // redirect to signup page if user is not logged in
-    if (!token.username) {
+    if (!token) {
         location.href = 'signup.php';
     }
 

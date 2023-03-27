@@ -43,7 +43,7 @@
     <script>
         let token = JSON.parse(authToken);
 
-        if (token.username) {
+        if (token) {
             location.href = 'profile.php';
         }
     
