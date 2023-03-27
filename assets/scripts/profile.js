@@ -1,4 +1,3 @@
-let username;
 let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
@@ -10,18 +9,15 @@ document.addEventListener('DOMContentLoaded', async() => {
         games = retrievedGames;
     });
 
-    res = JSON.parse(authToken);
+    let token = JSON.parse(authToken);
 
-    if (res != null) {
-        const loggedIn = res['isLoggedIn'];
-        username = res['username'];
-        uid = res['id'];
+    // redirect to signup page if user is not logged in
+    if (!token.username) {
+        location.href = 'signup.php';
+    }
 
-        if (loggedIn != 'true') location.href = 'signup.php';
-
-        document.getElementById('usernameSpan').innerText = username;
-        document.getElementById('emailSpan').innerText = res['email'];
-    } else location.href = 'signup.php';
+    document.getElementById('usernameSpan').innerText = token.username;
+    document.getElementById('emailSpan').innerText = token.email;
 
     // load user's highscores
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/get`);
