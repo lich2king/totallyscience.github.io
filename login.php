@@ -68,6 +68,7 @@
             } else {
                     errorText.innerText = await loginRes.text();
             }
+        }
     </script>
 </body>
 
