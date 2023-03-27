@@ -8,23 +8,25 @@ const authToken = localStorage.getItem('authToken');
 function fetcher(endpoint, options) {
     let updatedOptions = {...options };
 
+    updatedOptions.headers = {
+        ...(options ? options.headers : null),
+        // not sure if this actually works as expected -- hopefully reduces preflight requests?
+        'Access-Control-Max-Age': 86400,
+        'Content-Type': 'application/json',
+    };
+
+    //post needed for body
+    updatedOptions.method = 'post';
+
     if (authToken) {
-        updatedOptions.headers = {
-            ...(options ? options.headers : null),
-            // not sure if this actually works as expected -- hopefully reduces preflight requests?
-            'Access-Control-Max-Age': 86400,
-            'Content-Type': 'application/json',
-        };
         updatedOptions.body = JSON.stringify({
             ...(options ? options.body : null),
             auth: JSON.parse(authToken),
         });
-        //post needed for body
-        updatedOptions.method = 'post';
     }
+
     //add active server when using node version
     //return fetch(`${activeServer}${endpoint}`, updatedOptions);
-    console.log(updatedOptions)
 
     return fetch(`${endpoint}`, updatedOptions);
 }
