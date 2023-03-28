@@ -1,78 +1,34 @@
-// READY
-
-document.getElementById('gamesnav').classList.add('selected');
-
-//Load Game
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+const urlParams = new URLSearchParams(window.location.search);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
+
+const token = JSON.parse(authToken);
+
 const likeButton = document.querySelector('#like');
 const likeButtonImg = likeButton.firstChild;
 const pinButton = document.querySelector('#pin');
 const pinButtonImg = pinButton.firstChild;
 
-let likeCount = 0;
-let loggedIn = false;
-let verified = true;
 let games;
 
-document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
-document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
-
 window.addEventListener('load', async () => {
-    //Check if user is logged in
-    res = JSON.parse(authToken);
+    let retrievedGamesRes = await fetch(`assets/games.json`);
+    let retrievedGames = await retrievedGamesRes.json();
 
-    let userloggedIn = 'false';
+    const gameData = retrievedGames[gameName];
 
-    if (res != null) userloggedIn = res['isLoggedIn'];
+    if (!gameData) window.location.href = '../classes';
 
-    //get game data for iframe etc
-    fetch(`assets/games.json?date=${new Date().getTime()}`)
-        .then((response) => {
-            if (response.ok) return response.json();
-            else console.log(`cannot fetch ./assets/games.json?date=${new Date().getTime()}`);
-        })
-        .then((games) => {
-            const gameData = games[gameName];
+    // update navbar to underline game link
+    document.getElementById('gamesnav').classList.add('selected');
 
-            if (gameData == null) window.location.href = '../classes';
+    // -------
+    games = retrievedGames;
+    suggestGames();
+    // ----
 
-            document.getElementById('description').innerText = gameData.description;
-            document.getElementById('controls').innerText = gameData.controls;
-            document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
-
-            let metaDesc = gameData.description;
-            if (gameData.description.length > 155) {
-                metaDesc = gameData.description.substr(0, 156);
-            }
-
-            document.querySelector('meta[name="description"]').setAttribute('content', metaDesc);
-            document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
-            document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
-            document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
-
-            if (gameData.type == 'proxy') {
-                document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
-            } else {
-                document.getElementById('iframe').src = gameData.iframe_url;
-            }
-
-            document.getElementById('iframe').focus();
-
-            if (id) {
-                document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
-                console.log(gameData.iframe_url + '?id=' + id);
-            }
-        })
-        .catch((err) => {
-            if (err) console.log(`cannot fetch assets/games.json?date=${new Date().getTime()}`);
-        });
-
-    if (userloggedIn == 'true') {
-        loggedIn = true;
-
+    // token will be undefined if user is not signed in
+    if (token) {
         // check if user has liked this games
         let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
 
@@ -90,37 +46,66 @@ window.addEventListener('load', async () => {
         fetcher(`${activeServer}/profile/recent/set`, { body: { gameName: gameName } });
     }
 
-    // get total number of likes a game has
+    // Zach set this up i am unsure of what its purpose is
+    if (id) {
+        document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
+    }
+
+    // set iframe to correct url defined in games.json
+    if (gameData.type == 'proxy') {
+        document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+    } else {
+        document.getElementById('iframe').src = gameData.iframe_url;
+    }
+
+    // focus on the iframe. This is necessary for certain games such as eaglercraft
+    document.getElementById('iframe').focus();
+
+    // update metadata
+    let metaDesc = gameData.description.length > 155 ? gameData.description.substr(0, 156) : gameData.description;
+
+    document.querySelector('meta[name="description"]').setAttribute('content', metaDesc);
+    document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
+    document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
+
+    document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
+    document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
+
+    // update game information
+    document.getElementById('description').innerText = gameData.description;
+    document.getElementById('controls').innerText = gameData.controls;
+    document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
+    
+    // update game total like count
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
-    likeCount = parseInt(likedCountText);
 
-    UpdateLikeCount();
+    document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText));
 
-    //get current highscore
+    // update game current highscore
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
-    let text = await highscoreRes.text();
+    let highscoreText = await highscoreRes.text();
 
-    if (text != '') {
-        const currentHighscore = numFormatter(text);
-        
-        document.getElementById('currentHighscore').innerText = currentHighscore;
-    } else document.getElementById('currentHighscore').innerText = '0';
+    document.getElementById('currentHighscore').innerText = highscoreRes.status == 200 ? numFormatter(highscoreText) : '0';
+
+    // update game statistics
+    fetcher(`${activeServer}/stats/games/view`, { body: { gameName: gameName } });
 });
 
 //Like Button
 likeButton.addEventListener('click', function () {
-    if (loggedIn) {
+    if (token) {
         if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
             likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-            likeCount += 1;
             fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
-            UpdateLikeCount();
+
+            document.getElementById('likeCount').innerText = numFormatter(parseInt(document.getElementById('likeCount').innerText) + 1);
         } else {
             likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
-            likeCount -= 1;
             fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
-            UpdateLikeCount();
+            
+            document.getElementById('likeCount').innerText = numFormatter(parseInt(document.getElementById('likeCount').innerText) + 1);
         }
     } else {
         swal('You must login to like the game', {
@@ -146,7 +131,7 @@ pinButton.addEventListener('webkitAnimationEnd', function () {
     pinButton.classList.remove('button-click');
 });
 pinButton.addEventListener('click', async () => {
-    if (loggedIn) {
+    if (token) {
         let res = await fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
 
         if (res.status == 400) {
@@ -168,11 +153,6 @@ pinButton.addEventListener('click', async () => {
         });
     }
 });
-
-function UpdateLikeCount() {
-    document.getElementById('likeCount').innerText = numFormatter(likeCount);
-}
-
 function OpenHighscore() {
     window.open(`/leaderboard.php?class=${gameName}`, '_self');
 }
@@ -203,16 +183,6 @@ document.getElementById('fullscreen').addEventListener('click', () => {
     } else if (elem.msRequestFullscreen) {
         elem.msRequestFullscreen();
     }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json`)
-        .then((response) => response.json())
-        .then((retrievedGames) => {
-            games = retrievedGames;
-            suggestGames();
-            addGameData(); //increment game views by 1
-        });
 });
 
 function suggestGames() {
@@ -292,12 +262,6 @@ function numFormatter(num) {
     } else if (num < 1000) {
         return num; // if value < 1000, nothing to do
     }
-}
-
-function addGameData() {
-    const gameData = games[gameName];
-    console.log(gameData);
-    if (gameData != null) fetch(`assets/php/addgameviews.php?name=${gameName}`);
 }
 
 window.addEventListener('click', () => {
