@@ -29,7 +29,7 @@
             Common Minis
         </h1>
         <div class="miniCon">
-            <img name="comwatermellon" src="\assets\minis\JPGs\comwatermellon.jpg">
+            <img name="comwatermellon" src="\assets\minis\JPGs\comwatermellon.jpg" class="locked">
             <img name="comtomato" src="\assets\minis\JPGs\comtomato.jpg" class="locked">
             <img name="comstrawberrymale" src="\assets\minis\JPGs\comstrawberrymale.jpg" class="locked">
             <img name="comstrawberry" src="\assets\minis\JPGs\comstrawberry.jpg" class="locked">

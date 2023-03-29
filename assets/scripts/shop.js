@@ -110,7 +110,6 @@ function seeUnlockedMinis() {
         fetcher(`/assets/php/shop/unlockedMinis.php`)
             .then((response) => response.text())
             .then((res) => {
-                console.log(res);
                 let minis = res.split(';');
 
                 for (let i = 1; i < minis.length; i++) {
