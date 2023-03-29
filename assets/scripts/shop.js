@@ -114,16 +114,8 @@ function seeUnlockedMinis() {
                 let minis = res.split(';');
 
                 for (let i = 1; i < minis.length; i++) {
-                    console.log(minis[i]);
+                    document.getElementByName(minis[i]).classList.remove('locked');
                 }
-                // length = likedgames.length;
-                // if (likedgames.length > 0) {
-                //     for (like in likedgames) {
-                //         if (document.getElementsByName(likedgames[like]).length > 0) {
-                //             recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
-                //         }
-                //     }
-                // }
             });
 
     }
