@@ -53,6 +53,8 @@ async function dispenseCharacter() {
         } else {
             notEnoughPoints();
         }
+    } else if (!checkLoggedIn()) {
+        notLoggedIn();
     }
 }
 
@@ -63,6 +65,15 @@ function notEnoughPoints() {
         }, 2000);
     }
     document.getElementById('dispenseButton').innerHTML = 'Not enough points!';
+}
+
+function notLoggedIn() {
+    if (document.getElementById('dispenseButton').innerHTML != 'Not logged in!') {
+        setTimeout(function () {
+            document.getElementById('dispenseButton').innerHTML = '1000 pts';
+        }, 2000);
+    }
+    document.getElementById('dispenseButton').innerHTML = 'Not logged in!';
 }
 
 function checkLoggedIn() {
