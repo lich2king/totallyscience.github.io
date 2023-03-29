@@ -243,19 +243,19 @@ async function displayGames() {
 
     //for each popular game, add the game to the horizontalCon
 
-    await fetch(`/assets/php/getpopulargames.php`)
-        .then((response) => response.text())
-        .then((res) => {
-            let popularGames = JSON.parse(res);
+    let popGamesRes = await fetcher(`${activeServer}/stats/games/popular`);
 
-            for (let i = 0; i < 15; i++) {
-                const gameName = popularGames[i][0];
-                if (gameName != null) {
-                    gamesContainer.innerHTML += createGameButton(gameName, "hot");
-                }
+    if (res.status == 200) {
+        let text = await popGamesRes.text();
+        let popularGames = JSON.parse(text);
+
+        for (let i = 0; i < 15; i++) {
+            const gameName = popularGames[i][0];
+            if (gameName != null) {
+                gamesContainer.innerHTML += createGameButton(gameName, "hot");
             }
-        });
-
+        }
+    }
     row.appendChild(gamesContainer);
     gamesDiv.prepend(row);
     gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
