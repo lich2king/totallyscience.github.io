@@ -99,7 +99,7 @@ document.body.addEventListener('click', function (evt) {
         document.getElementById('prizeWon').classList.add('slideAway');
         rollingDie = false;
         tspoints -= 1000;
-        setInterval(function () {
+        setTimeout(function () {
             console.log('intervaled');
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
