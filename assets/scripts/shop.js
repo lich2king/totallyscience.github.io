@@ -111,6 +111,18 @@ function seeUnlockedMinis() {
             .then((response) => response.text())
             .then((res) => {
                 console.log(res);
+                let minis = res.split(';');
+                console.log(minis);
+
+                // length = likedgames.length;
+                // if (likedgames.length > 0) {
+                //     for (like in likedgames) {
+                //         if (document.getElementsByName(likedgames[like]).length > 0) {
+                //             recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
+                //         }
+                //     }
+                // }
             });
+
     }
 }
