@@ -94,7 +94,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/shop.js?v37"></script>
+    <script src="assets/scripts/shop.js?v38"></script>
 </body>
 
 </html>

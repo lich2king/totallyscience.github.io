@@ -112,8 +112,10 @@ function seeUnlockedMinis() {
             .then((res) => {
                 console.log(res);
                 let minis = res.split(';');
-                console.log(minis);
 
+                for (let i = 1; i < minis.length; i++) {
+                    console.log(minis[i]);
+                }
                 // length = likedgames.length;
                 // if (likedgames.length > 0) {
                 //     for (like in likedgames) {
