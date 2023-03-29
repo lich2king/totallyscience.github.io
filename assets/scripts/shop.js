@@ -42,6 +42,7 @@ var tspoints = 0;
 var characterFullScreen = false;
 
 async function dispenseCharacter() {
+    console.log(checkLoggedIn());
     if (!rollingDie && checkLoggedIn()) {
         console.log(tspoints);
         if (tspoints >= 1000) {
@@ -54,6 +55,7 @@ async function dispenseCharacter() {
             notEnoughPoints();
         }
     } else if (!checkLoggedIn()) {
+        console.log(checkLoggedIn());
         notLoggedIn();
     }
 }
