@@ -100,6 +100,7 @@ document.body.addEventListener('click', function (evt) {
         rollingDie = false;
         tspoints -= 1000;
         setInterval(function () {
+            console.log('intervaled');
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
             document.getElementById('prizeWon').innerHTML = '';
