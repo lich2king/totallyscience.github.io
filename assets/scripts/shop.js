@@ -84,7 +84,7 @@ function checkLoggedIn() {
         console.log('Not null');
         const isLoggedIn = res['isLoggedIn'];
         console.log(isLoggedIn);
-        if (isLoggedIn == 'true') {
+        if (isLoggedIn == true) {
             console.log('true');
             return true;
         }
