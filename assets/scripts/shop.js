@@ -80,12 +80,12 @@ function notLoggedIn() {
 
 function checkLoggedIn() {
     res = JSON.parse(authToken);
-    console.log(res);
-    return res;
     if (res != null) {
+        console.log('Not null');
         const isLoggedIn = res['isLoggedIn'];
-
+        console.log(isLoggedIn);
         if (isLoggedIn == 'true') {
+            console.log('true');
             return true;
         }
     }
