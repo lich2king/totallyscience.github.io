@@ -37,7 +37,6 @@ async function myHandler(e) {
     }
 }
 
-
 var rollingDie = false;
 var tspoints = 0;
 var characterFullScreen = false;
@@ -93,20 +92,19 @@ function counter(id, start, end, duration) {
         }, step);
 }
 
-document.body.addEventListener('click', function(evt) {
+document.body.addEventListener('click', function (evt) {
     if (characterFullScreen) {
+        characterFullScreen = false;
         document.getElementById('prizeWon').classList.add('slideAway');
         rollingDie = false;
         tspoints -= 1000;
-        characterFullScreen = false;
-        setInterval(function() {
+        setInterval(function () {
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
             document.getElementById('prizeWon').innerHTML = '';
         }, 1500);
     }
 });
-
 
 seeUnlockedMinis();
 
@@ -121,6 +119,5 @@ function seeUnlockedMinis() {
                     document.getElementsByName(minis[i])[0].classList.remove('locked');
                 }
             });
-
     }
 }
