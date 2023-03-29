@@ -20,6 +20,7 @@ async function myHandler(e) {
 
                 console.log(`won prize: ${mini}`);
                 characterFullScreen = true;
+                document.getElementById('dispenseButton').innerHTML = '1000 pts';
                 document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
                 document.getElementsByName(mini)[0].classList.remove('locked');
@@ -46,12 +47,20 @@ async function dispenseCharacter() {
         if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+            document.getElementById('dispenseButton').innerHTML = 'Dispensing...';
             playVid();
             rollingDie = true;
         } else {
-            alert('Not enough points!');
+            notEnoughPoints();
         }
     }
+}
+
+function notEnoughPoints() {
+    document.getElementById('dispenseButton').innerHTML = 'Not enough points!';
+    setTimeout(function () {
+        document.getElementById('dispenseButton').innerHTML = '1000 pts';
+    }, 2000);
 }
 
 function checkLoggedIn() {
