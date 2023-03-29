@@ -104,10 +104,10 @@ document.body.addEventListener('click', function(evt) {
 
 
 seeUnlockedMinis();
-async function seeUnlockedMinis() {
-    //if logged in
+
+function seeUnlockedMinis() {
     if (checkLoggedIn()) {
-        await fetcher(`/assets/php/shop/unlockedMinis.php`)
+        fetcher(`/assets/php/shop/unlockedMinis.php`)
             .then((response) => response.text())
             .then((res) => {
                 console.log(res);

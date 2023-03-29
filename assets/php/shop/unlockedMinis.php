@@ -24,11 +24,11 @@
   $data = json_decode($json, TRUE);
 
   if (!isset($data['auth'])) {
-      die("error: no cookie");
+      //die("error: no cookie");
   }
 
-  $userid = $data['auth']['id'];
-
+  //$userid = $data['auth']['id'];
+  $userid = 15;
   $query = "SELECT Minis FROM accounts WHERE ID = '$userid'";
   $minis = mysqli_query($conn, $query);
 
