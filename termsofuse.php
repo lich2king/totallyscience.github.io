@@ -4,7 +4,33 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/termsofuse.css?v4'>
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+
+        #termsText p {
+            color: white;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 20px;
+        }
+
+        #termsText h1 {
+            color: white;
+            text-align: center;
+        }
+
+        #termsText h2 {
+            color: white;
+            text-align: center;
+        }
+
+        #termsText {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+    </style>
 </head>
 
 <body>

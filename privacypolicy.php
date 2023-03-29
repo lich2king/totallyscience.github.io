@@ -4,7 +4,22 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/privacypolicy.css?v4'>
+    <style>
+        #privacyText {
+            color: var(--light-color);
+            padding-right: 2vw;
+            padding-left: 2vw;
+        }
+
+        #privacyText h1 {
+            text-align: center;
+        }
+
+        #privacyText {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+    </style>
 </head>
 
 <body>
