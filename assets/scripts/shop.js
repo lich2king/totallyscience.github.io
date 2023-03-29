@@ -19,7 +19,6 @@ async function myHandler(e) {
                 let rarity = res.split(':')[0];
 
                 console.log(`won prize: ${mini}`);
-
                 characterFullScreen = true;
                 document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
@@ -94,6 +93,8 @@ function counter(id, start, end, duration) {
 
 document.body.addEventListener('click', function (evt) {
     if (characterFullScreen) {
+        console.log('clicked');
+        console.log(characterFullScreen);
         characterFullScreen = false;
         document.getElementById('prizeWon').classList.add('slideAway');
         rollingDie = false;
