@@ -57,10 +57,12 @@ async function dispenseCharacter() {
 }
 
 function notEnoughPoints() {
+    if (document.getElementById('dispenseButton').innerHTML != 'Not enough points!') {
+        setTimeout(function () {
+            document.getElementById('dispenseButton').innerHTML = '1000 pts';
+        }, 2000);
+    }
     document.getElementById('dispenseButton').innerHTML = 'Not enough points!';
-    setTimeout(function () {
-        document.getElementById('dispenseButton').innerHTML = '1000 pts';
-    }, 2000);
 }
 
 function checkLoggedIn() {
