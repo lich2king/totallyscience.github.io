@@ -243,12 +243,12 @@ async function displayGames() {
 
     let popGamesRes = await fetcher(`${activeServer}/stats/games/popular`);
 
-    if (res.status == 200) {
+    if (popGamesRes.status == 200) {
         let text = await popGamesRes.text();
         let popularGames = JSON.parse(text);
 
         for (let i = 0; i < 15; i++) {
-            const gameName = popularGames[i][0];
+            const gameName = popularGames[i].game;
             if (gameName != null) {
                 gamesContainer.innerHTML += createGameButton(gameName, "hot");
             }
