@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <title>Totally Science - Free Online Unblocked Games</title>
 
 <meta property="og:title" content="Totally Science - Free Online Unblocked Games">

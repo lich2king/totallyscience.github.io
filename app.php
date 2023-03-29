@@ -16,7 +16,7 @@
 
     <p style="text-align: center; color: whitesmoke; font-size: 15pt;">powered by <a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet,</a> a Titanium Network proxy</p>
 
-    <script src="assets/scripts/main.js?v40"></script>
+    <script src="assets/scripts/main.js?v41"></script>
     <script>
         document.getElementById("appsnav").classList.add("selected");
 
@@ -36,7 +36,7 @@
                 const appData = apps[appName];
                 const appFrame = document.getElementById('app_frame');
 
-                if (appData == null) window.location.href = '../apps';
+                if (appData == null) window.location.href = '../apps.php';
 
                 if (appData.type == 'proxy') appFrame.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(appData.iframe_url);
                 else appFrame.src = appData.iframe_url;

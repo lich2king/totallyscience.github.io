@@ -34,11 +34,11 @@
         <div class="footSection">
             <h1>Legal</h1>
 
-            <p><a href="termsofuse">Terms of Use</a></p>
-            <p><a href="privacypolicy">Privacy Policy</a></p>
+            <p><a href="termsofuse.php">Terms of Use</a></p>
+            <p><a href="privacypolicy.php">Privacy Policy</a></p>
         </div>
     </div>
 
     <div class="bottomFoot">© 2022 TotallyScience. A Zach Yadegari Production ™</div>
 </footer>
-<script src="assets/scripts/main.js?v58"></script>
+<script src="assets/scripts/main.js?v59"></script>

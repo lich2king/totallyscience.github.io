@@ -356,20 +356,6 @@ searchBar.addEventListener('keyup', () => {
 });
 
 
-function changeToGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
-}
-
-function noGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
-}
-
 function createGameButton(game, pin) {
     const data = games[game];
     if (data == null)

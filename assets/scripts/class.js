@@ -4,14 +4,100 @@ const id = urlParams.get('id');
 
 const token = JSON.parse(authToken);
 
-const likeButton = document.querySelector('#like');
-const likeButtonImg = likeButton.firstChild;
-const pinButton = document.querySelector('#pin');
-const pinButtonImg = pinButton.firstChild;
+async function displayUserData() {
+    const pinBtn = document.querySelector('#pin');
+    const likeBtn = document.querySelector('#like');
+    const pinImg = pinBtn.firstChild;
+    const likeImg = likeBtn.firstChild;
 
-let games;
+    // check if user has liked this games
+    let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
+
+    // set like icon if user has liked it
+    if (likedRes.status == 200) likeImg.setAttribute('src', 'assets/images/icons/like.png');
+
+    // check if user has pinned this game
+    let pinnedRes = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
+
+    // set pin icon if user has pinned it
+    if (pinnedRes.status == 200) pinImg.setAttribute('src', 'assets/images/icons/pin.png');
+
+    // add to recently played games list
+    fetcher(`${activeServer}/profile/recent/set`, { body: { gameName: gameName } });
+}
+
+function setupActionButtons() {
+    const pinBtn = document.querySelector('#pin');
+    const likeBtn = document.querySelector('#like');
+
+    // configuration for swal popup
+    const swalConfig = { buttons: { cancel: 'Cancel', login: { text: 'Login', value: 'login' } } };
+    const swalHandler = (value) => {
+        if (value == 'login') window.open('signup.php', '_self');
+    }
+
+    likeBtn.addEventListener('click', async (e) => {
+        e.target.classList.add('button-click');
+
+        if (token) {
+            let res = await fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
+    
+            if (res.status == 200) {
+                const likedIcon = 'assets/images/icons/like.png';
+                const notLikedIcon = 'assets/images/icons/likeoutline.png';
+
+                // check if it is liked by checking current icon
+                let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
+    
+                // update icon to match chnaged state
+                e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
+
+                // set updated like count
+                let likeCountEle = document.getElementById('likeCount');
+
+                let prevLikeCount = parseInt(likeCountEle.innerText);
+                let curLikeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+
+                likeCountEle.innerText = numFormatter(curLikeCount);
+            }
+        } else {
+            swal('You must login to like the game', swalConfig).then(swalHandler);
+        }
+    });
+    likeBtn.addEventListener('webkitAnimationEnd', () => {
+        likeBtn.classList.remove('button-click');
+    });
+
+    pinBtn.addEventListener('click', async (e) => {
+        e.target.classList.add('button-click');
+
+        if (token) {
+            let res = await fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
+    
+            if (res.status == 400) {
+                swal('You have pinned the max amount of games (3).');
+            } else {
+                const pinnedIcon = 'assets/images/icons/pin.png';
+                const notPinnedIcon = 'assets/images/icons/pinoutline.png';
+
+                // check if it is pinned by checking current icon
+                // update icon to match chnaged state
+                let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
+    
+                e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
+            }
+        } else {
+            swal('You must login to pin the game', swalConfig).then(swalHandler);
+        }
+    });
+    pinBtn.addEventListener('webkitAnimationEnd', () => {
+        pinBtn.classList.remove('button-click');
+    });
+}
 
 window.addEventListener('load', async () => {
+    // TODO: reduce # of getElementById calls for performance
+
     let retrievedGamesRes = await fetch(`assets/games.json`);
     let retrievedGames = await retrievedGamesRes.json();
 
@@ -23,33 +109,16 @@ window.addEventListener('load', async () => {
     document.getElementById('gamesnav').classList.add('selected');
 
     // -------
-    games = retrievedGames;
-    suggestGames();
+    suggestGames(retrievedGames);
     // ----
 
+    // TODO: /pinned/check and /liked/check could be combined into one request
+
     // token will be undefined if user is not signed in
-    if (token) {
-        // check if user has liked this games
-        let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
-
-        // set like icon if user has liked it
-        if (likedRes.status == 200) likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-
-        // check if user has pinned this game
-        let pinnedRes = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
-
-        // set pin icon if user has pinned it
-        if (pinnedRes.status == 200) pinButtonImg.setAttribute('src', 'assets/images/icons/pin.png');
-
-
-        // add to recently played games list
-        fetcher(`${activeServer}/profile/recent/set`, { body: { gameName: gameName } });
-    }
+    if (token) displayUserData();
 
     // Zach set this up i am unsure of what its purpose is
-    if (id) {
-        document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
-    }
+    if (id) document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
 
     // set iframe to correct url defined in games.json
     if (gameData.type == 'proxy') {
@@ -61,6 +130,7 @@ window.addEventListener('load', async () => {
     // focus on the iframe. This is necessary for certain games such as eaglercraft
     document.getElementById('iframe').focus();
 
+
     // update metadata
     let metaDesc = gameData.description.length > 155 ? gameData.description.substr(0, 156) : gameData.description;
 
@@ -68,20 +138,22 @@ window.addEventListener('load', async () => {
     document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
-
     document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
     document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
+
 
     // update game information
     document.getElementById('description').innerText = gameData.description;
     document.getElementById('controls').innerText = gameData.controls;
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
     
+
     // update game total like count
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
 
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText));
+
 
     // update game current highscore
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
@@ -89,86 +161,13 @@ window.addEventListener('load', async () => {
 
     document.getElementById('currentHighscore').innerText = highscoreRes.status == 200 ? numFormatter(highscoreText) : '0';
 
+
     // update game statistics
     fetcher(`${activeServer}/stats/games/view`, { body: { gameName: gameName } });
 });
 
-//Like Button
-likeButton.addEventListener('click', function () {
-    if (token) {
-        if (likeButtonImg.getAttribute('src') == 'assets/images/icons/likeoutline.png') {
-            likeButtonImg.setAttribute('src', 'assets/images/icons/like.png');
-            fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
-
-            document.getElementById('likeCount').innerText = numFormatter(parseInt(document.getElementById('likeCount').innerText) + 1);
-        } else {
-            likeButtonImg.setAttribute('src', 'assets/images/icons/likeoutline.png');
-            fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
-            
-            document.getElementById('likeCount').innerText = numFormatter(parseInt(document.getElementById('likeCount').innerText) + 1);
-        }
-    } else {
-        swal('You must login to like the game', {
-            buttons: { cancel: 'Cancel', login: { text: 'Login', value: 'login' } },
-        }).then((value) => {
-            if (value == 'login') {
-                window.open('signup.php', '_self');
-            }
-        });
-    }
-});
-
-likeButton.addEventListener('click', function () {
-    likeButton.classList.add('button-click');
-});
-likeButton.addEventListener('webkitAnimationEnd', function () {
-    likeButton.classList.remove('button-click');
-});
-pinButton.addEventListener('click', function () {
-    pinButton.classList.add('button-click');
-});
-pinButton.addEventListener('webkitAnimationEnd', function () {
-    pinButton.classList.remove('button-click');
-});
-pinButton.addEventListener('click', async () => {
-    if (token) {
-        let res = await fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
-
-        if (res.status == 400) {
-            swal('You have pinned the max amount of games (3).');
-        } else {
-            // check if it is pinned by checking current icon
-            // update icon to match chnaged state
-            let isPinned = pinButtonImg.getAttribute('src') == 'assets/images/icons/pin.png';
-
-            pinButtonImg.setAttribute('src', isPinned ? 'assets/images/icons/pinoutline.png' : 'assets/images/icons/pin.png');
-        }
-    } else {
-        swal('You must login to pin the game', {
-            buttons: { cancel: 'Cancel', login: { text: 'Login', value: 'login' } },
-        }).then((value) => {
-            if (value == 'login') {
-                window.open('signup.php', '_self');
-            }
-        });
-    }
-});
 function OpenHighscore() {
     window.open(`/leaderboard.php?class=${gameName}`, '_self');
-}
-
-function changeToGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
-}
-
-function noGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
 }
 
 document.getElementById('fullscreen').addEventListener('click', () => {
@@ -185,7 +184,7 @@ document.getElementById('fullscreen').addEventListener('click', () => {
     }
 });
 
-function suggestGames() {
+function suggestGames(games) {
     let displayedGames = 0;
     let randomGames = [];
     let currentTags = games[gameName]['tags'];
@@ -237,7 +236,7 @@ function suggestGames() {
     row.innerHTML += arrowContainer;
     //for each element in newGames, add the game to the horizontalCon
     randomGames.forEach(function (game) {
-        gamesContainer.innerHTML += createGameButton(game);
+        gamesContainer.innerHTML += createGameButton(game, games);
     });
 
     row.appendChild(gamesContainer);
@@ -295,7 +294,7 @@ function addArrowListeners() {
     }
 }
 
-function createGameButton(game, pin) {
+function createGameButton(game, games) {
     const data = games[game];
     if (data == null) return '';
 

@@ -95,19 +95,6 @@ document.addEventListener('DOMContentLoaded', async() => {
     addArrowListeners();
 });
 
-function changeToGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
-}
-
-function noGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
-}
 
 // converts number to string representation with K and M.
 // toFixed(d) returns a string that has exactly 'd' digits

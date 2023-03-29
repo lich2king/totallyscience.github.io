@@ -336,20 +336,6 @@ var randomProperty = function(object) {
     return keys[Math.floor(keys.length * Math.random())];
 };
 
-function changeToGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.gif})`;
-}
-
-function noGif(ele) {
-    const game = ele.getAttribute('name');
-    const data = games[game];
-
-    if (data.gif != null) ele.style = `background-image: url(${data.image})`;
-}
-
 function createGameButton(game, pin, lazy) {
     const data = games[game];
 
