@@ -33,18 +33,6 @@ async function myHandler(e) {
     }
 }
 
-//Everyone starts with first tomato mini
-//If logged in:
-//If you click the 1000pts button:
-//If you have enough points:
-//Play take away points animation, but don't take it away in php yet
-//Pick 1-10
-//40% common, 30% rare, 20% epic, 10% legendary
-//From the rarity, pick a random character
-//Check if the character is taken
-//If if it, pick a new one from the beginning
-//Else, unlock it in the css and play the prize animation
-//Take away points in the same php script that unlocks it
 
 var rollingDie = false;
 var tspoints = 0;
@@ -101,14 +89,27 @@ function counter(id, start, end, duration) {
         }, step);
 }
 
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
     if (characterFullScreen) {
         document.getElementById('prizeWon').classList.add('slideAway');
         rollingDie = false;
-        setInterval(function () {
+        setInterval(function() {
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
             document.getElementById('prizeWon').innerHTML = '';
         }, 1500);
     }
 });
+
+
+seeUnlockedMinis();
+async function seeUnlockedMinis() {
+    //if logged in
+    if (checkLoggedIn()) {
+        await fetcher(`/assets/php/shop/unlockedMinis.php`)
+            .then((response) => response.text())
+            .then((res) => {
+                console.log(res);
+            });
+    }
+}
