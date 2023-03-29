@@ -43,7 +43,7 @@
     flex-direction: row;
     gap: 20px;
     overflow: auto;
-    width: 100vw;
+    width: 90vw;
 }
 
 .miniCon::-webkit-scrollbar {
