@@ -28,9 +28,11 @@
   }
 
   //$userid = $data['auth']['id'];
+
   $userid = 15;
   $query = "SELECT Minis FROM accounts WHERE ID = '$userid'";
   $minis = mysqli_query($conn, $query);
+  $minis = ($minis -> fetch_row())[0];
 
   die($minis);
 
