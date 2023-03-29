@@ -573,7 +573,7 @@ async function setRewardDayBar(mode) {
         if (mode == 'update') {
             let res = await fetcher(`${activeServer}/points/reward/check/day`);
             let rewardDay = parseInt(await res.text());
-            
+
             day = parseInt(rewardDay);
             animateBar(day);
         } else {
