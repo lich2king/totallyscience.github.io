@@ -17,6 +17,9 @@ async function myHandler(e) {
             .then((res) => {
                 let mini = res.split(':')[1];
                 let rarity = res.split(':')[0];
+
+                console.log(`won prize: ${mini}`);
+
                 characterFullScreen = true;
                 document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
@@ -95,6 +98,7 @@ document.body.addEventListener('click', function(evt) {
         document.getElementById('prizeWon').classList.add('slideAway');
         rollingDie = false;
         tspoints -= 1000;
+        characterFullScreen = false;
         setInterval(function() {
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
