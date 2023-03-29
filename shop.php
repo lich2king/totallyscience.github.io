@@ -31,7 +31,7 @@
         <div class="miniCon">
             <img src="\assets\minis\JPGs\comwatermellon.jpg">
             <img src="\assets\minis\JPGs\comtomato.jpg" class="locked">
-            <img src="\assets\minis\JPGs\comstrawberrymale" class="locked">
+            <img src="\assets\minis\JPGs\comstrawberrymale.jpg" class="locked">
             <img src="\assets\minis\JPGs\comstrawberry.jpg" class="locked">
             <img src="\assets\minis\JPGs\comprickle.jpg" class="locked">
             <img src="\assets\minis\JPGs\compizza.jpg" class="locked">
