@@ -20,7 +20,7 @@ async function myHandler(e) {
                 characterFullScreen = true;
                 document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
-                document.getElementsByName('mini')[0].classList.remove('locked');
+                document.getElementsByName(mini)[0].classList.remove('locked');
                 if (rarity == 'Common') {
                     document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(120, 120, 120)');
                 } else if (rarity == 'Rare') {
