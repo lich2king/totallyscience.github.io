@@ -114,7 +114,7 @@ function seeUnlockedMinis() {
                 let minis = res.split(';');
 
                 for (let i = 1; i < minis.length; i++) {
-                    document.getElementByName(minis[i]).classList.remove('locked');
+                    document.getElementsByName(minis[i])[0].classList.remove('locked');
                 }
             });
 
