@@ -55,7 +55,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/leaderboard.js?v24"></script>
+    <script src="assets/scripts/leaderboard.js?v25"></script>
 </body>
 
 </html>

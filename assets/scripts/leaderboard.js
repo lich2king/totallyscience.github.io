@@ -10,7 +10,7 @@ const gameName = urlParams.get('class');
 let games;
 let highscores;
 
-fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then((res) => {
+fetcher(`${activeServer}/profile/highscores/view`).then((response) => response.text()).then((res) => {
     fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         games = retrievedGames;
 
@@ -19,9 +19,9 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
         highscores = res;
 
         for (score in highscores) {
-            const game = highscores[score][0];
-            const name = highscores[score][1];
-            const gameScore = highscores[score][2];
+            const game = highscores[score].game;
+            const name = highscores[score].name;
+            const gameScore = highscores[score].score;
             const highscoreDiv = `
                 <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class?class=${game}'">
                     <div class="text">
@@ -45,7 +45,7 @@ fetch(`/assets/php/viewhighscores.php`).then((response) => response.text()).then
             let highscored = false;
 
             for (score in highscores) {
-                const game = highscores[score][0];
+                const game = highscores[score].game;
 
                 if (game == gameName) highscored = true;
             }
