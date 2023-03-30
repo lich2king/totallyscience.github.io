@@ -6,7 +6,25 @@
 
     <title>Submit Highscore - Totally Science - Free Online Unblocked Games</title>
 
-    <link rel='stylesheet' href='assets/styles/submithighscore.css'>
+    <style>
+        #gameInfo {
+            margin-top: 120px;
+            width: 100vw;
+            text-align: center;
+            margin-bottom: 40vh;
+        }
+
+        #gameInfo p {
+            color: var(--light-color);
+            font-size: 1.25vw;
+            font-family: 'Rubik';
+        }
+
+        #save-button {
+            padding: 15px;
+            font-size: 1.25vw;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,14 +40,105 @@
 
         <p>Submit a screenshot of your score (Show full screen including top website bar otherwise INVALID)</p>
         <input type="file" id="fileUpload">
+
         <br><br>
+        
         <button class="button" id="save-button" onclick="SubmitHighscore()">Submit</button>
         <p style="text-align: center; color: red;" id="errorText"></p>
     </div>
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/submithighscore.js?v4"></script>
+    <script>
+        const token = JSON.parse(authToken);
+
+        if (!token) {
+            location.href = 'signup.php';
+        }
+
+        let image;
+
+        window.addEventListener('load', async () => {
+            // load games onto dropdown menu
+            let gamesRes = await fetch(`assets/games.json?${new Date().getTime()}`);
+            let retrivedGames = await gamesRes.json();
+
+            const gamesSelect = document.getElementById('gamesSelect');
+
+            for (const [name] of Object.entries(retrivedGames)) {
+                const gameOp = document.createElement('option');
+                
+                gameOp.value = name;
+                gameOp.innerHTML = name;
+
+                gamesSelect.appendChild(gameOp);
+            }
+
+            // handle file input
+            document.querySelector('input[type="file"]').addEventListener('change', (e) => {
+                const errorText = document.getElementById('errorText');
+                errorText.innerHTML = '';
+                errorText.style.color = 'red';
+
+                if (!e.target.files || !e.target.files[0]) {
+                    return;
+                }
+                
+                const file = e.target.files[0]
+                const fileType = file['type'];
+                const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/jpg'];
+
+                if (!validImageTypes.includes(fileType)) {
+                    errorText.innerText = "You can only upload an image.";
+
+                    document.querySelector('input[type="file"]').value = null;
+
+                    return;
+                } else if (file.size > 1000000) {
+                    errorText.innerText = "The file must be smaller than 10mb.";
+
+                    document.querySelector('input[type="file"]').value = null;
+
+                    return;
+                }
+                
+                let reader = new FileReader();
+                reader.readAsDataURL(file);
+
+                reader.onload = () => {
+                    image = reader.result;
+                };
+
+                reader.onerror = (error) => {
+                    console.log('error: ', error);
+                };
+            });
+        });
+
+        async function SubmitHighscore() {
+            const gameName = document.getElementById('gamesSelect').value;
+            const score = document.getElementById('scoreText').value;
+
+            const errorText = document.getElementById('errorText');
+            errorText.innerHTML = '';
+            errorText.style.color = 'red';
+
+            let submitRes = await fetcher(`${activeServer}/profile/highscores/submit`, { body: { gameName: gameName, score: score, image: image} });
+            
+            if (submitRes.status == 400) {
+                let text = await submitRes.text();
+
+                errorText.innerText = text;
+            } else {
+                errorText.style.color = 'green';
+                errorText.innerHTML = 'Success! Your score will be reviewed shortly.';
+
+                setTimeout(() => {
+                    location.href = 'leaderboard.php';
+                }, 1000);
+            }
+        }
+    </script>
 </body>
 
 </html>

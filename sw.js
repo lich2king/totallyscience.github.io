@@ -2,12 +2,8 @@
 const OFFLINE_VERSION = 3;
 const CACHE_NAME = "ts_cache";
 const URLS_TO_CACHE = [
-    //logo
-    '/assets/images/logo.png',
-    '/assets/images/featuredimg/learn2fly.jpg',
-    '/assets/images/featuredimg/smashkarts.jpg',
-    '/assets/images/basketballstarsfeature.jpeg',
-    '/assets/images/icons/loading.gif'
+    // logo
+    '/assets/images/totally-science-logo-transparent-scaled.png',
 ];
 
 self.addEventListener("install", (event) => {
