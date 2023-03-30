@@ -8,7 +8,7 @@
 
     <link rel='stylesheet' href='assets/styles/partners.css'>
 
-    <title>Shop - Totally Science - Free Online Unblocked Games</title>
+    <title>Partners - Totally Science - Free Online Unblocked Games</title>
 
     <style>
         .tn_banner {
