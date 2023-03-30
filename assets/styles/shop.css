@@ -17,7 +17,7 @@
 }
 
 #dispenserCon button {
-    width: 160px;
+    min-width: 160px;
     padding: 4%;
     font-size: 1rem;
     font-weight: 100;

@@ -19,8 +19,8 @@ async function myHandler(e) {
                 let rarity = res.split(':')[0];
 
                 console.log(`won prize: ${mini}`);
-
                 characterFullScreen = true;
+                document.getElementById('dispenseButton').innerHTML = '1000 pts';
                 document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
                 document.getElementById('prizeWon').classList.add('active');
                 document.getElementsByName(mini)[0].classList.remove('locked');
@@ -37,32 +37,55 @@ async function myHandler(e) {
     }
 }
 
-
 var rollingDie = false;
 var tspoints = 0;
 var characterFullScreen = false;
 
 async function dispenseCharacter() {
+    console.log(checkLoggedIn());
     if (!rollingDie && checkLoggedIn()) {
         console.log(tspoints);
         if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+            document.getElementById('dispenseButton').innerHTML = 'Dispensing...';
             playVid();
             rollingDie = true;
         } else {
-            alert('Not enough points!');
+            notEnoughPoints();
         }
+    } else if (!checkLoggedIn()) {
+        console.log(checkLoggedIn());
+        notLoggedIn();
     }
+}
+
+function notEnoughPoints() {
+    if (document.getElementById('dispenseButton').innerHTML != 'Not enough points!') {
+        setTimeout(function () {
+            document.getElementById('dispenseButton').innerHTML = '1000 pts';
+        }, 2000);
+    }
+    document.getElementById('dispenseButton').innerHTML = 'Not enough points!';
+}
+
+function notLoggedIn() {
+    if (document.getElementById('dispenseButton').innerHTML != 'Not logged in!') {
+        setTimeout(function () {
+            document.getElementById('dispenseButton').innerHTML = '1000 pts';
+        }, 2000);
+    }
+    document.getElementById('dispenseButton').innerHTML = 'Not logged in!';
 }
 
 function checkLoggedIn() {
     res = JSON.parse(authToken);
-
     if (res != null) {
+        console.log('Not null');
         const isLoggedIn = res['isLoggedIn'];
-
-        if (isLoggedIn == 'true') {
+        console.log(isLoggedIn);
+        if (isLoggedIn == true) {
+            console.log('true');
             return true;
         }
     }
@@ -93,20 +116,22 @@ function counter(id, start, end, duration) {
         }, step);
 }
 
-document.body.addEventListener('click', function(evt) {
+document.body.addEventListener('click', function (evt) {
     if (characterFullScreen) {
+        console.log('clicked');
+        console.log(characterFullScreen);
+        characterFullScreen = false;
         document.getElementById('prizeWon').classList.add('slideAway');
         rollingDie = false;
         tspoints -= 1000;
-        characterFullScreen = false;
-        setInterval(function() {
+        setTimeout(function () {
+            console.log('intervaled');
             document.getElementById('prizeWon').classList.remove('active');
             document.getElementById('prizeWon').classList.remove('slideAway');
             document.getElementById('prizeWon').innerHTML = '';
         }, 1500);
     }
 });
-
 
 seeUnlockedMinis();
 
@@ -121,6 +146,5 @@ function seeUnlockedMinis() {
                     document.getElementsByName(minis[i])[0].classList.remove('locked');
                 }
             });
-
     }
 }
