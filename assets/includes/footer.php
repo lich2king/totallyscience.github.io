@@ -36,6 +36,7 @@
 
             <p><a href="termsofuse.php">Terms of Use</a></p>
             <p><a href="privacypolicy.php">Privacy Policy</a></p>
+            <p><a href="partners.php">Partners</a></p>
         </div>
     </div>
 
