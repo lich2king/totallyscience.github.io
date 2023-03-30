@@ -34,9 +34,9 @@
         <div class="footSection">
             <h1>Legal</h1>
 
-            <p><a href="termsofuse.php">Terms of Use</a></p>
-            <p><a href="privacypolicy.php">Privacy Policy</a></p>
-            <p><a href="partners.php">Partners</a></p>
+            <p><a href="termsofuse">Terms of Use</a></p>
+            <p><a href="privacypolicy">Privacy Policy</a></p>
+            <p><a href="partners">Partners</a></p>
         </div>
     </div>
 
