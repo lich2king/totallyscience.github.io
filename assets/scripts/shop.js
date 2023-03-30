@@ -130,6 +130,8 @@ async function seeUnlockedMinis() {
         let minis = text.split(';');
 
         for (let i = 1; i < minis.length; i++) {
+            if (minis[i] == 'undefined') continue;
+
             document.getElementsByName(minis[i])[0].classList.remove('locked');
         }
     }
