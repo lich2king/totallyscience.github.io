@@ -20,7 +20,6 @@
             <source src="\assets\minis\Dispenser.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <!-- <img src="\assets\minis\Dispenser.gif"> -->
         <button class="button" onclick="dispenseCharacter()" id="dispenseButton">1000 pts</button>
     </div>
 
@@ -94,7 +93,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/shop.js?v56"></script>
+    <script src="assets/scripts/shop.js?v57"></script>
 </body>
 
 </html>
