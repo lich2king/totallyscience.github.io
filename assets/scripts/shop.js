@@ -1,4 +1,5 @@
-var vid = document.getElementById('dispenserVid');
+const vid = document.getElementById('dispenserVid');
+const token = JSON.parse(authToken);
 
 function playVid() {
     vid.play();
@@ -48,7 +49,7 @@ var tspoints = 0;
 var characterFullScreen = false;
 
 async function dispenseCharacter() {
-    if (!rollingDie && checkLoggedIn()) {
+    if (!rollingDie && token) {
         if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
@@ -58,14 +59,14 @@ async function dispenseCharacter() {
         } else {
             notEnoughPoints();
         }
-    } else if (!checkLoggedIn()) {
+    } else if (!token) {
         notLoggedIn();
     }
 }
 
 function notEnoughPoints() {
     if (document.getElementById('dispenseButton').innerHTML != 'Not enough points!') {
-        setTimeout(function () {
+        setTimeout(() => {
             document.getElementById('dispenseButton').innerHTML = '1000 pts';
         }, 2000);
     }
@@ -79,16 +80,6 @@ function notLoggedIn() {
         }, 2000);
     }
     document.getElementById('dispenseButton').innerHTML = 'Not logged in!';
-}
-
-function checkLoggedIn() {
-    const token = JSON.parse(authToken);
-
-    if (token) {
-        return true;
-    }
-
-    return false;
 }
 
 getPoints();
@@ -132,7 +123,7 @@ document.body.addEventListener('click', function (evt) {
 seeUnlockedMinis();
 
 async function seeUnlockedMinis() {
-    if (checkLoggedIn()) {
+    if (token) {
         let res = await fetcher(`${activeServer}/points/shop/unlocked`);
         let text = await res.text();
 
