@@ -1,0 +1,33 @@
+body {
+    margin-top: 90px;
+}
+
+.partner {
+    width: 500px;
+    height: 300px;
+    background-color: var(--dark-accent);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.partner div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.partner div img {
+    border-radius: 20px;
+    position: absolute;
+    object-fit: cover;
+    /* width: 60%;
+    height: 60%; */
+}
