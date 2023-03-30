@@ -182,19 +182,19 @@
     </a> -->
     <div id="apps">
         <div onclick="window.open('https:/\/kazwire.com/', '_blank')" class="card game">
-            <img src="/assets/images/partners/Kazwire.png" style="background-color: #ffffff;">
+            <img src="/assets/images/partners/Kazwire.png" style="background-color: #ffffff;" title="Totally Science Partner - Kazwire" alt="Kazwire logo">
             <h1>Kazwire</h1>
             <h2>From the gaming classics to the internet, access YouTube, TikTok, and even your favorite games freely and securely.</h2>
             <button class="launch">Visit</button>
         </div>
         <div onclick="window.open('https:/\/weblfg.com/', '_blank')" class="card game">
-            <img src="/assets/images/partners/WebLFG.png" style="background-color: #ffffff;">
+            <img src="/assets/images/partners/WebLFG.png" style="background-color: #ffffff;" title="Totally Science Partner - Web LFG" alt="Web LFG logo">
             <h1>Web LFG</h1>
             <h2>WebLFG is a hub for the best games on the internet, all available for free! There is so much for you to choose from.</h2>
             <button class="launch">Visit</button>
         </div>
         <div onclick="window.open('https:/\/titaniumnetwork.org/', '_blank')" class="card game">
-            <img src="/assets/images/partners/TN.webp" style="background-color: #ffffff;">
+            <img src="/assets/images/partners/TN.webp" style="background-color: #ffffff;" title="Totally Science Partner - Titanium Network" alt="Titanium Network logo">
             <h1>Titanium Network</h1>
             <h2>Titanium Network is the hub organization dedicated to providing services related to bypassing internet censorship.</h2>
             <button class="launch">Visit</button>
