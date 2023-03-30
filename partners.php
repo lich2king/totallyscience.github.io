@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +9,6 @@
     <title>Partners - Totally Science - Free Online Unblocked Games</title>
 
     <style>
-        .tn_banner {
-            text-align: center;
-            font-size: 15pt;
-            position: relative;
-            width: 70%;
-            left: 15%;
-            top: 80px;
-        }
-
         #apps {
             margin: auto;
             margin-top: 140px;
@@ -153,6 +142,38 @@
             margin-bottom: 60px;
         }
 
+        body {
+            margin-top: 90px;
+        }
+
+        .partner {
+            width: 500px;
+            height: 300px;
+            background-color: var(--dark-accent);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .partner div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .partner div img {
+            border-radius: 20px;
+            position: absolute;
+            object-fit: cover;
+        }
+
         @media (max-width: 1200px) {
             div#apps {
                 max-width: 800px;
@@ -172,14 +193,6 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-
-    <!-- <a href="https://kazwire.com/" target="_blank" rel="noreferrer" class="partner" >
-            <div onclick="partner('kazwire')">
-                <img src="https://kazwire.com/logo.png" alt="Kazwire">
-                <h3 style="color:#fff;">Kazwire</h3>
-                <p>From the gaming classics to the internet, access YouTube, TikTok, and even your favorite games freely and securely.</p>
-            </div>
-    </a> -->
     <div id="apps">
         <div onclick="window.open('https:/\/kazwire.com/', '_blank')" class="card game">
             <img src="/assets/images/partners/Kazwire.png" style="background-color: #ffffff;" title="Totally Science Partner - Kazwire" alt="Kazwire logo">
@@ -187,12 +200,14 @@
             <h2>From the gaming classics to the internet, access YouTube, TikTok, and even your favorite games freely and securely.</h2>
             <button class="launch">Visit</button>
         </div>
+
         <div onclick="window.open('https:/\/weblfg.com/', '_blank')" class="card game">
             <img src="/assets/images/partners/WebLFG.png" style="background-color: #ffffff;" title="Totally Science Partner - Web LFG" alt="Web LFG logo">
             <h1>Web LFG</h1>
             <h2>WebLFG is a hub for the best games on the internet, all available for free! There is so much for you to choose from.</h2>
             <button class="launch">Visit</button>
         </div>
+
         <div onclick="window.open('https:/\/titaniumnetwork.org/', '_blank')" class="card game">
             <img src="/assets/images/partners/TN.webp" style="background-color: #ffffff;" title="Totally Science Partner - Titanium Network" alt="Titanium Network logo">
             <h1>Titanium Network</h1>
@@ -201,9 +216,7 @@
         </div>
     </div>
     
-
     <?php include "assets/includes/footer.php" ?>
-
 </body>
 
 </html>
