@@ -240,7 +240,7 @@
             <div class="row">
                 <div>
                     <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
+                        <img class="popCheck" style="visibility: visible;" src="assets/images/icons/check.webp">
                     </div>
                     <p>Day 1</p>
                 </div>
@@ -293,13 +293,13 @@
 
             </div>
         </div>
-        <button onclick="claimReward()" class="button" id="claimRewardB">Claim Reward</button>
+        <button onclick="claimReward()" class="button" id="claimRewardB">Sign Up To Claim</button>
         <p class="ignore" onclick="ignorePopReward()" id="ignoreReward">Or ignore the free reward</p>
     </div>
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v46"></script>
+    <script src="assets/scripts/index.js?v47"></script>
 </body>
 
 </html>

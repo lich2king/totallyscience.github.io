@@ -1,6 +1,6 @@
 let token = JSON.parse(authToken);
-
-document.getElementById('gamesnav').classList.add('selected');
+let interval;
+let popupInterval;
 
 // featured games slides code
 let shouldAutoSwitch = true;
@@ -54,20 +54,200 @@ let sortObject = (obj) =>
     .sort()
     .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json?date=${new Date().getTime()}`)
-        .then((response) => response.json())
-        .then((retrievedGames) => {
-            games = retrievedGames;
-            loadCookies();
-        });
+window.addEventListener('load', async () => {
+    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
+    let retrievedGames = await gamesRes.json();
+
+    // update underline link in navbar
+    document.getElementById('gamesnav').classList.add('selected'); 
+
+    // check if user is signed in
+    if (token) {
+        let rewardRes = await fetcher(`${activeServer}/points/reward/check`);
+        let text = await rewardRes.text();
+        let json = JSON.parse(text);
+
+        if (json.isReady) {
+            document.getElementById('ignoreReward').style.display = 'none';
+
+            let points = 100;
+
+            if (json.rewardDay >= 6 ) {
+                points = 1000;
+            }
+
+            document.getElementById('popPoints').innerText = points;
+
+            // update visibiliy of checkmarks on days that you have passed
+            for (let i = 0; i <= json.rewardDay; i++) {
+                document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
+            }
+
+            for (let i = 6; i > json.rewardDay; i--) {
+                document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
+            }
+
+            document.getElementById('claimRewardB').innerText = 'Claim Reward';
+            document.getElementById('dailyRewardPopup').style.display = '';
+            
+            // start the countdown til next reward displayed on the popup
+            // endtime should be 24 hours in the future
+            let endTime = Math.floor(Date.now() / 1000 + 86400);
+
+            popupInterval = setInterval(() => {
+                // divide by 1000 to get seconds
+                let currentTime = Math.floor(Date.now() / 1000);
+
+                let remainingTime = endTime - currentTime;
+
+                let seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
+                let minutes = Math.floor((remainingTime / 60) % 60).toString().padStart(2, '0');
+                let hours = Math.floor((remainingTime / (60 * 60)) % 24).toString().padStart(2, '0');
+
+                document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
+            }, 1000);
+        }
+    
+        animateBar(json.rewardDay);
+        startTimer(json.rewardTime);
+    } else {
+        // user is not signed into an account
+
+        // if they have dismissed the reward popup in the past, leave them alone
+        // otherwise send the popup offering them the reward
+        if (!localStorage.getItem('ignoreReward')) {
+            // show them the popup
+            document.getElementById('dailyRewardPopup').style.display = '';
+
+            // start the countdown til next reward displayed on the popup
+            // endtime should be 24 hours in the future
+            let endTime = Math.floor(Date.now() / 1000 + 86400);
+
+            popupInterval = setInterval(() => {
+                // divide by 1000 to get seconds
+                let currentTime = Math.floor(Date.now() / 1000);
+
+                let remainingTime = endTime - currentTime;
+
+                let seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
+                let minutes = Math.floor((remainingTime / 60) % 60).toString().padStart(2, '0');
+                let hours = Math.floor((remainingTime / (60 * 60)) % 24).toString().padStart(2, '0');
+
+                document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
+            }, 1000);
+        }
+    }
+
+    
+
+
+
+
+
+
+
+
+    games = retrievedGames;
+    loadCookies();
 });
+
+// 
+// reward system
+// 
+function startTimer(endTime) {
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+        // divide by 1000 to get seconds
+        let currentTime = Math.floor(Date.now() / 1000);
+
+        let remainingTime = endTime - currentTime;
+
+        if (remainingTime < 0) {
+            document.getElementById('rewardTimer').innerText = '00:00:00';
+            clearInterval(interval);
+            return;
+        }
+
+        let seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
+        let minutes = Math.floor((remainingTime / 60) % 60).toString().padStart(2, '0');
+        let hours = Math.floor((remainingTime / (60 * 60)) % 24).toString().padStart(2, '0');
+
+        document.getElementById('rewardTimer').innerText = hours + ':' + minutes + ':' + seconds;
+    }, 1000);
+}
+
+function animateBar(day) {
+    const rewardBar = document.getElementById('rewardDayBar');
+
+    let w = (100 / 7) * (day + 1);
+
+    rewardBar.style.width = `${w}%`;
+    rewardBar.style.borderTopRightRadius = `0px`;
+    rewardBar.style.borderBottomRightRadius = `0px`;
+
+    if (day == 6) {
+        rewardBar.style.borderTopRightRadius = `15px`;
+        rewardBar.style.borderBottomRightRadius = `15px`;
+    }
+}
+
+function ignorePopReward() {
+    // called when "ignore pop reward" is clicked on the popup
+    localStorage.setItem('ignoreReward', true);
+    document.getElementById('dailyRewardPopup').style.display = 'none';
+}
+
+async function claimReward() {
+    if (!token) {
+        location.href = 'signup.php';
+    }
+    
+    let res = await fetcher(`${activeServer}/points/reward/claim`);
+
+    if (res.status == 200) {
+        let text = await res.text();
+        let json = JSON.parse(text);
+
+        startTimer(json.rewardTime);
+        animateBar(json.rewardDay);
+
+        // update points display
+        let currentVal = document.getElementById('pointsDisplay').innerText;
+        counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
+    }
+
+    document.getElementById('dailyRewardPopup').style.display = 'none';
+    clearInterval(popupInterval);
+}
+
+function counter(id, start, end, duration) {
+    // increases points count over set period of time for visual effect
+    let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, step);
+}
+
+
+
+
+
+
+
 
 async function loadCookies() {
     //when done
     loadTopic();
     suggestGames();
-    checkReward();
 }
 
 function loadTopic() {
@@ -413,204 +593,8 @@ function createGameButton(game, pin, lazy) {
 //if it is over, check database
 //if database says it is not over, set local storage to correct time and keep counting
 
-async function checkReward() {
-    setRewardDayBar('initial');
-    if (token) {
-        let currentTime = Math.floor(Date.now() / 1000); //must divide by 1000 because Date.now() get's miliseconds but mysql takes seconds
 
-        // return out of function and start timer if the saved time has not been passed
 
-        let res = await fetcher(`${activeServer}/points/reward/check/time`);
-        let dbRewardTime = parseInt(await res.text());
-
-        if (currentTime > dbRewardTime) {
-            rewardPop();
-        } else if (dbRewardTime == 0) {
-            rewardPop();
-        } else {
-            startTimer(dbRewardTime);
-        }
-    } else {
-        if (localStorage.getItem('ignoreReward') != null) {
-            if (!localStorage.getItem('ignoreReward')) {
-                rewardPop();
-            }
-        } else {
-            rewardPop();
-        }
-    }
-}
-
-//var endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in the future
-var rewardTimerInterval;
-
-function startTimer(endTime) {
-    clearInterval(rewardTimerInterval);
-    rewardTimerInterval = setInterval(function() {
-        var currentTime = Math.floor(Date.now() / 1000);
-        var remainingTime = endTime - currentTime;
-
-        if (remainingTime < 0) {
-            clearInterval(rewardTimerInterval);
-            return;
-        }
-
-        var seconds = Math.floor(remainingTime % 60)
-            .toString()
-            .padStart(2, '0');
-        var minutes = Math.floor((remainingTime / 60) % 60)
-            .toString()
-            .padStart(2, '0');
-        var hours = Math.floor((remainingTime / (60 * 60)) % 24)
-            .toString()
-            .padStart(2, '0');
-
-        document.getElementById('rewardTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
-    }, 1000);
-}
-
-var popTimerInterval;
-
-async function rewardPop() {
-    document.getElementById('dailyRewardPopup').style.display = '';
-
-    clearInterval(rewardTimerInterval);
-    document.getElementById('rewardTimer').innerHTML = '00:00:00';
-
-    if (token) {
-        document.getElementById('ignoreReward').style.display = 'none';
-
-        let points = 100;
-        //figure out how many points to give with a db call...
-
-        let res = await fetcher(`${activeServer}/points/reward/check/day`);
-        let rewardDay = parseInt(await res.text());
-
-        if (rewardDay == 6) {
-            points = 1000;
-        }
-        document.getElementById('popPoints').innerHTML = points;
-        for (let i = 0; i <= rewardDay; i++) {
-            document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
-        }
-        for (let i = 6; i > rewardDay; i--) {
-            document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
-        }
-    } else {
-        for (let i = 0; i <= 0; i++) {
-            document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
-        }
-        for (let i = 6; i > 6; i--) {
-            document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
-        }
-        document.getElementById('ignoreReward').style.display = '';
-        document.getElementById('claimRewardB').innerText = 'Sign Up To Claim';
-        document.getElementById('claimRewardB').setAttribute('onclick', "window.location.href='/signup'");
-    }
-
-    var endTime = Math.floor(Date.now() / 1000 + 86400); //set end time to 24 hours later even though inaccurate
-    popTimerInterval = setInterval(function() {
-        var currentTime = Math.floor(Date.now() / 1000);
-        var remainingTime = endTime - currentTime;
-
-        var seconds = Math.floor(remainingTime % 60)
-            .toString()
-            .padStart(2, '0');
-        var minutes = Math.floor((remainingTime / 60) % 60)
-            .toString()
-            .padStart(2, '0');
-        var hours = Math.floor((remainingTime / (60 * 60)) % 24)
-            .toString()
-            .padStart(2, '0');
-
-        document.getElementById('popTimer').innerHTML = hours + ':' + minutes + ':' + seconds;
-    }, 1000);
-}
-
-function ignorePopReward() {
-    localStorage.setItem('ignoreReward', true);
-    document.getElementById('dailyRewardPopup').style.display = 'none';
-}
-
-async function claimReward() {
-    let res = await fetcher(`${activeServer}/points/reward/claim`);
-
-    if (res.status == 200) {
-        resetRewardTimer();
-        collectPoints();
-        setRewardDayBar('update');
-    }
-
-    document.getElementById('dailyRewardPopup').style.display = 'none';
-    clearInterval(popTimerInterval);
-}
-
-async function resetRewardTimer() {
-    let res = await fetcher(`${activeServer}/points/reward/check/time`);
-    let dbRewardTime = parseInt(await res.text());
-
-    startTimer(dbRewardTime);
-}
-
-async function setRewardDayBar(mode) {
-    let day = 0;
-
-    if (token) {
-        if (mode == 'update') {
-            let res = await fetcher(`${activeServer}/points/reward/check/day`);
-            let rewardDay = parseInt(await res.text());
-
-            day = parseInt(rewardDay);
-            animateBar(day);
-        } else {
-            let res = await fetcher(`${activeServer}/points/reward/check/day`);
-            let rewardDay = parseInt(await res.text());
-
-            day = parseInt(rewardDay);
-            animateBar(day);
-        }
-    } else {
-        animateBar(day);
-    }
-}
-
-function animateBar(day) {
-    let w = (100 / 7) * (day + 1);
-
-    document.getElementById('rewardDayBar').style.width = `${w}%`;
-    document.getElementById('rewardDayBar').style.borderTopRightRadius = `0px`;
-    document.getElementById('rewardDayBar').style.borderBottomRightRadius = `0px`;
-
-    if (day == 6) {
-        w = 100;
-        document.getElementById('rewardDayBar').style.borderTopRightRadius = `15px`;
-        document.getElementById('rewardDayBar').style.borderBottomRightRadius = `15px`;
-    }
-}
-
-async function collectPoints() {
-    let res = await fetcher(`${activeServer}/points/check`);
-    let points = await res.text();
-
-    let currentVal = document.getElementById('pointsDisplay').innerText;
-
-    counter('pointsDisplay', parseInt(currentVal), parseInt(points), 2000);
-}
-
-function counter(id, start, end, duration) {
-    let obj = document.getElementById(id),
-        current = start,
-        range = end - start,
-        increment = end > start ? 1 : -1,
-        step = Math.abs(Math.floor(duration / range)),
-        timer = setInterval(() => {
-            current += increment;
-            obj.textContent = current;
-            if (current == end) {
-                clearInterval(timer);
-            }
-        }, step);
-}
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
