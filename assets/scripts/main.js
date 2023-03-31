@@ -38,6 +38,29 @@ function fetcher(endpoint, options) {
     return fetch(`${endpoint}`, updatedOptions);
 }
 
+/**
+ * takes and integer and ads M or K suffix if it is above 1,000 or 1,000,000
+ * @param {integer} num - an integer to be formatted
+ */
+function numFormatter(num) {
+    if (num > 999 && num < 1000000) {
+        return (num / 1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million
+    } else if (num > 1000000) {
+        return (num / 1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million
+    } else if (num < 1000) {
+        return num; // if value < 1000, nothing to do
+    }
+}
+
+/**
+ * randomly selects a property of an object
+ * @param {object} object - an object to select a random property of
+ */
+function randomProperty(object) {
+    let keys = Object.keys(object);
+    return keys[Math.floor(keys.length * Math.random())];
+}
+
 // init user prefs
 if (localStorage.getItem('website') == null) localStorage.setItem('website', 'https://classroom.google.com/');
 

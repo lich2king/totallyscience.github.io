@@ -39,7 +39,7 @@
                     <h2 class="gametext stroke-text smooth-16">JUST FALL</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class?class=Just%20Fall', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Just%20Fall', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
 
@@ -50,7 +50,7 @@
                     <h2 class="gametext stroke-text smooth-16">BALDIS BASICS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class?class=Baldis%20Basics', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Baldis%20Basics', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
             <div class="featureSlot fade"
@@ -60,7 +60,7 @@
                     <h2 class="gametext stroke-text smooth-16">CHESS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class?class=Chess', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Chess', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
             <div class="featureSlot fade"
@@ -70,7 +70,7 @@
                     <h2 class="gametext stroke-text smooth-16">VEX 3</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
-                <button onclick="window.open('class?class=Vex%203', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Vex%203', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
 
@@ -299,7 +299,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v47"></script>
+    <script src="assets/scripts/index.js?v48"></script>
 </body>
 
 </html>

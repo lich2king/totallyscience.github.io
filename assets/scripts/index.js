@@ -511,11 +511,6 @@ async function suggestGames() {
     }
 }
 
-var randomProperty = function(object) {
-    var keys = Object.keys(object);
-    return keys[Math.floor(keys.length * Math.random())];
-};
-
 function createGameButton(game, pin, lazy) {
     const data = games[game];
 
@@ -535,7 +530,7 @@ function createGameButton(game, pin, lazy) {
     let gameBtn = '';
     let buttons = '';
 
-    let onclick = `location.href = 'class?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game}'`;
 
     let backgroundImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
     let lazyClass = "lazy";
