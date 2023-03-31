@@ -3,7 +3,7 @@ const token = JSON.parse(authToken);
 
 async function playVid() {
     vid.play();
-    console.log('start')
+    
     let res = await fetcher(`${activeServer}/points/shop/unlock`);
     let text = await res.text();
     let json = JSON.parse(text);
@@ -19,7 +19,7 @@ async function playVid() {
         characterFullScreen = true;
 
         document.getElementById('dispenseButton').innerHTML = '1000 pts';
-        document.getElementById('prizeWon').innerHTML += `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
+        document.getElementById('prizeWon').innerHTML = `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
         document.getElementById('prizeWon').classList.add('active');
         document.getElementsByName(mini)[0].classList.remove('locked');
 
