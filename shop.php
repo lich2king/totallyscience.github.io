@@ -6,7 +6,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/shop.css?v10'>
+    <link rel='stylesheet' href='assets/styles/shop.css?v11'>
 
     <title>Shop - Totally Science - Free Online Unblocked Games</title>
 </head>
