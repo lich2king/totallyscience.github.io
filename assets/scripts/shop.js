@@ -1,27 +1,18 @@
 const vid = document.getElementById('dispenserVid');
 const token = JSON.parse(authToken);
 
-function playVid() {
+async function playVid() {
     vid.play();
-}
+    console.log('start')
+    let res = await fetcher(`${activeServer}/points/shop/unlock`);
+    let text = await res.text();
+    let json = JSON.parse(text);
 
-function pauseVid() {
-    vid.pause();
-}
+    if (res.status == 400) {
+        return notEnoughPoints();
+    }
 
-document.getElementById('dispenserVid').addEventListener('ended', myHandler, false);
-
-async function myHandler() {
-    if (rollingDie) {
-        let res = await fetcher(`${activeServer}/points/shop/unlock`);
-
-        if (res.status == 400) {
-            return notEnoughPoints();
-        }
-
-        let text = await res.text();
-        let json = JSON.parse(text)
-
+    vid.addEventListener('ended', async () => {
         let mini = json.mini;
         let rarity = json.rarity;
 
@@ -41,24 +32,24 @@ async function myHandler() {
         } else if (rarity == 'Legendary') {
             document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(233, 241, 0)');
         }
-    }
+    }, false);
+}
+
+function pauseVid() {
+    vid.pause();
 }
 
 var rollingDie = false;
 var tspoints = 0;
 var characterFullScreen = false;
 
-async function dispenseCharacter() {
+function dispenseCharacter() {
     if (!rollingDie && token) {
-        if (tspoints >= 1000) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
             document.getElementById('dispenseButton').innerHTML = 'Dispensing...';
-            playVid();
             rollingDie = true;
-        } else {
-            notEnoughPoints();
-        }
+            playVid();
     } else if (!token) {
         notLoggedIn();
     }
@@ -106,7 +97,7 @@ function counter(id, start, end, duration) {
         }, step);
 }
 
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', () => {
     if (characterFullScreen) {
         characterFullScreen = false;
         document.getElementById('prizeWon').classList.add('slideAway');
