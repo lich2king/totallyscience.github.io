@@ -6,6 +6,11 @@ async function playVid() {
     
     let res = await fetcher(`${activeServer}/points/shop/unlock`);
     let text = await res.text();
+
+    if (text == 'false') {
+        return document.getElementById('dispenseButton').innerHTML = 'All Minis Unlocked';
+    }
+
     let json = JSON.parse(text);
 
     if (res.status == 400) {
