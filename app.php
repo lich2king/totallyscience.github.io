@@ -26,23 +26,21 @@
 
         document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${appName} Unblocked`;
 
-        window.addEventListener('load', () => {
+        window.addEventListener('load', async () => {
             document.getElementsByTagName('body')[0].style = 'overflow: hidden';
 
-            fetch(`./assets/apps.json?date=${new Date().getTime()}`).then((response) => {
-                if (response.ok) return response.json();
-                else console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
-            }).then((apps) => {
-                const appData = apps[appName];
-                const appFrame = document.getElementById('app_frame');
+            let res = await fetch(`./assets/apps.json?date=${new Date().getTime()}`);
+            let apps = await res.json();
+            
+            const appData = apps[appName];
+            const appFrame = document.getElementById('app_frame');
 
-                if (appData == null) window.location.href = '../apps.php';
+            if (appData == null) window.location.href = '../apps.php';
 
-                if (appData.type == 'proxy') appFrame.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(appData.iframe_url);
-                else appFrame.src = appData.iframe_url;
-            }).catch((err) => {
-                if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
-            });
+            if (appData.type == 'proxy') appFrame.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(appData.iframe_url);
+            else appFrame.src = appData.iframe_url;
+            
+            if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
         });
     </script>
 </body>

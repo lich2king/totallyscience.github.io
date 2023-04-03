@@ -88,12 +88,10 @@
 
     <div style="padding-top: 90px;"></div>
 
-
-
     <div id="data">
-        <h1 id="gameName">Game Name</h1>
-        <p id="username">Username</p>
-        <p id="score">100</p>
+        <h1 id="gameName">loading game title...</h1>
+        <p id="username">loading username...</p>
+        <p id="score">loading score...</p>
         <img id="image" onclick="enterFullscreen()" height="500" src="">
         <div>
             <button onclick="reject()" style="margin-right: 40vw;">Reject</button>

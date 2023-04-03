@@ -33,11 +33,11 @@
     } else {
         $row = $firstRow -> fetch_row();
 
-        $game = $row[0];
-        $user = $row[2];
-        $score = $row[1];
-        $image = $row[3];
-        $uid = $row[4];
+        $game = $row[1];
+        $user = $row[3];
+        $score = $row[2];
+        $image = $row[4];
+        $uid = $row[5];
       
         $currentHighscore = $conn->query("SELECT * FROM highscores WHERE game='$game'");
         if($currentHighscore->num_rows == 0) {
@@ -52,7 +52,7 @@
 
         } else {
           $currentRow = $currentHighscore -> fetch_row();
-          $currentScore = $currentRow[1];
+          $currentScore = $currentRow[2];
 
           if ($score > $currentScore) {
             //Score is greater than current highscore score
