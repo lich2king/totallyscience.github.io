@@ -222,21 +222,24 @@ async function claimReward() {
 }
 
 function counter(id, start, end, duration) {
-    // increases points count over set period of time for visual effect
-    let obj = document.getElementById(id),
-        current = start,
-        range = end - start,
-        increment = end > start ? 1 : -1,
-        step = Math.abs(Math.floor(duration / range)),
-        timer = setInterval(() => {
-            current += increment;
-            obj.textContent = current;
-            if (current == end) {
-                clearInterval(timer);
-            }
-        }, step);
-}
+    // increase the points counter over time
+    const obj = document.getElementById(id);
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const step = Math.abs(Math.floor(duration / range));
 
+    let current = start;
+
+    let timer = setInterval(() => {
+        current += increment;
+
+        obj.textContent = current;
+
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, step);
+}
 
 
 
