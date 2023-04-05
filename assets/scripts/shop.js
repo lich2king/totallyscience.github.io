@@ -20,7 +20,7 @@ async function myHandler() {
         }
 
         let text = await res.text();
-        let json = JSON.parse(text)
+        let json = JSON.parse(text);
 
         let mini = json.mini;
         let rarity = json.rarity;
