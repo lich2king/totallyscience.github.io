@@ -228,6 +228,10 @@
                 return dispenseButton.innerHTML = 'All Minis Unlocked';
             }
 
+            let currentVal = document.getElementById('pointsDisplay').innerText;
+
+            counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+
             let json = JSON.parse(text);
 
             if (res.status == 400) {
@@ -265,10 +269,6 @@
             const dispenseButton = document.getElementById('dispenseButton');
 
             if (vid.paused && token) {
-                let currentVal = document.getElementById('pointsDisplay').innerText;
-
-                counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
-
                 dispenseButton.innerHTML = 'Dispensing...';
 
                 playVid();
