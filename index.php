@@ -310,7 +310,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v49"></script>
+    <script src="assets/scripts/index.js?v50"></script>
 </body>
 
 </html>
