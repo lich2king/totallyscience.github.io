@@ -376,7 +376,7 @@ function createGameButton(game, pin) {
 
     let buttons = '';
 
-    let onclick = `location.href = 'class?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game}'`;
 
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";

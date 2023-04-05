@@ -96,6 +96,7 @@ function setupActionButtons() {
 }
 
 window.addEventListener('load', async () => {
+    const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
     let retrievedGamesRes = await fetch(`assets/games.json`);
@@ -118,13 +119,13 @@ window.addEventListener('load', async () => {
     if (token) displayUserData();
 
     // Zach set this up i am unsure of what its purpose is
-    if (id) document.getElementById('iframe').src = gameData.iframe_url + '?id=' + id;
+    if (id) iframe.src = gameData.iframe_url + '?id=' + id;
 
     // set iframe to correct url defined in games.json
     if (gameData.type == 'proxy') {
-        document.getElementById('iframe').src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+        iframe.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
     } else {
-        document.getElementById('iframe').src = gameData.iframe_url;
+        iframe.src = gameData.iframe_url;
     }
 
     // focus on the iframe. This is necessary for certain games such as eaglercraft
@@ -185,82 +186,66 @@ document.getElementById('fullscreen').addEventListener('click', () => {
 });
 
 function suggestGames(games) {
-    let displayedGames = 0;
-    let randomGames = [];
-    let currentTags = games[gameName]['tags'];
-    let totalGames = Object.keys(games).length;
+    const gamesSuggesting = 15;
 
-    for (let x = 0; x < totalGames; x++) {
-        let randGame = Object.keys(games)[x];
-        let sameTag = false;
+    let curGameTags = games[gameName].tags;
+    let suggestedGames = [];
 
-        currentTags.forEach(function (game) {
-            let gameTags = games[randGame]['tags'];
-            gameTags.forEach(function (currentgame) {
-                if (game == currentgame && game != 'mobile' && game != 'recent' && game != 'new' && game != 'popular') {
-                    sameTag = true;
-                }
-            });
-        });
-        if (gameName == randGame) sameTag = false;
+    // get random games that have a similar tag to the game being played
+    for (let x = 0; x < Object.keys(games).length - 1; x += 1) {
+        if (suggestGames.length == gamesSuggesting) break;
 
-        if (sameTag && displayedGames < 15) {
-            randomGames.push(randGame);
-            displayedGames++;
-        } else if (displayedGames >= 15) break;
-    }
-    while (displayedGames < 15) {
-        for (let x = 0; x < 15 - displayedGames; x++) {
-            let randGame = randomProperty(games);
+        let randGame = randomProperty(games);
 
-            while (randomGames.includes(randGame)) {
-                randGame = randomProperty(games);
-            }
+        if (suggestedGames.includes(randGame)) continue;
 
-            randomGames.push(randGame);
-            displayedGames++;
+        let randGameTags = games[randGame].tags;
+        
+        let simTag = randGameTags.find(ele => curGameTags.includes(ele));
+
+
+        if (simTag) {
+            suggestedGames.push(randGame);
         }
     }
 
-    let arrowContainer =
-        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
-    let gamesDiv = document.getElementById('games');
+    // if above does not full up gamesSuggesting games, add random ones to fill it in
+    while (suggestedGames.length < gamesSuggesting) {
+        let randGame = randomProperty(games);
 
-    gamesDiv.innerHTML += `<h1>Recommended Games</h1>`;
+        if (suggestedGames.includes(randGame)) continue;
 
-    let row = document.createElement('div');
-    row.classList.add('horizontalCon');
-    let gamesContainer = document.createElement('div');
-    gamesContainer.classList.add('gamesCon');
-    //add the arrows to the horizontal Con
-    row.innerHTML += arrowContainer;
-    //for each element in newGames, add the game to the horizontalCon
-    randomGames.forEach(function (game) {
-        gamesContainer.innerHTML += createGameButton(game, games);
+        suggestedGames.push(randGame);
+    }
+
+    
+    let gamesDiv = document.querySelector('.gamesCon');
+
+    suggestedGames.forEach((game) => {
+        const data = games[game];
+
+        if (data == null) return '';
+
+        let classlist = data.tags.join(' ');
+
+        const weekAgo = new Date();
+        weekAgo.setDate(weekAgo.getDate() - 7);
+
+        const gameDate = new Date(data.date_added);
+
+        if (gameDate > weekAgo) classlist += ' new';
+
+        gamesDiv.innerHTML += `
+            <div name="${game}" id="gameDiv" onclick="location.href = 'class.php?class=${game}'" class="${classlist}">
+                <div class="imageCon">
+                    <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                </div>
+                <h1 class="innerGameDiv">${game}</h1>
+            </div>
+        `;
     });
 
-    row.appendChild(gamesContainer);
-    gamesDiv.appendChild(row);
-
     addArrowListeners();
-}
-
-var randomProperty = function (object) {
-    var keys = Object.keys(object);
-    return keys[Math.floor(keys.length * Math.random())];
-};
-
-// converts number to string representation with K and M.
-// toFixed(d) returns a string that has exactly 'd' digits
-// after the decimal place, rounding if necessary.
-function numFormatter(num) {
-    if (num > 999 && num < 1000000) {
-        return (num / 1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million
-    } else if (num > 1000000) {
-        return (num / 1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million
-    } else if (num < 1000) {
-        return num; // if value < 1000, nothing to do
-    }
 }
 
 window.addEventListener('click', () => {
@@ -269,54 +254,19 @@ window.addEventListener('click', () => {
 });
 
 function addArrowListeners() {
-    for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
-            const parentElement = e.target.parentNode.parentNode;
-            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+    const arrowLeft = document.querySelector('.arrowLeftCon');
+    const arrowRight = document.querySelector('.arrowRightCon');
+    const gamesCon = document.querySelector('.gamesCon');
 
-            // gamesCon.scrollLeft -= 1100;
-            gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
-        });
-    }
+    arrowLeft.addEventListener('click', () => {
+        gamesCon.scrollLeft -= Math.min(gamesCon.scrollLeft, 1100);
+    });
 
-    for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
-            const parentElement = e.target.parentNode.parentNode;
-            const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
+    arrowRight.addEventListener('click', (e) => {
+        arrowLeft.style += 'visibility: visible';
 
-            const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
-            leftArrow.style += 'visibility: visible';
+        let remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
 
-            // gamesCon.scrollLeft += 1100;
-            const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
-            gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
-        });
-    }
-}
-
-function createGameButton(game, games) {
-    const data = games[game];
-    if (data == null) return '';
-
-    let classlist = data.tags.join(' ');
-
-    const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
-
-    const gameDate = new Date(data.date_added);
-
-    if (gameDate > weekAgo) classlist += ' new';
-
-    let gameBtn = '';
-
-    gameBtn = `
-        <div name="${game}" id="gameDiv" onclick="location.href = 'class?class=${game}'" class="${classlist}">
-            <div class="imageCon">
-                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-
-    return gameBtn;
+        gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
+    });
 }

@@ -49,7 +49,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/classes.js?v106"></script>
+    <script src="assets/scripts/classes.js?v107"></script>
 </body>
 
 </html>

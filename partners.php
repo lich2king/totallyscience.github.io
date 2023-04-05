@@ -4,18 +4,11 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <title>Apps - Totally Science - Free Online Unblocked Games</title>
+    <link rel='stylesheet' href='assets/styles/partners.css'>
+
+    <title>Partners - Totally Science - Free Online Unblocked Games</title>
 
     <style>
-        .tn_banner {
-            text-align: center;
-            font-size: 15pt;
-            position: relative;
-            width: 70%;
-            left: 15%;
-            top: 80px;
-        }
-
         #apps {
             margin: auto;
             margin-top: 140px;
@@ -35,32 +28,39 @@
         }
 
         div.card {
-            width: 300px;
-            height: 100px;
+            max-width: 315px;
+            min-height: 100px;
             margin-bottom: 10px;
             border-radius: 5px;
             background-color: var(--dark-accent);
             position: relative;
             padding: 20px;
             transition: 0.2s all;
+
+            display: flex;
+            flex-direction: column;
+            
         }
 
         div.card>h1 {
             font-family: Rubik, sans-serif;
-            font-size: 20px;
+            font-size: 25px;
             margin: 0px;
             margin-left: 30px;
             margin-bottom: 5px;
             text-align: left;
             color: var(--light-color);
+            padding-left: 85px;
+            white-space: nowrap;
         }
 
         div.card>h2 {
             font-family: Rubik, sans-serif;
             font-size: 16px;
             margin: 10px;
-            padding-left: 50px;
-            text-align: right;
+            margin-top:50px;
+            
+            text-align: left;
             color: var(--light-color);
         }
 
@@ -78,14 +78,13 @@
             font-family: Rubik, sans-serif;
             font-size: 18px;
             background: var(--accent-color);
-            float: right;
+            align-self: center;
         }
 
         div.card.game {
-            height: 96px;
+            min-height: 96px;
             padding: 10px;
             position: relative;
-            padding-left: 85px;
             cursor: default;
         }
 
@@ -143,6 +142,38 @@
             margin-bottom: 60px;
         }
 
+        body {
+            margin-top: 90px;
+        }
+
+        .partner {
+            width: 500px;
+            height: 300px;
+            background-color: var(--dark-accent);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .partner div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .partner div img {
+            border-radius: 20px;
+            position: absolute;
+            object-fit: cover;
+        }
+
         @media (max-width: 1200px) {
             div#apps {
                 max-width: 800px;
@@ -162,31 +193,30 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <a class="tn_banner" target="_blank" href="https://tnvpn.com/">Click here to check out Titanium Network's VPN and browse the internet without censorship.</a>
+    <div id="apps">
+        <div onclick="window.open('https:/\/kazwire.com/', '_blank')" class="card game">
+            <img src="/assets/images/partners/Kazwire.png" style="background-color: #ffffff;" title="Totally Science Partner - Kazwire" alt="Kazwire logo">
+            <h1>Kazwire</h1>
+            <h2>From the gaming classics to the internet, access YouTube, TikTok, and even your favorite games freely and securely.</h2>
+            <button class="launch">Visit</button>
+        </div>
 
-    <div id="apps"></div>
+        <div onclick="window.open('https:/\/weblfg.com/', '_blank')" class="card game">
+            <img src="/assets/images/partners/WebLFG.png" style="background-color: #ffffff;" title="Totally Science Partner - Web LFG" alt="Web LFG logo">
+            <h1>Web LFG</h1>
+            <h2>WebLFG is a hub for the best games on the internet, all available for free! There is so much for you to choose from.</h2>
+            <button class="launch">Visit</button>
+        </div>
 
+        <div onclick="window.open('https:/\/titaniumnetwork.org/', '_blank')" class="card game">
+            <img src="/assets/images/partners/TN.webp" style="background-color: #ffffff;" title="Totally Science Partner - Titanium Network" alt="Titanium Network logo">
+            <h1>Titanium Network</h1>
+            <h2>Titanium Network is the hub organization dedicated to providing services related to bypassing internet censorship.</h2>
+            <button class="launch">Visit</button>
+        </div>
+    </div>
+    
     <?php include "assets/includes/footer.php" ?>
-
-    <script>
-        document.getElementById('appsnav').classList.add('selected');
-
-        fetch(`assets/apps.json?v12`).then((response) => response.json()).then((apps) => {
-            const appContainer = document.getElementById('apps');
-
-            for (const [name, data] of Object.entries(apps)) {
-                const appDiv = `
-                    <div onclick="window.open('app.php?app=${name}', '_self')" class="card game">
-                        <img src="${data.image}" style="background-color: #ffffff;">
-                        <h1>${name}</h1>
-                        <button class="launch">Launch</button>
-                    </div>
-                `;
-
-                appContainer.innerHTML += appDiv;
-            }
-        });
-    </script>
 </body>
 
 </html>
