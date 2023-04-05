@@ -46,7 +46,7 @@
 
     div.card>h1 {
         font-family: Rubik, sans-serif;
-        font-size: 25px;
+        font-size: 26px;
         margin: 0px;
         margin-left: 30px;
         margin-bottom: 5px;
@@ -226,7 +226,7 @@
         <div onclick="window.open('https:/\/bgs.pages.dev/g/glanding', '_blank')" class="card game">
             <img src="/assets/images/partners/bigfoot.png" style="background-color: #ffffff;"
                 title="Totally Science Partner - Bigfoot's Game Shack" alt="Bigfoot's Game Shack logo">
-            <h1>Bigfoot's Game Shack</h1>
+            <h1 style="font-size: 21px;">Bigfoot's Game Shack</h1>
             <h2>Get ready to level up your gaming experience with Bigfoot's Game Shack, offering a massive selection of
                 over 500+ games built for Chromebook gaming.</h2>
             <button class="launch">Visit</button>
