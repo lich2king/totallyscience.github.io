@@ -144,9 +144,6 @@
         margin-bottom: 60px;
     }
 
-    body {
-        margin-top: 90px;
-    }
 
     .partner {
         width: 500px;
