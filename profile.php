@@ -6,26 +6,26 @@
 
     <title>Profile - Totally Science - Free Online Unblocked Games</title>
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v10'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v11'>
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="accountoptions">
-        <div class="accountoption">
+        <div class="accountoption" tooltip="Disabled for maintenence" flow="left">
             <p>Username: <span class="span" id="usernameSpan">username</span></p>
-            <input onclick="location.href = 'changeusername.php'" type="image" src="assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
 
-        <div class="accountoption">
+        <div class="accountoption" tooltip="Disabled for maintenence" flow="left">
             <p>Email: <span class="span" id="emailSpan">help@totallyscience.co</span></p>
-            <input onclick="location.href = 'changeemail.php'" type="image" src="assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
 
-        <div class="accountoption">
+        <div class="accountoption" tooltip="Disabled for maintenence" flow="left">
             <p>Password: <span class="span">*********</span></p>
-            <input onclick="location.href = 'changepassword.php'" type="image" src="assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
 
         <div class="accountoption">

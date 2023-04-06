@@ -38,6 +38,8 @@ html {
     font-weight: 900;
     font-size: 1vw;
     font-family: 'Rubik';
+    /* below line added temporarily */
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .accountoption p .span {

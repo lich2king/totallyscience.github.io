@@ -1,5 +1,3 @@
-<!-- // READY -->
-
 <div id="navbar">
     <div id="leftbar">
         <div class="nav-button" id="gamesnav"><a href="index.php">&#127918; Games</a></div>
@@ -16,8 +14,7 @@
     <div id="rightbar">
 
         <div class="searchbar">
-            <p onclick="window.location.href='/classes.php?search=true'"><img src="assets/images/magnifying-light.svg">
-                Search...</p>
+            <p onclick="window.location.href='/classes.php?search=true'"><img src="assets/images/magnifying-light.svg">Search...</p>
         </div>
 
         <div class="points">
@@ -27,9 +24,6 @@
         <div class="nav-button" tooltip="Press this key to return to Google Classroom! " flow="down" id="shusheomji">
             <img style="cursor:pointer;" onclick="window.open('https:/\/classroom.google.com', '_blank')" src="https://img.icons8.com/color/480/tilde-key.png">
         </div>
-
-        
-
 
         <a id="login" href="profile.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
