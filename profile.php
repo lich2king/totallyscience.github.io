@@ -14,7 +14,8 @@
 
     <div id="accountoptions">
         <div class="accountoption" tooltip="Disabled for maintenence" flow="left">
-            <p style="color: rgba(255, 255, 255, 0.5) !important;">Username: <span class="span" id="usernameSpan">loading...</span></p>
+            <p style="color: rgba(255, 255, 255, 0.5) !important;">Username: <span class="span"
+                    id="usernameSpan">loading...</span></p>
             <input type="image" src="assets/images/icons/edit.png">
         </div>
 
@@ -44,7 +45,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v85"></script>
+    <script src="assets/scripts/profile.js?v86"></script>
 </body>
 
 </html>

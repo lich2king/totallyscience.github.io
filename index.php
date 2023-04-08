@@ -29,44 +29,52 @@
 
     <div id="startcontent">
         <div id="feature">
-            <div class="featureSlot fade" style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">JUST FALL</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Just%20Fall', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Just%20Fall', '_self')" class="featureButton button">Play
+                    Now</button>
             </div>
 
-            <div class="featureSlot fade" style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">BALDIS BASICS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Baldis%20Basics', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Baldis%20Basics', '_self')"
+                    class="featureButton button">Play Now</button>
             </div>
 
-            <div class="featureSlot fade" style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">CHESS</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Chess', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Chess', '_self')" class="featureButton button">Play
+                    Now</button>
             </div>
 
-            <div class="featureSlot fade" style="background-image: url(./assets/images/featuredimg/vex-3.png); display:none;">
+            <div class="featureSlot fade"
+                style="background-image: url(./assets/images/featuredimg/vex-3.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">VEX 3</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Vex%203', '_self')" class="featureButton button">Play Now</button>
+                <button onclick="window.open('class.php?class=Vex%203', '_self')" class="featureButton button">Play
+                    Now</button>
             </div>
         </div>
 
@@ -93,18 +101,18 @@
 
     <script async src="https://cdn.ad.plus/player/adplus.js"></script>
     <script data-playerPro="current">
-        (function() {
-            var s = document.querySelector('script[data-playerPro="current"]');
-            s.removeAttribute("data-playerPro");
-            (playerPro = window.playerPro || []).push({
-                id: "z2I717k6zq5b",
-                after: s,
-                appParams: {
-                    "C_NETWORK_CODE": "22753484437",
-                    "C_WEBSITE": "totallyscience.co"
-                }
-            });
-        })();
+    (function() {
+        var s = document.querySelector('script[data-playerPro="current"]');
+        s.removeAttribute("data-playerPro");
+        (playerPro = window.playerPro || []).push({
+            id: "z2I717k6zq5b",
+            after: s,
+            appParams: {
+                "C_NETWORK_CODE": "22753484437",
+                "C_WEBSITE": "totallyscience.co"
+            }
+        });
+    })();
     </script>
 
     <div class="adsrc" style="text-align:center; margin-top:50px;">
@@ -187,7 +195,8 @@
         </h1>
 
         <p>
-            <span>Totally Science</span> is a website that offers unblocked games and proxy apps for school use. Totally Science was
+            <span>Totally Science</span> is a website that offers unblocked games and proxy apps for school use. Totally
+            Science was
             founded in January 2022 with the aim of giving users the best experience of <span>unblocked games and
                 unblocked
                 proxy apps at school</span>. At Totally Science, you can play games with your friends without being
@@ -196,7 +205,8 @@
             work.
             You also do not need to install any additional software or know any plugins. People can play many other
             games,
-            such as racing, shooting, mind games, sports, or slope games...</p>
+            such as racing, shooting, mind games, sports, or slope games...
+        </p>
         <br>
         <h1>Totally Science <span>Apps</span></h1>
         <p>Currently, Totally Science offers web proxy services for many popular applications, including <span>YouTube,
@@ -207,8 +217,9 @@
         <p>
             There are many outstanding unblocked games nowadays, and Totally Science currently offers more than 100 of
             the most popular games covering many genres like racing, shooting, intelligence, and many more. The games
-            Totally Science offers are developed on HTML5, Unity, and many other platforms. Among them are some outstanding games, such as:
-        </span>
+            Totally Science offers are developed on HTML5, Unity, and many other platforms. Among them are some
+            outstanding games, such as:
+            </span>
         </p>
 
         <ul>
@@ -310,7 +321,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v50"></script>
+    <script src="assets/scripts/index.js?v51"></script>
 </body>
 
 </html>

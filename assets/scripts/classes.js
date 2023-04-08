@@ -18,10 +18,40 @@ const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category');
 const search = urlParams.get('search');
 
-
-let categories = ["multiplayer", "car", "casual", "action", "shooting", "puzzle", "classic", "sport", "clicker", "escape", "2", "horror", "hard", "music", "flash"];
-let categoriesNames = ["Multiplayer", "Driving", "Casual", "Action", "Shooting", "Puzzle", "Classic", "Sport", "Clicker", "Escape", "2 Player", "Horror", "Impossible", "Music", "Flash"];
-
+let categories = [
+    'multiplayer',
+    'car',
+    'casual',
+    'action',
+    'shooting',
+    'puzzle',
+    'classic',
+    'sport',
+    'clicker',
+    'escape',
+    '2',
+    'horror',
+    'hard',
+    'music',
+    'flash',
+];
+let categoriesNames = [
+    'Multiplayer',
+    'Driving',
+    'Casual',
+    'Action',
+    'Shooting',
+    'Puzzle',
+    'Classic',
+    'Sport',
+    'Clicker',
+    'Escape',
+    '2 Player',
+    'Horror',
+    'Impossible',
+    'Music',
+    'Flash',
+];
 
 if (search != null) {
     const input = document.getElementById('searchBar');
@@ -30,7 +60,6 @@ if (search != null) {
 }
 
 if (category != null) {
-
     selectedTopic = category;
 
     document.getElementById('topText').style.display = '';
@@ -46,8 +75,8 @@ if (category != null) {
 
 let sortObject = (obj) =>
     Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -74,7 +103,9 @@ async function loadTopic() {
     if (selectedTopic != 'all') {
         if (customcategory) {
             //solves the problem of doing the category parameter on url
-            document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${category.toUpperCase()} Games || Play ${category} Games on Totally Science`;
+            document.getElementsByTagName(
+                'title'
+            )[0].innerHTML = `Totally Science - ${category.toUpperCase()} Games || Play ${category} Games on Totally Science`;
             await displayGames();
         }
 
@@ -98,26 +129,19 @@ async function loadTopic() {
 async function displayGames() {
     //First check if there are any new games... if so, put them in the new games category
 
-
-
-    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
-
-
+    let arrowContainer =
+        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
 
     //Then for each category (except mobile and a few others), make the category container then add games
 
-
-
     for (let i = 0; i < categories.length; i++) {
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`;
 
-
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`
-
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
-        gamesContainer.id = (`${categories[i]}GamesCon`);
+        let row = document.createElement('div');
+        row.classList.add('horizontalCon');
+        let gamesContainer = document.createElement('div');
+        gamesContainer.classList.add('gamesCon');
+        gamesContainer.id = `${categories[i]}GamesCon`;
         //add the arrows to the horizontal Con
         row.innerHTML += arrowContainer;
 
@@ -125,16 +149,12 @@ async function displayGames() {
         gamesDiv.appendChild(row);
     }
 
-
-
-
     let newGames = [];
     let miscGames = [];
 
     const filteredGameCon = document.getElementById('filteredGames');
 
     for (let x = 0; x < Object.keys(sorted).length; x++) {
-
         let keys = Object.keys(sorted);
         const name = keys[x];
 
@@ -149,7 +169,7 @@ async function displayGames() {
             newGames.push(name);
         }
 
-        filteredGameCon.innerHTML += createGameButton(name, "filtered");
+        filteredGameCon.innerHTML += createGameButton(name, 'filtered');
 
         //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
         let hasCategory = false;
@@ -167,10 +187,10 @@ async function displayGames() {
     if (miscGames.length > 0) {
         gamesDiv.innerHTML += `<h1>Random Games <a href="/classes.php?category=random">View More</a></h1>`;
 
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
+        let row = document.createElement('div');
+        row.classList.add('horizontalCon');
+        let gamesContainer = document.createElement('div');
+        gamesContainer.classList.add('gamesCon');
         //add the arrows to the horizontal Con
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
@@ -181,17 +201,14 @@ async function displayGames() {
         gamesDiv.appendChild(row);
     }
 
-
     //recent games
-
-
 
     //for each popular game, add the game to the horizontalCon
     if (token) {
-        let recentRow = document.createElement("div");
-        recentRow.classList.add("horizontalCon");
-        let recentGamesContainer = document.createElement("div");
-        recentGamesContainer.classList.add("gamesCon");
+        let recentRow = document.createElement('div');
+        recentRow.classList.add('horizontalCon');
+        let recentGamesContainer = document.createElement('div');
+        recentGamesContainer.classList.add('gamesCon');
         //add the arrows to the horizontal Con
         recentRow.innerHTML += arrowContainer;
 
@@ -213,22 +230,19 @@ async function displayGames() {
             recentRow.appendChild(recentGamesContainer);
             gamesDiv.prepend(recentRow);
             console.log(recentGamesContainer);
-            console.log("here");
+            console.log('here');
             console.log(gamesDiv);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
         }
     }
 
-
-
     //popular games
-    let row = document.createElement("div");
-    row.classList.add("horizontalCon");
-    let gamesContainer = document.createElement("div");
-    gamesContainer.classList.add("gamesCon");
+    let row = document.createElement('div');
+    row.classList.add('horizontalCon');
+    let gamesContainer = document.createElement('div');
+    gamesContainer.classList.add('gamesCon');
     //add the arrows to the horizontal Con
     row.innerHTML += arrowContainer;
-
 
     //for each popular game, add the game to the horizontalCon
 
@@ -241,7 +255,7 @@ async function displayGames() {
         for (let i = 0; i < 15; i++) {
             const gameName = popularGames[i].game;
             if (gameName != null) {
-                gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                gamesContainer.innerHTML += createGameButton(gameName, 'hot');
             }
         }
     }
@@ -250,10 +264,10 @@ async function displayGames() {
     gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
 
     if (newGames.length > 0) {
-        let row = document.createElement("div");
-        row.classList.add("horizontalCon");
-        let gamesContainer = document.createElement("div");
-        gamesContainer.classList.add("gamesCon");
+        let row = document.createElement('div');
+        row.classList.add('horizontalCon');
+        let gamesContainer = document.createElement('div');
+        gamesContainer.classList.add('gamesCon');
         //add the arrows to the horizontal Con
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
@@ -277,12 +291,12 @@ searchBar.addEventListener('keyup', () => {
 
     let input = searchBar.value.toUpperCase().split(' ').join('');
 
-    document.getElementById("filteredGames").style.display = 'none';
+    document.getElementById('filteredGames').style.display = 'none';
     if (input != '') {
-        document.getElementById("filteredGames").style.display = '';
+        document.getElementById('filteredGames').style.display = '';
     }
 
-    const gameButtons = document.getElementById("filteredGames").getElementsByClassName('all');
+    const gameButtons = document.getElementById('filteredGames').getElementsByClassName('all');
 
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
@@ -290,10 +304,10 @@ searchBar.addEventListener('keyup', () => {
         name = name.split(' ').join('');
 
         if (name.includes(input) && game.classList.contains(selectedTopic)) {
-            game.style.display = "";
+            game.style.display = '';
             gameShown = true;
         } else {
-            game.style.display = "none";
+            game.style.display = 'none';
         }
     });
     if (!gameShown) {
@@ -306,22 +320,16 @@ searchBar.addEventListener('keyup', () => {
     }
 });
 
-
 function createGameButton(game, pin) {
     const data = games[game];
-    if (data == null)
-        return '';
-
+    if (data == null) return '';
 
     let classlist = data.tags.join(' ');
-
 
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
-
-
 
     let gameBtn = '';
 
@@ -336,7 +344,7 @@ function createGameButton(game, pin) {
         buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
     }
 
-    if (pin == "filtered") {
+    if (pin == 'filtered') {
         let hasCategory = false;
         for (let i = 0; i < categories.length; i++) {
             if (data.tags.join(' ').includes(categories[i])) {
@@ -344,10 +352,8 @@ function createGameButton(game, pin) {
             }
         }
         if (!hasCategory) {
-            classlist += " random";
+            classlist += ' random';
         }
-
-
     }
 
     if (gameDate > weekAgo) {
@@ -364,7 +370,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -374,7 +380,7 @@ function createGameButton(game, pin) {
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -385,9 +391,8 @@ function createGameButton(game, pin) {
 }
 
 function addArrowListeners() {
-
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -397,43 +402,44 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
             const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
-            leftArrow.style += "visibility: visible";
+            leftArrow.style += 'visibility: visible';
 
             // gamesCon.scrollLeft += 1100;
             const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
             gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
         });
     }
-
-
 }
 
 function findLazyImages() {
     // Get all the lazy images
     const lazyImages = document.querySelectorAll('.lazy');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.src = entry.target.dataset.src;
-                entry.target.classList.remove('lazy');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        // Start loading the images when they are 10% visible
-        threshold: 0.1,
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.src = entry.target.dataset.src;
+                    entry.target.classList.remove('lazy');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            // Start loading the images when they are 10% visible
+            threshold: 0.1,
 
-        // Start loading the images when they are 500 pixels away from the viewport
-        rootMargin: '500px 0px'
-    });
+            // Start loading the images when they are 500 pixels away from the viewport
+            rootMargin: '500px 0px',
+        }
+    );
 
-    lazyImages.forEach(image => {
+    lazyImages.forEach((image) => {
         observer.observe(image);
     });
 }

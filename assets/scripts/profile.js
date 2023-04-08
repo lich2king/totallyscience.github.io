@@ -2,12 +2,12 @@ let games;
 let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
 
-
-
-document.addEventListener('DOMContentLoaded', async() => {
-    fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
-        games = retrievedGames;
-    });
+document.addEventListener('DOMContentLoaded', async () => {
+    fetch(`assets/games.json`)
+        .then((response) => response.json())
+        .then((retrievedGames) => {
+            games = retrievedGames;
+        });
 
     let token = JSON.parse(authToken);
 
@@ -42,23 +42,22 @@ document.addEventListener('DOMContentLoaded', async() => {
         document.getElementById('noscores').setAttribute('style', 'display: ');
     }
 
-    const gamesDiv = document.getElementById("games");
-    let arrowContainer = '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>'
-
+    const gamesDiv = document.getElementById('games');
+    let arrowContainer =
+        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
 
     //load liked and recent games
-    let recentRow = document.createElement("div");
-    let likedRow = document.createElement("div");
-    recentRow.classList.add("horizontalCon");
-    likedRow.classList.add("horizontalCon");
-    let recentGamesContainer = document.createElement("div");
-    let likedGamesContainer = document.createElement("div");
-    recentGamesContainer.classList.add("gamesCon");
-    likedGamesContainer.classList.add("gamesCon");
+    let recentRow = document.createElement('div');
+    let likedRow = document.createElement('div');
+    recentRow.classList.add('horizontalCon');
+    likedRow.classList.add('horizontalCon');
+    let recentGamesContainer = document.createElement('div');
+    let likedGamesContainer = document.createElement('div');
+    recentGamesContainer.classList.add('gamesCon');
+    likedGamesContainer.classList.add('gamesCon');
     //add the arrows to the horizontal Con
     recentRow.innerHTML += arrowContainer;
     likedRow.innerHTML += arrowContainer;
-
 
     let recentGamesres = await fetcher(`${activeServer}/profile/recent/get`);
     let text = await recentGamesres.text();
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', async() => {
 
     let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
     let likedgames = await userLikedRes.json();
-
 
     if (likedgames.length > 0) {
         for (like in likedgames) {
@@ -97,8 +95,7 @@ document.addEventListener('DOMContentLoaded', async() => {
 
 function createGameButton(game, pin) {
     const data = games[game];
-    if (data == null)
-        return '';
+    if (data == null) return '';
 
     let classlist = data.tags.join(' ');
 
@@ -114,7 +111,7 @@ function createGameButton(game, pin) {
     gameBtn = `
         <div name="${game}" id="gameDiv" onclick="location.href = 'class.php?class=${game}'" class="${classlist}">
             <div class="imageCon">
-                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -124,9 +121,8 @@ function createGameButton(game, pin) {
 }
 
 function addArrowListeners() {
-
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -136,18 +132,16 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener("click", function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
             const leftArrow = e.target.parentNode.parentNode.querySelectorAll('.arrowCon')[0];
-            leftArrow.style += "visibility: visible";
+            leftArrow.style += 'visibility: visible';
 
             // gamesCon.scrollLeft += 1100;
             const remainingSpace = gamesCon.scrollWidth - gamesCon.clientWidth - gamesCon.scrollLeft;
             gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
         });
     }
-
-
 }

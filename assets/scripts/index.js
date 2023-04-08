@@ -47,19 +47,23 @@ const maxGames = 50;
 let selectedTopic = 'all';
 let displayedGames = 0;
 let games;
+let partners;
 let sorted;
 let hasLoaded = false;
 let sortObject = (obj) =>
     Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 window.addEventListener('load', async () => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
+    let partnersRes = await fetch(`assets/partner.json?date=${new Date().getTime()}`);
+    partners = await partnersRes.json();
+
     // update underline link in navbar
-    document.getElementById('gamesnav').classList.add('selected'); 
+    document.getElementById('gamesnav').classList.add('selected');
 
     // check if user is signed in
     if (token) {
@@ -72,7 +76,7 @@ window.addEventListener('load', async () => {
 
             let points = 100;
 
-            if (json.rewardDay >= 6 ) {
+            if (json.rewardDay >= 6) {
                 points = 1000;
             }
 
@@ -89,7 +93,7 @@ window.addEventListener('load', async () => {
 
             document.getElementById('claimRewardB').innerText = 'Claim Reward';
             document.getElementById('dailyRewardPopup').style.display = '';
-            
+
             // start the countdown til next reward displayed on the popup
             // endtime should be 24 hours in the future
             let endTime = Math.floor(Date.now() / 1000 + 86400);
@@ -100,14 +104,20 @@ window.addEventListener('load', async () => {
 
                 let remainingTime = endTime - currentTime;
 
-                let seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
-                let minutes = Math.floor((remainingTime / 60) % 60).toString().padStart(2, '0');
-                let hours = Math.floor((remainingTime / (60 * 60)) % 24).toString().padStart(2, '0');
+                let seconds = Math.floor(remainingTime % 60)
+                    .toString()
+                    .padStart(2, '0');
+                let minutes = Math.floor((remainingTime / 60) % 60)
+                    .toString()
+                    .padStart(2, '0');
+                let hours = Math.floor((remainingTime / (60 * 60)) % 24)
+                    .toString()
+                    .padStart(2, '0');
 
                 document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
             }, 1000);
         }
-    
+
         animateBar(json.rewardDay);
         startTimer(json.rewardTime);
     } else {
@@ -129,31 +139,28 @@ window.addEventListener('load', async () => {
 
                 let remainingTime = endTime - currentTime;
 
-                let seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
-                let minutes = Math.floor((remainingTime / 60) % 60).toString().padStart(2, '0');
-                let hours = Math.floor((remainingTime / (60 * 60)) % 24).toString().padStart(2, '0');
+                let seconds = Math.floor(remainingTime % 60)
+                    .toString()
+                    .padStart(2, '0');
+                let minutes = Math.floor((remainingTime / 60) % 60)
+                    .toString()
+                    .padStart(2, '0');
+                let hours = Math.floor((remainingTime / (60 * 60)) % 24)
+                    .toString()
+                    .padStart(2, '0');
 
                 document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
             }, 1000);
         }
     }
 
-    
-
-
-
-
-
-
-
-
     games = retrievedGames;
     loadCookies();
 });
 
-// 
+//
 // reward system
-// 
+//
 function startTimer(endTime) {
     clearInterval(interval);
 
@@ -169,9 +176,15 @@ function startTimer(endTime) {
             return;
         }
 
-        let seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
-        let minutes = Math.floor((remainingTime / 60) % 60).toString().padStart(2, '0');
-        let hours = Math.floor((remainingTime / (60 * 60)) % 24).toString().padStart(2, '0');
+        let seconds = Math.floor(remainingTime % 60)
+            .toString()
+            .padStart(2, '0');
+        let minutes = Math.floor((remainingTime / 60) % 60)
+            .toString()
+            .padStart(2, '0');
+        let hours = Math.floor((remainingTime / (60 * 60)) % 24)
+            .toString()
+            .padStart(2, '0');
 
         document.getElementById('rewardTimer').innerText = hours + ':' + minutes + ':' + seconds;
     }, 1000);
@@ -202,7 +215,7 @@ async function claimReward() {
     if (!token) {
         location.href = 'signup.php';
     }
-    
+
     let res = await fetcher(`${activeServer}/points/reward/claim`);
 
     if (res.status == 200) {
@@ -220,12 +233,6 @@ async function claimReward() {
     document.getElementById('dailyRewardPopup').style.display = 'none';
     clearInterval(popupInterval);
 }
-
-
-
-
-
-
 
 async function loadCookies() {
     //when done
@@ -413,7 +420,7 @@ async function displayGames() {
         for (let i = 0; i < 15; i++) {
             const gameName = popularGames[i].game;
             if (gameName != null) {
-                gamesContainer.innerHTML += createGameButton(gameName, "hot");
+                gamesContainer.innerHTML += createGameButton(gameName, 'hot');
             }
         }
     }
@@ -437,6 +444,40 @@ async function displayGames() {
         gamesDiv.prepend(row);
         gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
+
+    //Partners
+    gamesDiv.innerHTML += `<h1>Partners <a href="/partners">View More</a></h1>`;
+
+    let partnerRow = document.createElement('div');
+    partnerRow.classList.add('horizontalCon');
+    let partnerGamesContainer = document.createElement('div');
+    partnerGamesContainer.classList.add('gamesCon');
+    partnerGamesContainer.id = `PartnersCon`;
+    //add the arrows to the horizontal Con
+    partnerRow.innerHTML += arrowContainer;
+
+    partnerRow.appendChild(partnerGamesContainer);
+    gamesDiv.appendChild(partnerRow);
+
+    for (let x = 0; x < Object.keys(partners).length; x++) {
+        let keys = Object.keys(partners);
+        const name = keys[x];
+        const image = partners[keys[x]].image;
+        const website = partners[keys[x]].website;
+
+        const backgroundImg =
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
+
+        const partnerButton = `<div name="${name}" id="gameDiv" onclick="location.href = '${website}'">
+        <div class="imageCon">
+            <img data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
+        </div>
+        <h1 class="innerGameDiv">${name}</h1>
+    </div>`;
+
+        document.getElementById(`PartnersCon`).innerHTML += partnerButton;
+    }
+
     addArrowListeners();
     findLazyImages();
 }
@@ -515,9 +556,9 @@ function createGameButton(game, pin, lazy) {
 
     let onclick = `location.href = 'class.php?class=${game}'`;
 
-    let backgroundImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
-    let lazyClass = "lazy";
-
+    let backgroundImg =
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
+    let lazyClass = 'lazy';
 
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
@@ -536,9 +577,9 @@ function createGameButton(game, pin, lazy) {
         classlist += ' all';
     }
 
-    if (lazy == "notlazy") {
+    if (lazy == 'notlazy') {
         backgroundImg = data.image;
-        lazyClass = "";
+        lazyClass = '';
     }
 
     if (pin != 'hidden') {
@@ -546,7 +587,7 @@ function createGameButton(game, pin, lazy) {
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -556,7 +597,7 @@ function createGameButton(game, pin, lazy) {
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}">
+                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -571,12 +612,9 @@ function createGameButton(game, pin, lazy) {
 //if it is over, check database
 //if database says it is not over, set local storage to correct time and keep counting
 
-
-
-
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -586,7 +624,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -613,7 +651,8 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
+        },
+        {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 

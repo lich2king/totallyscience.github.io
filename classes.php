@@ -18,19 +18,19 @@
         </div>
 
         <div class="adsrc adhorz" style="text-align:center;"></div>
-        
+
         <div id="filteredGames"></div>
 
         <div id="noSearch" style="display:none">
             <p>You search terms does not match any games...</p>
         </div>
 
-        <div id="games"></div>        
+        <div id="games"></div>
     </div>
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/classes.js?v108"></script>
+    <script src="assets/scripts/classes.js?v109"></script>
 </body>
 
 </html>

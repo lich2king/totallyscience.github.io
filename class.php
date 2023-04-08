@@ -22,14 +22,17 @@
 
             <div class="options">
                 <div class="left">
-                    <button id="like" class="text-button button-effect-a"><img src="assets/images/icons/likeoutline.png"></button>
+                    <button id="like" class="text-button button-effect-a"><img
+                            src="assets/images/icons/likeoutline.png"></button>
                     <div id="likeCount">...</div>
-                    <button onclick="OpenHighscore()" class="text-button"><img src="assets/images/icons/trophy-icon.png"></button>
+                    <button onclick="OpenHighscore()" class="text-button"><img
+                            src="assets/images/icons/trophy-icon.png"></button>
                     <div id="currentHighscore">...</div>
                 </div>
 
                 <div class="right">
-                    <button id="pin" class="game-button button-effect-a"><img src="assets/images/icons/pinoutline.png"></button>
+                    <button id="pin" class="game-button button-effect-a"><img
+                            src="assets/images/icons/pinoutline.png"></button>
                     <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.png"></button>
                 </div>
             </div>
@@ -42,7 +45,7 @@
 
     <div class="adsrc adhorz" style="text-align:center;">
     </div>
-    
+
     <div id="info">
         <div class="container">
             <div class="segmentAd">
@@ -72,8 +75,8 @@
                 <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
                     <img class="arrow" src="/assets/images/left-arrow.png">
                 </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
+
+                <div class="arrowCon arrowRightCon" id="arrowRight">
                     <img class="arrow" src="/assets/images/right-arrow.png">
                 </div>
             </div>
@@ -86,7 +89,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v121"></script>
+    <script src="assets/scripts/class.js?v122"></script>
 </body>
 
 </html>
