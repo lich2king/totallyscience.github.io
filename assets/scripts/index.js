@@ -59,8 +59,8 @@ window.addEventListener('load', async () => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
-    // let partnersRes = await fetch(`assets/partners.json?date=${new Date().getTime()}`);
-    // partners = await partnersRes.json();
+    let partnersRes = await fetch(`assets/partners.json?date=${new Date().getTime()}`);
+    partners = await partnersRes.json();
 
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
@@ -445,38 +445,38 @@ async function displayGames() {
         gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
 
-    // //Partners
-    // gamesDiv.innerHTML += `<h1>Partners <a href="/partners">View More</a></h1>`;
+    //Partners
+    gamesDiv.innerHTML += `<h1>Partners <a href="/partners">View More</a></h1>`;
 
-    // let partnerRow = document.createElement('div');
-    // partnerRow.classList.add('horizontalCon');
-    // let partnerGamesContainer = document.createElement('div');
-    // partnerGamesContainer.classList.add('gamesCon');
-    // partnerGamesContainer.id = `PartnersCon`;
-    // //add the arrows to the horizontal Con
-    // partnerRow.innerHTML += arrowContainer;
+    let partnerRow = document.createElement('div');
+    partnerRow.classList.add('horizontalCon');
+    let partnerGamesContainer = document.createElement('div');
+    partnerGamesContainer.classList.add('gamesCon');
+    partnerGamesContainer.id = `PartnersCon`;
+    //add the arrows to the horizontal Con
+    partnerRow.innerHTML += arrowContainer;
 
-    // partnerRow.appendChild(partnerGamesContainer);
-    // gamesDiv.appendChild(partnerRow);
+    partnerRow.appendChild(partnerGamesContainer);
+    gamesDiv.appendChild(partnerRow);
 
-    // for (let x = 0; x < Object.keys(partners).length; x++) {
-    //     let keys = Object.keys(partners);
-    //     const name = keys[x];
-    //     const image = partners[keys[x]].image;
-    //     const website = partners[keys[x]].website;
+    for (let x = 0; x < Object.keys(partners).length; x++) {
+        let keys = Object.keys(partners);
+        const name = keys[x];
+        const image = partners[keys[x]].image;
+        const website = partners[keys[x]].website;
 
-    //     const backgroundImg =
-    //         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
+        const backgroundImg =
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
 
-    //     const partnerButton = `<div name="${name}" id="gameDiv" onclick="location.href = '${website}'">
-    //     <div class="imageCon">
-    //         <img data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
-    //     </div>
-    //     <h1 class="innerGameDiv">${name}</h1>
-    // </div>`;
+        const partnerButton = `<div name="${name}" id="gameDiv" onclick="location.href = '${website}'">
+        <div class="imageCon">
+            <img data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
+        </div>
+        <h1 class="innerGameDiv">${name}</h1>
+    </div>`;
 
-    //     document.getElementById(`PartnersCon`).innerHTML += partnerButton;
-    // }
+        document.getElementById(`PartnersCon`).innerHTML += partnerButton;
+    }
 
     addArrowListeners();
     findLazyImages();
