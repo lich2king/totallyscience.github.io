@@ -5,10 +5,6 @@
     <?php include "assets/includes/head.php" ?>
 
     <style>
-        html {
-            overflow-x: hidden;
-        }
-
         #termsText p {
             color: white;
             padding-right: 2vw;

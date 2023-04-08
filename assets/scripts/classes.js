@@ -1,6 +1,6 @@
-// READY
-
 document.getElementById('gamesnav').classList.add('selected');
+
+const token = JSON.parse(authToken);
 
 // Load Games
 const gamesDiv = document.getElementById('games');
@@ -12,7 +12,6 @@ let games;
 let sorted;
 let hasLoaded = false;
 let customcategory = false;
-let loggedIn = false;
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -61,16 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loadCookies() {
-    res = JSON.parse(authToken);
-
-    if (res != null) {
-        const isLoggedIn = res['isLoggedIn'];
-
-        if (isLoggedIn == 'true') {
-            loggedIn = true;
-        }
-    }
-
     //when done
     loadTopic();
 }
@@ -198,7 +187,7 @@ async function displayGames() {
 
 
     //for each popular game, add the game to the horizontalCon
-    if (loggedIn) {
+    if (token) {
         let recentRow = document.createElement("div");
         recentRow.classList.add("horizontalCon");
         let recentGamesContainer = document.createElement("div");
@@ -275,44 +264,6 @@ async function displayGames() {
         gamesDiv.prepend(row);
         gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
-
-
-    // if (loggedIn) {
-    //     fetcher(`/assets/php/class_likes/personallikes.php`)
-    //         .then((response) => response.text())
-    //         .then((res) => {
-    //             var likedgames = JSON.parse(res);
-
-    //             if (likedgames.length > 0) {
-
-    //                 gamesDiv.innerHTML += `<h1>Liked Games <a href="">View More</a></h1>`
-
-    //                 let row = document.createElement("div");
-    //                 row.classList.add("horizontalCon");
-    //                 let gamesContainer = document.createElement("div");
-    //                 gamesContainer.classList.add("gamesCon");
-    //                 //add the arrows to the horizontal Con
-    //                 row.innerHTML += arrowContainer;
-
-    //                 for (like in likedgames) {
-    //                     if (document.getElementsByName(likedgames[like][0]).length > 0) {
-    //                         //line below accounts for suggested/pinned games
-    //                         console.log(like);
-    //                         gamesContainer.innerHTML += createGameButton(like);
-    //                         // if (document.getElementsByName(likedgames[like][0])[0].classList.contains('all')) {
-    //                         //     document.getElementsByName(likedgames[like][0])[0].classList.add('liked');
-    //                         // } else {
-    //                         //     document.getElementsByName(likedgames[like][0])[1].classList.add('liked');
-    //                         // }
-    //                     }
-    //                 }
-    //                 row.appendChild(gamesContainer);
-    //                 gamesDiv.appendChild(row);
-    //             }
-    //         });
-    //     //Get recent games
-    // }
-    //Get popular games
 
     //Make new games last 3 weeks
     //UNSORT THE GAMES

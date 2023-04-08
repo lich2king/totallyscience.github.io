@@ -1,7 +1,3 @@
-html {
-    overflow-x: hidden;
-}
-
 #pointsbar {
     margin-top: 100px;
     width: 100vw;
@@ -96,12 +92,6 @@ html {
     text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0 var(--stroke-color), calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color), calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0 var(--stroke-color), calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0 var(--stroke-color), calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0 var(--stroke-color), calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0 var(--stroke-color);
 }
 
-
-/*#endregion*/
-
-
-/*#region animation for feature*/
-
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.25s;
@@ -128,11 +118,6 @@ html {
 }
 
 
-/*#endregion*/
-
-
-/*#region suggested games*/
-
 #scisuggests {
     margin-top: 10px;
     display: flex;
@@ -142,23 +127,6 @@ html {
     justify-content: flex-end;
 }
 
-
-/* 
-#scisuggests img {
-    width: 13vw;
-    height: 13vh;
-    border-radius: 30px;
-    transition: all 0.1s;
-}
-
-#scisuggests img:hover {
-    transform: scale(1.05);
-} */
-
-@media screen and (max-width: 1262px) {}
-
-
-/*#endregion*/
 
 #info {
     display: flex;
@@ -258,9 +226,6 @@ html {
     }
 }
 
-
-/*#region categories + seach*/
-
 #searchcatParent {
     margin-bottom: 5vh;
 }
@@ -295,66 +260,11 @@ html {
     margin-top: 2vh;
     width: 91vw;
     height: 5vh;
-    /*Flex*/
     display: flex;
     gap: 1vw;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
-/* searchbar */
-
-input[type='text'] {
-    /**/
-    width: 20vw;
-    height: 100%;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 17px;
-    font-size: 1vw;
-    background-color: var(--light-color);
-    outline: none;
-    background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
-    background-size: 1.25vw;
-    background-position: 10px calc(50%);
-    background-repeat: no-repeat;
-    padding: 1vh 1vw 1vh 2.2vw;
-    transition: width 0.4s ease-in-out;
-    margin-bottom: 3%;
-    color: var(--dark-color);
-}
-
-
-/* category selection */
-
-.categoryButton {
-    height: 100%;
-    border: none;
-    color: var(--light-color);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Rubik';
-    cursor: pointer;
-    background-color: var(--accent-color);
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
-    transition: opacity 0.3s ease;
-    height: 40px;
-    font-size: 1.2rem;
-}
-
-
-/*@media (min-width: 1200px) {
-    .categoryButton {
-        font-size: 1.25vw;
-    }
-    .categoryButton span {
-        font-size: 1.7vw;
-    }
-}*/
 
 .selectedCategory {
     opacity: 1;
@@ -364,17 +274,6 @@ input[type='text'] {
     opacity: 0.45;
 }
 
-
-/*#endregion*/
-
-
-/*#region games*/
-
-
-/*#endregion*/
-
-
-/*#region extracategories*/
 
 #extraCategories {
     margin-top: 10vh;
@@ -429,9 +328,6 @@ input[type='text'] {
     background-color: var(--accent-color);
 }
 
-
-/*#endregion*/
-
 #noSearch {
     text-align: center;
     margin-bottom: 10vh;
@@ -461,8 +357,6 @@ input[type='text'] {
     font-weight: 200;
 }
 
-
-/*Daily reward popup css */
 
 #dailyRewardPopup {
     position: fixed;
@@ -594,8 +488,6 @@ input[type='text'] {
     opacity: 0.8;
 }
 
-
-/* Loading Spinner */
 
 .loader {
     margin-right: 5px;

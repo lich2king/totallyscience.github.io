@@ -9,7 +9,7 @@ const authToken = localStorage.getItem('authToken');
 /**
  * Adds certain header and sends a request 
  * 'Content-Type': 'application/json' is added to the headers
- * the method is set to POST
+ * the method is set to POST if body passed into options
  * the body is passed into JSON.stringify()
  * the authtoken is added from localstorage
  * @param {string} endpoint - a url endpoint to be fetched. Formatted like http://example.com/ or https://example.com/
@@ -21,23 +21,24 @@ function fetcher(endpoint, options) {
     updatedOptions.headers = {
         ...(options ? options.headers : null),
         'Content-Type': 'application/json',
+        'x-access-token': authToken || null
     };
 
-    // method: post needed for request body
-    // this should be removed and passed in every time so get requests are also possible
-    updatedOptions.method = 'post';
+    if (options && options.hasOwnProperty('body')) {
+        // switch from GET to POST
+        updatedOptions.method = 'POST';
 
-    updatedOptions.body = JSON.stringify({
-        ...(options ? options.body : null),
-        auth: authToken ? JSON.parse(authToken) : null,
-    });
+        // json stringify body
+        updatedOptions.body = JSON.stringify({
+            ...(options ? options.body : null)
+        });
+    }
 
     //add active server when using node version
     //return fetch(`${activeServer}${endpoint}`, updatedOptions);
 
     return fetch(`${endpoint}`, updatedOptions);
 }
-
 /**
  * takes and integer and ads M or K suffix if it is above 1,000 or 1,000,000
  * @param {integer} num - an integer to be formatted

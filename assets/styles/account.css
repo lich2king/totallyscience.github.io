@@ -1,57 +1,27 @@
-/* // READY */
-
 body {
     color: var(--light-color);
 }
 
 #survey {
     text-align: center;
-    margin-top: 25px;
+    padding-top: 100px;
 }
-
-#survey div {
-    padding-bottom: 2vh;
+#survey input {
+    margin: 10px;
 }
-
 #survey label {
-    font-size: 1.75vw;
+    font-size: 13pt;
 }
-
-#survey input,
-#survey select {
-    font-family: 'Rubik';
-    margin: auto;
-    margin-top: 10px;
-    width: 20vw;
-    height: 50px;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 17px;
-    font-size: 1vw;
-    background-color: var(--light-color);
-    outline: none;
-    padding: 1vh 1vw 1vh 1vw;
-    transition: width 0.4s ease-in-out;
-    margin-bottom: 3vh;
-    color: var(--dark-color);
-}
-
 #survey button {
-    font-size: 30px;
-    padding: 20px;
-    color: var(--light-color);
-    background-color: var(--accent-color);
-    border: none;
-    border-radius: 40px;
-    margin-bottom: 2%;
-    cursor: pointer;
+    padding: 15px;
+    font-size: 1.25vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
-
-#resEmail {
+#back-login {
     text-align: center;
-    cursor: pointer;
+    color: var(--light-color);
 }
-
-#resEmail:hover {
+#back-login:hover {
     color: var(--accent-color);
 }
