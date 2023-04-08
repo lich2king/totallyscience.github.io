@@ -7,10 +7,6 @@
     <title>Leaderboard - Totally Science - Free Online Unblocked Games</title>
 
     <style>
-        html {
-            overflow-x: hidden;
-        }
-
         #searchDiv {
             margin-top: 80px;
             text-align: center;

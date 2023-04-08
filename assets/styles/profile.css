@@ -1,9 +1,3 @@
-/* // READY */
-
-html {
-    overflow-x: hidden;
-}
-
 #nameheader {
     margin-top: 80px;
     text-align: center;
@@ -153,8 +147,6 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 15vw;
-    height: 15vh; */
     border-radius: 30px;
     text-align: center;
     transition: 0.1s;
@@ -169,8 +161,6 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 15vw;
-    height: 15vh; */
     border-radius: 30px;
     text-align: center;
     transition: 0.1s;
@@ -240,29 +230,7 @@ html {
     opacity: 1;
 }
 
-/*Game pass lock icon on game*/
-
 #gameDiv:hover > button {
     opacity: 1;
     top: -10%;
-}
-
-#gamelock {
-    position: absolute;
-    top: 5%;
-    left: 32%;
-    border: none;
-    background-color: transparent;
-    transition: all 0.1s;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-#gamelock:hover {
-    transform: scale(1.05);
-}
-
-#gamelock img {
-    width: 80px;
-    height: 100px;
 }

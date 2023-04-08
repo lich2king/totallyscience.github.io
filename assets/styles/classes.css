@@ -1,9 +1,3 @@
-/* // READY */
-
-html {
-    overflow-x: hidden;
-}
-
 #scisuggests {
     margin-top: 20vh;
     margin-right: 3vw;
@@ -30,8 +24,6 @@ html {
 }
 
 
-/*#endregion*/
-
 #info {
     width: 100vw;
     text-align: center;
@@ -44,16 +36,12 @@ html {
 }
 
 
-/*#region categories + seach*/
-
 #searchcat {
-    /**/
     margin-top: 80px;
     width: 100vw;
     height: 50px;
     margin-bottom: 10vh;
     text-align: center;
-    /*Flex*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,7 +50,6 @@ html {
 #firstcatrow {
     width: 100vw;
     height: 5vh;
-    /*Grid*/
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
     gap: 1vw;
@@ -74,7 +61,6 @@ html {
     margin-top: 2vh;
     width: 91vw;
     height: 5vh;
-    /*Flex*/
     display: flex;
     gap: 1vw;
     flex-wrap: wrap;
@@ -85,58 +71,12 @@ html {
 /* searchbar */
 
 input[type='text'] {
-    /**/
-    width: 20vw;
-    height: 100%;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 17px;
-    font-size: 16px;
-    background-color: var(--light-color);
-    outline: none;
     background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
     background-size: 1.25vw;
     background-position: 10px calc(50%);
     background-repeat: no-repeat;
-    padding: 1vh 1vw 1vh 2.2vw;
-    transition: width 0.4s ease-in-out;
-    margin-bottom: 3%;
-    color: var(--dark-color);
+    padding-left: 25px;
 }
-
-
-/* category selection */
-
-.categoryButton {
-    height: 100%;
-    border: none;
-    color: var(--light-color);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.25vw;
-    font-family: 'Rubik';
-    cursor: pointer;
-    background-color: var(--accent-color);
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    border-radius: 20px;
-    transition: opacity 0.3s ease;
-}
-
-.categoryButton span {
-    font-size: 1.7vw;
-}
-
-
-/*@media (min-width: 1200px) {
-    .categoryButton {
-        font-size: 1.25vw;
-    }
-    .categoryButton span {
-        font-size: 1.7vw;
-    }
-}*/
 
 .selectedCategory {
     opacity: 1;
@@ -145,12 +85,6 @@ input[type='text'] {
 .unselectedCategory {
     opacity: 0.45;
 }
-
-
-/*#endregion*/
-
-
-/*#endregion*/
 
 #topText {
     margin-top: 80px;
@@ -169,31 +103,6 @@ input[type='text'] {
     font-family: 'Rubik', sans-serif;
     margin: 0%;
     padding: 0%;
-}
-
-#gameDiv:hover>#gamelock {
-    opacity: 1;
-    top: -10%;
-}
-
-#gamelock {
-    position: absolute;
-    top: 5%;
-    left: 32%;
-    border: none;
-    background-color: transparent;
-    transition: all 0.1s;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-#gamelock:hover {
-    transform: scale(1.05);
-}
-
-#gamelock img {
-    width: 80px;
-    height: 100px;
 }
 
 #newbanner {

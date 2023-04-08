@@ -3,6 +3,9 @@
 
 <head>
     <?php include "assets/includes/head.php" ?>
+
+	<script src="assets/scripts/uv/uv.bundle.js" type="text/javascript"></script>
+	<script src="assets/scripts/uv/uv.config.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
 
     <p style="text-align: center; color: whitesmoke; font-size: 15pt;">powered by <a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet,</a> a Titanium Network proxy</p>
 
-    <script src="assets/scripts/main.js?v43"></script>
+    <script src="assets/scripts/main.js?v45"></script>
     <script>
         document.getElementById("appsnav").classList.add("selected");
 
@@ -37,10 +40,17 @@
 
             if (appData == null) window.location.href = '../apps.php';
 
-            if (appData.type == 'proxy') appFrame.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(appData.iframe_url);
-            else appFrame.src = appData.iframe_url;
-            
-            if (err) console.log(`cannot fetch ./assets/apps.json?date=${new Date().getTime()}`);
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('uv-sw.js', {
+                    scope: __uv$config.prefix
+                }).then(() => {
+                    if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.iframe_url));
+                    else appFrame.src = appData.iframe_url;
+                });
+            } else {
+                document.querySelector('.lds-dual-ring').remove();
+                document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
+            };
         });
     </script>
 </body>

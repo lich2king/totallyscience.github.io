@@ -12,8 +12,6 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div style="padding-top: 90px;"></div>
-
     <form id="survey" action="javascript:SubmitLogin()">
         <div>
             <label for="username">Username</label><br>
@@ -30,9 +28,6 @@
 
     <p style="text-align: center; color: red;" id="errorText"></p>
     <p style="text-align: center;">Don't have an account? <a href="signup.php">Sign up instead</a></p>
-    <p style="text-align: center;">Forgot your password? <a href="changepassword.php">Change password</a></p>
-    
-    <div style="padding-bottom: 10vh;"></div>
 
     <?php include "assets/includes/footer.php" ?>
     

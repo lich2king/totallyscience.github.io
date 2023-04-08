@@ -232,6 +232,11 @@
         if (text == 'false') {
             return dispenseButton.innerHTML = 'All Minis Unlocked';
         }
+        let currentVal = document.getElementById('pointsDisplay').innerText;
+
+        counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+
+        let json = JSON.parse(text);
 
         let json = JSON.parse(text);
 
@@ -274,54 +279,60 @@
     function dispenseCharacter() {
         const dispenseButton = document.getElementById('dispenseButton');
 
+        <<
+        << << < HEAD
         if (vid.paused && token) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
 
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
 
-            dispenseButton.innerHTML = 'Dispensing...';
+            dispenseButton.innerHTML = 'Dispensing...'; ===
+            === =
+            if (vid.paused && token) {
+                dispenseButton.innerHTML = 'Dispensing...'; >>>
+                >>> > 9911 d09b385fb39724890bd4c973224b699c78bb
 
-            playVid();
-        } else if (!token) {
-            if (dispenseButton.innerHTML != 'Not logged in!') {
+                playVid();
+            } else if (!token) {
+                if (dispenseButton.innerHTML != 'Not logged in!') {
+                    setTimeout(() => {
+                        dispenseButton.innerHTML = '1000 pts';
+                    }, 2000);
+                }
+                dispenseButton.innerHTML = 'Not logged in!';
+            }
+        }
+
+
+        window.addEventListener('load', async () => {
+            // if user is logged in, load minis they have unlocked
+            if (token) {
+                let res = await fetcher(`${activeServer}/points/shop/unlocked`);
+                let text = await res.text();
+
+                let minis = text.split(';');
+
+                for (let i = 1; i < minis.length; i++) {
+                    if (minis[i] == 'undefined') continue;
+
+                    document.getElementsByName(minis[i])[0].classList.remove('locked');
+                }
+            }
+        });
+
+        document.body.addEventListener('click', () => {
+            // hide awarded mini from front center of screen when clicked
+            const prizeWon = document.getElementById('prizeWon');
+
+            if (prizeWon.innerHTML != '') {
+                prizeWon.classList.add('slideAway');
+
                 setTimeout(() => {
-                    dispenseButton.innerHTML = '1000 pts';
-                }, 2000);
+                    prizeWon.classList.remove('active', 'slideAway');
+                    prizeWon.innerHTML = '';
+                }, 1500);
             }
-            dispenseButton.innerHTML = 'Not logged in!';
-        }
-    }
-
-
-    window.addEventListener('load', async () => {
-        // if user is logged in, load minis they have unlocked
-        if (token) {
-            let res = await fetcher(`${activeServer}/points/shop/unlocked`);
-            let text = await res.text();
-
-            let minis = text.split(';');
-
-            for (let i = 1; i < minis.length; i++) {
-                if (minis[i] == 'undefined') continue;
-
-                document.getElementsByName(minis[i])[0].classList.remove('locked');
-            }
-        }
-    });
-
-    document.body.addEventListener('click', () => {
-        // hide awarded mini from front center of screen when clicked
-        const prizeWon = document.getElementById('prizeWon');
-
-        if (prizeWon.innerHTML != '') {
-            prizeWon.classList.add('slideAway');
-
-            setTimeout(() => {
-                prizeWon.classList.remove('active', 'slideAway');
-                prizeWon.innerHTML = '';
-            }, 1500);
-        }
-    });
+        });
     </script>
 </body>
 

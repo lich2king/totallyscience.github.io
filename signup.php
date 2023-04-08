@@ -12,9 +12,6 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div style="padding-top: 90px;"></div>
-
-    <p style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
     <form id="survey" action="javascript:SubmitSignUp()">
         <div>
             <label for="username">Username</label><br>
@@ -57,12 +54,12 @@
                 <option value="Other">Other</option>
             </select>
         </div>
+
         <button class="button" id="save-button">Sign Up</button>
+        <p style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
     </form>
     
     <p style="text-align: center; color: red;" id="errorText"></p>
-
-    <div style="padding-bottom: 10vh;"></div>
 
     <?php include "assets/includes/footer.php" ?>
 

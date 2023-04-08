@@ -6,26 +6,26 @@
 
     <title>Profile - Totally Science - Free Online Unblocked Games</title>
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v10'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v11'>
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="accountoptions">
-        <div class="accountoption">
-            <p>Username: <span class="span" id="usernameSpan">username</span></p>
-            <input onclick="location.href = 'changeusername.php'" type="image" src="assets/images/icons/edit.png">
+        <div class="accountoption" tooltip="Disabled for maintenence" flow="left">
+            <p style="color: rgba(255, 255, 255, 0.5) !important;">Username: <span class="span" id="usernameSpan">loading...</span></p>
+            <input type="image" src="assets/images/icons/edit.png">
         </div>
 
         <div class="accountoption">
-            <p>Email: <span class="span" id="emailSpan">help@totallyscience.co</span></p>
-            <input onclick="location.href = 'changeemail.php'" type="image" src="assets/images/icons/edit.png">
+            <p>Email: <span class="span" id="emailSpan">loading...</span></p>
+            <input type="image" src="assets/images/icons/edit.png" onclick="location.assign('/change_email.php')">
         </div>
 
         <div class="accountoption">
             <p>Password: <span class="span">*********</span></p>
-            <input onclick="location.href = 'changepassword.php'" type="image" src="assets/images/icons/edit.png">
+            <input type="image" src="assets/images/icons/edit.png" onclick="location.assign('/change_password.php')">
         </div>
 
         <div class="accountoption">
@@ -44,7 +44,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v84"></script>
+    <script src="assets/scripts/profile.js?v85"></script>
 </body>
 
 </html>
