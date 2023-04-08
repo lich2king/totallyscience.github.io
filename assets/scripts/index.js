@@ -469,7 +469,7 @@ async function displayGames() {
             "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
 
         const partnerButton = `<div name="${name}" id="gameDiv" onclick="window.open('${website}', target='_blank')"location.href = '${website}'">
-        <div class="imageCon">
+        <div class="imageCon partner">
             <img class="lazy partner" data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
         </div>
         <h1 class="innerGameDiv">${name}</h1>

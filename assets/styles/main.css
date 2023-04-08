@@ -633,6 +633,10 @@ a {
     align-items: center;
 }
 
+#gameDiv .imageCon.partner {
+    background-color: var(--dark-accent);
+}
+
 #gameDiv .imageCon img {
     object-fit: cover;
     border-radius: 20px;
