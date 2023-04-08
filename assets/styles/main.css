@@ -647,6 +647,7 @@ a {
 }
 
 #gameDiv .imageCon img.partner {
+    object-fit: none;
     border-radius: 20px;
     height: 10px;
     width: 10px;
