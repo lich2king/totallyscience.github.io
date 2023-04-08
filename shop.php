@@ -215,6 +215,8 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
+    document.getElementById('shopnav').classList.add('selected');
+
     const vid = document.getElementById('dispenserVid');
     const token = JSON.parse(authToken);
 
