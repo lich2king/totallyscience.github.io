@@ -470,7 +470,7 @@ async function displayGames() {
 
         const partnerButton = `<div name="${name}" id="gameDiv" onclick="location.href = '${website}'">
         <div class="imageCon">
-            <img data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
+            <img class="lazy" data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
         </div>
         <h1 class="innerGameDiv">${name}</h1>
     </div>`;
