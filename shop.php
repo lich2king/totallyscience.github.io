@@ -281,7 +281,8 @@
 
         <<
         <<
-        << < HEAD
+        <<
+        < HEAD
         if (vid.paused && token) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
 
@@ -293,7 +294,8 @@
             if (vid.paused && token) {
                 dispenseButton.innerHTML = 'Dispensing...'; >>>
                 >>>
-                > 9911 d09b385fb39724890bd4c973224b699c78bb
+                >
+                9911 d09b385fb39724890bd4c973224b699c78bb
 
                 playVid();
             } else if (!token) {
