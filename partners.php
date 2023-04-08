@@ -202,7 +202,7 @@
             <button class="launch">Visit</button>
         </div>
 
-        <div onclick="window.open('https:/\/weblfg.com/', '_blank')" class="card game">
+        <div onclick="window.open('https:/\/weblfg.webp/', '_blank')" class="card game">
             <img src="/assets/images/partners/WebLFG.png" style="background-color: #ffffff;"
                 title="Totally Science Partner - Web LFG" alt="Web LFG logo">
             <h1>Web LFG</h1>
