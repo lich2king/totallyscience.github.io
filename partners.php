@@ -202,8 +202,8 @@
             <button class="launch">Visit</button>
         </div>
 
-        <div onclick="window.open('https:/\/weblfg.webp/', '_blank')" class="card game">
-            <img src="/assets/images/partners/WebLFG.png" style="background-color: #ffffff;"
+        <div onclick="window.open('https:/\/weblfg.com/', '_blank')" class="card game">
+            <img src="/assets/images/partners/weblfg.webp" style="background-color: #ffffff;"
                 title="Totally Science Partner - Web LFG" alt="Web LFG logo">
             <h1>Web LFG</h1>
             <h2>WebLFG is a hub for the best games on the internet, all available for free! There is so much for you to
