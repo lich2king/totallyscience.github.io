@@ -215,9 +215,6 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-    document.getElementById('shopnav').classList.add('selected');
-
-
     const vid = document.getElementById('dispenserVid');
     const token = JSON.parse(authToken);
 
@@ -232,11 +229,10 @@
         if (text == 'false') {
             return dispenseButton.innerHTML = 'All Minis Unlocked';
         }
+
         let currentVal = document.getElementById('pointsDisplay').innerText;
 
         counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
-
-        let json = JSON.parse(text);
 
         let json = JSON.parse(text);
 
@@ -279,24 +275,17 @@
     function dispenseCharacter() {
         const dispenseButton = document.getElementById('dispenseButton');
 
-
         if (vid.paused && token) {
-            let currentVal = document.getElementById('pointsDisplay').innerText;
-
-            counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
-
             dispenseButton.innerHTML = 'Dispensing...';
-            if (vid.paused && token) {
-                dispenseButton.innerHTML = 'Dispensing...';
-                playVid();
-            } else if (!token) {
-                if (dispenseButton.innerHTML != 'Not logged in!') {
-                    setTimeout(() => {
-                        dispenseButton.innerHTML = '1000 pts';
-                    }, 2000);
-                }
-                dispenseButton.innerHTML = 'Not logged in!';
+
+            playVid();
+        } else if (!token) {
+            if (dispenseButton.innerHTML != 'Not logged in!') {
+                setTimeout(() => {
+                    dispenseButton.innerHTML = '1000 pts';
+                }, 2000);
             }
+            dispenseButton.innerHTML = 'Not logged in!';
         }
     }
 
