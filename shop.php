@@ -5,126 +5,128 @@
     <?php include "assets/includes/head.php" ?>
 
     <style>
-        #dispenserCon {
-            width: 400px;
-            height: 500px;
-            background-color: white;
-            margin: auto;
-            margin-top: 100px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+    #dispenserCon {
+        width: 400px;
+        height: 500px;
+        background-color: white;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+    }
+
+    #dispenserCon video {
+        width: 400px;
+        height: 400px;
+    }
+
+    #dispenserCon button {
+        min-width: 160px;
+        padding: 4%;
+        font-size: 1rem;
+        font-weight: 100;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #minis {
+        margin-left: 50px;
+        margin-right: 50px;
+        color: white;
+        font-size: 1rem;
+        user-select: none;
+    }
+
+    #minis .miniCon {
+        margin-left: 50px;
+        margin-right: 50px;
+        color: white;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        overflow: auto;
+        width: 90vw;
+    }
+
+    .miniCon::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    .miniCon img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        margin-bottom: 5px;
+    }
+
+    .miniCon img.locked {
+        filter: blur(3px) brightness(30%) grayscale(1);
+    }
+
+    #prizeWon {
+        position: fixed;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 20px;
+        height: 20px;
+        -webkit-filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
+        transition: all 0.3s;
+        transform-origin: center;
+        margin-top: 0%;
+    }
+
+    #prizeWon.active {
+        width: 400px;
+        height: 400px;
+        animation: prize-animation 1s ease-in-out infinite;
+    }
+
+    #prizeWon.slideAway {
+        transition: all 1s;
+        margin-top: 100vh;
+    }
+
+    #prizeWon img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        outline: solid 1px var(--rarityColor);
+    }
+
+    @keyframes prize-animation {
+        0% {
+            -webkit-filter: drop-shadow(0px 0px 30px var(--rarityColor));
+            transform: translate(50%, -50%) rotate(13deg);
         }
 
-        #dispenserCon video {
-            width: 400px;
-            height: 400px;
+        50% {
+            -webkit-filter: drop-shadow(0px 0px 55px var(--rarityColor));
+            transform: translate(50%, -50%) rotate(-13deg);
         }
 
-        #dispenserCon button {
-            min-width: 160px;
-            padding: 4%;
-            font-size: 1rem;
-            font-weight: 100;
-            cursor: pointer;
-            margin-left: auto;
-            margin-right: auto;
+        100% {
+            -webkit-filter: drop-shadow(0px 0px 30px var(--rarityColor));
+            transform: translate(50%, -50%) rotate(13deg);
         }
-
-        #minis {
-            margin-left: 50px;
-            margin-right: 50px;
-            color: white;
-            font-size: 1rem;
-            user-select: none;
-        }
-
-        #minis .miniCon {
-            margin-left: 50px;
-            margin-right: 50px;
-            color: white;
-            font-size: 1rem;
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            overflow: auto;
-            width: 90vw;
-        }
-
-        .miniCon::-webkit-scrollbar {
-            height: 7px;
-        }
-
-        .miniCon img {
-            width: 100px;
-            height: 100px;
-            border-radius: 20px;
-            user-drag: none;
-            -webkit-user-drag: none;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            margin-bottom: 5px;
-        }
-
-        .miniCon img.locked {
-            filter: blur(3px) brightness(30%) grayscale(1);
-        }
-
-        #prizeWon {
-            position: fixed;
-            top: 50%;
-            right: 50%;
-            transform: translate(50%, -50%);
-            width: 20px;
-            height: 20px;
-            -webkit-filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
-            transition: all 0.3s;
-            transform-origin: center;
-            margin-top: 0%;
-        }
-
-        #prizeWon.active {
-            width: 400px;
-            height: 400px;
-            animation: prize-animation 1s ease-in-out infinite;
-        }
-
-        #prizeWon.slideAway {
-            transition: all 1s;
-            margin-top: 100vh;
-        }
-
-        #prizeWon img {
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            user-drag: none;
-            -webkit-user-drag: none;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            outline: solid 1px var(--rarityColor);
-        }
-
-        @keyframes prize-animation {
-            0% {
-                -webkit-filter: drop-shadow(0px 0px 30px var(--rarityColor));
-                transform: translate(50%, -50%) rotate(13deg);
-            }
-            50% {
-                -webkit-filter: drop-shadow(0px 0px 55px var(--rarityColor));
-                transform: translate(50%, -50%) rotate(-13deg);
-            }
-            100% {
-                -webkit-filter: drop-shadow(0px 0px 30px var(--rarityColor));
-                transform: translate(50%, -50%) rotate(13deg);
-            }
-        }
+    }
     </style>
 
     <title>Shop - Totally Science - Free Online Unblocked Games</title>
@@ -213,105 +215,113 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-        const vid = document.getElementById('dispenserVid');
-        const token = JSON.parse(authToken);
+    document.getElementById('shopnav').classList.add('selected');
 
-        async function playVid() {
-            const dispenseButton = document.getElementById('dispenseButton');
 
-            vid.play();
-            
-            let res = await fetcher(`${activeServer}/points/shop/unlock`);
+    const vid = document.getElementById('dispenserVid');
+    const token = JSON.parse(authToken);
+
+    async function playVid() {
+        const dispenseButton = document.getElementById('dispenseButton');
+
+        vid.play();
+
+        let res = await fetcher(`${activeServer}/points/shop/unlock`);
+        let text = await res.text();
+
+        if (text == 'false') {
+            return dispenseButton.innerHTML = 'All Minis Unlocked';
+        }
+
+        let json = JSON.parse(text);
+
+        if (res.status == 400) {
+            if (dispenseButton.innerHTML != 'Not enough points!') {
+                setTimeout(() => {
+                    dispenseButton.innerHTML = '1000 pts';
+                }, 2000);
+            }
+
+            return dispenseButton.innerHTML = 'Not enough points!';
+        }
+
+        vid.addEventListener('ended', async () => {
+            let mini = json.mini;
+            let rarity = json.rarity;
+
+            dispenseButton.innerHTML = '1000 pts';
+            document.getElementById('prizeWon').innerHTML =
+                `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
+            document.getElementById('prizeWon').classList.add('active');
+            document.getElementsByName(mini)[0].classList.remove('locked');
+
+            if (rarity == 'Common') {
+                document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                    'rgb(120, 120, 120)');
+            } else if (rarity == 'Rare') {
+                document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                    'rgb(0, 69, 149)');
+            } else if (rarity == 'Epic') {
+                document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                    'rgb(178, 0, 191)');
+            } else if (rarity == 'Legendary') {
+                document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                    'rgb(233, 241, 0)');
+            }
+        }, false);
+    }
+
+    function dispenseCharacter() {
+        const dispenseButton = document.getElementById('dispenseButton');
+
+        if (vid.paused && token) {
+            let currentVal = document.getElementById('pointsDisplay').innerText;
+
+            counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+
+            dispenseButton.innerHTML = 'Dispensing...';
+
+            playVid();
+        } else if (!token) {
+            if (dispenseButton.innerHTML != 'Not logged in!') {
+                setTimeout(() => {
+                    dispenseButton.innerHTML = '1000 pts';
+                }, 2000);
+            }
+            dispenseButton.innerHTML = 'Not logged in!';
+        }
+    }
+
+
+    window.addEventListener('load', async () => {
+        // if user is logged in, load minis they have unlocked
+        if (token) {
+            let res = await fetcher(`${activeServer}/points/shop/unlocked`);
             let text = await res.text();
 
-            if (text == 'false') {
-                return dispenseButton.innerHTML = 'All Minis Unlocked';
-            }
+            let minis = text.split(';');
 
-            let json = JSON.parse(text);
+            for (let i = 1; i < minis.length; i++) {
+                if (minis[i] == 'undefined') continue;
 
-            if (res.status == 400) {
-                if (dispenseButton.innerHTML != 'Not enough points!') {
-                    setTimeout(() => {
-                        dispenseButton.innerHTML = '1000 pts';
-                    }, 2000);
-                }
-
-                return dispenseButton.innerHTML = 'Not enough points!';
-            }
-
-            vid.addEventListener('ended', async () => {
-                let mini = json.mini;
-                let rarity = json.rarity;
-
-                dispenseButton.innerHTML = '1000 pts';
-                document.getElementById('prizeWon').innerHTML = `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
-                document.getElementById('prizeWon').classList.add('active');
-                document.getElementsByName(mini)[0].classList.remove('locked');
-
-                if (rarity == 'Common') {
-                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(120, 120, 120)');
-                } else if (rarity == 'Rare') {
-                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(0, 69, 149)');
-                } else if (rarity == 'Epic') {
-                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(178, 0, 191)');
-                } else if (rarity == 'Legendary') {
-                    document.getElementById('prizeWon').style.setProperty('--rarityColor', 'rgb(233, 241, 0)');
-                }
-            }, false);
-        }
-
-        function dispenseCharacter() {
-            const dispenseButton = document.getElementById('dispenseButton');
-
-            if (vid.paused && token) {
-                let currentVal = document.getElementById('pointsDisplay').innerText;
-
-                counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
-
-                dispenseButton.innerHTML = 'Dispensing...';
-
-                playVid();
-            } else if (!token) {
-                if (dispenseButton.innerHTML != 'Not logged in!') {
-                    setTimeout(() => {
-                        dispenseButton.innerHTML = '1000 pts';
-                    }, 2000);
-                }
-                dispenseButton.innerHTML = 'Not logged in!';
+                document.getElementsByName(minis[i])[0].classList.remove('locked');
             }
         }
+    });
 
+    document.body.addEventListener('click', () => {
+        // hide awarded mini from front center of screen when clicked
+        const prizeWon = document.getElementById('prizeWon');
 
-        window.addEventListener('load', async () => {
-            // if user is logged in, load minis they have unlocked
-            if (token) {
-                let res = await fetcher(`${activeServer}/points/shop/unlocked`);
-                let text = await res.text();
+        if (prizeWon.innerHTML != '') {
+            prizeWon.classList.add('slideAway');
 
-                let minis = text.split(';');
-
-                for (let i = 1; i < minis.length; i++) {
-                    if (minis[i] == 'undefined') continue;
-
-                    document.getElementsByName(minis[i])[0].classList.remove('locked');
-                }
-            }
-        });
-
-        document.body.addEventListener('click', () => {
-            // hide awarded mini from front center of screen when clicked
-            const prizeWon = document.getElementById('prizeWon');
-
-            if (prizeWon.innerHTML != '') {
-                prizeWon.classList.add('slideAway');
-
-                setTimeout(() => {
-                    prizeWon.classList.remove('active', 'slideAway');
-                    prizeWon.innerHTML = '';
-                }, 1500);
-            }
-        });
+            setTimeout(() => {
+                prizeWon.classList.remove('active', 'slideAway');
+                prizeWon.innerHTML = '';
+            }, 1500);
+        }
+    });
     </script>
 </body>
 
