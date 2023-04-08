@@ -279,10 +279,7 @@
     function dispenseCharacter() {
         const dispenseButton = document.getElementById('dispenseButton');
 
-        <<
-        <<
-        <<
-        < HEAD
+
         if (vid.paused && token) {
             let currentVal = document.getElementById('pointsDisplay').innerText;
 
@@ -292,11 +289,7 @@
             ===
             =
             if (vid.paused && token) {
-                dispenseButton.innerHTML = 'Dispensing...'; >>>
-                >>>
-                >
-                9911 d09b385fb39724890bd4c973224b699c78bb
-
+                dispenseButton.innerHTML = 'Dispensing...';
                 playVid();
             } else if (!token) {
                 if (dispenseButton.innerHTML != 'Not logged in!') {
