@@ -285,9 +285,7 @@
 
             counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
 
-            dispenseButton.innerHTML = 'Dispensing...'; ===
-            ===
-            =
+            dispenseButton.innerHTML = 'Dispensing...';
             if (vid.paused && token) {
                 dispenseButton.innerHTML = 'Dispensing...';
                 playVid();
@@ -300,37 +298,38 @@
                 dispenseButton.innerHTML = 'Not logged in!';
             }
         }
+    }
 
 
-        window.addEventListener('load', async () => {
-            // if user is logged in, load minis they have unlocked
-            if (token) {
-                let res = await fetcher(`${activeServer}/points/shop/unlocked`);
-                let text = await res.text();
+    window.addEventListener('load', async () => {
+        // if user is logged in, load minis they have unlocked
+        if (token) {
+            let res = await fetcher(`${activeServer}/points/shop/unlocked`);
+            let text = await res.text();
 
-                let minis = text.split(';');
+            let minis = text.split(';');
 
-                for (let i = 1; i < minis.length; i++) {
-                    if (minis[i] == 'undefined') continue;
+            for (let i = 1; i < minis.length; i++) {
+                if (minis[i] == 'undefined') continue;
 
-                    document.getElementsByName(minis[i])[0].classList.remove('locked');
-                }
+                document.getElementsByName(minis[i])[0].classList.remove('locked');
             }
-        });
+        }
+    });
 
-        document.body.addEventListener('click', () => {
-            // hide awarded mini from front center of screen when clicked
-            const prizeWon = document.getElementById('prizeWon');
+    document.body.addEventListener('click', () => {
+        // hide awarded mini from front center of screen when clicked
+        const prizeWon = document.getElementById('prizeWon');
 
-            if (prizeWon.innerHTML != '') {
-                prizeWon.classList.add('slideAway');
+        if (prizeWon.innerHTML != '') {
+            prizeWon.classList.add('slideAway');
 
-                setTimeout(() => {
-                    prizeWon.classList.remove('active', 'slideAway');
-                    prizeWon.innerHTML = '';
-                }, 1500);
-            }
-        });
+            setTimeout(() => {
+                prizeWon.classList.remove('active', 'slideAway');
+                prizeWon.innerHTML = '';
+            }, 1500);
+        }
+    });
     </script>
 </body>
 
