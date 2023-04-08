@@ -10,17 +10,15 @@ async function displayUserData() {
     const pinImg = pinBtn.firstChild;
     const likeImg = likeBtn.firstChild;
 
-    // check if user has liked this games
-    let likedRes = await fetcher(`${activeServer}/profile/liked/check`, { body: { gameName: gameName } });
+    // check if user has liked and/or pinned the game
+    let res = await fetcher(`${activeServer}/profile/gamedata/${gameName}`);
+    let json = await res.json();
 
     // set like icon if user has liked it
-    if (likedRes.status == 200) likeImg.setAttribute('src', 'assets/images/icons/like.png');
-
-    // check if user has pinned this game
-    let pinnedRes = await fetcher(`${activeServer}/profile/pinned/check`, { body: { gameName: gameName } });
+    if (json.liked) likeImg.setAttribute('src', 'assets/images/icons/like.png');
 
     // set pin icon if user has pinned it
-    if (pinnedRes.status == 200) pinImg.setAttribute('src', 'assets/images/icons/pin.png');
+    if (json.pinned) pinImg.setAttribute('src', 'assets/images/icons/pin.png');
 
     // add to recently played games list
     fetcher(`${activeServer}/profile/recent/set`, { body: { gameName: gameName } });
