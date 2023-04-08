@@ -165,6 +165,9 @@ window.addEventListener('load', async () => {
 
     // update game statistics
     fetcher(`${activeServer}/stats/games/view`, { body: { gameName: gameName } });
+
+    // setup action button events
+    setupActionButtons()
 });
 
 function OpenHighscore() {
