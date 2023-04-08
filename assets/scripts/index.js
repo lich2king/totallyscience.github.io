@@ -59,7 +59,7 @@ window.addEventListener('load', async () => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
-    // let partnersRes = await fetch(`assets/partner.json?date=${new Date().getTime()}`);
+    // let partnersRes = await fetch(`assets/partners.json?date=${new Date().getTime()}`);
     // partners = await partnersRes.json();
 
     // update underline link in navbar

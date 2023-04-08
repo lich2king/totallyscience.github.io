@@ -1,14 +1,18 @@
 {
     "Kazwire": {
-        "image": "/assets/images/partners/Kazwire.png"
+        "image": "/assets/images/partners/Kazwire.png",
+        "website": "https://kazwire.com/"
     },
     "Web LFG": {
-        "image": "/assets/images/partners/WebLFG.png"
+        "image": "/assets/images/partners/WebLFG.png",
+        "website": "https://weblfg.com/"
     },
     "Titanium Network": {
-        "image": "/assets/images/partners/TN.webp"
+        "image": "/assets/images/partners/TN.webp",
+        "website": "https://titaniumnetwork.org/"
     },
     "Bigfoot's Game Shack": {
-        "image": "/assets/images/partners/bigfoot.png"
+        "image": "/assets/images/partners/bigfoot.png",
+        "website": "https://bgs.pages.dev/g/glanding"
     }
 }
