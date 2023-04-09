@@ -11,8 +11,10 @@
             text-align: center;
             font-size: 15pt;
             position: relative;
-            width: 70%;
             left: 15%;
+            width: 70%;
+            display: block;
+            right: 15%;
             top: 80px;
         }
 
