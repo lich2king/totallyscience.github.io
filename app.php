@@ -40,17 +40,23 @@
 
             if (appData == null) window.location.href = '../apps.php';
 
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('uv-sw.js', {
-                    scope: __uv$config.prefix
-                }).then(() => {
-                    if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.iframe_url));
-                    else appFrame.src = appData.iframe_url;
-                });
-            } else {
-                document.querySelector('.lds-dual-ring').remove();
-                document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
-            };
+            try {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('uv-sw.js', {
+                        scope: __uv$config.prefix
+                    }).then(() => {
+                        if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.iframe_url));
+                        else appFrame.src = appData.iframe_url;
+                    });
+                } else {
+                    document.querySelector('.lds-dual-ring').remove();
+                    document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
+                };
+            } catch (error) {
+                console.log(error);
+
+                appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
+            }
         });
     </script>
 </body>
