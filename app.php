@@ -44,14 +44,12 @@
                 navigator.serviceWorker.register('uv-sw.js', {
                     scope: __uv$config.prefix
                 }).then(() => {
-                    try {
-                        if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.iframe_url));
-                        else appFrame.src = appData.iframe_url;
-                    } catch (error) {
-                        console.log(error);
+                    if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.iframe_url));
+                    else appFrame.src = appData.iframe_url;
+                }, (err) => {
+                    console.log(err);
 
-                        appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
-                    }
+                    appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
                 });
             } else {
                 document.querySelector('.lds-dual-ring').remove();
