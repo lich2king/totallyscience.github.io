@@ -38,6 +38,8 @@
             const appData = apps[appName];
             const appFrame = document.getElementById('app_frame');
 
+            appFrame.setAttribute('allow', 'fullscreen');
+
             if (appData == null) window.location.href = '../apps.php';
 
             if ('serviceWorker' in navigator) {
