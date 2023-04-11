@@ -55,6 +55,10 @@
                     } catch (err) {
                         appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
                     }
+               }, (err) => {
+                    console.log(err);
+                    
+                    appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
                });
             } else {
                 document.querySelector('.lds-dual-ring').remove();
