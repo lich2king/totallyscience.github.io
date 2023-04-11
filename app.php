@@ -46,11 +46,14 @@
                 }).then(() => {
                     if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.iframe_url));
                     else appFrame.src = appData.iframe_url;
-                }, (err) => {
-                    console.log(err);
 
-                    appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
-                });
+                    // detect if page is being embeded, if it is reference proxy from megamathstuff
+                    try {
+                        let parTitle = window.parent.document.title
+                    } catch (err) {
+                        appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
+                    }
+               });
             } else {
                 document.querySelector('.lds-dual-ring').remove();
                 document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
