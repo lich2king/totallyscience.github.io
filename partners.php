@@ -257,18 +257,8 @@
             <button class="launch">Visit</button>
         </div>
 
-        <div onclick="window.open('https:/\/bluehatcrew.tk/', '_blank')" class="card game">
-            <img src="/assets/images/partners/bluehatcrew.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Blue Hat Crew" alt="Blue Hat Crew logo">
-            <h1>Blue Hat Crew</h1>
-            <h2>Meet the Blue Hat Crew - student tech experts who create solutions for students. Unblockers, unblocking
-                methods - we have what you need for easy access to online resources.
-            </h2>
-            <button class="launch">Visit</button>
-        </div>
-
         <div onclick="window.open('https:/\/artclass.site/', '_blank')" class="card game">
-            <img src="/assets/images/partners/bluehatcrew.png" style="background-color: #ffffff;"
+            <img src="/assets/images/partners/artclass.png" style="background-color: #ffffff;"
                 title="Totally Science Partner - Art Class" alt="Art Class logo">
             <h1>Art Class</h1>
             <h2>Art Class is the perfect website for anyone looking to play unblocked games, or use popular websites.
