@@ -240,9 +240,19 @@
 
         <div onclick="window.open('https:/\/irunblocked.xyz/', '_blank')" class="card game">
             <img src="/assets/images/partners/IRunblocked.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Phantom Games" alt="Phantom Games logo">
+                title="Totally Science Partner - IR Unblocked" alt="IR Unblocked logo">
             <h1>IR Unblocked</h1>
             <h2>IR Unblocked is the One-Stop Shop for all of your Unblocked Gaming, Scripting, and Entertainment Needs!
+            </h2>
+            <button class="launch">Visit</button>
+        </div>
+
+        <div onclick="window.open('https:/\/bluehatcrew.tk/', '_blank')" class="card game">
+            <img src="/assets/images/partners/bluehatcrew.png" style="background-color: #ffffff;"
+                title="Totally Science Partner - Blue Hat Crew" alt="Blue Hat Crew logo">
+            <h1>Blue Hat Crew</h1>
+            <h2>Meet the Blue Hat Crew - student tech experts who create solutions for students. Unblockers, unblocking
+                methods - we have what you need for easy access to online resources.
             </h2>
             <button class="launch">Visit</button>
         </div>
