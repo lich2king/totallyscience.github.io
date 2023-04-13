@@ -14,5 +14,9 @@
     "Bigfoot's Game Shack": {
         "image": "/assets/images/partners/bigfoot.png",
         "website": "https://bgs.pages.dev/g/glanding"
+    },
+    "Phantom Games": {
+        "image": "/assets/images/partners/phantomgames.png",
+        "website": "https://phantom.delusionz.xyz/"
     }
 }

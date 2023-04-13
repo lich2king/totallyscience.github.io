@@ -228,6 +228,15 @@
                 over 500+ games built for Chromebook gaming.</h2>
             <button class="launch">Visit</button>
         </div>
+
+        <div onclick="window.open('https:/\/phantom.delusionz.xyz/', '_blank')" class="card game">
+            <img src="/assets/images/partners/phantomgames.png" style="background-color: #ffffff;"
+                title="Totally Science Partner - Phantom Games" alt="Phantom Games logo">
+            <h1>Phantom Games</h1>
+            <h2>PhantomGames where simplicity and unblocked fun collide!
+            </h2>
+            <button class="launch">Visit</button>
+        </div>
     </div>
 
     <?php include "assets/includes/footer.php" ?>
