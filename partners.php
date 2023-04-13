@@ -237,6 +237,17 @@
             </h2>
             <button class="launch">Visit</button>
         </div>
+
+        <div onclick="window.open('https:/\/irunblocked.xyz/', '_blank')" class="card game">
+            <img src="/assets/images/partners/IRunblocked.png" style="background-color: #ffffff;"
+                title="Totally Science Partner - Phantom Games" alt="Phantom Games logo">
+            <h1>IR Unblocked</h1>
+            <h2>IR Unblocked is the One-Stop Shop for all of your Unblocked Gaming, Scripting, and Entertainment Needs!
+            </h2>
+            <button class="launch">Visit</button>
+        </div>
+
+
     </div>
 
     <?php include "assets/includes/footer.php" ?>
