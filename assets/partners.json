@@ -26,5 +26,9 @@
     "Blue Hat Crew": {
         "image": "/assets/images/partners/bluehatcrew.png",
         "website": "https://bluehatcrew.tk/"
+    },
+    "Art Class": {
+        "image": "/assets/images/partners/artclass.png",
+        "website": "https://artclass.site/"
     }
 }
