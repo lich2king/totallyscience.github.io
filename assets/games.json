@@ -997,7 +997,7 @@
         "description": "A classic tower defense game initially released in Flash. Defend the path by placing various defenses tactically around the map.",
         "image": "./assets/game_images/bloons.png",
         "controls": "[Click] - interact",
-        "tags": ["misc", "action"],
+        "tags": ["misc", "action", "clicker"],
         "date_added": "2022-03-03T02:19:54.536Z",
         "developer": "AddictingGames",
         "iframe_url": "https://g.megamathstuff.com/bloonstd5/index.html"
@@ -1506,7 +1506,7 @@
         "description": "In Slime Rush TD 2, the slime monsters are on their way to destroy your kingdom again! To protect the kingdom, you'll need to use your defensive skills. Fortunately, these new defense towers are more powerful than ever! To protect the whole kingdom, all you need to do is upgrading your defense towers, preventing the invasion by destroying the enemy slimes before they reach the castle! If you are ready, let's start the game!",
         "image": "./assets/game_images/slimerushtd.webp",
         "controls": "[Click] - interact",
-        "tags": [""],
+        "tags": ["clicker"],
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "kiz10",
         "iframe_url": "https://g.megamathstuff.com/slime-rush-td/index.html"
@@ -1519,7 +1519,18 @@
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "Mini Duck Games",
         "iframe_url": "https://g.megamathstuff.com/rabbit-samurai/index.html"
+    },
+    "Ballistic Chickens": {
+        "description": "The chickens have discovered a new invention... the CANNON. So obviously they load their comrades in and try to DESTROY humanity! In the name of science and progress of course...",
+        "image": "./assets/game_images/ballisticchickens.webp",
+        "controls": "[Click] - launch chicken\n[Hold] - use rocket boost",
+        "tags": ["clicker"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "MrVoo",
+        "iframe_url": "https://g.megamathstuff.com/ballistic-chickens/index.html"
     }
+
+
 
 
 }
