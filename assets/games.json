@@ -1203,8 +1203,8 @@
     "Cut The Rope": {
         "description": "Cut the rope to feed candy to the green monster! Om Nom is hungry for large pieces of candy. Your mission is to feed him as quickly as possible. You can collect stars in each level for bonus points. Slice every rope at the right time to win!",
         "image": "./assets/game_images/cuttherope.jpg",
-        "controls": "[Swipe] - cut",
-        "tags": ["puzzle", "mobile"],
+        "controls": "[Drag Mouse] - cut",
+        "tags": ["puzzle", "mobile", "classic"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "ZEPTOLAB",
         "iframe_url": "https://g.megamathstuff.com/cut-the-rope/index.html"
@@ -1492,5 +1492,14 @@
         "date_added": "2023-03-04T17:57:52.800Z",
         "developer": "Oleg Kuzyk",
         "iframe_url": "https://g.megamathstuff.com/cannon-basketball-4/index.html"
+    },
+    "Cut The Rope Holiday Gift": {
+        "description": "Gameplay in Cut the Rope: Holiday Gift is exactly the same as the original title. You have to cut the strings of the candies suspended in the air and take them to your friendly pet. Along the way, of course, you have to use lots of different moves.",
+        "image": "./assets/game_images/cuttheropeholiday.jpeg",
+        "controls": "[Drag Mouse] - cut",
+        "tags": ["puzzle", "mobile", "classic"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "ZeptoLab",
+        "iframe_url": "https://g.megamathstuff.com/ctr-holiday/index.html"
     }
 }
