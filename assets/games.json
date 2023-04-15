@@ -1501,5 +1501,16 @@
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "ZeptoLab",
         "iframe_url": "https://g.megamathstuff.com/ctr-holiday/index.html"
+    },
+    "Slime Rush TD": {
+        "description": "In Slime Rush TD 2, the slime monsters are on their way to destroy your kingdom again! To protect the kingdom, you'll need to use your defensive skills. Fortunately, these new defense towers are more powerful than ever! To protect the whole kingdom, all you need to do is upgrading your defense towers, preventing the invasion by destroying the enemy slimes before they reach the castle! If you are ready, let's start the game!",
+        "image": "./assets/game_images/slimerushtd.webp",
+        "controls": "[Click] - interact",
+        "tags": [""],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "kiz10",
+        "iframe_url": "https://g.megamathstuff.com/slime-rush-td/index.html"
     }
+
+
 }
