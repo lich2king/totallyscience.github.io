@@ -1510,6 +1510,15 @@
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "kiz10",
         "iframe_url": "https://g.megamathstuff.com/slime-rush-td/index.html"
+    },
+    "Rabbit Samurai": {
+        "description": "Rabbit Samurai is a skill game created by Mini Duck Games. Swing, collect carrots and save your friends! Your goal is to find and rescue little mice from the mousetrap at the wolf's lair in the green land. Embark on an epic adventure where you can showcase your ninja skills with the help of your grappling hook and agile movements. Launch yourself from the rocket ninja cannon, collect carrots and crystals, avoid dangerous spikes and save all your mice friends!",
+        "image": "./assets/game_images/rabbitsamurai.png",
+        "controls": "[Click or hold] - grappling hook",
+        "tags": ["action"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "Mini Duck Games",
+        "iframe_url": "https://g.megamathstuff.com/rabbit-samurai/index.html"
     }
 
 
