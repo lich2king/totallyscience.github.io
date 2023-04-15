@@ -1537,6 +1537,15 @@
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "Cubic Games",
         "iframe_url": "https://g.megamathstuff.com/pixel-gun-survival/index.html"
+    },
+    "Tactical Assasin 2": {
+        "description": "Tactical Assassin 2 is a fantastic sniper shooting game with straight forward missions and outstanding weapons. You are a formidable sniper and your mission is to eliminate certain individuals. You will get a list of objectives at the beginning of every mission. Aim and shoot with your mouse to earn money and buy new equipment in the store to complete your goals. Always keep in mind to have enough ammunition for your next task.",
+        "image": "./assets/game_images/tacticalassasin2.jpeg",
+        "controls": "Click - [Shoot]",
+        "tags": ["shooting"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "Simon Hason",
+        "iframe_url": "https://g.megamathstuff.com/pixel-gun-survival/index.html"
     }
 
 
