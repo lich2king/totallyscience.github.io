@@ -151,7 +151,7 @@ window.addEventListener('load', async() => {
     console.log("likes");
     console.log(likedCountText);
     if (likedCountText == null)
-        likedCountText = 0;
+        likedCountText = '';
 
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText));
 
