@@ -148,6 +148,7 @@ window.addEventListener('load', async() => {
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
 
+    console.log("likes");
     console.log(likedCountRes);
 
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText));
