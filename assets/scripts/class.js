@@ -148,7 +148,7 @@ window.addEventListener('load', async() => {
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
 
-    document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText)) || 0;
+    document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText)) || '0';
 
     // update game current highscore
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
