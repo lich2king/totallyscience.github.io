@@ -1493,15 +1493,6 @@
         "developer": "Oleg Kuzyk",
         "iframe_url": "https://g.megamathstuff.com/cannon-basketball-4/index.html"
     },
-    "Cut The Rope Holiday Gift": {
-        "description": "Gameplay in Cut the Rope: Holiday Gift is exactly the same as the original title. You have to cut the strings of the candies suspended in the air and take them to your friendly pet. Along the way, of course, you have to use lots of different moves.",
-        "image": "./assets/game_images/cuttheropeholiday.jpeg",
-        "controls": "Cut - [Drag Mouse]",
-        "tags": ["puzzle", "mobile", "classic"],
-        "date_added": "2023-04-15T20:02:02.499Z",
-        "developer": "ZeptoLab",
-        "iframe_url": "https://g.megamathstuff.com/ctr-holiday/index.html"
-    },
     "Slime Rush TD": {
         "description": "In Slime Rush TD 2, the slime monsters are on their way to destroy your kingdom again! To protect the kingdom, you'll need to use your defensive skills. Fortunately, these new defense towers are more powerful than ever! To protect the whole kingdom, all you need to do is upgrading your defense towers, preventing the invasion by destroying the enemy slimes before they reach the castle! If you are ready, let's start the game!",
         "image": "./assets/game_images/slimerushtd.webp",
