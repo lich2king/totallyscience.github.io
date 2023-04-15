@@ -1496,7 +1496,7 @@
     "Cut The Rope Holiday Gift": {
         "description": "Gameplay in Cut the Rope: Holiday Gift is exactly the same as the original title. You have to cut the strings of the candies suspended in the air and take them to your friendly pet. Along the way, of course, you have to use lots of different moves.",
         "image": "./assets/game_images/cuttheropeholiday.jpeg",
-        "controls": "[Drag Mouse] - cut",
+        "controls": "Cut - [Drag Mouse]",
         "tags": ["puzzle", "mobile", "classic"],
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "ZeptoLab",
@@ -1505,7 +1505,7 @@
     "Slime Rush TD": {
         "description": "In Slime Rush TD 2, the slime monsters are on their way to destroy your kingdom again! To protect the kingdom, you'll need to use your defensive skills. Fortunately, these new defense towers are more powerful than ever! To protect the whole kingdom, all you need to do is upgrading your defense towers, preventing the invasion by destroying the enemy slimes before they reach the castle! If you are ready, let's start the game!",
         "image": "./assets/game_images/slimerushtd.webp",
-        "controls": "[Click] - interact",
+        "controls": "Interact - [Click]",
         "tags": ["clicker"],
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "kiz10",
@@ -1514,7 +1514,7 @@
     "Rabbit Samurai": {
         "description": "Rabbit Samurai is a skill game created by Mini Duck Games. Swing, collect carrots and save your friends! Your goal is to find and rescue little mice from the mousetrap at the wolf's lair in the green land. Embark on an epic adventure where you can showcase your ninja skills with the help of your grappling hook and agile movements. Launch yourself from the rocket ninja cannon, collect carrots and crystals, avoid dangerous spikes and save all your mice friends!",
         "image": "./assets/game_images/rabbitsamurai.png",
-        "controls": "[Click or hold] - grappling hook",
+        "controls": "Grappling hook - [Click or hold]",
         "tags": ["action"],
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "Mini Duck Games",
@@ -1523,11 +1523,20 @@
     "Ballistic Chickens": {
         "description": "The chickens have discovered a new invention... the CANNON. So obviously they load their comrades in and try to DESTROY humanity! In the name of science and progress of course...",
         "image": "./assets/game_images/ballisticchickens.webp",
-        "controls": "[Click] - launch chicken\n[Hold] - use rocket boost",
+        "controls": "Launch chicken - [Click]\nUse rocket boost - [Hold]",
         "tags": ["clicker"],
         "date_added": "2023-04-15T20:02:02.499Z",
         "developer": "MrVoo",
         "iframe_url": "https://g.megamathstuff.com/ballistic-chickens/index.html"
+    },
+    "Pixel Gun 3D": {
+        "description": "Pixel Gun 3D game with blocky multiplayer action. Have fun in this blocky-style multiplayer 3D first-person shooter game. Jump into the blocky world of one of the best free online games around. In this awesome multiplayer game, choose a blocky character and try to rack up as many kills as possible.",
+        "image": "./assets/game_images/pixelgun.webp",
+        "controls": "Move - [WASD] or [Arrow Keys]\nShoot - [Click]\nreload - [R]\nJump - [Space]\nSprint - [Shift]\nAim - [Right-click]",
+        "tags": ["action", "shooting"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "Cubic Games",
+        "iframe_url": "https://g.megamathstuff.com/pixel-gun-survival/index.html"
     }
 
 
