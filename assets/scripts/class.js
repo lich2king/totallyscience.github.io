@@ -147,9 +147,6 @@ window.addEventListener('load', async() => {
     // update game total like count
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
-
-    console.log("likes");
-    console.log(likedCountText);
     if (likedCountText == '')
         likedCountText = 0;
 
