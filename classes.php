@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <title>Classes - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/classes.css?v8'>
+    <link rel='stylesheet' href='assets/styles/classes.css?v9'>
 </head>
 
 <body>

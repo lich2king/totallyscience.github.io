@@ -997,7 +997,7 @@
         "description": "A classic tower defense game initially released in Flash. Defend the path by placing various defenses tactically around the map.",
         "image": "./assets/game_images/bloons.png",
         "controls": "[Click] - interact",
-        "tags": ["misc", "action"],
+        "tags": ["misc", "action", "clicker"],
         "date_added": "2022-03-03T02:19:54.536Z",
         "developer": "AddictingGames",
         "iframe_url": "https://g.megamathstuff.com/bloonstd5/index.html"
@@ -1203,8 +1203,8 @@
     "Cut The Rope": {
         "description": "Cut the rope to feed candy to the green monster! Om Nom is hungry for large pieces of candy. Your mission is to feed him as quickly as possible. You can collect stars in each level for bonus points. Slice every rope at the right time to win!",
         "image": "./assets/game_images/cuttherope.jpg",
-        "controls": "[Swipe] - cut",
-        "tags": ["puzzle", "mobile"],
+        "controls": "[Drag Mouse] - cut",
+        "tags": ["puzzle", "mobile", "classic"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "ZEPTOLAB",
         "iframe_url": "https://g.megamathstuff.com/cut-the-rope/index.html"
@@ -1492,5 +1492,45 @@
         "date_added": "2023-03-04T17:57:52.800Z",
         "developer": "Oleg Kuzyk",
         "iframe_url": "https://g.megamathstuff.com/cannon-basketball-4/index.html"
+    },
+    "Slime Rush TD": {
+        "description": "In Slime Rush TD 2, the slime monsters are on their way to destroy your kingdom again! To protect the kingdom, you'll need to use your defensive skills. Fortunately, these new defense towers are more powerful than ever! To protect the whole kingdom, all you need to do is upgrading your defense towers, preventing the invasion by destroying the enemy slimes before they reach the castle! If you are ready, let's start the game!",
+        "image": "./assets/game_images/slimerushtd.webp",
+        "controls": "Interact - [Click]",
+        "tags": ["clicker"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "kiz10",
+        "iframe_url": "https://g.megamathstuff.com/slime-rush-td/index.html"
+    },
+    "Rabbit Samurai": {
+        "description": "Rabbit Samurai is a skill game created by Mini Duck Games. Swing, collect carrots and save your friends! Your goal is to find and rescue little mice from the mousetrap at the wolf's lair in the green land. Embark on an epic adventure where you can showcase your ninja skills with the help of your grappling hook and agile movements. Launch yourself from the rocket ninja cannon, collect carrots and crystals, avoid dangerous spikes and save all your mice friends!",
+        "image": "./assets/game_images/rabbitsamurai.png",
+        "controls": "Grappling hook - [Click or hold]",
+        "tags": ["action"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "Mini Duck Games",
+        "iframe_url": "https://g.megamathstuff.com/rabbit-samurai/index.html"
+    },
+    "Pixel Gun 3D": {
+        "description": "Pixel Gun 3D game with blocky multiplayer action. Have fun in this blocky-style multiplayer 3D first-person shooter game. Jump into the blocky world of one of the best free online games around. In this awesome multiplayer game, choose a blocky character and try to rack up as many kills as possible.",
+        "image": "./assets/game_images/pixelgun.webp",
+        "controls": "Move - [WASD] or [Arrow Keys]\nShoot - [Click]\nreload - [R]\nJump - [Space]\nSprint - [Shift]\nAim - [Right-click]",
+        "tags": ["action", "shooting"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "Cubic Games",
+        "iframe_url": "https://g.megamathstuff.com/pixel-gun-survival/index.html"
+    },
+    "Tactical Assasin 2": {
+        "description": "Tactical Assassin 2 is a fantastic sniper shooting game with straight forward missions and outstanding weapons. You are a formidable sniper and your mission is to eliminate certain individuals. You will get a list of objectives at the beginning of every mission. Aim and shoot with your mouse to earn money and buy new equipment in the store to complete your goals. Always keep in mind to have enough ammunition for your next task.",
+        "image": "./assets/game_images/tacticalassasin2.jpeg",
+        "controls": "Click - [Shoot]",
+        "tags": ["shooting"],
+        "date_added": "2023-04-15T20:02:02.499Z",
+        "developer": "Simon Hason",
+        "iframe_url": "https://g.megamathstuff.com/tacticalassasin2.html"
     }
+
+
+
+
 }

@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <title>Signup - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
-    <title>Signup - Totally Science - Free Online Unblocked Games</title>
+
 
     <link rel='stylesheet' href='./assets/styles/account.css?v3'>
 </head>
@@ -17,22 +18,22 @@
             <label for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
         </div>
-        
+
         <div>
             <label for="email">Email</label><br>
             <input type='text' id='email' name='email' placeholder='jdoe@totallyscience.com'><br>
         </div>
-        
+
         <div>
             <label for="password">Password</label><br>
             <input type='password' id='password' name='password' placeholder='**********'><br>
         </div>
-        
+
         <div>
             <label for="confirmpassword">Confirm Password</label><br>
             <input type='password' id='confirmpassword' name='confirmpassword' placeholder='**********'><br>
         </div>
-        
+
         <div>
             <label for="gradSelect">Graduation Year <span style="font-size: 1.25vw;">(Optional)</span></label><br>
             <select name="gradSelect" id="gradSelect">
@@ -58,38 +59,51 @@
         <button class="button" id="save-button">Sign Up</button>
         <p style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
     </form>
-    
+
     <p style="text-align: center; color: red;" id="errorText"></p>
 
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-        let token = JSON.parse(authToken);
+    let token = JSON.parse(authToken);
 
-        if (token) {
-            location.href = 'profile.php';
-        }
+    if (token) {
+        location.href = 'profile.php';
+    }
 
-        async function SubmitSignUp() {
-            const confirmpass = document.getElementById('confirmpassword').value;
-            const user = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const pass = document.getElementById('password').value;
-            const grad = document.getElementById('gradSelect').value;
-            const error = document.getElementById('errorText');
+    async function SubmitSignUp() {
+        const confirmpass = document.getElementById('confirmpassword').value;
+        const user = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('password').value;
+        const grad = document.getElementById('gradSelect').value;
+        const error = document.getElementById('errorText');
 
-            error.innerText = '';
-            
-                
-            let registerRes = await fetcher(`${activeServer}/auth/register`, { body: { username: user, email: email, password: pass, confirm_password: confirmpass, grad_year: grad } });
+        error.innerText = '';
 
-            if (registerRes.status == 200) {
-                errorText.style.color = 'green';
-                errorText.innerText = 'account successfully created';
 
-                let loginRes = await fetcher(`${activeServer}/auth/login`, { body: { username: user, password: pass } });
+        let registerRes = await fetcher(`${activeServer}/auth/register`, {
+            body: {
+                username: user,
+                email: email,
+                password: pass,
+                confirm_password: confirmpass,
+                grad_year: grad
+            }
+        });
 
-                if (loginRes.status == 200) {
+        if (registerRes.status == 200) {
+            errorText.style.color = 'green';
+            errorText.innerText = 'account successfully created';
+
+            let loginRes = await fetcher(`${activeServer}/auth/login`, {
+                body: {
+                    username: user,
+                    password: pass
+                }
+            });
+
+            if (loginRes.status == 200) {
                 let text = await loginRes.text();
                 let authRecieved = JSON.parse(text);
 

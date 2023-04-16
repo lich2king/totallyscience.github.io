@@ -2,30 +2,31 @@
 <html lang="en">
 
 <head>
+    <title>Terms Of Use - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
     <style>
-        #termsText p {
-            color: white;
-            padding-right: 2vw;
-            padding-left: 2vw;
-            font-size: 20px;
-        }
+    #termsText p {
+        color: white;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        font-size: 20px;
+    }
 
-        #termsText h1 {
-            color: white;
-            text-align: center;
-        }
+    #termsText h1 {
+        color: white;
+        text-align: center;
+    }
 
-        #termsText h2 {
-            color: white;
-            text-align: center;
-        }
+    #termsText h2 {
+        color: white;
+        text-align: center;
+    }
 
-        #termsText {
-            margin-top: 120px;
-            margin-bottom: 120px;
-        }
+    #termsText {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
     </style>
 </head>
 
@@ -96,8 +97,22 @@
         <p>DMCA Requests: If there are any requests to take down content you own, please email <span
                 style="color: var(--accent-color)">help@totallyscience.co</span></p>
     </div>
-    
-    <script async src="https://cdn.ad.plus/player/adplus.js"></script> <script data-playerPro="current">(function(){var s=document.querySelector('script[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"22753484437", "C_WEBSITE":"totallyscience.co"}});})();</script>
+
+    <script async src="https://cdn.ad.plus/player/adplus.js"></script>
+    <script data-playerPro="current">
+    (function() {
+        var s = document.querySelector('script[data-playerPro="current"]');
+        s.removeAttribute("data-playerPro");
+        (playerPro = window.playerPro || []).push({
+            id: "z2I717k6zq5b",
+            after: s,
+            appParams: {
+                "C_NETWORK_CODE": "22753484437",
+                "C_WEBSITE": "totallyscience.co"
+            }
+        });
+    })();
+    </script>
 
 
     <?php include "assets/includes/footer.php" ?>

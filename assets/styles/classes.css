@@ -23,7 +23,6 @@
     transform: scale(1.05);
 }
 
-
 #info {
     width: 100vw;
     text-align: center;
@@ -34,7 +33,6 @@
     font-size: 1.5vw;
     font-family: 'Rubik', sans-serif;
 }
-
 
 #searchcat {
     margin-top: 80px;
@@ -75,7 +73,7 @@ input[type='text'] {
     background-size: 1.25vw;
     background-position: 10px calc(50%);
     background-repeat: no-repeat;
-    padding-left: 25px;
+    padding-left: 2.5%;
 }
 
 .selectedCategory {

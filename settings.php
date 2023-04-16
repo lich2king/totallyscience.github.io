@@ -2,28 +2,28 @@
 <html lang="en">
 
 <head>
+    <title>Settings - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
-    <title>Settings - Totally Science - Free Online Unblocked Games</title>
 
     <style>
-        #settingoptions {
-            margin-top: 120px;
-            width: 100vw;
-            text-align: center;
-            margin-bottom: 20vh;
-        }
+    #settingoptions {
+        margin-top: 120px;
+        width: 100vw;
+        text-align: center;
+        margin-bottom: 20vh;
+    }
 
-        #settingoptions p {
-            color: var(--light-color);
-            font-size: 1.25vw;
-            font-family: 'Rubik';
-        }
+    #settingoptions p {
+        color: var(--light-color);
+        font-size: 1.25vw;
+        font-family: 'Rubik';
+    }
 
-        #save-button {
-            padding: 15px;
-            font-size: 1.25vw;
-        }
+    #save-button {
+        padding: 15px;
+        font-size: 1.25vw;
+    }
     </style>
 </head>
 
@@ -33,7 +33,7 @@
     <div id="settingoptions">
         <p>School Website</p>
         <input type="text" id="website" placeholder="Google.com">
-    
+
         <p>Disguise Tab</p>
         <select name="disguise" id="disguise">
             <option value="none">None</option>
@@ -44,7 +44,7 @@
             <option value="calc">Calculator</option>
             <option value="wiki">Wikipedia</option>
         </select>
-        
+
         <br>
         <button class="button" id="save-button" onclick="submit()">Save</button>
     </div>
@@ -52,28 +52,28 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-        const websiteInput = document.getElementById('website');
-        const saveBtn = document.getElementById('save-button');
-        const disguiseInput = document.getElementById('disguise');
+    const websiteInput = document.getElementById('website');
+    const saveBtn = document.getElementById('save-button');
+    const disguiseInput = document.getElementById('disguise');
 
-        websiteInput.value = localStorage.getItem('website');
-        disguiseInput.value = localStorage.getItem('disguise');
+    websiteInput.value = localStorage.getItem('website');
+    disguiseInput.value = localStorage.getItem('disguise');
 
-        function submit() {
-            let websiteEntered = websiteInput.value;
-            let disguiseEntered = disguiseInput.value;
+    function submit() {
+        let websiteEntered = websiteInput.value;
+        let disguiseEntered = disguiseInput.value;
 
-            if (!(websiteEntered.includes('http'))) websiteEntered = `https://${websiteEntered}`;
-            
-            localStorage.setItem("website", websiteEntered);
-            localStorage.setItem("disguise", disguiseEntered);
+        if (!(websiteEntered.includes('http'))) websiteEntered = `https://${websiteEntered}`;
 
-            saveBtn.innerHTML = "Saved.";
+        localStorage.setItem("website", websiteEntered);
+        localStorage.setItem("disguise", disguiseEntered);
 
-            setTimeout(() => {
-                saveBtn.innerHTML = "Save";
-            }, 500);
-        }
+        saveBtn.innerHTML = "Saved.";
+
+        setTimeout(() => {
+            saveBtn.innerHTML = "Save";
+        }, 500);
+    }
     </script>
 </body>
 

@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <title>Profile - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
-    <title>Profile - Totally Science - Free Online Unblocked Games</title>
+
 
     <link rel='stylesheet' href='assets/styles/profile.css?v11'>
 </head>

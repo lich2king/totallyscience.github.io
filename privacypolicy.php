@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
+    <title>Privacy Policy - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
     <style>
-        #privacyText {
-            color: var(--light-color);
-            padding-right: 2vw;
-            padding-left: 2vw;
-        }
+    #privacyText {
+        color: var(--light-color);
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
 
-        #privacyText h1 {
-            text-align: center;
-        }
+    #privacyText h1 {
+        text-align: center;
+    }
 
-        #privacyText {
-            margin-top: 120px;
-            margin-bottom: 120px;
-        }
+    #privacyText {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
     </style>
 </head>
 
@@ -72,8 +73,8 @@
             users.</p>
         <h2>Accessing, Changing or Deleting Your Personal Information</h2>
         <p>TotallyScience allows you to make a request to correct inaccuracies in or make other changes or delete your
-            Information by sending an email to <span
-                style="color: var(--accent-color)">help@totallyscience.co</span>. We will use commercially
+            Information by sending an email to <span style="color: var(--accent-color)">help@totallyscience.co</span>.
+            We will use commercially
             reasonable efforts to promptly accommodate such requests.</p>
         <h2>Information Safeguarding</h2>
         <p>Totally Science will internally safeguard your nonpublic, personal information by restricting access to only
