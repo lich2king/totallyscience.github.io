@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Shop - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
     <style>
