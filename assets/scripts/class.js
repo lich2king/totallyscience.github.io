@@ -34,7 +34,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async (e) => {
+    likeBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -66,7 +66,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async (e) => {
+    pinBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -93,7 +93,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
@@ -148,7 +148,7 @@ window.addEventListener('load', async () => {
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
 
-    document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText));
+    document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText)) || '0';
 
     // update game current highscore
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
