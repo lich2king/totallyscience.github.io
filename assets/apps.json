@@ -41,22 +41,11 @@
         "type": "proxy",
         "iframe_url": "https://www.spotify.com/"
     },
-    "Firefox": {
-        "image": "assets/apps/icons/firefox.png",
-        "date_added": "2022-02-18T23:39:49.471Z",
-        "iframe_url": "https://ffxlive.vercel.app/firefox"
-    },
     "Mathway": {
         "image": "assets/apps/icons/mathway.png",
         "date_added": "2022-02-25T23:48:32.617Z",
         "type": "proxy",
         "iframe_url": "https://www.mathway.com/"
-    },
-    "Netflix": {
-        "image": "assets/apps/icons/netflix.webp",
-        "date_added": "2022-02-25T23:48:32.617Z",
-        "type": "proxy",
-        "iframe_url": "https://netflix.com/"
     },
     "Reddit": {
         "image": "assets/apps/icons/reddit.png",
