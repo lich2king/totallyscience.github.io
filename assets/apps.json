@@ -64,5 +64,13 @@
         "date_added": "2022-02-18T23:39:49.471Z",
         "type": "proxy",
         "iframe_url": "https://www.nvidia.com/en-us/geforce-now/"
+    },
+    "Cloud Gaming": {
+        "image": "assets/apps/icons/cloudgaming.png",
+        "date_added": "2022-02-18T23:39:49.471Z",
+        "type": "proxy",
+        "iframe_url": "https://www.xbox.com/en-us/play"
     }
+
+
 }
