@@ -5,11 +5,11 @@
         "type": "proxy",
         "iframe_url": "https://www.youtube.com/"
     },
-    "Tutorly": {
-        "image": "assets/apps/icons/tutorly.png",
+    "Chat GPT": {
+        "image": "assets/apps/icons/chatgpt.png",
         "date_added": "2022-02-18T23:39:49.471Z",
         "type": "proxy",
-        "iframe_url": "https://tutorly.ai/?via=totallyscience"
+        "iframe_url": "https://poe.com/"
     },
     "Google": {
         "image": "assets/apps/icons/google.png",
