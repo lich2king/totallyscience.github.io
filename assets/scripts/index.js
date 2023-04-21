@@ -502,6 +502,7 @@ async function suggestGames() {
         console.log("No Token");
     }
 
+    console.log(pinnedGames);
 
 
 
