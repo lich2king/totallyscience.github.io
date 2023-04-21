@@ -485,8 +485,14 @@ async function displayGames() {
 async function suggestGames() {
     // retrieve all pinned games of user
 
-    let res = await fetcher(`${activeServer}/profile/pinned/get`);
-    let text = await res.text();
+    if (token) {
+        console.log("Token");
+        let res = await fetcher(`${activeServer}/profile/pinned/get`);
+        let text = await res.text();
+    } else {
+        console.log("No Token");
+    }
+
 
     console.log(res);
     console.log(text);
