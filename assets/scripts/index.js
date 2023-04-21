@@ -484,11 +484,13 @@ async function displayGames() {
 
 async function suggestGames() {
     // retrieve all pinned games of user
-
+    let pinnedGames = '';
     if (token) {
         console.log("Token");
         let res = await fetcher(`${activeServer}/profile/pinned/get`);
         let text = await res.text();
+        pinnedGames = text.split(';');
+        pinnedGames = pinnedGames.slice(1);
     } else {
         console.log("No Token");
     }
@@ -497,7 +499,7 @@ async function suggestGames() {
     console.log(res);
     console.log(text);
 
-    let pinnedGames = text.split(';');
+
     let randomGames = [];
 
     for (let x = displayedGames; x < displayedGames + 3; x++) {
@@ -511,7 +513,6 @@ async function suggestGames() {
     }
 
     //first pinned game is always going to be '' so length will always be atleast 1
-    pinnedGames = pinnedGames.slice(1);
     let totalPinned = pinnedGames.length;
 
     if (pinnedGames.length < 3) {
