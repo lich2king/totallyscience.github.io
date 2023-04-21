@@ -489,15 +489,21 @@ async function suggestGames() {
         console.log("Token");
         let res = await fetcher(`${activeServer}/profile/pinned/get`);
         let text = await res.text();
+
+        console.log(res);
+        console.log(text);
+
+
         pinnedGames = text.split(';');
         pinnedGames = pinnedGames.slice(1);
+
+
     } else {
         console.log("No Token");
     }
 
 
-    console.log(res);
-    console.log(text);
+
 
 
     let randomGames = [];
