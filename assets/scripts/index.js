@@ -395,9 +395,6 @@ async function displayGames() {
         if (length > 5) {
             recentRow.appendChild(recentGamesContainer);
             gamesDiv.prepend(recentRow);
-            console.log(recentGamesContainer);
-            console.log('here');
-            console.log(gamesDiv);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
         }
     }
@@ -490,9 +487,6 @@ async function suggestGames() {
         let res = await fetcher(`${activeServer}/profile/pinned/get`);
         let text = await res.text();
 
-        console.log(res);
-        console.log(text);
-
 
         pinnedGames = text.split(';');
         pinnedGames = pinnedGames.slice(1);
@@ -501,8 +495,6 @@ async function suggestGames() {
     } else {
         console.log("No Token");
     }
-
-    console.log(pinnedGames);
 
 
 
