@@ -214,9 +214,8 @@
             const game = highscores[score].game;
             const name = highscores[score].name;
             const gameScore = highscores[score].score;
-            console.log(game);
-
-            const highscoreDiv = `
+            if (game != null) {
+                const highscoreDiv = `
                     <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game}'">
                         <div class="text">
                             <h1>${game}</h1>
@@ -231,6 +230,8 @@
                         </div>
                     </div>
                 `;
+            }
+
 
             scoresDiv.innerHTML += highscoreDiv;
         }
