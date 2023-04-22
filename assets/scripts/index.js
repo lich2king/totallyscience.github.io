@@ -126,7 +126,7 @@ window.addEventListener('load', async () => {
         // if they have dismissed the reward popup in the past, leave them alone
         // otherwise send the popup offering them the reward
 
-        document.getElementById('rewardTimer').innerText = 'Sign up to collect your daily reward! Only if you want it :)';
+        document.getElementById('timerText').innerText = 'Sign up to collect your daily reward!';
 
         if (!localStorage.getItem('ignoreReward')) {
             // show them the popup
@@ -387,7 +387,7 @@ async function displayGames() {
 
         if (userLikedRes.status == 200) {
             let likedgames = await userLikedRes.json();
-            
+
             length = likedgames.length;
             if (likedgames.length > 0) {
                 for (like in likedgames) {
@@ -396,7 +396,7 @@ async function displayGames() {
                     }
                 }
             }
-    
+
             if (length > 5) {
                 recentRow.appendChild(recentGamesContainer);
                 gamesDiv.prepend(recentRow);
