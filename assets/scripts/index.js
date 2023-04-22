@@ -126,7 +126,7 @@ window.addEventListener('load', async () => {
         // if they have dismissed the reward popup in the past, leave them alone
         // otherwise send the popup offering them the reward
 
-        document.getElementById('timerText').innerText = '<a href="/signup">Sign up</a> to collect your daily reward!';
+        document.getElementById('timerText').innerHTML = '<a href="/signup">Sign up</a> to collect your daily reward!';
 
         if (!localStorage.getItem('ignoreReward')) {
             // show them the popup
