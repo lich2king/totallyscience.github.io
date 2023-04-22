@@ -35,7 +35,7 @@
         </div>
 
         <div>
-            <label for="gradSelect">Graduation Year <span style="font-size: 1.25vw;">(Optional)</span></label><br>
+            <label for="gradSelect">Graduation Year <span style="font-size: 10pt;">(Optional)</span></label><br>
             <select name="gradSelect" id="gradSelect">
                 <option value=""></option>
                 <option value="22">2022</option>
