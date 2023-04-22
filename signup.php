@@ -109,10 +109,13 @@
                 localStorage.setItem('authToken', JSON.stringify(authRecieved));
 
                 location.href = 'profile.php';
-            } else if (registerRes.status == 400) {
-                let text = await registerRes.text();
+            } else if (loginRes.status == 400) {
+                let text = await loginRes.text();
                 error.innerText = text;
             }
+        }  else if (registerRes.status == 400) {
+            let text = await registerRes.text();
+            error.innerText = text;
         }
     }
     </script>
