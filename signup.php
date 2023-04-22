@@ -81,7 +81,6 @@
 
         error.innerText = '';
 
-
         let registerRes = await fetcher(`${activeServer}/auth/register`, {
             body: {
                 username: user,
@@ -93,8 +92,8 @@
         });
 
         if (registerRes.status == 200) {
-            errorText.style.color = 'green';
-            errorText.innerText = 'account successfully created';
+            error.style.color = 'green';
+            error.innerText = 'account successfully created';
 
             let loginRes = await fetcher(`${activeServer}/auth/login`, {
                 body: {
