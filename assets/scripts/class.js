@@ -97,7 +97,7 @@ window.addEventListener('load', async() => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
-    let retrievedGamesRes = await fetch(`assets/games.json`);
+    let retrievedGamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await retrievedGamesRes.json();
 
     const gameData = retrievedGames[gameName];
