@@ -230,10 +230,9 @@
                         </div>
                     </div>
                 `;
+
+                scoresDiv.innerHTML += highscoreDiv;
             }
-
-
-            scoresDiv.innerHTML += highscoreDiv;
         }
 
         if (gameName) {
