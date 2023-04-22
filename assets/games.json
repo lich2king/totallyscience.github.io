@@ -1537,9 +1537,15 @@
         "date_added": "2023-04-22T04:16:44.726Z",
         "developer": "TinyDobbins",
         "iframe_url": "https://g.megamathstuff.com/monkey-mart/index.html"
+    },
+    "Vex 7": {
+        "description": "The 7th platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
+        "image": "./assets/game_images/vex-7.png",
+        "controls": "Move - [WASD] or [Arrow Keys]",
+        "tags": ["vex", "mobile", "action"],
+        "date_added": "2023-04-22T22:35:37.117Z",
+        "developer": "Agame",
+        "iframe_url": "https://g.megamathstuff.com/vex-7/index.html"
     }
-
-
-
 
 }

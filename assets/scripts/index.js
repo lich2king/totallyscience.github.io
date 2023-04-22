@@ -384,21 +384,24 @@ async function displayGames() {
         let length = 0;
 
         let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
-        let likedgames = await userLikedRes.json();
 
-        length = likedgames.length;
-        if (likedgames.length > 0) {
-            for (like in likedgames) {
-                if (document.getElementsByName(likedgames[like]).length > 0) {
-                    recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
+        if (userLikedRes.status == 200) {
+            let likedgames = await userLikedRes.json();
+            
+            length = likedgames.length;
+            if (likedgames.length > 0) {
+                for (like in likedgames) {
+                    if (document.getElementsByName(likedgames[like]).length > 0) {
+                        recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
+                    }
                 }
             }
-        }
-
-        if (length > 5) {
-            recentRow.appendChild(recentGamesContainer);
-            gamesDiv.prepend(recentRow);
-            gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+    
+            if (length > 5) {
+                recentRow.appendChild(recentGamesContainer);
+                gamesDiv.prepend(recentRow);
+                gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+            }
         }
     }
 
