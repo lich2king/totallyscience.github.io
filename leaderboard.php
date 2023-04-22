@@ -255,6 +255,7 @@
         }
 
         searchBar.addEventListener('keyup', () => {
+            console.log("seacjcjce");
             document.getElementById('top').scrollIntoView({
                 block: "start",
                 inline: "nearest"
