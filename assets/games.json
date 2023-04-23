@@ -440,15 +440,6 @@
         "developer": "Puffballs United",
         "iframe_url": "https://g.megamathstuff.com/escapingtheprison.html"
     },
-    "Krunker.io": {
-        "description": "Free-to-play arena-style browser-based tactical fps.",
-        "image": "./assets/game_images/krunker.png",
-        "controls": "[WASD] - move\n[Click] - shoot\n[Drag Mouse] - aim",
-        "tags": ["misc", "action", "shooting"],
-        "date_added": "2021-12-30T04:56:36.982Z",
-        "developer": "Yendis Entertainment",
-        "iframe_url": "https://browserfps.com/"
-    },
     "Breaking The Bank": {
         "description": "Attempt to break into a bank, built in the middle of a desert.",
         "image": "./assets/game_images/breakingthebank.avif",
@@ -1547,5 +1538,4 @@
         "developer": "Agame",
         "iframe_url": "https://g.megamathstuff.com/vex-7/index.html"
     }
-
 }

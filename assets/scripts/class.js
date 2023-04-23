@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
+let rawLikeCount = 0;
+
 const token = JSON.parse(authToken);
 
 async function displayUserData() {
@@ -34,7 +36,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async(e) => {
+    likeBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -51,12 +53,9 @@ function setupActionButtons() {
                 e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
 
                 // set updated like count
-                let likeCountEle = document.getElementById('likeCount');
+                rawLikeCount = isLiked ? rawLikeCount - 1 : rawLikeCount + 1;
 
-                let prevLikeCount = parseInt(likeCountEle.innerText);
-                let curLikeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
-
-                likeCountEle.innerText = numFormatter(curLikeCount);
+                likeCountEle.innerText = numFormatter(rawLikeCount);
             }
         } else {
             swal('You must login to like the game', swalConfig).then(swalHandler);
@@ -66,7 +65,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async(e) => {
+    pinBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -93,7 +92,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
@@ -147,6 +146,7 @@ window.addEventListener('load', async() => {
     // update game total like count
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
+    rawLikeCount = parseInt(likedCountText) || 0;
 
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText)) || '0';
 

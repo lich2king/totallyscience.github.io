@@ -24,7 +24,8 @@
             </div>
         </div>
 
-        <p class='timerText'><span class="loader"></span>Daily Reward In <span id="rewardTimer"></span></p>
+        <p class='timerText' id='timerText'><span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>
+        </p>
     </div>
 
     <div id="startcontent">
@@ -321,7 +322,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v66"></script>
+    <script src="assets/scripts/index.js?v70"></script>
 </body>
 
 </html>

@@ -214,7 +214,8 @@
             const game = highscores[score].game;
             const name = highscores[score].name;
             const gameScore = highscores[score].score;
-            const highscoreDiv = `
+            if (game != null) {
+                const highscoreDiv = `
                     <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game}'">
                         <div class="text">
                             <h1>${game}</h1>
@@ -230,7 +231,8 @@
                     </div>
                 `;
 
-            scoresDiv.innerHTML += highscoreDiv;
+                scoresDiv.innerHTML += highscoreDiv;
+            }
         }
 
         if (gameName) {
@@ -253,6 +255,7 @@
                     `No current highscore set for ${gameName}`;
             }
         }
+
 
         searchBar.addEventListener('keyup', () => {
             document.getElementById('top').scrollIntoView({

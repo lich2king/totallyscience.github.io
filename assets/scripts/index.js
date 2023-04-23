@@ -52,10 +52,10 @@ let sorted;
 let hasLoaded = false;
 let sortObject = (obj) =>
     Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
@@ -125,6 +125,9 @@ window.addEventListener('load', async() => {
 
         // if they have dismissed the reward popup in the past, leave them alone
         // otherwise send the popup offering them the reward
+
+        document.getElementById('timerText').innerHTML = '<a href="/signup">Sign up</a> to collect your daily reward!';
+
         if (!localStorage.getItem('ignoreReward')) {
             // show them the popup
             document.getElementById('dailyRewardPopup').style.display = '';
@@ -384,7 +387,7 @@ async function displayGames() {
 
         if (userLikedRes.status == 200) {
             let likedgames = await userLikedRes.json();
-            
+
             length = likedgames.length;
             if (likedgames.length > 0) {
                 for (like in likedgames) {
@@ -393,7 +396,7 @@ async function displayGames() {
                     }
                 }
             }
-    
+
             if (length > 5) {
                 recentRow.appendChild(recentGamesContainer);
                 gamesDiv.prepend(recentRow);
@@ -486,21 +489,15 @@ async function suggestGames() {
     // retrieve all pinned games of user
     let pinnedGames = [];
     if (token) {
-        console.log("Token");
+        console.log('Token');
         let res = await fetcher(`${activeServer}/profile/pinned/get`);
         let text = await res.text();
 
-
         pinnedGames = text.split(';');
         pinnedGames = pinnedGames.slice(1);
-
-
     } else {
-        console.log("No Token");
+        console.log('No Token');
     }
-
-
-
 
     let randomGames = [];
 
@@ -627,7 +624,7 @@ function createGameButton(game, pin, lazy) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -637,7 +634,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -664,7 +661,8 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
+        },
+        {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 
