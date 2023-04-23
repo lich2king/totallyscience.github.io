@@ -43,7 +43,7 @@
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/bob-the-robber-2.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/bob-the-robber-2-featured.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2</h2>
