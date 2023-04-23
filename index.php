@@ -30,50 +30,50 @@
     <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/justfall.jpg); display:none;">
+                style="background-image: url(./assets/images/featuredimg/monkey-mart.jpg); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">JUST FALL</h2>
+                    <h2 class="gametext stroke-text smooth-16">MONKEY MART</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Just%20Fall', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Monkey%20Mart', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/baldi.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/bob-the-robber-2.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">BALDIS BASICS</h2>
+                    <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Baldis%20Basics', '_self')"
+                <button onclick="window.open('class.php?class=Bob%20the%20Robber%202', '_self')"
                     class="featureButton button">Play Now</button>
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/chess.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/motox3mpoolparty.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">CHESS</h2>
+                    <h2 class="gametext stroke-text smooth-16">Moto X3M Pool Party</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Chess', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Moto%20X3M%20Pool%20Party', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/vex-3.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/vex-7.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">VEX 3</h2>
+                    <h2 class="gametext stroke-text smooth-16">VEX 7</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Vex%203', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Vex%207', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
         </div>
@@ -126,14 +126,29 @@
 
     <!-- categories of games -->
     <div id="extraCategories">
-        <div id="extraCategory" onclick="window.open('classes.php?category=escape', '_self')">
-            <div style="background-image: url(assets/images/extracats/henrystickmin.png);"></div>
-            <p>Henry Stickmin Games</p>
+    <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
+            <div style="background-image: url(assets/images/extracats/cars.png);"></div>
+            <p>Car Games</p>
         </div>
 
-        <div id="extraCategory" onclick="window.open('classes.php?category=horror', '_self')">
-            <div style="background-image: url(assets/images/extracats/fnaf.png);"></div>
-            <p>Five Nights at Freddy's Games</p>
+        <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
+            <div style="background-image: url(assets/images/extracats/vex-7-games.png);"></div>
+            <p>Vex Games</p>
+        </div>
+
+        <div id="extraCategory" onclick="window.open('classes.php?category=casual', '_self')">
+            <div style="background-image: url(assets/images/extracats/arcade.jpg);"></div>
+            <p>Arcade Games</p>
+        </div>
+
+        <div id="extraCategory" onclick="window.open('classes.php?category=clicker', '_self')">
+            <div style="background-image: url(assets/images/extracats/clicker.png);"></div>
+            <p>Clicker Games</p>
+        </div>
+
+        <div id="extraCategory" onclick="window.open('classes.php?category=multiplayer', '_self')">
+            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>
+            <p>Multiplayer Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=music', '_self')">
@@ -141,19 +156,9 @@
             <p>Friday Night Funkin' Games</p>
         </div>
 
-        <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
-            <div style="background-image: url(assets/images/extracats/vex.jpg);"></div>
-            <p>Vex Games</p>
-        </div>
-
-        <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
-            <div style="background-image: url(assets/images/extracats/cars.png);"></div>
-            <p>Car Games</p>
-        </div>
-
-        <div id="extraCategory" onclick="window.open('classes.php?category=multiplayer', '_self')">
-            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>
-            <p>Multiplayer Games</p>
+        <div id="extraCategory" onclick="window.open('classes.php?category=horror', '_self')">
+            <div style="background-image: url(assets/images/extracats/fnaf.png);"></div>
+            <p>Five Nights at Freddy's Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
@@ -166,14 +171,9 @@
             <p>Puzzle Games</p>
         </div>
 
-        <div id="extraCategory" onclick="window.open('classes.php?category=casual', '_self')">
-            <div style="background-image: url(assets/images/extracats/arcade.jpg);"></div>
-            <p>Arcade Games</p>
-        </div>
-
-        <div id="extraCategory" onclick="window.open('classes.php?category=clicker', '_self')">
-            <div style="background-image: url(assets/images/extracats/clicker.png);"></div>
-            <p>Clicker Games</p>
+        <div id="extraCategory" onclick="window.open('classes.php?category=escape', '_self')">
+            <div style="background-image: url(assets/images/extracats/henrystickmin.png);"></div>
+            <p>Henry Stickmin Games</p>
         </div>
     </div>
 
