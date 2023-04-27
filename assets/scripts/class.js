@@ -135,6 +135,10 @@ window.addEventListener('load', async () => {
     document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
+
+    document.querySelector('meta[property="og:image"]').setAttribute('content', gameData.image);
+    document.querySelector('meta[name="twitter:image"]').setAttribute('content', gameData.image);
+
     document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
     document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
 
