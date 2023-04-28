@@ -140,8 +140,8 @@ window.addEventListener('load', async () => {
 
     let gameImg = 'https://totallyscience.co/' + gameData.image.slice(1);
 
-    document.querySelector('meta[property="og:image"]').setAttribute('content', gameData.image);
-    document.querySelector('meta[name="twitter:image"]').setAttribute('content', gameData.image);
+    document.querySelector('meta[property="og:image"]').setAttribute('content', gameImg);
+    document.querySelector('meta[name="twitter:image"]').setAttribute('content', gameImg);
 
     document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
     document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
