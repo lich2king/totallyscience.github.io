@@ -310,7 +310,7 @@ async function displayGames() {
     //Then for each category (except mobile and a few others), make the category container then add games
 
     for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');

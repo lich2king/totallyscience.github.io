@@ -89,7 +89,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v139"></script>
+    <script src="assets/scripts/class.js?v141"></script>
 </body>
 
 </html>

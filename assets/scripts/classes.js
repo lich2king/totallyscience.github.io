@@ -75,8 +75,8 @@ if (category != null) {
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -135,7 +135,7 @@ async function displayGames() {
     //Then for each category (except mobile and a few others), make the category container then add games
 
     for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');
@@ -392,7 +392,7 @@ function createGameButton(game, pin) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -402,7 +402,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -429,8 +429,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 
