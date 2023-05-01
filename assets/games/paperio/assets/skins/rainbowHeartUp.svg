@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_70"
+   x="0px"
+   y="0px"
+   width="572.44275"
+   height="443.70642"
+   viewBox="0 0 572.44273 443.70642"
+   enable-background="new 0 0 595.77 529.763"
+   xml:space="preserve"
+   sodipodi:docname="rainbowHeartUp.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata6046"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs6044" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview6042"
+   showgrid="false"
+   inkscape:zoom="0.44548222"
+   inkscape:cx="285.91021"
+   inkscape:cy="207.1005"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_70" />
+<g
+   id="g6008"
+   transform="translate(-11.974798,-28.275574)">
+	<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="16.946301"
+   y1="250.209"
+   x2="579.44629"
+   y2="250.209">
+		<stop
+   offset="0"
+   style="stop-color:#07F3F6"
+   id="stop5989" />
+		<stop
+   offset="0.2"
+   style="stop-color:#495FBE"
+   id="stop5991" />
+		<stop
+   offset="0.4"
+   style="stop-color:#E41BF0"
+   id="stop5993" />
+		<stop
+   offset="0.6"
+   style="stop-color:#F92F30"
+   id="stop5995" />
+		<stop
+   offset="0.8"
+   style="stop-color:#FFEE4D"
+   id="stop5997" />
+		<stop
+   offset="1"
+   style="stop-color:#50C306"
+   id="stop5999" />
+	</linearGradient>
+	<polygon
+   points="438.821,33.396 579.446,210.535 298.196,467.022 16.946,212.035 158.057,33.544 298.196,125.79 "
+   id="polygon6002"
+   style="fill:url(#SVGID_1_)" />
+	<g
+   id="g6006">
+		<path
+   d="m 155.534,37.862 c 41.567,27.361 83.133,54.722 124.7,82.083 5.146,3.388 10.292,6.775 15.439,10.163 1.414,0.931 3.633,0.929 5.047,0 41.566,-27.31 83.131,-54.619 124.697,-81.929 5.31,-3.489 10.619,-6.977 15.928,-10.465 -2.02,-0.261 -4.039,-0.521 -6.059,-0.782 29.577,37.257 59.154,74.514 88.731,111.771 17.298,21.789 34.596,43.579 51.894,65.368 0,-2.357 0,-4.714 0,-7.071 -26.448,24.119 -52.896,48.238 -79.343,72.357 -47.115,42.966 -94.229,85.932 -141.343,128.898 -20.188,18.411 -40.376,36.821 -60.564,55.232 2.357,0 4.714,0 7.071,0 -26.526,-24.05 -53.053,-48.099 -79.579,-72.148 C 174.972,348.564 127.792,305.789 80.611,263.014 60.568,244.843 40.525,226.671 20.482,208.499 c 0,2.357 0,4.714 0,7.071 C 49.926,178.326 79.37,141.083 108.814,103.84 126.407,81.587 144,59.333 161.593,37.08 c 3.953,-5 -3.073,-12.128 -7.071,-7.071 -29.444,37.244 -58.888,74.487 -88.332,111.73 -17.593,22.253 -35.186,44.507 -52.779,66.76 -1.621,2.051 -2.188,5.087 0,7.071 26.526,24.049 53.053,48.099 79.579,72.148 47.181,42.775 94.361,85.55 141.542,128.325 20.043,18.171 40.086,36.343 60.129,54.514 2.089,1.895 4.983,1.905 7.071,0 26.448,-24.119 52.895,-48.238 79.343,-72.357 47.115,-42.966 94.229,-85.932 141.343,-128.898 20.188,-18.411 40.376,-36.821 60.563,-55.231 2.181,-1.988 1.63,-5.019 0,-7.071 C 553.404,169.743 523.827,132.486 494.25,95.229 476.952,73.44 459.654,51.65 442.356,29.861 c -1.327,-1.671 -4.35,-1.905 -6.059,-0.782 -41.566,27.31 -83.131,54.619 -124.697,81.929 -5.31,3.489 -10.619,6.977 -15.928,10.465 1.682,0 3.365,0 5.047,0 -41.566,-27.361 -83.133,-54.722 -124.7,-82.083 -5.146,-3.388 -10.292,-6.775 -15.439,-10.163 -5.403,-3.557 -10.407,5.106 -5.046,8.635 z"
+   id="path6004"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+	</g>
+</g>
+<polygon
+   points="444.043,185.037 497.04,143.039 433.543,64.542 379.046,101.041 "
+   id="polygon6010"
+   style="opacity:0.4;fill:#ffffff"
+   transform="translate(-11.974798,-28.275574)" />
+<polygon
+   points="189.556,85.541 172.057,104.54 144.059,84.541 162.057,65.542 "
+   id="polygon6012"
+   style="opacity:0.2;fill:#ffffff"
+   transform="translate(-11.974798,-28.275574)" />
+<linearGradient
+   id="SVGID_2_"
+   gradientUnits="userSpaceOnUse"
+   x1="298.19681"
+   y1="460.02249"
+   x2="298.19669"
+   y2="32.857899">
+	<stop
+   offset="0"
+   style="stop-color:#662D91"
+   id="stop6014" />
+	<stop
+   offset="0.12"
+   style="stop-color:#692F91;stop-opacity:0.7812"
+   id="stop6016" />
+	<stop
+   offset="0.2084"
+   style="stop-color:#723490;stop-opacity:0.62"
+   id="stop6018" />
+	<stop
+   offset="0.2867"
+   style="stop-color:#823D8E;stop-opacity:0.4772"
+   id="stop6020" />
+	<stop
+   offset="0.3591"
+   style="stop-color:#99498C;stop-opacity:0.3452"
+   id="stop6022" />
+	<stop
+   offset="0.4275"
+   style="stop-color:#B65A89;stop-opacity:0.2205"
+   id="stop6024" />
+	<stop
+   offset="0.4919"
+   style="stop-color:#D96D86;stop-opacity:0.103"
+   id="stop6026" />
+	<stop
+   offset="0.5484"
+   style="stop-color:#FF8282;stop-opacity:0"
+   id="stop6028" />
+	<stop
+   offset="0.6229"
+   style="stop-color:#F97373;stop-opacity:0"
+   id="stop6030" />
+	<stop
+   offset="0.7662"
+   style="stop-color:#E84C4C;stop-opacity:0"
+   id="stop6032" />
+	<stop
+   offset="0.9621"
+   style="stop-color:#CD0D0D;stop-opacity:0"
+   id="stop6034" />
+	<stop
+   offset="1"
+   style="stop-color:#C70000;stop-opacity:0"
+   id="stop6036" />
+</linearGradient>
+<polygon
+   points="438.821,32.857 579.446,207.357 298.196,460.022 16.946,208.835 158.057,33.004 298.196,123.875 "
+   id="polygon6039"
+   style="opacity:0.3;fill:url(#SVGID_2_)"
+   transform="translate(-11.974798,-28.275574)" />
+</svg>

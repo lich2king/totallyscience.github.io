@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_72"
+   x="0px"
+   y="0px"
+   width="572.44275"
+   height="443.70642"
+   viewBox="0 0 572.44273 443.70642"
+   enable-background="new 0 0 595.77 529.763"
+   xml:space="preserve"
+   sodipodi:docname="rainbowHeartDown.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata5928"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs5926" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview5924"
+   showgrid="false"
+   inkscape:zoom="0.44548222"
+   inkscape:cx="285.91021"
+   inkscape:cy="252.1005"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_72" />
+<g
+   id="g5921"
+   transform="translate(-11.974798,-73.275574)">
+	<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="16.946301"
+   y1="295.20901"
+   x2="579.44629"
+   y2="295.20901">
+		<stop
+   offset="0"
+   style="stop-color:#03696B"
+   id="stop5902" />
+		<stop
+   offset="0.2"
+   style="stop-color:#131933"
+   id="stop5904" />
+		<stop
+   offset="0.4"
+   style="stop-color:#600B65"
+   id="stop5906" />
+		<stop
+   offset="0.6"
+   style="stop-color:#6E1515"
+   id="stop5908" />
+		<stop
+   offset="0.8"
+   style="stop-color:#746C23"
+   id="stop5910" />
+		<stop
+   offset="1"
+   style="stop-color:#173802"
+   id="stop5912" />
+	</linearGradient>
+	<polygon
+   points="438.821,78.396 579.446,255.535 298.196,512.022 16.946,257.035 158.057,78.544 298.196,170.79 "
+   id="polygon5915"
+   style="fill:url(#SVGID_1_)" />
+	<g
+   id="g5919">
+		<path
+   d="m 155.534,82.862 c 41.567,27.361 83.133,54.722 124.7,82.083 5.146,3.388 10.292,6.775 15.439,10.163 1.414,0.931 3.633,0.929 5.047,0 41.566,-27.31 83.131,-54.619 124.697,-81.929 5.31,-3.489 10.619,-6.977 15.928,-10.465 -2.02,-0.261 -4.039,-0.521 -6.059,-0.782 29.577,37.257 59.154,74.514 88.731,111.771 17.298,21.789 34.596,43.579 51.894,65.368 0,-2.357 0,-4.714 0,-7.071 -26.448,24.119 -52.896,48.238 -79.343,72.357 -47.115,42.966 -94.229,85.932 -141.343,128.899 -20.188,18.41 -40.376,36.82 -60.564,55.231 2.357,0 4.714,0 7.071,0 -26.526,-24.05 -53.053,-48.099 -79.579,-72.148 C 174.972,393.564 127.792,350.789 80.611,308.014 60.568,289.843 40.525,271.671 20.482,253.499 c 0,2.357 0,4.714 0,7.071 29.444,-37.244 58.888,-74.487 88.332,-111.73 17.593,-22.253 35.186,-44.507 52.779,-66.76 3.953,-5 -3.073,-12.128 -7.071,-7.071 -29.444,37.244 -58.888,74.487 -88.332,111.73 -17.593,22.253 -35.186,44.507 -52.779,66.76 -1.621,2.051 -2.188,5.087 0,7.071 26.526,24.049 53.053,48.099 79.579,72.148 47.181,42.775 94.361,85.55 141.542,128.324 20.043,18.172 40.086,36.344 60.129,54.515 2.089,1.895 4.983,1.905 7.071,0 26.448,-24.119 52.895,-48.237 79.343,-72.356 47.115,-42.967 94.229,-85.933 141.343,-128.899 20.188,-18.411 40.376,-36.821 60.563,-55.231 2.181,-1.988 1.63,-5.019 0,-7.071 C 553.404,214.743 523.827,177.486 494.25,140.229 476.952,118.44 459.654,96.65 442.356,74.861 c -1.327,-1.671 -4.35,-1.905 -6.059,-0.782 -41.566,27.31 -83.131,54.619 -124.697,81.929 -5.31,3.489 -10.619,6.977 -15.928,10.465 1.682,0 3.365,0 5.047,0 -41.566,-27.361 -83.133,-54.722 -124.7,-82.083 -5.146,-3.388 -10.292,-6.775 -15.439,-10.163 -5.403,-3.557 -10.407,5.106 -5.046,8.635 z"
+   id="path5917"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+	</g>
+</g>
+</svg>
