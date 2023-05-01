@@ -356,7 +356,7 @@ async function displayGames() {
     }
 
     if (miscGames.length > 0) {
-        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes?category=random">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes.php?category=random">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');
@@ -445,7 +445,7 @@ async function displayGames() {
         }
         row.appendChild(gamesContainer);
         gamesDiv.prepend(row);
-        gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
+        gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
 
     //Partners
