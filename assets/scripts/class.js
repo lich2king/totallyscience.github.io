@@ -120,7 +120,7 @@ window.addEventListener('load', async () => {
 
     // set iframe to correct url defined in games.json
     if (gameData.type == 'proxy') {
-        iframe.src = '/p#' + btoa(gameData.iframe_url);
+        iframe.src = 'https://' + location.host + '/p#' + btoa(gameData.iframe_url);
     } else {
         iframe.src = gameData.iframe_url;
     }
