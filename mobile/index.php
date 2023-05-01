@@ -39,7 +39,7 @@
 
     <div id="games"></div>
 
-    <script src="assets/scripts/main.js?v64"></script>
+    <script src="assets/scripts/main.js?v65"></script>
     <script src="assets/scripts/mobile.js?v64"></script>
 </body>
 
