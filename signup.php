@@ -5,8 +5,6 @@
     <title>Signup - Totally Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
-
-
     <link rel='stylesheet' href='./assets/styles/account.css?v3'>
 </head>
 
