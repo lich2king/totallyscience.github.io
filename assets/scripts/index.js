@@ -489,14 +489,11 @@ async function suggestGames() {
     // retrieve all pinned games of user
     let pinnedGames = [];
     if (token) {
-        console.log('Token');
         let res = await fetcher(`${activeServer}/profile/pinned/get`);
         let text = await res.text();
 
         pinnedGames = text.split(';');
         pinnedGames = pinnedGames.slice(1);
-    } else {
-        console.log('No Token');
     }
 
     let randomGames = [];
@@ -549,10 +546,6 @@ function createGameButton(game, pin, lazy) {
     const data = games[game];
 
     if (data == null) return '';
-
-    //console.log(game);
-
-    //console.log(data.tags.join(' '));
 
     let classlist = data.tags.join(' ');
 
