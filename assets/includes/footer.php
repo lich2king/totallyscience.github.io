@@ -21,6 +21,12 @@
 
                 <div>||</div>
 
+                <div>Lead Developer</div>
+
+                <div>Jacob M</div>
+
+                <div>||</div>
+
                 <div>Developer</div>
             </div>
         </div>
