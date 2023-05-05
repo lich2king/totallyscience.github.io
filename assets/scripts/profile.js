@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (likedgames.length > 0) {
         for (like in likedgames) {
-            if (likedgames[like] != null && likedgames[like].length > 0) {
-                likedGamesContainer.innerHTML += createGameButton(likedgames[like]);
+            if (likedgames[like] != null && likedgames[like].Game.length > 0) {
+                likedGamesContainer.innerHTML += createGameButton(likedgames[like].Game);
             }
         }
     }
