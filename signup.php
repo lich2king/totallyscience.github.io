@@ -63,59 +63,66 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-    let token = JSON.parse(authToken);
+        let inProgress = false;
+        let token = JSON.parse(authToken);
 
-    if (token) {
-        location.href = 'profile.php';
-    }
+        if (token) {
+            location.href = 'profile.php';
+        }
 
-    async function SubmitSignUp() {
-        const confirmpass = document.getElementById('confirmpassword').value;
-        const user = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const pass = document.getElementById('password').value;
-        const grad = document.getElementById('gradSelect').value;
-        const error = document.getElementById('errorText');
+        async function SubmitSignUp() {
+            if (inProgress) return;
 
-        error.innerText = '';
+            inProgress = true;
 
-        let registerRes = await fetcher(`${activeServer}/auth/register`, {
-            body: {
-                username: user,
-                email: email,
-                password: pass,
-                confirm_password: confirmpass,
-                grad_year: grad
-            }
-        });
+            const confirmpass = document.getElementById('confirmpassword').value;
+            const user = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            const grad = document.getElementById('gradSelect').value;
+            const error = document.getElementById('errorText');
 
-        if (registerRes.status == 200) {
-            error.style.color = 'green';
-            error.innerText = 'account successfully created';
+            error.innerText = '';
 
-            let loginRes = await fetcher(`${activeServer}/auth/login`, {
+            let registerRes = await fetcher(`${activeServer}/auth/register`, {
                 body: {
                     username: user,
-                    password: pass
+                    email: email,
+                    password: pass,
+                    confirm_password: confirmpass,
+                    grad_year: grad
                 }
             });
 
-            if (loginRes.status == 200) {
-                let text = await loginRes.text();
-                let authRecieved = JSON.parse(text);
+            if (registerRes.status == 200) {
+                error.style.color = 'green';
+                error.innerText = 'account successfully created';
 
-                localStorage.setItem('authToken', JSON.stringify(authRecieved));
+                let loginRes = await fetcher(`${activeServer}/auth/login`, {
+                    body: {
+                        username: user,
+                        password: pass
+                    }
+                });
 
-                location.href = 'profile.php';
-            } else if (loginRes.status == 400) {
-                let text = await loginRes.text();
+                if (loginRes.status == 200) {
+                    let text = await loginRes.text();
+                    let authRecieved = JSON.parse(text);
+
+                    localStorage.setItem('authToken', JSON.stringify(authRecieved));
+
+                    location.href = 'profile.php';
+                } else if (loginRes.status == 400) {
+                    let text = await loginRes.text();
+                    error.innerText = text;
+
+                    inProgress = false;
+                }
+            }  else if (registerRes.status == 400) {
+                let text = await registerRes.text();
                 error.innerText = text;
             }
-        }  else if (registerRes.status == 400) {
-            let text = await registerRes.text();
-            error.innerText = text;
         }
-    }
     </script>
 </body>
 

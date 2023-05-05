@@ -32,6 +32,7 @@
     <?php include "assets/includes/footer.php" ?>
     
     <script>
+        let inProgress = false;
         let token = JSON.parse(authToken);
 
         if (token) {
@@ -39,6 +40,10 @@
         }
     
         async function SubmitLogin() {
+            if (inProgress) return;
+
+            inProgress = true;
+
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
             const errorText = document.getElementById('errorText');
@@ -55,10 +60,12 @@
                 errorText.innerText = 'success';
 
                 setTimeout(() => {
-                        location.href = 'profile.php';
+                    location.href = 'profile.php';
                 }, 500);
             } else {
-                    errorText.innerText = await loginRes.text();
+                errorText.innerText = await loginRes.text();
+
+                inProgress = false;
             }
         }
     </script>
