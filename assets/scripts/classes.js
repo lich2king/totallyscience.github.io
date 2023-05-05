@@ -220,8 +220,8 @@ async function displayGames() {
         length = likedgames.length;
         if (likedgames.length > 0) {
             for (like in likedgames) {
-                if (document.getElementsByName(likedgames[like].Game).length > 0) {
-                    recentGamesContainer.innerHTML += createGameButton(likedgames[like].Game);
+                if (document.getElementsByName(likedgames[like]).length > 0) {
+                    recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
                 }
             }
         }

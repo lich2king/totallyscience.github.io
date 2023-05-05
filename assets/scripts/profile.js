@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
     let likedgames = await userLikedRes.json();
-
+    console.log(likedgames)
     if (likedgames.length > 0) {
         for (like in likedgames) {
-            if (likedgames[like] != null && likedgames[like].Game.length > 0) {
-                likedGamesContainer.innerHTML += createGameButton(likedgames[like].Game);
+            if (likedgames[like] != null) {
+                likedGamesContainer.innerHTML += createGameButton(likedgames[like]);
             }
         }
     }
