@@ -224,8 +224,6 @@
     async function playVid() {
         const dispenseButton = document.getElementById('dispenseButton');
 
-        vid.play();
-
         let res = await fetcher(`${activeServer}/points/shop/unlock`);
         let text = await res.text();
 
@@ -246,6 +244,8 @@
 
             return dispenseButton.innerHTML = 'Not enough points!';
         }
+        
+        vid.play();
         
         counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
 
