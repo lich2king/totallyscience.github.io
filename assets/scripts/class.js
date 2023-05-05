@@ -101,7 +101,7 @@ window.addEventListener('load', async () => {
 
     const gameData = retrievedGames[gameName];
 
-    if (!gameData) window.location.href = '../classes';
+    if (!gameData) window.location.href = '../classes.php';
 
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
