@@ -22,12 +22,6 @@
                 <div>||</div>
 
                 <div>Developer</div>
-
-                <div>Jordan P</div>
-
-                <div>||</div>
-
-                <div>Support</div>
             </div>
         </div>
 
