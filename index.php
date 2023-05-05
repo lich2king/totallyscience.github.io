@@ -59,7 +59,7 @@
                 style="background-image: url(./assets/images/featuredimg/motox3mpoolparty.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">Moto X3M Pool Party</h2>
+                    <h2 class="gametext stroke-text smooth-16">MOTO X3M POOL PARTY</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
