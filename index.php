@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/index.css?v34'>
+    <link rel='stylesheet' href='assets/styles/index.css?v35'>
 </head>
 
 <body>
@@ -38,7 +38,8 @@
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Monkey%20Mart', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Monkey%20Mart', '_self')"
+                    class="featureButton button">Play
                     Now</button>
             </div>
 
@@ -62,7 +63,8 @@
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Moto%20X3M%20Pool%20Party', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Moto%20X3M%20Pool%20Party', '_self')"
+                    class="featureButton button">Play
                     Now</button>
             </div>
 
@@ -127,7 +129,7 @@
 
     <!-- categories of games -->
     <div id="extraCategories">
-    <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
+        <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
             <div style="background-image: url(assets/images/extracats/cars.png);"></div>
             <p>Car Games</p>
         </div>
@@ -189,52 +191,79 @@
 
     <!-- description of TS and what it offers, included partially for SEO -->
     <div id="about">
-        <br><br>
-
+        <p class="tophead">ABOUT TOTALLY SCIENCE</p>
         <h1>
-            <span>About</span> Totally Science
+            What is Totally Science?
         </h1>
-
         <p>
-            <span>Totally Science</span> is a website that offers unblocked games and proxy apps for school use. Totally
-            Science was
-            founded in January 2022 with the aim of giving users the best experience of <span>unblocked games and
-                unblocked
-                proxy apps at school</span>. At Totally Science, you can play games with your friends without being
-            blocked or
-            having any other problems. You can play games all the time on your computer or phone device at school or
-            work.
-            You also do not need to install any additional software or know any plugins. People can play many other
-            games,
-            such as racing, shooting, mind games, sports, or slope games...
+            Totally Science is an unblocked games website that offers everything from Minecraft to Monkey Mart. We also
+            have a proxy that allows you to unblock and use any website you desire: Youtube, Tik Tok, Discord, go for
+            it! Totally Science was founded in 2021 but only found a large user base January of 2022. The goal of
+            Totally Science is to provide the most entertaining experience to bored students who need a break. We have
+            hundreds of free to play games. Every month over 250 thousand gamers from all over the world play their
+            favorite games on Totally Science.
         </p>
-        <br>
-        <h1>Totally Science <span>Apps</span></h1>
-        <p>Currently, Totally Science offers web proxy services for many popular applications, including <span>YouTube,
-                Discord,
-                Tiktok, Google, Twitch, Spotify, Mathway, Netflix, Github, and others.</span></p>
-        <br>
-        <h1>Totally Science <span>Games</span></h1>
+        <h1>Why are unblocked games popular?</h1>
+        <p>Students love unblocked games because they get to play whatever they want, unrestricted and free. Competing
+            with other students and trying to set high scores is a great way to kill some time. All the games on Totally
+            Science are fast to load and require no download.</p>
+        <h1>What are unblocked games?</h1>
         <p>
-            There are many outstanding unblocked games nowadays, and Totally Science currently offers more than 100 of
-            the most popular games covering many genres like racing, shooting, intelligence, and many more. The games
-            Totally Science offers are developed on HTML5, Unity, and many other platforms. Among them are some
-            outstanding games, such as:
+            Unblocked games are games that bypass filters and block protocols set by network administrators.
+            This implies that gamers may access the games from anywhere, including school, work, and public Wi-Fi
+            networks such as coffee shops or libraries.
+        </p>
+        <h1>Where can I play unblocked games?</h1>
+        <p>
+            On a site like totallyscience.co, you can play unblocked games anywhere you have a Wi-Fi connection. Home,
+            school, work, anywhere!
+        </p>
+        <h1>Can I play unblocked games on a chromebook?</h1>
+        <p>
+            Yes! On Totally Science you can play unblocked games on a chromebook. Chromebooks are one of the most
+            popular devices for an unblocked games site like Totally Science. Since the games require no download, you
+            can play them on any device: Chromebooks, Macbooks, iPads, Dells, etc...
+        </p>
+        <h1>How to unblock games on computers at school</h1>
+        <p>
+            To unblocked games on a school computer, go to totallyscience.co, then scroll down to see all the different
+            game categories. You can play multiplayer games, puzzle games, horror games, escape games, 2 player games,
+            music games, sports games, shooting games, casual games, action games, driving games, or more!
+        </p>
+        <h1>How can I watch Youtube on a school computer?</h1>
+        <p>
+            To what Youtube on a school computer, first go to totallyscience.co. Next click "Proxy" at the top of the
+            screen. Then click Youtube. You can search or browse for any video you want to watch. If you want to
+            unblocked a different website, you can choose Google, then search for your site.
+        </p>
+        <h1>What is a proxy?</h1>
+        <p>
+            A proxy is a tool that allows you to bypass filters and block protocols set by your network administrators
+            and go to whatever website you want. To go on any website unblocked in school or work, all you have to do is
+            go on Totally Science, click Proxy, then choose which site you want to use, unblocked.
+        </p>
+        <h1>What are popular unblocked games?</h1>
+        <p>
+            There are many popular games on Totally Science. Out of the hundreds of games, the top 15 games (as of
+            writing) are:
             </span>
         </p>
-
         <ul>
-            <li>1v1 LoL</li>
-            <li>Five Nights at Freddy's ( FNAF series )</li>
-            <li>2048</li>
-            <li>Retro Bowl</li>
-            <li>Drift Boss</li>
-            <li>Slope</li>
             <li>Minecraft</li>
+            <li>Monkey Mart</li>
+            <li>Geometry Dash</li>
+            <li>Cluster Rush</li>
+            <li>Bit Life</li>
+            <li>1v1 LOL</li>
+            <li>Bob the Robber 2</li>
+            <li>Slope</li>
+            <li>Drift Boss</li>
             <li>Basketball Stars</li>
-            <li>Smash Karts</li>
-            <li>Fall Guys</li>
-            <li>Among Us</li>
+            <li>Pixel Gun 3D</li>
+            <li>Basket Random</li>
+            <li>Moto X3M</li>
+            <li>Death Run 3D</li>
+            <li>Tactical Assassin 2</li>
         </ul>
 
         <br><br>
