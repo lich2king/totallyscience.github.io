@@ -136,8 +136,6 @@ window.addEventListener('load', async () => {
     document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
 
-    console.log(gameData.image);
-
     let gameImg = 'https://totallyscience.co/' + gameData.image.slice(1);
 
     document.querySelector('meta[property="og:image"]').setAttribute('content', gameImg);

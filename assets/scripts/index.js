@@ -52,10 +52,10 @@ let sorted;
 let hasLoaded = false;
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
@@ -126,7 +126,7 @@ window.addEventListener('load', async () => {
         // if they have dismissed the reward popup in the past, leave them alone
         // otherwise send the popup offering them the reward
 
-        document.getElementById('timerText').innerHTML = '<a href="/signup">Sign up</a> to collect your daily reward!';
+        document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
 
         if (!localStorage.getItem('ignoreReward')) {
             // show them the popup
@@ -310,7 +310,7 @@ async function displayGames() {
     //Then for each category (except mobile and a few others), make the category container then add games
 
     for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes?category=${categories[i]}">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');
@@ -356,7 +356,7 @@ async function displayGames() {
     }
 
     if (miscGames.length > 0) {
-        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes?category=random">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes.php?category=random">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');
@@ -445,7 +445,7 @@ async function displayGames() {
         }
         row.appendChild(gamesContainer);
         gamesDiv.prepend(row);
-        gamesDiv.innerHTML = `<h1>New Games <a href="/classes?category=new">View More</a></h1>` + gamesDiv.innerHTML;
+        gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
 
     //Partners
@@ -489,14 +489,11 @@ async function suggestGames() {
     // retrieve all pinned games of user
     let pinnedGames = [];
     if (token) {
-        console.log('Token');
         let res = await fetcher(`${activeServer}/profile/pinned/get`);
         let text = await res.text();
 
         pinnedGames = text.split(';');
         pinnedGames = pinnedGames.slice(1);
-    } else {
-        console.log('No Token');
     }
 
     let randomGames = [];
@@ -549,10 +546,6 @@ function createGameButton(game, pin, lazy) {
     const data = games[game];
 
     if (data == null) return '';
-
-    //console.log(game);
-
-    //console.log(data.tags.join(' '));
 
     let classlist = data.tags.join(' ');
 
@@ -624,7 +617,7 @@ function createGameButton(game, pin, lazy) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -634,7 +627,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -661,8 +654,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 

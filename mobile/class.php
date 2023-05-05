@@ -24,7 +24,7 @@
 
         
 
-    <script src="assets/scripts/main.js?v64"></script>
+    <script src="assets/scripts/main.js?v65"></script>
     <script src="assets/scripts/load_game.js?v64"></script>
 </body>
 

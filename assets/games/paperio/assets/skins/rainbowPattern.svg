@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_3"
+   x="0px"
+   y="0px"
+   width="350"
+   height="350"
+   viewBox="0 0 350 350"
+   enable-background="new 0 0 640 960"
+   xml:space="preserve"
+   sodipodi:docname="rainbowPattern.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata33656"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs33654" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview33652"
+   showgrid="false"
+   inkscape:zoom="0.24583333"
+   inkscape:cx="173.55299"
+   inkscape:cy="62.434006"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_3" />
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="146.4473"
+   y1="367.43359"
+   x2="496.4473"
+   y2="367.43359"
+   gradientTransform="translate(-146.44701,-192.43401)">
+	<stop
+   offset="0"
+   style="stop-color:#0BD795"
+   id="stop33632" />
+	<stop
+   offset="0.0645"
+   style="stop-color:#00C2C4"
+   id="stop33634" />
+	<stop
+   offset="0.2"
+   style="stop-color:#556CD1"
+   id="stop33636" />
+	<stop
+   offset="0.4"
+   style="stop-color:#CA1DD4"
+   id="stop33638" />
+	<stop
+   offset="0.6"
+   style="stop-color:#ED4C4D"
+   id="stop33640" />
+	<stop
+   offset="0.8"
+   style="stop-color:#FFE453"
+   id="stop33642" />
+	<stop
+   offset="0.9194"
+   style="stop-color:#7AF72A"
+   id="stop33644" />
+	<stop
+   offset="1"
+   style="stop-color:#0BD795"
+   id="stop33646" />
+</linearGradient>
+<rect
+   x="0"
+   y="0"
+   width="350"
+   height="350"
+   id="rect33649"
+   style="fill:url(#SVGID_1_)" />
+</svg>

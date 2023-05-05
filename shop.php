@@ -229,13 +229,11 @@
         let res = await fetcher(`${activeServer}/points/shop/unlock`);
         let text = await res.text();
 
-        if (text == 'false') {
+        if (text == 'false' && res.status == 200) {
             return dispenseButton.innerHTML = 'All Minis Unlocked';
         }
 
         let currentVal = document.getElementById('pointsDisplay').innerText;
-
-        counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
 
         let json = JSON.parse(text);
 
@@ -248,6 +246,8 @@
 
             return dispenseButton.innerHTML = 'Not enough points!';
         }
+        
+        counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
 
         vid.addEventListener('ended', async () => {
             let mini = json.mini;

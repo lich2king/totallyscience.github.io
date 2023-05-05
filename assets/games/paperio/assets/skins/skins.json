@@ -1,0 +1,434 @@
+[
+    {
+        "name": "Ladybug",
+        "colors": {
+            "main": "#ff5949",
+            "back": "#000000",
+            "nick": "#000000",
+            "plate": "#000000",
+            "particles": ["#FF321C", "#550900", "#FF9184", "#FC7756"]
+        },
+        "avatar": {
+            "scale": 1.2,
+            "y": 0,
+            "layers": [
+                { "level": 0, "url": "ladyBugDown.svg", "rotation": 0 },
+                { "level": 1, "url": "ladyBugUP.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Tank",
+        "colors": {
+            "main": "#7f782d",
+            "back": "#5b4c20",
+            "nick": "#5b4c20",
+            "plate": "#5b4c20",
+            "particles": ["#7f7c2d", "#c7be4f", "#ada63c", "#d0cd9a"]
+        },
+        "pattern": {
+            "url": "tankPattern.svg",
+            "scale": 0.3
+        },
+        "avatar": {
+            "y": -0.2,
+            "layers": [
+                { "level": 0, "url": "tankBottom.svg" },
+                {
+                    "level": 1,
+                    "url": "tankDown.svg"
+                },
+                {
+                    "level": 1.5,
+                    "scale": 0.5,
+                    "direction": "target",
+                    "pivot": { "y": 0.8 },
+                    "url": "tank-top.svg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Duck",
+        "colors": {
+            "main": "#33cdcf",
+            "back": "#218C8F",
+            "nick": "#218C8F",
+            "plate": "#218C8F",
+            "particles": ["#53D3D7", "#99E6E8", "#C7F0F1", "#218C8F"]
+        },
+        "pattern": { "url": "duckPattern.svg", "scale": 0.3 },
+        "avatar": {
+            "scale": 1,
+            "y": 0,
+            "layers": [
+                { "level": 0, "url": "duckDown.svg", "rotation": 0 },
+                {
+                    "level": 1,
+                    "url": "duckUp.svg",
+                    "rotation": 0,
+                    "pivot": { "x": 0.5, "y": 0.6 },
+                    "y": -0.05
+                }
+            ]
+        }
+    },
+    {
+        "name": "Cake",
+        "colors": {
+            "main": "#ffd8d9",
+            "back": "#feef94",
+            "nick": "#894737",
+            "plate": "#894737",
+            "particles": ["#ffd8d9", "#FFB9BB", "#feef94", "#894737"]
+        },
+        "pattern": {
+            "url": "cakePattern.svg",
+            "scale": 0.4
+        },
+        "avatar": {
+            "scale": 1,
+            "layers": [
+                {
+                    "level": 0,
+                    "url": "cakeDown.svg"
+                },
+                {
+                    "level": 0.5,
+                    "url": "cakeMiddle.svg",
+                    "direction": "target"
+                },
+                { "level": 1.1, "url": "cakeTop.svg" }
+            ]
+        }
+    },
+    {
+        "name": "Cash",
+        "colors": {
+            "main": "#45e07a",
+            "back": "#1B4B2E",
+            "nick": "#1B4B2E",
+            "plate": "#1B4B2E",
+            "particles": ["#45e07a", "#92EDB1", "#1B4B2E"]
+        },
+        "pattern": { "url": "cashPattern.svg", "scale": 0.8 },
+        "avatar": {
+            "scale": 1.4,
+            "y": -0.2,
+            "layers": [
+                { "level": 0, "url": "cashDown.svg", "rotation": 0 },
+                { "level": 1, "url": "cashUp.svg", "rotation": 0, "y": 0.1 }
+            ]
+        }
+    },
+    {
+        "name": "Sushi",
+        "colors": {
+            "main": "#34514d",
+            "back": "#263a38",
+            "nick": "#101817",
+            "plate": "#101817",
+            "particles": ["#34514d", "#263a38", "#6A9D98"]
+        },
+        "pattern": { "url": "sushiPattern1.svg", "scale": 0.6 },
+        "avatar": {
+            "scale": 1,
+            "y": 0,
+            "layers": [
+                { "level": 0, "url": "sushiDown.svg", "rotation": 0 },
+                { "level": 1, "url": "sushiUp.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Bat",
+        "colors": {
+            "main": "#43423F",
+            "back": "#302C2D",
+            "nick": "#121011",
+            "plate": "#121011",
+            "particles": ["#1D1C1B", "#352F31", "#4E4349", "#615050"]
+        },
+        "pattern": null,
+        "avatar": {
+            "y": -0.4,
+            "layers": [
+                { "level": 0, "url": "batDownN.svg", "y": 0.4 },
+                {
+                    "level": 1,
+                    "scale": 3.5,
+                    "url": "batUpN.svg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Heart",
+        "colors": {
+            "main": "#f49495",
+            "back": "#d15352",
+            "nick": "#942727",
+            "plate": "#942727",
+            "particles": ["#f49495", "#d15352", "#f06f73", "#f39595"]
+        },
+        "pattern": { "url": "heartPattern.svg", "scale": 0.4 },
+        "avatar": {
+            "scale": 1.3,
+            "y": -0.2,
+            "layers": [
+                {
+                    "level": 0,
+                    "url": "heart-down.svg",
+                    "transformAnimation": {
+                        "scaleX": { "start": 1, "end": 0.8, "time": 1 },
+                        "scaleY": { "start": 1, "end": 0.8, "time": 1 }
+                    }
+                },
+                {
+                    "level": 1,
+                    "url": "heart-up.svg",
+                    "transformAnimation": {
+                        "scaleX": { "start": 1, "end": 0.8, "time": 1 },
+                        "scaleY": { "start": 1, "end": 0.8, "time": 1 }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Rainbow",
+        "colors": {
+            "main": "#D7B8F8",
+            "back": "#7516AD",
+            "nick": "#7516AD",
+            "plate": "#7516AD",
+            "particles": [
+                "#D7B8F8",
+                "#07f3f6",
+                "#f92f30",
+                "#ffee4d",
+                "#495fbe",
+                "#50c306"
+            ]
+        },
+        "pattern": { "url": "rainbowPattern.svg", "scale": 0.6 },
+        "avatar": {
+            "scale": 1.3,
+            "y": -0.2,
+            "layers": [
+                {
+                    "level": 0,
+                    "url": "rainbowHeartDown.svg",
+                    "transformAnimation": {
+                        "scaleX": { "start": 1, "end": 0.8, "time": 1 },
+                        "scaleY": { "start": 1, "end": 0.8, "time": 1 }
+                    }
+                },
+                {
+                    "level": 1,
+                    "url": "rainbowHeartUp.svg",
+                    "transformAnimation": {
+                        "scaleX": { "start": 1, "end": 0.8, "time": 1 },
+                        "scaleY": { "start": 1, "end": 0.8, "time": 1 }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Nyan cat",
+        "colors": {
+            "main": "#ffa3ff",
+            "back": "#ff3095",
+            "nick": "#ff3095",
+            "plate": "#ff3095",
+            "particles": ["#0bd795", "#556cd1", "#ca1dd4", "#ed4c4d", "#ffe453"]
+        },
+        "pattern": { "url": "nyanPattern.svg", "scale": 0.6 },
+        "avatar": {
+            "scale": 1.3,
+            "y": -0.2,
+            "layers": [
+                {
+                    "level": 0,
+                    "url": "nyanShadow.svg",
+                    "transformAnimation": {
+                        "scaleY": { "start": 0.8, "end": 1, "time": 1 }
+                    }
+                },
+                {
+                    "level": 1,
+                    "url": "nyaaa1.svg",
+                    "transformAnimation": {
+                        "scaleY": { "start": 0.8, "end": 1, "time": 1 }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Watermelon",
+        "colors": {
+            "main": "#ee4445",
+            "back": "#1f831f",
+            "nick": "#000000",
+            "plate": "#000000",
+            "particles": ["#e52135", "#F1858F", "#FAD3D8", "#B9EEB9"]
+        },
+        "pattern": { "url": "watermelPattern.svg", "scale": 0.3 },
+        "avatar": {
+            "scale": 1.6,
+            "y": -0.2,
+            "layers": [
+                { "level": 0, "url": "watermelShadow.svg", "rotation": 0 },
+                { "level": 1, "url": "watermel.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Ghost",
+        "colors": {
+            "main": "#141B1B",
+            "back": "#fe1230",
+            "nick": "#fe1230",
+            "plate": "#fe1230",
+            "particles": ["#141B1B", "#2F4040", "#C2D6D8 ", "#E7EEEF "]
+        },
+        "pattern": { "url": "ghostPattern.svg", "scale": 0.2 },
+        "avatar": {
+            "scale": 1,
+            "y": 0,
+            "layers": [
+                { "level": 0, "url": "ghostShadow.svg", "rotation": 0 },
+                { "level": 1, "url": "ghostEyesWhite.svg", "rotation": 0 },
+                {
+                    "level": 1.1,
+                    "url": "ghostEyes.svg",
+                    "rotation": 0,
+                    "scale": 0.5,
+                    "direction": "target"
+                },
+                { "level": 1.2, "url": "ghostBody.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Pizza",
+        "colors": {
+            "main": "#fdcc49",
+            "back": "#ec7700",
+            "nick": "#ec7700",
+            "plate": "#ec7700",
+            "particles": ["#fdcc49", "#ec7700", "#bf1226"]
+        },
+        "pattern": { "url": "pizzaPattern.svg", "scale": 0.35 },
+        "avatar": {
+            "scale": 1.6,
+            "y": 0.2,
+            "layers": [
+                { "level": 0, "url": "pizzaDown.svg", "rotation": 0 },
+                { "level": 1, "url": "pizzaUp.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Minion",
+        "colors": {
+            "main": "#f6ee44",
+            "back": "#3e3b29",
+            "nick": "#3e3b29",
+            "plate": "#3e3b29",
+            "particles": ["#f6ee44", "#E1D70B", "#3e3b29"]
+        },
+        "pattern": { "url": "minionPattern.svg", "scale": 0.5 },
+        "avatar": {
+            "scale": 1.3,
+            "y": 0.2,
+            "layers": [
+                { "level": 0, "url": "minionDown.svg", "rotation": 0 },
+                { "level": 1, "url": "minionUp.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Freddy",
+        "colors": {
+            "main": "#b68631",
+            "back": "#232323",
+            "nick": "#F7A324",
+            "plate": "#F7A324",
+            "particles": ["#232323", "#b68631", "#B99D00", "#F2CE00"]
+        },
+        "pattern": { "url": "freddyPattern.svg", "scale": 0.25 },
+        "avatar": {
+            "scale": 1.7,
+            "y": 0.0,
+            "layers": [
+                { "level": 0, "url": "freddyNDown.svg", "rotation": 0 },
+                { "level": 1, "url": "freddyN.svg", "rotation": 0 }
+            ]
+        }
+    },
+    {
+        "name": "Spiderman",
+        "colors": {
+            "main": "#ff3f21",
+            "back": "#000000",
+            "particles": ["#141414", "#ff3f21", "#FF7D6A", "#B91700"]
+        },
+        "pattern": { "url": "spiderPattern2.svg", "scale": 0.4 },
+        "avatar": {
+            "scale": 1.3,
+            "y": -0.2,
+            "layers": [
+                { "level": 0, "url": "spidermanDown.svg" },
+                { "level": 1, "url": "spidermanUp.svg" }
+            ]
+        }
+    },
+    {
+        "name": "Teletubby",
+        "colors": {
+            "main": "#8dc63f",
+            "back": "#336f1c",
+            "nick": "#124E05",
+            "plate": "#124E05",
+            "particles": ["#8dc63f", "#336f1c", "#9DDF84"]
+        },
+        "pattern": { "url": "teletubbyPattern0.svg", "scale": 0.5 },
+        "avatar": {
+            "scale": 1.3,
+            "y": -0,
+            "layers": [
+                { "level": 0, "url": "teletubbyDown.svg", "rotation": 0 },
+                {
+                    "level": 1,
+                    "url": "teletubbyUp.svg",
+                    "rotation": 0,
+                    "scale": 1.4,
+                    "pivot": { "y": 0.7 },
+                    "y": 0.1
+                }
+            ]
+        }
+    },
+    {
+        "name": "Unicorn",
+        "colors": {
+            "main": "#fe81f7",
+            "back": "#db33d2",
+            "nick": "#db33d2",
+            "plate": "#db33d2",
+            "particles": ["#FEA5FA", "#db33d2", "#ffff00"]
+        },
+        "pattern": { "url": "unicPattern.svg", "scale": 0.35 },
+        "avatar": {
+            "scale": 1.7,
+            "y": 0.2,
+            "layers": [
+                { "level": 0, "url": "unicornDown.svg", "rotation": 0 },
+                { "level": 1, "url": "unicornUp.svg", "rotation": 0 }
+            ]
+        }
+    }
+]
