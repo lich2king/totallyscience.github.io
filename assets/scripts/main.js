@@ -127,6 +127,7 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
 // panic button
 window.addEventListener('keydown', (e) => {
     if (e.key == '`') window.open(localStorage.getItem('website'), '_blank');
+    else if (e.key == '[') aboutInBlank();
 }, false);
 
 // page load init
@@ -151,4 +152,38 @@ async function setPoints() {
 function logout() {
     localStorage.removeItem('authToken');
     location.reload();
+}
+
+function aboutInBlank() {
+    let url = location.href;
+
+    maskedWindow = window.open();
+
+    const doc = maskedWindow.document;
+    doc.title = '';
+
+    let embed = doc.createElement('embed');
+    
+    if (url.includes('https://') || url.includes('http://')) {
+        embed.src = url;
+    } else {
+        embed.src = 'https://' + url;
+    }
+
+    embed.width = '100%';
+    embed.height = '100%';
+    embed.style.position = 'fixed';
+    embed.style.top = '0';
+    embed.style.left = '0';
+
+    let script = document.createElement('script');
+
+    script.innerHTML = `
+        window.onbeforeunload = function() {
+            return "reloading the site will end the aboutblank session. Are you sure you want to continue?";
+        };
+    `;
+    
+    doc.body.appendChild(embed);
+    doc.body.appendChild(script);
 }
