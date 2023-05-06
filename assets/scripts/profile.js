@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
     let likedgames = await userLikedRes.json();
-    console.log(likedgames)
+    
     if (likedgames.length > 0) {
         for (like in likedgames) {
             if (likedgames[like] != null) {
