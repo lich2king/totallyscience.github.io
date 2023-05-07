@@ -5,6 +5,9 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/class.css?v59'>
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=645709e58422190019dbb83f&product=inline-share-buttons&source=platform"
+        async="async"></script>
 </head>
 
 <body>
@@ -31,6 +34,8 @@
                 </div>
 
                 <div class="right">
+                    <button id="share" class="game-button button-effect-a"><img
+                            src="assets/images/icons/share.png"></button>
                     <button id="pin" class="game-button button-effect-a"><img
                             src="assets/images/icons/pinoutline.png"></button>
                     <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.png"></button>
@@ -40,6 +45,8 @@
 
         <div class="ad">
             <div class="adsrc"></div>
+            <div class="sharethis-inline-share-buttons"></div>
+
         </div>
     </div>
 
