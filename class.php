@@ -5,9 +5,6 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/class.css?v59'>
-    <script type="text/javascript"
-        src="https://platform-api.sharethis.com/js/sharethis.js#property=645709e58422190019dbb83f&product=inline-share-buttons&source=platform"
-        async="async"></script>
 </head>
 
 <body>
@@ -50,8 +47,6 @@
         </div>
     </div>
 
-    <div class="adsrc adhorz" style="text-align:center;">
-    </div>
 
     <div id="info">
         <div class="container">
