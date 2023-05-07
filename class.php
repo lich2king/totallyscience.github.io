@@ -42,11 +42,11 @@
 
         <div class="ad">
             <div class="adsrc"></div>
-            <div class="sharethis-inline-share-buttons"></div>
-
         </div>
     </div>
 
+    <div class="adsrc adhorz" style="text-align:center;">
+    </div>
 
     <div id="info">
         <div class="container">
