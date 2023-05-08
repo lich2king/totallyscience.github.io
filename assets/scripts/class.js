@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
+let likeCount = 0;
+
 const token = JSON.parse(authToken);
 
 async function displayUserData() {
@@ -53,10 +55,10 @@ function setupActionButtons() {
                 // set updated like count
                 let likeCountEle = document.getElementById('likeCount');
 
-                let prevLikeCount = parseInt(likeCountEle.innerText);
-                let curLikeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+                let prevLikeCount = parseInt(likeCount);
+                likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
-                likeCountEle.innerText = numFormatter(curLikeCount);
+                likeCountEle.innerText = numFormatter(likeCount);
             }
         } else {
             swal('You must login to like the game', swalConfig).then(swalHandler);
@@ -145,10 +147,10 @@ window.addEventListener('load', async() => {
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
     // update game total like count
-    let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
-    let likedCountText = await likedCountRes.text();
+    likeCount = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
+    likeCount = await likeCount.text();
 
-    document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText)) || '0';
+    document.getElementById('likeCount').innerText = numFormatter(parseInt(likeCount)) || '0';
 
     // update game current highscore
     let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
