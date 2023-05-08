@@ -2,8 +2,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const gameName = urlParams.get('class');
 const id = urlParams.get('id');
 
-let rawLikeCount = 0;
-
 const token = JSON.parse(authToken);
 
 async function displayUserData() {
@@ -36,7 +34,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async (e) => {
+    likeBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -53,9 +51,13 @@ function setupActionButtons() {
                 e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
 
                 // set updated like count
-                rawLikeCount = isLiked ? rawLikeCount - 1 : rawLikeCount + 1;
+                let likeCountEle = document.getElementById('likeCount');
 
-                likeCountEle.innerText = numFormatter(rawLikeCount);
+                let prevLikeCount = parseInt(likeCountEle.innerText);
+                let curLikeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+                console.log(curLikeCount);
+
+                likeCountEle.innerText = numFormatter(curLikeCount);
             }
         } else {
             swal('You must login to like the game', swalConfig).then(swalHandler);
@@ -65,7 +67,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async (e) => {
+    pinBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -92,11 +94,11 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
-    let retrievedGamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
+    let retrievedGamesRes = await fetch(`assets/games.json?date=${new Date().getTime()} `);
     let retrievedGames = await retrievedGamesRes.json();
 
     const gameData = retrievedGames[gameName];
@@ -135,11 +137,6 @@ window.addEventListener('load', async () => {
     document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
-
-    let gameImg = 'https://totallyscience.co/' + gameData.image.slice(1);
-
-    document.querySelector('meta[property="og:image"]').setAttribute('content', gameImg);
-
     document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
     document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
 
@@ -151,7 +148,6 @@ window.addEventListener('load', async () => {
     // update game total like count
     let likedCountRes = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
     let likedCountText = await likedCountRes.text();
-    rawLikeCount = parseInt(likedCountText) || 0;
 
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likedCountText)) || '0';
 
@@ -163,6 +159,7 @@ window.addEventListener('load', async () => {
 
     // update game statistics
     fetcher(`${activeServer}/stats/games/view`, { body: { gameName: gameName } });
+
     // setup action button events
     setupActionButtons();
 });
