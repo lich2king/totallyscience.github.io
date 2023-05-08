@@ -41,26 +41,26 @@ function setupActionButtons() {
 
         if (token) {
             //took away the await
-            let res = fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
+            let res = await fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
 
-            //if (res.status == 200) {}
-            const likedIcon = 'assets/images/icons/like.png';
-            const notLikedIcon = 'assets/images/icons/likeoutline.png';
+            if (res.status == 200) {
+                const likedIcon = 'assets/images/icons/like.png';
+                const notLikedIcon = 'assets/images/icons/likeoutline.png';
 
-            // check if it is liked by checking current icon
-            let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
+                // check if it is liked by checking current icon
+                let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
 
-            // update icon to match chnaged state
-            e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
+                // update icon to match chnaged state
+                e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
 
-            // set updated like count
-            let likeCountEle = document.getElementById('likeCount');
+                // set updated like count
+                let likeCountEle = document.getElementById('likeCount');
 
-            let prevLikeCount = parseInt(likeCount);
-            likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+                let prevLikeCount = parseInt(likeCount);
+                likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
-            likeCountEle.innerText = numFormatter(likeCount);
-
+                likeCountEle.innerText = numFormatter(likeCount);
+            }
         } else {
             swal('You must login to like the game', swalConfig).then(swalHandler);
         }
