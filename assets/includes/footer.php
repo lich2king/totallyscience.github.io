@@ -40,6 +40,6 @@
         </div>
     </div>
 
-    <div class="bottomFoot">© 2022 TotallyScience. A Zach Yadegari Production ™</div>
+    <div class="bottomFoot">© 2023 TotallyScience. A Zach Yadegari Production ™</div>
 </footer>
 <script src="assets/scripts/main.js?v66"></script>
