@@ -40,7 +40,8 @@ function setupActionButtons() {
         e.target.classList.add('button-click');
 
         if (token) {
-            let res = await fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
+            //took away the await
+            let res = fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
 
             //if (res.status == 200) {}
             const likedIcon = 'assets/images/icons/like.png';
