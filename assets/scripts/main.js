@@ -44,6 +44,9 @@ function fetcher(endpoint, options) {
  * @param {integer} num - an integer to be formatted
  */
 function numFormatter(num) {
+    if (num < 0) {
+        return 0;
+    }
     if (num > 999 && num < 1000000) {
         return (num / 1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million
     } else if (num > 1000000) {
@@ -163,7 +166,7 @@ function aboutInBlank() {
     doc.title = '';
 
     let embed = doc.createElement('embed');
-    
+
     if (url.includes('https://') || url.includes('http://')) {
         embed.src = url;
     } else {
@@ -183,7 +186,7 @@ function aboutInBlank() {
             return "reloading the site will end the aboutblank session. Are you sure you want to continue?";
         };
     `;
-    
+
     doc.body.appendChild(embed);
     doc.body.appendChild(script);
 }
