@@ -55,7 +55,6 @@ function setupActionButtons() {
 
                 let prevLikeCount = parseInt(likeCountEle.innerText);
                 let curLikeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
-                console.log(curLikeCount);
 
                 likeCountEle.innerText = numFormatter(curLikeCount);
             }
