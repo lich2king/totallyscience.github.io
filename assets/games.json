@@ -1550,8 +1550,8 @@
     "Poor Bunny": {
         "description": "Poor Bunny is a skill game where you control a cute bunny character and eat all the delicious carrots in a dangerous obstacle course. Hop on and off platforms and while avoiding rapidly increasing deadly traps that appear out of nowhere. Don't miss the golden carrot when it spawns as it's worth 5 normal carrots.",
         "image": "./assets/games/icons/poor-bunny.png",
-        "controls": "Move - [WASD] or [Arrow Keys]",
-        "tags": ["action"],
+        "controls": "Move Player 1 - [WASD] or Move Player 2 [Arrow Keys]",
+        "tags": ["2"],
         "date_added": "2023-05-10T13:04:14.718Z",
         "developer": "Adventure Islands",
         "iframe_url": "./assets/games/poor-bunny/index.html"
