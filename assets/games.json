@@ -1546,5 +1546,14 @@
         "date_added": "2023-05-05T13:03:03.399Z",
         "developer": "Gametornado",
         "iframe_url": "./assets/games/dreadhead-parkour/index.html"
+    },
+    "Poor Bunny": {
+        "description": "Dreadhead Parkour is a parkour game where you play as the flashy Dreadhead and get to slide, backflip, frontflip and move around each level to reach the end! Collect all the coins to get new skins and max your score on each level! There are plenty of bombs, spikes, huge jumps and tons more to hop over or slide under to keep your eyes open and your head up so as not to get hit! How hardcore is your parkour...?",
+        "image": "./assets/games/icons/poor-bunny.png",
+        "controls": "Move - [WASD] or [Arrow Keys]",
+        "tags": ["action"],
+        "date_added": "2023-05-10T13:04:14.718Z",
+        "developer": "Adventure Islands",
+        "iframe_url": "./assets/games/poor-bunny/index.html"
     }
 }
