@@ -1,6 +1,5 @@
 let token = JSON.parse(authToken);
 let interval;
-let popupInterval;
 
 // featured games slides code
 let shouldAutoSwitch = true;
@@ -87,38 +86,8 @@ window.addEventListener('load', async() => {
     } else {
         // user is not signed into an account
 
-        // if they have dismissed the reward popup in the past, leave them alone
-        // otherwise send the popup offering them the reward
 
         document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
-
-        if (!localStorage.getItem('ignoreReward')) {
-            // show them the popup
-            document.getElementById('dailyRewardPopup').style.display = '';
-
-            // start the countdown til next reward displayed on the popup
-            // endtime should be 24 hours in the future
-            let endTime = Math.floor(Date.now() / 1000 + 86400);
-
-            popupInterval = setInterval(() => {
-                // divide by 1000 to get seconds
-                let currentTime = Math.floor(Date.now() / 1000);
-
-                let remainingTime = endTime - currentTime;
-
-                let seconds = Math.floor(remainingTime % 60)
-                    .toString()
-                    .padStart(2, '0');
-                let minutes = Math.floor((remainingTime / 60) % 60)
-                    .toString()
-                    .padStart(2, '0');
-                let hours = Math.floor((remainingTime / (60 * 60)) % 24)
-                    .toString()
-                    .padStart(2, '0');
-
-                document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
-            }, 1000);
-        }
     }
 
     games = retrievedGames;
@@ -196,8 +165,6 @@ async function claimReward() {
         counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
     }
 
-    //document.getElementById('dailyRewardPopup').style.display = 'none';
-    clearInterval(popupInterval);
 }
 
 async function loadCookies() {
