@@ -169,6 +169,8 @@ window.addEventListener('load', async() => {
 function startTimer(endTime) {
     clearInterval(interval);
 
+    document.getElementById('timerText').innerHTML = '<span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>';
+
     interval = setInterval(() => {
         // divide by 1000 to get seconds
         let currentTime = Math.floor(Date.now() / 1000);
@@ -191,7 +193,6 @@ function startTimer(endTime) {
             .toString()
             .padStart(2, '0');
 
-        document.getElementById('timerText').innerHTML = '<span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>';
         document.getElementById('rewardTimer').innerText = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }
