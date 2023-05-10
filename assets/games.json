@@ -1548,7 +1548,7 @@
         "iframe_url": "./assets/games/dreadhead-parkour/index.html"
     },
     "Poor Bunny": {
-        "description": "Dreadhead Parkour is a parkour game where you play as the flashy Dreadhead and get to slide, backflip, frontflip and move around each level to reach the end! Collect all the coins to get new skins and max your score on each level! There are plenty of bombs, spikes, huge jumps and tons more to hop over or slide under to keep your eyes open and your head up so as not to get hit! How hardcore is your parkour...?",
+        "description": "Poor Bunny is a skill game where you control a cute bunny character and eat all the delicious carrots in a dangerous obstacle course. Hop on and off platforms and while avoiding rapidly increasing deadly traps that appear out of nowhere. Don't miss the golden carrot when it spawns as it's worth 5 normal carrots.",
         "image": "./assets/games/icons/poor-bunny.png",
         "controls": "Move - [WASD] or [Arrow Keys]",
         "tags": ["action"],
