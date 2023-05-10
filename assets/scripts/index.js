@@ -72,7 +72,6 @@ window.addEventListener('load', async() => {
         let json = JSON.parse(text);
 
         if (json.isReady) {
-            // document.getElementById('ignoreReward').style.display = 'none';
 
             let points = 100;
 
@@ -80,44 +79,7 @@ window.addEventListener('load', async() => {
                 points = 1000;
             }
 
-            // document.getElementById('popPoints').innerText = points;
-
-            // update visibiliy of checkmarks on days that you have passed
-            // for (let i = 0; i <= json.rewardDay; i++) {
-            //     document.getElementsByClassName('popCheck')[i].style = 'visibility: visible;';
-            // }
-
-            // for (let i = 6; i > json.rewardDay; i--) {
-            //     document.getElementsByClassName('popCheck')[i].style = 'visibility: hidden;';
-            // }
-
-            //document.getElementById('claimRewardB').innerText = 'Claim Reward';
-            //document.getElementById('dailyRewardPopup').style.display = '';
             document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
-
-
-            // start the countdown til next reward displayed on the popup
-            // endtime should be 24 hours in the future
-            // let endTime = Math.floor(Date.now() / 1000 + 86400);
-
-            // popupInterval = setInterval(() => {
-            //     // divide by 1000 to get seconds
-            //     let currentTime = Math.floor(Date.now() / 1000);
-
-            //     let remainingTime = endTime - currentTime;
-
-            //     let seconds = Math.floor(remainingTime % 60)
-            //         .toString()
-            //         .padStart(2, '0');
-            //     let minutes = Math.floor((remainingTime / 60) % 60)
-            //         .toString()
-            //         .padStart(2, '0');
-            //     let hours = Math.floor((remainingTime / (60 * 60)) % 24)
-            //         .toString()
-            //         .padStart(2, '0');
-
-            //     document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
-            // }, 1000);
         } else {
             startTimer(json.rewardTime);
         }
@@ -212,11 +174,6 @@ function animateBar(day) {
     }
 }
 
-function ignorePopReward() {
-    // called when "ignore pop reward" is clicked on the popup
-    localStorage.setItem('ignoreReward', true);
-    document.getElementById('dailyRewardPopup').style.display = 'none';
-}
 
 async function claimReward() {
     if (!token) {
