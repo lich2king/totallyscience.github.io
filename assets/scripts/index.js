@@ -98,30 +98,30 @@ window.addEventListener('load', async() => {
 
             // start the countdown til next reward displayed on the popup
             // endtime should be 24 hours in the future
-            let endTime = Math.floor(Date.now() / 1000 + 86400);
+            // let endTime = Math.floor(Date.now() / 1000 + 86400);
 
-            popupInterval = setInterval(() => {
-                // divide by 1000 to get seconds
-                let currentTime = Math.floor(Date.now() / 1000);
+            // popupInterval = setInterval(() => {
+            //     // divide by 1000 to get seconds
+            //     let currentTime = Math.floor(Date.now() / 1000);
 
-                let remainingTime = endTime - currentTime;
+            //     let remainingTime = endTime - currentTime;
 
-                let seconds = Math.floor(remainingTime % 60)
-                    .toString()
-                    .padStart(2, '0');
-                let minutes = Math.floor((remainingTime / 60) % 60)
-                    .toString()
-                    .padStart(2, '0');
-                let hours = Math.floor((remainingTime / (60 * 60)) % 24)
-                    .toString()
-                    .padStart(2, '0');
+            //     let seconds = Math.floor(remainingTime % 60)
+            //         .toString()
+            //         .padStart(2, '0');
+            //     let minutes = Math.floor((remainingTime / 60) % 60)
+            //         .toString()
+            //         .padStart(2, '0');
+            //     let hours = Math.floor((remainingTime / (60 * 60)) % 24)
+            //         .toString()
+            //         .padStart(2, '0');
 
-                document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
-            }, 1000);
+            //     document.getElementById('popTimer').innerText = hours + ':' + minutes + ':' + seconds;
+            // }, 1000);
+        } else {
+            startTimer(json.rewardTime);
         }
-
         animateBar(json.rewardDay);
-        startTimer(json.rewardTime);
     } else {
         // user is not signed into an account
 
@@ -191,6 +191,7 @@ function startTimer(endTime) {
             .toString()
             .padStart(2, '0');
 
+        document.getElementById('timerText').innerHTML = '<span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>';
         document.getElementById('rewardTimer').innerText = hours + ':' + minutes + ':' + seconds;
     }, 1000);
 }

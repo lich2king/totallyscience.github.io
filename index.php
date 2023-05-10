@@ -267,91 +267,11 @@
         </ul>
 
         <br><br>
-    </div>
-
-    <!-- popup to award daily points -->
-    <div id="dailyRewardPopup" style="display:none">
-        <h1>Daily Reward</h1>
-
-        <div class="timerCon">
-            <p>Next reward in <span id="popTimer">23:59:59</span></p>
-        </div>
-
-        <p class="points">+<span id="popPoints">100</span> points!</p>
-
-        <div class="days">
-            <div class="row">
-                <div>
-                    <div class="circle">
-                        <img class="popCheck" style="visibility: visible;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 1</p>
-                </div>
-                <div>
-                    <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 2</p>
-                </div>
-                <div>
-                    <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 3</p>
-                </div>
-                <div>
-                    <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 4</p>
-                </div>
-
-            </div>
-            <div class="row">
-                <div>
-                    <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 5</p>
-                </div>
-                <div>
-                    <div class="circle">
-                        <img class="popCheck" style="visibility: hidden;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 6</p>
-                </div>
-                <div>
-                    <div class="circle">
-                        <img class="treasure" style="" src="assets/images/chest.png">
-                        <img class="popCheck" style="visibility:hidden" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p>Day 7</p>
-                </div>
-                <div style="visibility:hidden">
-                    <div class="circle">
-                        <img style="visibility: hidden;" src="assets/images/icons/check.webp">
-                    </div>
-
-                    <p></p>
-                </div>
-
-            </div>
-        </div>
-
-        <button onclick="claimReward()" class="button" id="claimRewardB">Sign Up To Claim</button>
-        <p class="ignore" onclick="ignorePopReward()" id="ignoreReward">Or ignore the free reward</p>
-    </div>
+    </div>   
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v75"></script>
+    <script src="assets/scripts/index.js?v76"></script>
 </body>
 
 </html>
