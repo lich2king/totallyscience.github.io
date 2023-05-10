@@ -222,6 +222,8 @@ async function claimReward() {
         location.href = 'signup.php';
     }
 
+    document.getElementById('timerText').innerHTML = '<span class="loader"></span>';
+
     let res = await fetcher(`${activeServer}/points/reward/claim`);
 
     if (res.status == 200) {
