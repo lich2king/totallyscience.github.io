@@ -379,7 +379,7 @@ async function displayGames() {
     }
 
     //Partners
-    gamesDiv.innerHTML += `<h1>Partners <a href="/partners">View More</a></h1>`;
+    gamesDiv.innerHTML += `<h1>Partners <a href="/partners.php">View More</a></h1>`;
 
     let partnerRow = document.createElement('div');
     partnerRow.classList.add('horizontalCon');
