@@ -269,7 +269,14 @@
             <button class="launch">Visit</button>
         </div>
 
-
+        <div onclick="window.open('https:/\/platformerdotio.github.io/', '_blank')" class="card game">
+            <img src="/assets/images/partners/platformer.png" style="background-color: #ffffff;"
+                title="Totally Science Partner - Platformer.io" alt="Platformer.io logo">
+            <h1>Platformer.io</h1>
+            <h2>The best game site unblocked on Mars. Get started now for free!
+            </h2>
+            <button class="launch">Visit</button>
+        </div>
     </div>
 
     <?php include "assets/includes/footer.php" ?>
