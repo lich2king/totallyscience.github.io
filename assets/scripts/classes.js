@@ -292,7 +292,10 @@ searchBar.addEventListener('keyup', () => {
     clearTimeout(typingTimer);
     typingTimer = setTimeout(function() {
         var input = searchBar.value;
-        ga('send', 'event', 'Typing', 'Searched', input);
+        gtag('event', 'Searched', {
+            'event_category': 'Typing',
+            'event_label': input
+        });
     }, doneTypingInterval);
 
     scrollTo(0, 0);
