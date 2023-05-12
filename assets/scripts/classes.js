@@ -283,7 +283,18 @@ async function displayGames() {
 }
 
 const searchBar = document.getElementById('searchBar');
+var typingTimer;
+var doneTypingInterval = 1000; // Time in milliseconds (1 second)
+
 searchBar.addEventListener('keyup', () => {
+
+
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(function() {
+        var input = searchBar.value;
+        ga('send', 'event', 'Typing', 'Searched', input);
+    }, doneTypingInterval);
+
     scrollTo(0, 0);
 
     let input = searchBar.value.toUpperCase().split(' ').join('');
