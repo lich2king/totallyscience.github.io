@@ -58,7 +58,7 @@ window.addEventListener('load', async() => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
-    let partnersRes = await fetch(`assets/partners.json?date=${new Date().getTime()}`);
+    let partnersRes = await fetcher(`${activeServer}/partners`);
     partners = await partnersRes.json();
 
     // update underline link in navbar
@@ -392,11 +392,10 @@ async function displayGames() {
     partnerRow.appendChild(partnerGamesContainer);
     gamesDiv.appendChild(partnerRow);
 
-    for (let x = 0; x < Object.keys(partners).length; x++) {
-        let keys = Object.keys(partners);
-        const name = keys[x];
-        const image = partners[keys[x]].image;
-        const website = partners[keys[x]].website;
+    for (let x = 0; x < partners.length; x++) {
+        const name = partners[x].name;
+        const image = partners[x].image;
+        const website = partners[x].website;
 
         const backgroundImg =
             "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
