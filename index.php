@@ -38,8 +38,7 @@
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Monkey%20Mart', '_self')"
-                    class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Monkey-Mart', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
 
@@ -51,7 +50,7 @@
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Bob%20the%20Robber%202', '_self')"
+                <button onclick="window.open('class.php?class=Bob-the-Robber-2', '_self')"
                     class="featureButton button">Play Now</button>
             </div>
 
@@ -63,7 +62,7 @@
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Moto%20X3M%20Pool%20Party', '_self')"
+                <button onclick="window.open('class.php?class=Moto-X3M-Pool-Party', '_self')"
                     class="featureButton button">Play
                     Now</button>
             </div>
@@ -76,7 +75,7 @@
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Vex%207', '_self')" class="featureButton button">Play
+                <button onclick="window.open('class.php?class=Vex-7', '_self')" class="featureButton button">Play
                     Now</button>
             </div>
         </div>
@@ -267,11 +266,11 @@
         </ul>
 
         <br><br>
-    </div>   
+    </div>
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v82"></script>
+    <script src="assets/scripts/index.js?v83"></script>
 </body>
 
 </html>

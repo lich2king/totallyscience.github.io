@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v59'>
+    <link rel='stylesheet' href='assets/styles/class.css?v60'>
 </head>
 
 <body>
@@ -87,9 +87,10 @@
         </div>
     </div>
 
+
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v153"></script>
+    <script src="assets/scripts/class.js?v155"></script>
 </body>
 
 </html>

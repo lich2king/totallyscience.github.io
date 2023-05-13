@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const gameName = urlParams.get('class');
+const gameName = urlParams.get('class').replaceAll('-', ' ');
 const id = urlParams.get('id');
 
 let likeCount = 0;
@@ -36,7 +36,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async(e) => {
+    likeBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -69,7 +69,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async(e) => {
+    pinBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -96,7 +96,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
@@ -233,7 +233,7 @@ function suggestGames(games) {
         if (gameDate > weekAgo) classlist += ' new';
 
         gamesDiv.innerHTML += `
-            <div name="${game}" id="gameDiv" onclick="location.href = 'class.php?class=${game}'" class="${classlist}">
+            <div name="${game}" id="gameDiv" onclick="location.href = 'class.php?class=${game.replaceAll(' ', '-')}'" class="${classlist}">
                 <div class="imageCon">
                     <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
                 </div>
@@ -266,4 +266,62 @@ function addArrowListeners() {
 
         gamesCon.scrollLeft += Math.min(remainingSpace, 1100);
     });
+}
+
+function shareTo(website) {
+    let url;
+    let gameNameLink = document.location;
+
+    if (website == 'Twitter') {
+        url = `https://twitter.com/intent/tweet?url=${gameNameLink}&text=Check%20out%20this%20cool%20game%20I%27m%20playing%20-%20${gameName}&via=TotallyScience&hashtags=TotallyScience&related=TotallyScience`;
+    } else if (website == 'Reddit') {
+        url = `https://www.reddit.com/submit?url=${gameNameLink}&title=Check%20out%20this%20cool%20game%20I%27m%20playing%20-%20${gameName}`;
+    } else if (website == 'Facebook') {
+        url = `https://www.facebook.com/sharer/sharer.php?u=${gameNameLink}&hashtag=#totallyscience`;
+    } else if (website == 'LinkedIn') {
+        url = `https://www.linkedin.com/sharing/share-offsite/?url=${gameNameLink}`;
+    } else if (website == 'Whats App') {
+        url = `https://web.whatsapp.com/send?text=Check%20out%20this%20cool%20game%20I%27m%20playing%20-%20${gameName}%20${gameNameLink}`;
+    } else if (website == 'Mail') {
+        url = `mailto:?subject=Check out this cool game I'm playing&body=Check out this site: <a href="${gameNameLink}">Totally Science</a>`;
+    }
+    window.open(url, '_blank');
+}
+
+function shareGame() {
+    document.body.innerHTML += `<div id="shareCon">
+    <div class="innerCon">
+        <h1>Share the fun!</h1>
+        <div class="platforms">
+            <img onclick="shareTo('Mail')" src="assets/images/icons/shareicons/email.png">
+            <img onclick="shareTo('Facebook')" src="assets/images/icons/shareicons/facebook.webp">
+            <img onclick="shareTo('Whats App')" src="assets/images/icons/shareicons/whatsapp.png">
+            <img onclick="shareTo('Twitter')" src="assets/images/icons/shareicons/twitter.png">
+            <img onclick="shareTo('Reddit')" src="assets/images/icons/shareicons/reddit.png">
+            <img onclick="shareTo('LinkedIn')" src="assets/images/icons/shareicons/linkedin.png">
+        </div>
+        <input type="text" readonly value="${document.location}">
+        <div class="buttonsCon">
+            <button class="copy" id="copyLinkButton" onclick="copyLink()">Copy</button>
+            <button class="cancel" onclick="closeShare()">Cancel</button>
+        </div>
+    </div>
+</div>`;
+}
+
+function copyLink() {
+    document.getElementById('copyLinkButton').innerHTML = 'Copied.';
+    navigator.clipboard.writeText(document.location);
+    setTimeout(() => {
+        console.log('Copy');
+    }, 1500);
+}
+
+function closeShare() {
+    var element = document.getElementById('shareCon');
+
+    element.classList.add('hide');
+    setTimeout(() => {
+        element.parentNode.removeChild(element);
+    }, 1500);
 }
