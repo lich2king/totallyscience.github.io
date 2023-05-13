@@ -1555,5 +1555,14 @@
         "date_added": "2023-05-10T13:04:14.718Z",
         "developer": "Adventure Islands",
         "iframe_url": "./assets/games/poor-bunny/index.html"
+    },
+    "Jacksmith": {
+        "description": "Jacksmith is the craftiest donkey in all the land. In Jacksmith, you are a blacksmith crafting a wide range of weapons for all of your warriors. Crafting weapons is completely hands-on. Choose your ore, choose your mold, melt it, pour it, construct it, and design it. Whether it's swords, bows, arrows, axes, or others things, you'll need skills and strategy to make the perfect weapon. After crafting, it's off to battle with your team of warriors. As they fight, you gather loot and man the cannons, and keep making progress towards the Great Wizard Dudley!",
+        "image": "./assets/games/icons/jacksmith.jpeg",
+        "controls": "Interact - [Click]",
+        "tags": ["flash", "clicker", "classic"],
+        "date_added": "2023-05-13T13:17:25.822Z",
+        "developer": "Flipline Studios",
+        "iframe_url": "./assets/games/jacksmith.html"
     }
 }
