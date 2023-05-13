@@ -193,93 +193,34 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <div id="apps">
-        <div onclick="window.open('https:/\/kazwire.com/', '_blank')" class="card game">
-            <img src="/assets/images/partners/Kazwire.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Kazwire" alt="Kazwire logo">
-            <h1>Kazwire</h1>
-            <h2>From the gaming classics to the internet, access YouTube, TikTok, and even your favorite games freely
-                and securely.</h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/weblfg.com/', '_blank')" class="card game">
-            <img src="/assets/images/partners/weblfg.webp" style="background-color: #ffffff;"
-                title="Totally Science Partner - Web LFG" alt="Web LFG logo">
-            <h1>Web LFG</h1>
-            <h2>WebLFG is a hub for the best games on the internet, all available for free! There is so much for you to
-                choose from.</h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/titaniumnetwork.org/', '_blank')" class="card game">
-            <img src="/assets/images/partners/TN.webp" style="background-color: #ffffff;"
-                title="Totally Science Partner - Titanium Network" alt="Titanium Network logo">
-            <h1>Titanium Network</h1>
-            <h2>Titanium Network is the hub organization dedicated to providing services related to bypassing internet
-                censorship.</h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/bgs.pages.dev/g/glanding', '_blank')" class="card game">
-            <img src="/assets/images/partners/bigfoot.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Bigfoot's Game Shack" alt="Bigfoot's Game Shack logo">
-            <h1 style="font-size: 21px;">Bigfoot's Game Shack</h1>
-            <h2>Get ready to level up your gaming experience with Bigfoot's Game Shack, offering a massive selection of
-                over 500+ games built for Chromebook gaming.</h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/phantom.delusionz.xyz/', '_blank')" class="card game">
-            <img src="/assets/images/partners/phantomgames.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Phantom Games" alt="Phantom Games logo">
-            <h1>Phantom Games</h1>
-            <h2>PhantomGames where simplicity and unblocked fun collide!
-            </h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/irunblocked.xyz/', '_blank')" class="card game">
-            <img src="/assets/images/partners/IRunblocked.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - IR Unblocked" alt="IR Unblocked logo">
-            <h1>IR Unblocked</h1>
-            <h2>IR Unblocked is the One-Stop Shop for all of your Unblocked Gaming, Scripting, and Entertainment Needs!
-            </h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/bluehatcrew.tk/', '_blank')" class="card game">
-            <img src="/assets/images/partners/bluehatcrew.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Blue Hat Crew" alt="Blue Hat Crew logo">
-            <h1>Blue Hat Crew</h1>
-            <h2>Meet the Blue Hat Crew - student tech experts who create solutions for students. Unblockers, unblocking
-                methods - we have what you need for easy access to online resources.
-            </h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/artclass.site/', '_blank')" class="card game">
-            <img src="/assets/images/partners/artclass.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Art Class" alt="Art Class logo">
-            <h1>Art Class</h1>
-            <h2>Art Class is the perfect website for anyone looking to play unblocked games, or use popular websites.
-                Our collection includes classics like Roblox, Subway Surfers, Idle Breakout, YouTube, and Discord - all
-                unblocked and easy to use.
-            </h2>
-            <button class="launch">Visit</button>
-        </div>
-
-        <div onclick="window.open('https:/\/platformerdotio.github.io/', '_blank')" class="card game">
-            <img src="/assets/images/partners/platformer.png" style="background-color: #ffffff;"
-                title="Totally Science Partner - Platformer.io" alt="Platformer.io logo">
-            <h1>Platformer.io</h1>
-            <h2>The best game site unblocked on Mars. Get started now for free!
-            </h2>
-            <button class="launch">Visit</button>
-        </div>
-    </div>
+    <div id="apps"></div>
 
     <?php include "assets/includes/footer.php" ?>
+
+    <script>
+        window.addEventListener('load', async () => {
+            let partnersRes = await fetcher(`${activeServer}/partners`);
+            partners = await partnersRes.json();
+
+            for (let x = 0; x < partners.length; x++) {
+                const name = partners[x].name;
+                const image = partners[x].image;
+                const website = partners[x].website;
+                const description = partners[x].description;
+
+                const partnerEle = `
+                    <div onclick="window.open('${website}', '_blank')" class="card game">
+                        <img src="${image}" style="background-color: #ffffff;" title="Totally Science Partner - ${name}" alt="${name} logo">
+                        <h1>${name}</h1>
+                        <h2>${description}</h2>
+                        <button class="launch">Visit</button>
+                    </div>
+                `;
+
+                document.getElementById(`apps`).innerHTML += partnerEle;
+            }
+        });
+    </script>
 </body>
 
 </html>
