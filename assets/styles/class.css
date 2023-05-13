@@ -254,11 +254,11 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation ease 0.25s;
 }
 
-#shareCon.hide .innerCon {
-    transition: 0.5s;
+#shareCon.hide {
+    transition: 0.25s;
     opacity: 0;
 }
 
@@ -269,6 +269,10 @@
     100% {
         opacity: 1;
     }
+}
+
+#shareCon.ghost {
+    pointer-events: none;
 }
 
 #shareCon h1 {

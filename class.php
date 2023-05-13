@@ -31,6 +31,8 @@
                 </div>
 
                 <div class="right">
+                    <button id="share" onclick="shareGame()" class="game-button button-effect-a"><img
+                            src="assets/images/icons/share.png"></button>
                     <button id="pin" class="game-button button-effect-a"><img
                             src="assets/images/icons/pinoutline.png"></button>
                     <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.png"></button>

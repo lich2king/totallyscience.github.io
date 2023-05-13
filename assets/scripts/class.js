@@ -283,7 +283,7 @@ function shareTo(website) {
     } else if (website == 'Whats App') {
         url = `https://web.whatsapp.com/send?text=Check%20out%20this%20cool%20game%20I%27m%20playing%20-%20${gameName}%20${gameNameLink}`;
     } else if (website == 'Mail') {
-        url = `mailto:?subject=Check out this cool game I'm playing&body=Check out this site: <a href="${gameNameLink}">Totally Science</a>`;
+        url = `mailto:?subject=Check out this cool game I'm playing&body=Here's the link: ${gameNameLink}`;
     }
     window.open(url, '_blank');
 }
@@ -300,7 +300,7 @@ function shareGame() {
             <img onclick="shareTo('Reddit')" src="assets/images/icons/shareicons/reddit.png">
             <img onclick="shareTo('LinkedIn')" src="assets/images/icons/shareicons/linkedin.png">
         </div>
-        <input type="text" readonly value="${document.location}">
+        <input type="text" onclick="copyLink()" readonly value="${document.location}">
         <div class="buttonsCon">
             <button class="copy" id="copyLinkButton" onclick="copyLink()">Copy</button>
             <button class="cancel" onclick="closeShare()">Cancel</button>
@@ -313,8 +313,8 @@ function copyLink() {
     document.getElementById('copyLinkButton').innerHTML = 'Copied.';
     navigator.clipboard.writeText(document.location);
     setTimeout(() => {
-        console.log('Copy');
-    }, 1500);
+        document.getElementById('copyLinkButton').innerHTML = 'Copy';
+    }, 1000);
 }
 
 function closeShare() {
@@ -323,5 +323,5 @@ function closeShare() {
     element.classList.add('hide');
     setTimeout(() => {
         element.parentNode.removeChild(element);
-    }, 1500);
+    }, 250);
 }
