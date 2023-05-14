@@ -64,11 +64,17 @@
 
     <script>
         let inProgress = false;
-        let token = JSON.parse(authToken);
 
-        if (token) {
-            location.href = 'profile.php';
-        }
+        window.addEventListener('load', async () => {
+            let response = await fetcher(`${activeServer}/auth/check`);
+            let result = await response.text();
+
+            if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+                
+            } else {
+                location.href = 'profile.php';
+            }
+        });
 
         async function SubmitSignUp() {
             if (inProgress) return;
@@ -106,11 +112,6 @@
                 });
 
                 if (loginRes.status == 200) {
-                    let text = await loginRes.text();
-                    let authRecieved = JSON.parse(text);
-
-                    localStorage.setItem('authToken', JSON.stringify(authRecieved));
-
                     location.href = 'profile.php';
                 } else if (loginRes.status == 400) {
                     let text = await loginRes.text();

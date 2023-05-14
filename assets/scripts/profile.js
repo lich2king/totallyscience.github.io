@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             games = retrievedGames;
         });
 
-    let token = JSON.parse(authToken);
+    let response = await fetcher(`${activeServer}/auth/check`);
+    let result = await response.text();
 
-    // redirect to signup page if user is not logged in
-    if (!token) {
+    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
         location.href = 'signup.php';
     }
+
+    let token = JSON.parse(result);
 
     document.getElementById('usernameSpan').innerText = token.username;
     document.getElementById('emailSpan').innerText = token.email;

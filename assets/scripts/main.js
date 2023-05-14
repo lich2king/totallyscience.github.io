@@ -3,15 +3,12 @@ const liveServer = '/api';
 const localServer = 'http://localhost:5003';
 const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 
-// get users token from localstorage
-const authToken = localStorage.getItem('authToken');
 
 /**
  * Adds certain header and sends a request 
  * 'Content-Type': 'application/json' is added to the headers
  * the method is set to POST if body passed into options
  * the body is passed into JSON.stringify()
- * the authtoken is added from localstorage
  * @param {string} endpoint - a url endpoint to be fetched. Formatted like http://example.com/ or https://example.com/
  * @param {object} options - Can be any traditional fetch options provided an object. method and body are commonly used
  */
@@ -21,8 +18,9 @@ function fetcher(endpoint, options) {
     updatedOptions.headers = {
         ...(options ? options.headers : null),
         'Content-Type': 'application/json',
-        'x-access-token': authToken || null
     };
+    
+    updatedOptions.credentials = 'include';
 
     if (options && options.hasOwnProperty('body')) {
         // switch from GET to POST
@@ -152,8 +150,9 @@ async function setPoints() {
     else document.getElementById('pointsDisplay').innerText = 0;
 }
 
-function logout() {
-    localStorage.removeItem('authToken');
+async function logout() {
+    await fetcher(`${activeServer}/auth/logout`);
+
     location.reload();
 }
 

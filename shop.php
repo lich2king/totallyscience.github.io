@@ -216,112 +216,124 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-    document.getElementById('shopnav').classList.add('selected');
+        document.getElementById('shopnav').classList.add('selected');
 
-    const vid = document.getElementById('dispenserVid');
-    const token = JSON.parse(authToken);
+        let token;
 
-    async function playVid() {
-        const dispenseButton = document.getElementById('dispenseButton');
-
-        let res = await fetcher(`${activeServer}/points/shop/unlock`);
-        let text = await res.text();
-
-        if (text == 'false' && res.status == 200) {
-            return dispenseButton.innerHTML = 'All Minis Unlocked';
-        }
-
-        let currentVal = document.getElementById('pointsDisplay').innerText;
-
-        let json = JSON.parse(text);
-
-        if (res.status == 400) {
-            if (dispenseButton.innerHTML != 'Not enough points!') {
-                setTimeout(() => {
-                    dispenseButton.innerHTML = '1000 pts';
-                }, 2000);
-            }
-
-            return dispenseButton.innerHTML = 'Not enough points!';
-        }
+        const vid = document.getElementById('dispenserVid');
         
-        vid.play();
-        
-        counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+        window.addEventListener('load', async () => {
+            let response = await fetcher(`${activeServer}/auth/check`);
+            let result = await response.text();
 
-        vid.addEventListener('ended', async () => {
-            let mini = json.mini;
-            let rarity = json.rarity;
-
-            dispenseButton.innerHTML = '1000 pts';
-            document.getElementById('prizeWon').innerHTML =
-                `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
-            document.getElementById('prizeWon').classList.add('active');
-            document.getElementsByName(mini)[0].classList.remove('locked');
-
-            if (rarity == 'Common') {
-                document.getElementById('prizeWon').style.setProperty('--rarityColor',
-                    'rgb(120, 120, 120)');
-            } else if (rarity == 'Rare') {
-                document.getElementById('prizeWon').style.setProperty('--rarityColor',
-                    'rgb(0, 69, 149)');
-            } else if (rarity == 'Epic') {
-                document.getElementById('prizeWon').style.setProperty('--rarityColor',
-                    'rgb(178, 0, 191)');
-            } else if (rarity == 'Legendary') {
-                document.getElementById('prizeWon').style.setProperty('--rarityColor',
-                    'rgb(233, 241, 0)');
+            if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+                token = false;
+            } else {
+                token = true;
             }
-        }, false);
-    }
+        });
 
-    function dispenseCharacter() {
-        const dispenseButton = document.getElementById('dispenseButton');
+        async function playVid() {
+            const dispenseButton = document.getElementById('dispenseButton');
 
-        if (vid.paused && token) {
-            dispenseButton.innerHTML = 'Dispensing...';
-
-            playVid();
-        } else if (!token) {
-            if (dispenseButton.innerHTML != 'Not logged in!') {
-                setTimeout(() => {
-                    dispenseButton.innerHTML = '1000 pts';
-                }, 2000);
-            }
-            dispenseButton.innerHTML = 'Not logged in!';
-        }
-    }
-
-
-    window.addEventListener('load', async () => {
-        // if user is logged in, load minis they have unlocked
-        if (token) {
-            let res = await fetcher(`${activeServer}/points/shop/unlocked`);
+            let res = await fetcher(`${activeServer}/points/shop/unlock`);
             let text = await res.text();
 
-            let minis = text.split(';');
+            if (text == 'false' && res.status == 200) {
+                return dispenseButton.innerHTML = 'All Minis Unlocked';
+            }
 
-            for (let i = 1; i < minis.length; i++) {
-                if (minis[i] == 'undefined') continue;
+            let currentVal = document.getElementById('pointsDisplay').innerText;
 
-                document.getElementsByName(minis[i])[0].classList.remove('locked');
+            let json = JSON.parse(text);
+
+            if (res.status == 400) {
+                if (dispenseButton.innerHTML != 'Not enough points!') {
+                    setTimeout(() => {
+                        dispenseButton.innerHTML = '1000 pts';
+                    }, 2000);
+                }
+
+                return dispenseButton.innerHTML = 'Not enough points!';
+            }
+            
+            vid.play();
+            
+            counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal - 1000), 2000);
+
+            vid.addEventListener('ended', async () => {
+                let mini = json.mini;
+                let rarity = json.rarity;
+
+                dispenseButton.innerHTML = '1000 pts';
+                document.getElementById('prizeWon').innerHTML =
+                    `<img id='prizeWonImg' src='/assets/minis/JPGs/${mini}.jpg'>`;
+                document.getElementById('prizeWon').classList.add('active');
+                document.getElementsByName(mini)[0].classList.remove('locked');
+
+                if (rarity == 'Common') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                        'rgb(120, 120, 120)');
+                } else if (rarity == 'Rare') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                        'rgb(0, 69, 149)');
+                } else if (rarity == 'Epic') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                        'rgb(178, 0, 191)');
+                } else if (rarity == 'Legendary') {
+                    document.getElementById('prizeWon').style.setProperty('--rarityColor',
+                        'rgb(233, 241, 0)');
+                }
+            }, false);
+        }
+
+        function dispenseCharacter() {
+            const dispenseButton = document.getElementById('dispenseButton');
+
+            if (vid.paused && token) {
+                dispenseButton.innerHTML = 'Dispensing...';
+
+                playVid();
+            } else if (!token) {
+                if (dispenseButton.innerHTML != 'Not logged in!') {
+                    setTimeout(() => {
+                        dispenseButton.innerHTML = '1000 pts';
+                    }, 2000);
+                }
+                dispenseButton.innerHTML = 'Not logged in!';
             }
         }
-    });
 
-    document.body.addEventListener('click', () => {
-        // hide awarded mini from front center of screen when clicked
-        const prizeWon = document.getElementById('prizeWon');
 
-        if (prizeWon.innerHTML != '') {
-            prizeWon.classList.add('slideAway');
+        window.addEventListener('load', async () => {
+            // if user is logged in, load minis they have unlocked
+            if (token) {
+                let res = await fetcher(`${activeServer}/points/shop/unlocked`);
+                let text = await res.text();
 
-            setTimeout(() => {
-                prizeWon.classList.remove('active', 'slideAway');
-                prizeWon.innerHTML = '';
-            }, 1500);
-        }
-    });
+                let minis = text.split(';');
+
+                for (let i = 1; i < minis.length; i++) {
+                    if (minis[i] == 'undefined') continue;
+
+                    document.getElementsByName(minis[i])[0].classList.remove('locked');
+                }
+            }
+        });
+
+        document.body.addEventListener('click', () => {
+            // hide awarded mini from front center of screen when clicked
+            const prizeWon = document.getElementById('prizeWon');
+
+            if (prizeWon.innerHTML != '') {
+                prizeWon.classList.add('slideAway');
+
+                setTimeout(() => {
+                    prizeWon.classList.remove('active', 'slideAway');
+                    prizeWon.innerHTML = '';
+                }, 1500);
+            }
+        });
     </script>
 </body>
 

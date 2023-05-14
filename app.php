@@ -19,7 +19,7 @@
 
     <p style="text-align: center; color: whitesmoke; font-size: 15pt;">powered by <a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet,</a> a Titanium Network proxy</p>
 
-    <script src="assets/scripts/main.js?v47"></script>
+    <script src="assets/scripts/main.js?v48"></script>
     <script>
         document.getElementById("appsnav").classList.add("selected");
 

@@ -1,6 +1,17 @@
 document.getElementById('gamesnav').classList.add('selected');
 
-const token = JSON.parse(authToken);
+let token;
+
+window.addEventListener('load', async () => {
+    let response = await fetcher(`${activeServer}/auth/check`);
+    let result = await response.text();
+
+    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+        token = false;
+    } else {
+        token = true;
+    }
+});
 
 // Load Games
 const gamesDiv = document.getElementById('games');

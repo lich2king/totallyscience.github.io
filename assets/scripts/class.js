@@ -3,8 +3,7 @@ const gameName = urlParams.get('class').replaceAll('-', ' ');
 const id = urlParams.get('id');
 
 let likeCount = 0;
-
-const token = JSON.parse(authToken);
+let token;
 
 async function displayUserData() {
     const pinBtn = document.querySelector('#pin');
@@ -97,6 +96,15 @@ function setupActionButtons() {
 }
 
 window.addEventListener('load', async () => {
+    let response = await fetcher(`${activeServer}/auth/check`);
+    let result = await response.text();
+
+    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+        token = false;
+    } else {
+        token = true;
+    }
+
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 

@@ -32,12 +32,14 @@
 <?php include "assets/includes/footer.php" ?>
 
 <script>
-    let token = JSON.parse(authToken);
+    window.addEventListener('load', async () => {
+        let response = await fetcher(`${activeServer}/auth/check`);
+        let result = await response.text();
 
-    // redirect to signup page if user is not logged in
-    if (!token) {
-        location.href = 'signup.php';
-    }
+        if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+            location.assign('/signup.php');
+        }
+    });
 
     
     async function changeEmail() {
@@ -49,8 +51,6 @@
         let text = await res.text();
 
         if (res.status == 200) {
-            localStorage.setItem('authToken', text);
-            
             // display success message to user
             error.style.color = 'green';
             error.innerText = 'success';

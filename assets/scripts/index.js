@@ -1,5 +1,16 @@
-let token = JSON.parse(authToken);
+let token;
 let interval;
+
+window.addEventListener('load', async () => {
+    let response = await fetcher(`${activeServer}/auth/check`);
+    let result = await response.text();
+
+    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+        token = false;
+    } else {
+        token = true;
+    }
+});
 
 // featured games slides code
 let shouldAutoSwitch = true;
