@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v59'>
+    <link rel='stylesheet' href='assets/styles/class.css?v60'>
 </head>
 
 <body>
@@ -31,6 +31,8 @@
                 </div>
 
                 <div class="right">
+                    <button id="share" onclick="shareGame()" class="game-button button-effect-a"><img
+                            src="assets/images/icons/share.png"></button>
                     <button id="pin" class="game-button button-effect-a"><img
                             src="assets/images/icons/pinoutline.png"></button>
                     <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.png"></button>
@@ -87,9 +89,10 @@
         </div>
     </div>
 
+
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v153"></script>
+    <script src="assets/scripts/class.js?v156"></script>
 </body>
 
 </html>

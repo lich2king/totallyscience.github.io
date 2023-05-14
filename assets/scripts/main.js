@@ -1,5 +1,5 @@
 // establish which server to connect to, depending on if hosted locally or live online
-const liveServer = 'https://api.megamathstuff.com';
+const liveServer = '/api';
 const localServer = 'http://localhost:5003';
 const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 

@@ -9,6 +9,7 @@
     </div>
 
     <div id="middlebar">
+        <img src="assets/images/transparentlogo.png"></img>
         <h1>Totally Science</h1>
     </div>
 

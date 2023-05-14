@@ -216,7 +216,7 @@
             const gameScore = highscores[score].score;
             if (game != null) {
                 const highscoreDiv = `
-                    <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game}'">
+                    <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game.replaceAll(' ', '-')}'">
                         <div class="text">
                             <h1>${game}</h1>
 

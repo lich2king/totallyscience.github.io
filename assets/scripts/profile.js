@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
     let likedgames = await userLikedRes.json();
-    
+
     if (likedgames.length > 0) {
         for (like in likedgames) {
             if (likedgames[like] != null) {
@@ -109,7 +109,7 @@ function createGameButton(game, pin) {
     let gameBtn = '';
 
     gameBtn = `
-        <div name="${game}" id="gameDiv" onclick="location.href = 'class.php?class=${game}'" class="${classlist}">
+        <div name="${game}" id="gameDiv" onclick="location.href = 'class.php?class=${game.replaceAll(' ', '-')}'" class="${classlist}">
             <div class="imageCon">
                 <img src="${data.image}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>

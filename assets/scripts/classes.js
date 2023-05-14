@@ -75,8 +75,8 @@ if (category != null) {
 
 let sortObject = (obj) =>
     Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -287,14 +287,12 @@ var typingTimer;
 var doneTypingInterval = 1000; // Time in milliseconds (1 second)
 
 searchBar.addEventListener('keyup', () => {
-
-
     clearTimeout(typingTimer);
-    typingTimer = setTimeout(function() {
+    typingTimer = setTimeout(function () {
         var input = searchBar.value;
         gtag('event', 'Searched', {
-            'event_category': 'Typing',
-            'event_label': input
+            event_category: 'Typing',
+            event_label: input,
         });
     }, doneTypingInterval);
 
@@ -346,7 +344,7 @@ function createGameButton(game, pin) {
 
     let buttons = '';
 
-    let onclick = `location.href = 'class.php?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
     if (pin == 'pin') {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
@@ -403,7 +401,7 @@ function createGameButton(game, pin) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -413,7 +411,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -440,7 +438,8 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
+        },
+        {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 

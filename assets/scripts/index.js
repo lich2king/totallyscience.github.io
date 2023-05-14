@@ -51,10 +51,10 @@ let sorted;
 let hasLoaded = false;
 let sortObject = (obj) =>
     Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
@@ -71,21 +71,21 @@ window.addEventListener('load', async() => {
         let json = JSON.parse(text);
 
         if (json.isReady) {
-
             let points = 100;
 
             if (json.rewardDay >= 6) {
                 points = 1000;
             }
 
-            document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
+            document.getElementById(
+                'timerText'
+            ).innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
         } else {
             startTimer(json.rewardTime);
         }
         animateBar(json.rewardDay);
     } else {
         // user is not signed into an account
-
 
         document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
     }
@@ -143,7 +143,6 @@ function animateBar(day) {
     }
 }
 
-
 async function claimReward() {
     if (!token) {
         location.href = 'signup.php';
@@ -164,7 +163,6 @@ async function claimReward() {
         let currentVal = document.getElementById('pointsDisplay').innerText;
         counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
     }
-
 }
 
 async function loadCookies() {
@@ -486,7 +484,7 @@ function createGameButton(game, pin, lazy) {
     let gameBtn = '';
     let buttons = '';
 
-    let onclick = `location.href = 'class.php?class=${game}'`;
+    let onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
     let backgroundImg =
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
@@ -546,7 +544,7 @@ function createGameButton(game, pin, lazy) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -556,7 +554,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -583,7 +581,8 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
+        },
+        {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 
