@@ -1573,5 +1573,14 @@
         "date_added": "2023-05-14T19:51:36.335Z",
         "developer": "Voodoo",
         "iframe_url": "./assets/games/dune/index.html"
+    },
+    "GunSpin": {
+        "description": "Gunspin is a physics game where you shoot a gun to keep it flying for as long as possible. Upgrade your gun with more bullets and power to make it travel even further.",
+        "image": "./assets/games/icons/gunspin.png",
+        "controls": "Interact - [Click]",
+        "tags": ["action", "shooting"],
+        "date_added": "2023-05-14T20:25:14.091Z",
+        "developer": "MiniJuegos",
+        "iframe_url": "./assets/games/gunspin/index.html"
     }
 }
