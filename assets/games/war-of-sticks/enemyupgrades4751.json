@@ -1,0 +1,25 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "MinerCart": 1.5,
+        "MinerWheels": 1,
+        "MinerPickaxe": 0,
+        "ShielderHelmet": 1.1,
+        "ShielderShield": 1.5,
+        "ShielderSword": 0.1,
+        "BerserkerHelmet": 1.1,
+        "BerserkerHammer": 0.5,
+        "ArcherHelmet": 1.5,
+        "ArcherBag": 1.1,
+        "ArcherBow": 0,
+        "GrenadierHelmet": 0,
+        "GrenadierArm": 0,
+        "GrenadierGun": 0,
+        "MageHelmet": 0,
+        "MageScepter": 0,
+        "NecromancerHelmet": 0,
+        "NecromancerScythe": 0,
+        "SworderHelmet": 2,
+        "SworderSword": 1
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "Level7": "Berserker<>Ice",
+        "Level12": "Shielder<>Explosive",
+        "Level23": "Archer<>Explosive",
+        "Level32": "Miner<>Explosive",
+        "Level20": "Mage<>Ice",
+        "Level16": "Grenadier<>Bandit",
+        "Level29": "Necromancer<>Undead"
+    }
+}

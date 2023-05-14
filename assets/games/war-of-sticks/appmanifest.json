@@ -1,0 +1,11 @@
+{
+	"name": "War of Sticks",
+	"short_name": "War of Sticks",
+	"description": "Battle strategy",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#32a482",
+	"icons": [],
+	"theme_color": "#32a482"
+}
