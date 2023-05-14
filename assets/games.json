@@ -1582,5 +1582,14 @@
         "date_added": "2023-05-14T20:25:14.091Z",
         "developer": "MiniJuegos",
         "iframe_url": "./assets/games/gunspin/index.html"
+    },
+    "War Of Sticks": {
+        "description": "In the strategy game War of Sticks, you take control of the troops of a stick kingdom and manage their workload and resources to effectively destroy the opposing forces. Your poor stick people need to rebel against the tyrannical Red Empire. Up until the liberation of your people, mine, build, equip, upgrade, attack, and defend. Utilize your gold to buy units like shielders, archers, barbarians, and even wizards after first training miners to gather it. Build defense towers using the stones your miners gathered. To maximize your power, don't forget to improve all of your buildings and units.",
+        "image": "./assets/games/icons/war-of-sticks.png",
+        "controls": "Interact - [Click]",
+        "tags": ["action", "shooting", "clicker"],
+        "date_added": "2023-05-14T20:25:14.091Z",
+        "developer": "Shoom Games",
+        "iframe_url": "./assets/games/war-of-sticks/index.html"
     }
 }
