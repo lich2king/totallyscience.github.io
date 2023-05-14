@@ -1564,5 +1564,14 @@
         "date_added": "2023-05-13T13:17:25.822Z",
         "developer": "Flipline Studios",
         "iframe_url": "./assets/games/jacksmith.html"
+    },
+    "Dune!": {
+        "description": "Jump above the line to score, but beware! The higher you get, the harder the landing will be! Don't crash and keep it smooth!",
+        "image": "./assets/games/icons/dune.png",
+        "controls": "Interact - [Click]",
+        "tags": ["action"],
+        "date_added": "2023-05-14T19:51:36.335Z",
+        "developer": "Voodoo",
+        "iframe_url": "./assets/games/dune/index.html"
     }
 }
