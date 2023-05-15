@@ -1,5 +1,10 @@
 const urlParams = new URLSearchParams(window.location.search);
-const gameName = urlParams.get('class').replaceAll('-', ' ');
+let gameName = urlParams.get('class');
+if (gameName) {
+    gameName = gameName.replaceAll('-', ' ');
+} else {
+    gameName = '';
+}
 const id = urlParams.get('id');
 
 let likeCount = 0;
@@ -35,7 +40,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async (e) => {
+    likeBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -68,7 +73,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async (e) => {
+    pinBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -95,7 +100,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
