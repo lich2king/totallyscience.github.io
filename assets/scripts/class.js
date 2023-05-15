@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const gameName = urlParams.get('class');
+let gameName = urlParams.get('class');
 console.log(gameName);
 if (gameName) {
     gameName = gameName.replaceAll('-', ' ');
