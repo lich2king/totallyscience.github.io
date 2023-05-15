@@ -1,5 +1,10 @@
 const urlParams = new URLSearchParams(window.location.search);
-const gameName = urlParams.get('class').replaceAll('-', ' ');
+const gameName = urlParams.get('class');
+if (gameName) {
+    gameName = gameName.replaceAll('-', ' ');
+} else {
+    gameName = '';
+}
 const id = urlParams.get('id');
 
 let likeCount = 0;
@@ -113,7 +118,6 @@ window.addEventListener('load', async() => {
 
     const gameData = retrievedGames[gameName];
 
-    if (gameName == '') window.location.href = '../classes.php';
     if (!gameData) window.location.href = '../classes.php';
 
     // update navbar to underline game link
