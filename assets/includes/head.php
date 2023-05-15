@@ -69,4 +69,4 @@ if (location.pathname != '/chat' && location.pathname != '/chat.php') {
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 
 <link rel="stylesheet" href="assets/styles/main.css?v36">
-<link rel="icon" href="assets/images/totally-science-logo-transparent-scaled.png">
+<link rel="icon" href="assets/images/LogoTransparent.png">
