@@ -4,7 +4,7 @@
             <h1>Contact Us</h1>
             <p><a href="mailto: help@totallyscience" target=”_blank”>help@totallyscience.co</a></p>
             <p><a href="https://discord.com/invite/6kTskTSTFM" target=”_blank”>Join our Discord</a></p>
-            <p><a href="https://www.tiktok.com/@totallyscience_" target=”_blank”>Follow our Tik Tok</a></p>
+            <p><a href="https://www.tiktok.com/@totallyscience.co" target=”_blank”>Follow our Tik Tok</a></p>
         </div>
 
         <div class="footSection">
