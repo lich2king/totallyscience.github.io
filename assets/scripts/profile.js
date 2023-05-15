@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             games = retrievedGames;
         });
 
-    let response = await fetcher(`${activeServer}/auth/check`);
+    let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
     if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('emailSpan').innerText = token.email;
 
     // load user's highscores
-    let highscoreRes = await fetcher(`${activeServer}/profile/highscores/get`);
+    let highscoreRes = await fetcher(`/profile/highscores/get`);
 
     if (highscoreRes.status == 200) {
         highscores = await highscoreRes.json();
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     recentRow.innerHTML += arrowContainer;
     likedRow.innerHTML += arrowContainer;
 
-    let recentGamesres = await fetcher(`${activeServer}/profile/recent/get`);
+    let recentGamesres = await fetcher(`/profile/recent/get`);
     let text = await recentGamesres.text();
 
     // split from string into array and slice the first element out (first element is an empty space)
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
+    let userLikedRes = await fetcher(`/profile/liked/get`);
     let likedgames = await userLikedRes.json();
 
     if (likedgames.length > 0) {

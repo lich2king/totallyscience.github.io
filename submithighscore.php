@@ -52,7 +52,7 @@
 
     <script>
         window.addEventListener('load', async () => {
-            let response = await fetcher(`${activeServer}/auth/check`);
+            let response = await fetcher(`/auth/check`);
             let result = await response.text();
 
             if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -127,7 +127,7 @@
             errorText.innerHTML = '';
             errorText.style.color = 'red';
 
-            let submitRes = await fetcher(`${activeServer}/profile/highscores/submit`, {
+            let submitRes = await fetcher(`/profile/highscores/submit`, {
                 body: {
                     gameName: gameName,
                     score: score,

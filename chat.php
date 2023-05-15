@@ -13,6 +13,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 
     <?php include "assets/includes/footer.php" ?>
+
+    <script>
+        document.getElementById('chatnav').classList.add('selected');
+    </script>
 </body>
 
 </html>

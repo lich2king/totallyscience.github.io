@@ -2,7 +2,7 @@ let token;
 let interval;
 
 window.addEventListener('load', async () => {
-    let response = await fetcher(`${activeServer}/auth/check`);
+    let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
     if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -69,7 +69,7 @@ window.addEventListener('load', async () => {
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     let retrievedGames = await gamesRes.json();
 
-    let partnersRes = await fetcher(`${activeServer}/partners`);
+    let partnersRes = await fetcher(`/partners`);
     partners = await partnersRes.json();
 
     // update underline link in navbar
@@ -77,7 +77,7 @@ window.addEventListener('load', async () => {
 
     // check if user is signed in
     if (token) {
-        let rewardRes = await fetcher(`${activeServer}/points/reward/check`);
+        let rewardRes = await fetcher(`/points/reward/check`);
         let text = await rewardRes.text();
         let json = JSON.parse(text);
 
@@ -161,7 +161,7 @@ async function claimReward() {
 
     document.getElementById('timerText').innerHTML = '<span class="loader"></span>';
 
-    let res = await fetcher(`${activeServer}/points/reward/claim`);
+    let res = await fetcher(`/points/reward/claim`);
 
     if (res.status == 200) {
         let text = await res.text();
@@ -322,7 +322,7 @@ async function displayGames() {
 
         let length = 0;
 
-        let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
+        let userLikedRes = await fetcher(`/profile/liked/get`);
 
         if (userLikedRes.status == 200) {
             let likedgames = await userLikedRes.json();
@@ -353,7 +353,7 @@ async function displayGames() {
     row.innerHTML += arrowContainer;
     //for each popular game, add the game to the horizontalCon
 
-    let popGamesRes = await fetcher(`${activeServer}/stats/games/popular`);
+    let popGamesRes = await fetcher(`/stats/games/popular`);
 
     if (popGamesRes.status == 200) {
         let text = await popGamesRes.text();
@@ -427,7 +427,7 @@ async function suggestGames() {
     // retrieve all pinned games of user
     let pinnedGames = [];
     if (token) {
-        let res = await fetcher(`${activeServer}/profile/pinned/get`);
+        let res = await fetcher(`/profile/pinned/get`);
         let text = await res.text();
 
         pinnedGames = text.split(';');

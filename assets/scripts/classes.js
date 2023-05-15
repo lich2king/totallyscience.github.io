@@ -3,7 +3,7 @@ document.getElementById('gamesnav').classList.add('selected');
 let token;
 
 window.addEventListener('load', async () => {
-    let response = await fetcher(`${activeServer}/auth/check`);
+    let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
     if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -225,7 +225,7 @@ async function displayGames() {
 
         let length = 0;
 
-        let userLikedRes = await fetcher(`${activeServer}/profile/liked/get`);
+        let userLikedRes = await fetcher(`/profile/liked/get`);
         let likedgames = await userLikedRes.json();
 
         length = likedgames.length;
@@ -254,7 +254,7 @@ async function displayGames() {
 
     //for each popular game, add the game to the horizontalCon
 
-    let popGamesRes = await fetcher(`${activeServer}/stats/games/popular`);
+    let popGamesRes = await fetcher(`/stats/games/popular`);
 
     if (popGamesRes.status == 200) {
         let text = await popGamesRes.text();

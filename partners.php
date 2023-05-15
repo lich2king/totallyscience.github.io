@@ -199,7 +199,7 @@
 
     <script>
         window.addEventListener('load', async () => {
-            let partnersRes = await fetcher(`${activeServer}/partners`);
+            let partnersRes = await fetcher(`/partners`);
             partners = await partnersRes.json();
 
             for (let x = 0; x < partners.length; x++) {

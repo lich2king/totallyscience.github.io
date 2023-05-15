@@ -33,9 +33,7 @@ function fetcher(endpoint, options) {
     }
 
     //add active server when using node version
-    //return fetch(`${activeServer}${endpoint}`, updatedOptions);
-
-    return fetch(`${endpoint}`, updatedOptions);
+    return fetch(`${activeServer}${endpoint}`, updatedOptions);
 }
 /**
  * takes and integer and ads M or K suffix if it is above 1,000 or 1,000,000
@@ -143,7 +141,7 @@ window.addEventListener('load', () => {
 
 // update points in navbar
 async function setPoints() {
-    let res = await fetcher(`${activeServer}/points/check`);
+    let res = await fetcher(`/points/check`);
     let points = await res.text();
 
     if (res.status == 200) document.getElementById('pointsDisplay').innerText = points;
@@ -151,7 +149,7 @@ async function setPoints() {
 }
 
 async function logout() {
-    await fetcher(`${activeServer}/auth/logout`);
+    await fetcher(`/auth/logout`);
 
     location.reload();
 }

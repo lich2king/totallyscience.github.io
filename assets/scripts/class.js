@@ -12,7 +12,7 @@ async function displayUserData() {
     const likeImg = likeBtn.firstChild;
 
     // check if user has liked and/or pinned the game
-    let res = await fetcher(`${activeServer}/profile/gamedata/${gameName}`);
+    let res = await fetcher(`/profile/gamedata/${gameName}`);
     let json = await res.json();
 
     // set like icon if user has liked it
@@ -22,7 +22,7 @@ async function displayUserData() {
     if (json.pinned) pinImg.setAttribute('src', 'assets/images/icons/pin.png');
 
     // add to recently played games list
-    fetcher(`${activeServer}/profile/recent/set`, { body: { gameName: gameName } });
+    fetcher(`/profile/recent/set`, { body: { gameName: gameName } });
 }
 
 function setupActionButtons() {
@@ -40,7 +40,7 @@ function setupActionButtons() {
 
         if (token) {
             //took away the await
-            let res = await fetcher(`${activeServer}/profile/liked/change`, { body: { gameName: gameName } });
+            let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
 
             if (res.status == 200) {
                 const likedIcon = 'assets/images/icons/like.png';
@@ -72,7 +72,7 @@ function setupActionButtons() {
         e.target.classList.add('button-click');
 
         if (token) {
-            let res = await fetcher(`${activeServer}/profile/pinned/change`, { body: { gameName: gameName } });
+            let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
 
             if (res.status == 400) {
                 swal('You have pinned the max amount of games (3).');
@@ -96,7 +96,7 @@ function setupActionButtons() {
 }
 
 window.addEventListener('load', async () => {
-    let response = await fetcher(`${activeServer}/auth/check`);
+    let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
     if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -156,19 +156,19 @@ window.addEventListener('load', async () => {
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
     // update game total like count
-    likeCount = await fetcher(`${activeServer}/profile/liked/count`, { body: { gameName: gameName } });
+    likeCount = await fetcher(`/profile/liked/count`, { body: { gameName: gameName } });
     likeCount = await likeCount.text();
 
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likeCount)) || '0';
 
     // update game current highscore
-    let highscoreRes = await fetcher(`${activeServer}/profile/highscores/retrieve`, { body: { gameName: gameName } });
+    let highscoreRes = await fetcher(`/profile/highscores/retrieve`, { body: { gameName: gameName } });
     let highscoreText = await highscoreRes.text();
 
     document.getElementById('currentHighscore').innerText = highscoreRes.status == 200 ? numFormatter(highscoreText) : '0';
 
     // update game statistics
-    fetcher(`${activeServer}/stats/games/view`, { body: { gameName: gameName } });
+    fetcher(`/stats/games/view`, { body: { gameName: gameName } });
 
     // setup action button events
     setupActionButtons();

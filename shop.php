@@ -223,7 +223,7 @@
         const vid = document.getElementById('dispenserVid');
         
         window.addEventListener('load', async () => {
-            let response = await fetcher(`${activeServer}/auth/check`);
+            let response = await fetcher(`/auth/check`);
             let result = await response.text();
 
             if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -236,7 +236,7 @@
         async function playVid() {
             const dispenseButton = document.getElementById('dispenseButton');
 
-            let res = await fetcher(`${activeServer}/points/shop/unlock`);
+            let res = await fetcher(`/points/shop/unlock`);
             let text = await res.text();
 
             if (text == 'false' && res.status == 200) {
@@ -308,7 +308,7 @@
         window.addEventListener('load', async () => {
             // if user is logged in, load minis they have unlocked
             if (token) {
-                let res = await fetcher(`${activeServer}/points/shop/unlocked`);
+                let res = await fetcher(`/points/shop/unlocked`);
                 let text = await res.text();
 
                 let minis = text.split(';');

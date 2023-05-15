@@ -35,7 +35,7 @@
         let inProgress = false;
 
         window.addEventListener('load', async () => {
-            let response = await fetcher(`${activeServer}/auth/check`);
+            let response = await fetcher(`/auth/check`);
             let result = await response.text();
 
             if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -54,7 +54,7 @@
             const pass = document.getElementById('password').value;
             const errorText = document.getElementById('errorText');
 
-            let loginRes = await fetcher(`${activeServer}/auth/login`, { body: { username: user, password: pass } });
+            let loginRes = await fetcher(`/auth/login`, { body: { username: user, password: pass } });
 
             if (loginRes.status == 200) {
                 errorText.style.color = 'green';

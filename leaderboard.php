@@ -203,7 +203,7 @@
         document.getElementById("leaderboardnav").classList.add("selected");
 
         // fetch list of highscores
-        let highscoresRes = await fetcher(`${activeServer}/profile/highscores/view`);
+        let highscoresRes = await fetcher(`/profile/highscores/view`);
         let text = await highscoresRes.text();
         let highscores = JSON.parse(text);
 

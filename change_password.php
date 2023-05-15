@@ -38,7 +38,7 @@
 
 <script>
     window.addEventListener('load', async () => {
-        let response = await fetcher(`${activeServer}/auth/check`);
+        let response = await fetcher(`/auth/check`);
         let result = await response.text();
 
         if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -54,7 +54,7 @@
         const password = document.getElementById('password').value;
         const error = document.getElementById('errorText');
 
-        let res = await fetcher(`${activeServer}/auth/change/password`, { body: { confirm_password: confirmPassword, password: password, current_password: currentPassword } });
+        let res = await fetcher(`/auth/change/password`, { body: { confirm_password: confirmPassword, password: password, current_password: currentPassword } });
         let text = await res.text();
 
         if (res.status == 200) {

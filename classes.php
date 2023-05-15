@@ -31,7 +31,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/classes.js?v115"></script>
+    <script src="assets/scripts/classes.js?v116"></script>
 </body>
 
 </html>

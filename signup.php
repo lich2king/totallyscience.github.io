@@ -66,7 +66,7 @@
         let inProgress = false;
 
         window.addEventListener('load', async () => {
-            let response = await fetcher(`${activeServer}/auth/check`);
+            let response = await fetcher(`/auth/check`);
             let result = await response.text();
 
             if (result == 'A token is required for authentication' || result == 'Invalid Token') {
@@ -90,7 +90,7 @@
 
             error.innerText = '';
 
-            let registerRes = await fetcher(`${activeServer}/auth/register`, {
+            let registerRes = await fetcher(`/auth/register`, {
                 body: {
                     username: user,
                     email: email,
@@ -104,7 +104,7 @@
                 error.style.color = 'green';
                 error.innerText = 'account successfully created';
 
-                let loginRes = await fetcher(`${activeServer}/auth/login`, {
+                let loginRes = await fetcher(`/auth/login`, {
                     body: {
                         username: user,
                         password: pass
