@@ -35,7 +35,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async (e) => {
+    likeBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -68,7 +68,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async (e) => {
+    pinBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -95,7 +95,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
@@ -113,6 +113,7 @@ window.addEventListener('load', async () => {
 
     const gameData = retrievedGames[gameName];
 
+    if (gameName == null) window.location.href = '../classes.php';
     if (!gameData) window.location.href = '../classes.php';
 
     // update navbar to underline game link
