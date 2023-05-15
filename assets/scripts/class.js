@@ -113,7 +113,7 @@ window.addEventListener('load', async() => {
 
     const gameData = retrievedGames[gameName];
 
-    if (gameName == null) window.location.href = '../classes.php';
+    if (gameName == '') window.location.href = '../classes.php';
     if (!gameData) window.location.href = '../classes.php';
 
     // update navbar to underline game link
