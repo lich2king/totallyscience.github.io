@@ -21,10 +21,8 @@
     // exec commands
     $output = '';
 
-    chdir('/home/ts-backend/');
-
     foreach($commands AS $command){
-        $tmp = exec($command);
+        $tmp = exec('cd /home/ts-backend/ && ' . $command);
         
         $output .= "<span style=\"color: #6BE234;\">\$</span><span style=\"color: #729FCF;\">{$command}\n</span><br />";
         $output .= htmlentities(trim($tmp)) . "\n<br /><br />";
