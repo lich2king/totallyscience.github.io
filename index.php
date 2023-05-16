@@ -5,6 +5,7 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/index.css?v35'>
+    <script src="/assets/scripts/fontawesome.js"></script>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
                 style="background-image: url(./assets/images/featuredimg/monkey-mart.jpg); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">MONKEY MART</h2>
+                    <h2 class="gametext stroke-text smooth-16">MONKEY MART <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
@@ -46,7 +47,7 @@
                 style="background-image: url(./assets/images/featuredimg/bob-the-robber-2-featured.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2</h2>
+                    <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2 <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
@@ -58,7 +59,7 @@
                 style="background-image: url(./assets/images/featuredimg/motox3mpoolparty.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">MOTO X3M POOL PARTY</h2>
+                    <h2 class="gametext stroke-text smooth-16">MOTO X3M POOL PARTY <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
@@ -71,7 +72,7 @@
                 style="background-image: url(./assets/images/featuredimg/vex-7.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">VEX 7</h2>
+                    <h2 class="gametext stroke-text smooth-16">VEX 7 <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
