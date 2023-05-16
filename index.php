@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/index.css?v35'>
+    <link rel='stylesheet' href='assets/styles/index.css?v36'>
     <script src="/assets/scripts/fontawesome.js"></script>
 </head>
 
@@ -52,7 +52,8 @@
                 </div>
 
                 <button onclick="window.open('class.php?class=Bob-the-Robber-2', '_self')"
-                    class="featureButton button">Play Now <i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
+                    class="featureButton button">Play Now <i class="fa-solid fa-angle-right fa-lg"
+                        style="color: #ffffff;"></i></button>
             </div>
 
             <div class="featureSlot fade"
@@ -271,7 +272,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v85"></script>
+    <script src="assets/scripts/index.js?v86"></script>
 </body>
 
 </html>
