@@ -226,9 +226,10 @@
 .featureButton {
     position: absolute;
     margin-top: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.featureButton .fa-angle-right {
+    margin-top: 5px;
 }
 
 @media screen and (max-width: 1150px) {
