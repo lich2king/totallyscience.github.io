@@ -229,6 +229,18 @@
             if (result == 'A token is required for authentication' || result == 'Invalid Token') {
                 token = false;
             } else {
+                // user is logged in, load minis they have unlocked
+                let res = await fetcher(`/points/shop/unlocked`);
+                let text = await res.text();
+
+                let minis = text.split(';');
+
+                for (let i = 1; i < minis.length; i++) {
+                    if (minis[i] == 'undefined') continue;
+                    
+                    document.getElementsByName(minis[i])[0].classList.remove('locked');
+                }
+
                 token = true;
             }
         });
@@ -303,23 +315,6 @@
                 dispenseButton.innerHTML = 'Not logged in!';
             }
         }
-
-
-        window.addEventListener('load', async () => {
-            // if user is logged in, load minis they have unlocked
-            if (token) {
-                let res = await fetcher(`/points/shop/unlocked`);
-                let text = await res.text();
-
-                let minis = text.split(';');
-
-                for (let i = 1; i < minis.length; i++) {
-                    if (minis[i] == 'undefined') continue;
-
-                    document.getElementsByName(minis[i])[0].classList.remove('locked');
-                }
-            }
-        });
 
         document.body.addEventListener('click', () => {
             // hide awarded mini from front center of screen when clicked
