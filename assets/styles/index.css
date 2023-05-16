@@ -228,6 +228,10 @@
     margin-top: 30%;
 }
 
+.featureButton .fa-angle-right {
+    font-size: 1.4vw;
+}
+
 @media screen and (max-width: 1150px) {
     #scisuggests {
         flex: 20;
