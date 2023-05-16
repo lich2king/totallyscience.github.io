@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/index.css?v37'>
+    <link rel='stylesheet' href='assets/styles/index.css?v38'>
     <script src="/assets/scripts/fontawesome.js"></script>
 </head>
 
