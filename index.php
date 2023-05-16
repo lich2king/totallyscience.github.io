@@ -35,49 +35,49 @@
                 style="background-image: url(./assets/images/featuredimg/monkey-mart.jpg); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">MONKEY MART <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
+                    <h2 class="gametext stroke-text smooth-16">MONKEY MART</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
                 <button onclick="window.open('class.php?class=Monkey-Mart', '_self')" class="featureButton button">Play
-                    Now</button>
+                    Now <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></button>
             </div>
 
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/bob-the-robber-2-featured.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2 <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
+                    <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
                 <button onclick="window.open('class.php?class=Bob-the-Robber-2', '_self')"
-                    class="featureButton button">Play Now</button>
+                    class="featureButton button">Play Now <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></button>
             </div>
 
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/motox3mpoolparty.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">MOTO X3M POOL PARTY <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
+                    <h2 class="gametext stroke-text smooth-16">MOTO X3M POOL PARTY</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
                 <button onclick="window.open('class.php?class=Moto-X3M-Pool-Party', '_self')"
                     class="featureButton button">Play
-                    Now</button>
+                    Now <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></button>
             </div>
 
             <div class="featureSlot fade"
                 style="background-image: url(./assets/images/featuredimg/vex-7.png); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/left-arrow.png" onclick="plusSlides(-1)">
-                    <h2 class="gametext stroke-text smooth-16">VEX 7 <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></h2>
+                    <h2 class="gametext stroke-text smooth-16">VEX 7</h2>
                     <img class="arrow" src="/assets/images/right-arrow.png" onclick="plusSlides(1)">
                 </div>
 
                 <button onclick="window.open('class.php?class=Vex-7', '_self')" class="featureButton button">Play
-                    Now</button>
+                    Now <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i></button>
             </div>
         </div>
 
