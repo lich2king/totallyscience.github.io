@@ -229,7 +229,7 @@
 }
 
 .featureButton .fa-angle-right {
-    padding-top: 30px;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 1150px) {
