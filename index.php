@@ -40,7 +40,7 @@
                 </div>
 
                 <button onclick="window.open('class.php?class=Monkey-Mart', '_self')" class="featureButton button">Play
-                    Now <i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff; margin-top: -1vw;"></i></button>
+                    Now <i class="fa-solid fa-angle-right fa-lg" style="margin-top: 1vw; color: #ffffff;"></i></button>
             </div>
 
             <div class="featureSlot fade"
