@@ -1,4 +1,4 @@
-importScripts('./dynamic/dynamic.worker.js');
+importScripts('dynamic/dynamic/dynamic.worker.js');
 
 const sw = new DynamicSW();
 
