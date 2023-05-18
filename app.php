@@ -45,7 +45,7 @@
                 navigator.serviceWorker.register('dynamic-sw.js', {
                     scope: __dynamic$config.prefix
                 }).then(() => {
-                    if (appData.type == 'proxy') appFrame.src = `${__dynamic$config.prefix}?url=${appData.iframe_url}`;
+                    if (appData.type == 'proxy') appFrame.src = `${__dynamic$config.prefix}${appData.iframe_url}`;
                     else appFrame.src = appData.iframe_url;
 
                     // detect if page is being embeded, if it is reference proxy from megamathstuff
