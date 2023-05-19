@@ -55,17 +55,6 @@
     text-align: center;
 }
 
-#nextcatrow {
-    margin-top: 2vh;
-    width: 91vw;
-    height: 5vh;
-    display: flex;
-    gap: 1vw;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-
 /* searchbar */
 
 input[type='text'] {

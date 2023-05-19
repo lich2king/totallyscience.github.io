@@ -76,18 +76,6 @@ label {
     white-space: nowrap;
 }
 
-#discord {
-    display: flex;
-    align-items: center;
-    margin-right: 0.5vw;
-}
-
-#tiktok {
-    display: flex;
-    align-items: center;
-    margin-right: 1vw;
-}
-
 #settings {
     display: flex;
     align-items: center;
