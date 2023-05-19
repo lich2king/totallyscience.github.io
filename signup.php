@@ -119,11 +119,9 @@
 
                     inProgress = false;
                 }
-            }  else if (registerRes.status == 409 || registerRes.status == 422) {
+            }  else if (registerRes.status == 409) {
                 let text = await registerRes.text();
                 error.innerText = text;
-
-                inProgress = false;
             }
         }
     </script>
