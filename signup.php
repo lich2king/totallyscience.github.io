@@ -100,7 +100,7 @@
                 }
             });
 
-            if (registerRes.status == 200) {
+            if (registerRes.status == 201) {
                 error.style.color = 'green';
                 error.innerText = 'account successfully created';
 
@@ -113,15 +113,17 @@
 
                 if (loginRes.status == 200) {
                     location.href = 'profile.php';
-                } else if (loginRes.status == 400) {
+                } else if (loginRes.status == 401 || loginRes.status == 422) {
                     let text = await loginRes.text();
                     error.innerText = text;
 
                     inProgress = false;
                 }
-            }  else if (registerRes.status == 400) {
+            }  else if (registerRes.status == 409 || registerRes.status == 422) {
                 let text = await registerRes.text();
                 error.innerText = text;
+
+                inProgress = false;
             }
         }
     </script>

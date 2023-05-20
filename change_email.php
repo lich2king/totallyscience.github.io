@@ -58,7 +58,7 @@
             setTimeout(() => {
                 location.href = 'profile.php';
             }, 500);
-        } else if (res.status == 400) {
+        } else if (res.status == 422 || res.status == 401) {
             error.innerText = text;
         }
     }

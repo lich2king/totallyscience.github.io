@@ -175,23 +175,26 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-    document.getElementById('appsnav').classList.add('selected');
+        document.getElementById('appsnav').classList.add('selected');
 
-    fetch(`assets/apps.json?date=${new Date().getTime()}`).then((response) => response.json()).then((apps) => {
-        const appContainer = document.getElementById('apps');
+        window.addEventListener('load', async () => {
+            const appContainer = document.getElementById('apps');
 
-        for (const [name, data] of Object.entries(apps)) {
-            const appDiv = `
-                    <div onclick="window.open('app.php?app=${name}', '_self')" class="card game">
-                        <img src="${data.image}" style="background-color: #ffffff;">
-                        <h1>${name}</h1>
-                        <button class="launch">Launch</button>
-                    </div>
-                `;
+            let appsRes = await fetcher(`/apps`);
+            let apps = await appsRes.json();
 
-            appContainer.innerHTML += appDiv;
-        }
-    });
+            for (let app in apps) {
+                const appDiv = `
+                        <div onclick="window.open('app.php?app=${apps[app].name}', '_self')" class="card game">
+                            <img src="${apps[app].image}" style="background-color: #ffffff;">
+                            <h1>${apps[app].name}</h1>
+                            <button class="launch">Launch</button>
+                        </div>
+                    `;
+
+                appContainer.innerHTML += appDiv;
+            }
+        });
     </script>
 </body>
 

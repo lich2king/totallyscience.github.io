@@ -214,15 +214,6 @@
     font-size: 3.5vw;
 }
 
-#feature .featureSlot .overlay h3 {
-    font-size: 0.9vw;
-    color: white;
-    padding-right: 20%;
-    padding-left: 20%;
-    margin-top: 9.5vw;
-    text-align: center;
-}
-
 .featureButton {
     position: absolute;
     margin-top: 30%;
@@ -274,16 +265,6 @@
     margin: 0%;
 }
 
-#nextcatrow {
-    margin-top: 2vh;
-    width: 91vw;
-    height: 5vh;
-    display: flex;
-    gap: 1vw;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .selectedCategory {
     opacity: 1;
 }
@@ -325,12 +306,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#extraCategory img {
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
 }
 
 #extraCategory p {
@@ -382,118 +357,10 @@
     padding-top: 25px;
 }
 
-#about span {
-    color: var(--accent-color);
-}
-
 #about p:not(.tophead),
 #about li {
     color: #bdbdbd;
     font-size: 19px;
-}
-
-#dailyRewardPopup {
-    position: fixed;
-    top: 50%;
-    right: 50%;
-    background-color: #8b1299;
-    z-index: 100;
-    transform: translate(50%, -50%);
-    width: 400px;
-    height: 525px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--light-color);
-    -webkit-filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
-}
-
-#dailyRewardPopup img {
-    pointer-events: none;
-}
-
-#dailyRewardPopup h1 {
-    font-style: italic;
-    font-size: 2.5rem;
-    margin: 0%;
-    margin-top: 3%;
-    margin-bottom: 2%;
-}
-
-#dailyRewardPopup .timerCon {
-    width: 80%;
-    height: 7%;
-    border-radius: 15px;
-    background-color: var(--accent-color);
-    box-shadow: 0px 10px 10px #00000042;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#dailyRewardPopup .timerCon p {
-    font-size: 1.3rem;
-}
-
-#dailyRewardPopup .points {
-    font-weight: bold;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    margin-top: 5%;
-    -webkit-filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
-}
-
-#dailyRewardPopup .days {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    gap: 15px;
-}
-
-#dailyRewardPopup .days .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
-
-#dailyRewardPopup .days .row div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#dailyRewardPopup .days .row div p {
-    margin: 0%;
-}
-
-#dailyRewardPopup .days .row div .circle {
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0px 10px 10px #00000042;
-}
-
-#dailyRewardPopup .days .row img {
-    width: 50px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    z-index: 2;
-}
-
-#dailyRewardPopup .days .row div .treasure {
-    position: absolute;
-    width: 40px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    -webkit-filter: drop-shadow(0px 0px 15px rgb(172, 255, 47));
-    animation: treasure-animation 1s ease-in-out infinite;
-    z-index: 1;
 }
 
 @keyframes treasure-animation {
@@ -506,20 +373,6 @@
     100% {
         -webkit-filter: drop-shadow(0px 0px 5px rgb(172, 255, 47));
     }
-}
-
-#dailyRewardPopup button {
-    margin-top: auto;
-    box-shadow: 0px 10px 10px #00000042;
-    margin-bottom: 30px;
-}
-
-#dailyRewardPopup .ignore {
-    margin: 0%;
-    margin-top: -15px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    opacity: 0.8;
 }
 
 .loader {

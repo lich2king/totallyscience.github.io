@@ -135,7 +135,7 @@
                 }
             });
 
-            if (submitRes.status == 400) {
+            if (submitRes.status == 422) {
                 let text = await submitRes.text();
 
                 errorText.innerText = text;
