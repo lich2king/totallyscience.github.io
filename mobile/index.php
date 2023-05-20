@@ -5,7 +5,7 @@
 
 <head>
     <?php include "../assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/main.css?v12'>
+    <link rel='stylesheet' href='assets/styles/main.css?v13'>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 
     <div id="games"></div>
 
-    <script src="assets/scripts/main.js?v66"></script>
+    <script src="assets/scripts/main.js?v67"></script>
     <script src="assets/scripts/mobile.js?v65"></script>
 </body>
 
