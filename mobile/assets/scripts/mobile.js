@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadTopic() {
     sorted = sortObject(games);
-    gamesDiv.innerHTML = '';
+    //gamesDiv.innerHTML = '';
     displayGames();
 }
 
