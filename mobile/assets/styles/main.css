@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
- :root {
+:root {
     --light-color: #ffffff;
-    --background-color: #1F0336;
+    --background-color: #1f0336;
     --dark-color: #000000;
     --accent-color: #f75dfc;
     --dark-accent: #340060;
@@ -10,7 +10,7 @@
     --error-color: #cf1a32;
 }
 
-[theme=dark] {
+[theme='dark'] {
     --light-color: #000000;
     --dark-color: #ffffff;
     --box-shadow-color: #000000;
@@ -34,7 +34,10 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-image: url('../background.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin-top: 20px;
 }
 
@@ -84,7 +87,6 @@ label {
     margin-top: 90px;
 }
 
-
 /*Game Div stuff*/
 
 #games {
@@ -109,10 +111,10 @@ label {
 
 #gameDiv {
     position: relative;
-    min-width: 225px;
-    max-width: 225px;
-    max-height: 120px;
-    min-height: 120px;
+    min-width: 20vw;
+    max-width: 20vw;
+    max-height: 20vw;
+    min-height: 20vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -133,7 +135,6 @@ label {
     cursor: pointer;
     transform: scale(1.05);
 }
-
 
 /*search bar*/
 

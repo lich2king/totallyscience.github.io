@@ -2,6 +2,7 @@
     "Retro Bowl": {
         "description": "This is a 2D retro-style football game where your goal is to win the Retro Bowl!",
         "image": "./assets/games/icons/retrobowl.jpg",
+        "mobileimage": "mobile/assets/game_icons/retrobowl.avif",
         "controls": "CTRL+W to move forward.\nAlso, you can drag the mouse to throw the ball.\nThere is a tutorial to help you play!",
         "tags": ["featured", "sport", "mobile"],
         "date_added": "2021-12-30T04:56:36.982Z",
@@ -23,6 +24,7 @@
     "Drift Boss": {
         "description": "Simple but addictive car drifting game. Collect coins and upgrade your car.",
         "image": "./assets/games/icons/driftboss.png",
+        "mobileimage": "mobile/assets/game_icons/driftboss.jpg",
         "controls": "Click space to turn",
         "tags": ["car", "mobile", "casual"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -33,6 +35,7 @@
     "Chess": {
         "description": "Online board game where your could play against a friend or the computer.",
         "image": "./assets/games/icons/chess.png",
+        "mobileimage": "mobile/assets/game_icons/chess.png",
         "controls": "Use your mouse to drag the piece you want to move",
         "tags": ["2", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -44,7 +47,7 @@
         "description": "Online board game where your could play against a friend or the computer.",
         "image": "./assets/games/icons/chesscom.png",
         "controls": "Use your mouse to drag the piece you want to move",
-        "tags": ["2", "mobile", "puzzle"],
+        "tags": ["2", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "chess.com",
         "type": "proxy",
@@ -74,6 +77,7 @@
     "Connect 4": {
         "description": "Get 4 pieces in a row to win. Play against a friend or the computer.",
         "image": "./assets/games/icons/connect4.jpeg",
+        "mobileimage": "mobile/assets/game_icons/connect4.jpg",
         "controls": "Click where your want to place your piece",
         "tags": ["2", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -94,8 +98,9 @@
     "Ducklife": {
         "description": "The future of the farm is in your hands! Train your duck then compete in challenges to save the farm.",
         "image": "./assets/games/icons/ducklife1.jpeg",
+        "mobileimage": "mobile/assets/game_icons/ducklife.png",
         "controls": "Arrow keys to move",
-        "tags": ["misc", "classic"],
+        "tags": ["misc", "classic", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
@@ -104,8 +109,9 @@
     "Ducklife 2": {
         "description": "Increase your skills via the mini games and win all the races to become the  world champion.",
         "image": "./assets/games/icons/ducklife2.jpeg",
+        "mobileimage": "mobile/assets/game_icons/ducklife2.avif",
         "controls": "Arrow keys to move",
-        "tags": ["misc", "classic"],
+        "tags": ["misc", "classic", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html?nocheckorient=1"
@@ -114,8 +120,9 @@
     "Ducklife 3": {
         "description": "Collect coins and purchase upgrades to help your duck become world champion.",
         "image": "./assets/games/icons/ducklife3.png",
+        "mobileimage": "mobile/assets/game_icons/ducklife3.webp",
         "controls": "Arrow keys to move",
-        "tags": ["misc", "classic"],
+        "tags": ["misc", "classic", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-3-evolution/game.html?nocheckorient=1"
@@ -124,8 +131,9 @@
     "Ducklife 4": {
         "description": "Raise a duck to become a professional racer! You can choose an egg to hatch, and customize its appearance.",
         "image": "./assets/games/icons/ducklife4.png",
+        "mobileimage": "mobile/assets/game_icons/ducklife4.webp",
         "controls": "Arrow keys to move",
-        "tags": ["misc", "classic"],
+        "tags": ["misc", "classic", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Wix Games",
         "iframe_url": "https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1"
@@ -134,6 +142,7 @@
     "Elastic Man": {
         "description": "Satisfying game where you can squish, pull, and distort Morty's head.",
         "image": "./assets/games/icons/elasticman.jpeg",
+        "mobileimage": "mobile/assets/game_icons/elasticman.webp",
         "controls": "Drag features with mouse or touch-screen",
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -154,8 +163,9 @@
     "Factory Balls": {
         "description": "You've been hired by the ball factory to create amazing designs. Can you succeed?",
         "image": "./assets/games/icons/factoryballs.jpg",
+        "mobileimage": "mobile/assets/game_icons/factoryballs.png",
         "controls": "Drag balls with mouse",
-        "tags": ["misc"],
+        "tags": ["misc", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Bontegames",
         "iframe_url": "https://www.hoodamath.com/mobile/games/factory-balls-forever/game.html?nocheckorient=1"
@@ -164,6 +174,7 @@
     "Flappy Bird": {
         "description": "Dodge the tubes and try to beat the high score!",
         "image": "./assets/games/icons/Flappy_Bird_icon.png",
+        "mobileimage": "mobile/assets/game_icons/flappybird.png",
         "controls": "Click space to fly higher",
         "tags": ["mobile", "scratch", "classic"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -226,6 +237,7 @@
     "FNAF 2": {
         "description": "A horror game in which you work as a newly hired security guard for the night shift.",
         "image": "./assets/games/icons/Fnf.jpeg",
+        "mobileimage": "mobile/assets/game_icons/fnaf2.jpg",
         "controls": "Use the mouse to interact with objects",
         "tags": ["mobile", "horror", "scratch"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -247,6 +259,7 @@
     "Geometry Dash": {
         "description": "Dodge spikes and don't die!",
         "image": "./assets/games/icons/geometrydash.webp",
+        "mobileimage": "mobile/assets/game_icons/geometrydash.jpg",
         "controls": "Click space to jump",
         "tags": ["mobile", "scratch", "casual", "music"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -268,6 +281,7 @@
     "Minigolf": {
         "description": "Line up your putt for a hole-in-one! Watch our for hills and water traps.",
         "image": "./assets/games/icons/minigolf.jpeg",
+        "mobileimage": "mobile/assets/game_icons/minigolf.jpg",
         "controls": "Click and drag with the mouse",
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -298,6 +312,7 @@
     "8Ball Pool": {
         "description": "Play 8-ball pool against and friend or the computer. Don't hit the 8ball in!",
         "image": "./assets/games/icons/pool.jpeg",
+        "mobileimage": "mobile/assets/game_icons/8ballpool.jpg",
         "controls": "Click and drag with the mouse",
         "tags": ["2", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -307,6 +322,7 @@
     "Rolling Vortex": {
         "description": "Dodge the rings and collect coins. Try to beat the highscore!",
         "image": "./assets/games/icons/rollingvortex.jpeg",
+        "mobileimage": "mobile/assets/game_icons/rollingvortex.png",
         "controls": "[Arrow Keys] - Move",
         "tags": ["mobile", "action", "casual"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -327,6 +343,7 @@
     "Slope": {
         "description": "An endless space run game where you need to avoid red obstacles at all costs.",
         "image": "./assets/games/icons/slope.jpeg",
+        "mobileimage": "mobile/assets/game_icons/slope.png",
         "controls": "[Arrow Keys] - Move",
         "tags": ["mobile", "casual"],
         "date_added": "2022-02-03T00:03:23.213Z",
@@ -337,8 +354,9 @@
     "Soccer Free Kicks": {
         "description": "Train your freekick shooting skills through 15 levels of increasing difficulty!",
         "image": "./assets/games/icons/soccer.jpeg",
+        "mobileimage": "mobile/assets/game_icons/soccerfreekicks.avif",
         "controls": "Click and drag with the mouse",
-        "tags": ["sport"],
+        "tags": ["sport", "mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
         "developer": "Hooda Math",
         "iframe_url": "https://www.hoodamath.com/mobile/games/freekick-training/game.html?nocheckorient=1"
@@ -357,6 +375,7 @@
     "Solitaire": {
         "description": "Fun and easy to pick up on card game.",
         "image": "./assets/games/icons/solitaire.png",
+        "mobileimage": "mobile/assets/game_icons/solitaire.png",
         "controls": "Click and drag with the mouse",
         "tags": ["card", "mobile", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -377,6 +396,7 @@
     "Stack": {
         "description": "Stack the blocks as high as you can. Try to beat the highscore!",
         "image": "./assets/games/icons/stack.jpeg",
+        "mobileimage": "mobile/assets/game_icons/stack.png",
         "controls": "[Space] - Place block",
         "tags": ["mobile"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -397,6 +417,7 @@
     "UNO": {
         "description": "Easy and fun card game. The aim of the game is to be the first player with no cards.",
         "image": "./assets/games/icons/uno.jpeg",
+        "mobileimage": "mobile/assets/game_icons/uno.png",
         "controls": "Click and drag with the mouse",
         "tags": ["card", "mobile", "multiplayer", "puzzle"],
         "date_added": "2021-12-22T04:56:36.982Z",
@@ -497,6 +518,7 @@
     "Snake": {
         "description": "Eat as many apples as you can without overlapping you body or hitting a wall.",
         "image": "./assets/games/icons/snake.png",
+        "mobileimage": "mobile/assets/game_icons/snake.png",
         "controls": "[Arrow Keys] - move",
         "tags": ["mobile", "casual"],
         "date_added": "2022-01-04T15:15:33.894Z",
@@ -515,6 +537,7 @@
     "Among Us": {
         "description": "Play as the imposter aboard a space ship. Kill all other players to win.",
         "image": "./assets/games/icons/amongus.jpeg",
+        "mobileimage": "mobile/assets/game_icons/amongus.jpg",
         "controls": "[Arrow Keys] - move",
         "tags": ["mobile"],
         "date_added": "2022-01-05T23:45:35.270Z",
@@ -551,6 +574,7 @@
     "Getting Over It": {
         "description": "Push, Drag and Throw yourself up the level in your quest to Get Over It.",
         "image": "./assets/games/icons/gettingoverit.jpeg",
+        "mobileimage": "mobile/assets/game_icons/gettingoverit.jpg",
         "controls": "Use mouse to control sledgehammer",
         "tags": ["hard", "mobile", "scratch"],
         "date_added": "2022-01-05T23:45:35.270Z",
@@ -634,6 +658,7 @@
     "Squid Game": {
         "description": "Complete the following challenges inspired by the popular show Squid Games.",
         "image": "./assets/games/icons/squidgames.png",
+        "mobileimage": "mobile/assets/game_icons/squidgame.webp",
         "controls": "Click and drag based on the directions given",
         "tags": ["mobile", "escape"],
         "date_added": "2022-01-09T18:11:41.637Z",
@@ -643,6 +668,7 @@
     "Ball Blast": {
         "description": "Shoot the balls and upgrade your cannon, how long can you survive?",
         "image": "./assets/games/icons/ballsblast.png",
+        "mobileimage": "mobile/assets/game_icons/ballblast.jpg",
         "controls": "[Drag] - move\n[Click] - shoot",
         "tags": ["mobile", "scratch", "casual"],
         "date_added": "2022-01-09T18:11:41.637Z",
@@ -662,6 +688,7 @@
     "Bubble Popper": {
         "description": "Pop the bubbles by matching the correct colors. Try to beat all the levels!",
         "image": "./assets/games/icons/bubblepopper.png",
+        "mobileimage": "mobile/assets/game_icons/bubblepopper.webp",
         "controls": "[Click] - shoot bubble",
         "tags": ["mobile", "scratch", "misc", "clicker"],
         "date_added": "2022-01-10T18:17:09.107Z",
@@ -708,6 +735,7 @@
     "Basketball Stars": {
         "description": "You can play solo or with a friend as a variety of legendary basketball players.",
         "image": "./assets/games/icons/basketballstars.png",
+        "mobileimage": "mobile/assets/game_icons/basketballstars.png",
         "controls": "[Arrow Keys] - move\n[x] - attack",
         "tags": ["sport", "2", "mobile"],
         "date_added": "2022-01-10T18:17:09.107Z",
@@ -804,9 +832,10 @@
         "developer": "Nintendo",
         "iframe_url": "./assets/games/supermarioadvanced.html"
     },
-    "Clash Royale": {
+    "Clash of Vikings": {
         "description": "Command your Vikings and destroy the enemy's base in Clash of Vikings. The base is guarded by two towers.",
         "image": "./assets/games/icons/clashvikings.jpg",
+        "mobileimage": "mobile/assets/game_icons/clashofvikings.jpg",
         "controls": "Click and drag",
         "tags": ["mobile", "multiplayer"],
         "date_added": "2022-01-19T03:06:46.159Z",
@@ -852,6 +881,7 @@
     "Wordle": {
         "description": "You have limited attempts to find the word. Goodluck!",
         "image": "./assets/games/icons/wordle.png",
+        "mobileimage": "mobile/assets/game_icons/wordle.webp",
         "controls": "Use the keyboard to type",
         "tags": ["mobile"],
         "date_added": "2022-01-27T15:05:28.200Z",
@@ -879,6 +909,7 @@
     "Crossy Road": {
         "description": "8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
         "image": "./assets/games/icons/crossyroad.png",
+        "mobileimage": "mobile/assets/game_icons/crossyroad.avif",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
         "tags": ["mobile", "action"],
         "date_added": "2022-02-02T01:28:28.388Z",
@@ -888,6 +919,7 @@
     "Subway Surfers": {
         "description": "A classic endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.",
         "image": "./assets/games/icons/subwaysurfers.jpeg",
+        "mobileimage": "mobile/assets/game_icons/subwaysurfers.png",
         "controls": "[Arrow Keys] - move\n[Space] - use hoverboard",
         "tags": ["mobile", "action", "action"],
         "date_added": "2022-02-03T00:03:23.213Z",
@@ -897,6 +929,7 @@
     "Cookie Clicker": {
         "description": "Click, click, click. Upgrade your bakery as you get more cookies in this idle game.",
         "image": "./assets/games/icons/cookieclicker.png",
+        "mobileimage": "mobile/assets/game_icons/cookieclicker.png",
         "controls": "Click with the mouse",
         "tags": ["mobile", "clicker"],
         "date_added": "2022-02-10T14:51:17.859Z",
@@ -906,6 +939,7 @@
     "Vex 5": {
         "description": "The fifth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/games/icons/vex5.jpg",
+        "mobileimage": "mobile/assets/game_icons/vex5.png",
         "controls": "[Arrow Keys] - move",
         "tags": ["vex", "mobile", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -924,6 +958,7 @@
     "Vex 4": {
         "description": "The fourth platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/games/icons/vex4.jpg",
+        "mobileimage": "mobile/assets/game_icons/vex4.webp",
         "controls": "[Arrow Keys] - move",
         "tags": ["vex", "mobile", "action"],
         "date_added": "2022-02-20T21:02:01.524Z",
@@ -933,6 +968,7 @@
     "Vex 3": {
         "description": "The third platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/games/icons/vex3.jpeg",
+        "mobileimage": "mobile/assets/game_icons/vex3.png",
         "controls": "[Arrow Keys] - move",
         "tags": ["vex", "mobile", "action"],
         "date_added": "2022-02-20T21:02:01.524Z",
@@ -951,6 +987,7 @@
     "HexGL": {
         "description": "A futuristic, fast-paced racing game where you control a hovercraft.",
         "image": "./assets/games/icons/hexgl.jpg",
+        "mobileimage": "mobile/assets/game_icons/hexgl.jpg",
         "controls": "[Arrow Keys] - turn\n[Up Arrow] - accelerate\n[a] - left brake\n[d] - right brake",
         "tags": ["mobile"],
         "date_added": "2022-02-20T21:02:01.524Z",
@@ -1032,6 +1069,7 @@
     "Geometry Dash Remastered": {
         "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
         "image": "./assets/games/icons/geometry-dash-remastered.jpg",
+        "mobileimage": "mobile/assets/game_icons/geometrydash.jpg",
         "controls": "[Space] - jump",
         "tags": ["mobile", "music"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1041,6 +1079,7 @@
     "Hypersnake": {
         "description": "Hypersnake is a skill game where you have to collect balls to grow your snake and find the path of least resistance to make it as far as possible. How far can you go in Hypersnake?",
         "image": "./assets/games/icons/hypersnake.jpg",
+        "mobileimage": "mobile/assets/game_icons/hypersnake.avif",
         "controls": "[Mouse] - move",
         "tags": ["mobile", "action"],
         "date_added": "2022-09-04T22:35:18.770Z",
@@ -1068,6 +1107,7 @@
     "Moto X3M Pool Party": {
         "description": "A motorbike racing game with summer as the main theme. This 5th part in the Moto X3M series has 22 new challenging levels. Race your motorbike through pools and beaches and discover all the new obstacles in this sequel in the Moto X3M series.",
         "image": "./assets/games/icons/motox3mpool.jpg",
+        "mobileimage": "mobile/assets/game_icons/motox3m.avif",
         "controls": "[Arrow Keys] - move\n[r] - restart",
         "tags": ["car", "mobile"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1077,6 +1117,7 @@
     "Moto X3M Spooky Land": {
         "description": "Moto X3M Spooky Land is a stunt motor bike game and is the sixth release in the Moto X3M series. This time with a complete halloween theme where you drive your motor through spooky halloween levels and you have to perform all kinds of stunts to dodge objects of hazards coming your way.",
         "image": "./assets/games/icons/motox3mspooky.jpg",
+        "mobileimage": "mobile/assets/game_icons/motox3mspookyland.avif",
         "controls": "[Arrow Keys] - move\n[r] - restart",
         "tags": ["car", "mobile"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1086,6 +1127,7 @@
     "Moto X3M Winter": {
         "description": "Speed with your motorbike across icy mountains in Moto X3M 4: Winter! This motorbike game dares you to drive on bridges made of candy canes and other sweet treats. Ride a motorcycle past snowmen and Christmas trees with Rudolph the Red-Nosed Reindeer and Santa Claus!",
         "image": "./assets/games/icons/motox3mwinter.jpg",
+        "mobileimage": "mobile/assets/game_icons/motox3mwinter.jpg",
         "controls": "[Arrow Keys] - move\n[r] - restart",
         "tags": ["car", "mobile"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1095,6 +1137,7 @@
     "Slope 2": {
         "description": "The sequel to the Slope game. The gameplay has changed slightly, but the mechanics remain the same. Let me remind you that as the difficulty of each level increases, the ball moves extremely quickly.",
         "image": "./assets/games/icons/slope2.jpg",
+        "mobileimage": "mobile/assets/game_icons/slope2.png",
         "controls": "[WASD] - Player 1 \n [Arrow Keys] - Player 2",
         "tags": ["mobile"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1122,6 +1165,7 @@
     "Temple Run": {
         "description": "An infinite runner where the player must escape from his enemy and avoid all the obstacles and traps that are found along the way. Traverse cliffs, forests and even mines, and help this fearless treasure hunter escape with the gold idol. But hurry up! The evil monkey monsters are chasing you!",
         "image": "./assets/games/icons/templerun.jpg",
+        "mobileimage": "mobile/assets/game_icons/templerun.avif",
         "controls": "[AD] or [Left/Right arrows] - move \n[w] or [Up arrow] - jump \n[s] or [Down arrow] - slide down",
         "tags": ["mobile", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1167,6 +1211,7 @@
     "Crossy Road Space": {
         "description": "The space version of Crossy Road, the 8-bit endless arcade hopper that started it all. Collect custom characters and navigate freeways, railroads, rivers and much more.",
         "image": "./assets/games/icons/crossyroadspace.png",
+        "mobileimage": "mobile/assets/game_icons/crossyroadspace.jpeg",
         "controls": "[Space] - move forward\n[Arrow Keys] - move left and right",
         "tags": ["mobile", "action"],
         "date_added": "2022-09-21T01:46:18.659Z",
@@ -1194,6 +1239,7 @@
     "Cut The Rope": {
         "description": "Cut the rope to feed candy to the green monster! Om Nom is hungry for large pieces of candy. Your mission is to feed him as quickly as possible. You can collect stars in each level for bonus points. Slice every rope at the right time to win!",
         "image": "./assets/games/icons/cuttherope.jpg",
+        "mobileimage": "mobile/assets/game_icons/cuttherope.png",
         "controls": "[Drag Mouse] - cut",
         "tags": ["puzzle", "mobile", "classic"],
         "date_added": "2022-09-04T22:35:18.770Z",
@@ -1406,6 +1452,7 @@
     "Bit Life": {
         "description": "How will you live your BitLife?\n\nWill you try to make all the right choices in an attempt to become a model citizen sometime before you die? You could marry the love of your life, have kids, and pick up a good education along the way.\n\nOr will you play choices that horrify your parents? You could descend into a life of crime, fall in love or go on adventures, start prison...",
         "image": "./assets/games/icons/bitlife.png",
+        "mobileimage": "mobile/assets/game_icons/bitlife.png",
         "controls": "Interact - [Left-Click]",
         "tags": ["misc", "mobile", "clicker"],
         "date_added": "2023-02-12T18:19:09.462Z",
@@ -1532,6 +1579,7 @@
     "Vex 7": {
         "description": "The 7th platform game in the Vex series. Each level is a labyrinth of deadly devices and traps you have to outsmart.",
         "image": "./assets/games/icons/vex-7.png",
+        "mobileimage": "mobile/assets/game_icons/vex7.png",
         "controls": "Move - [WASD] or [Arrow Keys]",
         "tags": ["vex", "mobile", "action"],
         "date_added": "2023-04-22T22:35:37.117Z",

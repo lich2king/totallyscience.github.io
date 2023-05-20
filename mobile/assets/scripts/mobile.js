@@ -4,17 +4,19 @@ const gamesDiv = document.getElementById('games');
 let games;
 let sorted;
 
-
 let sortObject = (obj) =>
-    Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {})
-
+    Object.keys(obj)
+        .sort()
+        .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`../assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
-        games = retrievedGames;
+    fetch(`../assets/games.json`)
+        .then((response) => response.json())
+        .then((retrievedGames) => {
+            games = retrievedGames;
 
-        loadTopic();
-    });
+            loadTopic();
+        });
 });
 
 async function loadTopic() {
@@ -23,10 +25,8 @@ async function loadTopic() {
     displayGames();
 }
 
-
 async function displayGames() {
     for (let x = 0; x < Object.keys(sorted).length; x++) {
-
         let keys = Object.keys(sorted);
 
         const name = keys[x];
@@ -52,17 +52,19 @@ async function displayGames() {
 }
 
 function showPopularGames() {
-    fetch(`../assets/php/getpopulargames.php`).then((response) => response.text()).then((res) => {
-        let popularGames = JSON.parse(res);
+    fetch(`../assets/php/getpopulargames.php`)
+        .then((response) => response.text())
+        .then((res) => {
+            let popularGames = JSON.parse(res);
 
-        for (let i = 0; i < 10; i++) {
-            if (document.getElementsByName(popularGames[i][0])) {
-                document.getElementsByName(popularGames[i][0])[0].innerHTML += "<button id='newbanner'><img src='../assets/images/icons/hotbanner.png'></button>";
+            for (let i = 0; i < 10; i++) {
+                if (document.getElementsByName(popularGames[i][0])) {
+                    document.getElementsByName(popularGames[i][0])[0].innerHTML +=
+                        "<button id='newbanner'><img src='../assets/images/icons/hotbanner.png'></button>";
+                }
             }
-        }
-    });
+        });
 }
-
 
 function createGameButton(game, pin) {
     const data = games[game];
@@ -85,9 +87,9 @@ function createGameButton(game, pin) {
         buttons += "<button id='newbanner'><img src='../assets/images/icons/newbanner.png'></button>";
     }
 
-    if (classlist.includes("mobile")) {
+    if (classlist.includes('mobile')) {
         gameBtn = `
-        <div name="${game}" style="background-image: url(../${data.image})" id="gameDiv" onclick="${onclick}" class="${classlist}">
+        <div name="${game}" style="background-image: url(../${data.mobileimage})" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
         </div>
         `;
@@ -99,43 +101,41 @@ function createGameButton(game, pin) {
         `;
     }
 
-    return (gameBtn);
+    return gameBtn;
 }
 
 function search() {
-    document.getElementById("searchBarSection").style.display = "";
-    document.getElementById("searchBar").focus();
+    document.getElementById('searchBarSection').style.display = '';
+    document.getElementById('searchBar').focus();
 }
 
 function noSearch() {
-    document.getElementById("searchBarSection").style.display = "none";
+    document.getElementById('searchBarSection').style.display = 'none';
 }
-
-
 
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keyup', () => {
     scrollTo(0, 0);
 
-    let input = (searchBar.value.toUpperCase()).split(' ').join('');;
+    let input = searchBar.value.toUpperCase().split(' ').join('');
 
     if (input == '' || input == null) {
         loadTopic();
         return;
     }
 
-    const gameButtons = document.getElementsByClassName("mobile");
+    const gameButtons = document.getElementsByClassName('mobile');
 
     let gameShown = false;
-    Array.from(gameButtons).forEach(game => {
-        var name = game.getAttribute("name").toUpperCase();
+    Array.from(gameButtons).forEach((game) => {
+        var name = game.getAttribute('name').toUpperCase();
         name = name.split(' ').join('');
 
         if (name.includes(input)) {
-            game.setAttribute('style', `background-image: url(../${games[game.getAttribute('name')].image})`)
+            game.setAttribute('style', `background-image: url(../${games[game.getAttribute('name')].image})`);
             gameShown = true;
         } else {
-            game.setAttribute('style', 'display:none')
+            game.setAttribute('style', 'display:none');
         }
     });
 
@@ -150,4 +150,4 @@ searchBar.addEventListener('keyup', () => {
         document.getElementById("noSearch").style.display = '';
     }
     */
-})
+});
