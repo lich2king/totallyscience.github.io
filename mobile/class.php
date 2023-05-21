@@ -13,9 +13,7 @@
         left: 0;
     }
 
-    body {}
-
-    html {
+    body {
         overflow: hidden;
         background-color: black;
         background-image: url('../background.svg');
