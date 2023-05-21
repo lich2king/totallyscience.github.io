@@ -97,8 +97,8 @@ label {
 #fixedElements .top p {
     font-size: 3vw;
     font-weight: bold;
-    padding: 0%;
-    margin: 0%;
+    padding: 0vw;
+    margin: 0vw;
 }
 
 #fixedElements .horizontalmidline {
