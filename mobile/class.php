@@ -13,13 +13,15 @@
         left: 0;
     }
 
-    body {}
-
-    html {
-        overflow: hidden;
+    body {
+        background-color: black;
         background-image: url('../background.svg');
         background-repeat: no-repeat;
         background-attachment: fixed;
+    }
+
+    html {
+        overflow: hidden;
     }
     </style>
 </head>
