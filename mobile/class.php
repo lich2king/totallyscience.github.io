@@ -44,7 +44,7 @@
         overflow: hidden;
         position: absolute;
         top: 2vh;
-        left: 0%;
+        left: -10px;
         z-index: 100;
         border: none;
         align-items: center;
