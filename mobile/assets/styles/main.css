@@ -236,7 +236,7 @@ input[type='text'] {
     /* border: 2px solid var(--dark-color); */
     border: none;
     border-radius: 20px;
-    font-size: 1vw;
+    font-size: 20px;
     background-color: var(--light-color);
     outline: none;
     background-image: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');

@@ -108,6 +108,13 @@ function search() {
 function noSearch() {
     document.getElementById('searchBarSection').style.display = 'none';
     document.getElementById('searchBar').value = '';
+
+    let gameButtons = Array.from(document.getElementById('games').children);
+    gameButtons.shift();
+
+    Array.from(gameButtons).forEach((game) => {
+        game.style.display = '';
+    });
 }
 
 const searchBar = document.getElementById('searchBar');
@@ -116,11 +123,8 @@ searchBar.addEventListener('keyup', () => {
 
     let input = searchBar.value.toUpperCase().split(' ').join('');
 
-    console.log(document.getElementById('games'));
-    console.log(document.getElementById('games').children);
     let gameButtons = Array.from(document.getElementById('games').children);
     gameButtons.shift();
-    console.log(gameButtons);
 
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {

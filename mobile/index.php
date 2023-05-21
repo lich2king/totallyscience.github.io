@@ -5,7 +5,7 @@
 
 <head>
     <?php include "../assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/main.css?v51'>
+    <link rel='stylesheet' href='assets/styles/main.css?v52'>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
     </div>
 
     <script src="assets/scripts/main.js?v69"></script>
-    <script src="assets/scripts/mobile.js?v68"></script>
+    <script src="assets/scripts/mobile.js?v69"></script>
 </body>
 
 </html>
