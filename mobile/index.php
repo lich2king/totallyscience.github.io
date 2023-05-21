@@ -5,7 +5,7 @@
 
 <head>
     <?php include "../assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/main.css?v49'>
+    <link rel='stylesheet' href='assets/styles/main.css?v50'>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                     <p>Science</p>
                 </div>
             </div>
-            <div class="horizontalmidline"></div>
+            <!-- <div class="horizontalmidline"></div> -->
             <div class="bottom">
                 <button onclick="openSchoolSite()" id="alert"><img id="alertIcon" src="assets/exclamation.svg"></button>
                 <div class="verticalmidline"></div>

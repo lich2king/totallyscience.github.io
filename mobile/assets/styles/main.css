@@ -80,7 +80,6 @@ label {
     top: 2vw;
     left: 0%;
     z-index: 100;
-    gap: 2px;
 }
 
 #fixedElements .top {
@@ -106,10 +105,9 @@ label {
 }
 
 #fixedElements .horizontalmidline {
-    width: 100px;
-    height: 2px;
+    width: 100%;
+    height: 1px;
     background-color: #dfdfdf;
-    z-index: 101;
 }
 
 #fixedElements .bottom {
@@ -119,8 +117,6 @@ label {
     justify-content: center;
     height: 50px;
     width: 100%;
-    z-index: 9;
-    background-color: #f75dfc;
 }
 
 #fixedElements .bottom .verticalmidline {
@@ -131,9 +127,10 @@ label {
 
 #fixedElements .bottom button {
     width: 100px;
-    height: 30px;
+    height: 50px;
     background-color: transparent;
     border: none;
+    border-top: 1px solid #dfdfdf;
 }
 
 #fixedElements .bottom button img {
