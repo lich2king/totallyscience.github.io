@@ -43,12 +43,16 @@
 
     <script src="assets/scripts/main.js?v65"></script>
     <script>
+    let portrait = window.matchMedia("(orientation: portrait)");
+
+    portrait.addEventListener("change", documentHeight());
+
     const documentHeight = () => {
-        const doc = document.documentElement
-        doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+        const doc = document.documentElement;
+        doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
     }
-    window.addEventListener('resize', documentHeight)
-    documentHeight()
+    window.addEventListener('resize', documentHeight);
+    documentHeight();
 
 
     const queryString = window.location.search;
