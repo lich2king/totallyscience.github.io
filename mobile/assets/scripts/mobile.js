@@ -71,6 +71,10 @@ function createGameButton(game, pin) {
 
     let classlist = data.tags.join(' ');
 
+    if (!classlist.includes('mobile')) {
+        return '';
+    }
+
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7);
 
@@ -87,19 +91,11 @@ function createGameButton(game, pin) {
         buttons += "<button id='newbanner'><img src='../assets/images/icons/newbanner.png'></button>";
     }
 
-    if (classlist.includes('mobile')) {
-        gameBtn = `
+    gameBtn = `
         <div name="${game}" style="background-image: url(../${data.mobileimage})" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
         </div>
         `;
-    } else {
-        gameBtn = `
-        <div name="${game}" style="display: none" id="gameDiv" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-        </div>
-        `;
-    }
 
     return gameBtn;
 }
@@ -111,6 +107,7 @@ function search() {
 
 function noSearch() {
     document.getElementById('searchBarSection').style.display = 'none';
+    document.getElementById('searchBar').value = '';
 }
 
 const searchBar = document.getElementById('searchBar');
@@ -119,35 +116,31 @@ searchBar.addEventListener('keyup', () => {
 
     let input = searchBar.value.toUpperCase().split(' ').join('');
 
-    if (input == '' || input == null) {
-        loadTopic();
-        return;
-    }
-
-    const gameButtons = document.getElementsByClassName('mobile');
+    console.log(document.getElementById('games'));
+    console.log(document.getElementById('games').children);
+    let gameButtons = Array.from(document.getElementById('games').children);
+    gameButtons.shift();
+    console.log(gameButtons);
 
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
+        //console.log(game);
         var name = game.getAttribute('name').toUpperCase();
         name = name.split(' ').join('');
 
         if (name.includes(input)) {
-            game.setAttribute('style', `background-image: url(../${games[game.getAttribute('name')].image})`);
+            game.style.display = '';
             gameShown = true;
         } else {
-            game.setAttribute('style', 'display:none');
+            game.style.display = 'none';
         }
     });
-
-    // noSearch doesn't exist?
-    /*
-    if (!gameShown) {
-        document.getElementById("noSearch").style.display = '';
-    } else {
-        document.getElementById("noSearch").style.display = 'none';
-    }
-    if (gamesDiv.innerHTML == '') {
-        document.getElementById("noSearch").style.display = '';
-    }
-    */
+    // if (!gameShown) {
+    //     document.getElementById('noSearch').style.display = '';
+    // } else {
+    //     document.getElementById('noSearch').style.display = 'none';
+    // }
+    // if (gamesDiv.innerHTML == '') {
+    //     document.getElementById('noSearch').style.display = '';
+    // }
 });
