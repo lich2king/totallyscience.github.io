@@ -67,8 +67,8 @@ label {
 }
 
 #fixedElements {
-    min-width: 20vw;
-    max-width: 20vw;
+    min-width: 30vw;
+    max-width: 30vw;
     max-height: 20vw;
     min-height: 20vw;
     background-color: white;
@@ -76,8 +76,9 @@ label {
     flex-direction: column;
     border-radius: 3vw;
     overflow: hidden;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 6%;
+    left: 6%;
     z-index: 100;
 }
 
@@ -129,6 +130,13 @@ label {
 #fixedElements .bottom button img {
     width: 7vw;
     height: 7vw;
+}
+
+#gameOffset {
+    min-width: 40vw;
+    max-width: 40vw;
+    max-height: 20vw;
+    min-height: 20vw;
 }
 
 /*Game Div stuff*/

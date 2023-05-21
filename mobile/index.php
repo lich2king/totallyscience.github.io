@@ -5,7 +5,7 @@
 
 <head>
     <?php include "../assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/main.css?v16'>
+    <link rel='stylesheet' href='assets/styles/main.css?v17'>
 </head>
 
 <body>
@@ -18,24 +18,26 @@
         </div>
     </section>
 
-    <div id="games">
-        <div id="fixedElements">
-            <div class="top">
-                <img src="../assets/images/transparentlogo.png"></img>
-                <div class="text">
-                    <p>Totally</p>
-                    <p>Science</p>
-                </div>
-            </div>
-            <div class="horizontalmidline"></div>
-            <div class="bottom">
-                <button onclick="openSchoolSite()" id="alert"><img id="alertIcon"
-                        src="../assets/images/exclamation-light.svg"></button>
-                <div class="verticalmidline"></div>
-                <button onclick="search()" id="backarrow"><img id="backarrowLogo"
-                        src="../assets/images/magnifying-dark.svg"></button>
+    <div id="fixedElements">
+        <div class="top">
+            <img src="../assets/images/transparentlogo.png"></img>
+            <div class="text">
+                <p>Totally</p>
+                <p>Science</p>
             </div>
         </div>
+        <div class="horizontalmidline"></div>
+        <div class="bottom">
+            <button onclick="openSchoolSite()" id="alert"><img id="alertIcon"
+                    src="../assets/images/exclamation-light.svg"></button>
+            <div class="verticalmidline"></div>
+            <button onclick="search()" id="backarrow"><img id="backarrowLogo"
+                    src="../assets/images/magnifying-dark.svg"></button>
+        </div>
+    </div>
+
+    <div id="games">
+        <div id="gameOffset"></div>
     </div>
 
     <script src="assets/scripts/main.js?v68"></script>
