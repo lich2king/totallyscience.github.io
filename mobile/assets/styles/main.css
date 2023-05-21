@@ -178,6 +178,7 @@ label {
     border-radius: 15px;
     text-align: center;
     transition: 0.1s;
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.6));
 }
 
 
