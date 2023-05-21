@@ -67,7 +67,7 @@ label {
 }
 
 #fixedElements {
-    min-width: 30vw;
+    min-width: 20vw;
     max-width: 30vw;
     max-height: 20vw;
     min-height: 20vw;
