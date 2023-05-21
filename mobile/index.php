@@ -5,7 +5,7 @@
 
 <head>
     <?php include "../assets/includes/head.php" ?>
-    <link rel='stylesheet' href='assets/styles/main.css?v27'>
+    <link rel='stylesheet' href='assets/styles/main.css?v28'>
 </head>
 
 <body>
@@ -18,7 +18,10 @@
         </div>
     </section>
 
-    <div id="fixedElements">
+
+    <div id="games">
+        <!-- <div id="gameOffset"></div> -->
+        <div id="fixedElements">
         <div class="top">
             <img src="../assets/images/transparentlogo.png"></img>
             <div class="text">
@@ -33,9 +36,6 @@
             <button onclick="search()" id="backarrow"><img id="backarrowLogo" src="assets/magnifying.svg"></button>
         </div>
     </div>
-
-    <div id="games">
-        <div id="gameOffset"></div>
     </div>
 
     <script src="assets/scripts/main.js?v68"></script>

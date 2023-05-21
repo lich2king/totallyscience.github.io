@@ -69,16 +69,15 @@ label {
 #fixedElements {
     min-width: 100px;
     max-width: 100px;
-    max-height: 100px;
-    min-height: 100px;
+    max-height: 80px;
+    min-height: 80px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    border-radius: 3vw;
+    border-radius: 15px;
     overflow: hidden;
-    position: fixed;
-    top: 3vw;
-    left: 7vw;
+    position: sticky;
+    top: 2vw;
     z-index: 100;
 }
 
@@ -87,24 +86,24 @@ label {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-right: 1vw;
+    margin-right: 10px;
 }
 
 #fixedElements .top img {
-    width: 8vw;
-    height: 8vw;
+    width: 40px;
+    height: 40px;
 }
 
 #fixedElements .top p {
-    font-size: 3vw;
+    font-size: .9rem;
     font-weight: bold;
-    padding: 0vw;
-    margin: 0vw;
+    padding: 0;
+    margin: 0;
 }
 
 #fixedElements .horizontalmidline {
     width: 100%;
-    height: 0.2vw;
+    height: 1px;
     background-color: #dfdfdf;
 }
 
@@ -113,25 +112,25 @@ label {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 12vw;
+    height: 80px;
 }
 
 #fixedElements .bottom .verticalmidline {
-    width: 0.2vw;
+    width: 1px;
     height: 100%;
     background-color: #dfdfdf;
 }
 
 #fixedElements .bottom button {
-    width: 15vw;
-    height: 11vw;
+    width: 100px;
+    height: 30px;
     background-color: transparent;
     border: none;
 }
 
 #fixedElements .bottom button img {
-    width: 7vw;
-    height: 7vw;
+    width: 20px;
+    height: 20px;
 }
 
 #gameOffset {
@@ -145,7 +144,7 @@ label {
 /*Game Div stuff*/
 
 #games {
-    padding: 2%;
+    padding: 2vw;
     /* z-index: 0;
     width: 100vw;
     display: grid;
@@ -175,7 +174,7 @@ label {
     min-height: 100px;
     /* width: 15vw;
     height: 15vh; */
-    border-radius: 3vw;
+    border-radius: 15px;
     text-align: center;
     transition: 0.1s;
 }
@@ -216,7 +215,7 @@ label {
 #gameDiv input {
     width: 100%;
     height: 100%;
-    border-radius: 15vw;
+    border-radius: 15px;
 }
 
 #gameDiv:hover {
