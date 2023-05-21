@@ -77,8 +77,8 @@ label {
     border-radius: 3vw;
     overflow: hidden;
     position: fixed;
-    top: 6%;
-    left: 6%;
+    top: 3vw;
+    left: 7vw;
     z-index: 100;
 }
 
