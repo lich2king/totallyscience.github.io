@@ -28,11 +28,9 @@
         </div>
         <div class="horizontalmidline"></div>
         <div class="bottom">
-            <button onclick="openSchoolSite()" id="alert"><img id="alertIcon"
-                    src="../assets/images/exclamation-light.svg"></button>
+            <button onclick="openSchoolSite()" id="alert"><img id="alertIcon" src="assets/exclamation.svg"></button>
             <div class="verticalmidline"></div>
-            <button onclick="search()" id="backarrow"><img id="backarrowLogo"
-                    src="../assets/images/magnifying-dark.svg"></button>
+            <button onclick="search()" id="backarrow"><img id="backarrowLogo" src="assets/magnifying.svg"></button>
         </div>
     </div>
 
