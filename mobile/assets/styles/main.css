@@ -106,7 +106,7 @@ label {
 }
 
 #fixedElements .horizontalmidline {
-    width: 100%;
+    width: 100px;
     height: 2px;
     background-color: #dfdfdf;
     z-index: 101;
