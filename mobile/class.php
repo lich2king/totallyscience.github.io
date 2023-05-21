@@ -43,9 +43,9 @@
 
     <script src="assets/scripts/main.js?v65"></script>
     <script>
-    let portrait = window.matchMedia("(orientation: portrait)");
+    // let portrait = window.matchMedia("(orientation: portrait)");
 
-    portrait.addEventListener("change", documentHeight());
+    // portrait.addEventListener("change", documentHeight());
 
     const documentHeight = () => {
         const doc = document.documentElement;
