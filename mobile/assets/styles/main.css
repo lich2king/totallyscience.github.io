@@ -114,6 +114,8 @@ label {
     align-items: center;
     justify-content: center;
     height: 80px;
+    width: 100%;
+    background-color: #1f0336;
 }
 
 #fixedElements .bottom .verticalmidline {
