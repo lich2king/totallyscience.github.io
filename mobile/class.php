@@ -5,9 +5,15 @@
     <?php include "../assets/includes/head.php" ?>
 
     <style>
+    :root {
+        --doc-height: 100%;
+    }
+
     iframe {
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
+        /* fallback for Js load */
+        height: var(--doc-height);
         position: absolute;
         top: 0;
         left: 0;
@@ -37,6 +43,14 @@
 
     <script src="assets/scripts/main.js?v65"></script>
     <script>
+    const documentHeight = () => {
+        const doc = document.documentElement
+        doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener(‘resize’, documentHeight)
+    documentHeight()
+
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const gameName = urlParams.get('class');
