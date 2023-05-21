@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- mobile main css is inherited from this -->
     <?php include "../assets/includes/head.php" ?>
 
     <style>
@@ -29,23 +30,54 @@
     html {
         overflow: hidden;
     }
+
+    #gameFixedElements {
+        min-width: 60px;
+        max-width: 60px;
+        max-height: 40px;
+        min-height: 40px;
+        background-color: var(--accent-color);
+        display: flex;
+        flex-direction: column;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        overflow: hidden;
+        position: absolute;
+        top: 2vh;
+        left: 0%;
+        z-index: 100;
+        border: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #gameFixedElements.exc {
+        margin-top: 50px;
+    }
+
+    #gameFixedElements img {
+        width: 20px;
+        height: 20px;
+    }
     </style>
 </head>
 
 <body>
-    <div id="fixedElements">
-        <div><button><img id="backarrowLogo" src="assets/magnifying.svg"></button></div>
-        <div><button><img id="alertIcon" src="assets/exclamation.svg"></button></div>
-    </div>
+    <button id="gameFixedElements" onclick="window.open('index.php', '_self')">
+        <img id="backarrowLogo" src="assets/backarrowwhite.svg">
+    </button>
+    <button id="gameFixedElements" class="exc" onclick="window.open('https:/\/google.com', '_blank')">
+        <img id="alertIcon" src="assets/exclamationwhite.svg">
+    </button>
 
 
     <iframe src="" width="80vw" height="80vh" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
 
     <script src="assets/scripts/main.js?v65"></script>
     <script>
-    if (window.innerHeight > window.innerWidth) {
-        alert("Please use Landscape!");
-    }
+    // if (window.innerHeight > window.innerWidth) {
+    //     alert("Please use Landscape!");
+    // }
 
     const documentHeight = () => {
         const doc = document.documentElement;
