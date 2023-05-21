@@ -111,7 +111,7 @@ label {
 #fixedElements .bottom {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: top;
     justify-content: center;
     height: 80px;
     width: 100%;
