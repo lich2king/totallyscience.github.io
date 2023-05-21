@@ -34,7 +34,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    /* background-color: var(--background-color); */
+    background-color: var(--background-color);
     background-image: url('../background.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -67,7 +67,7 @@ label {
 }
 
 #fixedElements {
-    min-width: 20vw;
+    min-width: 30vw;
     max-width: 30vw;
     max-height: 20vw;
     min-height: 20vw;
@@ -141,6 +141,7 @@ label {
     min-height: 20vw;
 }
 
+
 /*Game Div stuff*/
 
 #games {
@@ -165,18 +166,54 @@ label {
 
 #gameDiv {
     position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-width: 20vw;
     max-width: 20vw;
     max-height: 20vw;
     min-height: 20vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     /* width: 15vw;
     height: 15vh; */
     border-radius: 3vw;
     text-align: center;
     transition: 0.1s;
+}
+
+
+/* For Mobile */
+
+@media screen and (max-width: 540px) {
+    #gameDiv {
+        min-width: 234px;
+        max-width: 234px;
+        max-height: 234px;
+        min-height: 234px;
+    }
+    #fixedElements {
+        min-width: 351px;
+        max-width: 351px;
+        max-height: 234px;
+        min-height: 234px;
+    }
+}
+
+
+/* For Tablets */
+
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    #gameDiv {
+        min-width: 400px;
+        max-width: 400px;
+        max-height: 400px;
+        min-height: 400px;
+    }
+    #fixedElements {
+        min-width: 600px;
+        max-width: 600px;
+        max-height: 400px;
+        min-height: 400px;
+    }
 }
 
 #gameDiv input {
@@ -189,6 +226,7 @@ label {
     cursor: pointer;
     transform: scale(1.05);
 }
+
 
 /*search bar*/
 
