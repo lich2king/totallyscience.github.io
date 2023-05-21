@@ -109,8 +109,8 @@ label {
 }
 
 #fixedElements .bottom {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 12vw;
@@ -123,7 +123,7 @@ label {
 }
 
 #fixedElements .bottom button {
-    width: 11vw;
+    width: 15vw;
     height: 11vw;
     background-color: transparent;
     border: none;
