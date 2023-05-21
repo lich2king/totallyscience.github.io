@@ -69,8 +69,8 @@ label {
 #fixedElements {
     min-width: 100px;
     max-width: 100px;
-    max-height: 80px;
-    min-height: 80px;
+    max-height: 100px;
+    min-height: 100px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,8 @@ label {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 #fixedElements .top img {
@@ -114,7 +116,7 @@ label {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 40px;
+    height: 50px;
     width: 100%;
     z-index: 9;
 }
