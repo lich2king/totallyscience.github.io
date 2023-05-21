@@ -78,6 +78,7 @@ label {
     overflow: hidden;
     position: sticky;
     top: 2vw;
+    left: 0%;
     z-index: 100;
 }
 
