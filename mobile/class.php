@@ -43,9 +43,9 @@
 
     <script src="assets/scripts/main.js?v65"></script>
     <script>
-    // let portrait = window.matchMedia("(orientation: portrait)");
-
-    // portrait.addEventListener("change", documentHeight());
+    if (window.innerHeight > window.innerWidth) {
+        alert("Please use Landscape!");
+    }
 
     const documentHeight = () => {
         const doc = document.documentElement;
