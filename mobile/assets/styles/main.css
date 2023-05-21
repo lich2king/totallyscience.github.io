@@ -71,7 +71,7 @@ label {
     max-width: 100px;
     max-height: 100px;
     min-height: 100px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     border-radius: 15px;
