@@ -68,5 +68,25 @@ if (location.pathname != '/chat' && location.pathname != '/chat.php') {
 <!-- Lazy loading -->
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 
+
+<!-- Hotjar survey data collection -->
+<!-- Hotjar Tracking Code for https://totallyscience.co -->
+<script>
+(function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+        (h.hj.q = h.hj.q || []).push(arguments)
+    };
+    h._hjSettings = {
+        hjid: 3501152,
+        hjsv: 6
+    };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script');
+    r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
 <link rel="stylesheet" href="assets/styles/main.css?v36">
 <link rel="icon" href="assets/images/totally-science-logo-transparent-scaled.png">
