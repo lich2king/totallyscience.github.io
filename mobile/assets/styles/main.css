@@ -116,6 +116,7 @@ label {
     justify-content: center;
     height: 40px;
     width: 100%;
+    z-index: 9;
 }
 
 #fixedElements .bottom .verticalmidline {
@@ -129,7 +130,6 @@ label {
     height: 30px;
     background-color: transparent;
     border: none;
-    z-index: 9;
 }
 
 #fixedElements .bottom button img {
