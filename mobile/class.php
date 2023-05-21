@@ -17,7 +17,6 @@
 
     html {
         overflow: hidden;
-        background-color: black;
         background-image: url('../background.svg');
         background-repeat: no-repeat;
         background-attachment: fixed;
