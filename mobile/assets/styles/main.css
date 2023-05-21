@@ -38,7 +38,7 @@ body {
     background-image: url('../background.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-top: 20px;
+    margin-top: 1vw;
 }
 
 h1,
