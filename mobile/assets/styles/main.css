@@ -111,9 +111,9 @@ label {
 #fixedElements .bottom {
     display: flex;
     flex-direction: row;
-    align-items: top;
+    align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 40px;
     width: 100%;
     background-color: #1f0336;
 }
