@@ -135,10 +135,10 @@ label {
 }
 
 #gameOffset {
-    min-width: 40vw;
-    max-width: 40vw;
-    max-height: 20vw;
-    min-height: 20vw;
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
 }
 
 
