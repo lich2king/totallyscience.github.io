@@ -49,6 +49,7 @@
         border: none;
         align-items: center;
         justify-content: center;
+        border-left: solid 4px var(--accent-color);
     }
 
     #gameFixedElements.exc {
