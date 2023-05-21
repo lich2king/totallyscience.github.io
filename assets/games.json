@@ -1571,7 +1571,7 @@
         "description": "Monkey Mart is an idle/management game where you control a cute monkey character who is in charge of a supermarket. Plant fruits, harvest produce, move around from station to station to fill the stands with various food items. Sell bananas, corn, eggs, peanuts, coffee beans, chocolate, wheat etc.",
         "image": "./assets/games/icons/monkey-mart.jpg",
         "controls": "Move - [WASD] or [Arrow Keys]",
-        "tags": ["misc"],
+        "tags": ["misc", "mobile"],
         "date_added": "2023-04-22T04:16:44.726Z",
         "developer": "TinyDobbins",
         "iframe_url": "./assets/games/monkey-mart/index.html"

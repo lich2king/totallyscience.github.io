@@ -5,47 +5,27 @@
     <?php include "../assets/includes/head.php" ?>
 
     <style>
-        #gameContainer {
-            margin-top: 20px;
+
+        iframe {
             width: 100vw;
-            height: 85vh;
-            margin-bottom: 5%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
-        #gameFrameDiv {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-        }
-
-        #gameFrameDiv iframe {
-            width: 75%;
-            height: 100%;
-            border: 4px solid var(--accent-color);
-            border-radius: 20px;
-            margin-bottom: 0%;
-            resize: vertical;
-        }
-
-        #alertIcon {
-            height: 6vh;
-        }
+        
      </style>
 </head>
 
 <body>
-    <section id="fixedElementsSection">
-        <div id="fixedElements">
-            <button onclick="window.open('index.php', '_self')" id="backarrow"><img id="backarrowLogo" src="../assets/images/backarrow-light.svg"></button>
-            <button onclick="openSchoolSite()" id="alert"><img id="alertIcon" src="assets/exclamation.svg"></button>
-        </div>
-    </section>
+    <div id="fixedElements">
+        <div><button><img id="backarrowLogo" src="assets/magnifying.svg"></button></div>
+        <div><button><img id="alertIcon" src="assets/exclamation.svg"></button></div>
+    </div>
+    
 
-    <section id="gameContainer">
-        <div id="gameFrameDiv">
-            <iframe src="" width="80vw" height="80vh" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
-        </div>
-    </section>
+    <iframe src="" width="80vw" height="80vh" overflow="visible" frameBorder="0" id="game-iframe"></iframe>
 
     <script src="assets/scripts/main.js?v65"></script>
     <script>
