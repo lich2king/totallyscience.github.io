@@ -67,10 +67,10 @@ label {
 }
 
 #fixedElements {
-    min-width: 30vw;
-    max-width: 30vw;
-    max-height: 20vw;
-    min-height: 20vw;
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -169,10 +169,10 @@ label {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 20vw;
-    max-width: 20vw;
-    max-height: 20vw;
-    min-height: 20vw;
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
     /* width: 15vw;
     height: 15vh; */
     border-radius: 3vw;
@@ -181,9 +181,7 @@ label {
 }
 
 
-/* For Mobile */
-
-@media screen and (max-width: 540px) {
+/* For Mobile @media screen and (max-width: 540px) {
     #gameDiv {
         min-width: 100px;
         max-width: 100px;
@@ -199,7 +197,6 @@ label {
 }
 
 
-/* For Tablets */
 
 @media screen and (min-width: 540px) and (max-width: 780px) {
     #gameDiv {
@@ -214,7 +211,7 @@ label {
         max-height: 400px;
         min-height: 400px;
     }
-}
+} */
 
 #gameDiv input {
     width: 100%;
