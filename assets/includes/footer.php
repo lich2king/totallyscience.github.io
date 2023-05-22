@@ -42,4 +42,4 @@
 
     <div class="bottomFoot">© 2023 TotallyScience. A Zach Yadegari Production ™</div>
 </footer>
-<script src="assets/scripts/main.js?v71"></script>
+<script src="assets/scripts/main.js?v72"></script>

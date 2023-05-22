@@ -60,6 +60,10 @@ function randomProperty(object) {
     return keys[Math.floor(keys.length * Math.random())];
 }
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function counter(id, start, end, duration) {
     // increase the points counter over time
     const obj = document.getElementById(id);

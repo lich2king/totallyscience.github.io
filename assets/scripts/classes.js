@@ -46,23 +46,6 @@ let categories = [
     'music',
     'flash',
 ];
-let categoriesNames = [
-    'Multiplayer',
-    'Driving',
-    'Casual',
-    'Action',
-    'Shooting',
-    'Puzzle',
-    'Classic',
-    'Sport',
-    'Clicker',
-    'Escape',
-    '2 Player',
-    'Horror',
-    'Impossible',
-    'Music',
-    'Flash',
-];
 
 if (search != null) {
     const input = document.getElementById('searchBar');
@@ -74,8 +57,8 @@ if (category != null) {
     selectedTopic = category;
 
     document.getElementById('topText').style.display = '';
-    if (categoriesNames[categories.indexOf(category)] > -1) {
-        document.getElementById('topText').innerText = `${categoriesNames[categories.indexOf(category)].toUpperCase()} Games`;
+    if (categories[categories.indexOf(category)] > -1) {
+        document.getElementById('topText').innerText = `${categories[categories.indexOf(category)].toUpperCase()} Games`;
     } else {
         document.getElementById('topText').innerText = `${category.toUpperCase()} Games`;
     }
@@ -146,7 +129,7 @@ async function displayGames() {
     //Then for each category (except mobile and a few others), make the category container then add games
 
     for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>${capitalizeFirstLetter(categories[i])} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');

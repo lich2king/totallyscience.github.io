@@ -1,16 +1,24 @@
+const categories = [
+    'multiplayer',
+    'car',
+    'casual',
+    'action',
+    'shooting',
+    'puzzle',
+    'classic',
+    'sport',
+    'clicker',
+    'escape',
+    '2',
+    'horror',
+    'hard',
+    'music',
+    'flash',
+];
+
+
 let token;
 let interval;
-
-window.addEventListener('load', async () => {
-    let response = await fetcher(`/auth/check`);
-    let result = await response.text();
-
-    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
-        token = false;
-    } else {
-        token = true;
-    }
-});
 
 // featured games slides code
 let shouldAutoSwitch = true;
@@ -54,10 +62,7 @@ autoSwitch();
 const gamesDiv = document.getElementById('games');
 const maxGames = 50;
 
-let selectedTopic = 'all';
-let displayedGames = 0;
 let games;
-let partners;
 let sorted;
 let hasLoaded = false;
 let sortObject = (obj) =>
@@ -66,17 +71,21 @@ let sortObject = (obj) =>
         .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 window.addEventListener('load', async () => {
-    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
-    let retrievedGames = await gamesRes.json();
-
-    let partnersRes = await fetcher(`/partners`);
-    partners = await partnersRes.json();
-
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
-    // check if user is signed in
-    if (token) {
+    let response = await fetcher(`/auth/check`);
+    let result = await response.text();
+
+    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+        token = false;
+
+        // user is not signed into an account
+        document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+    } else {
+        token = true;
+
+        // user is signed in, update points reward accordingly
         let rewardRes = await fetcher(`/points/reward/check`);
         let text = await rewardRes.text();
         let json = JSON.parse(text);
@@ -94,15 +103,19 @@ window.addEventListener('load', async () => {
         } else {
             startTimer(json.rewardTime);
         }
-        animateBar(json.rewardDay);
-    } else {
-        // user is not signed into an account
 
-        document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+        animateBar(json.rewardDay);
     }
 
+    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
+    let retrievedGames = await gamesRes.json();
+
     games = retrievedGames;
-    loadCookies();
+    
+    sorted = sortObject(games);
+    
+    displayGames();
+    suggestGames();
 });
 
 //
@@ -176,92 +189,19 @@ async function claimReward() {
     }
 }
 
-async function loadCookies() {
-    //when done
-    loadTopic();
-    suggestGames();
-}
-
-function loadTopic() {
-    displayedGames = 0;
-
-    document.getElementById('noSearch').style.display = 'none';
-
-    sorted = sortObject(games);
-
-    if (selectedTopic != 'all') {
-        const gameButtons = document.getElementsByClassName('all');
-
-        Array.from(gameButtons).forEach((game) => {
-            if (game.classList.contains(selectedTopic)) {
-                game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
-            } else {
-                game.setAttribute('style', 'display:none');
-            }
-        });
-    } else {
-        gamesDiv.innerHTML = '';
-        displayGames();
-    }
-}
-
 async function displayGames() {
-    //First check if there are any new games... if so, put them in the new games category
-
-    let categories = [
-        'multiplayer',
-        'car',
-        'casual',
-        'action',
-        'shooting',
-        'puzzle',
-        'classic',
-        'sport',
-        'clicker',
-        'escape',
-        '2',
-        'horror',
-        'hard',
-        'music',
-        'flash',
-    ];
-    let categoriesNames = [
-        'Multiplayer',
-        'Driving',
-        'Casual',
-        'Action',
-        'Shooting',
-        'Puzzle',
-        'Classic',
-        'Sport',
-        'Clicker',
-        'Escape',
-        '2 Player',
-        'Horror',
-        'Impossible',
-        'Music',
-        'Flash',
-    ];
 
     let arrowContainer =
-        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
-
-    //Then for each category (except mobile and a few others), make the category container then add games
-
-    for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
-
-        let row = document.createElement('div');
-        row.classList.add('horizontalCon');
-        let gamesContainer = document.createElement('div');
-        gamesContainer.classList.add('gamesCon');
-        gamesContainer.id = `${categories[i]}GamesCon`;
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-
-        row.appendChild(gamesContainer);
-        gamesDiv.appendChild(row);
-    }
+        `<div class="arrowsCon">
+            <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
+                <img class="arrow" src="/assets/images/left-arrow.png">
+            </div>
+            
+            <div class="arrowCon arrowRightCon" id="arrowRight" >
+                <img class="arrow" src="/assets/images/right-arrow.png">
+            </div>
+        </div>
+    `;
 
     let newGames = [];
     let miscGames = [];
@@ -387,7 +327,10 @@ async function displayGames() {
         gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
     }
 
-    //Partners
+    // load partners
+    let partnersRes = await fetcher(`/partners`);
+    let partners = await partnersRes.json();
+
     gamesDiv.innerHTML += `<h1>Partners <a href="/partners.php">View More</a></h1>`;
 
     let partnerRow = document.createElement('div');
@@ -395,6 +338,7 @@ async function displayGames() {
     let partnerGamesContainer = document.createElement('div');
     partnerGamesContainer.classList.add('gamesCon');
     partnerGamesContainer.id = `PartnersCon`;
+
     //add the arrows to the horizontal Con
     partnerRow.innerHTML += arrowContainer;
 
@@ -436,7 +380,7 @@ async function suggestGames() {
 
     let randomGames = [];
 
-    for (let x = displayedGames; x < displayedGames + 3; x++) {
+    for (let x = 0; x < 3; x++) {
         let randGame = randomProperty(games);
 
         while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
