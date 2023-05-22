@@ -39,7 +39,7 @@
     </div>
 
     <script src="assets/scripts/main.js?v69"></script>
-    <script src="assets/scripts/mobile.js?v69"></script>
+    <script src="assets/scripts/mobile.js?v70"></script>
 </body>
 
 </html>
