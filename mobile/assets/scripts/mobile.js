@@ -6,8 +6,8 @@ let sorted;
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`../assets/games.json`)
@@ -41,14 +41,14 @@ async function displayGames() {
         const gameDate = new Date(data.date_added);
 
         if (gameDate > weekAgo) {
-            classlist += ' new';
+            // classlist += ' new';
         }
 
         const gameBtn = createGameButton(name);
 
         gamesDiv.innerHTML += gameBtn;
     }
-    showPopularGames();
+    // showPopularGames();
 }
 
 function showPopularGames() {
