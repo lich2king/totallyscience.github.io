@@ -528,7 +528,7 @@ function createGameButton(game, pin, lazy) {
         <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
+                <img class="${lazyClass}" data-src="${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/' + data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>
@@ -538,7 +538,7 @@ function createGameButton(game, pin, lazy) {
         <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
             ${buttons}
             <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
+                <img class="${lazyClass}" data-src="${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/' + data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
             </div>
             <h1 class="innerGameDiv">${game}</h1>
         </div>

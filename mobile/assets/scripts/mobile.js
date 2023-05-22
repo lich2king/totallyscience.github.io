@@ -6,8 +6,8 @@ let sorted;
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`../assets/games.json`)
@@ -48,7 +48,7 @@ async function displayGames() {
 
         gamesDiv.innerHTML += gameBtn;
     }
-    showPopularGames();
+    // showPopularGames();
 }
 
 function showPopularGames() {
@@ -86,10 +86,10 @@ function createGameButton(game, pin) {
 
     let onclick = `location.href = 'class.php?class=${game}'`;
 
-    if (gameDate > weekAgo) {
-        classlist += ' new';
-        buttons += "<button id='newbanner'><img src='../assets/images/icons/newbanner.png'></button>";
-    }
+    // if (gameDate > weekAgo) {
+    //     classlist += ' new';
+    //     buttons += "<button id='newbanner'><img src='../assets/images/icons/newbanner.png'></button>";
+    // }
 
     gameBtn = `
         <div name="${game}" style="background-image: url(../${data.mobileimage})" id="gameDiv" onclick="${onclick}" class="${classlist}">
