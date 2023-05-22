@@ -41,7 +41,7 @@ async function displayGames() {
         const gameDate = new Date(data.date_added);
 
         if (gameDate > weekAgo) {
-            // classlist += ' new';
+            classlist += ' new';
         }
 
         const gameBtn = createGameButton(name);
@@ -86,10 +86,10 @@ function createGameButton(game, pin) {
 
     let onclick = `location.href = 'class.php?class=${game}'`;
 
-    if (gameDate > weekAgo) {
-        classlist += ' new';
-        buttons += "<button id='newbanner'><img src='../assets/images/icons/newbanner.png'></button>";
-    }
+    // if (gameDate > weekAgo) {
+    //     classlist += ' new';
+    //     buttons += "<button id='newbanner'><img src='../assets/images/icons/newbanner.png'></button>";
+    // }
 
     gameBtn = `
         <div name="${game}" style="background-image: url(../${data.mobileimage})" id="gameDiv" onclick="${onclick}" class="${classlist}">
