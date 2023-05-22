@@ -399,9 +399,9 @@
         "mobileimage": "mobile/assets/game_icons/stack.png",
         "controls": "[Space] - Place block",
         "tags": ["mobile"],
-        "date_added": "2021-12-22T04:56:36.982Z",
-        "developer": "CBC Kids",
-        "iframe_url": "https://www.cbc.ca/kidscbc2/content/games/box-tower/index.html"
+        "date_added": "2023-05-22T00:11:24.796Z",
+        "developer": "UNKNOWN",
+        "iframe_url": "./assets/games/stack/index.html"
     },
 
     "Tetris": {
