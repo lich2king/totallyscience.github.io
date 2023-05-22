@@ -3,9 +3,8 @@ const liveServer = '/api';
 const localServer = 'http://localhost:5003';
 const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 
-
 /**
- * Adds certain header and sends a request 
+ * Adds certain header and sends a request
  * 'Content-Type': 'application/json' is added to the headers
  * the method is set to POST if body passed into options
  * the body is passed into JSON.stringify()
@@ -13,13 +12,13 @@ const activeServer = location.host.startsWith('localhost') || location.host.star
  * @param {object} options - Can be any traditional fetch options provided an object. method and body are commonly used
  */
 function fetcher(endpoint, options) {
-    let updatedOptions = {...options };
+    let updatedOptions = { ...options };
 
     updatedOptions.headers = {
         ...(options ? options.headers : null),
         'Content-Type': 'application/json',
     };
-    
+
     updatedOptions.credentials = 'include';
 
     if (options && options.hasOwnProperty('body')) {
@@ -28,7 +27,7 @@ function fetcher(endpoint, options) {
 
         // json stringify body
         updatedOptions.body = JSON.stringify({
-            ...(options ? options.body : null)
+            ...(options ? options.body : null),
         });
     }
 
@@ -120,14 +119,18 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
-    //window.open('/mobile/index', '_self');
+    window.open('/mobile/index', '_self');
 }
 
 // panic button
-window.addEventListener('keydown', (e) => {
-    if (e.key == '`') window.open(localStorage.getItem('website'), '_blank');
-    else if (e.key == '[') aboutInBlank();
-}, false);
+window.addEventListener(
+    'keydown',
+    (e) => {
+        if (e.key == '`') window.open(localStorage.getItem('website'), '_blank');
+        else if (e.key == '[') aboutInBlank();
+    },
+    false
+);
 
 // page load init
 window.addEventListener('load', () => {
