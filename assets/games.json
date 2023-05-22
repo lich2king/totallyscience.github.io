@@ -1069,7 +1069,7 @@
     "Geometry Dash Remastered": {
         "description": "Welcome all to Geometry Dash Remastered, and, well, you already know the game. But this is more, this is 5 new levels you can't find anywhere else, this... is REMASTERED(I 'm totally serious).",
         "image": "/assets/games/icons/geometry-dash-remastered.jpg",
-        "mobileimage": "mobile/assets/game_icons/geometrydash.jpg",
+        "mobileimage": "mobile/assets/game_icons/geometrydashremastered.jpg",
         "controls": "[Space] - jump",
         "tags": ["mobile", "music"],
         "date_added": "2022-09-21T01:46:18.659Z",
