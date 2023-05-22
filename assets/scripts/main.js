@@ -12,7 +12,7 @@ const activeServer = location.host.startsWith('localhost') || location.host.star
  * @param {object} options - Can be any traditional fetch options provided an object. method and body are commonly used
  */
 function fetcher(endpoint, options) {
-    let updatedOptions = { ...options };
+    let updatedOptions = {...options };
 
     updatedOptions.headers = {
         ...(options ? options.headers : null),
@@ -119,7 +119,7 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
-    window.open('/mobile/index', '_self');
+    window.open('/mobile/index.php', '_self');
 }
 
 // panic button
