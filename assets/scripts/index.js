@@ -359,9 +359,6 @@ async function suggestGames() {
 
 function createGameButton(game, pin, lazy) {
     const data = games[game];
-    console.log(game);
-    console.log(games[game]);
-    console.log(data);
 
 
     if (data == null) return document.createElement('div');
