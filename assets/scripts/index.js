@@ -437,6 +437,8 @@ function createGameButton(game, pin, lazy) {
     header.className = 'innerGameDiv';
     header.innerText = game;
 
+    gameDiv.appendChild(header);
+
     return gameDiv;
 }
 
