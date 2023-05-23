@@ -1644,7 +1644,7 @@
     "Granny": {
         "description": "GRANNY is a survival horror game revolving around stealth gameplay. You're being held captive by an insane, blind old woman who hears everything, and also shambles around a small two-level house carrying a bat and dropping leg-mangling bear traps.",
         "image": "/assets/games/icons/granny.png",
-        "controls": "Move - [WASD] or [Arrow Keys]",
+        "controls": "Move - [WASD] or [Arrow Keys]\nInteract - [f]\nAttack - [Left-Click]\nBlock - [Right-Click]",
         "tags": ["horror"],
         "date_added": "2023-05-23T14:47:59.693Z",
         "developer": "DVloper",
