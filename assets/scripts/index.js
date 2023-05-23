@@ -364,7 +364,7 @@ function createGameButton(game, pin, lazy) {
     console.log(data);
 
 
-    if (data == null) return '';
+    if (data == null) return document.createElement('div');
 
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
