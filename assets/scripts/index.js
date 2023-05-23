@@ -16,11 +16,9 @@ const categories = [
     'flash',
 ];
 
-
 let token;
 let interval;
-
-// lots of await might be a problem
+let newGames = [];
 
 // featured games slides code
 let shouldAutoSwitch = true;
@@ -61,12 +59,9 @@ switchSlide(slideIndex);
 autoSwitch();
 
 // Load Games
-const gamesDiv = document.getElementById('games');
-const maxGames = 50;
-
 let games;
 let sorted;
-let hasLoaded = false;
+
 let sortObject = (obj) =>
     Object.keys(obj)
     .sort()
@@ -75,6 +70,8 @@ let sortObject = (obj) =>
 window.addEventListener('load', async() => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
+
+    console.log('domcontentloaded: ' + performance.now());
 
     loadGames();
     loadPartners();
@@ -91,62 +88,21 @@ window.addEventListener('load', async() => {
     } else {
         token = true;
 
-        // user is signed in, update points reward accordingly
-        let rewardRes = await fetcher(`/points/reward/check`);
-        let text = await rewardRes.text();
-        let json = JSON.parse(text);
-
-        if (json.isReady) {
-            let points = 100;
-
-            if (json.rewardDay >= 6) {
-                points = 1000;
-            }
-
-            document.getElementById(
-                'timerText'
-            ).innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
-        } else {
-            startTimer(json.rewardTime);
-        }
-
-        animateBar(json.rewardDay);
+        loadRewards();
     }
 });
 
 async function loadGames() {
+    console.log('start load games: ' + performance.now());
+    console.time();
     // retrieve games from json file
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     games = await gamesRes.json();
     sorted = sortObject(games);
 
-    let newGames = [];
-
-    console.time();
     for (let item in sorted) {
-        const name = item;
-        const data = sorted[item];
-
-        // create date object for one week in the past
-        const weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7 * 3);
-
-        // create date object for game added timestamp
-        const gameDate = new Date(data.date_added);
-
-        // if game is less than a week old, add it to the new games list
-        if (gameDate > weekAgo) {
-            newGames.push(name);
-        }
-
-        // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-        for (let category of categories) {
-            if (data.tags.join(' ').includes(category)) {
-                document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name));
-            }
-        }
+        displayGame(item);
     }
-    console.timeEnd();
 
     // if there are any new games, display them
     if (newGames.length > 0) {
@@ -160,42 +116,88 @@ async function loadGames() {
         }
     }
 
-    // display popular games
-    let popGamesRes = await fetcher(`/stats/games/popular`);
-
-    if (popGamesRes.status == 200) {
-        const populargamesContainer = document.getElementById('popularGamesCon');
-
-        let popularGames = await popGamesRes.json();
-
-        for (let i = 0; i < 15; i++) {
-            if (popularGames[i].game) {
-                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
-            }
-        }
-    }
-
-    // load user's liked games
-    let userLikedRes = await fetcher(`/profile/liked/get`);
-
-    if (userLikedRes.status == 200) {
-        const likedGamesContainer = document.getElementById('likedGamesCon');
-
-        let likedgames = await userLikedRes.json();
-
-        if (likedgames.length > 5) {
-            document.getElementById('likedGamesLabel').style.display = '';
-            document.getElementById('likedGamesHorizontalCon').style.display = '';
-
-            for (like in likedgames) {
-                likedGamesContainer.appendChild(createGameButton(likedgames[like]));
-            }
-        }
-    }
+    loadPopularGames();
+    loadLikedGames();
 
     suggestGames();
     addArrowListeners();
     findLazyImages();
+
+    console.timeEnd();
+}
+
+async function displayGame(item)
+{
+    const name = item;
+    const data = sorted[item];
+
+    // create date object for one week in the past
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
+
+    // create date object for game added timestamp
+    const gameDate = new Date(data.date_added);
+
+    // if game is less than a week old, add it to the new games list
+    if (gameDate > weekAgo)
+    {
+        newGames.push(name);
+    }
+
+    // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+    for (let category of categories)
+    {
+        if (data.tags.join(' ').includes(category))
+        {
+            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name));
+        }
+    }
+
+}
+
+async function loadPopularGames()
+{
+    // display popular games
+    let popGamesRes = await fetcher(`/stats/games/popular`);
+
+    if (popGamesRes.status == 200)
+    {
+        const populargamesContainer = document.getElementById('popularGamesCon');
+
+        let popularGames = await popGamesRes.json();
+
+        for (let i = 0; i < 15; i++)
+        {
+            if (popularGames[i].game)
+            {
+                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
+            }
+        }
+    }
+}
+
+async function loadLikedGames()
+{
+    // load user's liked games
+    let userLikedRes = await fetcher(`/profile/liked/get`);
+
+    if (userLikedRes.status == 200)
+    {
+        const likedGamesContainer = document.getElementById('likedGamesCon');
+
+        let likedgames = await userLikedRes.json();
+
+        if (likedgames.length > 5)
+        {
+            document.getElementById('likedGamesLabel').style.display = '';
+            document.getElementById('likedGamesHorizontalCon').style.display = '';
+
+            for (like in likedgames)
+            {
+                likedGamesContainer.appendChild(createGameButton(likedgames[like]));
+            }
+        }
+    }
 }
 
 async function loadPartners() {
@@ -222,6 +224,32 @@ async function loadPartners() {
 
         document.getElementById(`PartnersCon`).innerHTML += partnerButton;
     }
+}
+
+async function loadRewards()
+{
+    // user is signed in, update points reward accordingly
+    let rewardRes = await fetcher(`/points/reward/check`);
+    let text = await rewardRes.text();
+    let json = JSON.parse(text);
+
+    if (json.isReady)
+    {
+        let points = 100;
+
+        if (json.rewardDay >= 6)
+        {
+            points = 1000;
+        }
+
+        document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
+    }
+    else
+    {
+        startTimer(json.rewardTime);
+    }
+
+    animateBar(json.rewardDay);
 }
 
 
@@ -447,7 +475,7 @@ function createGameButton(game, pin, lazy) {
 //if it is over, check database
 //if database says it is not over, set local storage to correct time and keep counting
 
-function addArrowListeners() {
+async function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
         document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
@@ -473,7 +501,7 @@ function addArrowListeners() {
     }
 }
 
-function findLazyImages() {
+async function findLazyImages() {
     // Get all the lazy images
     const lazyImages = document.querySelectorAll('.lazy');
 
