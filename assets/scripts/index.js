@@ -69,10 +69,10 @@ let sorted;
 let hasLoaded = false;
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -114,8 +114,7 @@ window.addEventListener('load', async () => {
     }
 });
 
-async function loadGames()
-{
+async function loadGames() {
     // retrieve games from json file
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     games = await gamesRes.json();
@@ -141,10 +140,8 @@ async function loadGames()
         }
 
         // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-        for (let category of categories)
-        {
-            if (data.tags.join(' ').includes(category))
-            {
+        for (let category of categories) {
+            if (data.tags.join(' ').includes(category)) {
                 document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name));
             }
         }
@@ -152,15 +149,13 @@ async function loadGames()
     console.timeEnd();
 
     // if there are any new games, display them
-    if (newGames.length > 0)
-    {
+    if (newGames.length > 0) {
         const newGamesContainer = document.getElementById('newGamesCon');
 
         document.getElementById('newGamesLabel').style.display = '';
         document.getElementById('newGamesHorizontalCon').style.display = '';
-        
-        for (let i = 0; i < newGames.length; i++)
-        {
+
+        for (let i = 0; i < newGames.length; i++) {
             newGamesContainer.appendChild(createGameButton(newGames[i]));
         }
     }
@@ -168,16 +163,13 @@ async function loadGames()
     // display popular games
     let popGamesRes = await fetcher(`/stats/games/popular`);
 
-    if (popGamesRes.status == 200)
-    {
+    if (popGamesRes.status == 200) {
         const populargamesContainer = document.getElementById('popularGamesCon');
 
         let popularGames = await popGamesRes.json();
 
-        for (let i = 0; i < 15; i++)
-        {
-            if (popularGames[i].game)
-            {
+        for (let i = 0; i < 15; i++) {
+            if (popularGames[i].game) {
                 populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
             }
         }
@@ -190,14 +182,15 @@ async function loadGames()
         const likedGamesContainer = document.getElementById('likedGamesCon');
 
         let likedgames = await userLikedRes.json();
-        
+
         if (likedgames.length > 5) {
             document.getElementById('likedGamesLabel').style.display = '';
             document.getElementById('likedGamesHorizontalCon').style.display = '';
-            
+
             for (like in likedgames) {
+                console.log(createGameButton(likedgames[like]));
                 likedGamesContainer.appendChild(createGameButton(likedgames[like]));
-            }   
+            }
         }
     }
 
@@ -206,8 +199,7 @@ async function loadGames()
     findLazyImages();
 }
 
-async function loadPartners()
-{
+async function loadPartners() {
     // load partners
     let partnersRes = await fetcher(`/partners`);
     let partners = await partnersRes.json();
@@ -383,42 +375,34 @@ function createGameButton(game, pin, lazy) {
     gameDiv.classlist = data.tags.join(' ');
     gameDiv.onclick = onclick;
 
-    if (pin == 'pin')
-    {
+    if (pin == 'pin') {
         let button = document.createElement('button');
         button.id = 'pin';
 
         let image = document.createElement('img');
         image.src = '/assets/images/icons/coloredpin.png';
-        
+
         button.appendChild(image);
 
         gameDiv.appendChild(button);
-    }
-    else if (pin == 'hot')
-    {
+    } else if (pin == 'hot') {
         let button = document.createElement('button');
         button.id = 'newbanner';
 
         let image = document.createElement('img');
         image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.png';
-        
+
         button.appendChild(image);
 
         gameDiv.appendChild(button);
-    }
-    else if (pin == 'hidden')
-    {
+    } else if (pin == 'hidden') {
         gameDiv.style.display = 'none';
-    }
-    else if (pin != 'suggested')
-    {
+    } else if (pin != 'suggested') {
         gameDiv.classlist += 'all'
     }
 
 
-    if (gameDate > weekAgo)
-    {
+    if (gameDate > weekAgo) {
         gameDiv.classlist += ' new';
 
         let button = document.createElement('button');
@@ -426,7 +410,7 @@ function createGameButton(game, pin, lazy) {
 
         let image = document.createElement('img');
         image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.png';
-        
+
         button.appendChild(image);
 
         gameDiv.appendChild(button);
@@ -437,7 +421,7 @@ function createGameButton(game, pin, lazy) {
 
     let imageContainer = document.createElement('div');
     imageContainer.className = 'imageCon';
-    
+
     let img = document.createElement('img');
     img.setAttribute('data-src', `${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co' + data.image}`);
     img.src = backgroundImg;
@@ -463,7 +447,7 @@ function createGameButton(game, pin, lazy) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -473,7 +457,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -500,8 +484,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 
