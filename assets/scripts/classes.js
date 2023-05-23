@@ -344,7 +344,7 @@ function createGameButton(game, pin) {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
     }
     if (pin == 'hot') {
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/hotbanner.png'></button>";
     }
 
     if (pin == 'filtered') {
@@ -361,7 +361,7 @@ function createGameButton(game, pin) {
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
+        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/newbanner.png'></button>";
     }
 
     if (pin != 'suggested') {
