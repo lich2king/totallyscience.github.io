@@ -96,229 +96,139 @@
     <div class="adsrc adhorz" style="text-align:center;"></div>
 
     <div id="games">
+        <!-- new, popular, liked in that order -->
+
+        <h1 id="newGamesLabel" style="display: none;">New Games <a href="/classes.php?category=new">View More</a></h1>
+        <div id="newGamesHorizontalCon" class="horizontalCon" style="display: none;">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="newGamesCon"></div>
+        </div>
+
+        <h1>Popular Games</h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="popularGamesCon"></div>
+        </div>
+
+        <h1 id="likedGamesLabel" style="display: none;">Liked Games</h1>
+        <div id="likedGamesHorizontalCon" class="horizontalCon" style="display: none;">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="likedGamesCon"></div>
+        </div>
+
         <h1>Multiplayer Games <a href="/classes.php?category=multiplayer">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="multiplayerGamesCon"></div>
         </div>
 
         <h1>Car Games <a href="/classes.php?category=car">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="carGamesCon"></div>
         </div>
 
         <h1>Casual Games <a href="/classes.php?category=casual">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="casualGamesCon"></div>
         </div>
 
         <h1>Action Games <a href="/classes.php?category=action">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="actionGamesCon"></div>
         </div>
 
         <h1>Shooting Games <a href="/classes.php?category=shooting">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="shootingGamesCon"></div>
         </div>
 
         <h1>Puzzle Games <a href="/classes.php?category=puzzle">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="puzzleGamesCon"></div>
         </div>
 
         <h1>Classic Games <a href="/classes.php?category=classic">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="classicGamesCon"></div>
         </div>
 
         <h1>Sport Games <a href="/classes.php?category=sport">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="sportGamesCon"></div>
         </div>
 
         <h1>Clicker Games <a href="/classes.php?category=clicker">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="clickerGamesCon"></div>
         </div>
 
         <h1>Escape Games <a href="/classes.php?category=escape">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="escapeGamesCon"></div>
         </div>
 
         <h1>2 Player Games <a href="/classes.php?category=2">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="2GamesCon"></div>
         </div>
 
         <h1>Horror Games <a href="/classes.php?category=horror">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="horrorGamesCon"></div>
         </div>
 
         <h1>Hard Games <a href="/classes.php?category=hard">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="hardGamesCon"></div>
         </div>
 
         <h1>Music Games <a href="/classes.php?category=music">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="musicGamesCon"></div>
         </div>
 
-        <h1>flash Games <a href="/classes.php?category=flash">View More</a></h1>
+        <h1>Flash Games <a href="/classes.php?category=flash">View More</a></h1>
         <div class="horizontalCon">
-            <div class="arrowsCon">
-                <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                    <img class="arrow" src="/assets/images/left-arrow.png">
-                </div>
-                
-                <div class="arrowCon arrowRightCon" id="arrowRight" >
-                    <img class="arrow" src="/assets/images/right-arrow.png">
-                </div>
-            </div>
+            <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="flashGamesCon"></div>
+        </div>
+
+        <h1>Partners <a href="/partners.php">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="PartnersCon"></div>
         </div>
     </div>
 
@@ -491,7 +401,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v88"></script>
+    <script src="assets/scripts/index.js?v89"></script>
 </body>
 
 </html>

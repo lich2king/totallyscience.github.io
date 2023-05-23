@@ -20,6 +20,8 @@ const categories = [
 let token;
 let interval;
 
+// lots of await might be a problem
+
 // featured games slides code
 let shouldAutoSwitch = true;
 let slideIndex = 1;
@@ -74,6 +76,10 @@ window.addEventListener('load', async () => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
+    loadGames();
+    loadPartners();
+
+    // check if user is authenticated
     let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
@@ -106,17 +112,130 @@ window.addEventListener('load', async () => {
 
         animateBar(json.rewardDay);
     }
-
-    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
-    let retrievedGames = await gamesRes.json();
-
-    games = retrievedGames;
-    
-    sorted = sortObject(games);
-    
-    displayGames();
-    suggestGames();
 });
+
+async function loadGames()
+{
+    // retrieve games from json file
+    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
+    games = await gamesRes.json();
+    sorted = sortObject(games);
+
+    let newGames = [];
+
+    console.time();
+    for (let item in sorted) {
+        const name = item;
+        const data = sorted[item];
+
+        // create date object for one week in the past
+        const weekAgo = new Date();
+        weekAgo.setDate(weekAgo.getDate() - 7 * 3);
+
+        // create date object for game added timestamp
+        const gameDate = new Date(data.date_added);
+
+        // if game is less than a week old, add it to the new games list
+        if (gameDate > weekAgo) {
+            newGames.push(name);
+        }
+
+        // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+        for (let category of categories)
+        {
+            if (data.tags.join(' ').includes(category))
+            {
+                document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name));
+            }
+        }
+    }
+    console.timeEnd();
+
+    // if there are any new games, display them
+    if (newGames.length > 0)
+    {
+        const newGamesContainer = document.getElementById('newGamesCon');
+
+        document.getElementById('newGamesLabel').style.display = '';
+        document.getElementById('newGamesHorizontalCon').style.display = '';
+        
+        for (let i = 0; i < newGames.length; i++)
+        {
+            newGamesContainer.appendChild(createGameButton(newGames[i]));
+        }
+    }
+
+    // display popular games
+    let popGamesRes = await fetcher(`/stats/games/popular`);
+
+    if (popGamesRes.status == 200)
+    {
+        const populargamesContainer = document.getElementById('popularGamesCon');
+
+        let popularGames = await popGamesRes.json();
+
+        for (let i = 0; i < 15; i++)
+        {
+            if (popularGames[i].game)
+            {
+                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
+            }
+        }
+    }
+
+    // load user's liked games
+    let userLikedRes = await fetcher(`/profile/liked/get`);
+
+    if (userLikedRes.status == 200) {
+        const likedGamesContainer = document.getElementById('likedGamesCon');
+
+        let likedgames = await userLikedRes.json();
+        
+        if (likedgames.length > 5) {
+            document.getElementById('likedGamesLabel').style.display = '';
+            document.getElementById('likedGamesHorizontalCon').style.display = '';
+            
+            for (like in likedgames) {
+                likedGamesContainer.appendChild(createGameButton(likedgames[like]));
+            }   
+        }
+    }
+
+    suggestGames();
+    addArrowListeners();
+    findLazyImages();
+}
+
+async function loadPartners()
+{
+    // load partners
+    let partnersRes = await fetcher(`/partners`);
+    let partners = await partnersRes.json();
+
+    for (let x = 0; x < partners.length; x++) {
+        const name = partners[x].name;
+        const image = partners[x].image;
+        const website = partners[x].website;
+
+        const backgroundImg =
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
+
+        const partnerButton = `
+            <div name="${name}" id="gameDiv" onclick="window.open('${website}', target='_blank')"location.href = '${website}'">
+                <div class="imageCon partner">
+                    <img class="lazy partner" data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
+                </div>
+                <h1 class="innerGameDiv">${name}</h1>
+            </div>
+        `;
+
+        document.getElementById(`PartnersCon`).innerHTML += partnerButton;
+    }
+}
+
+
+
+
 
 //
 // reward system
@@ -189,184 +308,6 @@ async function claimReward() {
     }
 }
 
-async function displayGames() {
-
-    let arrowContainer =
-        `<div class="arrowsCon">
-            <div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;">
-                <img class="arrow" src="/assets/images/left-arrow.png">
-            </div>
-            
-            <div class="arrowCon arrowRightCon" id="arrowRight" >
-                <img class="arrow" src="/assets/images/right-arrow.png">
-            </div>
-        </div>
-    `;
-
-    let newGames = [];
-    let miscGames = [];
-    for (let x = 0; x < Object.keys(sorted).length; x++) {
-        let keys = Object.keys(sorted);
-        const name = keys[x];
-
-        const data = sorted[keys[x]];
-
-        const weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7 * 3);
-
-        const gameDate = new Date(data.date_added);
-
-        if (gameDate > weekAgo) {
-            newGames.push(name);
-        }
-
-        //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-        let hasCategory = false;
-        for (let i = 0; i < categories.length; i++) {
-            if (data.tags.join(' ').includes(categories[i])) {
-                hasCategory = true;
-                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
-            }
-        }
-        if (!hasCategory) {
-            //give them misc
-            miscGames.push(name);
-        }
-    }
-
-    if (miscGames.length > 0) {
-        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes.php?category=random">View More</a></h1>`;
-
-        let row = document.createElement('div');
-        row.classList.add('horizontalCon');
-        let gamesContainer = document.createElement('div');
-        gamesContainer.classList.add('gamesCon');
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-        //for each element in newGames, add the game to the horizontalCon
-        for (let i = 0; i < miscGames.length; i++) {
-            gamesContainer.innerHTML += createGameButton(miscGames[i]);
-        }
-        row.appendChild(gamesContainer);
-        gamesDiv.appendChild(row);
-    }
-
-    //liked games
-    if (token) {
-        let recentRow = document.createElement('div');
-        recentRow.classList.add('horizontalCon');
-        let recentGamesContainer = document.createElement('div');
-        recentGamesContainer.classList.add('gamesCon');
-        //add the arrows to the horizontal Con
-        recentRow.innerHTML += arrowContainer;
-
-        let length = 0;
-
-        let userLikedRes = await fetcher(`/profile/liked/get`);
-
-        if (userLikedRes.status == 200) {
-            let likedgames = await userLikedRes.json();
-
-            length = likedgames.length;
-            if (likedgames.length > 0) {
-                for (like in likedgames) {
-                    if (document.getElementsByName(likedgames[like]).length > 0) {
-                        recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
-                    }
-                }
-            }
-
-            if (length > 5) {
-                recentRow.appendChild(recentGamesContainer);
-                gamesDiv.prepend(recentRow);
-                gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
-            }
-        }
-    }
-
-    //popular games
-    let row = document.createElement('div');
-    row.classList.add('horizontalCon');
-    let gamesContainer = document.createElement('div');
-    gamesContainer.classList.add('gamesCon');
-    //add the arrows to the horizontal Con
-    row.innerHTML += arrowContainer;
-    //for each popular game, add the game to the horizontalCon
-
-    let popGamesRes = await fetcher(`/stats/games/popular`);
-
-    if (popGamesRes.status == 200) {
-        let text = await popGamesRes.text();
-        let popularGames = JSON.parse(text);
-
-        for (let i = 0; i < 15; i++) {
-            const gameName = popularGames[i].game;
-            if (gameName != null) {
-                gamesContainer.innerHTML += createGameButton(gameName, 'hot');
-            }
-        }
-    }
-
-    row.appendChild(gamesContainer);
-    gamesDiv.prepend(row);
-    gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
-
-    if (newGames.length > 0) {
-        let row = document.createElement('div');
-        row.classList.add('horizontalCon');
-        let gamesContainer = document.createElement('div');
-        gamesContainer.classList.add('gamesCon');
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-        //for each element in newGames, add the game to the horizontalCon
-        for (let i = 0; i < newGames.length; i++) {
-            gamesContainer.innerHTML += createGameButton(newGames[i]);
-        }
-        row.appendChild(gamesContainer);
-        gamesDiv.prepend(row);
-        gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
-    }
-
-    // load partners
-    let partnersRes = await fetcher(`/partners`);
-    let partners = await partnersRes.json();
-
-    gamesDiv.innerHTML += `<h1>Partners <a href="/partners.php">View More</a></h1>`;
-
-    let partnerRow = document.createElement('div');
-    partnerRow.classList.add('horizontalCon');
-    let partnerGamesContainer = document.createElement('div');
-    partnerGamesContainer.classList.add('gamesCon');
-    partnerGamesContainer.id = `PartnersCon`;
-
-    //add the arrows to the horizontal Con
-    partnerRow.innerHTML += arrowContainer;
-
-    partnerRow.appendChild(partnerGamesContainer);
-    gamesDiv.appendChild(partnerRow);
-
-    for (let x = 0; x < partners.length; x++) {
-        const name = partners[x].name;
-        const image = partners[x].image;
-        const website = partners[x].website;
-
-        const backgroundImg =
-            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
-
-        const partnerButton = `<div name="${name}" id="gameDiv" onclick="window.open('${website}', target='_blank')"location.href = '${website}'">
-        <div class="imageCon partner">
-            <img class="lazy partner" data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
-        </div>
-        <h1 class="innerGameDiv">${name}</h1>
-    </div>`;
-
-        document.getElementById(`PartnersCon`).innerHTML += partnerButton;
-    }
-
-    addArrowListeners();
-    findLazyImages();
-}
-
 async function suggestGames() {
     // retrieve all pinned games of user
     let pinnedGames = [];
@@ -409,18 +350,18 @@ async function suggestGames() {
     document.getElementById('scisuggests').innerHTML = '';
     for (let i = 0; i < 3; i++) {
         let game = randomGames[i];
-        let gameBtn = createGameButton(game, 'suggested', 'notlazy');
+        let gameBtn = createGameButton(game, 'suggested', false);
 
-        document.getElementById('scisuggests').innerHTML += gameBtn;
+        document.getElementById('scisuggests').appendChild(gameBtn);
         game = pinnedGames[i];
 
         if (i <= totalPinned - 1) {
-            gameBtn = createGameButton(game, 'pin', 'notlazy');
+            gameBtn = createGameButton(game, 'pin', false);
         } else {
-            gameBtn = createGameButton(game, 'suggested', 'notlazy');
+            gameBtn = createGameButton(game, 'suggested', false);
         }
 
-        document.getElementById('scisuggests').innerHTML += gameBtn;
+        document.getElementById('scisuggests').append(gameBtn);
     }
 }
 
@@ -429,67 +370,90 @@ function createGameButton(game, pin, lazy) {
 
     if (data == null) return '';
 
-    let classlist = data.tags.join(' ');
-
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
 
-    let gameBtn = '';
-    let buttons = '';
+    const onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
-    let onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
+    let gameDiv = document.createElement('div');
+    gameDiv.tagName = game;
+    gameDiv.id = 'gameDiv';
+    gameDiv.classlist = data.tags.join(' ');
+    gameDiv.onclick = onclick;
 
-    let backgroundImg =
-        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
-    let lazyClass = 'lazy';
+    if (pin == 'pin')
+    {
+        let button = document.createElement('button');
+        button.id = 'pin';
 
-    if (pin == 'pin') {
-        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+        let image = document.createElement('img');
+        image.src = '/assets/images/icons/coloredpin.png';
+        
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
+    }
+    else if (pin == 'hot')
+    {
+        let button = document.createElement('button');
+        button.id = 'newbanner';
+
+        let image = document.createElement('img');
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.png';
+        
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
+    }
+    else if (pin == 'hidden')
+    {
+        gameDiv.style.display = 'none';
+    }
+    else if (pin != 'suggested')
+    {
+        gameDiv.classlist += 'all'
     }
 
-    if (pin == 'hot') {
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+
+    if (gameDate > weekAgo)
+    {
+        gameDiv.classlist += ' new';
+
+        let button = document.createElement('button');
+        button.id = 'newbanner';
+
+        let image = document.createElement('img');
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.png';
+        
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
     }
 
-    if (gameDate > weekAgo) {
-        classlist += ' new';
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
-    }
+    let backgroundImg = lazy ? `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E` : data.image;
+    let lazyClass = lazy ? 'lazy' : '';
 
-    if (pin != 'suggested' && pin != 'pin') {
-        classlist += ' all';
-    }
+    let imageContainer = document.createElement('div');
+    imageContainer.className = 'imageCon';
+    
+    let img = document.createElement('img');
+    img.setAttribute('data-src', `${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co' + data.image}`);
+    img.src = backgroundImg;
+    img.alt = `Totally Science ${game}`;
+    img.title = `Totally Science ${game}`;
+    img.className = lazyClass;
 
-    if (lazy == 'notlazy') {
-        backgroundImg = data.image;
-        lazyClass = '';
-    }
+    imageContainer.appendChild(img);
 
-    if (pin != 'hidden') {
-        gameBtn = `
-        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-            <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/' + data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-    } else {
-        gameBtn = `
-        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-            <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/' + data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-    }
+    gameDiv.appendChild(imageContainer);
 
-    return gameBtn;
+    let header = document.createElement('h1');
+    header.className = 'innerGameDiv';
+    header.innerText = game;
+
+    return gameDiv;
 }
 
 //check for local storage of daily reward
