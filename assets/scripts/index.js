@@ -188,7 +188,6 @@ async function loadGames() {
             document.getElementById('likedGamesHorizontalCon').style.display = '';
 
             for (like in likedgames) {
-                console.log(createGameButton(likedgames[like]));
                 likedGamesContainer.appendChild(createGameButton(likedgames[like]));
             }
         }
