@@ -370,7 +370,7 @@ function createGameButton(game, pin, lazy) {
     const onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
     let gameDiv = document.createElement('div');
-    gameDiv.tagName = game;
+    gameDiv.setAttribute('tagName', game);
     gameDiv.id = 'gameDiv';
     gameDiv.classlist = data.tags.join(' ');
     gameDiv.setAttribute('onclick', onclick);
