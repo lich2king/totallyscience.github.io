@@ -9,7 +9,7 @@
     </div>
 
     <div id="middlebar">
-        <img src="assets/images/transparentlogo.png"></img>
+        <img src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/transparentlogo.png"></img>
         <h1>Totally Science</h1>
     </div>
 

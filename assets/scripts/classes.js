@@ -9,7 +9,7 @@ window.addEventListener('load', async () => {
     if (result == 'A token is required for authentication' || result == 'Invalid Token') {
         token = false;
     } else {
-        token = true;
+        token = JSON.parse(result);
     }
 });
 
@@ -282,12 +282,10 @@ var doneTypingInterval = 1000; // Time in milliseconds (1 second)
 
 searchBar.addEventListener('keyup', () => {
     clearTimeout(typingTimer);
-    typingTimer = setTimeout(function () {
-        var input = searchBar.value;
-        gtag('event', 'Searched', {
-            event_category: 'Typing',
-            event_label: input,
-        });
+    typingTimer = setTimeout(() => {
+        let input = searchBar.value;
+
+        zaraz.track("search", {input: input, user: token.id});
     }, doneTypingInterval);
 
     scrollTo(0, 0);
