@@ -338,7 +338,7 @@ function createGameButton(game, pin, lazy) {
     let gameDiv = document.createElement('div');
     gameDiv.setAttribute('name', game);
     gameDiv.id = 'gameDiv';
-    gameDiv.classList = data.tags.join(' ');
+    gameDiv.classList = data.tags.join(' ') + ' all';
     gameDiv.setAttribute('onclick', onclick);
     if (data.keywords != null) { gameDiv.setAttribute('keywords', data.keywords) };
 
