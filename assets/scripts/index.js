@@ -391,7 +391,7 @@ function createGameButton(game, pin, lazy) {
     let gameDiv = document.createElement('div');
     gameDiv.setAttribute('tagName', game);
     gameDiv.id = 'gameDiv';
-    gameDiv.classlist = data.tags.join(' ');
+    gameDiv.classList = data.tags.join(' ');
     gameDiv.setAttribute('onclick', onclick);
 
     if (pin == 'pin') {
@@ -417,12 +417,12 @@ function createGameButton(game, pin, lazy) {
     } else if (pin == 'hidden') {
         gameDiv.style.display = 'none';
     } else if (pin != 'suggested') {
-        gameDiv.classlist += 'all'
+        gameDiv.classList.add('add');
     }
 
 
     if (gameDate > weekAgo) {
-        gameDiv.classlist += ' new';
+        gameDiv.classList.add('new');
 
         let button = document.createElement('button');
         button.id = 'newbanner';
