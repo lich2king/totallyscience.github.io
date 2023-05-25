@@ -398,7 +398,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v102"></script>
+    <script src="assets/scripts/index.js?v103"></script>
 </body>
 
 </html>
