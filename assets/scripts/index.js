@@ -417,7 +417,7 @@ function createGameButton(game, pin, lazy) {
     } else if (pin == 'hidden') {
         gameDiv.style.display = 'none';
     } else if (pin != 'suggested') {
-        gameDiv.classList += 'all'
+        gameDiv.classList += ' all'
     }
 
 
