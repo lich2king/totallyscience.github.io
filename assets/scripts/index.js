@@ -108,7 +108,7 @@ async function loadGames() {
         document.getElementById('newGamesHorizontalCon').style.display = '';
 
         for (let i = 0; i < newGames.length; i++) {
-            newGamesContainer.appendChild(createGameButton(newGames[i]));
+            newGamesContainer.appendChild(createGameButton(newGames[i], '', false));
         }
     }
 
@@ -156,7 +156,7 @@ async function loadPopularGames() {
 
         for (let i = 0; i < 15; i++) {
             if (popularGames[i].game) {
-                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
+                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot', false));
             }
         }
     }
@@ -176,7 +176,7 @@ async function loadLikedGames() {
             document.getElementById('likedGamesHorizontalCon').style.display = '';
 
             for (like in likedgames) {
-                likedGamesContainer.appendChild(createGameButton(likedgames[like]));
+                likedGamesContainer.appendChild(createGameButton(likedgames[like], '', false));
             }
         }
     }
