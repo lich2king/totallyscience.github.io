@@ -502,7 +502,6 @@ async function findLazyImages() {
                 if (entry.isIntersecting) {
                     entry.target.src = entry.target.dataset.src;
                     entry.target.classList.remove('lazy');
-                    console.log(entry.target);
                     observer.unobserve(entry.target);
                 }
             });
