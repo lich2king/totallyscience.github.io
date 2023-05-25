@@ -67,11 +67,9 @@ let sortObject = (obj) =>
     .sort()
     .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
-
-    console.log('domcontentloaded: ' + performance.now());
 
     loadGames();
     loadPartners();
@@ -93,8 +91,6 @@ window.addEventListener('load', async() => {
 });
 
 async function loadGames() {
-    console.log('start load games: ' + performance.now());
-    console.time();
     // retrieve games from json file
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     games = await gamesRes.json();
@@ -122,8 +118,6 @@ async function loadGames() {
     suggestGames();
     addArrowListeners();
     findLazyImages();
-
-    console.timeEnd();
 }
 
 async function displayGame(item)
@@ -206,23 +200,37 @@ async function loadPartners() {
     let partners = await partnersRes.json();
 
     for (let x = 0; x < partners.length; x++) {
+        const backgroundImg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E`;
         const name = partners[x].name;
         const image = partners[x].image;
         const website = partners[x].website;
 
-        const backgroundImg =
-            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
+        let partnerEle = document.createElement('div');
+        partnerEle.tagName = name;
+        partnerEle.id = 'gameDiv';
+        partnerEle.addEventListener('click', () => {
+            window.open(website, '_blank')
+        });
 
-        const partnerButton = `
-            <div name="${name}" id="gameDiv" onclick="window.open('${website}', target='_blank')"location.href = '${website}'">
-                <div class="imageCon partner">
-                    <img class="lazy partner" data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
-                </div>
-                <h1 class="innerGameDiv">${name}</h1>
-            </div>
-        `;
+        let imageContainer = document.createElement('div');
+        imageContainer.classList = 'imageCon partner';
 
-        document.getElementById(`PartnersCon`).innerHTML += partnerButton;
+        let img = document.createElement('img');
+        img.classList = 'lazy partner';
+        img.setAttribute('data-src', image);
+        img.src = backgroundImg;
+        img.alt = `Totally Science Partner ${name}`;
+        img.title = `Totally Science Partner ${name}`;
+
+        let nameEle = document.createElement('h1');
+        nameEle.className = 'innerGameDiv';
+        nameEle.innerText = ''
+
+        imageContainer.appendChild(img);
+        partnerEle.appendChild(imageContainer);
+        partnerEle.appendChild(nameEle);
+        
+        document.getElementById(`PartnersCon`).appendChild(partnerEle);
     }
 }
 
