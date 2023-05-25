@@ -73,6 +73,7 @@ window.addEventListener('load', async() => {
 
     loadGames();
     loadPartners();
+    findLazyImages();
 
     // check if user is authenticated
     let response = await fetcher(`/auth/check`);
@@ -117,7 +118,6 @@ async function loadGames() {
 
     suggestGames();
     addArrowListeners();
-    findLazyImages();
 }
 
 async function displayGame(item) {
