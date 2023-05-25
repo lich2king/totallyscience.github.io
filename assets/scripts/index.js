@@ -156,6 +156,7 @@ async function loadPopularGames() {
 
         for (let i = 0; i < 15; i++) {
             if (popularGames[i].game) {
+                console.log("hot");
                 populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot', false));
             }
         }
