@@ -108,7 +108,7 @@ async function loadGames() {
         document.getElementById('newGamesHorizontalCon').style.display = '';
 
         for (let i = 0; i < newGames.length; i++) {
-            newGamesContainer.appendChild(createGameButton(newGames[i], '', false));
+            newGamesContainer.appendChild(createGameButton(newGames[i]));
         }
     }
 
@@ -139,7 +139,7 @@ async function displayGame(item) {
     // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
     for (let category of categories) {
         if (data.tags.join(' ').includes(category)) {
-            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name, '', true));
+            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name));
         }
     }
 
@@ -156,8 +156,7 @@ async function loadPopularGames() {
 
         for (let i = 0; i < 15; i++) {
             if (popularGames[i].game) {
-                console.log("hot");
-                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot', false));
+                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
             }
         }
     }
@@ -177,7 +176,7 @@ async function loadLikedGames() {
             document.getElementById('likedGamesHorizontalCon').style.display = '';
 
             for (like in likedgames) {
-                likedGamesContainer.appendChild(createGameButton(likedgames[like], '', false));
+                likedGamesContainer.appendChild(createGameButton(likedgames[like]));
             }
         }
     }
@@ -378,7 +377,6 @@ async function suggestGames() {
 
 function createGameButton(game, pin, lazy) {
     const data = games[game];
-    console.log(lazy);
 
 
     if (data == null) return document.createElement('div');
@@ -393,7 +391,7 @@ function createGameButton(game, pin, lazy) {
     let gameDiv = document.createElement('div');
     gameDiv.setAttribute('tagName', game);
     gameDiv.id = 'gameDiv';
-    gameDiv.classList = data.tags.join(' ');
+    gameDiv.classlist = data.tags.join(' ');
     gameDiv.setAttribute('onclick', onclick);
 
     if (pin == 'pin') {
@@ -419,12 +417,12 @@ function createGameButton(game, pin, lazy) {
     } else if (pin == 'hidden') {
         gameDiv.style.display = 'none';
     } else if (pin != 'suggested') {
-        gameDiv.classList += ' all'
+        gameDiv.classlist += 'all'
     }
 
 
     if (gameDate > weekAgo) {
-        gameDiv.classList += ' new';
+        gameDiv.classlist += ' new';
 
         let button = document.createElement('button');
         button.id = 'newbanner';
@@ -448,7 +446,7 @@ function createGameButton(game, pin, lazy) {
     img.src = backgroundImg;
     img.alt = `Totally Science ${game}`;
     img.title = `Totally Science ${game}`;
-    img.classList.add(lazyClass);
+    img.className = lazyClass;
 
     imageContainer.appendChild(img);
 
