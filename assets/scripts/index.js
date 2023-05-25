@@ -360,22 +360,22 @@ async function suggestGames() {
     document.getElementById('scisuggests').innerHTML = '';
     for (let i = 0; i < 3; i++) {
         let game = randomGames[i];
-        let gameBtn = createGameButton(game, 'suggested', true);
+        let gameBtn = createGameButton(game, 'suggested', false);
 
         document.getElementById('scisuggests').appendChild(gameBtn);
         game = pinnedGames[i];
 
         if (i <= totalPinned - 1) {
-            gameBtn = createGameButton(game, 'pin', true);
+            gameBtn = createGameButton(game, 'pin', false);
         } else {
-            gameBtn = createGameButton(game, 'suggested', true);
+            gameBtn = createGameButton(game, 'suggested', false);
         }
 
         document.getElementById('scisuggests').append(gameBtn);
     }
 }
 
-function createGameButton(game, pin, notlazy) {
+function createGameButton(game, pin, lazy) {
     const data = games[game];
 
 
@@ -435,8 +435,8 @@ function createGameButton(game, pin, notlazy) {
         gameDiv.appendChild(button);
     }
 
-    let backgroundImg = notlazy ? data.image : `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E`;
-    let lazyClass = notlazy ? 'lazy' : '';
+    let backgroundImg = lazy ? `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E` : data.image;
+    let lazyClass = lazy ? 'lazy' : '';
 
     let imageContainer = document.createElement('div');
     imageContainer.className = 'imageCon';
