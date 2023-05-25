@@ -301,7 +301,7 @@ searchBar.addEventListener('keyup', () => {
 
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
-        var name = game.getAttribute('tagname').toUpperCase();
+        var name = game.getAttribute('name').toUpperCase();
         var keywords = game.getAttribute('keywords').toUpperCase();
         name = name.split(' ').join('');
 
@@ -336,7 +336,7 @@ function createGameButton(game, pin, lazy) {
     const onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
     let gameDiv = document.createElement('div');
-    gameDiv.setAttribute('tagName', game);
+    gameDiv.setAttribute('name', game);
     gameDiv.id = 'gameDiv';
     gameDiv.classlist = data.tags.join(' ');
     gameDiv.setAttribute('onclick', onclick);
