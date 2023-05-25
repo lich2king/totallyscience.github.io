@@ -163,14 +163,14 @@ async function displayGames() {
             newGames.push(name);
         }
 
-        filteredGameCon.appendChild(createGameButton(name, 'filtered'));
+        filteredGameCon.innerHTML += createGameButton(name, 'filtered');
 
         //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
         let hasCategory = false;
         for (let i = 0; i < categories.length; i++) {
             if (data.tags.join(' ').includes(categories[i])) {
                 hasCategory = true;
-                document.getElementById(`${categories[i]}GamesCon`).appendChild(createGameButton(name));
+                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
             }
         }
         if (!hasCategory) {
@@ -189,7 +189,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < miscGames.length; i++) {
-            gamesContainer.appendChild(createGameButton(miscGames[i]));
+            gamesContainer.innerHTML += createGameButton(miscGames[i]);
         }
         row.appendChild(gamesContainer);
         gamesDiv.appendChild(row);
@@ -215,7 +215,7 @@ async function displayGames() {
         if (likedgames.length > 0) {
             for (like in likedgames) {
                 if (document.getElementsByName(likedgames[like]).length > 0) {
-                    recentGamesContainer.appendChild(createGameButton(likedgames[like]));
+                    recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
                 }
             }
         }
@@ -246,7 +246,7 @@ async function displayGames() {
         for (let i = 0; i < 15; i++) {
             const gameName = popularGames[i].game;
             if (gameName != null) {
-                gamesContainer.appendChild(createGameButton(gameName, 'hot'));
+                gamesContainer.innerHTML += createGameButton(gameName, 'hot');
             }
         }
     }
@@ -263,7 +263,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < newGames.length; i++) {
-            gamesContainer.appendChild(createGameButton(newGames[i]));
+            gamesContainer.innerHTML += createGameButton(newGames[i]);
         }
         row.appendChild(gamesContainer);
         gamesDiv.prepend(row);
@@ -302,10 +302,9 @@ searchBar.addEventListener('keyup', () => {
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
         var name = game.getAttribute('name').toUpperCase();
-        var keywords = game.getAttribute('keywords').toUpperCase();
         name = name.split(' ').join('');
 
-        if ((name.includes(input) || keywords.includes(input)) && game.classList.contains(selectedTopic)) {
+        if (name.includes(input) && game.classList.contains(selectedTopic)) {
             game.style.display = '';
             gameShown = true;
         } else {
@@ -322,91 +321,74 @@ searchBar.addEventListener('keyup', () => {
     }
 });
 
-function createGameButton(game, pin, lazy) {
+function createGameButton(game, pin) {
     const data = games[game];
+    if (data == null) return '';
 
-
-    if (data == null) return document.createElement('div');
+    let classlist = data.tags.join(' ');
 
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
 
-    const onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
+    let gameBtn = '';
 
-    let gameDiv = document.createElement('div');
-    gameDiv.setAttribute('name', game);
-    gameDiv.id = 'gameDiv';
-    gameDiv.classList = data.tags.join(' ') + ' all';
-    gameDiv.setAttribute('onclick', onclick);
-    if (data.keywords != null) { gameDiv.setAttribute('keywords', data.keywords) };
+    let buttons = '';
+
+    let onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
     if (pin == 'pin') {
-        let button = document.createElement('button');
-        button.id = 'pin';
-
-        let image = document.createElement('img');
-        image.src = '/assets/images/icons/coloredpin.png';
-
-        button.appendChild(image);
-
-        gameDiv.appendChild(button);
-    } else if (pin == 'hot') {
-        let button = document.createElement('button');
-        button.id = 'newbanner';
-
-        let image = document.createElement('img');
-        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.png';
-
-        button.appendChild(image);
-
-        gameDiv.appendChild(button);
-    } else if (pin == 'hidden') {
-        gameDiv.style.display = 'none';
-    } else if (pin != 'suggested') {
-        gameDiv.classlist += 'all'
+        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+    }
+    if (pin == 'hot') {
+        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/hotbanner.png'></button>";
     }
 
+    if (pin == 'filtered') {
+        let hasCategory = false;
+        for (let i = 0; i < categories.length; i++) {
+            if (data.tags.join(' ').includes(categories[i])) {
+                hasCategory = true;
+            }
+        }
+        if (!hasCategory) {
+            classlist += ' random';
+        }
+    }
 
     if (gameDate > weekAgo) {
-        gameDiv.classlist += ' new';
-
-        let button = document.createElement('button');
-        button.id = 'newbanner';
-
-        let image = document.createElement('img');
-        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.png';
-
-        button.appendChild(image);
-
-        gameDiv.appendChild(button);
+        classlist += ' new';
+        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/newbanner.png'></button>";
     }
 
-    let backgroundImg = lazy ? `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E` : data.image;
-    let lazyClass = lazy ? 'lazy' : '';
+    if (pin != 'suggested') {
+        classlist += ' all';
+    }
 
-    let imageContainer = document.createElement('div');
-    imageContainer.className = 'imageCon';
+    if (pin != 'hidden' && pin != 'filtered') {
+        gameBtn = `
+        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
+            ${buttons}
+            <div class="imageCon">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
+            </div>
+            <h1 class="innerGameDiv">${game}</h1>
+        </div>
+        `;
+    } else {
+        gameBtn = `
+        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
+            ${buttons}
+            <div class="imageCon">
+                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
+            </div>
+            <h1 class="innerGameDiv">${game}</h1>
+        </div>
+        `;
+    }
 
-    let img = document.createElement('img');
-    img.setAttribute('data-src', `${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co' + data.image}`);
-    img.src = backgroundImg;
-    img.alt = `Totally Science ${game}`;
-    img.title = `Totally Science ${game}`;
-    img.classList.add(lazyClass);
-
-    imageContainer.appendChild(img);
-
-    gameDiv.appendChild(imageContainer);
-
-    let header = document.createElement('h1');
-    header.className = 'innerGameDiv';
-    header.innerText = game;
-
-    gameDiv.appendChild(header);
-
-    return gameDiv;
+    return gameBtn;
 }
 
 function addArrowListeners() {
