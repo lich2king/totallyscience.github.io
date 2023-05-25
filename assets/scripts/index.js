@@ -139,7 +139,7 @@ async function displayGame(item) {
     // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
     for (let category of categories) {
         if (data.tags.join(' ').includes(category)) {
-            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name), '', true);
+            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name, '', true));
         }
     }
 
