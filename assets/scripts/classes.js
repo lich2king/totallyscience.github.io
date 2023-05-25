@@ -394,7 +394,7 @@ function createGameButton(game, pin, lazy) {
     img.src = backgroundImg;
     img.alt = `Totally Science ${game}`;
     img.title = `Totally Science ${game}`;
-    img.className = lazyClass;
+    img.classList.add(lazyClass);
 
     imageContainer.appendChild(img);
 
