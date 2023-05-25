@@ -67,7 +67,7 @@ let sortObject = (obj) =>
     .sort()
     .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -120,8 +120,7 @@ async function loadGames() {
     findLazyImages();
 }
 
-async function displayGame(item)
-{
+async function displayGame(item) {
     const name = item;
     const data = sorted[item];
 
@@ -133,61 +132,50 @@ async function displayGame(item)
     const gameDate = new Date(data.date_added);
 
     // if game is less than a week old, add it to the new games list
-    if (gameDate > weekAgo)
-    {
+    if (gameDate > weekAgo) {
         newGames.push(name);
     }
 
     // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-    for (let category of categories)
-    {
-        if (data.tags.join(' ').includes(category))
-        {
+    for (let category of categories) {
+        if (data.tags.join(' ').includes(category)) {
             document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name));
         }
     }
 
 }
 
-async function loadPopularGames()
-{
+async function loadPopularGames() {
     // display popular games
     let popGamesRes = await fetcher(`/stats/games/popular`);
 
-    if (popGamesRes.status == 200)
-    {
+    if (popGamesRes.status == 200) {
         const populargamesContainer = document.getElementById('popularGamesCon');
 
         let popularGames = await popGamesRes.json();
 
-        for (let i = 0; i < 15; i++)
-        {
-            if (popularGames[i].game)
-            {
+        for (let i = 0; i < 15; i++) {
+            if (popularGames[i].game) {
                 populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
             }
         }
     }
 }
 
-async function loadLikedGames()
-{
+async function loadLikedGames() {
     // load user's liked games
     let userLikedRes = await fetcher(`/profile/liked/get`);
 
-    if (userLikedRes.status == 200)
-    {
+    if (userLikedRes.status == 200) {
         const likedGamesContainer = document.getElementById('likedGamesCon');
 
         let likedgames = await userLikedRes.json();
 
-        if (likedgames.length > 5)
-        {
+        if (likedgames.length > 5) {
             document.getElementById('likedGamesLabel').style.display = '';
             document.getElementById('likedGamesHorizontalCon').style.display = '';
 
-            for (like in likedgames)
-            {
+            for (like in likedgames) {
                 likedGamesContainer.appendChild(createGameButton(likedgames[like]));
             }
         }
@@ -229,31 +217,26 @@ async function loadPartners() {
         imageContainer.appendChild(img);
         partnerEle.appendChild(imageContainer);
         partnerEle.appendChild(nameEle);
-        
+
         document.getElementById(`PartnersCon`).appendChild(partnerEle);
     }
 }
 
-async function loadRewards()
-{
+async function loadRewards() {
     // user is signed in, update points reward accordingly
     let rewardRes = await fetcher(`/points/reward/check`);
     let text = await rewardRes.text();
     let json = JSON.parse(text);
 
-    if (json.isReady)
-    {
+    if (json.isReady) {
         let points = 100;
 
-        if (json.rewardDay >= 6)
-        {
+        if (json.rewardDay >= 6) {
             points = 1000;
         }
 
         document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
-    }
-    else
-    {
+    } else {
         startTimer(json.rewardTime);
     }
 
@@ -408,7 +391,7 @@ function createGameButton(game, pin, lazy) {
     let gameDiv = document.createElement('div');
     gameDiv.setAttribute('tagName', game);
     gameDiv.id = 'gameDiv';
-    gameDiv.classlist = data.tags.join(' ');
+    gameDiv.classList = data.tags.join(' ');
     gameDiv.setAttribute('onclick', onclick);
 
     if (pin == 'pin') {
@@ -434,12 +417,12 @@ function createGameButton(game, pin, lazy) {
     } else if (pin == 'hidden') {
         gameDiv.style.display = 'none';
     } else if (pin != 'suggested') {
-        gameDiv.classlist += 'all'
+        gameDiv.classList += 'all'
     }
 
 
     if (gameDate > weekAgo) {
-        gameDiv.classlist += ' new';
+        gameDiv.classList += ' new';
 
         let button = document.createElement('button');
         button.id = 'newbanner';
