@@ -2,7 +2,7 @@ document.getElementById('gamesnav').classList.add('selected');
 
 let token;
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
@@ -69,8 +69,8 @@ if (category != null) {
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -163,14 +163,14 @@ async function displayGames() {
             newGames.push(name);
         }
 
-        filteredGameCon.innerHTML += createGameButton(name, 'filtered');
+        filteredGameCon.appendChild(createGameButton(name, 'filtered'));
 
         //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
         let hasCategory = false;
         for (let i = 0; i < categories.length; i++) {
             if (data.tags.join(' ').includes(categories[i])) {
                 hasCategory = true;
-                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
+                document.getElementById(`${categories[i]}GamesCon`).appendChild(createGameButton(name));
             }
         }
         if (!hasCategory) {
@@ -189,7 +189,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < miscGames.length; i++) {
-            gamesContainer.innerHTML += createGameButton(miscGames[i]);
+            gamesContainer.appendChild(createGameButton(miscGames[i]));
         }
         row.appendChild(gamesContainer);
         gamesDiv.appendChild(row);
@@ -215,7 +215,7 @@ async function displayGames() {
         if (likedgames.length > 0) {
             for (like in likedgames) {
                 if (document.getElementsByName(likedgames[like]).length > 0) {
-                    recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
+                    recentGamesContainer.appendChild(createGameButton(likedgames[like]));
                 }
             }
         }
@@ -246,7 +246,7 @@ async function displayGames() {
         for (let i = 0; i < 15; i++) {
             const gameName = popularGames[i].game;
             if (gameName != null) {
-                gamesContainer.innerHTML += createGameButton(gameName, 'hot');
+                gamesContainer.appendChild(createGameButton(gameName, 'hot'));
             }
         }
     }
@@ -263,7 +263,7 @@ async function displayGames() {
         row.innerHTML += arrowContainer;
         //for each element in newGames, add the game to the horizontalCon
         for (let i = 0; i < newGames.length; i++) {
-            gamesContainer.innerHTML += createGameButton(newGames[i]);
+            gamesContainer.appendChild(createGameButton(newGames[i]));
         }
         row.appendChild(gamesContainer);
         gamesDiv.prepend(row);
@@ -285,7 +285,7 @@ searchBar.addEventListener('keyup', () => {
     typingTimer = setTimeout(() => {
         let input = searchBar.value;
 
-        zaraz.track("search", {input: input, user: token.id});
+        zaraz.track("search", { input: input, user: token.id });
     }, doneTypingInterval);
 
     scrollTo(0, 0);
@@ -302,9 +302,10 @@ searchBar.addEventListener('keyup', () => {
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
         var name = game.getAttribute('name').toUpperCase();
+        var keywords = game.getAttribute('keywords').toUpperCase();
         name = name.split(' ').join('');
 
-        if (name.includes(input) && game.classList.contains(selectedTopic)) {
+        if ((name.includes(input) || keywords.includes(input)) && game.classList.contains(selectedTopic)) {
             game.style.display = '';
             gameShown = true;
         } else {
@@ -321,79 +322,96 @@ searchBar.addEventListener('keyup', () => {
     }
 });
 
-function createGameButton(game, pin) {
+function createGameButton(game, pin, lazy) {
     const data = games[game];
-    if (data == null) return '';
 
-    let classlist = data.tags.join(' ');
+
+    if (data == null) return document.createElement('div');
 
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
 
-    let gameBtn = '';
+    const onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
-    let buttons = '';
-
-    let onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
+    let gameDiv = document.createElement('div');
+    gameDiv.setAttribute('tagName', game);
+    gameDiv.id = 'gameDiv';
+    gameDiv.classlist = data.tags.join(' ');
+    gameDiv.setAttribute('onclick', onclick);
+    if (data.keywords != null) { gameDiv.setAttribute('keywords', data.keywords) };
 
     if (pin == 'pin') {
-        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
-    }
-    if (pin == 'hot') {
-        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/hotbanner.png'></button>";
+        let button = document.createElement('button');
+        button.id = 'pin';
+
+        let image = document.createElement('img');
+        image.src = '/assets/images/icons/coloredpin.png';
+
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
+    } else if (pin == 'hot') {
+        let button = document.createElement('button');
+        button.id = 'newbanner';
+
+        let image = document.createElement('img');
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.png';
+
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
+    } else if (pin == 'hidden') {
+        gameDiv.style.display = 'none';
+    } else if (pin != 'suggested') {
+        gameDiv.classlist += 'all'
     }
 
-    if (pin == 'filtered') {
-        let hasCategory = false;
-        for (let i = 0; i < categories.length; i++) {
-            if (data.tags.join(' ').includes(categories[i])) {
-                hasCategory = true;
-            }
-        }
-        if (!hasCategory) {
-            classlist += ' random';
-        }
-    }
 
     if (gameDate > weekAgo) {
-        classlist += ' new';
-        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/newbanner.png'></button>";
+        gameDiv.classlist += ' new';
+
+        let button = document.createElement('button');
+        button.id = 'newbanner';
+
+        let image = document.createElement('img');
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.png';
+
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
     }
 
-    if (pin != 'suggested') {
-        classlist += ' all';
-    }
+    let backgroundImg = lazy ? `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E` : data.image;
+    let lazyClass = lazy ? 'lazy' : '';
 
-    if (pin != 'hidden' && pin != 'filtered') {
-        gameBtn = `
-        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-            <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-    } else {
-        gameBtn = `
-        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-            <div class="imageCon">
-                <img class="lazy" data-src="${data.image}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-    }
+    let imageContainer = document.createElement('div');
+    imageContainer.className = 'imageCon';
 
-    return gameBtn;
+    let img = document.createElement('img');
+    img.setAttribute('data-src', `${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co' + data.image}`);
+    img.src = backgroundImg;
+    img.alt = `Totally Science ${game}`;
+    img.title = `Totally Science ${game}`;
+    img.className = lazyClass;
+
+    imageContainer.appendChild(img);
+
+    gameDiv.appendChild(imageContainer);
+
+    let header = document.createElement('h1');
+    header.className = 'innerGameDiv';
+    header.innerText = game;
+
+    gameDiv.appendChild(header);
+
+    return gameDiv;
 }
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -403,7 +421,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -430,8 +448,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 
