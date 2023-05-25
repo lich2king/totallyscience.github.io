@@ -301,7 +301,7 @@ searchBar.addEventListener('keyup', () => {
 
     let gameShown = false;
     Array.from(gameButtons).forEach((game) => {
-        var name = game.getAttribute('name').toUpperCase();
+        var name = game.getAttribute('tagname').toUpperCase();
         var keywords = game.getAttribute('keywords').toUpperCase();
         name = name.split(' ').join('');
 
