@@ -212,7 +212,7 @@ async function loadPartners() {
 
         let nameEle = document.createElement('h1');
         nameEle.className = 'innerGameDiv';
-        nameEle.innerText = ''
+        nameEle.innerText = name;
 
         imageContainer.appendChild(img);
         partnerEle.appendChild(imageContainer);
