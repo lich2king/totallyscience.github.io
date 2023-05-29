@@ -38,7 +38,7 @@ html {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    gap: 10%;
+    gap: 30px;
     padding: 5%;
 }
 
@@ -46,23 +46,26 @@ html {
     position: relative;
     display: flex;
     flex-direction: row;
-    max-width: 500px;
     margin-top: 0;
-    max-height: 400px;
+    max-height: 298px;
     min-width: fit-content;
     min-height: fit-content;
-    text-align: center;
+    text-align: left;
     align-content: center;
     justify-content: center;
     font-size: 25px;
     background-color: #B115BE;
     border-radius: 20px;
-    padding: 15px;
     transition: all 0.1s;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding: 20px;
+    cursor: pointer;
 }
 
 .p-view:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 #pin {
@@ -97,9 +100,10 @@ html {
 }
 
 .btn {
+    width: 100%;
     display: flex;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     background-color: #340060;
     color: white;
     text-align: center;
@@ -108,13 +112,18 @@ html {
     justify-content: center;
     border-width: 0;
     outline-width: 0;
-    font-size: 25px;
-    border-radius: 15px;
+    font-size: 20px;
+    border-radius: 10px;
     transition: all 0.1s;
 }
 
+.btn.deal {
+    background-color: #FFCD1F;
+    color: var(--dark-accent);
+}
+
 .btn:hover {
-    transform: scale(1.05);
+    opacity: .9;
 }
 
 .why-rows {
@@ -148,8 +157,15 @@ html {
     gap: 2px;
 }
 
+.c-item h1 {
+    font-size: 35px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    margin-top: 0%;
+}
+
 .c-item {
-    width: 400px;
+    width: 320px;
 }
 
 .c-item p {
@@ -160,21 +176,40 @@ html {
     color: white;
 }
 
+.p-view .savePopup {
+    position: absolute;
+    top: -7%;
+    left: 5%;
+    background-color: var(--dark-accent);
+    padding: 7px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    background-color: #FFCD1F;
+    color: var(--dark-accent);
+    font-weight: bold;
+}
+
 .p-view h3 {
+    font-size: 40px;
     color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    margin-bottom: 30px;
+    margin-top: 0%;
 }
 
 .p-view h3 span {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .p-view p {
     color: white;
     font-size: 15px;
+    margin: 0%;
 }
 
 .reason {
-    width: 450px;
+    width: 300px;
     text-align: center;
 }
 
@@ -198,13 +233,14 @@ html {
     align-content: center;
     gap: 50px;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .question p {
-    color: white;
     margin: 0;
     margin-left: 10px;
     font-size: 25px;
+    color: var(--light-color);
 }
 
 .question input {
@@ -233,6 +269,10 @@ html {
 .answer a {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+.answer li {
+    color: #bdbdbd;
 }
 
 .thankyou-container {
