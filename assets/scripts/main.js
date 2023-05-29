@@ -68,6 +68,9 @@ function counter(id, start, end, duration) {
     // increase the points counter over time
     const obj = document.getElementById(id);
     const range = end - start;
+
+    if (range == 0) return;
+
     const increment = end > start ? 1 : -1;
     const step = Math.abs(Math.floor(duration / range));
 
