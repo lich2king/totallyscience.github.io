@@ -317,9 +317,9 @@ async function claimReward() {
         let currentVal = document.getElementById('pointsDisplay').innerText;
         counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
 
-        // if (json.points == 0) {
-        //     document.getElementById('timerText').innerHTML = '<span class="loader"></span> Oh no! Your daily reward expired! Next Daily Reward In <span id="rewardTimer"></span>';
-        // }
+        if (json.points == 0) {
+            document.getElementById('timerText').innerHTML = 'Oh no! Your daily reward expired!<br><span class="loader"></span> Next Daily Reward In <span id="rewardTimer"></span>';
+        }
         console.log(json);
     }
 }
