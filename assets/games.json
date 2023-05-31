@@ -1669,14 +1669,5 @@
         "date_added": "2023-05-31T12:51:14.955Z",
         "developer": "UNKNOWN",
         "iframe_url": "./assets/games/happyfilledglass3/index.html"
-    },
-    "Ultimate Flying Car": {
-        "description": "In the simulation driving game Ultimate Flying Car, you fly and drive quickly through the city's wide streets. Fly in style with a flying car, or compete in races to unlock new vehicles. All of these game variants can be played in either a 1-player or 2-player setting.",
-        "image": "/assets/games/icons/ultimateflyingcar.png",
-        "controls": "Player 1:\nDrive - [WASD]\nNitro - [Shift]\nLook back - [t]\nFix car position - [r]\nHandbrake - [Space]\n\nPlayer 2:\nDrive - [Arrow-Keys]\nNitro - [m]\nLook back - [l]\nFix car position - [u]\nHandbrake - [k]",
-        "tags": ["car", "2"],
-        "date_added": "2023-05-31T12:51:14.955Z",
-        "developer": "RHM Interactive",
-        "iframe_url": "./assets/games/ultimate-flying-car/index.html"
     }
 }
