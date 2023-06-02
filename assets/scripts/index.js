@@ -1,16 +1,24 @@
+const categories = [
+    'multiplayer',
+    'car',
+    'casual',
+    'action',
+    'shooting',
+    'puzzle',
+    'classic',
+    'sport',
+    'clicker',
+    'escape',
+    '2',
+    'horror',
+    'hard',
+    'music',
+    'flash',
+];
+
 let token;
 let interval;
-
-window.addEventListener('load', async () => {
-    let response = await fetcher(`/auth/check`);
-    let result = await response.text();
-
-    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
-        token = false;
-    } else {
-        token = true;
-    }
-});
+let newGames = [];
 
 // featured games slides code
 let shouldAutoSwitch = true;
@@ -51,59 +59,194 @@ switchSlide(slideIndex);
 autoSwitch();
 
 // Load Games
-const gamesDiv = document.getElementById('games');
-const maxGames = 50;
-
-let selectedTopic = 'all';
-let displayedGames = 0;
 let games;
-let partners;
 let sorted;
-let hasLoaded = false;
+
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
-window.addEventListener('load', async () => {
-    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
-    let retrievedGames = await gamesRes.json();
-
-    let partnersRes = await fetcher(`/partners`);
-    partners = await partnersRes.json();
-
+window.addEventListener('load', async() => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
-    // check if user is signed in
-    if (token) {
-        let rewardRes = await fetcher(`/points/reward/check`);
-        let text = await rewardRes.text();
-        let json = JSON.parse(text);
+    loadGames();
+    loadPartners();
 
-        if (json.isReady) {
-            let points = 100;
+    // check if user is authenticated
+    let response = await fetcher(`/auth/check`);
+    let result = await response.text();
 
-            if (json.rewardDay >= 6) {
-                points = 1000;
-            }
+    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+        token = false;
 
-            document.getElementById(
-                'timerText'
-            ).innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
-        } else {
-            startTimer(json.rewardTime);
-        }
-        animateBar(json.rewardDay);
-    } else {
         // user is not signed into an account
-
         document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+    } else {
+        token = true;
+
+        loadRewards();
+    }
+});
+
+async function loadGames() {
+    // retrieve games from json file
+    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
+    games = await gamesRes.json();
+    sorted = sortObject(games);
+
+    for (let item in sorted) {
+        displayGame(item);
     }
 
-    games = retrievedGames;
-    loadCookies();
-});
+    // if there are any new games, display them
+    if (newGames.length > 0) {
+        const newGamesContainer = document.getElementById('newGamesCon');
+
+        document.getElementById('newGamesLabel').style.display = '';
+        document.getElementById('newGamesHorizontalCon').style.display = '';
+
+        for (let i = 0; i < newGames.length; i++) {
+            newGamesContainer.appendChild(createGameButton(newGames[i]));
+        }
+    }
+
+    loadPopularGames();
+    loadLikedGames();
+
+    suggestGames();
+    addArrowListeners();
+    findLazyImages();
+}
+
+async function displayGame(item) {
+    const name = item;
+    const data = sorted[item];
+
+    // create date object for one week in the past
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
+
+    // create date object for game added timestamp
+    const gameDate = new Date(data.date_added);
+
+    // if game is less than a week old, add it to the new games list
+    if (gameDate > weekAgo) {
+        newGames.push(name);
+    }
+
+    // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+    for (let category of categories) {
+        if (data.tags.join(' ').includes(category)) {
+            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name, '', true));
+        }
+    }
+
+}
+
+async function loadPopularGames() {
+    // display popular games
+    let popGamesRes = await fetcher(`/stats/games/popular`);
+
+    if (popGamesRes.status == 200) {
+        const populargamesContainer = document.getElementById('popularGamesCon');
+
+        let popularGames = await popGamesRes.json();
+
+        for (let i = 0; i < 15; i++) {
+            if (popularGames[i].game) {
+                populargamesContainer.appendChild(createGameButton(popularGames[i].game, 'hot'));
+            }
+        }
+    }
+}
+
+async function loadLikedGames() {
+    // load user's liked games
+    let userLikedRes = await fetcher(`/profile/liked/get`);
+
+    if (userLikedRes.status == 200) {
+        const likedGamesContainer = document.getElementById('likedGamesCon');
+
+        let likedgames = await userLikedRes.json();
+
+        if (likedgames.length > 5) {
+            document.getElementById('likedGamesLabel').style.display = '';
+            document.getElementById('likedGamesHorizontalCon').style.display = '';
+
+            for (like in likedgames) {
+                likedGamesContainer.appendChild(createGameButton(likedgames[like]));
+            }
+        }
+    }
+}
+
+async function loadPartners() {
+    // load partners
+    let partnersRes = await fetcher(`/partners`);
+    let partners = await partnersRes.json();
+
+    for (let x = 0; x < partners.length; x++) {
+        const backgroundImg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E`;
+        const name = partners[x].name;
+        const image = partners[x].image;
+        const website = partners[x].website;
+
+        let partnerEle = document.createElement('div');
+        partnerEle.tagName = name;
+        partnerEle.id = 'gameDiv';
+        partnerEle.addEventListener('click', () => {
+            window.open(website, '_blank')
+        });
+
+        let imageContainer = document.createElement('div');
+        imageContainer.classList = 'imageCon partner';
+
+        let img = document.createElement('img');
+        img.classList = 'lazy partner';
+        img.setAttribute('data-src', image);
+        img.src = backgroundImg;
+        img.alt = `Totally Science Partner ${name}`;
+        img.title = `Totally Science Partner ${name}`;
+
+        let nameEle = document.createElement('h1');
+        nameEle.className = 'innerGameDiv';
+        nameEle.innerText = name;
+
+        imageContainer.appendChild(img);
+        partnerEle.appendChild(imageContainer);
+        partnerEle.appendChild(nameEle);
+
+        document.getElementById(`PartnersCon`).appendChild(partnerEle);
+    }
+    findLazyImages();
+}
+
+async function loadRewards() {
+    // user is signed in, update points reward accordingly
+    let rewardRes = await fetcher(`/points/reward/check`);
+    let text = await rewardRes.text();
+    let json = JSON.parse(text);
+
+    if (json.isReady) {
+        let points = 100;
+
+        if (json.rewardDay >= 6) {
+            points = 1000;
+        }
+
+        document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
+    } else {
+        startTimer(json.rewardTime);
+    }
+
+    animateBar(json.rewardDay);
+}
+
+
+
+
 
 //
 // reward system
@@ -173,254 +316,11 @@ async function claimReward() {
         // update points display
         let currentVal = document.getElementById('pointsDisplay').innerText;
         counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
-    }
-}
 
-async function loadCookies() {
-    //when done
-    loadTopic();
-    suggestGames();
-}
-
-function loadTopic() {
-    displayedGames = 0;
-
-    document.getElementById('noSearch').style.display = 'none';
-
-    sorted = sortObject(games);
-
-    if (selectedTopic != 'all') {
-        const gameButtons = document.getElementsByClassName('all');
-
-        Array.from(gameButtons).forEach((game) => {
-            if (game.classList.contains(selectedTopic)) {
-                game.setAttribute('style', `background-image: url(${games[game.getAttribute('name')].image})`);
-            } else {
-                game.setAttribute('style', 'display:none');
-            }
-        });
-    } else {
-        gamesDiv.innerHTML = '';
-        displayGames();
-    }
-}
-
-async function displayGames() {
-    //First check if there are any new games... if so, put them in the new games category
-
-    let categories = [
-        'multiplayer',
-        'car',
-        'casual',
-        'action',
-        'shooting',
-        'puzzle',
-        'classic',
-        'sport',
-        'clicker',
-        'escape',
-        '2',
-        'horror',
-        'hard',
-        'music',
-        'flash',
-    ];
-    let categoriesNames = [
-        'Multiplayer',
-        'Driving',
-        'Casual',
-        'Action',
-        'Shooting',
-        'Puzzle',
-        'Classic',
-        'Sport',
-        'Clicker',
-        'Escape',
-        '2 Player',
-        'Horror',
-        'Impossible',
-        'Music',
-        'Flash',
-    ];
-
-    let arrowContainer =
-        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/left-arrow.png"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/right-arrow.png"></div></div>';
-
-    //Then for each category (except mobile and a few others), make the category container then add games
-
-    for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
-
-        let row = document.createElement('div');
-        row.classList.add('horizontalCon');
-        let gamesContainer = document.createElement('div');
-        gamesContainer.classList.add('gamesCon');
-        gamesContainer.id = `${categories[i]}GamesCon`;
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-
-        row.appendChild(gamesContainer);
-        gamesDiv.appendChild(row);
-    }
-
-    let newGames = [];
-    let miscGames = [];
-    for (let x = 0; x < Object.keys(sorted).length; x++) {
-        let keys = Object.keys(sorted);
-        const name = keys[x];
-
-        const data = sorted[keys[x]];
-
-        const weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7 * 3);
-
-        const gameDate = new Date(data.date_added);
-
-        if (gameDate > weekAgo) {
-            newGames.push(name);
-        }
-
-        //for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-        let hasCategory = false;
-        for (let i = 0; i < categories.length; i++) {
-            if (data.tags.join(' ').includes(categories[i])) {
-                hasCategory = true;
-                document.getElementById(`${categories[i]}GamesCon`).innerHTML += createGameButton(name);
-            }
-        }
-        if (!hasCategory) {
-            //give them misc
-            miscGames.push(name);
+        if (json.points == 0) {
+            document.getElementById('timerText').innerHTML = 'Oh no! Your daily reward expired.<span class="loader"></span> Next Daily Reward In <span id="rewardTimer"></span>';
         }
     }
-
-    if (miscGames.length > 0) {
-        gamesDiv.innerHTML += `<h1>Random Games <a href="/classes.php?category=random">View More</a></h1>`;
-
-        let row = document.createElement('div');
-        row.classList.add('horizontalCon');
-        let gamesContainer = document.createElement('div');
-        gamesContainer.classList.add('gamesCon');
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-        //for each element in newGames, add the game to the horizontalCon
-        for (let i = 0; i < miscGames.length; i++) {
-            gamesContainer.innerHTML += createGameButton(miscGames[i]);
-        }
-        row.appendChild(gamesContainer);
-        gamesDiv.appendChild(row);
-    }
-
-    //liked games
-    if (token) {
-        let recentRow = document.createElement('div');
-        recentRow.classList.add('horizontalCon');
-        let recentGamesContainer = document.createElement('div');
-        recentGamesContainer.classList.add('gamesCon');
-        //add the arrows to the horizontal Con
-        recentRow.innerHTML += arrowContainer;
-
-        let length = 0;
-
-        let userLikedRes = await fetcher(`/profile/liked/get`);
-
-        if (userLikedRes.status == 200) {
-            let likedgames = await userLikedRes.json();
-
-            length = likedgames.length;
-            if (likedgames.length > 0) {
-                for (like in likedgames) {
-                    if (document.getElementsByName(likedgames[like]).length > 0) {
-                        recentGamesContainer.innerHTML += createGameButton(likedgames[like]);
-                    }
-                }
-            }
-
-            if (length > 5) {
-                recentRow.appendChild(recentGamesContainer);
-                gamesDiv.prepend(recentRow);
-                gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
-            }
-        }
-    }
-
-    //popular games
-    let row = document.createElement('div');
-    row.classList.add('horizontalCon');
-    let gamesContainer = document.createElement('div');
-    gamesContainer.classList.add('gamesCon');
-    //add the arrows to the horizontal Con
-    row.innerHTML += arrowContainer;
-    //for each popular game, add the game to the horizontalCon
-
-    let popGamesRes = await fetcher(`/stats/games/popular`);
-
-    if (popGamesRes.status == 200) {
-        let text = await popGamesRes.text();
-        let popularGames = JSON.parse(text);
-
-        for (let i = 0; i < 15; i++) {
-            const gameName = popularGames[i].game;
-            if (gameName != null) {
-                gamesContainer.innerHTML += createGameButton(gameName, 'hot');
-            }
-        }
-    }
-
-    row.appendChild(gamesContainer);
-    gamesDiv.prepend(row);
-    gamesDiv.innerHTML = `<h1>Popular Games</h1>` + gamesDiv.innerHTML;
-
-    if (newGames.length > 0) {
-        let row = document.createElement('div');
-        row.classList.add('horizontalCon');
-        let gamesContainer = document.createElement('div');
-        gamesContainer.classList.add('gamesCon');
-        //add the arrows to the horizontal Con
-        row.innerHTML += arrowContainer;
-        //for each element in newGames, add the game to the horizontalCon
-        for (let i = 0; i < newGames.length; i++) {
-            gamesContainer.innerHTML += createGameButton(newGames[i]);
-        }
-        row.appendChild(gamesContainer);
-        gamesDiv.prepend(row);
-        gamesDiv.innerHTML = `<h1>New Games <a href="/classes.php?category=new">View More</a></h1>` + gamesDiv.innerHTML;
-    }
-
-    //Partners
-    gamesDiv.innerHTML += `<h1>Partners <a href="/partners.php">View More</a></h1>`;
-
-    let partnerRow = document.createElement('div');
-    partnerRow.classList.add('horizontalCon');
-    let partnerGamesContainer = document.createElement('div');
-    partnerGamesContainer.classList.add('gamesCon');
-    partnerGamesContainer.id = `PartnersCon`;
-    //add the arrows to the horizontal Con
-    partnerRow.innerHTML += arrowContainer;
-
-    partnerRow.appendChild(partnerGamesContainer);
-    gamesDiv.appendChild(partnerRow);
-
-    for (let x = 0; x < partners.length; x++) {
-        const name = partners[x].name;
-        const image = partners[x].image;
-        const website = partners[x].website;
-
-        const backgroundImg =
-            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
-
-        const partnerButton = `<div name="${name}" id="gameDiv" onclick="window.open('${website}', target='_blank')"location.href = '${website}'">
-        <div class="imageCon partner">
-            <img class="lazy partner" data-src="${image}" src="${backgroundImg}" alt="Totally Science Partner ${name}" title="Totally Science Partner ${name}"/>
-        </div>
-        <h1 class="innerGameDiv">${name}</h1>
-    </div>`;
-
-        document.getElementById(`PartnersCon`).innerHTML += partnerButton;
-    }
-
-    addArrowListeners();
-    findLazyImages();
 }
 
 async function suggestGames() {
@@ -436,7 +336,7 @@ async function suggestGames() {
 
     let randomGames = [];
 
-    for (let x = displayedGames; x < displayedGames + 3; x++) {
+    for (let x = 0; x < 3; x++) {
         let randGame = randomProperty(games);
 
         while (randomGames.includes(randGame) || pinnedGames.includes(randGame)) {
@@ -465,87 +365,105 @@ async function suggestGames() {
     document.getElementById('scisuggests').innerHTML = '';
     for (let i = 0; i < 3; i++) {
         let game = randomGames[i];
-        let gameBtn = createGameButton(game, 'suggested', 'notlazy');
+        let gameBtn = createGameButton(game, 'suggested', false);
 
-        document.getElementById('scisuggests').innerHTML += gameBtn;
+        document.getElementById('scisuggests').appendChild(gameBtn);
         game = pinnedGames[i];
 
         if (i <= totalPinned - 1) {
-            gameBtn = createGameButton(game, 'pin', 'notlazy');
+            gameBtn = createGameButton(game, 'pin', false);
         } else {
-            gameBtn = createGameButton(game, 'suggested', 'notlazy');
+            gameBtn = createGameButton(game, 'suggested', false);
         }
 
-        document.getElementById('scisuggests').innerHTML += gameBtn;
+        document.getElementById('scisuggests').append(gameBtn);
     }
 }
 
 function createGameButton(game, pin, lazy) {
     const data = games[game];
 
-    if (data == null) return '';
 
-    let classlist = data.tags.join(' ');
+    if (data == null) return document.createElement('div');
 
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     const gameDate = new Date(data.date_added);
 
-    let gameBtn = '';
-    let buttons = '';
+    const onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
 
-    let onclick = `location.href = 'class.php?class=${game.replaceAll(' ', '-')}'`;
-
-    let backgroundImg =
-        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E";
-    let lazyClass = 'lazy';
+    let gameDiv = document.createElement('div');
+    gameDiv.setAttribute('tagName', game);
+    gameDiv.id = 'gameDiv';
+    gameDiv.classlist = data.tags.join(' ');
+    gameDiv.setAttribute('onclick', onclick);
 
     if (pin == 'pin') {
-        buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
+        let button = document.createElement('button');
+        button.id = 'pin';
+
+        let image = document.createElement('img');
+        image.src = '/assets/images/icons/coloredpin.png';
+
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
+    } else if (pin == 'hot') {
+        let button = document.createElement('button');
+        button.id = 'newbanner';
+
+        let image = document.createElement('img');
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.png';
+
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
+    } else if (pin == 'hidden') {
+        gameDiv.style.display = 'none';
+    } else if (pin != 'suggested') {
+        gameDiv.classList.add('all');
     }
 
-    if (pin == 'hot') {
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
-    }
 
     if (gameDate > weekAgo) {
-        classlist += ' new';
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
+        gameDiv.classList.add('new');
+
+        let button = document.createElement('button');
+        button.id = 'newbanner';
+
+        let image = document.createElement('img');
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.png';
+
+        button.appendChild(image);
+
+        gameDiv.appendChild(button);
     }
 
-    if (pin != 'suggested' && pin != 'pin') {
-        classlist += ' all';
-    }
+    let backgroundImg = lazy ? `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E` : data.image;
+    let lazyClass = lazy ? 'lazy' : '';
 
-    if (lazy == 'notlazy') {
-        backgroundImg = data.image;
-        lazyClass = '';
-    }
+    let imageContainer = document.createElement('div');
+    imageContainer.className = 'imageCon';
 
-    if (pin != 'hidden') {
-        gameBtn = `
-        <div name="${game}" id="gameDiv" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-            <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}" alt="Totally Science ${game}" title="Totally Science ${game}"/>
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-    } else {
-        gameBtn = `
-        <div name="${game}" id="gameDiv" style="display: none;" onclick="${onclick}" class="${classlist}">
-            ${buttons}
-            <div class="imageCon">
-                <img class="${lazyClass}" data-src="${data.image}" src="${backgroundImg}' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E" alt="Totally Science ${game}" title="Totally Science ${game}"/>
-            </div>
-            <h1 class="innerGameDiv">${game}</h1>
-        </div>
-        `;
-    }
+    let img = document.createElement('img');
+    img.setAttribute('data-src', `${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co' + data.image}`);
+    img.src = backgroundImg;
+    img.alt = `Totally Science ${game}`;
+    img.title = `Totally Science ${game}`;
+    img.className = lazyClass;
 
-    return gameBtn;
+    imageContainer.appendChild(img);
+
+    gameDiv.appendChild(imageContainer);
+
+    let header = document.createElement('h1');
+    header.className = 'innerGameDiv';
+    header.innerText = game;
+
+    gameDiv.appendChild(header);
+
+    return gameDiv;
 }
 
 //check for local storage of daily reward
@@ -553,9 +471,9 @@ function createGameButton(game, pin, lazy) {
 //if it is over, check database
 //if database says it is not over, set local storage to correct time and keep counting
 
-function addArrowListeners() {
+async function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -565,7 +483,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -579,7 +497,7 @@ function addArrowListeners() {
     }
 }
 
-function findLazyImages() {
+async function findLazyImages() {
     // Get all the lazy images
     const lazyImages = document.querySelectorAll('.lazy');
 
@@ -592,8 +510,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 

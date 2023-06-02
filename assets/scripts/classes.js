@@ -2,14 +2,14 @@ document.getElementById('gamesnav').classList.add('selected');
 
 let token;
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     let response = await fetcher(`/auth/check`);
     let result = await response.text();
 
     if (result == 'A token is required for authentication' || result == 'Invalid Token') {
         token = false;
     } else {
-        token = true;
+        token = JSON.parse(result);
     }
 });
 
@@ -46,23 +46,6 @@ let categories = [
     'music',
     'flash',
 ];
-let categoriesNames = [
-    'Multiplayer',
-    'Driving',
-    'Casual',
-    'Action',
-    'Shooting',
-    'Puzzle',
-    'Classic',
-    'Sport',
-    'Clicker',
-    'Escape',
-    '2 Player',
-    'Horror',
-    'Impossible',
-    'Music',
-    'Flash',
-];
 
 if (search != null) {
     const input = document.getElementById('searchBar');
@@ -74,8 +57,8 @@ if (category != null) {
     selectedTopic = category;
 
     document.getElementById('topText').style.display = '';
-    if (categoriesNames[categories.indexOf(category)] > -1) {
-        document.getElementById('topText').innerText = `${categoriesNames[categories.indexOf(category)].toUpperCase()} Games`;
+    if (categories[categories.indexOf(category)] > -1) {
+        document.getElementById('topText').innerText = `${categories[categories.indexOf(category)].toUpperCase()} Games`;
     } else {
         document.getElementById('topText').innerText = `${category.toUpperCase()} Games`;
     }
@@ -86,8 +69,8 @@ if (category != null) {
 
 let sortObject = (obj) =>
     Object.keys(obj)
-        .sort()
-        .reduce((res, key) => ((res[key] = obj[key]), res), {});
+    .sort()
+    .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`assets/games.json?date=${new Date().getTime()}`)
@@ -146,7 +129,7 @@ async function displayGames() {
     //Then for each category (except mobile and a few others), make the category container then add games
 
     for (let i = 0; i < categories.length; i++) {
-        gamesDiv.innerHTML += `<h1>${categoriesNames[i]} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
+        gamesDiv.innerHTML += `<h1>${capitalizeFirstLetter(categories[i])} Games <a href="/classes.php?category=${categories[i]}">View More</a></h1>`;
 
         let row = document.createElement('div');
         row.classList.add('horizontalCon');
@@ -299,12 +282,10 @@ var doneTypingInterval = 1000; // Time in milliseconds (1 second)
 
 searchBar.addEventListener('keyup', () => {
     clearTimeout(typingTimer);
-    typingTimer = setTimeout(function () {
-        var input = searchBar.value;
-        gtag('event', 'Searched', {
-            event_category: 'Typing',
-            event_label: input,
-        });
+    typingTimer = setTimeout(() => {
+        let input = searchBar.value;
+
+        zaraz.track("search", { input: input, user: token.id });
     }, doneTypingInterval);
 
     scrollTo(0, 0);
@@ -361,7 +342,7 @@ function createGameButton(game, pin) {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.png'></button>";
     }
     if (pin == 'hot') {
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/hotbanner.png'></button>";
+        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/hotbanner.png'></button>";
     }
 
     if (pin == 'filtered') {
@@ -378,7 +359,7 @@ function createGameButton(game, pin) {
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons += "<button id='newbanner'><img src='/assets/images/icons/newbanner.png'></button>";
+        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/newbanner.png'></button>";
     }
 
     if (pin != 'suggested') {
@@ -412,7 +393,7 @@ function createGameButton(game, pin) {
 
 function addArrowListeners() {
     for (let i = 0; i < document.getElementsByClassName('arrowLeftCon').length; i++) {
-        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowLeftCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -422,7 +403,7 @@ function addArrowListeners() {
     }
 
     for (let i = 0; i < document.getElementsByClassName('arrowRightCon').length; i++) {
-        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function (e) {
+        document.getElementsByClassName('arrowRightCon')[i].addEventListener('click', function(e) {
             const parentElement = e.target.parentNode.parentNode;
             const gamesCon = parentElement.querySelectorAll('.gamesCon')[0];
 
@@ -449,8 +430,7 @@ function findLazyImages() {
                     observer.unobserve(entry.target);
                 }
             });
-        },
-        {
+        }, {
             // Start loading the images when they are 10% visible
             threshold: 0.1,
 

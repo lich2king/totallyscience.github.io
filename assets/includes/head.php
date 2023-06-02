@@ -37,7 +37,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y14RZLW8H8"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 
@@ -47,7 +47,7 @@ function gtag() {
 gtag('js', new Date());
 
 gtag('config', 'G-Y14RZLW8H8');
-</script>
+</script> -->
 
 <!-- google adsense is not currently in use -->
 <!-- <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-3486863589051210" async="true"></script> -->
@@ -67,6 +67,7 @@ if (location.pathname != '/chat' && location.pathname != '/chat.php') {
 
 <!-- Lazy loading -->
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+
 
 <link rel="stylesheet" href="assets/styles/main.css?v36">
 <link rel="icon" href="assets/images/totally-science-logo-transparent-scaled.png">

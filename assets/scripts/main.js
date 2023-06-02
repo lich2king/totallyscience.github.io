@@ -3,9 +3,8 @@ const liveServer = '/api';
 const localServer = 'http://localhost:5003';
 const activeServer = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : liveServer;
 
-
 /**
- * Adds certain header and sends a request 
+ * Adds certain header and sends a request
  * 'Content-Type': 'application/json' is added to the headers
  * the method is set to POST if body passed into options
  * the body is passed into JSON.stringify()
@@ -19,7 +18,7 @@ function fetcher(endpoint, options) {
         ...(options ? options.headers : null),
         'Content-Type': 'application/json',
     };
-    
+
     updatedOptions.credentials = 'include';
 
     if (options && options.hasOwnProperty('body')) {
@@ -28,7 +27,7 @@ function fetcher(endpoint, options) {
 
         // json stringify body
         updatedOptions.body = JSON.stringify({
-            ...(options ? options.body : null)
+            ...(options ? options.body : null),
         });
     }
 
@@ -61,10 +60,17 @@ function randomProperty(object) {
     return keys[Math.floor(keys.length * Math.random())];
 }
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function counter(id, start, end, duration) {
     // increase the points counter over time
     const obj = document.getElementById(id);
     const range = end - start;
+
+    if (range == 0) return;
+
     const increment = end > start ? 1 : -1;
     const step = Math.abs(Math.floor(duration / range));
 
@@ -120,14 +126,18 @@ if (typeof screen.orientation !== 'undefined' || isMac) {
     //not mobile
 } else {
     //mobile
-    //window.open('/mobile/index', '_self');
+    window.open('/mobile/index.php', '_self');
 }
 
 // panic button
-window.addEventListener('keydown', (e) => {
-    if (e.key == '`') window.open(localStorage.getItem('website'), '_blank');
-    else if (e.key == '[') aboutInBlank();
-}, false);
+window.addEventListener(
+    'keydown',
+    (e) => {
+        if (e.key == '`') window.open(localStorage.getItem('website'), '_blank');
+        else if (e.key == '[') aboutInBlank();
+    },
+    false
+);
 
 // page load init
 window.addEventListener('load', () => {

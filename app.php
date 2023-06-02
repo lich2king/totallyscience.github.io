@@ -18,7 +18,7 @@
 
     <p style="text-align: center; color: whitesmoke; font-size: 15pt;">powered by <a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet,</a> a Titanium Network proxy</p>
 
-    <script src="assets/scripts/main.js?v48"></script>
+    <script src="assets/scripts/main.js?v50"></script>
     <script>
         document.getElementById("appsnav").classList.add("selected");
 
@@ -31,10 +31,10 @@
         window.addEventListener('load', async () => {
             document.getElementsByTagName('body')[0].style = 'overflow: hidden';
 
-            let res = await fetch(`./assets/apps.json?date=${new Date().getTime()}`);
-            let apps = await res.json();
+            let appsRes = await fetcher(`/apps`);
+            apps = await appsRes.json();
             
-            const appData = apps[appName];
+            const appData = apps.find(app => app.name == appName);
             const appFrame = document.getElementById('app_frame');
 
             appFrame.setAttribute('allow', 'fullscreen');
@@ -45,19 +45,20 @@
                 navigator.serviceWorker.register('dynamic-sw.js', {
                     scope: __dynamic$config.prefix
                 }).then(() => {
+                  
                     if (appData.type == 'proxy') appFrame.src = `${__dynamic$config.prefix}${appData.iframe_url}`;
-                    else appFrame.src = appData.iframe_url;
+                    else appFrame.src = appData.url;
 
                     // detect if page is being embeded, if it is reference proxy from megamathstuff
                     try {
                         let parTitle = window.parent.document.title
                     } catch (err) {
-                        appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
+                        appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.url)}`;
                     }
                }, (err) => {
                     console.log(err);
                     
-                    appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.iframe_url)}`;
+                    appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.url)}`;
                });
             } else {
                 document.querySelector('.lds-dual-ring').remove();

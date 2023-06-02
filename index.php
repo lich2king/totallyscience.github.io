@@ -5,7 +5,7 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/index.css?v43'>
-    <script src="/assets/scripts/fontawesome.js"></script>
+    <script src="/assets/scripts/fontawesome0.js"></script>
 </head>
 
 <body>
@@ -21,12 +21,11 @@
                 <p>Day 4</p>
                 <p>Day 5</p>
                 <p>Day 6</p>
-                <img src="assets/images/chest.png" style="pointer-events: none;">
+                <img src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/chest.png" style="pointer-events: none;">
             </div>
         </div>
 
-        <p class='timerText' id='timerText'><span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>
-        </p>
+        <p class='timerText' id='timerText'><span class="loader"></span>Daily Reward In <span id="rewardTimer"></span></p>
     </div>
 
     <div id="startcontent">
@@ -95,11 +94,138 @@
 
     <div class="adsrc adhorz" style="text-align:center;"></div>
 
-    <div id="searchcatParent">
-        <div id="games"></div>
+    <div id="games">
+        <h1 id="newGamesLabel" style="display: none;">New Games <a href="/classes.php?category=new">View More</a></h1>
+        <div id="newGamesHorizontalCon" class="horizontalCon" style="display: none;">
+            <?php include "assets/includes/arrows.php" ?>
 
-        <div id="noSearch" style="display:none">
-            <p>You search terms did not match any games...</p>
+            <div class="gamesCon" id="newGamesCon"></div>
+        </div>
+
+        <h1>Popular Games</h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="popularGamesCon"></div>
+        </div>
+
+        <h1 id="likedGamesLabel" style="display: none;">Liked Games</h1>
+        <div id="likedGamesHorizontalCon" class="horizontalCon" style="display: none;">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="likedGamesCon"></div>
+        </div>
+
+        <h1>Multiplayer Games <a href="/classes.php?category=multiplayer">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="multiplayerGamesCon"></div>
+        </div>
+
+        <h1>Car Games <a href="/classes.php?category=car">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="carGamesCon"></div>
+        </div>
+
+        <h1>Casual Games <a href="/classes.php?category=casual">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="casualGamesCon"></div>
+        </div>
+
+        <h1>Action Games <a href="/classes.php?category=action">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="actionGamesCon"></div>
+        </div>
+
+        <h1>Shooting Games <a href="/classes.php?category=shooting">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="shootingGamesCon"></div>
+        </div>
+
+        <h1>Puzzle Games <a href="/classes.php?category=puzzle">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="puzzleGamesCon"></div>
+        </div>
+
+        <h1>Classic Games <a href="/classes.php?category=classic">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="classicGamesCon"></div>
+        </div>
+
+        <h1>Sport Games <a href="/classes.php?category=sport">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="sportGamesCon"></div>
+        </div>
+
+        <h1>Clicker Games <a href="/classes.php?category=clicker">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="clickerGamesCon"></div>
+        </div>
+
+        <h1>Escape Games <a href="/classes.php?category=escape">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="escapeGamesCon"></div>
+        </div>
+
+        <h1>2 Player Games <a href="/classes.php?category=2">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="2GamesCon"></div>
+        </div>
+
+        <h1>Horror Games <a href="/classes.php?category=horror">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="horrorGamesCon"></div>
+        </div>
+
+        <h1>Hard Games <a href="/classes.php?category=hard">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="hardGamesCon"></div>
+        </div>
+
+        <h1>Music Games <a href="/classes.php?category=music">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="musicGamesCon"></div>
+        </div>
+
+        <h1>Flash Games <a href="/classes.php?category=flash">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="flashGamesCon"></div>
+        </div>
+
+        <h1>Partners <a href="/partners.php">View More</a></h1>
+        <div class="horizontalCon">
+            <?php include "assets/includes/arrows.php" ?>
+
+            <div class="gamesCon" id="PartnersCon"></div>
         </div>
     </div>
 
@@ -131,52 +257,52 @@
     <!-- categories of games -->
     <div id="extraCategories">
         <div id="extraCategory" onclick="window.open('classes.php?category=car', '_self')">
-            <div style="background-image: url(assets/images/extracats/cars.png);"></div>
+            <img class="lazy" data-src="assets/images/extracats/cars.png" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Car Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
-            <div style="background-image: url(assets/images/extracats/vex-7-games.png);"></div>
+            <img class="lazy" data-src="assets/images/extracats/vex-7-games.png" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Vex Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=casual', '_self')">
-            <div style="background-image: url(assets/images/extracats/arcade.jpg);"></div>
+            <img class="lazy" data-src="assets/images/extracats/arcade.jpg" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Arcade Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=clicker', '_self')">
-            <div style="background-image: url(assets/images/extracats/clicker.png);"></div>
+            <img class="lazy" data-src="assets/images/extracats/clicker.png" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Clicker Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=multiplayer', '_self')">
-            <div style="background-image: url(assets/images/extracats/multiplayer.png);"></div>
+            <img class="lazy" data-src="assets/images/extracats/multiplayer.png" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Multiplayer Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=music', '_self')">
-            <div style="background-image: url(assets/images/extracats/fnf.jpg);"></div>
+            <img class="lazy" data-src="assets/images/extracats/fnf.jpg" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Friday Night Funkin' Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=horror', '_self')">
-            <div style="background-image: url(assets/images/extracats/fnaf.png);"></div>
+            <img class="lazy" data-src="assets/images/extracats/fnaf.png" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Five Nights at Freddy's Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=action', '_self')">
-            <div style="background-image: url(assets/images/extracats/running.jpg);"></div>
+            <img class="lazy" data-src="assets/images/extracats/running.jpg" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Running Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=puzzle', '_self')">
-            <div style="background-image: url(assets/images/extracats/puzzle.jpg);"></div>
+            <img class="lazy" data-src="assets/images/extracats/puzzle.jpg" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Puzzle Games</p>
         </div>
 
         <div id="extraCategory" onclick="window.open('classes.php?category=escape', '_self')">
-            <div style="background-image: url(assets/images/extracats/henrystickmin.png);"></div>
+            <img class="lazy" data-src="assets/images/extracats/henrystickmin.png" style="width: 100%; height: calc(100% - 50px); border-top-left-radius: 30px; border-top-right-radius: 30px;">
             <p>Henry Stickmin Games</p>
         </div>
     </div>
@@ -272,7 +398,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v86"></script>
+    <script src="assets/scripts/index.js?v129"></script>
 </body>
 
 </html>

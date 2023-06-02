@@ -16,6 +16,10 @@
 
     <script>
         document.getElementById('chatnav').classList.add('selected');
+
+        const embed = document.getElementById('embed');
+
+        
     </script>
 </body>
 
