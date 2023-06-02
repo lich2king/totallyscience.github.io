@@ -320,7 +320,6 @@ async function claimReward() {
         if (json.points == 0) {
             document.getElementById('timerText').innerHTML = 'Oh no! Your daily reward expired.<span class="loader"></span> Next Daily Reward In <span id="rewardTimer"></span>';
         }
-        console.log(json);
     }
 }
 
