@@ -595,18 +595,11 @@ a {
 /*#region games*/
 
 #gameDiv {
-    /* box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box; */
-    min-width: 220px;
-    min-height: 120px;
-    max-width: 220px;
-    max-height: 120px;
+    width: 220px;
+    height: 120px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 15vw;
-    height: 15vh; */
     border-radius: 20px;
     text-align: center;
     transition: 0.1s;
@@ -657,8 +650,8 @@ a {
 #gameDiv .imageCon img {
     object-fit: cover;
     border-radius: 20px;
-    min-width: 100%;
-    min-height: 100%;
+    width: 220px !important;
+    height: 120px !important;
     width: auto;
     height: auto;
 }
