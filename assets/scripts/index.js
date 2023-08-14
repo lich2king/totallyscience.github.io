@@ -447,7 +447,7 @@ function createGameButton(game, pin, lazy) {
     imageContainer.className = 'imageCon';
 
     let img = document.createElement('img');
-    img.setAttribute('data-src', `${data.image.endsWith('.avif') ? data.image : 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co' + data.image}`);
+    img.setAttribute('data-src', data.image);
     img.src = backgroundImg;
     img.alt = `Totally Science ${game}`;
     img.title = `Totally Science ${game}`;
