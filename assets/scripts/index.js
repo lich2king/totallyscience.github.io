@@ -1,24 +1,24 @@
-const categories = [
-    'multiplayer',
-    'car',
-    'casual',
-    'action',
-    'shooting',
-    'puzzle',
-    'classic',
-    'sport',
-    'clicker',
-    'escape',
-    '2',
-    'horror',
-    'hard',
-    'music',
-    'flash',
-];
+let categorizedGames = {
+    'multiplayer': document.createElement('div'),
+    'car': document.createElement('div'),
+    'casual': document.createElement('div'),
+    'action': document.createElement('div'),
+    'shooting': document.createElement('div'),
+    'puzzle': document.createElement('div'),
+    'classic': document.createElement('div'),
+    'sport': document.createElement('div'),
+    'clicker': document.createElement('div'),
+    'escape': document.createElement('div'),
+    '2': document.createElement('div'),
+    'horror': document.createElement('div'),
+    'hard': document.createElement('div'),
+    'music': document.createElement('div'),
+    'new': document.createElement('div'),
+    'flash': document.createElement('div')
+}
 
 let token;
 let interval;
-let newGames = [];
 
 // featured games slides code
 let shouldAutoSwitch = true;
@@ -91,25 +91,45 @@ window.addEventListener('load', async() => {
 });
 
 async function loadGames() {
+
     // retrieve games from json file
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     games = await gamesRes.json();
     sorted = sortObject(games);
 
+    // create date object for one week in the past
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
+
+    // display sorted games
     for (let item in sorted) {
-        displayGame(item);
+        const name = item;
+        const data = sorted[item];
+
+        // create date object for game added timestamp
+        const gameDate = new Date(data.date_added);
+
+        // if game is less than a week old, add it to the new games list
+        if (gameDate > weekAgo) {
+            categorizedGames.new?.appendChild(createGameButton(name, '', true))
+        }
+
+        // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
+        for (let tag of data.tags) {
+            categorizedGames[tag]?.appendChild(createGameButton(name, '', true))
+        }
     }
 
     // if there are any new games, display them
-    if (newGames.length > 0) {
-        const newGamesContainer = document.getElementById('newGamesCon');
-
+    if (categorizedGames.new.children.length > 0) {
         document.getElementById('newGamesLabel').style.display = '';
         document.getElementById('newGamesHorizontalCon').style.display = '';
+    }
 
-        for (let i = 0; i < newGames.length; i++) {
-            newGamesContainer.appendChild(createGameButton(newGames[i]));
-        }
+    // display all categories
+    for (let categorizedGame in categorizedGames) {
+        categorizedGames[categorizedGame].className = 'gamesCon';
+        document.getElementById(categorizedGame + 'GamesHorizontalCon').appendChild(categorizedGames[categorizedGame]);
     }
 
     loadPopularGames();
@@ -118,31 +138,6 @@ async function loadGames() {
     suggestGames();
     addArrowListeners();
     findLazyImages();
-}
-
-async function displayGame(item) {
-    const name = item;
-    const data = sorted[item];
-
-    // create date object for one week in the past
-    const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7 * 3);
-
-    // create date object for game added timestamp
-    const gameDate = new Date(data.date_added);
-
-    // if game is less than a week old, add it to the new games list
-    if (gameDate > weekAgo) {
-        newGames.push(name);
-    }
-
-    // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-    for (let category of categories) {
-        if (data.tags.join(' ').includes(category)) {
-            document.getElementById(`${category}GamesCon`).appendChild(createGameButton(name, '', true));
-        }
-    }
-
 }
 
 async function loadPopularGames() {
