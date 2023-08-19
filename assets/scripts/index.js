@@ -83,15 +83,28 @@ window.addEventListener('load', async() => {
 
         // user is not signed into an account
         document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+
+        // suggest games without account information
+        const suggestionEle = document.getElementById('scisuggests');
+        // clear suggested games placeholders
+        suggestionEle.textContent = '';
+        // display 6 random games as suggestions
+        for (let x = 0; x < 6; x++) {
+            let randGame = randomProperty(games);
+            let gameBtn = createGameButton(randGame, 'suggested', false);
+            suggestionEle.appendChild(gameBtn);
+        }
     } else {
         token = true;
 
         loadRewards();
+
+        // suggest games with account information
+        suggestGames();
     }
 });
 
 async function loadGames() {
-
     // retrieve games from json file
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     games = await gamesRes.json();
@@ -102,12 +115,9 @@ async function loadGames() {
     weekAgo.setDate(weekAgo.getDate() - 7 * 3);
 
     // display sorted games
-    for (let item in sorted) {
-        const name = item;
-        const data = sorted[item];
-
+    for (let name in sorted) {
         // create date object for game added timestamp
-        const gameDate = new Date(data.date_added);
+        const gameDate = new Date(sorted[name].date_added);
 
         // if game is less than a week old, add it to the new games list
         if (gameDate > weekAgo) {
@@ -115,7 +125,7 @@ async function loadGames() {
         }
 
         // for each game, if it has a tag that matches on of the categories, add it to that container... MAY have multiple!
-        for (let tag of data.tags) {
+        for (let tag of sorted[name].tags) {
             categorizedGames[tag]?.appendChild(createGameButton(name, '', true))
         }
     }
@@ -134,8 +144,6 @@ async function loadGames() {
 
     loadPopularGames();
     loadLikedGames();
-
-    suggestGames();
     addArrowListeners();
     findLazyImages();
 }
@@ -293,10 +301,6 @@ function animateBar(day) {
 }
 
 async function claimReward() {
-    if (!token) {
-        location.href = 'signup.php';
-    }
-
     document.getElementById('timerText').innerHTML = '<span class="loader"></span>';
 
     let res = await fetcher(`/points/reward/claim`);
@@ -315,19 +319,18 @@ async function claimReward() {
         if (json.points == 0) {
             document.getElementById('timerText').innerHTML = 'Oh no! Your daily reward expired.<span class="loader"></span> Next Daily Reward In <span id="rewardTimer"></span>';
         }
+    } else {
+        location.href = 'signup.php';
     }
 }
 
 async function suggestGames() {
     // retrieve all pinned games of user
-    let pinnedGames = [];
-    if (token) {
-        let res = await fetcher(`/profile/pinned/get`);
-        let text = await res.text();
+    let res = await fetcher(`/profile/pinned/get`);
+    let text = await res.text();
 
-        pinnedGames = text.split(';');
-        pinnedGames = pinnedGames.slice(1);
-    }
+    let pinnedGames = text.split(';');
+    pinnedGames = pinnedGames.slice(1);
 
     let randomGames = [];
 
