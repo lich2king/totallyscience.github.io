@@ -219,7 +219,7 @@
     margin-top: 30%;
 }
 
-.featureButton .fa-angle-right {
+.featureButton svg {
     font-size: 1.3vw;
 }
 
