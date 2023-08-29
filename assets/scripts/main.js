@@ -145,17 +145,11 @@ window.addEventListener('load', () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
-
-    setPoints();
 });
 
 // update points in navbar
-async function setPoints() {
-    let res = await fetcher(`/points/check`);
-    let points = await res.text();
-
-    if (res.status == 200) document.getElementById('pointsDisplay').innerText = points;
-    else document.getElementById('pointsDisplay').innerText = 0;
+async function setPointsDisplay(numPoints) {
+    document.getElementById('pointsDisplay').innerText = numPoints;
 }
 
 async function logout() {

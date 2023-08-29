@@ -102,12 +102,15 @@ function setupActionButtons() {
 
 window.addEventListener('load', async() => {
     let response = await fetcher(`/auth/check`);
-    let result = await response.text();
 
-    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+    if (response.status == 401 || response.status == 403) {
         token = false;
     } else {
         token = true;
+
+        // display points count in navbar
+        let json = await response.json();
+        setPointsDisplay(json.points || 0);
     }
 
     const iframe = document.getElementById('iframe');

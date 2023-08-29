@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
     let response = await fetcher(`/auth/check`);
-    let result = await response.text();
 
-    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+    if (response.status == 401 || response.status == 403) {
         location.href = 'signup.php';
     }
 
-    let token = JSON.parse(result);
+    // display points count in navbar
+    token = await response.json();
+    setPointsDisplay(token.points || 0);
 
     document.getElementById('usernameSpan').innerText = token.username;
     document.getElementById('emailSpan').innerText = token.email;

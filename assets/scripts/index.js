@@ -62,11 +62,6 @@ autoSwitch();
 let games;
 let sorted;
 
-let sortObject = (obj) =>
-    Object.keys(obj)
-    .sort()
-    .reduce((res, key) => ((res[key] = obj[key]), res), {});
-
 window.addEventListener('load', async() => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
@@ -75,9 +70,8 @@ window.addEventListener('load', async() => {
 
     // check if user is authenticated
     let response = await fetcher(`/auth/check`);
-    let result = await response.text();
 
-    if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+    if (response.status == 401 || response.status == 403) {
         token = false;
 
         // user is not signed into an account
@@ -94,6 +88,10 @@ window.addEventListener('load', async() => {
             suggestionEle.appendChild(gameBtn);
         }
     } else {
+        // display points count in navbar
+        let json = await response.json();
+        setPointsDisplay(json.points || 0);
+
         token = true;
 
         loadRewards();
@@ -106,6 +104,8 @@ window.addEventListener('load', async() => {
 });
 
 async function loadGames() {
+    const sortObject = (obj) => Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {});
+    
     // retrieve games from json file
     let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
     games = await gamesRes.json();

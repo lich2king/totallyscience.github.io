@@ -36,11 +36,8 @@
 
         window.addEventListener('load', async () => {
             let response = await fetcher(`/auth/check`);
-            let result = await response.text();
 
-            if (result == 'A token is required for authentication' || result == 'Invalid Token') {
-                
-            } else {
+            if (response.status == 200) {
                 location.href = 'profile.php';
             }
         });

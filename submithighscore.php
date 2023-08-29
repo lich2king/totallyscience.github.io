@@ -53,10 +53,13 @@
     <script>
         window.addEventListener('load', async () => {
             let response = await fetcher(`/auth/check`);
-            let result = await response.text();
 
-            if (result == 'A token is required for authentication' || result == 'Invalid Token') {
+            if (response.status == 401 || response.status == 403) {
                 location.href = 'signup.php';
+            } else {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
             }
         });
 
