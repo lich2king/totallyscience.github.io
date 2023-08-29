@@ -26,7 +26,7 @@
 
         <div class="nav-button" tooltip="Press this key to return to Google Classroom! " flow="down" id="shusheomji">
             <img style="cursor:pointer;" onclick="window.open('https:/\/classroom.google.com', '_blank')"
-                src="../images/tilde-key.avif">
+                src="../images/icons/tilde-key.avif">
         </div>
 
         <a id="login" href="profile.php">

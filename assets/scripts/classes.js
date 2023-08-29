@@ -342,7 +342,7 @@ function createGameButton(game, pin) {
         buttons += "<button id='pin'><img src='/assets/images/icons/coloredpin.avif'></button>";
     }
     if (pin == 'hot') {
-        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/hotbanner.avif'></button>";
+        buttons += "<button id='newbanner'><img src='assets/images/icons/hotbanner.avif'></button>";
     }
 
     if (pin == 'filtered') {
