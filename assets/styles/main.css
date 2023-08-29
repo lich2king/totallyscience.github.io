@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
+@font-face {
+    font-family: 'Rubik';
+    src: url(../Rubik.ttf);
+}
 
 :root {
     --light-color: #ffffff;
@@ -111,7 +113,7 @@ label {
 }
 
 #middlebar h1 {
-    font-family: 'Spline Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 30px;
     color: var(--light-color);
     white-space: nowrap;
