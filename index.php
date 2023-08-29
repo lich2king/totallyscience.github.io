@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/index.css?v44'>
+    <link rel='stylesheet' href='assets/styles/index.css?v45'>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                 <p>Day 4</p>
                 <p>Day 5</p>
                 <p>Day 6</p>
-                <img src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/chest.png" style="pointer-events: none;">
+                <img src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/chest.avif" style="pointer-events: none;">
             </div>
         </div>
 
@@ -396,7 +396,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v130"></script>
+    <script src="assets/scripts/index.js?v131"></script>
 </body>
 
 </html>

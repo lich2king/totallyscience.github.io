@@ -21,10 +21,10 @@ async function displayUserData() {
     let json = await res.json();
 
     // set like icon if user has liked it
-    if (json.liked) likeImg.setAttribute('src', 'assets/images/icons/like.png');
+    if (json.liked) likeImg.setAttribute('src', 'assets/images/icons/like.avif');
 
     // set pin icon if user has pinned it
-    if (json.pinned) pinImg.setAttribute('src', 'assets/images/icons/pin.png');
+    if (json.pinned) pinImg.setAttribute('src', 'assets/images/icons/pin.avif');
 
     // add to recently played games list
     fetcher(`/profile/recent/set`, { body: { gameName: gameName } });
@@ -48,8 +48,8 @@ function setupActionButtons() {
             let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
 
             if (res.status == 200) {
-                const likedIcon = 'assets/images/icons/like.png';
-                const notLikedIcon = 'assets/images/icons/likeoutline.png';
+                const likedIcon = 'assets/images/icons/like.avif';
+                const notLikedIcon = 'assets/images/icons/likeoutline.avif';
 
                 // check if it is liked by checking current icon
                 let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
@@ -82,8 +82,8 @@ function setupActionButtons() {
             if (res.status == 400) {
                 swal('You have pinned the max amount of games (3).');
             } else {
-                const pinnedIcon = 'assets/images/icons/pin.png';
-                const notPinnedIcon = 'assets/images/icons/pinoutline.png';
+                const pinnedIcon = 'assets/images/icons/pin.avif';
+                const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
 
                 // check if it is pinned by checking current icon
                 // update icon to match chnaged state

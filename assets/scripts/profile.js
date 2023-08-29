@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const highscoreDiv = `
                 <div class="highscore">
-                    <img src="../assets/images/icons/trophy.png">
+                    <img src="../assets/images/icons/trophy.avif">
                     <h1>${highscores[score].game}</h1>
                     <p>${numFormatter(highscores[score].score)}</p>
                 </div>

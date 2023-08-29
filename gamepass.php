@@ -64,12 +64,12 @@
         <h1>Why Get Game Pass?</h1>
         <div class="why-rows">
             <div class="reason">
-                <img class="img-label" src="assets/images/icons/block-ads.png" alt="">
+                <img class="img-label" src="assets/images/icons/block-ads.avif" alt="">
                 <h1>AD-FREE</h1>
                 <p>Play games instantly, without being interrupted by ads.</p>
             </div>
             <div class="reason">
-                <img class="img-label" src="assets/images/icons/eye.png" alt="">
+                <img class="img-label" src="assets/images/icons/eye.avif" alt="">
                 <h1>PREMIUM LINKS</h1>
                 <p>Access a list of private links that only GamePass members can use.</p>
             </div>
@@ -90,7 +90,7 @@
         <div class="question-container">
             <div class="question" onclick="dropDownFaq('included')">
                 <p>What’s included with GamePass?</p>
-                <input type="image" id="image" src="/assets/images/icons/down_arrow.png">
+                <input type="image" id="image" src="/assets/images/icons/down_arrow.avif">
             </div>
             <div class="answer" style="display: none" id="included">
                 <div>
@@ -105,7 +105,7 @@
             </div>
             <div class="question" onclick="dropDownFaq('private')">
                 <p>Why would I want access to premium links?</p>
-                <input type="image" id="image" src="/assets/images/icons/down_arrow.png">
+                <input type="image" id="image" src="/assets/images/icons/down_arrow.avif">
             </div>
             <div class="answer" style="display: none" id="private">
                 <div>
@@ -117,7 +117,7 @@
             </div>
             <div class="question" onclick="dropDownFaq('year')">
                 <p>How many premium links are there?</p>
-                <input type="image" id="image" src="/assets/images/icons/down_arrow.png">
+                <input type="image" id="image" src="/assets/images/icons/down_arrow.avif">
             </div>
             <div class="answer" style="display: none" id="year">
                 <div>
@@ -128,7 +128,7 @@
             </div>
             <div class="question" onclick="dropDownFaq('cancel')">
                 <p>How do I cancel my GamePass subscription?</p>
-                <input type="image" id="image" src="/assets/images/icons/down_arrow.png">
+                <input type="image" id="image" src="/assets/images/icons/down_arrow.avif">
             </div>
             <div class="answer" style="display: none" id="cancel">
                 <div>

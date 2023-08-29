@@ -23,19 +23,19 @@
             <div class="options">
                 <div class="left">
                     <button id="like" class="text-button button-effect-a"><img
-                            src="assets/images/icons/likeoutline.png"></button>
+                            src="assets/images/icons/likeoutline.avif"></button>
                     <div id="likeCount">...</div>
                     <button onclick="OpenHighscore()" class="text-button"><img
-                            src="assets/images/icons/trophy-icon.png"></button>
+                            src="assets/images/icons/trophy-icon.avif"></button>
                     <div id="currentHighscore">...</div>
                 </div>
 
                 <div class="right">
                     <button id="share" onclick="shareGame()" class="game-button button-effect-a"><img
-                            src="assets/images/icons/share.png"></button>
+                            src="assets/images/icons/share.avif"></button>
                     <button id="pin" class="game-button button-effect-a"><img
-                            src="assets/images/icons/pinoutline.png"></button>
-                    <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.png"></button>
+                            src="assets/images/icons/pinoutline.avif"></button>
+                    <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.avif"></button>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v164"></script>
+    <script src="assets/scripts/class.js?v165"></script>
 </body>
 
 </html>

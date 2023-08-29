@@ -72,7 +72,6 @@ window.addEventListener('load', async() => {
     document.getElementById('gamesnav').classList.add('selected');
 
     loadGames();
-    loadPartners();
 
     // check if user is authenticated
     let response = await fetcher(`/auth/check`);
@@ -102,6 +101,8 @@ window.addEventListener('load', async() => {
         // suggest games with account information
         suggestGames();
     }
+
+    loadPartners();
 });
 
 async function loadGames() {
@@ -402,7 +403,7 @@ function createGameButton(game, pin, lazy) {
         button.id = 'pin';
 
         let image = document.createElement('img');
-        image.src = '/assets/images/icons/coloredpin.png';
+        image.src = '/assets/images/icons/coloredpin.avif';
 
         button.appendChild(image);
 
@@ -412,7 +413,7 @@ function createGameButton(game, pin, lazy) {
         button.id = 'newbanner';
 
         let image = document.createElement('img');
-        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.png';
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/hotbanner.avif';
 
         button.appendChild(image);
 
@@ -431,7 +432,7 @@ function createGameButton(game, pin, lazy) {
         button.id = 'newbanner';
 
         let image = document.createElement('img');
-        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.png';
+        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.avif';
 
         button.appendChild(image);
 
