@@ -103,7 +103,7 @@
         </div>
 
         <h1>Popular Games</h1>
-        <div class="horizontalCon">
+        <div id="popularGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="popularGamesCon"></div>
@@ -117,105 +117,105 @@
         </div>
 
         <h1>Multiplayer Games <a href="/classes.php?category=multiplayer">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="multiplayerGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="multiplayerGamesCon"></div>
         </div>
 
         <h1>Car Games <a href="/classes.php?category=car">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="carGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="carGamesCon"></div>
         </div>
 
         <h1>Casual Games <a href="/classes.php?category=casual">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="casualGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="casualGamesCon"></div>
         </div>
 
         <h1>Action Games <a href="/classes.php?category=action">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="actionGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="actionGamesCon"></div>
         </div>
 
         <h1>Shooting Games <a href="/classes.php?category=shooting">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="shootingGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="shootingGamesCon"></div>
         </div>
 
         <h1>Puzzle Games <a href="/classes.php?category=puzzle">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="puzzleGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="puzzleGamesCon"></div>
         </div>
 
         <h1>Classic Games <a href="/classes.php?category=classic">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="classicGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="classicGamesCon"></div>
         </div>
 
         <h1>Sport Games <a href="/classes.php?category=sport">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="sportGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="sportGamesCon"></div>
         </div>
 
         <h1>Clicker Games <a href="/classes.php?category=clicker">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="clickerGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="clickerGamesCon"></div>
         </div>
 
         <h1>Escape Games <a href="/classes.php?category=escape">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="escapeGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="escapeGamesCon"></div>
         </div>
 
         <h1>2 Player Games <a href="/classes.php?category=2">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="2GamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="2GamesCon"></div>
         </div>
 
         <h1>Horror Games <a href="/classes.php?category=horror">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="horrorGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="horrorGamesCon"></div>
         </div>
 
         <h1>Hard Games <a href="/classes.php?category=hard">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="hardGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="hardGamesCon"></div>
         </div>
 
         <h1>Music Games <a href="/classes.php?category=music">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="musicGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="musicGamesCon"></div>
         </div>
 
         <h1>Flash Games <a href="/classes.php?category=flash">View More</a></h1>
-        <div class="horizontalCon">
+        <div id="flashGamesHorizontalCon" class="horizontalCon">
             <?php include "assets/includes/arrows.php" ?>
 
             <div class="gamesCon" id="flashGamesCon"></div>
@@ -398,7 +398,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v129"></script>
+    <script src="assets/scripts/index.js?v130"></script>
 </body>
 
 </html>
