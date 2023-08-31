@@ -63,7 +63,7 @@ if (location.pathname != '/chat' && location.pathname != '/chat.php') {
 }
 </script>
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../assets/scripts/sweetalert.min.js"></script>
 
 <!-- Lazy loading -->
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
