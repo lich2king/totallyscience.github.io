@@ -66,6 +66,10 @@ window.addEventListener('load', async() => {
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
+    // retrieve games from json file
+    let gamesRes = await fetch(`assets/games.json`);
+    games = await gamesRes.json();
+
     loadGames();
 
     // check if user is authenticated
@@ -105,10 +109,8 @@ window.addEventListener('load', async() => {
 
 async function loadGames() {
     const sortObject = (obj) => Object.keys(obj).sort().reduce((res, key) => ((res[key] = obj[key]), res), {});
-    
-    // retrieve games from json file
-    let gamesRes = await fetch(`assets/games.json?date=${new Date().getTime()}`);
-    games = await gamesRes.json();
+
+    // sort games
     sorted = sortObject(games);
 
     // create date object for one week in the past

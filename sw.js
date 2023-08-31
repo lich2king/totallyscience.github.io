@@ -9,7 +9,7 @@ const URLS_TO_CACHE = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
-      await fetch(`assets/games.json?date=${new Date().getTime()}`).then((response) => response.json()).then((retrievedGames) => {
+      await fetch(`assets/games.json`).then((response) => response.json()).then((retrievedGames) => {
         for (game in retrievedGames) {
           URLS_TO_CACHE.push(retrievedGames[game].image.slice(1));
         }

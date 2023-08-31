@@ -17,17 +17,11 @@
 
                 <div>Founder & CEO</div>
 
-                <div>Ilan L</div>
+                <div>Ilan</div>
 
                 <div>||</div>
 
                 <div>CTO</div>
-
-                <div>Jacob M</div>
-
-                <div>||</div>
-
-                <div>Developer</div>
             </div>
         </div>
 
