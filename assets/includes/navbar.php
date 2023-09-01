@@ -2,14 +2,14 @@
     <div id="leftbar">
         <div class="nav-button" id="gamesnav"><a href="/">&#127918; Games</a></div>
         <div class="nav-button" id="leaderboardnav"><a href="leaderboard.php">&#127942; Leaderboard</a></div>
-        <div class="nav-button" id="chatnav"><a href="chat.php">&#128172; Chat</a></div>
         <div class="nav-button" id="appsnav"><a href="apps.php">&#127922; Proxy</a></div>
         <div class="nav-button" id="shopnav"><a href="shop.php">&#128722; Shop</a>
         </div>
     </div>
 
     <div id="middlebar">
-        <img src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/transparentlogo.png"></img>
+        <img
+            src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/transparentlogo.png"></img>
         <h1>Totally Science</h1>
     </div>
 
