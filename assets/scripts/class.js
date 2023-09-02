@@ -40,7 +40,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async(e) => {
+    likeBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -73,7 +73,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async(e) => {
+    pinBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         if (token) {
@@ -100,7 +100,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     let response = await fetcher(`/auth/check`);
 
     if (response.status == 401 || response.status == 403) {
@@ -261,9 +261,11 @@ function suggestGames(games) {
     addArrowListeners();
 }
 
-window.addEventListener('click', () => {
+window.addEventListener('click', (e) => {
     //fix some text inputs not working (eaglercraft)
-    document.getElementById('iframe').focus();
+    if (e.target.id != 'message') {
+        document.getElementById('iframe').focus();
+    }
 });
 
 function addArrowListeners() {
