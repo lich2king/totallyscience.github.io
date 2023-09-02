@@ -1,14 +1,13 @@
 const urlParams = new URLSearchParams(window.location.search);
+
 let gameName = urlParams.get('class');
 if (gameName) {
     gameName = gameName.replaceAll('-', ' ');
 } else {
     gameName = '';
 }
-const id = urlParams.get('id');
 
 let likeCount = 0;
-let token;
 
 async function displayUserData() {
     const pinBtn = document.querySelector('#pin');
@@ -43,31 +42,27 @@ function setupActionButtons() {
     likeBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
-        if (token) {
-            //took away the await
-            let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
+        let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
 
-            if (res.status == 200) {
-                const likedIcon = 'assets/images/icons/like.avif';
-                const notLikedIcon = 'assets/images/icons/likeoutline.avif';
+        if (res.status == 200) {
+            const likedIcon = 'assets/images/icons/like.avif';
+            const notLikedIcon = 'assets/images/icons/likeoutline.avif';
 
-                // check if it is liked by checking current icon
-                let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
+            // check if it is liked by checking current icon
+            let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
 
-                // update icon to match chnaged state
-                e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
+            // update icon to match chnaged state
+            e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
 
-                // set updated like count
-                let likeCountEle = document.getElementById('likeCount');
+            // set updated like count
+            let likeCountEle = document.getElementById('likeCount');
 
-                let prevLikeCount = parseInt(likeCount);
-                likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+            let prevLikeCount = parseInt(likeCount);
+            likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
-                likeCountEle.innerText = numFormatter(likeCount);
-            }
-        } else {
-            swal('You must login to like the game', swalConfig).then(swalHandler);
+            likeCountEle.innerText = numFormatter(likeCount);
         }
+        else swal('You must login to like the game', swalConfig).then(swalHandler);
     });
     likeBtn.addEventListener('webkitAnimationEnd', () => {
         likeBtn.classList.remove('button-click');
@@ -76,23 +71,21 @@ function setupActionButtons() {
     pinBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
-        if (token) {
-            let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
+        let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
 
-            if (res.status == 400) {
-                swal('You have pinned the max amount of games (3).');
-            } else {
-                const pinnedIcon = 'assets/images/icons/pin.avif';
-                const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
-
-                // check if it is pinned by checking current icon
-                // update icon to match chnaged state
-                let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
-
-                e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
-            }
-        } else {
+        if (res.status == 400) {
+            swal('You have pinned the max amount of games (3).');
+        } else if (res.status == 401 || res.status == 403) {
             swal('You must login to pin the game', swalConfig).then(swalHandler);
+        } else {
+            const pinnedIcon = 'assets/images/icons/pin.avif';
+            const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
+
+            // check if it is pinned by checking current icon
+            // update icon to match chnaged state
+            let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
+
+            e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
         }
     });
     pinBtn.addEventListener('webkitAnimationEnd', () => {
@@ -100,43 +93,40 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
+    // update navbar to underline game link
+    document.getElementById('gamesnav').classList.add('selected');
+
+    // fetch games from jsons
+    let retrievedGamesRes = await fetch(`assets/games.json`);
+    let retrievedGames = await retrievedGamesRes.json();
+    // get data for selected game
+    const gameData = retrievedGames[gameName];
+    // if the game requested does not exist in the json file redirect
+    if (!gameData) window.location.href = '../classes.php';
+
+    // check if user is signed in
     let response = await fetcher(`/auth/check`);
 
-    if (response.status == 401 || response.status == 403) {
-        token = false;
-    } else {
-        token = true;
-
+    if (response.status == 200) {
         // display points count in navbar
         let json = await response.json();
         setPointsDisplay(json.points || 0);
+        
+        // display user like and pin status of game
+        displayUserData();
+
+        let socket = io();
+
+        
     }
 
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
-    let retrievedGamesRes = await fetch(`assets/games.json`);
-    let retrievedGames = await retrievedGamesRes.json();
-
-    const gameData = retrievedGames[gameName];
-
-    if (!gameData) window.location.href = '../classes.php';
-
-    // update navbar to underline game link
-    document.getElementById('gamesnav').classList.add('selected');
-
     // -------
     suggestGames(retrievedGames);
     // ----
-
-    // TODO: /pinned/check and /liked/check could be combined into one request
-
-    // token will be undefined if user is not signed in
-    if (token) displayUserData();
-
-    // Zach set this up i am unsure of what its purpose is
-    if (id) iframe.src = gameData.iframe_url + '?id=' + id;
 
     // set iframe to correct url defined in games.json
     if (gameData.type == 'proxy') {
