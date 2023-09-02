@@ -117,7 +117,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v96"></script>
+    <script src="assets/scripts/profile.js?v97"></script>
 </body>
 
 </html>
