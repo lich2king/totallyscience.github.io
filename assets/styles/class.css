@@ -98,7 +98,7 @@
 
 #gameframe .chat .write input {
     width: 95%;
-    height: 80%;
+    height: 70%;
     margin-left: 2.5%;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
@@ -107,7 +107,7 @@
     background-color: white;
     color: var(--dark-color);
     padding-left: 3%;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 #gameframe .chat .write button {

@@ -44,6 +44,77 @@
         </div>
     </div>
 
+
+    <div id="miniSelectPopup" style="display: none;">
+        <div class="popup">
+            <div class='topbar'>
+                <button style="visibility: hidden;"></button>
+                <p>Your Minis</p>
+                <button onclick="closeMiniSelectPopup()"><img src='assets/images/icons/close.avif'></button>
+            </div>
+            <div class='content'>
+                <div>
+                    <p>Common</p>
+                    <div class="minis">
+                        <img name="comwatermellon" src="\assets\minis\JPGs\comwatermellon.jpg" style="display:none;">
+                        <img name="comtomato" src="\assets\minis\JPGs\comtomato.jpg" style="display:none;">
+                        <img name="comstrawberrymale" src="\assets\minis\JPGs\comstrawberrymale.jpg"
+                            style="display:none;">
+                        <img name="comstrawberry" src="\assets\minis\JPGs\comstrawberry.jpg" style="display:none;">
+                        <img name="comprickle" src="\assets\minis\JPGs\comprickle.jpg" style="display:none;">
+                        <img name="compizza" src="\assets\minis\JPGs\compizza.jpg" style="display:none;">
+                        <img name="compineapple" src="\assets\minis\JPGs\compineapple.jpg" style="display:none;">
+                        <img name="comavocado" src="\assets\minis\JPGs\comavocado.jpg" style="display:none;">
+                        <img name="compear" src="\assets\minis\JPGs\compear.jpg" class="selected">
+                        <img name="compeach" src="\assets\minis\JPGs\compeach.jpg" style="display:none;">
+                        <img name="commilk" src="\assets\minis\JPGs\commilk.jpg" style="display:none;">
+                        <img name="comlemon" src="\assets\minis\JPGs\comlemon.jpg" style="display:none;">
+                        <img name="comegg" src="\assets\minis\JPGs\comegg.jpg" style="display:none;">
+                        <img name="comdragonfruit" src="\assets\minis\JPGs\comdragonfruit.jpg" style="display:none;">
+                        <img name="comcarrot" src="\assets\minis\JPGs\comcarrot.jpg" style="display:none;">
+                        <img name="combread" src="\assets\minis\JPGs\combread.jpg" style="display:none;">
+                        <img name="comberry" src="\assets\minis\JPGs\comberry.jpg" style="display:none;">
+                        <img name="comapple" src="\assets\minis\JPGs\comapple.jpg" style="display:none;">
+                    </div>
+                    <p>Rare</p>
+                    <div class="minis">
+                        <img name="rarestormcloud" src="\assets\minis\JPGs\rarestormcloud.jpg" style="display:none;">
+                        <img name="raresoccer" src="\assets\minis\JPGs\raresoccer.jpg" style="display:none;">
+                        <img name="rarepopsicle" src="\assets\minis\JPGs\rarepopsicle.jpg" style="display:none;">
+                        <img name="raremushroom" src="\assets\minis\JPGs\raremushroom.jpg" style="display:none;">
+                        <img name="rareketchup" src="\assets\minis\JPGs\rareketchup.jpg" style="display:none;">
+                        <img name="rareheart" src="\assets\minis\JPGs\rareheart.jpg" style="display:none;">
+                        <img name="rareflower" src="\assets\minis\JPGs\rareflower.jpg" style="display:none;">
+                        <img name="rarefire" src="\assets\minis\JPGs\rarefire.jpg" style="display:none;">
+                        <img name="raredonut" src="\assets\minis\JPGs\raredonut.jpg" style="display:none;">
+                        <img name="rarecup" src="\assets\minis\JPGs\rarecup.jpg" style="display:none;">
+                        <img name="rarecoffee" src="\assets\minis\JPGs\rarecoffee.jpg" style="display:none;">
+                        <img name="rarebooze" src="\assets\minis\JPGs\rarebooze.jpg" style="display:none;">
+                    </div>
+                    <p>Epic</p>
+                    <div class="minis">
+                        <img name="epicworld" src="\assets\minis\JPGs\epicworld.jpg" style="display:none;">
+                        <img name="epicpc" src="\assets\minis\JPGs\epicpc.jpg" style="display:none;">
+                        <img name="epicmovie" src="\assets\minis\JPGs\epicmovie.jpg" style="display:none;">
+                        <img name="epichotdog" src="\assets\minis\JPGs\epichotdog.jpg" style="display:none;">
+                        <img name="epicdrink" src="\assets\minis\JPGs\epicdrink.jpg" style="display:none;">
+                        <img name="epicdisco" src="\assets\minis\JPGs\epicdisco.jpg" style="display:none;">
+                        <img name="epicboombox" src="\assets\minis\JPGs\epicboombox.jpg" style="display:none;">
+                        <img name="epicbomb" src="\assets\minis\JPGs\epicbomb.jpg" style="display:none;">
+                    </div>
+                    <p>Legendary</p>
+                    <div class="minis">
+                        <img name="legdollar" src="\assets\minis\JPGs\legdollar.jpg" style="display:none;">
+                        <img name="leglemonade" src="\assets\minis\JPGs\leglemonade.jpg" style="display:none;">
+                        <img name="legsuitcase" src="\assets\minis\JPGs\legsuitcase.jpg" style="display:none;">
+                        <img name="legsun" src="\assets\minis\JPGs\legsun.jpg" style="display:none;">
+                        <img name="legvr" src="\assets\minis\JPGs\legvr.jpg" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/profile.js?v94"></script>

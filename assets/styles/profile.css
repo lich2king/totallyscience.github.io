@@ -169,7 +169,7 @@
 }
 
 #miniSelectPopup .popup {
-    width: 50vw;
+    width: 60vw;
     height: 75%;
     background-color: white;
     border-radius: 30px;
@@ -190,12 +190,69 @@
 }
 
 #miniSelectPopup .popup .topbar p {
-    font-size: 1.3rem;
-    flex: 1;
+    font-size: 1.6rem;
     text-align: center;
 }
 
 #miniSelectPopup .popup .topbar button {
-    flex: 1;
-    width: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    margin-right: 30px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.1s;
+}
+
+#miniSelectPopup .popup .topbar button:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+
+#miniSelectPopup .popup .topbar button img {
+    width: 20px;
+    height: 20px;
+}
+
+#miniSelectPopup .popup .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 30px;
+}
+
+#miniSelectPopup .popup .content p:not(:first-child) {
+    margin-top: 40px;
+}
+
+#miniSelectPopup .popup .content div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#miniSelectPopup .popup .content div .minis {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#miniSelectPopup .popup .content div .minis img {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+#miniSelectPopup .popup .content div .minis img.selected {
+    filter: grayscale(0%);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
 }

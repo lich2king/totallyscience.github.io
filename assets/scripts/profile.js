@@ -94,6 +94,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     gamesDiv.innerHTML = `<h1>Recent Games</h1>` + gamesDiv.innerHTML;
 
     addArrowListeners();
+
+    let res = await fetcher(`/points/shop/unlocked`);
+    let minis = await res.text();
+
+    minis = minis.split(';');
+
+    for (let i = 1; i < minis.length; i++) {
+        if (minis[i] == 'undefined') continue;
+        document.getElementsByName(minis[i])[0].style.display = '';
+    }
 });
 
 function createGameButton(game, pin) {
