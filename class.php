@@ -89,10 +89,10 @@
         </div>
     </div>
 
-
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v167"></script>
+    <script src="assets/scripts/socket.io.min.js"></script>
+    <script src="assets/scripts/class.js?v168"></script>
 </body>
 
 </html>
