@@ -54,8 +54,8 @@
             </div>
             <div class='content'>
                 <div>
-                    <p rarity="commonLab">Common</p>
-                    <div class="minis" name="common">
+                    <p name="commonLab">Common</p>
+                    <div class="minis" rarity="common">
                         <img name="comwatermellon" src="\assets\minis\JPGs\comwatermellon.jpg" style="display:none;">
                         <img name="comtomato" src="\assets\minis\JPGs\comtomato.jpg" style="display:none;">
                         <img name="comstrawberrymale" src="\assets\minis\JPGs\comstrawberrymale.jpg"
@@ -76,8 +76,8 @@
                         <img name="comberry" src="\assets\minis\JPGs\comberry.jpg" style="display:none;">
                         <img name="comapple" src="\assets\minis\JPGs\comapple.jpg" style="display:none;">
                     </div>
-                    <p rarity="rareLab">Rare</p>
-                    <div class="minis" name="rare">
+                    <p name="rareLab">Rare</p>
+                    <div class="minis" rarity="rare">
                         <img name="rarestormcloud" src="\assets\minis\JPGs\rarestormcloud.jpg" style="display:none;">
                         <img name="raresoccer" src="\assets\minis\JPGs\raresoccer.jpg" style="display:none;">
                         <img name="rarepopsicle" src="\assets\minis\JPGs\rarepopsicle.jpg" style="display:none;">
@@ -91,8 +91,8 @@
                         <img name="rarecoffee" src="\assets\minis\JPGs\rarecoffee.jpg" style="display:none;">
                         <img name="rarebooze" src="\assets\minis\JPGs\rarebooze.jpg" style="display:none;">
                     </div>
-                    <p rarity="epicLab">Epic</p>
-                    <div class="minis" name="epic">
+                    <p name="epicLab">Epic</p>
+                    <div class="minis" rarity="epic">
                         <img name="epicworld" src="\assets\minis\JPGs\epicworld.jpg" style="display:none;">
                         <img name="epicpc" src="\assets\minis\JPGs\epicpc.jpg" style="display:none;">
                         <img name="epicmovie" src="\assets\minis\JPGs\epicmovie.jpg" style="display:none;">
@@ -102,8 +102,8 @@
                         <img name="epicboombox" src="\assets\minis\JPGs\epicboombox.jpg" style="display:none;">
                         <img name="epicbomb" src="\assets\minis\JPGs\epicbomb.jpg" style="display:none;">
                     </div>
-                    <p rarity="legendaryLab">Legendary</p>
-                    <div class="minis" name="legendary">
+                    <p name="legendaryLab">Legendary</p>
+                    <div class="minis" rarity="legendary">
                         <img name="legdollar" src="\assets\minis\JPGs\legdollar.jpg" style="display:none;">
                         <img name="leglemonade" src="\assets\minis\JPGs\leglemonade.jpg" style="display:none;">
                         <img name="legsuitcase" src="\assets\minis\JPGs\legsuitcase.jpg" style="display:none;">
