@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     for (let i = 1; i < minis.length; i++) {
         if (minis[i] == 'undefined') continue;
+        console.log(minis[i]);
         document.getElementsByName(minis[i])[0].style.display = '';
     }
 });
