@@ -136,6 +136,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById(rarity + 'Lab').style.display = '';
         }
     }
+
+    if (token.activeMini != null) {
+        document.getElementsByName(token.activeMini)[0].classList.add('selected');
+    }
 });
 
 function createGameButton(game, pin) {
