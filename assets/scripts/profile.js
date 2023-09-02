@@ -159,3 +159,7 @@ function addArrowListeners() {
         });
     }
 }
+
+function closeMiniSelectPopup() {
+    document.getElementById('miniSelectPopup').style.display = 'none';
+}
