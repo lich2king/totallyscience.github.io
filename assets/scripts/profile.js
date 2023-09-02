@@ -105,6 +105,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log(minis[i]);
         document.getElementsByName(minis[i])[0].style.display = '';
     }
+
+    // Hide the <p> elements for categories with no displayed images
+    const categories = document.querySelectorAll('.content > div > p');
+    categories.forEach((category) => {
+        const minisDiv = category.nextElementSibling; // Get the corresponding <div class="minis">
+        const images = minisDiv.querySelectorAll('img[style="display:"]'); // Find displayed images
+        if (images.length === 0) {
+            category.style.display = 'none'; // Hide the <p> element if no displayed images
+        }
+    });
 });
 
 function createGameButton(game, pin) {
