@@ -117,7 +117,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             rarities[rarity] = true;
         }
     }
-    console.log(rarities);
+
+    for (let rarity in rarities) {
+        if (rarities[rarity]) {
+            document.getElementById(rarity + 'Lab').style.display = '';
+        }
+    }
 });
 
 function createGameButton(game, pin) {
