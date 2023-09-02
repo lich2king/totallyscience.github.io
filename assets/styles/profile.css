@@ -253,6 +253,6 @@
 
 #miniSelectPopup .popup .content div .minis img.selected {
     filter: grayscale(0%);
-    border: 2px solid var(--accent-color);
+    outline: 2px solid var(--accent-color);
     border-radius: 8px;
 }
