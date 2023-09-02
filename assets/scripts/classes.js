@@ -125,7 +125,7 @@ async function displayGames() {
     //First check if there are any new games... if so, put them in the new games category
 
     let arrowContainer =
-        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/icons/left-arrow.avif"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/icons/right-arrow.avif"></div></div>';
+        '<div class="arrowsCon"><div class="arrowCon arrowLeftCon" id="arrowLeft" style="visibility: hidden;"><img class="arrow" src="/assets/images/icons/arrow-left.svg"></div><div class="arrowCon arrowRightCon" id="arrowRight" ><img class="arrow" src="/assets/images/icons/arrow-right.svg"></div></div>';
 
     //Then for each category (except mobile and a few others), make the category container then add games
 
