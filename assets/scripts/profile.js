@@ -110,9 +110,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (let i = 1; i < minis.length; i++) {
         if (minis[i] == 'undefined') continue;
 
-        document.getElementsByName(minis[i])[0].style.display = '';
-        let rarity = document.getElementsByName(minis[i])[0].parentElement.getAttribute('rarity');
-        console.log(rarity);
+        let mini = document.getElementsByName(minis[i])[0];
+        mini.style.display = '';
+
+        // Add a click event listener to each visible mini
+        mini.addEventListener('click', function () {
+            // Remove the 'selected' class from all minis
+            let allMinis = document.querySelectorAll('.minis img');
+            allMinis.forEach((mini) => {
+                mini.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the clicked mini
+            mini.classList.add('selected');
+        });
+
+        let rarity = mini.parentElement.getAttribute('rarity');
         if (rarities.hasOwnProperty(rarity)) {
             rarities[rarity] = true;
         }
