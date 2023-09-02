@@ -184,7 +184,7 @@
         <div id="submitB">
             <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span>
                 <img style="padding-left:0.5vw" width="16vw"
-                    src="https://www.cooperlighting.com/s/vividtune/png/right-arrow.png">
+                    src="https://www.cooperlighting.com/s/vividtune/png/icons/arrow-right.svg">
             </button>
         </div>
     </div>
