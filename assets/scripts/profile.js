@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         mini.style.display = '';
 
         // Add a click event listener to each visible mini
-        mini.addEventListener('click', function () {
+        mini.addEventListener('click', function (e) {
             // Remove the 'selected' class from all minis
             let allMinis = document.querySelectorAll('.minis img');
             allMinis.forEach((mini) => {
@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Add the 'selected' class to the clicked mini
             mini.classList.add('selected');
+            fetcher(`/points/mini/set`, { body: { miniName: e.target.getAttribute('name') } });
         });
 
         let rarity = mini.parentElement.getAttribute('rarity');
