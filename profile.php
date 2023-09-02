@@ -65,7 +65,7 @@
                         <img name="compizza" src="\assets\minis\JPGs\compizza.jpg" style="display:none;">
                         <img name="compineapple" src="\assets\minis\JPGs\compineapple.jpg" style="display:none;">
                         <img name="comavocado" src="\assets\minis\JPGs\comavocado.jpg" style="display:none;">
-                        <img name="compear" src="\assets\minis\JPGs\compear.jpg" class="selected">
+                        <img name="compear" src="\assets\minis\JPGs\compear.jpg" style="display:none;">
                         <img name="compeach" src="\assets\minis\JPGs\compeach.jpg" style="display:none;">
                         <img name="commilk" src="\assets\minis\JPGs\commilk.jpg" style="display:none;">
                         <img name="comlemon" src="\assets\minis\JPGs\comlemon.jpg" style="display:none;">
