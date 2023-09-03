@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.getElementById('usernameSpan').innerText = token.username;
     document.getElementById('emailSpan').innerText = token.email;
-    document.getElementById('accountMiniImg').src = `\\assets\\minis\\JPGs\\${token.activeMini}.jpg`;
+    document.getElementById('accountMiniImg').src = `\\assets\\minis\\JPGs\\${token.activeMini}.avif`;
 
     // load user's highscores
     let highscoreRes = await fetcher(`/profile/highscores/get`);
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Add the 'selected' class to the clicked mini
             mini.classList.add('selected');
-            document.getElementById('accountMiniImg').src = `\\assets\\minis\\JPGs\\${e.target.getAttribute('name')}.jpg`;
+            document.getElementById('accountMiniImg').src = `\\assets\\minis\\JPGs\\${e.target.getAttribute('name')}.avif`;
             fetcher(`/points/mini/set`, { body: { miniName: e.target.getAttribute('name') } });
         });
 
