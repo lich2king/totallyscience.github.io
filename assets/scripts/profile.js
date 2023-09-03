@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Add the 'selected' class to the clicked mini
             mini.classList.add('selected');
+            document.getElementById('accountMiniImg').src = `\\assets\\minis\\JPGs\\${e.target.getAttribute('name')}.jpg`;
             fetcher(`/points/mini/set`, { body: { miniName: e.target.getAttribute('name') } });
         });
 
