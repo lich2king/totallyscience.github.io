@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.getElementById('usernameSpan').innerText = token.username;
     document.getElementById('emailSpan').innerText = token.email;
+    document.getElementById('accountMiniImg').src = `\\assets\\minis\\JPGs\\${token.activeMini}.jpg`;
 
     // load user's highscores
     let highscoreRes = await fetcher(`/profile/highscores/get`);
@@ -198,4 +199,8 @@ function addArrowListeners() {
 
 function closeMiniSelectPopup() {
     document.getElementById('miniSelectPopup').style.display = 'none';
+}
+
+function showMiniSelect() {
+    document.getElementById('miniSelectPopup').style.display = '';
 }

@@ -7,13 +7,17 @@
 
 
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v13'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v14'>
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="accountoptions">
+        <div class="accountoption mini" style='display:none' id='accountMini'>
+            <img style="width:60px; border-radius: 8px" src='' id='accountMiniImg'>
+            <input type="image" src="assets/images/icons/edit.avif" onclick="showMiniSelect()">
+        </div>
         <div class="accountoption" tooltip="Disabled for maintenence" flow="left">
             <p style="color: rgba(255, 255, 255, 0.5) !important;">Username: <span class="span"
                     id="usernameSpan">loading...</span></p>
@@ -117,7 +121,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v103"></script>
+    <script src="assets/scripts/profile.js?v105"></script>
 </body>
 
 </html>
