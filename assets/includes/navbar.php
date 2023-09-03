@@ -1,3 +1,8 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGRTD4B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div id="navbar">
     <div id="leftbar">
         <div class="nav-button" id="gamesnav"><a href="/">&#127918; Games</a></div>

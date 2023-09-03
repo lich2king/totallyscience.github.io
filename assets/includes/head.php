@@ -1,3 +1,11 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KGRTD4B');</script>
+<!-- End Google Tag Manager -->
+
 <title>Totally Science - Free Online Unblocked Games</title>
 
 <meta property="og:title" content="Totally Science - Free Online Unblocked Games">
@@ -53,6 +61,8 @@ if (location.pathname != '/chat' && location.pathname != '/chat.php') {
 
 <!-- Lazy loading -->
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+
+
 
 
 <link rel="stylesheet" href="assets/styles/main.css?v39">
