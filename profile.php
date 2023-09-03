@@ -7,7 +7,7 @@
 
 
 
-    <link rel='stylesheet' href='assets/styles/profile.css?v16'>
+    <link rel='stylesheet' href='assets/styles/profile.css?v17'>
 </head>
 
 <body>
