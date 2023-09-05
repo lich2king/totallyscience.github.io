@@ -116,9 +116,38 @@ window.addEventListener('load', async() => {
         // display user like and pin status of game
         displayUserData();
 
-        let socket = io();
+        let socket = io(activeServer);
 
-        
+        socket.on('request-introduction', () => {
+            socket.emit('respond-introduction', JSON.stringify({ name: json.username, id: json.id, mini: json.activeMini, game: gameName }));
+
+            // FOR ZACH: add id of button that should send chat messages
+            // TODO: also allow clicking enter key to send a message
+            document.getElementById('').addEventListener('click', () => {
+                // FOR ZACH: add id of textinput here
+                let message = document.getElementById('').value;
+
+                socket.emit('send-message', message);
+            });
+
+            socket.on('broadcast-message', (jsonStr) => {
+                let json = JSON.parse(jsonStr);
+
+                console.log(json)
+
+                // FOR ZACH: display message
+                // json var contains
+                // json.message (message body sent by another user)
+                // json.username (the username of the sender)
+                // json.mini (the active mini of the sender)
+                
+                // if json has no value for mini or username, it is a system message such as a user join or leave, display it in a different color
+            });
+
+            socket.on('broadcast-user-count', (userCount) => {
+                // FOR ZACH: display user count number to the element on the page
+            });
+        });
     }
 
     const iframe = document.getElementById('iframe');
