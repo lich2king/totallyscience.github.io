@@ -115,7 +115,7 @@ window.addEventListener('load', async () => {
         // display user like and pin status of game
         displayUserData();
 
-        let socket = io(activeServer);
+        let socket = io(activeServer, {  path: activeServer == '/api' ? '/api' : ''});
 
         socket.on('request-introduction', () => {
             socket.emit('respond-introduction', JSON.stringify({ name: json.username, id: json.id, mini: json.activeMini, game: gameName }));
