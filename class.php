@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v60'>
+    <link rel='stylesheet' href='assets/styles/class.css?v61'>
 </head>
 
 <body>
@@ -39,9 +39,94 @@
                 </div>
             </div>
         </div>
-
         <div class="ad">
             <div class="adsrc"></div>
+        </div>
+        <div class="chat" style='display: none'>
+            <div class='top'>
+                <p><span id="usersOnline">0</span> users online</p>
+            </div>
+            <div class='content'>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
+                        <p>Jasquarx</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
+                        <p>MasonKilla</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
+                        <p>Markipliers</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
+                        <p>Jasquarx</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
+                        <p>MasonKilla</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
+                        <p>Markipliers</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
+                        <p>Jasquarx</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
+                        <p>MasonKilla</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
+                        <p>Markipliers</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
+                        <p>Jasquarx</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
+                        <p>MasonKilla</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div>
+                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
+                        <p>Markipliers</p>
+                    </div>
+                    <p class='message'>Hi what's upwefweffew squadx</p>
+                </div>
+                <div class="server">
+                    <p class='message'>Zach has joined the chat</p>
+                </div>
+            </div>
+            <div class='write'>
+                <input type='text' id='messageBox' placeholder='Type a message...'>
+                <button id='sendChat' class='button-effect-a'><img src='assets/images/icons/send.avif'></button>
+            </div>
         </div>
     </div>
 
@@ -92,7 +177,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v168"></script>
+    <script src="assets/scripts/class.js?v169"></script>
 </body>
 
 </html>

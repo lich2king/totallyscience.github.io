@@ -61,8 +61,7 @@ function setupActionButtons() {
             likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
             likeCountEle.innerText = numFormatter(likeCount);
-        }
-        else swal('You must login to like the game', swalConfig).then(swalHandler);
+        } else swal('You must login to like the game', swalConfig).then(swalHandler);
     });
     likeBtn.addEventListener('webkitAnimationEnd', () => {
         likeBtn.classList.remove('button-click');
@@ -93,7 +92,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -112,7 +111,7 @@ window.addEventListener('load', async() => {
         // display points count in navbar
         let json = await response.json();
         setPointsDisplay(json.points || 0);
-        
+
         // display user like and pin status of game
         displayUserData();
 
@@ -123,9 +122,9 @@ window.addEventListener('load', async() => {
 
             // FOR ZACH: add id of button that should send chat messages
             // TODO: also allow clicking enter key to send a message
-            document.getElementById('').addEventListener('click', () => {
+            document.getElementById('sendChat').addEventListener('click', () => {
                 // FOR ZACH: add id of textinput here
-                let message = document.getElementById('').value;
+                let message = document.getElementById('messageBox').value;
 
                 socket.emit('send-message', message);
             });
@@ -133,19 +132,20 @@ window.addEventListener('load', async() => {
             socket.on('broadcast-message', (jsonStr) => {
                 let json = JSON.parse(jsonStr);
 
-                console.log(json)
+                console.log(json);
 
                 // FOR ZACH: display message
                 // json var contains
                 // json.message (message body sent by another user)
                 // json.username (the username of the sender)
                 // json.mini (the active mini of the sender)
-                
+
                 // if json has no value for mini or username, it is a system message such as a user join or leave, display it in a different color
             });
 
             socket.on('broadcast-user-count', (userCount) => {
                 // FOR ZACH: display user count number to the element on the page
+                document.getElementById('usersOnline').innerText = userCount;
             });
         });
     }

@@ -60,6 +60,10 @@
     justify-content: start;
 }
 
+#gameframe .chat .content div.server {
+    margin-top: 10px;
+}
+
 #gameframe .chat .content div .nameBar {
     display: flex;
     flex-direction: row;
@@ -86,6 +90,10 @@
     margin: 0%;
     margin-left: 2%;
     margin-right: 5%;
+}
+
+#gameframe .chat .content div.server .message {
+    color: rgb(202, 202, 202);
 }
 
 #gameframe .chat .write {
