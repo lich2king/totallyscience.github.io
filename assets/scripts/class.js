@@ -282,7 +282,7 @@ function suggestGames(games) {
 
 window.addEventListener('click', (e) => {
     //fix some text inputs not working (eaglercraft)
-    if (e.target.id != 'message') {
+    if (e.target.id != 'messageBox') {
         document.getElementById('iframe').focus();
     }
 });
