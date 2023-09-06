@@ -144,8 +144,6 @@ window.addEventListener('load', async() => {
             socket.on('broadcast-message', (jsonStr) => {
                 let json = JSON.parse(jsonStr);
 
-                console.log(json);
-
                 let message = '';
 
                 if (json.username == null && json.mini == null) {
@@ -167,6 +165,9 @@ window.addEventListener('load', async() => {
                 var chatContent = document.getElementById("chatContent");
                 chatContent.innerHTML += message;
                 chatContent.scrollTop = chatContent.scrollHeight;
+                console.log(chatContent.scrollTop);
+                console.log(chatContent.scrollHeight);
+                console.log(chatContent.scrollTop);
 
                 // FOR ZACH: display message
                 // json var contains
