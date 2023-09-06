@@ -148,7 +148,7 @@ window.addEventListener('load', async() => {
                 console.log("Scrolling");
                 // Check if the user has manually scrolled to the top
                 isAutoScrolling = false;
-                if (chatContent.scrollHeight - chatContent.scrollTop == chatContent.offsetHeight) {
+                if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
                     isAutoScrolling = true;
                     console.log("User scrolled to bottom");
                 }
