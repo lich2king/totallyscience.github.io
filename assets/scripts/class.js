@@ -131,8 +131,8 @@ window.addEventListener('load', async() => {
                 document.getElementById('messageBox').value = '';
             });
 
-            document.querySelector('#messageBox').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
+            document.querySelector('#messageBox').addEventListener('keyup', function(e) {
+                if (e.key === 'Enter' && document.getElementById('messageBox').value != '') {
                     let message = document.getElementById('messageBox').value;
 
                     socket.emit('send-message', message);
