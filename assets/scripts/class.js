@@ -180,6 +180,7 @@ window.addEventListener('load', async() => {
 
 
                 chatContent.innerHTML += message;
+                console.log(isAutoScrolling);
                 if (isAutoScrolling) {
                     chatContent.scrollTop = chatContent.scrollHeight;
                 }
