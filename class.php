@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v62'>
+    <link rel='stylesheet' href='assets/styles/class.css?v63'>
 </head>
 
 <body>
@@ -102,7 +102,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v186"></script>
+    <script src="assets/scripts/class.js?v187"></script>
 </body>
 
 </html>

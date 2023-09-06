@@ -49,6 +49,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     padding-bottom: 10%;
+    scroll-behavior: smooth;
 }
 
 #gameframe .chat .content div {
@@ -403,7 +404,6 @@
 #shareCon h1 {
     color: var(--light-color);
     margin-top: 15px;
-
     margin-bottom: 0px;
 }
 
