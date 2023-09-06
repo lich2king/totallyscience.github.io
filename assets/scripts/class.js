@@ -164,8 +164,8 @@ window.addEventListener('load', async() => {
 
                 var chatContent = document.getElementById("chatContent");
                 chatContent.innerHTML += message;
-                chatContent.scrollTop = chatContent.scrollHeight;
                 console.log(chatContent.scrollTop);
+                chatContent.scrollTop = chatContent.scrollHeight;
                 console.log(chatContent.scrollHeight);
                 console.log(chatContent.scrollTop);
 
