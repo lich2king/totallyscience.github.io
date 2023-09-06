@@ -128,7 +128,18 @@ window.addEventListener('load', async() => {
                 let message = document.getElementById('messageBox').value;
 
                 socket.emit('send-message', message);
+                document.getElementById('messageBox').value = '';
             });
+
+            document.querySelector('#messageBox').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    let message = document.getElementById('messageBox').value;
+
+                    socket.emit('send-message', message);
+                    document.getElementById('messageBox').value = '';
+                }
+            });
+
 
             socket.on('broadcast-message', (jsonStr) => {
                 let json = JSON.parse(jsonStr);
