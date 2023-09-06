@@ -39,7 +39,7 @@ function setupActionButtons() {
         if (value == 'login') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async (e) => {
+    likeBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
@@ -67,7 +67,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async (e) => {
+    pinBtn.addEventListener('click', async(e) => {
         e.target.classList.add('button-click');
 
         let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
@@ -92,7 +92,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async() => {
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -114,7 +114,7 @@ window.addEventListener('load', async () => {
 
         // display user like and pin status of game
         displayUserData();
-        
+
         const socketUrl = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : null;
         let socket = io(socketUrl);
 
@@ -134,6 +134,27 @@ window.addEventListener('load', async () => {
                 let json = JSON.parse(jsonStr);
 
                 console.log(json);
+
+                let message = '';
+
+                if (json.username == null && json.mini == null) {
+                    message = `
+                        <div class="server">
+                            <p class='message'>${json.message}</p>
+                        </div>`
+                } else if (json.username != null && json.mini != null) {
+                    message = `
+                    <div>
+                        <div class='nameBar'><img src='/assets/minis/JPGs/${json.mini}.avif'>
+                            <p>${json.username}</p>
+                        </div>
+                        <p class='message'>${json.message}</p>
+                    </div>`
+                }
+
+
+
+                document.getElementById('chatContent').innerHTML += message;
 
                 // FOR ZACH: display message
                 // json var contains

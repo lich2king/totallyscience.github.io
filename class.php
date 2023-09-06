@@ -46,82 +46,7 @@
             <div class='top'>
                 <p><span id="usersOnline">0</span> users online</p>
             </div>
-            <div class='content'>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
-                        <p>Jasquarx</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
-                        <p>MasonKilla</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
-                        <p>Markipliers</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
-                        <p>Jasquarx</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
-                        <p>MasonKilla</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
-                        <p>Markipliers</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
-                        <p>Jasquarx</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
-                        <p>MasonKilla</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
-                        <p>Markipliers</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\comwatermellon.jpg'>
-                        <p>Jasquarx</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\legsuitcase.jpg'>
-                        <p>MasonKilla</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div>
-                    <div class='nameBar'><img src='\assets\minis\JPGs\epicdisco.jpg'>
-                        <p>Markipliers</p>
-                    </div>
-                    <p class='message'>Hi what's upwefweffew squadx</p>
-                </div>
-                <div class="server">
-                    <p class='message'>Zach has joined the chat</p>
-                </div>
+            <div class='content' id='chatContent'>
             </div>
             <div class='write'>
                 <input type='text' id='messageBox' placeholder='Type a message...'>
@@ -177,7 +102,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v180"></script>
+    <script src="assets/scripts/class.js?v182"></script>
 </body>
 
 </html>
