@@ -147,12 +147,12 @@ window.addEventListener('load', async() => {
             chatContent.addEventListener("scroll", function() {
                 console.log("Scrolling");
                 // Check if the user has manually scrolled to the top
-                if (chatContent.scrollHeight - chatContent.scrollTop != chatContent.height()) {
+                if (chatContent.scrollHeight - chatContent.scrollTop != chatContent.height) {
                     isAutoScrolling = false;
                     console.log("User scrolled up");
                 }
                 // Check if the user has manually scrolled back to the bottom
-                else if (chatContent.scrollHeight - chatContent.scrollTop == chatContent.height() && !isAutoScrolling) {
+                else if (chatContent.scrollHeight - chatContent.scrollTop == chatContent.height && !isAutoScrolling) {
                     isAutoScrolling = true;
                     console.log("User scrolled down");
                 }
