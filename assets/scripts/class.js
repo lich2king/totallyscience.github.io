@@ -147,15 +147,16 @@ window.addEventListener('load', async() => {
             chatContent.addEventListener("scroll", function() {
                 console.log("Scrolling");
                 // Check if the user has manually scrolled to the top
-                if (chatContent.scrollTop !== 0) {
+                if (chatContent.scrollHeight - div.scrollTop() != chatContent.height()) {
                     isAutoScrolling = false;
                     console.log("User scrolled up");
                 }
                 // Check if the user has manually scrolled back to the bottom
-                else if (chatContent.scrollTop === 0 && !isAutoScrolling) {
+                else if (chatContent.scrollHeight - div.scrollTop() == chatContent.height() && !isAutoScrolling) {
                     isAutoScrolling = true;
                     console.log("User scrolled down");
                 }
+                console.log(chatContent.scrollTop);
             });
 
             socket.on('broadcast-message', (jsonStr) => {
