@@ -140,6 +140,20 @@ window.addEventListener('load', async() => {
                 }
             });
 
+            var isAutoScrolling = true;
+            var chatContent = document.getElementById("chatContent");
+
+            // Detect manual scrolling
+            chatContent.addEventListener("scroll", function() {
+                // Check if the user has manually scrolled to the top
+                if (chatContent.scrollTop !== 0) {
+                    isAutoScrolling = false;
+                }
+                // Check if the user has manually scrolled back to the bottom
+                else if (chatContent.scrollTop === 0 && !isAutoScrolling) {
+                    isAutoScrolling = true;
+                }
+            });
 
             socket.on('broadcast-message', (jsonStr) => {
                 let json = JSON.parse(jsonStr);
@@ -162,9 +176,11 @@ window.addEventListener('load', async() => {
                 }
 
 
-                var chatContent = document.getElementById("chatContent");
                 chatContent.innerHTML += message;
-                chatContent.scrollTop = chatContent.scrollHeight;
+                if (isAutoScrolling) {
+                    chatContent.scrollTop = chatContent.scrollHeight;
+                }
+
 
                 // FOR ZACH: display message
                 // json var contains
