@@ -164,8 +164,9 @@ window.addEventListener('load', async() => {
                 }
 
 
-
-                document.getElementById('chatContent').innerHTML += message;
+                var chatContent = document.getElementById("chatContent");
+                chatContent.innerHTML += message;
+                chatContent.scrollTop = chatContent.scrollHeight;
 
                 // FOR ZACH: display message
                 // json var contains
