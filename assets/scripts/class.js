@@ -99,105 +99,94 @@ window.addEventListener('load', async() => {
     // fetch games from jsons
     let retrievedGamesRes = await fetch(`assets/games.json`);
     let retrievedGames = await retrievedGamesRes.json();
+
     // get data for selected game
     const gameData = retrievedGames[gameName];
+
     // if the game requested does not exist in the json file redirect
     if (!gameData) window.location.href = '../classes.php';
 
     // check if user is signed in
     let response = await fetcher(`/auth/check`);
+    let json;
 
     if (response.status == 200) {
         // display points count in navbar
-        let json = await response.json();
+        json = await response.json();
         setPointsDisplay(json.points || 0);
 
         // display user like and pin status of game
         displayUserData();
+    }
 
-        const socketUrl = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : null;
-        let socket = io(socketUrl);
+    // setup socket for chatroom
+    const socketUrl = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : null;
+    let socket = io(socketUrl);
 
-        socket.on('request-introduction', () => {
-            socket.emit('respond-introduction', JSON.stringify({ name: json.username, id: json.id, mini: json.activeMini, game: gameName }));
+    socket.on('request-introduction', () => {
+        const chatContent = document.getElementById("chatContent");
+        const messageBox = document.getElementById('messageBox');
 
-            // FOR ZACH: add id of button that should send chat messages
-            // TODO: also allow clicking enter key to send a message
+        socket.emit('respond-introduction', JSON.stringify({ name: json?.username, id: json?.id, mini: json?.activeMini, game: gameName }));
+
+        if (response.status == 200) {
             document.getElementById('sendChat').addEventListener('click', () => {
-                // FOR ZACH: add id of textinput here
-                let message = document.getElementById('messageBox').value;
-
+                let message = messageBox.value;
+    
                 socket.emit('send-message', message);
-                document.getElementById('messageBox').value = '';
+                messageBox.value = '';
             });
 
-            document.querySelector('#messageBox').addEventListener('keyup', function(e) {
-                if (e.key === 'Enter' && document.getElementById('messageBox').value != '') {
-                    let message = document.getElementById('messageBox').value;
-
-                    socket.emit('send-message', message);
-                    document.getElementById('messageBox').value = '';
+            messageBox.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter' && messageBox.value != '') {
+                    socket.emit('send-message', messageBox.value);
+                    messageBox.value = '';
                 }
             });
+        }
 
-            var isAutoScrolling = true;
-            var chatContent = document.getElementById("chatContent");
+        let isAutoScrolling = true;
 
-            // Detect manual scrolling
-            chatContent.addEventListener("scroll", function() {
-                console.log("Scrolling");
-                // Check if the user has manually scrolled to the top
-                isAutoScrolling = false;
-                if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
-                    isAutoScrolling = true;
-                    console.log("User scrolled to bottom");
-                }
-                console.log(chatContent.scrollTop);
-            });
+        // Detect manual scrolling
+        chatContent.addEventListener("scroll", () => {
+            // Check if the user has manually scrolled to the top
+            isAutoScrolling = false;
+            if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
+                isAutoScrolling = true;
+            }
+        });
 
-            socket.on('broadcast-message', (jsonStr) => {
-                let json = JSON.parse(jsonStr);
+        socket.on('broadcast-message', (jsonStr) => {
+            let json = JSON.parse(jsonStr);
 
-                let message = '';
-
-                if (json.username == null && json.mini == null) {
-                    message = `
-                        <div class="server">
-                            <p class='message'>${json.message}</p>
-                        </div>`
-                } else if (json.username != null && json.mini != null) {
-                    message = `
+            if (json.username == null) {
+                // message is a system message, such as a chat leave or join.
+                // these messages are displayed differently
+                chatContent.innerHTML += `
+                    <div class="server">
+                        <p class='message'>${json.message}</p>
+                    </div>
+                `;
+            } else if (json.username != null) {
+                chatContent.innerHTML += `
                     <div>
                         <div class='nameBar'><img src='/assets/minis/JPGs/${json.mini}.avif'>
                             <p>${json.username}</p>
                         </div>
+
                         <p class='message'>${json.message}</p>
-                    </div>`
-                }
+                    </div>
+                `;
+            }
 
-
-                chatContent.innerHTML += message;
-                console.log(isAutoScrolling);
-                if (isAutoScrolling) {
-                    chatContent.scrollTop = chatContent.scrollHeight;
-                }
-
-
-                // FOR ZACH: display message
-                // json var contains
-                // json.message (message body sent by another user)
-                // json.username (the username of the sender)
-                // json.mini (the active mini of the sender)
-
-                // if json has no value for mini or username, it is a system message such as a user join or leave, display it in a different color
-            });
-
-            socket.on('broadcast-user-count', (userCount) => {
-                // FOR ZACH: display user count number to the element on the page
-                document.getElementById('usersOnline').innerText = userCount;
-            });
+            // scroll down to reveal most recent message
+            if (isAutoScrolling) chatContent.scrollTop = chatContent.scrollHeight;
         });
-    }
+
+        socket.on('broadcast-user-count', (userCount) => {
+            document.getElementById('usersOnline').innerText = userCount;
+        });
+    });
 
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
