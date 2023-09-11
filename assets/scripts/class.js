@@ -131,6 +131,7 @@ window.addEventListener('load', async() => {
 
         if (response.status == 200) {
             document.getElementById('sendChat').addEventListener('click', () => {
+                console.log("Fucka");
                 console.log(json);
                 let message = messageBox.value;
 
@@ -144,6 +145,12 @@ window.addEventListener('load', async() => {
                     messageBox.value = '';
                 }
             });
+        } else {
+            console.log("Yo");
+
+            console.log(response.status);
+            console.log(json);
+
         }
 
         let isAutoScrolling = true;
