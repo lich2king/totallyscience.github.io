@@ -127,12 +127,13 @@ window.addEventListener('load', async() => {
         const chatContent = document.getElementById("chatContent");
         const messageBox = document.getElementById('messageBox');
 
-        socket.emit('respond-introduction', JSON.stringify({ name: json?.username, id: json?.id, mini: json?.activeMini, game: gameName }));
+        socket.emit('respond-introduction', JSON.stringify({ name: json ? .username, id: json ? .id, mini: json ? .activeMini, game: gameName }));
 
         if (response.status == 200) {
             document.getElementById('sendChat').addEventListener('click', () => {
+                console.log(json);
                 let message = messageBox.value;
-    
+
                 socket.emit('send-message', message);
                 messageBox.value = '';
             });
