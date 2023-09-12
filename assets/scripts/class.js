@@ -61,7 +61,7 @@ function setupActionButtons() {
             likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
             likeCountEle.innerText = numFormatter(likeCount);
-        } else swal('You must login to like the game', swalConfig).then(swalHandler);
+        } else swal('You must signup to like the game', swalConfig).then(swalHandler);
     });
     likeBtn.addEventListener('webkitAnimationEnd', () => {
         likeBtn.classList.remove('button-click');
@@ -75,7 +75,7 @@ function setupActionButtons() {
         if (res.status == 400) {
             swal('You have pinned the max amount of games (3).');
         } else if (res.status == 401 || res.status == 403) {
-            swal('You must login to pin the game', swalConfig).then(swalHandler);
+            swal('You must signup to pin the game', swalConfig).then(swalHandler);
         } else {
             const pinnedIcon = 'assets/images/icons/pin.avif';
             const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
@@ -150,9 +150,23 @@ window.addEventListener('load', async() => {
         }
         else
         {
-            console.log("Bad response");
-            console.log(response.status);
+            document.getElementById('sendChat').addEventListener('click', () => {
+                console.log(json?.username);
+                let message = messageBox.value;
+                if(message != '')
+                {
+                    swal('You must signup to send a chat', swalConfig).then(swalHandler);
+                }
+            });
+
+            messageBox.addEventListener('keyup', (e) => {
+                console.log(json?.username);
+                if (e.key === 'Enter' && messageBox.value != '') {
+                    swal('You must signup to send a chat', swalConfig).then(swalHandler);
+                }
+            });
         }
+
 
         let isAutoScrolling = true;
 
