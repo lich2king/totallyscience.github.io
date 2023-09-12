@@ -131,26 +131,22 @@ window.addEventListener('load', async() => {
 
         if (response.status == 200) {
             document.getElementById('sendChat').addEventListener('click', () => {
-                console.log("Fucka");
-                console.log(json);
+                console.log(json?.username);
                 let message = messageBox.value;
-
-                socket.emit('send-message', message);
-                messageBox.value = '';
+                if(message != '')
+                {
+                    socket.emit('send-message', message);
+                    messageBox.value = '';
+                }
             });
 
             messageBox.addEventListener('keyup', (e) => {
+                console.log(json?.username);
                 if (e.key === 'Enter' && messageBox.value != '') {
                     socket.emit('send-message', messageBox.value);
                     messageBox.value = '';
                 }
             });
-        } else {
-            console.log("Yo");
-
-            console.log(response.status);
-            console.log(json);
-
         }
 
         let isAutoScrolling = true;
