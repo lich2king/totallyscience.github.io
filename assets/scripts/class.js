@@ -148,6 +148,11 @@ window.addEventListener('load', async() => {
                 }
             });
         }
+        else
+        {
+            console.log("Bad response");
+            console.log(response.status);
+        }
 
         let isAutoScrolling = true;
 
