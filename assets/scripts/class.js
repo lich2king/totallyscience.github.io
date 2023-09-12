@@ -34,9 +34,9 @@ function setupActionButtons() {
     const likeBtn = document.querySelector('#like');
 
     // configuration for swal popup
-    const swalConfig = { buttons: { cancel: 'Cancel', login: { text: 'Login', value: 'login' } } };
+    const swalConfig = { buttons: { cancel: 'Cancel', login: { text: 'Signup', value: 'signup' } } };
     const swalHandler = (value) => {
-        if (value == 'login') window.open('signup.php', '_self');
+        if (value == 'signup') window.open('signup.php', '_self');
     };
 
     likeBtn.addEventListener('click', async(e) => {
@@ -150,6 +150,10 @@ window.addEventListener('load', async() => {
         }
         else
         {
+            const swalConfig = { buttons: { cancel: 'Cancel', login: { text: 'Signup', value: 'signup' } } };
+            const swalHandler = (value) => {
+                if (value == 'signup') window.open('signup.php', '_self');
+            };
             document.getElementById('sendChat').addEventListener('click', () => {
                 console.log(json?.username);
                 let message = messageBox.value;
