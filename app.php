@@ -64,6 +64,13 @@
                 document.querySelector('.lds-dual-ring').remove();
                 document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
             };
+
+            let response = await fetcher(`/auth/check`);
+            if (response.status == 200) {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
+            }
         });
     </script>
 </body>

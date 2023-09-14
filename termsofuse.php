@@ -100,23 +100,33 @@
 
     <script async src="https://cdn.ad.plus/player/adplus.js"></script>
     <script data-playerPro="current">
-    (function() {
-        var s = document.querySelector('script[data-playerPro="current"]');
-        s.removeAttribute("data-playerPro");
-        (playerPro = window.playerPro || []).push({
-            id: "z2I717k6zq5b",
-            after: s,
-            appParams: {
-                "C_NETWORK_CODE": "22753484437",
-                "C_WEBSITE": "totallyscience.co"
-            }
-        });
-    })();
+        (function() {
+            var s = document.querySelector('script[data-playerPro="current"]');
+            s.removeAttribute("data-playerPro");
+            (playerPro = window.playerPro || []).push({
+                id: "z2I717k6zq5b",
+                after: s,
+                appParams: {
+                    "C_NETWORK_CODE": "22753484437",
+                    "C_WEBSITE": "totallyscience.co"
+                }
+            });
+        })();
     </script>
 
+    <script>
+        window.addEventListener('load', async () => {
+            let response = await fetcher(`/auth/check`);
+
+            if (response.status == 200) {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
+            }
+        });
+    </script>
 
     <?php include "assets/includes/footer.php" ?>
-
 </body>
 
 </html>

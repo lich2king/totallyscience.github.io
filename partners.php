@@ -219,6 +219,13 @@
 
                 document.getElementById(`apps`).innerHTML += partnerEle;
             }
+
+            let response = await fetcher(`/auth/check`);
+            if (response.status == 200) {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
+            }
         });
     </script>
 </body>

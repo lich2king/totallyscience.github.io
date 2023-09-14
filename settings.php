@@ -52,28 +52,38 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-    const websiteInput = document.getElementById('website');
-    const saveBtn = document.getElementById('save-button');
-    const disguiseInput = document.getElementById('disguise');
+        const websiteInput = document.getElementById('website');
+        const saveBtn = document.getElementById('save-button');
+        const disguiseInput = document.getElementById('disguise');
 
-    websiteInput.value = localStorage.getItem('website');
-    disguiseInput.value = localStorage.getItem('disguise');
+        websiteInput.value = localStorage.getItem('website');
+        disguiseInput.value = localStorage.getItem('disguise');
 
-    function submit() {
-        let websiteEntered = websiteInput.value;
-        let disguiseEntered = disguiseInput.value;
+        function submit() {
+            let websiteEntered = websiteInput.value;
+            let disguiseEntered = disguiseInput.value;
 
-        if (!(websiteEntered.includes('http'))) websiteEntered = `https://${websiteEntered}`;
+            if (!(websiteEntered.includes('http'))) websiteEntered = `https://${websiteEntered}`;
 
-        localStorage.setItem("website", websiteEntered);
-        localStorage.setItem("disguise", disguiseEntered);
+            localStorage.setItem("website", websiteEntered);
+            localStorage.setItem("disguise", disguiseEntered);
 
-        saveBtn.innerHTML = "Saved.";
+            saveBtn.innerHTML = "Saved.";
 
-        setTimeout(() => {
-            saveBtn.innerHTML = "Save";
-        }, 500);
-    }
+            setTimeout(() => {
+                saveBtn.innerHTML = "Save";
+            }, 500);
+        }
+        
+        window.addEventListener('load', async () => {
+            let response = await fetcher(`/auth/check`);
+
+            if (response.status == 200) {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
+            }
+        });
     </script>
 </body>
 

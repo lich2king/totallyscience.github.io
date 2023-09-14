@@ -178,6 +178,13 @@
         document.getElementById('appsnav').classList.add('selected');
 
         window.addEventListener('load', async () => {
+            let response = await fetcher(`/auth/check`);
+            if (response.status == 200) {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
+            }
+
             const appContainer = document.getElementById('apps');
 
             let appsRes = await fetcher(`/apps`);

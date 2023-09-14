@@ -102,6 +102,17 @@
 
     <?php include "assets/includes/footer.php" ?>
 
+    <script>
+        window.addEventListener('load', async () => {
+            let response = await fetcher(`/auth/check`);
+
+            if (response.status == 200) {
+                // display points count in navbar
+                let json = await response.json();
+                setPointsDisplay(json.points || 0);
+            }
+        });
+    </script>
 </body>
 
 </html>
