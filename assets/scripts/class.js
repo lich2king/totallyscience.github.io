@@ -189,21 +189,35 @@ window.addEventListener('load', async() => {
             if (json.username == null) {
                 // message is a system message, such as a chat leave or join.
                 // these messages are displayed differently
-                chatContent.innerHTML += `
-                    <div class="server">
-                        <p class='message'>${json.message}</p>
-                    </div>
-                `;
-            } else if (json.username != null) {
-                chatContent.innerHTML += `
-                    <div>
-                        <div class='nameBar'><img src='/assets/minis/JPGs/${json.mini}.avif'>
-                            <p>${json.username}</p>
-                        </div>
+                let ele = document.createElement('div');
+                ele.className = 'server';
 
-                        <p class='message'>${json.message}</p>
-                    </div>
-                `;
+                let pEle = document.createElement('p');
+                pEle.className = 'message';
+                pEle.innerText = json.message;
+
+                ele.appendChild(pEle);
+                chatContent.appendChild(ele);
+            } else if (json.username != null) {
+                let ele = document.createElement('div');
+
+                let pEle = document.createElement('p');
+                pEle.className = 'message';
+                pEle.innerText = json.message;
+
+                let nameEle = document.createElement('div');
+                nameEle.className = 'nameBar';
+
+                let namePEle = document.createElement('p');
+                namePEle.innerText = json.username;
+                let imgEle = document.createElement('img');
+                imgEle.src = `/assets/minis/JPGs/${json.mini}.avif`;
+
+                nameEle.appendChild(namePEle);
+                nameEle.appendChild(imgEle);
+                ele.appendChild(pEle);
+                ele.appendChild(nameEle);
+                chatContent.appendChild(ele);
             }
 
             // scroll down to reveal most recent message
