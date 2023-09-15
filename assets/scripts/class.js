@@ -213,8 +213,8 @@ window.addEventListener('load', async() => {
                 let imgEle = document.createElement('img');
                 imgEle.src = `/assets/minis/JPGs/${json.mini}.avif`;
 
-                nameEle.appendChild(namePEle);
                 nameEle.appendChild(imgEle);
+                nameEle.appendChild(namePEle);
                 ele.appendChild(pEle);
                 ele.appendChild(nameEle);
                 chatContent.appendChild(ele);
