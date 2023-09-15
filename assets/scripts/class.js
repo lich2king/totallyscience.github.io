@@ -215,8 +215,8 @@ window.addEventListener('load', async() => {
 
                 nameEle.appendChild(imgEle);
                 nameEle.appendChild(namePEle);
-                ele.appendChild(pEle);
                 ele.appendChild(nameEle);
+                ele.appendChild(pEle);
                 chatContent.appendChild(ele);
             }
 
