@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v63'>
+    <link rel='stylesheet' href='assets/styles/class.css?v64'>
 </head>
 
 <body>
@@ -49,7 +49,7 @@
             <div class='content' id='chatContent'>
             </div>
             <div class='write'>
-                <input type='text' id='messageBox' placeholder='Type a message...'>
+                <input type='text' id='messageBox' placeholder='Type a message...' maxlength='50'>
                 <button id='sendChat' class='button-effect-a'><img src='assets/images/icons/send.avif'></button>
             </div>
         </div>

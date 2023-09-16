@@ -87,6 +87,7 @@
 
 #gameframe .chat .content div .message {
     color: var(--light-color);
+    word-break: break-all;
     font-size: 1rem;
     margin: 0%;
     margin-left: 2%;
