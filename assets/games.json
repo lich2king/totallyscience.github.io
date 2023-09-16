@@ -151,7 +151,7 @@
     },
 
     "Minecraft": {
-        "description": "Minecraft eaglercraft 1.5.2 for the web",
+        "description": "Minecraft eaglercraft 1.8.8 in your browser",
         "image": "/assets/games/icons/minecraft.avif",
         "controls": "WASD to move, space to jump",
         "tags": ["multiplayer"],
