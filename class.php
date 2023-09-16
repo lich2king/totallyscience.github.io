@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v64'>
+    <link rel='stylesheet' href='assets/styles/class.css?v65'>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
         <div class="ad">
             <div class="adsrc"></div>
         </div>
-        <div class="chat" style='display: none'>
+        <div class="chat">
             <div class='top'>
                 <p><span id="usersOnline">0</span> users online</p>
             </div>
@@ -53,9 +53,6 @@
                 <button id='sendChat' class='button-effect-a'><img src='assets/images/icons/send.avif'></button>
             </div>
         </div>
-    </div>
-
-    <div class="adsrc adhorz" style="text-align:center;">
     </div>
 
     <div id="info">

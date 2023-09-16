@@ -15,9 +15,8 @@
 }
 
 #gameframe .chat {
-    width: 20vw;
+    width: 25vw;
     overflow: hidden;
-    margin-left: 2vw;
     margin-right: 2vw;
     border-radius: 10px;
     height: 70vh;
