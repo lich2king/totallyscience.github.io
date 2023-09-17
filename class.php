@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v65'>
+    <link rel='stylesheet' href='assets/styles/class.css?v66'>
 </head>
 
 <body>
@@ -38,9 +38,6 @@
                     <button id="fullscreen" class="game-button"><img src="assets/images/icons/fullscreen.avif"></button>
                 </div>
             </div>
-        </div>
-        <div class="ad">
-            <div class="adsrc"></div>
         </div>
         <div class="chat">
             <div class='top'>
