@@ -14,7 +14,7 @@
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="accountoptions">
-        <div class="accountoption" style='display:none' id='accountMini'>
+        <div class="accountoption" id='accountMini'>
             <img style="width:60px; border-radius: 8px" src='' id='accountMiniImg'>
             <input type="image" src="assets/images/icons/edit.avif" onclick="showMiniSelect()">
         </div>
