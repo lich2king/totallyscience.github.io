@@ -30,7 +30,7 @@
     <div id="startcontent">
         <div id="feature">
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/monkey-mart.jpg); display:none;">
+                style="background-image: url(./assets/images/featuredimg/monkey-mart.avif); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/icons/arrow-left.svg" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">MONKEY MART</h2>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/bob-the-robber-2-featured.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/bob-the-robber-2-featured.avif); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/icons/arrow-left.svg" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">BOB THE ROBBER 2</h2>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/motox3mpoolparty.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/motox3mpoolparty.avif); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/icons/arrow-left.svg" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">MOTO X3M POOL PARTY</h2>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="featureSlot fade"
-                style="background-image: url(./assets/images/featuredimg/vex-7.png); display:none;">
+                style="background-image: url(./assets/images/featuredimg/vex-7.avif); display:none;">
                 <div class="overlay">
                     <img class="arrow" src="/assets/images/icons/arrow-left.svg" onclick="plusSlides(-1)">
                     <h2 class="gametext stroke-text smooth-16">VEX 7</h2>
@@ -327,7 +327,7 @@
         </p>
         <h1>How can I watch Youtube on a school computer?</h1>
         <p>
-            To what Youtube on a school computer, first go to totallyscience.co. Next click "Proxy" at the top of the
+            To watch Youtube on a school computer, first go to totallyscience.co. Next click "Proxy" at the top of the
             screen. Then click Youtube. You can search or browse for any video you want to watch. If you want to
             unblocked a different website, you can choose Google, then search for your site.
         </p>
