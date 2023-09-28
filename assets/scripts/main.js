@@ -191,3 +191,9 @@ function aboutInBlank() {
     doc.body.appendChild(embed);
     doc.body.appendChild(script);
 }
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
