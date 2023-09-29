@@ -129,48 +129,23 @@ window.addEventListener('load', async() => {
 
         socket.emit('respond-introduction', JSON.stringify({ token: getCookie('session'), game: gameName }));
 
-        if (response.status == 200) {
-            document.getElementById('sendChat').addEventListener('click', () => {
-                console.log(json?.username);
-                let message = messageBox.value;
-                if(message != '')
-                {
-                    socket.emit('send-message', message);
-                    messageBox.value = '';
-                }
-            });
+        document.getElementById('sendChat').addEventListener('click', () => {
+            console.log(json?.username);
+            let message = messageBox.value;
+            if(message != '')
+            {
+                socket.emit('send-message', message);
+                messageBox.value = '';
+            }
+        });
 
-            messageBox.addEventListener('keyup', (e) => {
-                console.log(json?.username);
-                if (e.key === 'Enter' && messageBox.value != '') {
-                    socket.emit('send-message', messageBox.value);
-                    messageBox.value = '';
-                }
-            });
-        }
-        else
-        {
-            const swalConfig = { buttons: { cancel: 'Cancel', login: { text: 'Signup', value: 'signup' } } };
-            const swalHandler = (value) => {
-                if (value == 'signup') window.open('signup.php', '_self');
-            };
-            document.getElementById('sendChat').addEventListener('click', () => {
-                console.log(json?.username);
-                let message = messageBox.value;
-                if(message != '')
-                {
-                    swal('You must signup to send a chat', swalConfig).then(swalHandler);
-                }
-            });
-
-            messageBox.addEventListener('keyup', (e) => {
-                console.log(json?.username);
-                if (e.key === 'Enter' && messageBox.value != '') {
-                    swal('You must signup to send a chat', swalConfig).then(swalHandler);
-                }
-            });
-        }
-
+        messageBox.addEventListener('keyup', (e) => {
+            console.log(json?.username);
+            if (e.key === 'Enter' && messageBox.value != '') {
+                socket.emit('send-message', messageBox.value);
+                messageBox.value = '';
+            }
+        });
 
         let isAutoScrolling = true;
 

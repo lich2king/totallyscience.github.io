@@ -68,7 +68,7 @@
         window.addEventListener('load', async () => {
             let response = await fetcher(`/auth/check`);
 
-            if (response.status 200) {
+            if (response.status == 200) {
                 location.href = 'profile.php';
             }
         });
