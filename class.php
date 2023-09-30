@@ -4,7 +4,7 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v67'>
+    <link rel='stylesheet' href='assets/styles/class.css?v68'>
 </head>
 
 <body>
