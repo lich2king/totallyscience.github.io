@@ -1,3 +1,10 @@
+h2,
+h3,
+h4,
+li {
+    color: var(--light-color);
+}
+
 #gameframe {
     margin-top: 100px;
     width: 100vw;
@@ -455,4 +462,34 @@
 #shareCon .cancel {
     background-color: var(--accent-color);
     color: var(--dark-accent);
+}
+
+#articleDiv {
+    margin: auto;
+    padding-top: 30px;
+    width: 70vw;
+    margin-bottom: 50px;
+}
+
+#articleDiv .container {
+    border-radius: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+    width: 100%;
+    background-color: var(--accent-color);
+    font-family: 'Rubik';
+}
+
+#articleDiv h1,
+#article h1,
+#article p,
+#article li,
+#article ul,
+#article ol,
+#article h2,
+#article h3,
+#article h4,
+#article h5 {
+    color: var(--background-color);
 }
