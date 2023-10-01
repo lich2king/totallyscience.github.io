@@ -39,7 +39,7 @@ function setupActionButtons() {
         if (value == 'signup') window.open('signup.php', '_self');
     };
 
-    likeBtn.addEventListener('click', async(e) => {
+    likeBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
@@ -67,7 +67,7 @@ function setupActionButtons() {
         likeBtn.classList.remove('button-click');
     });
 
-    pinBtn.addEventListener('click', async(e) => {
+    pinBtn.addEventListener('click', async (e) => {
         e.target.classList.add('button-click');
 
         let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
@@ -92,7 +92,7 @@ function setupActionButtons() {
     });
 }
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -124,7 +124,7 @@ window.addEventListener('load', async() => {
     let socket = io(socketUrl);
 
     socket.on('request-introduction', () => {
-        const chatContent = document.getElementById("chatContent");
+        const chatContent = document.getElementById('chatContent');
         const messageBox = document.getElementById('messageBox');
 
         socket.emit('respond-introduction', JSON.stringify({ token: getCookie('session'), game: gameName }));
@@ -132,8 +132,7 @@ window.addEventListener('load', async() => {
         document.getElementById('sendChat').addEventListener('click', () => {
             console.log(json?.username);
             let message = messageBox.value;
-            if(message != '')
-            {
+            if (message != '') {
                 socket.emit('send-message', message);
                 messageBox.value = '';
             }
@@ -150,7 +149,7 @@ window.addEventListener('load', async() => {
         let isAutoScrolling = true;
 
         // Detect manual scrolling
-        chatContent.addEventListener("scroll", () => {
+        chatContent.addEventListener('scroll', () => {
             // Check if the user has manually scrolled to the top
             isAutoScrolling = false;
             if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
@@ -235,6 +234,11 @@ window.addEventListener('load', async() => {
     document.getElementById('description').innerText = gameData.description;
     document.getElementById('controls').innerText = gameData.controls;
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
+
+    if (gameData.article != null) {
+        document.getElementById('description').innerHTML = gameData.article;
+        document.getElementById('articleDiv').style.display = '';
+    }
 
     // update game total like count
     likeCount = await fetcher(`/profile/liked/count`, { body: { gameName: gameName } });
