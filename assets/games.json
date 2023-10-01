@@ -157,7 +157,8 @@
         "tags": ["multiplayer"],
         "date_added": "2022-09-04T22:35:18.770Z",
         "developer": "lax1dude",
-        "iframe_url": "./assets/games/eaglercraft/index.html"
+        "iframe_url": "./assets/games/eaglercraft/index.html",
+        "article": "assets/articles/minecraft.txt"
     },
 
     "Factory Balls": {

@@ -95,7 +95,6 @@
 
     <div id="articleDiv" style="display:none">
         <div class="container">
-
         </div>
     </div>
 

@@ -236,7 +236,10 @@ window.addEventListener('load', async () => {
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
     if (gameData.article != null) {
-        document.getElementById('description').innerHTML = gameData.article;
+        let artRes = await fetch(gameData.article);
+        let artText = await artRes.text();
+
+        document.getElementById('description').innerHTML = artText;
         document.getElementById('articleDiv').style.display = '';
     }
 
