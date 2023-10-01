@@ -241,7 +241,7 @@ window.addEventListener('load', async () => {
 
         console.log(artRes);
 
-        document.getElementById('description').innerHTML = artText;
+        document.getElementById('articleDivCon').innerHTML = artText;
         document.getElementById('articleDiv').style.display = '';
     }
 

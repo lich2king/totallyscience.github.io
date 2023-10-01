@@ -94,14 +94,14 @@
     </div>
 
     <div id="articleDiv" style="display:none">
-        <div class="container">
+        <div class="container" id="articleDivCon">
         </div>
     </div>
 
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v220"></script>
+    <script src="assets/scripts/class.js?v221"></script>
 </body>
 
 </html>
