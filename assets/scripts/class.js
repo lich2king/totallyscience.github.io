@@ -239,6 +239,8 @@ window.addEventListener('load', async () => {
         let artRes = await fetch(gameData.article);
         let artText = await artRes.text();
 
+        console.log(artRes);
+
         document.getElementById('description').innerHTML = artText;
         document.getElementById('articleDiv').style.display = '';
     }
