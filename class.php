@@ -101,7 +101,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v221"></script>
+    <script src="assets/scripts/class.js?v222"></script>
 </body>
 
 </html>
