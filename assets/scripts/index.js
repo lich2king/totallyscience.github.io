@@ -70,6 +70,21 @@ window.addEventListener('load', async() => {
     let gamesRes = await fetch(`assets/games.json`);
     games = await gamesRes.json();
 
+    // retrieve featured games
+    let featuresRes = await fetcher('/features');
+    features = await featuresRes.json();
+
+    for (let feature of features)
+    {
+        let index = features.indexOf(feature);
+
+        let featureEle = document.getElementById('feature-' + (index + 1));
+        featureEle.children[0].children[1].innerText = feature.game;
+        featureEle.style.backgroundImage = `url(./assets/images/featuredimg/${feature.image})`;
+        
+        console.log(feature)
+    }
+
     loadGames();
 
     // check if user is authenticated
