@@ -67,7 +67,7 @@
 
         window.addEventListener('load', async () => {
             // load games onto dropdown menu
-            let gamesRes = await fetch(`assets/games.json`);
+            let gamesRes = await fetcher('/games');
             let retrivedGames = await gamesRes.json();
 
             const gamesSelect = document.getElementById('gamesSelect');

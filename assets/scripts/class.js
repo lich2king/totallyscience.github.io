@@ -97,7 +97,7 @@ window.addEventListener('load', async () => {
     document.getElementById('gamesnav').classList.add('selected');
 
     // fetch games from jsons
-    let retrievedGamesRes = await fetch(`assets/games.json?v1`);
+    let retrievedGamesRes = await fetcher('/games');
     let retrievedGames = await retrievedGamesRes.json();
 
     // get data for selected game

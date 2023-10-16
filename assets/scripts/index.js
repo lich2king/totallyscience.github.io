@@ -67,7 +67,7 @@ window.addEventListener('load', async() => {
     document.getElementById('gamesnav').classList.add('selected');
 
     // retrieve games from json file
-    let gamesRes = await fetch(`assets/games.json`);
+    let gamesRes = await fetcher('/games');
     games = await gamesRes.json();
 
     // retrieve featured games
@@ -81,8 +81,6 @@ window.addEventListener('load', async() => {
         let featureEle = document.getElementById('feature-' + (index + 1));
         featureEle.children[0].children[1].innerText = feature.game;
         featureEle.style.backgroundImage = `url(./assets/images/featuredimg/${feature.image})`;
-        
-        console.log(feature)
     }
 
     loadGames();
@@ -398,7 +396,6 @@ async function suggestGames() {
 
 function createGameButton(game, pin, lazy) {
     const data = games[game];
-
 
     if (data == null) return document.createElement('div');
 

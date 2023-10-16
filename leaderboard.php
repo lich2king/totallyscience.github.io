@@ -214,7 +214,7 @@
             let text = await highscoresRes.text();
             let highscores = JSON.parse(text);
 
-            let gamesRes = await fetch(`assets/games.json`);
+            let gamesRes = await fetcher('/games');
             let games = await gamesRes.json();
 
             for (score in highscores) {

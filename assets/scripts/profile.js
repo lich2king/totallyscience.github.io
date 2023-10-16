@@ -3,7 +3,7 @@ let highscores;
 const scoresDiv = document.getElementById('highscorecontainer');
 
 document.addEventListener('DOMContentLoaded', async () => {
-    fetch(`assets/games.json`)
+    fetcher('/games')
         .then((response) => response.json())
         .then((retrievedGames) => {
             games = retrievedGames;
