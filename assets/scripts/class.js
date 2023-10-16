@@ -207,7 +207,7 @@ window.addEventListener('load', async () => {
     suggestGames(gameData);
 
     // set iframe to correct url defined in games.json
-    if (gameData.type == 'proxy') {
+    if (gameData.iframe_url.startsWith('https://')) {
         iframe.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
     } else {
         iframe.src = gameData.iframe_url;
