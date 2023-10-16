@@ -97,11 +97,11 @@ window.addEventListener('load', async () => {
     document.getElementById('gamesnav').classList.add('selected');
 
     // fetch games from jsons
-    let retrievedGamesRes = await fetcher('/games');
+    let retrievedGamesRes = await fetcher(`/game/${gameName}`);
     let retrievedGames = await retrievedGamesRes.json();
 
     // get data for selected game
-    const gameData = retrievedGames[gameName];
+    const gameData = retrievedGames[0];
 
     // if the game requested does not exist in the json file redirect
     if (!gameData) window.location.href = '../classes.php';
@@ -130,7 +130,6 @@ window.addEventListener('load', async () => {
         socket.emit('respond-introduction', JSON.stringify({ token: getCookie('session'), game: gameName }));
 
         document.getElementById('sendChat').addEventListener('click', () => {
-            console.log(json?.username);
             let message = messageBox.value;
             if (message != '') {
                 socket.emit('send-message', message);
@@ -139,7 +138,6 @@ window.addEventListener('load', async () => {
         });
 
         messageBox.addEventListener('keyup', (e) => {
-            console.log(json?.username);
             if (e.key === 'Enter' && messageBox.value != '') {
                 socket.emit('send-message', messageBox.value);
                 messageBox.value = '';
@@ -206,9 +204,7 @@ window.addEventListener('load', async () => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
-    // -------
-    suggestGames(retrievedGames);
-    // ----
+    suggestGames(gameData);
 
     // set iframe to correct url defined in games.json
     if (gameData.type == 'proxy') {
@@ -238,8 +234,6 @@ window.addEventListener('load', async () => {
     if (gameData.article != null) {
         let artRes = await fetch(gameData.article);
         let artText = await artRes.text();
-
-        console.log(artRes);
 
         document.getElementById('articleDivCon').innerHTML = artText;
         document.getElementById('articleDiv').style.display = '';
@@ -282,44 +276,15 @@ document.getElementById('fullscreen').addEventListener('click', () => {
     }
 });
 
-function suggestGames(games) {
-    const gamesSuggesting = 15;
-
-    let curGameTags = games[gameName].tags;
-    let suggestedGames = [];
-
-    // get random games that have a similar tag to the game being played
-    for (let x = 0; x < Object.keys(games).length - 1; x += 1) {
-        if (suggestGames.length == gamesSuggesting) break;
-
-        let randGame = randomProperty(games);
-
-        if (suggestedGames.includes(randGame)) continue;
-
-        let randGameTags = games[randGame].tags;
-
-        let simTag = randGameTags.find((ele) => curGameTags.includes(ele));
-
-        if (simTag) {
-            suggestedGames.push(randGame);
-        }
-    }
-
-    // if above does not full up gamesSuggesting games, add random ones to fill it in
-    while (suggestedGames.length < gamesSuggesting) {
-        let randGame = randomProperty(games);
-
-        if (suggestedGames.includes(randGame)) continue;
-
-        suggestedGames.push(randGame);
-    }
+async function suggestGames(gameData) {
+    let suggestRes = await fetcher('/recommendations', { body: { tags: gameData.tags } });
+    let suggestedGames = await suggestRes.json();
 
     let gamesDiv = document.querySelector('.gamesCon');
 
-    suggestedGames.forEach((game) => {
-        const data = games[game];
-
-        if (data == null) return '';
+    for (let game in suggestedGames)
+    {
+        const data = suggestedGames[game];
 
         let classlist = data.tags.join(' ');
 
@@ -338,8 +303,7 @@ function suggestGames(games) {
                 <h1 class="innerGameDiv">${game}</h1>
             </div>
         `;
-    });
-
+    }
     addArrowListeners();
 }
 
