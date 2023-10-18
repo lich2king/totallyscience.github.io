@@ -39,16 +39,8 @@
                 </div>
             </div>
         </div>
-        <div class="chat">
-            <div class='top'>
-                <p><span id="usersOnline">0</span> users online</p>
-            </div>
-            <div class='content' id='chatContent'>
-            </div>
-            <div class='write'>
-                <input type='text' id='messageBox' placeholder='Type a message...' maxlength='50'>
-                <button id='sendChat' class='button-effect-a'><img src='assets/images/icons/send.avif'></button>
-            </div>
+        <div class="ad">
+            <div class="adsrc"></div>
         </div>
     </div>
 
