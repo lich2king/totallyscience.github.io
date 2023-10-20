@@ -37,8 +37,7 @@
                     <img class="arrow" src="/assets/images/icons/arrow-right.svg" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Monkey-Mart', '_self')" class="featureButton button">Play
-                    Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#ffffff"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
+                <button class="featureButton button">Play Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#ffffff"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
             </div>
 
             <div id="feature-2" class="featureSlot fade"
@@ -49,8 +48,7 @@
                     <img class="arrow" src="/assets/images/icons/arrow-right.svg" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Bob-the-Robber-2', '_self')"
-                    class="featureButton button">Play Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#ffffff"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
+                <button class="featureButton button">Play Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#ffffff"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
             </div>
 
             <div id="feature-3" class="featureSlot fade"
@@ -61,9 +59,7 @@
                     <img class="arrow" src="/assets/images/icons/arrow-right.svg" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Moto-X3M-Pool-Party', '_self')"
-                    class="featureButton button">Play
-                    Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="#ffffff" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
+                <button class="featureButton button">Play Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="#ffffff" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
             </div>
 
             <div id="feature-4" class="featureSlot fade"
@@ -74,8 +70,7 @@
                     <img class="arrow" src="/assets/images/icons/arrow-right.svg" onclick="plusSlides(1)">
                 </div>
 
-                <button onclick="window.open('class.php?class=Vex-7', '_self')" class="featureButton button">Play
-                    Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#ffffff"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
+                <button class="featureButton button">Play Now <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#ffffff"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
             </div>
         </div>
 
@@ -366,7 +361,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/index.js?v137"></script>
+    <script src="assets/scripts/index.js?v138"></script>
 </body>
 
 </html>

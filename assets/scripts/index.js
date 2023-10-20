@@ -80,6 +80,7 @@ window.addEventListener('load', async() => {
 
         let featureEle = document.getElementById('feature-' + (index + 1));
         featureEle.children[0].children[1].innerText = feature.game;
+        featureEle.children[1].onclick = () => { window.open(feature.url, '_self') };
         featureEle.style.backgroundImage = `url(./assets/images/featuredimg/${feature.image})`;
     }
 
