@@ -183,11 +183,12 @@ async function loadPopularGames() {
 }
 
 async function loadLikedGames() {
+    const likedGamesContainer = document.getElementById('likedGamesCon');
+
     // load user's liked games
     let userLikedRes = await fetcher(`/profile/liked/get`);
 
     if (userLikedRes.status == 200) {
-        const likedGamesContainer = document.getElementById('likedGamesCon');
 
         let likedgames = await userLikedRes.json();
 
@@ -197,6 +198,19 @@ async function loadLikedGames() {
 
             for (like in likedgames) {
                 likedGamesContainer.appendChild(createGameButton(likedgames[like]));
+            }
+        }
+    } else {
+        let likedgames = JSON.parse(localStorage.getItem('likedGames'));
+
+        if (Object.keys(likedgames).length > 5) {
+            document.getElementById('likedGamesLabel').style.display = '';
+            document.getElementById('likedGamesHorizontalCon').style.display = '';
+
+            for (like in likedgames) {
+                if (likedgames[like]){
+                    likedGamesContainer.appendChild(createGameButton(like));
+                }
             }
         }
     }

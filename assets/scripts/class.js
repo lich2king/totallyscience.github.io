@@ -44,14 +44,14 @@ function setupActionButtons() {
 
         let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
 
+        const likedIcon = 'assets/images/icons/like.avif';
+        const notLikedIcon = 'assets/images/icons/likeoutline.avif';
+
+        // check if it is liked by checking current icon
+        let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
+
         if (res.status == 200) {
-            const likedIcon = 'assets/images/icons/like.avif';
-            const notLikedIcon = 'assets/images/icons/likeoutline.avif';
-
-            // check if it is liked by checking current icon
-            let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
-
-            // update icon to match chnaged state
+            // update icon to match changed state
             e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
 
             // set updated like count
@@ -61,7 +61,17 @@ function setupActionButtons() {
             likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
             likeCountEle.innerText = numFormatter(likeCount);
-        } else swal('You must signup to like the game', swalConfig).then(swalHandler);
+        } else {
+            let likedGames = JSON.parse(localStorage.getItem('likedGames') || '{}');
+
+            // like or unlike game and display the correct icon
+            e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
+            likedGames[gameName] = !isLiked;
+
+            // save updated liked games
+            localStorage.setItem('likedGames', JSON.stringify(likedGames));
+            fetcher(`/stats/games/like`, { body: { gameName: gameName, liked: isLiked } });
+        }
     });
     likeBtn.addEventListener('webkitAnimationEnd', () => {
         likeBtn.classList.remove('button-click');
@@ -72,18 +82,29 @@ function setupActionButtons() {
 
         let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
 
+        const pinnedIcon = 'assets/images/icons/pin.avif';
+        const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
+
+        // check if it is pinned by checking current icon
+        let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
+
         if (res.status == 400) {
             swal('You have pinned the max amount of games (3).');
         } else if (res.status == 401 || res.status == 403) {
-            swal('You must signup to pin the game', swalConfig).then(swalHandler);
+            let pinnedGames = JSON.parse(localStorage.getItem('pinnedGames') || '{}');
+
+            if (Object.keys(pinnedGames).length >= 3) {
+                swal('You have pinned the max amount of games (3).');
+            } else {
+                // like or unlike game and display the correct icon
+                e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
+                pinnedGames[gameName] = !isPinned;
+    
+                // save updated liked games
+                localStorage.setItem('pinnedGames', JSON.stringify(pinnedGames));
+            }
         } else {
-            const pinnedIcon = 'assets/images/icons/pin.avif';
-            const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
-
-            // check if it is pinned by checking current icon
-            // update icon to match chnaged state
-            let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
-
+            // update icon to match changed state
             e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
         }
     });
@@ -118,6 +139,23 @@ window.addEventListener('load', async () => {
         // display user like and pin status of game
         displayUserData();
     }
+    else {
+        const pinBtn = document.querySelector('#pin');
+        const likeBtn = document.querySelector('#like');
+        const pinImg = pinBtn.firstChild;
+        const likeImg = likeBtn.firstChild;
+
+        let likedGames = JSON.parse(localStorage.getItem('likedGames'));
+        let pinnedGames = JSON.parse(localStorage.getItem('pinnedGames'));
+
+        if (likedGames && likedGames[gameName]) {
+            likeImg.setAttribute('src', 'assets/images/icons/like.avif');
+        }
+
+        if (pinnedGames && pinnedGames[gameName]) {
+            pinImg.setAttribute('src', 'assets/images/icons/pin.avif');
+        }
+    }
 
     // setup socket for chatroom
     const socketUrl = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : null;
@@ -129,76 +167,76 @@ window.addEventListener('load', async () => {
 
         socket.emit('respond-introduction', JSON.stringify({ token: getCookie('session'), game: gameName }));
 
-        document.getElementById('sendChat').addEventListener('click', () => {
-            let message = messageBox.value;
-            if (message != '') {
-                socket.emit('send-message', message);
-                messageBox.value = '';
-            }
-        });
+        // document.getElementById('sendChat').addEventListener('click', () => {
+        //     let message = messageBox.value;
+        //     if (message != '') {
+        //         socket.emit('send-message', message);
+        //         messageBox.value = '';
+        //     }
+        // });
 
-        messageBox.addEventListener('keyup', (e) => {
-            if (e.key === 'Enter' && messageBox.value != '') {
-                socket.emit('send-message', messageBox.value);
-                messageBox.value = '';
-            }
-        });
+        // messageBox.addEventListener('keyup', (e) => {
+        //     if (e.key === 'Enter' && messageBox.value != '') {
+        //         socket.emit('send-message', messageBox.value);
+        //         messageBox.value = '';
+        //     }
+        // });
 
-        let isAutoScrolling = true;
+        // let isAutoScrolling = true;
 
-        // Detect manual scrolling
-        chatContent.addEventListener('scroll', () => {
-            // Check if the user has manually scrolled to the top
-            isAutoScrolling = false;
-            if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
-                isAutoScrolling = true;
-            }
-        });
+        // // Detect manual scrolling
+        // chatContent.addEventListener('scroll', () => {
+        //     // Check if the user has manually scrolled to the top
+        //     isAutoScrolling = false;
+        //     if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
+        //         isAutoScrolling = true;
+        //     }
+        // });
 
-        socket.on('broadcast-message', (jsonStr) => {
-            let json = JSON.parse(jsonStr);
+        // socket.on('broadcast-message', (jsonStr) => {
+        //     let json = JSON.parse(jsonStr);
 
-            if (json.username == null) {
-                // message is a system message, such as a chat leave or join.
-                // these messages are displayed differently
-                let ele = document.createElement('div');
-                ele.className = 'server';
+        //     if (json.username == null) {
+        //         // message is a system message, such as a chat leave or join.
+        //         // these messages are displayed differently
+        //         let ele = document.createElement('div');
+        //         ele.className = 'server';
 
-                let pEle = document.createElement('p');
-                pEle.className = 'message';
-                pEle.innerText = json.message;
+        //         let pEle = document.createElement('p');
+        //         pEle.className = 'message';
+        //         pEle.innerText = json.message;
 
-                ele.appendChild(pEle);
-                chatContent.appendChild(ele);
-            } else if (json.username != null) {
-                let ele = document.createElement('div');
+        //         ele.appendChild(pEle);
+        //         chatContent.appendChild(ele);
+        //     } else if (json.username != null) {
+        //         let ele = document.createElement('div');
 
-                let pEle = document.createElement('p');
-                pEle.className = 'message';
-                pEle.innerText = json.message;
+        //         let pEle = document.createElement('p');
+        //         pEle.className = 'message';
+        //         pEle.innerText = json.message;
 
-                let nameEle = document.createElement('div');
-                nameEle.className = 'nameBar';
+        //         let nameEle = document.createElement('div');
+        //         nameEle.className = 'nameBar';
 
-                let namePEle = document.createElement('p');
-                namePEle.innerText = json.username;
-                let imgEle = document.createElement('img');
-                imgEle.src = `/assets/minis/JPGs/${json.mini}.avif`;
+        //         let namePEle = document.createElement('p');
+        //         namePEle.innerText = json.username;
+        //         let imgEle = document.createElement('img');
+        //         imgEle.src = `/assets/minis/JPGs/${json.mini}.avif`;
 
-                nameEle.appendChild(imgEle);
-                nameEle.appendChild(namePEle);
-                ele.appendChild(nameEle);
-                ele.appendChild(pEle);
-                chatContent.appendChild(ele);
-            }
+        //         nameEle.appendChild(imgEle);
+        //         nameEle.appendChild(namePEle);
+        //         ele.appendChild(nameEle);
+        //         ele.appendChild(pEle);
+        //         chatContent.appendChild(ele);
+        //     }
 
             // scroll down to reveal most recent message
-            if (isAutoScrolling) chatContent.scrollTop = chatContent.scrollHeight;
-        });
+            // if (isAutoScrolling) chatContent.scrollTop = chatContent.scrollHeight;
+        // });
 
-        socket.on('broadcast-user-count', (userCount) => {
-            document.getElementById('usersOnline').innerText = userCount;
-        });
+        // socket.on('broadcast-user-count', (userCount) => {
+        //     document.getElementById('usersOnline').innerText = userCount;
+        // });
     });
 
     const iframe = document.getElementById('iframe');

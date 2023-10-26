@@ -226,6 +226,30 @@ async function displayGames() {
             gamesDiv.prepend(recentRow);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
         }
+    } else {
+        let recentRow = document.createElement('div');
+        recentRow.classList.add('horizontalCon');
+        let recentGamesContainer = document.createElement('div');
+        recentGamesContainer.classList.add('gamesCon');
+        //add the arrows to the horizontal Con
+        recentRow.innerHTML += arrowContainer;
+
+        likedgames = JSON.parse(localStorage.getItem('likedGames'));
+        let length = Object.keys(likedgames).length;
+
+        if (length > 0) {
+            for (like in likedgames) {
+                if (document.getElementsByName(like).length > 0) {
+                    recentGamesContainer.innerHTML += createGameButton(like);
+                }
+            }
+        }
+
+        if (length > 5) {
+            recentRow.appendChild(recentGamesContainer);
+            gamesDiv.prepend(recentRow);
+            gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+        }
     }
 
     //popular games
