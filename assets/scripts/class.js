@@ -71,6 +71,14 @@ function setupActionButtons() {
             // save updated liked games
             localStorage.setItem('likedGames', JSON.stringify(likedGames));
             fetcher(`/stats/games/like`, { body: { gameName: gameName, liked: isLiked } });
+
+            // set updated like count
+            let likeCountEle = document.getElementById('likeCount');
+
+            let prevLikeCount = parseInt(likeCount);
+            likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+
+            likeCountEle.innerText = numFormatter(likeCount);
         }
     });
     likeBtn.addEventListener('webkitAnimationEnd', () => {

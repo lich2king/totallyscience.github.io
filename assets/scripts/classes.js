@@ -221,7 +221,7 @@ async function displayGames() {
             }
         }
 
-        if (length > 5) {
+        if (length > 0) {
             recentRow.appendChild(recentGamesContainer);
             gamesDiv.prepend(recentRow);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
@@ -245,7 +245,7 @@ async function displayGames() {
             }
         }
 
-        if (length > 5) {
+        if (length > 0) {
             recentRow.appendChild(recentGamesContainer);
             gamesDiv.prepend(recentRow);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;

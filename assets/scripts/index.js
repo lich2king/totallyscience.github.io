@@ -192,7 +192,7 @@ async function loadLikedGames() {
 
         let likedgames = await userLikedRes.json();
 
-        if (likedgames.length > 5) {
+        if (likedgames.length > 0) {
             document.getElementById('likedGamesLabel').style.display = '';
             document.getElementById('likedGamesHorizontalCon').style.display = '';
 
