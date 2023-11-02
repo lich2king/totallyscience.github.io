@@ -384,7 +384,7 @@ function createGameButton(game, pin) {
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/newbanner.avif'></button>";
+        buttons += "<button id='newbanner'><img src='assets/images/icons/newbanner.avif'></button>";
     }
 
     if (pin != 'suggested') {

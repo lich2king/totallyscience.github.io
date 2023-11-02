@@ -461,7 +461,7 @@ function createGameButton(game, pin, lazy) {
         button.id = 'newbanner';
 
         let image = document.createElement('img');
-        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.avif';
+        image.src = 'assets/images/icons/newbanner.avif';
 
         button.appendChild(image);
 
