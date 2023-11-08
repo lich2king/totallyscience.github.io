@@ -274,7 +274,7 @@ window.addEventListener('load', async () => {
 
     // update game information
     document.getElementById('description').innerText = gameData.description;
-    document.getElementById('controls').innerText = gameData.controls;
+    document.getElementById('controls').innerHTML = gameData.controls;
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
     if (gameData.article != null) {
