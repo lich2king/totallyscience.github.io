@@ -234,7 +234,7 @@ async function displayGames() {
         //add the arrows to the horizontal Con
         recentRow.innerHTML += arrowContainer;
 
-        likedgames = JSON.parse(localStorage.getItem('likedGames'));
+        likedgames = JSON.parse(localStorage.getItem('likedGames') || '{}');
         let length = Object.keys(likedgames).length;
 
         if (length > 0) {
