@@ -254,7 +254,8 @@ window.addEventListener('load', async () => {
 
     // set iframe to correct url defined in games.json
     if (gameData.iframe_url.startsWith('https://')) {
-        iframe.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+        // iframe.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+        iframe.src = gameData.iframe_url;
     } else {
         iframe.src = gameData.iframe_url;
     }
