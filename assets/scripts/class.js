@@ -251,13 +251,16 @@ window.addEventListener('load', async () => {
     // TODO: reduce # of getElementById calls for performance
 
     suggestGames(gameData);
-    
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('uv-sw.js', {
             scope: __uv$config.prefix
         }).then(() => {
             if (gameData.iframe_url.startsWith('https://')) iframe.src = (__uv$config.prefix + __uv$config.encodeUrl(gameData.iframe_url));
             else iframe.src = gameData.iframe_url;
+
+            // scratch breaks with proxy
+            if (iframe-src.startsWith('https://scratch.mit.edu')) iframe.src = gameData.iframe_url;
        }, (err) => {
             console.log(err);
        });
