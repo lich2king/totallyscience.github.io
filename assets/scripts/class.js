@@ -260,7 +260,7 @@ window.addEventListener('load', async () => {
             else iframe.src = gameData.iframe_url;
 
             // scratch breaks with proxy
-            if (iframe-src.startsWith('https://scratch.mit.edu')) iframe.src = gameData.iframe_url;
+            if (iframe.src.startsWith('https://scratch.mit.edu')) iframe.src = gameData.iframe_url;
        }, (err) => {
             console.log(err);
        });
