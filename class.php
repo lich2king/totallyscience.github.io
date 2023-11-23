@@ -5,6 +5,9 @@
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/class.css?v69'>
+
+	<script src="assets/scripts/uv/uv.bundle.js" type="text/javascript"></script>
+	<script src="assets/scripts/uv/uv.config.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -93,7 +96,7 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v25"></script>
+    <script src="assets/scripts/class.js?v26"></script>
 </body>
 
 </html>
