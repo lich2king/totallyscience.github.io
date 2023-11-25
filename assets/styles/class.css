@@ -5,8 +5,13 @@ li {
     color: var(--light-color);
 }
 
-#gameframe {
+#game-title {
     margin-top: 100px;
+    text-align: center;
+    color: var(--light-color);
+}
+
+#gameframe {
     width: 100vw;
     display: flex;
     align-items: center;
