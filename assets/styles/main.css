@@ -711,7 +711,7 @@ a {
 }
 
 #games {
-    padding: 2%;
+    padding: 0 2% 2% 2%;
     display: flex;
     flex: 1;
     flex-direction: row;
