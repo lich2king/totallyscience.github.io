@@ -532,10 +532,8 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    min-width: 220px;
-    min-height: 120px;
-    max-width: 220px;
-    max-height: 120px;
+    height: 120px;
+    width: 220px;
     border-radius: 20px;
     background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.3) 100%);
     transition: box-shadow 0.6s var(--bezier), opacity 0.2s var(--bezier);

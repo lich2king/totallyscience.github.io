@@ -140,6 +140,10 @@
     gap: 2vh;
 }
 
+#scisuggests #gameDiv {
+    width: 30% !important;
+}
+
 #info {
     display: flex;
     flex: 1;
@@ -180,7 +184,7 @@
     align-items: center;
     border: 3px solid var(--accent-color);
     border-radius: 40px;
-    height: 33vh;
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,7 +218,7 @@
 
 .featureButton {
     position: absolute;
-    margin-top: 35%;
+    margin-top: 130px;
     border-radius: 15px;
     padding: 15px 20px 15px 20px;
 }
