@@ -561,8 +561,6 @@ a {
     object-fit: cover;
     border-radius: 20px;
     width: 100% !important;
-    width: auto;
-    height: auto;
 }
 #gameDiv .imageCon img.partner {
     object-fit: contain;
