@@ -560,7 +560,8 @@ a {
 #gameDiv .imageCon img {
     object-fit: cover;
     border-radius: 20px;
-    width: 100% !important;
+    width: 220px;
+    height: 120px;
 }
 #gameDiv .imageCon img.partner {
     object-fit: contain;

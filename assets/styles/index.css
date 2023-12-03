@@ -143,6 +143,9 @@
 #scisuggests #gameDiv {
     width: 30% !important;
 }
+#scisuggests #gameDiv .imageCon img {
+    width: 100% !important;
+}
 
 #info {
     display: flex;
