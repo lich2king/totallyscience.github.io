@@ -560,8 +560,7 @@ a {
 #gameDiv .imageCon img {
     object-fit: cover;
     border-radius: 20px;
-    width: 220px !important;
-    height: 120px !important;
+    width: 100% !important;
     width: auto;
     height: auto;
 }
