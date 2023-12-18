@@ -1,0 +1,2876 @@
+{
+    "aiInfor": [
+        {
+            "id": "1",
+            "name": "Amigos",
+            "ownSkin": "1",
+            "cupNum": "15"
+        },
+        {
+            "id": "2",
+            "name": "Avengers",
+            "ownSkin": "1",
+            "cupNum": "19"
+        },
+        {
+            "id": "3",
+            "name": "Bannermen",
+            "ownSkin": "1",
+            "cupNum": "23"
+        },
+        {
+            "id": "4",
+            "name": "Bosses",
+            "ownSkin": "1",
+            "cupNum": "27"
+        },
+        {
+            "id": "5",
+            "name": "Champions",
+            "ownSkin": "1",
+            "cupNum": "31"
+        },
+        {
+            "id": "6",
+            "name": "Crew",
+            "ownSkin": "1",
+            "cupNum": "35"
+        },
+        {
+            "id": "7",
+            "name": "Dominators",
+            "ownSkin": "1",
+            "cupNum": "39"
+        },
+        {
+            "id": "8",
+            "name": "Elite",
+            "ownSkin": "1",
+            "cupNum": "43"
+        },
+        {
+            "id": "9",
+            "name": "Force",
+            "ownSkin": "1",
+            "cupNum": "47"
+        },
+        {
+            "id": "10",
+            "name": "Heatwave",
+            "ownSkin": "1",
+            "cupNum": "51"
+        },
+        {
+            "id": "11",
+            "name": "Hustle",
+            "ownSkin": "1",
+            "cupNum": "55"
+        },
+        {
+            "id": "12",
+            "name": "Icons",
+            "ownSkin": "1",
+            "cupNum": "59"
+        },
+        {
+            "id": "13",
+            "name": "Legends",
+            "ownSkin": "1",
+            "cupNum": "63"
+        },
+        {
+            "id": "14",
+            "name": "Maniacs",
+            "ownSkin": "1",
+            "cupNum": "67"
+        },
+        {
+            "id": "15",
+            "name": "Masters",
+            "ownSkin": "1",
+            "cupNum": "71"
+        },
+        {
+            "id": "16",
+            "name": "Monarchy",
+            "ownSkin": "1",
+            "cupNum": "75"
+        },
+        {
+            "id": "17",
+            "name": "Naturals",
+            "ownSkin": "1",
+            "cupNum": "79"
+        },
+        {
+            "id": "18",
+            "name": "Ninjas",
+            "ownSkin": "1",
+            "cupNum": "83"
+        },
+        {
+            "id": "19",
+            "name": "Outliers",
+            "ownSkin": "1",
+            "cupNum": "87"
+        },
+        {
+            "id": "20",
+            "name": "Power",
+            "ownSkin": "1",
+            "cupNum": "91"
+        },
+        {
+            "id": "21",
+            "name": "Rebels",
+            "ownSkin": "1",
+            "cupNum": "95"
+        },
+        {
+            "id": "22",
+            "name": "Revolution",
+            "ownSkin": "1",
+            "cupNum": "99"
+        },
+        {
+            "id": "23",
+            "name": "Shakedown",
+            "ownSkin": "1",
+            "cupNum": "103"
+        },
+        {
+            "id": "24",
+            "name": "Titans",
+            "ownSkin": "1",
+            "cupNum": "107"
+        },
+        {
+            "id": "25",
+            "name": "Tribe",
+            "ownSkin": "1",
+            "cupNum": "111"
+        },
+        {
+            "id": "26",
+            "name": "United",
+            "ownSkin": "1",
+            "cupNum": "115"
+        },
+        {
+            "id": "27",
+            "name": "Vikings",
+            "ownSkin": "1",
+            "cupNum": "119"
+        },
+        {
+            "id": "28",
+            "name": "Warrior",
+            "ownSkin": "1",
+            "cupNum": "123"
+        },
+        {
+            "id": "29",
+            "name": "Ace",
+            "ownSkin": "1",
+            "cupNum": "127"
+        },
+        {
+            "id": "30",
+            "name": "Assassin",
+            "ownSkin": "1",
+            "cupNum": "131"
+        },
+        {
+            "id": "31",
+            "name": "Armada",
+            "ownSkin": "1",
+            "cupNum": "135"
+        },
+        {
+            "id": "32",
+            "name": "Bandit",
+            "ownSkin": "1",
+            "cupNum": "139"
+        },
+        {
+            "id": "33",
+            "name": "Blaze",
+            "ownSkin": "1",
+            "cupNum": "143"
+        },
+        {
+            "id": "34",
+            "name": "Defender",
+            "ownSkin": "1",
+            "cupNum": "147"
+        },
+        {
+            "id": "35",
+            "name": "Empire",
+            "ownSkin": "1",
+            "cupNum": "151"
+        },
+        {
+            "id": "36",
+            "name": "Extreme",
+            "ownSkin": "1",
+            "cupNum": "155"
+        },
+        {
+            "id": "37",
+            "name": "Fury",
+            "ownSkin": "1",
+            "cupNum": "159"
+        },
+        {
+            "id": "38",
+            "name": "Hitmen",
+            "ownSkin": "1",
+            "cupNum": "163"
+        },
+        {
+            "id": "39",
+            "name": "Messiah",
+            "ownSkin": "1",
+            "cupNum": "167"
+        },
+        {
+            "id": "40",
+            "name": "Forever Love",
+            "ownSkin": "1",
+            "cupNum": "171"
+        },
+        {
+            "id": "41",
+            "name": "Ambition™",
+            "ownSkin": "1",
+            "cupNum": "175"
+        },
+        {
+            "id": "42",
+            "name": "Bred Anderson",
+            "ownSkin": "1",
+            "cupNum": "179"
+        },
+        {
+            "id": "43",
+            "name": "Summertrain",
+            "ownSkin": "1",
+            "cupNum": "183"
+        },
+        {
+            "id": "44",
+            "name": "Authority Power",
+            "ownSkin": "1",
+            "cupNum": "187"
+        },
+        {
+            "id": "45",
+            "name": "Daniella",
+            "ownSkin": "1",
+            "cupNum": "191"
+        },
+        {
+            "id": "46",
+            "name": "Mr",
+            "ownSkin": "1",
+            "cupNum": "195"
+        },
+        {
+            "id": "47",
+            "name": "Memory",
+            "ownSkin": "1",
+            "cupNum": "199"
+        },
+        {
+            "id": "48",
+            "name": "Cantr",
+            "ownSkin": "1",
+            "cupNum": "203"
+        },
+        {
+            "id": "49",
+            "name": "233333",
+            "ownSkin": "1",
+            "cupNum": "207"
+        },
+        {
+            "id": "50",
+            "name": "Bitter",
+            "ownSkin": "1",
+            "cupNum": "211"
+        },
+        {
+            "id": "51",
+            "name": "Intimidator",
+            "ownSkin": "1",
+            "cupNum": "215"
+        },
+        {
+            "id": "52",
+            "name": "Kingsmen",
+            "ownSkin": "1",
+            "cupNum": "219"
+        },
+        {
+            "id": "53",
+            "name": "Mafia",
+            "ownSkin": "1",
+            "cupNum": "223"
+        },
+        {
+            "id": "54",
+            "name": "Matrix",
+            "ownSkin": "1",
+            "cupNum": "227"
+        },
+        {
+            "id": "55",
+            "name": "Outlaw",
+            "ownSkin": "1",
+            "cupNum": "231"
+        },
+        {
+            "id": "56",
+            "name": "Pistol",
+            "ownSkin": "1",
+            "cupNum": "235"
+        },
+        {
+            "id": "57",
+            "name": "Pulverizer",
+            "ownSkin": "1",
+            "cupNum": "239"
+        },
+        {
+            "id": "58",
+            "name": "Rage",
+            "ownSkin": "1",
+            "cupNum": "243"
+        },
+        {
+            "id": "59",
+            "name": "Renegade",
+            "ownSkin": "1",
+            "cupNum": "247"
+        },
+        {
+            "id": "60",
+            "name": "Sunshine",
+            "ownSkin": "1",
+            "cupNum": "251"
+        },
+        {
+            "id": "61",
+            "name": "Emotion",
+            "ownSkin": "1",
+            "cupNum": "255"
+        },
+        {
+            "id": "62",
+            "name": "-2yscw",
+            "ownSkin": "1",
+            "cupNum": "259"
+        },
+        {
+            "id": "63",
+            "name": "Paranoid",
+            "ownSkin": "1",
+            "cupNum": "263"
+        },
+        {
+            "id": "64",
+            "name": "Eason Chan",
+            "ownSkin": "1",
+            "cupNum": "267"
+        },
+        {
+            "id": "65",
+            "name": "Temptat10n",
+            "ownSkin": "1",
+            "cupNum": "271"
+        },
+        {
+            "id": "66",
+            "name": "Provence",
+            "ownSkin": "1",
+            "cupNum": "275"
+        },
+        {
+            "id": "67",
+            "name": "Brokens",
+            "ownSkin": "1",
+            "cupNum": "279"
+        },
+        {
+            "id": "68",
+            "name": "Summerrain",
+            "ownSkin": "1",
+            "cupNum": "283"
+        },
+        {
+            "id": "69",
+            "name": "Coquettish",
+            "ownSkin": "1",
+            "cupNum": "287"
+        },
+        {
+            "id": "70",
+            "name": "Johnnie",
+            "ownSkin": "1",
+            "cupNum": "291"
+        },
+        {
+            "id": "71",
+            "name": "Riot",
+            "ownSkin": "1",
+            "cupNum": "295"
+        },
+        {
+            "id": "72",
+            "name": "White",
+            "ownSkin": "1",
+            "cupNum": "299"
+        },
+        {
+            "id": "73",
+            "name": "Rumble",
+            "ownSkin": "1",
+            "cupNum": "303"
+        },
+        {
+            "id": "74",
+            "name": "Samurais",
+            "ownSkin": "1",
+            "cupNum": "307"
+        },
+        {
+            "id": "75",
+            "name": "Stealth",
+            "ownSkin": "1",
+            "cupNum": "311"
+        },
+        {
+            "id": "76",
+            "name": "Terminator",
+            "ownSkin": "1",
+            "cupNum": "315"
+        },
+        {
+            "id": "77",
+            "name": "Unbeatable",
+            "ownSkin": "1",
+            "cupNum": "319"
+        },
+        {
+            "id": "78",
+            "name": "Venom",
+            "ownSkin": "1",
+            "cupNum": "323"
+        },
+        {
+            "id": "79",
+            "name": "Arsenal",
+            "ownSkin": "1",
+            "cupNum": "327"
+        },
+        {
+            "id": "80",
+            "name": "Aomr",
+            "ownSkin": "1",
+            "cupNum": "331"
+        },
+        {
+            "id": "81",
+            "name": "Invader",
+            "ownSkin": "1",
+            "cupNum": "335"
+        },
+        {
+            "id": "82",
+            "name": "obert",
+            "ownSkin": "1",
+            "cupNum": "339"
+        },
+        {
+            "id": "83",
+            "name": "Blitz",
+            "ownSkin": "1",
+            "cupNum": "343"
+        },
+        {
+            "id": "84",
+            "name": "Badasses",
+            "ownSkin": "1",
+            "cupNum": "347"
+        },
+        {
+            "id": "85",
+            "name": "Brigade",
+            "ownSkin": "1",
+            "cupNum": "351"
+        },
+        {
+            "id": "86",
+            "name": "Calvary",
+            "ownSkin": "1",
+            "cupNum": "355"
+        },
+        {
+            "id": "87",
+            "name": "Collective",
+            "ownSkin": "1|15",
+            "cupNum": "359"
+        },
+        {
+            "id": "88",
+            "name": "Dothraki",
+            "ownSkin": "1",
+            "cupNum": "363"
+        },
+        {
+            "id": "89",
+            "name": "Fuego",
+            "ownSkin": "1",
+            "cupNum": "367"
+        },
+        {
+            "id": "90",
+            "name": "Heathens",
+            "ownSkin": "1",
+            "cupNum": "371"
+        },
+        {
+            "id": "91",
+            "name": "Horsepower",
+            "ownSkin": "1",
+            "cupNum": "375"
+        },
+        {
+            "id": "92",
+            "name": "Impact",
+            "ownSkin": "1",
+            "cupNum": "379"
+        },
+        {
+            "id": "93",
+            "name": "Ironmen",
+            "ownSkin": "1",
+            "cupNum": "383"
+        },
+        {
+            "id": "94",
+            "name": "Magic",
+            "ownSkin": "1|16",
+            "cupNum": "387"
+        },
+        {
+            "id": "95",
+            "name": "Mystery",
+            "ownSkin": "1|11",
+            "cupNum": "391"
+        },
+        {
+            "id": "96",
+            "name": "Obliterator",
+            "ownSkin": "1",
+            "cupNum": "395"
+        },
+        {
+            "id": "97",
+            "name": "Phenomenon",
+            "ownSkin": "1",
+            "cupNum": "399"
+        },
+        {
+            "id": "98",
+            "name": "Phoenix",
+            "ownSkin": "1",
+            "cupNum": "403"
+        },
+        {
+            "id": "99",
+            "name": "Rampage",
+            "ownSkin": "1",
+            "cupNum": "407"
+        },
+        {
+            "id": "100",
+            "name": "Regulator",
+            "ownSkin": "1",
+            "cupNum": "411"
+        },
+        {
+            "id": "101",
+            "name": "Thrashers",
+            "ownSkin": "1",
+            "cupNum": "415"
+        },
+        {
+            "id": "102",
+            "name": "Unstoppable",
+            "ownSkin": "1",
+            "cupNum": "419"
+        },
+        {
+            "id": "103",
+            "name": "Vicious",
+            "ownSkin": "1",
+            "cupNum": "423"
+        },
+        {
+            "id": "104",
+            "name": "0% Risk",
+            "ownSkin": "1",
+            "cupNum": "427"
+        },
+        {
+            "id": "105",
+            "name": "49ers",
+            "ownSkin": "1",
+            "cupNum": "431"
+        },
+        {
+            "id": "106",
+            "name": "76ers",
+            "ownSkin": "1",
+            "cupNum": "435"
+        },
+        {
+            "id": "107",
+            "name": "100 percent",
+            "ownSkin": "1",
+            "cupNum": "439"
+        },
+        {
+            "id": "108",
+            "name": "Zombies",
+            "ownSkin": "1",
+            "cupNum": "443"
+        },
+        {
+            "id": "109",
+            "name": "99 percenters",
+            "ownSkin": "1",
+            "cupNum": "447"
+        },
+        {
+            "id": "110",
+            "name": "Administration",
+            "ownSkin": "1",
+            "cupNum": "451"
+        },
+        {
+            "id": "111",
+            "name": "Admiral",
+            "ownSkin": "1",
+            "cupNum": "455"
+        },
+        {
+            "id": "112",
+            "name": "Adrenaline",
+            "ownSkin": "1",
+            "cupNum": "459"
+        },
+        {
+            "id": "113",
+            "name": "Advocates",
+            "ownSkin": "1",
+            "cupNum": "463"
+        },
+        {
+            "id": "114",
+            "name": "Aero",
+            "ownSkin": "1",
+            "cupNum": "467"
+        },
+        {
+            "id": "115",
+            "name": "Aggies",
+            "ownSkin": "1",
+            "cupNum": "471"
+        },
+        {
+            "id": "116",
+            "name": "Aliens",
+            "ownSkin": "1|16",
+            "cupNum": "475"
+        },
+        {
+            "id": "117",
+            "name": "Alliance",
+            "ownSkin": "1",
+            "cupNum": "479"
+        },
+        {
+            "id": "118",
+            "name": "Alphas",
+            "ownSkin": "1",
+            "cupNum": "483"
+        },
+        {
+            "id": "119",
+            "name": "Ambassador",
+            "ownSkin": "1",
+            "cupNum": "487"
+        },
+        {
+            "id": "120",
+            "name": "hhhhhh",
+            "ownSkin": "1",
+            "cupNum": "491"
+        },
+        {
+            "id": "121",
+            "name": "Angel",
+            "ownSkin": "1",
+            "cupNum": "495"
+        },
+        {
+            "id": "122",
+            "name": "Annihilator",
+            "ownSkin": "1",
+            "cupNum": "499"
+        },
+        {
+            "id": "123",
+            "name": "Anteater",
+            "ownSkin": "1",
+            "cupNum": "503"
+        },
+        {
+            "id": "124",
+            "name": "Apocalypse",
+            "ownSkin": "1",
+            "cupNum": "507"
+        },
+        {
+            "id": "125",
+            "name": "Archer",
+            "ownSkin": "1",
+            "cupNum": "511"
+        },
+        {
+            "id": "126",
+            "name": "Arrow",
+            "ownSkin": "1",
+            "cupNum": "515"
+        },
+        {
+            "id": "127",
+            "name": "Asteroid",
+            "ownSkin": "1",
+            "cupNum": "519"
+        },
+        {
+            "id": "128",
+            "name": "Astronomic",
+            "ownSkin": "1",
+            "cupNum": "523"
+        },
+        {
+            "id": "129",
+            "name": "Astro",
+            "ownSkin": "1",
+            "cupNum": "527"
+        },
+        {
+            "id": "130",
+            "name": "Athletic",
+            "ownSkin": "1",
+            "cupNum": "531"
+        },
+        {
+            "id": "131",
+            "name": "Avalanche",
+            "ownSkin": "1",
+            "cupNum": "535"
+        },
+        {
+            "id": "132",
+            "name": "Aztec",
+            "ownSkin": "1",
+            "cupNum": "539"
+        },
+        {
+            "id": "133",
+            "name": "Bachelor",
+            "ownSkin": "1",
+            "cupNum": "543"
+        },
+        {
+            "id": "134",
+            "name": "Quake",
+            "ownSkin": "1",
+            "cupNum": "547"
+        },
+        {
+            "id": "135",
+            "name": "Barbarian",
+            "ownSkin": "1",
+            "cupNum": "551"
+        },
+        {
+            "id": "136",
+            "name": "Barnstormer",
+            "ownSkin": "1",
+            "cupNum": "555"
+        },
+        {
+            "id": "137",
+            "name": "Baron",
+            "ownSkin": "1",
+            "cupNum": "559"
+        },
+        {
+            "id": "138",
+            "name": "Bats",
+            "ownSkin": "1",
+            "cupNum": "563"
+        },
+        {
+            "id": "139",
+            "name": "Bay Bears",
+            "ownSkin": "1",
+            "cupNum": "567"
+        },
+        {
+            "id": "140",
+            "name": "Bearcat",
+            "ownSkin": "1",
+            "cupNum": "571"
+        },
+        {
+            "id": "141",
+            "name": "Beasts",
+            "ownSkin": "1",
+            "cupNum": "575"
+        },
+        {
+            "id": "142",
+            "name": "Bee",
+            "ownSkin": "1",
+            "cupNum": "579"
+        },
+        {
+            "id": "143",
+            "name": "Belle",
+            "ownSkin": "1",
+            "cupNum": "583"
+        },
+        {
+            "id": "144",
+            "name": "Bengal",
+            "ownSkin": "1",
+            "cupNum": "587"
+        },
+        {
+            "id": "145",
+            "name": "Beret",
+            "ownSkin": "1",
+            "cupNum": "591"
+        },
+        {
+            "id": "146",
+            "name": "Bill",
+            "ownSkin": "1",
+            "cupNum": "595"
+        },
+        {
+            "id": "147",
+            "name": "Bison",
+            "ownSkin": "1",
+            "cupNum": "599"
+        },
+        {
+            "id": "148",
+            "name": "Black Knights",
+            "ownSkin": "1",
+            "cupNum": "603"
+        },
+        {
+            "id": "149",
+            "name": "Black Widows",
+            "ownSkin": "1",
+            "cupNum": "607"
+        },
+        {
+            "id": "150",
+            "name": "Black Panthers",
+            "ownSkin": "1",
+            "cupNum": "611"
+        },
+        {
+            "id": "151",
+            "name": "Blackhawk",
+            "ownSkin": "1|30",
+            "cupNum": "615"
+        },
+        {
+            "id": "152",
+            "name": "Blades",
+            "ownSkin": "1",
+            "cupNum": "619"
+        },
+        {
+            "id": "153",
+            "name": "Blast",
+            "ownSkin": "1",
+            "cupNum": "623"
+        },
+        {
+            "id": "154",
+            "name": "Blaster",
+            "ownSkin": "1",
+            "cupNum": "627"
+        },
+        {
+            "id": "155",
+            "name": "Blazer",
+            "ownSkin": "1",
+            "cupNum": "631"
+        },
+        {
+            "id": "156",
+            "name": "Blitzkrieg",
+            "ownSkin": "1",
+            "cupNum": "635"
+        },
+        {
+            "id": "157",
+            "name": "Blossoms",
+            "ownSkin": "1",
+            "cupNum": "639"
+        },
+        {
+            "id": "158",
+            "name": "Blue Angel",
+            "ownSkin": "1",
+            "cupNum": "643"
+        },
+        {
+            "id": "159",
+            "name": "Blue Bird",
+            "ownSkin": "1",
+            "cupNum": "647"
+        },
+        {
+            "id": "160",
+            "name": "Blue Collar",
+            "ownSkin": "1",
+            "cupNum": "651"
+        },
+        {
+            "id": "161",
+            "name": "Blue Jacket",
+            "ownSkin": "1",
+            "cupNum": "655"
+        },
+        {
+            "id": "162",
+            "name": "Blue Jay",
+            "ownSkin": "1",
+            "cupNum": "659"
+        },
+        {
+            "id": "163",
+            "name": "Blue Whale",
+            "ownSkin": "1",
+            "cupNum": "663"
+        },
+        {
+            "id": "164",
+            "name": "Blues",
+            "ownSkin": "1",
+            "cupNum": "667"
+        },
+        {
+            "id": "165",
+            "name": "Bobcats",
+            "ownSkin": "1",
+            "cupNum": "671"
+        },
+        {
+            "id": "166",
+            "name": "Boomer",
+            "ownSkin": "1",
+            "cupNum": "675"
+        },
+        {
+            "id": "167",
+            "name": "Boulder",
+            "ownSkin": "1",
+            "cupNum": "679"
+        },
+        {
+            "id": "168",
+            "name": "Brave",
+            "ownSkin": "1",
+            "cupNum": "683"
+        },
+        {
+            "id": "169",
+            "name": "Brewer",
+            "ownSkin": "1",
+            "cupNum": "687"
+        },
+        {
+            "id": "170",
+            "name": "Brewmaster",
+            "ownSkin": "1",
+            "cupNum": "691"
+        },
+        {
+            "id": "171",
+            "name": "Bronco",
+            "ownSkin": "1",
+            "cupNum": "695"
+        },
+        {
+            "id": "172",
+            "name": "Brown",
+            "ownSkin": "1",
+            "cupNum": "699"
+        },
+        {
+            "id": "173",
+            "name": "Bruin",
+            "ownSkin": "1",
+            "cupNum": "703"
+        },
+        {
+            "id": "174",
+            "name": "Buccaneer",
+            "ownSkin": "1",
+            "cupNum": "707"
+        },
+        {
+            "id": "175",
+            "name": "Buck",
+            "ownSkin": "1",
+            "cupNum": "711"
+        },
+        {
+            "id": "176",
+            "name": "Buffaloe",
+            "ownSkin": "1",
+            "cupNum": "715"
+        },
+        {
+            "id": "177",
+            "name": "Builder",
+            "ownSkin": "1",
+            "cupNum": "719"
+        },
+        {
+            "id": "178",
+            "name": "Bulldog",
+            "ownSkin": "1",
+            "cupNum": "723"
+        },
+        {
+            "id": "179",
+            "name": "Bulletproof",
+            "ownSkin": "1",
+            "cupNum": "727"
+        },
+        {
+            "id": "180",
+            "name": "Bullet",
+            "ownSkin": "1",
+            "cupNum": "731"
+        },
+        {
+            "id": "181",
+            "name": "Bullfighter",
+            "ownSkin": "1",
+            "cupNum": "735"
+        },
+        {
+            "id": "182",
+            "name": "Bull",
+            "ownSkin": "1",
+            "cupNum": "739"
+        },
+        {
+            "id": "183",
+            "name": "Butcher",
+            "ownSkin": "1",
+            "cupNum": "743"
+        },
+        {
+            "id": "184",
+            "name": "Canuck",
+            "ownSkin": "1",
+            "cupNum": "747"
+        },
+        {
+            "id": "185",
+            "name": "Capital",
+            "ownSkin": "1",
+            "cupNum": "751"
+        },
+        {
+            "id": "186",
+            "name": "Captain",
+            "ownSkin": "1",
+            "cupNum": "755"
+        },
+        {
+            "id": "187",
+            "name": "Captivator",
+            "ownSkin": "1",
+            "cupNum": "759"
+        },
+        {
+            "id": "188",
+            "name": "Cardinal",
+            "ownSkin": "1",
+            "cupNum": "763"
+        },
+        {
+            "id": "189",
+            "name": "Cavalier",
+            "ownSkin": "1",
+            "cupNum": "767"
+        },
+        {
+            "id": "190",
+            "name": "Celtics",
+            "ownSkin": "1",
+            "cupNum": "771"
+        },
+        {
+            "id": "191",
+            "name": "Challenger",
+            "ownSkin": "1",
+            "cupNum": "775"
+        },
+        {
+            "id": "192",
+            "name": "Chameleon",
+            "ownSkin": "1",
+            "cupNum": "779"
+        },
+        {
+            "id": "193",
+            "name": "Chaos",
+            "ownSkin": "1",
+            "cupNum": "783"
+        },
+        {
+            "id": "194",
+            "name": "Charger",
+            "ownSkin": "1",
+            "cupNum": "787"
+        },
+        {
+            "id": "195",
+            "name": "Chaser",
+            "ownSkin": "1",
+            "cupNum": "791"
+        },
+        {
+            "id": "196",
+            "name": "Clipper",
+            "ownSkin": "1",
+            "cupNum": "795"
+        },
+        {
+            "id": "197",
+            "name": "Cowboy",
+            "ownSkin": "1",
+            "cupNum": "799"
+        },
+        {
+            "id": "198",
+            "name": "Crunch",
+            "ownSkin": "1",
+            "cupNum": "803"
+        },
+        {
+            "id": "199",
+            "name": "Curve",
+            "ownSkin": "1",
+            "cupNum": "807"
+        },
+        {
+            "id": "200",
+            "name": "Darkside",
+            "ownSkin": "1",
+            "cupNum": "811"
+        },
+        {
+            "id": "201",
+            "name": "Deathwish",
+            "ownSkin": "1",
+            "cupNum": "815"
+        },
+        {
+            "id": "202",
+            "name": "Destroyers",
+            "ownSkin": "1",
+            "cupNum": "819"
+        },
+        {
+            "id": "203",
+            "name": "Devil",
+            "ownSkin": "1",
+            "cupNum": "823"
+        },
+        {
+            "id": "204",
+            "name": "Divas",
+            "ownSkin": "1",
+            "cupNum": "827"
+        },
+        {
+            "id": "205",
+            "name": "Dynamix",
+            "ownSkin": "1",
+            "cupNum": "831"
+        },
+        {
+            "id": "206",
+            "name": "Dolphin",
+            "ownSkin": "1",
+            "cupNum": "835"
+        },
+        {
+            "id": "207",
+            "name": "Dragon",
+            "ownSkin": "1",
+            "cupNum": "839"
+        },
+        {
+            "id": "208",
+            "name": "Drifter",
+            "ownSkin": "1",
+            "cupNum": "843"
+        },
+        {
+            "id": "209",
+            "name": "Duke",
+            "ownSkin": "1",
+            "cupNum": "847"
+        },
+        {
+            "id": "210",
+            "name": "King",
+            "ownSkin": "1",
+            "cupNum": "851"
+        },
+        {
+            "id": "211",
+            "name": "Drone",
+            "ownSkin": "1",
+            "cupNum": "855"
+        },
+        {
+            "id": "212",
+            "name": "Eagles",
+            "ownSkin": "1",
+            "cupNum": "859"
+        },
+        {
+            "id": "213",
+            "name": "Monstar 8",
+            "ownSkin": "1",
+            "cupNum": "863"
+        },
+        {
+            "id": "214",
+            "name": "Earthquake",
+            "ownSkin": "1",
+            "cupNum": "867"
+        }
+    ],
+    "daySign2": [
+        {
+            "id": "1",
+            "day": "1",
+            "rewardType": "1",
+            "rewardNum": "200",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "2",
+            "day": "2",
+            "rewardType": "1",
+            "rewardNum": "300",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "3",
+            "day": "3",
+            "rewardType": "1",
+            "rewardNum": "500",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "4",
+            "day": "4",
+            "rewardType": "1",
+            "rewardNum": "500",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "5",
+            "day": "5",
+            "rewardType": "1",
+            "rewardNum": "800",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "6",
+            "day": "6",
+            "rewardType": "1",
+            "rewardNum": "1000",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "7",
+            "day": "7",
+            "rewardType": "0",
+            "rewardNum": "0",
+            "specialSkinId": "16"
+        },
+        {
+            "id": "8",
+            "day": "1",
+            "rewardType": "1",
+            "rewardNum": "200",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "9",
+            "day": "2",
+            "rewardType": "1",
+            "rewardNum": "200",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "10",
+            "day": "3",
+            "rewardType": "1",
+            "rewardNum": "300",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "11",
+            "day": "4",
+            "rewardType": "1",
+            "rewardNum": "500",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "12",
+            "day": "5",
+            "rewardType": "1",
+            "rewardNum": "800",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "13",
+            "day": "6",
+            "rewardType": "1",
+            "rewardNum": "1000",
+            "specialSkinId": "0"
+        },
+        {
+            "id": "14",
+            "day": "7",
+            "rewardType": "1",
+            "rewardNum": "1500",
+            "specialSkinId": "0"
+        }
+    ],
+    "grad": [
+        {
+            "id": "1",
+            "name": "Junior training camp ",
+            "cupNum": "0",
+            "resource": "grad1",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "1|15",
+            "putAi": "101:20-20",
+            "propRandom": "0|0",
+            "propBonus": "0|0|0|0|0",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "2",
+            "name": "Junior team substitute ",
+            "cupNum": "30",
+            "resource": "grad2",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "6",
+            "putAi": "1:1-2,101:20-20",
+            "propRandom": "0|1",
+            "propBonus": "0|0|1|1|1",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "3",
+            "name": "Junior team starter ",
+            "cupNum": "70",
+            "resource": "grad2",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "7",
+            "putAi": "1:3-5,101:20-20",
+            "propRandom": "0|2",
+            "propBonus": "0|0|1|1|2",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "4",
+            "name": "Junior team star ",
+            "cupNum": "120",
+            "resource": "grad3",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "9",
+            "putAi": "1:1-2,2:1-2,101:20-20",
+            "propRandom": "0|3",
+            "propBonus": "0|0|1|2|3",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "5",
+            "name": "Youth reserve ",
+            "cupNum": "180",
+            "resource": "grad3",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "0",
+            "putAi": "1:1-2,2:3-4,101:20-20",
+            "propRandom": "1|5",
+            "propBonus": "0|1|2|3|3",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "6",
+            "name": "Youth team substitute ",
+            "cupNum": "250",
+            "resource": "grad4",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "2",
+            "putAi": "1:1-2,2:4-6,101:20-20",
+            "propRandom": "3|10",
+            "propBonus": "1|2|3|3|3",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "7",
+            "name": "Youth team starter ",
+            "cupNum": "330",
+            "resource": "grad4",
+            "isReduceCup": "0",
+            "isReduceGrad": "0",
+            "unlockSkin": "21",
+            "putAi": "3:1-2,2:3-4,101:20-20",
+            "propRandom": "5|15",
+            "propBonus": "1|2|3|3|4",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "8",
+            "name": "Regional substitute ",
+            "cupNum": "420",
+            "resource": "grad5",
+            "isReduceCup": "1",
+            "isReduceGrad": "0",
+            "unlockSkin": "12",
+            "putAi": "2:2-4,4:1-2,101:2-3,3:20-20",
+            "propRandom": "7|20",
+            "propBonus": "1|2|3|4|5",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "9",
+            "name": "Regional starter ",
+            "cupNum": "550",
+            "resource": "grad5",
+            "isReduceCup": "1",
+            "isReduceGrad": "0",
+            "unlockSkin": "13",
+            "putAi": "2:2-4,5:1-2,101:0-1,4:20-20",
+            "propRandom": "10|20",
+            "propBonus": "1|2|3|4|5",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "10",
+            "name": "Minor League substitute ",
+            "cupNum": "700",
+            "resource": "grad6",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "22",
+            "putAi": "4:2-3,6:2-3,101:1-2,3:20-20",
+            "propRandom": "14|30",
+            "propBonus": "2|3|4|5|7",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "11",
+            "name": "Minor League starter ",
+            "cupNum": "900",
+            "resource": "grad6",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "14",
+            "putAi": "4:2-3,6:3-4,101:1-2,5:20-20",
+            "propRandom": "18|35",
+            "propBonus": "2|3|4|5|7",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "12",
+            "name": "Minor League star ",
+            "cupNum": "1200",
+            "resource": "grad6",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "23",
+            "putAi": "5:1-2,7:5-6,6:20-20,101:0-1",
+            "propRandom": "22|35",
+            "propBonus": "2|4|6|7|8",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "13",
+            "name": "Major league substitute ",
+            "cupNum": "1500",
+            "resource": "grad7",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "6:2-3,8:3-4,7:20-20,101:0-1",
+            "propRandom": "26|40",
+            "propBonus": "2|4|6|7|8",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "14",
+            "name": "Major league starter ",
+            "cupNum": "2000",
+            "resource": "grad7",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "7:2-3,9:3-4,10:0-1,8:20-20,101:0-1",
+            "propRandom": "30|40",
+            "propBonus": "2|4|6|7|8",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "15",
+            "name": "Major league star ",
+            "cupNum": "2600",
+            "resource": "grad7",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "9:1-2,11:5-6,10:20-20,101:0-1",
+            "propRandom": "35|45",
+            "propBonus": "2|4|6|8|10",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "16",
+            "name": "Super League substitute ",
+            "cupNum": "3500",
+            "resource": "grad8",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "9:2-3,11:3-4,12:3-4,10:20-20",
+            "propRandom": "40|50",
+            "propBonus": "2|4|6|8|10",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "17",
+            "name": "Super League starter ",
+            "cupNum": "5500",
+            "resource": "grad8",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "10:3-4,12:3-4,13:2-3,11:20-20",
+            "propRandom": "45|60",
+            "propBonus": "2|4|6|8|10",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "18",
+            "name": "Super League star ",
+            "cupNum": "7000",
+            "resource": "grad8",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "10:0-1,12:6-7,13:2-3,11:20-20",
+            "propRandom": "50|70",
+            "propBonus": "2|4|6|8|10",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "19",
+            "name": "World Cup substitute ",
+            "cupNum": "9000",
+            "resource": "grad9",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "10:0-1,11:7-8,13:2-3,12:20-20",
+            "propRandom": "50|70",
+            "propBonus": "3|5|7|9|12",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "20",
+            "name": "World Cup starter ",
+            "cupNum": "10000",
+            "resource": "grad9",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "11:0-1,13:3-5,14:2-3,12:20-20",
+            "propRandom": "55|80",
+            "propBonus": "3|5|7|9|12",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "21",
+            "name": "World Cup star ",
+            "cupNum": "13000",
+            "resource": "grad9",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "11:0-1,13:3-5,14:5-8,12:20-20",
+            "propRandom": "60|90",
+            "propBonus": "4|6|8|12|15",
+            "reviveTime": "3|3"
+        },
+        {
+            "id": "22",
+            "name": "King of the world ",
+            "cupNum": "20000",
+            "resource": "grad9",
+            "isReduceCup": "1",
+            "isReduceGrad": "1",
+            "unlockSkin": "0",
+            "putAi": "13:4-6,14:5-7,15:20-20",
+            "propRandom": "60|100",
+            "propBonus": "5|8|12|15|20",
+            "reviveTime": "3|3"
+        }
+    ],
+    "loginReward": [
+        {
+            "id": "1",
+            "type": "1",
+            "limitDay": "5",
+            "desc": "Continuous sign in 5 days",
+            "rewardType": "1",
+            "rewardNum": "0",
+            "specialSkinId": "42"
+        },
+        {
+            "id": "2",
+            "type": "1",
+            "limitDay": "10",
+            "desc": "Continuous sign in 10 days",
+            "rewardType": "1",
+            "rewardNum": "0",
+            "specialSkinId": "43"
+        },
+        {
+            "id": "3",
+            "type": "2",
+            "limitDay": "20",
+            "desc": "Sign in 20 days",
+            "rewardType": "1",
+            "rewardNum": "0",
+            "specialSkinId": "44"
+        },
+        {
+            "id": "4",
+            "type": "2",
+            "limitDay": "40",
+            "desc": "Sign in 40 days",
+            "rewardType": "1",
+            "rewardNum": "0",
+            "specialSkinId": "45"
+        }
+    ],
+    "propEffect": [
+        {
+            "value": "0",
+            "moveSpeed": "0",
+            "critChance": "0"
+        },
+        {
+            "value": "1",
+            "moveSpeed": "0.01",
+            "critChance": "0.0063"
+        },
+        {
+            "value": "2",
+            "moveSpeed": "0.02",
+            "critChance": "0.0125"
+        },
+        {
+            "value": "3",
+            "moveSpeed": "0.03",
+            "critChance": "0.0188"
+        },
+        {
+            "value": "4",
+            "moveSpeed": "0.04",
+            "critChance": "0.025"
+        },
+        {
+            "value": "5",
+            "moveSpeed": "0.05",
+            "critChance": "0.0313"
+        },
+        {
+            "value": "6",
+            "moveSpeed": "0.06",
+            "critChance": "0.0375"
+        },
+        {
+            "value": "7",
+            "moveSpeed": "0.07",
+            "critChance": "0.0438"
+        },
+        {
+            "value": "8",
+            "moveSpeed": "0.08",
+            "critChance": "0.05"
+        },
+        {
+            "value": "9",
+            "moveSpeed": "0.087",
+            "critChance": "0.0563"
+        },
+        {
+            "value": "10",
+            "moveSpeed": "0.094",
+            "critChance": "0.0625"
+        },
+        {
+            "value": "11",
+            "moveSpeed": "0.101",
+            "critChance": "0.0688"
+        },
+        {
+            "value": "12",
+            "moveSpeed": "0.108",
+            "critChance": "0.075"
+        },
+        {
+            "value": "13",
+            "moveSpeed": "0.115",
+            "critChance": "0.0813"
+        },
+        {
+            "value": "14",
+            "moveSpeed": "0.122",
+            "critChance": "0.0875"
+        },
+        {
+            "value": "15",
+            "moveSpeed": "0.129",
+            "critChance": "0.0938"
+        },
+        {
+            "value": "16",
+            "moveSpeed": "0.136",
+            "critChance": "0.1"
+        },
+        {
+            "value": "17",
+            "moveSpeed": "0.139",
+            "critChance": "0.102"
+        },
+        {
+            "value": "18",
+            "moveSpeed": "0.142",
+            "critChance": "0.104"
+        },
+        {
+            "value": "19",
+            "moveSpeed": "0.145",
+            "critChance": "0.106"
+        },
+        {
+            "value": "20",
+            "moveSpeed": "0.148",
+            "critChance": "0.108"
+        },
+        {
+            "value": "21",
+            "moveSpeed": "0.151",
+            "critChance": "0.11"
+        },
+        {
+            "value": "22",
+            "moveSpeed": "0.154",
+            "critChance": "0.112"
+        },
+        {
+            "value": "23",
+            "moveSpeed": "0.157",
+            "critChance": "0.114"
+        },
+        {
+            "value": "24",
+            "moveSpeed": "0.16",
+            "critChance": "0.116"
+        },
+        {
+            "value": "25",
+            "moveSpeed": "0.163",
+            "critChance": "0.118"
+        },
+        {
+            "value": "26",
+            "moveSpeed": "0.166",
+            "critChance": "0.12"
+        },
+        {
+            "value": "27",
+            "moveSpeed": "0.169",
+            "critChance": "0.122"
+        },
+        {
+            "value": "28",
+            "moveSpeed": "0.172",
+            "critChance": "0.124"
+        },
+        {
+            "value": "29",
+            "moveSpeed": "0.175",
+            "critChance": "0.126"
+        },
+        {
+            "value": "30",
+            "moveSpeed": "0.178",
+            "critChance": "0.128"
+        },
+        {
+            "value": "31",
+            "moveSpeed": "0.181",
+            "critChance": "0.13"
+        },
+        {
+            "value": "32",
+            "moveSpeed": "0.184",
+            "critChance": "0.132"
+        },
+        {
+            "value": "33",
+            "moveSpeed": "0.187",
+            "critChance": "0.134"
+        },
+        {
+            "value": "34",
+            "moveSpeed": "0.19",
+            "critChance": "0.136"
+        },
+        {
+            "value": "35",
+            "moveSpeed": "0.192",
+            "critChance": "0.138"
+        },
+        {
+            "value": "36",
+            "moveSpeed": "0.194",
+            "critChance": "0.14"
+        },
+        {
+            "value": "37",
+            "moveSpeed": "0.196",
+            "critChance": "0.142"
+        },
+        {
+            "value": "38",
+            "moveSpeed": "0.198",
+            "critChance": "0.144"
+        },
+        {
+            "value": "39",
+            "moveSpeed": "0.2",
+            "critChance": "0.146"
+        },
+        {
+            "value": "40",
+            "moveSpeed": "0.202",
+            "critChance": "0.148"
+        },
+        {
+            "value": "41",
+            "moveSpeed": "0.204",
+            "critChance": "0.15"
+        },
+        {
+            "value": "42",
+            "moveSpeed": "0.206",
+            "critChance": "0.152"
+        },
+        {
+            "value": "43",
+            "moveSpeed": "0.208",
+            "critChance": "0.154"
+        },
+        {
+            "value": "44",
+            "moveSpeed": "0.21",
+            "critChance": "0.156"
+        },
+        {
+            "value": "45",
+            "moveSpeed": "0.212",
+            "critChance": "0.158"
+        },
+        {
+            "value": "46",
+            "moveSpeed": "0.214",
+            "critChance": "0.16"
+        },
+        {
+            "value": "47",
+            "moveSpeed": "0.216",
+            "critChance": "0.162"
+        },
+        {
+            "value": "48",
+            "moveSpeed": "0.218",
+            "critChance": "0.164"
+        },
+        {
+            "value": "49",
+            "moveSpeed": "0.22",
+            "critChance": "0.166"
+        },
+        {
+            "value": "50",
+            "moveSpeed": "0.222",
+            "critChance": "0.168"
+        },
+        {
+            "value": "51",
+            "moveSpeed": "0.224",
+            "critChance": "0.17"
+        },
+        {
+            "value": "52",
+            "moveSpeed": "0.226",
+            "critChance": "0.172"
+        },
+        {
+            "value": "53",
+            "moveSpeed": "0.228",
+            "critChance": "0.174"
+        },
+        {
+            "value": "54",
+            "moveSpeed": "0.23",
+            "critChance": "0.176"
+        },
+        {
+            "value": "55",
+            "moveSpeed": "0.232",
+            "critChance": "0.178"
+        },
+        {
+            "value": "56",
+            "moveSpeed": "0.234",
+            "critChance": "0.18"
+        },
+        {
+            "value": "57",
+            "moveSpeed": "0.236",
+            "critChance": "0.182"
+        },
+        {
+            "value": "58",
+            "moveSpeed": "0.238",
+            "critChance": "0.184"
+        },
+        {
+            "value": "59",
+            "moveSpeed": "0.24",
+            "critChance": "0.186"
+        },
+        {
+            "value": "60",
+            "moveSpeed": "0.242",
+            "critChance": "0.188"
+        },
+        {
+            "value": "61",
+            "moveSpeed": "0.244",
+            "critChance": "0.19"
+        },
+        {
+            "value": "62",
+            "moveSpeed": "0.246",
+            "critChance": "0.192"
+        },
+        {
+            "value": "63",
+            "moveSpeed": "0.248",
+            "critChance": "0.194"
+        },
+        {
+            "value": "64",
+            "moveSpeed": "0.25",
+            "critChance": "0.196"
+        },
+        {
+            "value": "65",
+            "moveSpeed": "0.252",
+            "critChance": "0.198"
+        },
+        {
+            "value": "66",
+            "moveSpeed": "0.254",
+            "critChance": "0.2"
+        },
+        {
+            "value": "67",
+            "moveSpeed": "0.256",
+            "critChance": "0.201"
+        },
+        {
+            "value": "68",
+            "moveSpeed": "0.258",
+            "critChance": "0.202"
+        },
+        {
+            "value": "69",
+            "moveSpeed": "0.26",
+            "critChance": "0.203"
+        },
+        {
+            "value": "70",
+            "moveSpeed": "0.262",
+            "critChance": "0.204"
+        },
+        {
+            "value": "71",
+            "moveSpeed": "0.264",
+            "critChance": "0.205"
+        },
+        {
+            "value": "72",
+            "moveSpeed": "0.266",
+            "critChance": "0.206"
+        },
+        {
+            "value": "73",
+            "moveSpeed": "0.268",
+            "critChance": "0.207"
+        },
+        {
+            "value": "74",
+            "moveSpeed": "0.27",
+            "critChance": "0.208"
+        },
+        {
+            "value": "75",
+            "moveSpeed": "0.272",
+            "critChance": "0.209"
+        },
+        {
+            "value": "76",
+            "moveSpeed": "0.274",
+            "critChance": "0.21"
+        },
+        {
+            "value": "77",
+            "moveSpeed": "0.276",
+            "critChance": "0.211"
+        },
+        {
+            "value": "78",
+            "moveSpeed": "0.278",
+            "critChance": "0.212"
+        },
+        {
+            "value": "79",
+            "moveSpeed": "0.28",
+            "critChance": "0.213"
+        },
+        {
+            "value": "80",
+            "moveSpeed": "0.282",
+            "critChance": "0.214"
+        },
+        {
+            "value": "81",
+            "moveSpeed": "0.284",
+            "critChance": "0.215"
+        },
+        {
+            "value": "82",
+            "moveSpeed": "0.286",
+            "critChance": "0.216"
+        },
+        {
+            "value": "83",
+            "moveSpeed": "0.288",
+            "critChance": "0.217"
+        },
+        {
+            "value": "84",
+            "moveSpeed": "0.29",
+            "critChance": "0.218"
+        },
+        {
+            "value": "85",
+            "moveSpeed": "0.292",
+            "critChance": "0.219"
+        },
+        {
+            "value": "86",
+            "moveSpeed": "0.294",
+            "critChance": "0.22"
+        },
+        {
+            "value": "87",
+            "moveSpeed": "0.296",
+            "critChance": "0.221"
+        },
+        {
+            "value": "88",
+            "moveSpeed": "0.298",
+            "critChance": "0.222"
+        },
+        {
+            "value": "89",
+            "moveSpeed": "0.3",
+            "critChance": "0.223"
+        },
+        {
+            "value": "90",
+            "moveSpeed": "0.302",
+            "critChance": "0.224"
+        },
+        {
+            "value": "91",
+            "moveSpeed": "0.304",
+            "critChance": "0.225"
+        },
+        {
+            "value": "92",
+            "moveSpeed": "0.306",
+            "critChance": "0.226"
+        },
+        {
+            "value": "93",
+            "moveSpeed": "0.308",
+            "critChance": "0.227"
+        },
+        {
+            "value": "94",
+            "moveSpeed": "0.31",
+            "critChance": "0.228"
+        },
+        {
+            "value": "95",
+            "moveSpeed": "0.312",
+            "critChance": "0.229"
+        },
+        {
+            "value": "96",
+            "moveSpeed": "0.314",
+            "critChance": "0.23"
+        },
+        {
+            "value": "97",
+            "moveSpeed": "0.316",
+            "critChance": "0.231"
+        },
+        {
+            "value": "98",
+            "moveSpeed": "0.318",
+            "critChance": "0.232"
+        },
+        {
+            "value": "99",
+            "moveSpeed": "0.32",
+            "critChance": "0.233"
+        },
+        {
+            "value": "100",
+            "moveSpeed": "0.322",
+            "critChance": "0.234"
+        }
+    ],
+    "props": [
+        {
+            "id": "1",
+            "propType": "0",
+            "name": "Speed ",
+            "desc": "Permanently increase movement speed by {0} ",
+            "needGold": "10",
+            "goldGrow": "1.18",
+            "initValue": "0",
+            "valueGrow": "1",
+            "lvMax": "100"
+        },
+        {
+            "id": "2",
+            "propType": "1",
+            "name": "Power ",
+            "desc": "Permanent increase of impact force {0} ",
+            "needGold": "10",
+            "goldGrow": "1.18",
+            "initValue": "0",
+            "valueGrow": "1",
+            "lvMax": "100"
+        },
+        {
+            "id": "3",
+            "propType": "2",
+            "name": "Dodge ",
+            "desc": "Dodging enemy impact's possibility increases by {0} ",
+            "needGold": "10",
+            "goldGrow": "1.18",
+            "initValue": "0",
+            "valueGrow": "1",
+            "lvMax": "100"
+        },
+        {
+            "id": "4",
+            "propType": "3",
+            "name": "Offline ",
+            "desc": "Earn {0} gold coins every minute while offline ",
+            "needGold": "10",
+            "goldGrow": "1.18",
+            "initValue": "10",
+            "valueGrow": "0.1",
+            "lvMax": "100"
+        }
+    ],
+    "reward": [
+        {
+            "id": "1",
+            "des": "Sign in reward 1",
+            "rewardType": "gold",
+            "rewardNum": "200"
+        },
+        {
+            "id": "2",
+            "des": "Sign in reward 2",
+            "rewardType": "skill",
+            "rewardNum": "1"
+        },
+        {
+            "id": "11",
+            "des": "Invite new player skin 1",
+            "rewardType": "skin",
+            "rewardNum": "1",
+            "skinId": "4"
+        },
+        {
+            "id": "12",
+            "des": "Invite new player skin 2",
+            "rewardType": "skin",
+            "rewardNum": "1",
+            "skinId": "5"
+        },
+        {
+            "id": "13",
+            "des": "Invite new player skin 3",
+            "rewardType": "skin",
+            "rewardNum": "1",
+            "skinId": "6"
+        },
+        {
+            "id": "14",
+            "des": "Skin jigsaw reward",
+            "rewardType": "skin",
+            "rewardNum": "1",
+            "skinId": "20"
+        },
+        {
+            "id": "21",
+            "des": "Turntable reward 1",
+            "rewardType": "gold",
+            "rewardNum": "500"
+        },
+        {
+            "id": "22",
+            "des": "Turntable reward 2",
+            "rewardType": "gold",
+            "rewardNum": "150"
+        },
+        {
+            "id": "23",
+            "des": "Turntable reward 3",
+            "rewardType": "gold",
+            "rewardNum": "300"
+        },
+        {
+            "id": "24",
+            "des": "Turntable reward 4",
+            "rewardType": "gold",
+            "rewardNum": "200"
+        },
+        {
+            "id": "25",
+            "des": "Turntable reward 5",
+            "rewardType": "gold",
+            "rewardNum": "800"
+        },
+        {
+            "id": "26",
+            "des": "Turntable reward 6",
+            "rewardType": "skin",
+            "rewardNum": "1",
+            "skinId": "19"
+        },
+        {
+            "id": "51",
+            "des": "Pass chest reward 1",
+            "rewardType": "gold",
+            "rewardNum": "100"
+        },
+        {
+            "id": "52",
+            "des": "Pass chest reward 2",
+            "rewardType": "skill",
+            "rewardNum": "1"
+        },
+        {
+            "id": "53",
+            "des": "New saw reward",
+            "rewardType": "revive",
+            "rewardNum": "1"
+        },
+        {
+            "id": "54",
+            "des": "Extension bar reward",
+            "rewardType": "skill",
+            "rewardNum": "1"
+        },
+        {
+            "id": "55",
+            "des": "Quick game gift bag reward",
+            "rewardType": "gold",
+            "rewardNum": "100"
+        }
+    ],
+    "skin": [
+        {
+            "id": "1",
+            "sort": "1",
+            "name": "Red team ",
+            "model": "default",
+            "tex": "default.jpg",
+            "needFragCnt": "999"
+        
+            
+            
+        },
+        {
+            "id": "2",
+            "sort": "21",
+            "name": "Matador ",
+            "model": "xiao",
+            "tex": "xiao1.png",
+            "needFragCnt": "60",
+            "unlockRank": "6",
+            "skinShowExp": "25",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "3",
+            "sort": "19",
+            "name": "Pampas legend ",
+            "model": "xiao",
+            "tex": "xiao2.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "50",
+            "getTips": "Get from turntable",
+            "jumpTo": "turntable"
+        },
+        {
+            "id": "4",
+            "sort": "8",
+            "name": "Catwoman ",
+            "model": "maonv",
+            "tex": "maonv.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "1400"
+        },
+        {
+            "id": "5",
+            "sort": "6",
+            "name": "Nan King ",
+            "model": "xiao",
+            "tex": "xiao4.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "1000"
+        },
+        {
+            "id": "6",
+            "sort": "17",
+            "name": "Red devil ",
+            "model": "xiao",
+            "tex": "xiao5.png",
+            "needFragCnt": "20",
+            "unlockRank": "2",
+            "skinShowExp": "10",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "7",
+            "sort": "18",
+            "name": "La Masia ",
+            "model": "xiao",
+            "tex": "xiao6.png",
+            "needFragCnt": "30",
+            "unlockRank": "3",
+            "skinShowExp": "15",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "8",
+            "sort": "3",
+            "name": "The oranje ",
+            "model": "shougao",
+            "tex": "shougao1.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "20",
+            "try": "1",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "400"
+        },
+        {
+            "id": "9",
+            "sort": "20",
+            "name": "Steel chariot ",
+            "model": "shougao",
+            "tex": "shougao2.png",
+            "needFragCnt": "40",
+            "unlockRank": "4",
+            "skinShowExp": "20",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "10",
+            "sort": "4",
+            "name": "Lattice army ",
+            "model": "shougao",
+            "tex": "shougao3.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "30",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "600"
+        },
+        {
+            "id": "11",
+            "sort": "7",
+            "name": "Shaolin monk ",
+            "model": "shaolin",
+            "tex": "shaolin.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "30",
+            "try": "1",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "1200"
+        },
+        {
+            "id": "12",
+            "sort": "13",
+            "name": "Rossoneri ",
+            "model": "shougao",
+            "tex": "shougao5.png",
+            "needFragCnt": "80",
+            "unlockRank": "8",
+            "skinShowExp": "30",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "13",
+            "sort": "15",
+            "name": "Bianconeri ",
+            "model": "shougao",
+            "tex": "shougao6.png",
+            "needFragCnt": "90",
+            "unlockRank": "9",
+            "skinShowExp": "40",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "14",
+            "sort": "14",
+            "name": "Blood legion ",
+            "model": "pangzi",
+            "tex": "pangzi1.png",
+            "needFragCnt": "100",
+            "unlockRank": "11",
+            "skinShowExp": "5",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "15",
+            "sort": "16",
+            "name": "Three cats ",
+            "model": "pangzi",
+            "tex": "pangzi2.png",
+            "needFragCnt": "10",
+            "unlockRank": "1",
+            "skinShowExp": "5",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "16",
+            "sort": "12",
+            "name": "Past master ",
+            "model": "cuju",
+            "tex": "cuju.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "200"
+        },
+        {
+            "id": "17",
+            "sort": "9",
+            "name": "Bunny girl ",
+            "model": "tunvlang",
+            "tex": "tunvlang.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "1600"
+        },
+        {
+            "id": "18",
+            "sort": "11",
+            "name": "Miss bikini ",
+            "model": "bikini",
+            "tex": "bikini.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "2000"
+        },
+        {
+            "id": "19",
+            "sort": "10",
+            "name": "Black referee ",
+            "model": "caipan",
+            "tex": "caipan.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "1800"
+        },
+        {
+            "id": "20",
+            "sort": "2",
+            "name": "Pampas eagle ",
+            "model": "xiao",
+            "tex": "xiao3.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "10",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "200"
+        },
+        {
+            "id": "21",
+            "sort": "22",
+            "name": "Blue army ",
+            "model": "shougao",
+            "tex": "shougao4.png",
+            "needFragCnt": "70",
+            "unlockRank": "7",
+            "skinShowExp": "30",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "22",
+            "sort": "23",
+            "name": "Europe queen ",
+            "model": "pangzi",
+            "tex": "pangzi4.png",
+            "needFragCnt": "100",
+            "unlockRank": "10",
+            "skinShowExp": "30",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "23",
+            "sort": "24",
+            "name": "Gallic ",
+            "model": "pangzi",
+            "tex": "pangzi3.png",
+            "needFragCnt": "100",
+            "unlockRank": "12",
+            "skinShowExp": "30",
+            "try": "1",
+            "getTips": "Fragments get from game",
+            "jumpTo": "battle"
+        },
+        {
+            "id": "24",
+            "sort": "5",
+            "name": "Big paris ",
+            "model": "pangzi",
+            "tex": "pangzi5.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "30",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "800"
+        },
+        {
+            "id": "26",
+            "sort": "26",
+            "name": "Chief ",
+            "model": "yindian",
+            "tex": "yindian.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "40",
+            "try": "1",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "2000"
+        },
+        {
+            "id": "27",
+            "sort": "27",
+            "name": "Mexico ",
+            "model": "moxige",
+            "tex": "moxige.png",
+            "needFragCnt": "999",
+            "unlockRank": "99",
+            "skinShowExp": "20",
+            "try": "1",
+            "getTips": "{num} coins unlock",
+            "consumeGold": "2000"
+        }
+    ],
+    "skinLimit": [
+        {
+            "id": "1",
+            "skinId": "11",
+            "needCount": "3"
+        },
+        {
+            "id": "2",
+            "skinId": "4",
+            "needCount": "3"
+        },
+        {
+            "id": "3",
+            "skinId": "17",
+            "needCount": "4"
+        }
+    ],
+    "turntable": [
+        {
+            "id": "1",
+            "name": "800 coins",
+            "rewardId": "21",
+            "initialRate": "5",
+            "addRate": "20",
+            "source": "3"
+        },
+        {
+            "id": "2",
+            "name": "300 coins",
+            "rewardId": "22",
+            "initialRate": "30",
+            "addRate": "5",
+            "source": "1"
+        },
+        {
+            "id": "3",
+            "name": "500 coins",
+            "rewardId": "23",
+            "initialRate": "10",
+            "addRate": "35",
+            "source": "2"
+        },
+        {
+            "id": "4",
+            "name": "150 coins",
+            "rewardId": "24",
+            "initialRate": "50",
+            "addRate": "5",
+            "source": "2"
+        },
+        {
+            "id": "5",
+            "name": "200 coins",
+            "rewardId": "25",
+            "initialRate": "50",
+            "addRate": "5",
+            "source": "3"
+        },
+        {
+            "id": "6",
+            "name": "Mystery skin",
+            "rewardId": "26",
+            "initialRate": "0",
+            "addRate": "0",
+            "hitTime": "60"
+        }
+    ],
+    "globalSet": {
+        "cupResult": [
+            10,
+            6,
+            3,
+            1,
+            0,
+            -3,
+            -6
+        ],
+        "straightWinTimes": 3,
+        "straightWinLosePercent": 0.7,
+        "straightWinPickProbAdd": 0.2,
+        "straightWinPickProbAddMax": 0.5,
+        "totalLoseTimes": 2,
+        "losePickProbMinus": 0.2,
+        "straightWinBonusProb": [
+            0.3,
+            0.6,
+            0.8,
+            0.9,
+            1
+        ],
+        "bulletDamageRatio": [
+            0.5,
+            0.75,
+            0.9,
+            1
+        ],
+        "straightPropRatio": [
+            0.3,
+            0.5,
+            0.8,
+            1,
+            1.2,
+            1.5
+        ],
+        "propMaxMinus": [
+            15,
+            15,
+            30,
+            100
+        ],
+        "powerInit": 5,
+        "powerInitForNew": 2,
+        "powerOffset": [
+            7,
+            20,
+            1000000
+        ],
+        "dailyMaxGroupTicket": 3,
+        "moveSpeedRatio": 1.2,
+        "raceTime": 120,
+        "maxSkillPoint": 5,
+        "skillTime": 3,
+        "skillTimeWithBall": 1.5,
+        "skillCd": 10,
+        "buySkillConsume": 200,
+        "maxVideoPropUpgrade": 600,
+        "videoSendTurning": 1,
+        "turntableVideoMax": 5,
+        "ownTurningMax": 10,
+        "punish": -20,
+        "goldResult": {
+            "0": 30,
+            "1": 70,
+            "2": 120,
+            "3": 200,
+            ">=4": 200
+        },
+        "skinResult": {
+            "0": 0,
+            "1-3": 1,
+            ">=4": 2
+        },
+        "matchingText": [
+            "Matching player..."
+        ],
+        "addItemRate1": 100,
+        "addItemRate2": 80,
+        "addItemRate3": 50,
+        "addItemRate4": 30,
+        "addItemRate5": 50,
+        "addItemRate6": 30,
+        "addItemRate7": 60,
+        "addItemRate8": 15,
+        "addItemDelay": [
+            3,
+            10
+        ],
+        "addExtraBoxRate1": 95,
+        "addExtraBoxRate2": 70,
+        "addExtraBoxRate3": 50,
+        "addExtraBoxRate4": 30,
+        "addExtraBoxRate5": 50,
+        "addExtraBoxRate6": 30,
+        "addExtraBoxRate7": 60,
+        "addExtraBoxRate8": 15,
+        "addExtraBoxDelay": [
+            3,
+            10
+        ],
+        "hitTurntableSix": 80,
+        "turntableSkillId": 21,
+        "videoSkinId": []
+    }
+}

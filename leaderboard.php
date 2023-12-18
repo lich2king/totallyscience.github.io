@@ -49,7 +49,7 @@
     #highscores {
         margin-top: 80px;
         width: 100vw;
-        /* margin-bottom: 20vh; */
+        margin-bottom: 20vh;
     }
 
     #highscore {

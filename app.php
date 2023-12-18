@@ -48,17 +48,8 @@
                 }).then(() => {
                     if (appData.type == 'proxy') appFrame.src = (__uv$config.prefix + __uv$config.encodeUrl(appData.url));
                     else appFrame.src = appData.url;
-
-                    // detect if page is being embeded, if it is reference proxy from megamathstuff
-                    try {
-                        let parTitle = window.parent.document.title
-                    } catch (err) {
-                        appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.url)}`;
-                    }
                }, (err) => {
                     console.log(err);
-                    
-                    appFrame.src = `https://a.megamathstuff.com/index.html#${btoa(appData.url)}`;
                });
             } else {
                 document.querySelector('.lds-dual-ring').remove();

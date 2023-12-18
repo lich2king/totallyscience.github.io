@@ -44,14 +44,14 @@ function setupActionButtons() {
 
         let res = await fetcher(`/profile/liked/change`, { body: { gameName: gameName } });
 
+        const likedIcon = 'assets/images/icons/like.avif';
+        const notLikedIcon = 'assets/images/icons/likeoutline.avif';
+
+        // check if it is liked by checking current icon
+        let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
+
         if (res.status == 200) {
-            const likedIcon = 'assets/images/icons/like.avif';
-            const notLikedIcon = 'assets/images/icons/likeoutline.avif';
-
-            // check if it is liked by checking current icon
-            let isLiked = e.target.firstChild.getAttribute('src') == likedIcon;
-
-            // update icon to match chnaged state
+            // update icon to match changed state
             e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
 
             // set updated like count
@@ -61,7 +61,25 @@ function setupActionButtons() {
             likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
 
             likeCountEle.innerText = numFormatter(likeCount);
-        } else swal('You must signup to like the game', swalConfig).then(swalHandler);
+        } else {
+            let likedGames = JSON.parse(localStorage.getItem('likedGames') || '{}');
+
+            // like or unlike game and display the correct icon
+            e.target.firstChild.setAttribute('src', isLiked ? notLikedIcon : likedIcon);
+            likedGames[gameName] = !isLiked;
+
+            // save updated liked games
+            localStorage.setItem('likedGames', JSON.stringify(likedGames));
+            fetcher(`/stats/games/like`, { body: { gameName: gameName, liked: isLiked } });
+
+            // set updated like count
+            let likeCountEle = document.getElementById('likeCount');
+
+            let prevLikeCount = parseInt(likeCount);
+            likeCount = isLiked ? prevLikeCount - 1 : prevLikeCount + 1;
+
+            likeCountEle.innerText = numFormatter(likeCount);
+        }
     });
     likeBtn.addEventListener('webkitAnimationEnd', () => {
         likeBtn.classList.remove('button-click');
@@ -72,18 +90,29 @@ function setupActionButtons() {
 
         let res = await fetcher(`/profile/pinned/change`, { body: { gameName: gameName } });
 
+        const pinnedIcon = 'assets/images/icons/pin.avif';
+        const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
+
+        // check if it is pinned by checking current icon
+        let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
+
         if (res.status == 400) {
             swal('You have pinned the max amount of games (3).');
         } else if (res.status == 401 || res.status == 403) {
-            swal('You must signup to pin the game', swalConfig).then(swalHandler);
+            let pinnedGames = JSON.parse(localStorage.getItem('pinnedGames') || '{}');
+
+            if (Object.keys(pinnedGames).length >= 3) {
+                swal('You have pinned the max amount of games (3).');
+            } else {
+                // like or unlike game and display the correct icon
+                e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
+                pinnedGames[gameName] = !isPinned;
+    
+                // save updated liked games
+                localStorage.setItem('pinnedGames', JSON.stringify(pinnedGames));
+            }
         } else {
-            const pinnedIcon = 'assets/images/icons/pin.avif';
-            const notPinnedIcon = 'assets/images/icons/pinoutline.avif';
-
-            // check if it is pinned by checking current icon
-            // update icon to match chnaged state
-            let isPinned = e.target.firstChild.getAttribute('src') == pinnedIcon;
-
+            // update icon to match changed state
             e.target.firstChild.setAttribute('src', isPinned ? notPinnedIcon : pinnedIcon);
         }
     });
@@ -97,11 +126,11 @@ window.addEventListener('load', async () => {
     document.getElementById('gamesnav').classList.add('selected');
 
     // fetch games from jsons
-    let retrievedGamesRes = await fetch(`assets/games.json?v1`);
+    let retrievedGamesRes = await fetcher(`/game/${gameName}`);
     let retrievedGames = await retrievedGamesRes.json();
 
     // get data for selected game
-    const gameData = retrievedGames[gameName];
+    const gameData = retrievedGames[0];
 
     // if the game requested does not exist in the json file redirect
     if (!gameData) window.location.href = '../classes.php';
@@ -118,104 +147,45 @@ window.addEventListener('load', async () => {
         // display user like and pin status of game
         displayUserData();
     }
+    else {
+        const pinBtn = document.querySelector('#pin');
+        const likeBtn = document.querySelector('#like');
+        const pinImg = pinBtn.firstChild;
+        const likeImg = likeBtn.firstChild;
 
-    // setup socket for chatroom
-    const socketUrl = location.host.startsWith('localhost') || location.host.startsWith('127.0.0.1') ? localServer : null;
-    let socket = io(socketUrl);
+        let likedGames = JSON.parse(localStorage.getItem('likedGames'));
+        let pinnedGames = JSON.parse(localStorage.getItem('pinnedGames'));
 
-    socket.on('request-introduction', () => {
-        const chatContent = document.getElementById('chatContent');
-        const messageBox = document.getElementById('messageBox');
+        if (likedGames && likedGames[gameName]) {
+            likeImg.setAttribute('src', 'assets/images/icons/like.avif');
+        }
 
-        socket.emit('respond-introduction', JSON.stringify({ token: getCookie('session'), game: gameName }));
-
-        document.getElementById('sendChat').addEventListener('click', () => {
-            console.log(json?.username);
-            let message = messageBox.value;
-            if (message != '') {
-                socket.emit('send-message', message);
-                messageBox.value = '';
-            }
-        });
-
-        messageBox.addEventListener('keyup', (e) => {
-            console.log(json?.username);
-            if (e.key === 'Enter' && messageBox.value != '') {
-                socket.emit('send-message', messageBox.value);
-                messageBox.value = '';
-            }
-        });
-
-        let isAutoScrolling = true;
-
-        // Detect manual scrolling
-        chatContent.addEventListener('scroll', () => {
-            // Check if the user has manually scrolled to the top
-            isAutoScrolling = false;
-            if (Math.floor(chatContent.scrollHeight - chatContent.scrollTop) == Math.floor(chatContent.offsetHeight)) {
-                isAutoScrolling = true;
-            }
-        });
-
-        socket.on('broadcast-message', (jsonStr) => {
-            let json = JSON.parse(jsonStr);
-
-            if (json.username == null) {
-                // message is a system message, such as a chat leave or join.
-                // these messages are displayed differently
-                let ele = document.createElement('div');
-                ele.className = 'server';
-
-                let pEle = document.createElement('p');
-                pEle.className = 'message';
-                pEle.innerText = json.message;
-
-                ele.appendChild(pEle);
-                chatContent.appendChild(ele);
-            } else if (json.username != null) {
-                let ele = document.createElement('div');
-
-                let pEle = document.createElement('p');
-                pEle.className = 'message';
-                pEle.innerText = json.message;
-
-                let nameEle = document.createElement('div');
-                nameEle.className = 'nameBar';
-
-                let namePEle = document.createElement('p');
-                namePEle.innerText = json.username;
-                let imgEle = document.createElement('img');
-                imgEle.src = `/assets/minis/JPGs/${json.mini}.avif`;
-
-                nameEle.appendChild(imgEle);
-                nameEle.appendChild(namePEle);
-                ele.appendChild(nameEle);
-                ele.appendChild(pEle);
-                chatContent.appendChild(ele);
-            }
-
-            // scroll down to reveal most recent message
-            if (isAutoScrolling) chatContent.scrollTop = chatContent.scrollHeight;
-        });
-
-        socket.on('broadcast-user-count', (userCount) => {
-            document.getElementById('usersOnline').innerText = userCount;
-        });
-    });
+        if (pinnedGames && pinnedGames[gameName]) {
+            pinImg.setAttribute('src', 'assets/images/icons/pin.avif');
+        }
+    }
 
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
-    // -------
-    suggestGames(retrievedGames);
-    // ----
+    suggestGames(gameData);
 
-    // set iframe to correct url defined in games.json
-    if (gameData.type == 'proxy') {
-        iframe.src = 'https://a.' + 'megamathstuff.com' + '#' + btoa(gameData.iframe_url);
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('uv-sw.js', {
+            scope: __uv$config.prefix
+        }).then(() => {
+            if (gameData.iframe_url.startsWith('https://')) iframe.src = (__uv$config.prefix + __uv$config.encodeUrl(gameData.iframe_url));
+            else iframe.src = gameData.iframe_url;
+
+            // scratch breaks with proxy
+            if (gameData.iframe_url.startsWith('https://scratch.mit.edu')) iframe.src = gameData.iframe_url;
+       }, (err) => {
+            console.log(err);
+       });
     } else {
-        iframe.src = gameData.iframe_url;
-    }
+        document.querySelector('.lds-dual-ring').remove();
+        document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
+    };
 
     // focus on the iframe. This is necessary for certain games such as eaglercraft
     document.getElementById('iframe').focus();
@@ -229,17 +199,16 @@ window.addEventListener('load', async () => {
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
     document.getElementsByTagName('title')[0].innerHTML = `Totally Science - ${gameName} || Play ${gameName} unblocked on Totally Science`;
     document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
+    document.getElementById('game-title').innerText = `${gameName} Unblocked`;
 
     // update game information
     document.getElementById('description').innerText = gameData.description;
-    document.getElementById('controls').innerText = gameData.controls;
+    document.getElementById('controls').innerHTML = gameData.controls;
     document.getElementById('developer').innerText = `${gameName} was created by ${gameData.developer}.`;
 
     if (gameData.article != null) {
         let artRes = await fetch(gameData.article);
         let artText = await artRes.text();
-
-        console.log(artRes);
 
         document.getElementById('articleDivCon').innerHTML = artText;
         document.getElementById('articleDiv').style.display = '';
@@ -282,44 +251,15 @@ document.getElementById('fullscreen').addEventListener('click', () => {
     }
 });
 
-function suggestGames(games) {
-    const gamesSuggesting = 15;
-
-    let curGameTags = games[gameName].tags;
-    let suggestedGames = [];
-
-    // get random games that have a similar tag to the game being played
-    for (let x = 0; x < Object.keys(games).length - 1; x += 1) {
-        if (suggestGames.length == gamesSuggesting) break;
-
-        let randGame = randomProperty(games);
-
-        if (suggestedGames.includes(randGame)) continue;
-
-        let randGameTags = games[randGame].tags;
-
-        let simTag = randGameTags.find((ele) => curGameTags.includes(ele));
-
-        if (simTag) {
-            suggestedGames.push(randGame);
-        }
-    }
-
-    // if above does not full up gamesSuggesting games, add random ones to fill it in
-    while (suggestedGames.length < gamesSuggesting) {
-        let randGame = randomProperty(games);
-
-        if (suggestedGames.includes(randGame)) continue;
-
-        suggestedGames.push(randGame);
-    }
+async function suggestGames(gameData) {
+    let suggestRes = await fetcher('/recommendations', { body: { tags: gameData.tags } });
+    let suggestedGames = await suggestRes.json();
 
     let gamesDiv = document.querySelector('.gamesCon');
 
-    suggestedGames.forEach((game) => {
-        const data = games[game];
-
-        if (data == null) return '';
+    for (let game in suggestedGames)
+    {
+        const data = suggestedGames[game];
 
         let classlist = data.tags.join(' ');
 
@@ -338,8 +278,7 @@ function suggestGames(games) {
                 <h1 class="innerGameDiv">${game}</h1>
             </div>
         `;
-    });
-
+    }
     addArrowListeners();
 }
 

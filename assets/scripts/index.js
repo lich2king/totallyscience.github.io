@@ -67,8 +67,22 @@ window.addEventListener('load', async() => {
     document.getElementById('gamesnav').classList.add('selected');
 
     // retrieve games from json file
-    let gamesRes = await fetch(`assets/games.json`);
+    let gamesRes = await fetcher('/games');
     games = await gamesRes.json();
+
+    // retrieve featured games
+    let featuresRes = await fetcher('/features');
+    features = await featuresRes.json();
+
+    for (let feature of features)
+    {
+        let index = features.indexOf(feature);
+
+        let featureEle = document.getElementById('feature-' + (index + 1));
+        featureEle.children[0].children[1].innerText = feature.game;
+        featureEle.children[1].onclick = () => { window.open(feature.url, '_self') };
+        featureEle.style.backgroundImage = `url(./assets/images/featuredimg/${feature.image})`;
+    }
 
     loadGames();
 
@@ -169,20 +183,34 @@ async function loadPopularGames() {
 }
 
 async function loadLikedGames() {
+    const likedGamesContainer = document.getElementById('likedGamesCon');
+
     // load user's liked games
     let userLikedRes = await fetcher(`/profile/liked/get`);
 
     if (userLikedRes.status == 200) {
-        const likedGamesContainer = document.getElementById('likedGamesCon');
 
         let likedgames = await userLikedRes.json();
 
-        if (likedgames.length > 5) {
+        if (likedgames.length > 0) {
             document.getElementById('likedGamesLabel').style.display = '';
             document.getElementById('likedGamesHorizontalCon').style.display = '';
 
             for (like in likedgames) {
                 likedGamesContainer.appendChild(createGameButton(likedgames[like]));
+            }
+        }
+    } else {
+        let likedgames = JSON.parse(localStorage.getItem('likedGames'));
+
+        if (Object.keys(likedgames).length > 5) {
+            document.getElementById('likedGamesLabel').style.display = '';
+            document.getElementById('likedGamesHorizontalCon').style.display = '';
+
+            for (like in likedgames) {
+                if (likedgames[like]){
+                    likedGamesContainer.appendChild(createGameButton(like));
+                }
             }
         }
     }
@@ -384,7 +412,6 @@ async function suggestGames() {
 function createGameButton(game, pin, lazy) {
     const data = games[game];
 
-
     if (data == null) return document.createElement('div');
 
     const weekAgo = new Date();
@@ -434,7 +461,7 @@ function createGameButton(game, pin, lazy) {
         button.id = 'newbanner';
 
         let image = document.createElement('img');
-        image.src = 'https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/icons/newbanner.avif';
+        image.src = 'assets/images/icons/newbanner.avif';
 
         button.appendChild(image);
 

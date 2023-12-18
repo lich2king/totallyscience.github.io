@@ -74,7 +74,7 @@ let sortObject = (obj) =>
     .reduce((res, key) => ((res[key] = obj[key]), res), {});
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`assets/games.json`)
+    fetcher('/games')
         .then((response) => response.json())
         .then((retrievedGames) => {
             games = retrievedGames;
@@ -221,7 +221,31 @@ async function displayGames() {
             }
         }
 
-        if (length > 5) {
+        if (length > 0) {
+            recentRow.appendChild(recentGamesContainer);
+            gamesDiv.prepend(recentRow);
+            gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
+        }
+    } else {
+        let recentRow = document.createElement('div');
+        recentRow.classList.add('horizontalCon');
+        let recentGamesContainer = document.createElement('div');
+        recentGamesContainer.classList.add('gamesCon');
+        //add the arrows to the horizontal Con
+        recentRow.innerHTML += arrowContainer;
+
+        likedgames = JSON.parse(localStorage.getItem('likedGames') || '{}');
+        let length = Object.keys(likedgames).length;
+
+        if (length > 0) {
+            for (like in likedgames) {
+                if (document.getElementsByName(like).length > 0) {
+                    recentGamesContainer.innerHTML += createGameButton(like);
+                }
+            }
+        }
+
+        if (length > 0) {
             recentRow.appendChild(recentGamesContainer);
             gamesDiv.prepend(recentRow);
             gamesDiv.innerHTML = `<h1>Liked Games</h1>` + gamesDiv.innerHTML;
@@ -360,7 +384,7 @@ function createGameButton(game, pin) {
 
     if (gameDate > weekAgo) {
         classlist += ' new';
-        buttons += "<button id='newbanner'><img src='https://totallyscience.co/cdn-cgi/image/height=120,width=220/https://totallyscience.co/assets/images/icons/newbanner.avif'></button>";
+        buttons += "<button id='newbanner'><img src='assets/images/icons/newbanner.avif'></button>";
     }
 
     if (pin != 'suggested') {

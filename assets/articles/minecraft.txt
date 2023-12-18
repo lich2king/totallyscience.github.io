@@ -7,13 +7,8 @@
                     game. It provides a detailed overview of the mod, including its features and mechanics, as
                     well as popular mods that bring the thrill of skiing into the Minecraft universe.</em></p>
             <!-- Read more button centered -->
-            <div class="center" style="text-align:center" id="readMoreB">
-                <a onclick="document.getElementById('article').style.fontSize=''; document.getElementById('readMoreB').style.display='none';"
-                    target="_blank" class="button-effect-a"
-                    style="color: var(--dark-accent); text-decoration: underline; cursor:pointer;">Read
-                    More</a>
-            </div>
-            <div id="article" style="font-size: 0px;">
+            
+            <div id="article" style="">
                 <h1>Incredible Skiing Adventures in Minecraft: All About Skiing Fashion</h1>
                 <p>The Minecraft game needs no introduction. She has won the hearts of millions of gamers with her
                     freedom of creativity and research, as well as endless opportunities to implement a variety of

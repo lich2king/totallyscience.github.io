@@ -4,11 +4,16 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/class.css?v69'>
+    <link rel='stylesheet' href='assets/styles/class.css?v70'>
+
+	<script src="assets/scripts/uv/uv.bundle.js" type="text/javascript"></script>
+	<script src="assets/scripts/uv/uv.config.js" type="text/javascript"></script>
 </head>
 
 <body>
     <?php include "assets/includes/navbar.php" ?>
+
+    <h1 id="game-title"></h1>
 
     <div id="gameframe">
         <div class="ad">
@@ -39,16 +44,8 @@
                 </div>
             </div>
         </div>
-        <div class="chat">
-            <div class='top'>
-                <p><span id="usersOnline">0</span> users online</p>
-            </div>
-            <div class='content' id='chatContent'>
-            </div>
-            <div class='write'>
-                <input type='text' id='messageBox' placeholder='Type a message...' maxlength='50'>
-                <button id='sendChat' class='button-effect-a'><img src='assets/images/icons/send.avif'></button>
-            </div>
+        <div class="ad">
+            <div class="adsrc"></div>
         </div>
     </div>
 
@@ -56,15 +53,15 @@
         <div class="container">
             <div class="segmentAd">
                 <div class="text">
-                    <h1>Description</h1>
+                    <h2>Description</h2>
                     <p id="description"></p>
                     <div class="break"></div>
 
-                    <h1>Controls</h1>
+                    <h2>Controls</h2>
                     <p id="controls"></p>
                     <div class="break"></div>
 
-                    <h1>Created By</h1>
+                    <h2>Created By</h2>
                     <p id="developer"></p>
                 </div>
 
@@ -74,7 +71,7 @@
     </div>
 
     <div id="games">
-        <h1>Recommended Games</h1>
+        <h2>Recommended Games</h2>
 
         <div class="horizontalCon">
             <div class="arrowsCon">
@@ -100,8 +97,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/socket.io.min.js"></script>
-    <script src="assets/scripts/class.js?v222"></script>
+    <script src="assets/scripts/class.js?v33"></script>
 </body>
 
 </html>

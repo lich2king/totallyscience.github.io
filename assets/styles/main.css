@@ -18,23 +18,25 @@
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    /* prevent highlight */
-    /* -webkit-user-select: none; */
-    /* Safari */
-    /* -ms-user-select: none; */
-    /* IE 10 and IE 11 */
-    /* user-select: none; */
-    /* Standard syntax */
-}
-
-.error {
-    color: var(--error-color);
 }
 
 body {
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
+}
+
+.error {
+    color: var(--error-color);
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h1,
@@ -49,6 +51,7 @@ label {
     font-family: 'Rubik', sans-serif;
 }
 
+/* navbar */
 #navbar {
     position: fixed;
     display: flex;
@@ -69,7 +72,6 @@ label {
     display: inline-flex;
     align-items: center;
 }
-
 .nav-button a {
     text-decoration: none;
     font-size: 17px;
@@ -83,7 +85,6 @@ label {
     display: flex;
     align-items: center;
 }
-
 #login {
     margin-top: 18px;
     margin-right: 0.5vw;
@@ -108,11 +109,9 @@ label {
     width: 100%;
     height: 100%;
 }
-
 #middlebar img {
     width: 50px;
 }
-
 #middlebar h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 30px;
@@ -129,7 +128,6 @@ label {
     height: 100%;
     padding-right: 1vw;
 }
-
 #rightbar .searchbar {
     display: flex;
     align-items: center;
@@ -137,7 +135,6 @@ label {
     margin-right: 20px;
     width: 230px;
 }
-
 #rightbar .searchbar p {
     padding: 7px;
     padding-top: 5px;
@@ -152,14 +149,12 @@ label {
     align-items: center;
     gap: 10px;
 }
-
 #rightbar .points {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 20px;
 }
-
 #rightbar .points p {
     padding: 7px;
     padding-top: 5px;
@@ -169,18 +164,8 @@ label {
     color: var(--light-color);
     white-space: nowrap;
 }
-
 #rightbar p {
     font-size: 17px;
-}
-
-#gp {
-    background-color: #f75dfc;
-    line-height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    transition: all 0.1s;
 }
 
 @media (max-width: 1050px) {
@@ -192,7 +177,6 @@ label {
         margin-right: 20px;
     }
 }
-
 @media (max-width: 675px) {
     #middlebar {
         position: absolute;
@@ -214,14 +198,12 @@ label {
     }
 }
 
-.not-selectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#searchbar {
+    width: 20px;
+    height: 15px;
+    background-color: #333;
 }
+/* end navbar */
 
 /*#region scrollbar*/
 
@@ -229,30 +211,21 @@ label {
     width: 5px;
 }
 
-/* Track */
-
+/* page-scrollbar */
 ::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 15px;
 }
-
-/* Handle */
-
 ::-webkit-scrollbar-thumb {
     background: var(--accent-color);
     border-radius: 10px;
 }
-
-/* Handle on hover */
-
 ::-webkit-scrollbar-thumb:hover {
     background: #bc47c0;
 }
+/* end page-scrollbar */
 
-/*#endregion*/
-
-/*#region Footer */
-
+/* footer */
 footer {
     margin-top: 18vh;
     position: relative;
@@ -271,7 +244,6 @@ footer .footSections {
     justify-content: center;
     text-align: center;
 }
-
 footer .footSection {
     width: 25vw;
     height: 100%;
@@ -309,8 +281,7 @@ footer .bottomFoot {
     font-size: 0.8vw;
     font-family: 'Rubik';
 }
-
-/*#endregion*/
+/* end footer */
 
 input[type='text'],
 input[type='password'] {
@@ -383,11 +354,9 @@ select {
     transition: opacity 0.3s ease;
     transition: transform 0.1s ease;
 }
-
 .button:hover {
     transform: scale(1.05);
 }
-
 .button > img,
 .button > span {
     vertical-align: middle;
@@ -402,37 +371,18 @@ a {
     font-family: 'Rubik';
 }
 
-.comingsoon a {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-#shusheomji img {
+#tilde-icon {
     width: 35px;
 }
 
-#searchbar {
-    width: 20px;
-    height: 15px;
-    background-color: #333;
-}
-
-/*Tool tip!*/
-
-/* START TOOLTIP STYLES */
-
+/* tooltip */
 [tooltip] {
     position: relative;
-    /* opinion 1 */
 }
-
-/* Applies to all tooltips */
-
 [tooltip]::before,
 [tooltip]::after {
     text-transform: none;
-    /* opinion 2 */
     font-size: 0.9em;
-    /* opinion 3 */
     line-height: 0.7;
     user-select: none;
     pointer-events: none;
@@ -440,25 +390,15 @@ a {
     display: none;
     opacity: 0;
 }
-
 [tooltip]::before {
     content: '';
     border: 4px solid transparent;
-    /* opinion 4 */
     z-index: 1001;
-    /* absurdity 1 */
 }
-
 [tooltip]::after {
     content: attr(tooltip);
-    /* magic! */
-    /* most of the rest of this is opinion */
     font-family: Rubik;
     text-align: center;
-    /* 
-      Let the content set the size of the tooltips 
-      but this will also keep them from being obnoxious
-      */
     min-width: 3em;
     max-width: 21em;
     white-space: nowrap;
@@ -470,37 +410,25 @@ a {
     background: #333;
     color: #fff;
     z-index: 1000;
-    /* absurdity 2 */
 }
-
-/* Make the tooltips respond to hover */
-
 [tooltip]:hover::before,
 [tooltip]:hover::after {
     display: block;
 }
-
-/* don't show empty tooltips */
-
 [tooltip='']::before,
 [tooltip='']::after {
     display: none !important;
 }
-
-/* FLOW: UP */
-
 [tooltip]:not([flow])::before,
 [tooltip][flow^='up']::before {
     bottom: 100%;
     border-bottom-width: 0;
     border-top-color: #333;
 }
-
 [tooltip]:not([flow])::after,
 [tooltip][flow^='up']::after {
     bottom: calc(100% + 5px);
 }
-
 [tooltip]:not([flow])::before,
 [tooltip]:not([flow])::after,
 [tooltip][flow^='up']::before,
@@ -508,27 +436,19 @@ a {
     left: 50%;
     transform: translate(-50%, -0.5em);
 }
-
-/* FLOW: DOWN */
-
 [tooltip][flow^='down']::before {
     top: 100%;
     border-top-width: 0;
     border-bottom-color: #333;
 }
-
 [tooltip][flow^='down']::after {
     top: calc(100% + 5px);
 }
-
 [tooltip][flow^='down']::before,
 [tooltip][flow^='down']::after {
     left: 50%;
     transform: translate(-50%, 0.5em);
 }
-
-/* FLOW: LEFT */
-
 [tooltip][flow^='left']::before {
     top: 50%;
     border-right-width: 0;
@@ -536,15 +456,11 @@ a {
     left: calc(0em - 5px);
     transform: translate(-0.5em, -50%);
 }
-
 [tooltip][flow^='left']::after {
     top: 50%;
     right: calc(100% + 5px);
     transform: translate(-0.5em, -50%);
 }
-
-/* FLOW: RIGHT */
-
 [tooltip][flow^='right']::before {
     top: 50%;
     border-left-width: 0;
@@ -552,14 +468,11 @@ a {
     right: calc(0em - 5px);
     transform: translate(0.5em, -50%);
 }
-
 [tooltip][flow^='right']::after {
     top: 50%;
     left: calc(100% + 5px);
     transform: translate(0.5em, -50%);
 }
-
-/* KEYFRAMES */
 
 @keyframes tooltips-vert {
     to {
@@ -567,15 +480,12 @@ a {
         transform: translate(-50%, 0);
     }
 }
-
 @keyframes tooltips-horz {
     to {
         opacity: 0.9;
         transform: translate(0, -50%);
     }
 }
-
-/* FX All The Things */
 
 [tooltip]:not([flow]):hover::before,
 [tooltip]:not([flow]):hover::after,
@@ -585,18 +495,15 @@ a {
 [tooltip][flow^='down']:hover::after {
     animation: tooltips-vert 300ms ease-out forwards;
 }
-
 [tooltip][flow^='left']:hover::before,
 [tooltip][flow^='left']:hover::after,
 [tooltip][flow^='right']:hover::before,
 [tooltip][flow^='right']:hover::after {
     animation: tooltips-horz 300ms ease-out forwards;
 }
+/* end tooltip */
 
-/* end tool*/
-
-/*#region games*/
-
+/* games */
 #gameDiv {
     width: 220px;
     height: 120px;
@@ -613,23 +520,25 @@ a {
     align-items: center;
     position: relative;
 }
-
+#gameDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    outline: 3px solid var(--accent-color);
+    z-index: 1;
+}
 #gameDiv:after {
     content: '';
     opacity: 0;
     position: absolute;
     left: 0;
     bottom: 0;
-    min-width: 220px;
-    min-height: 120px;
-    max-width: 220px;
-    max-height: 120px;
+    height: 120px;
+    width: 220px;
     border-radius: 20px;
     background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.3) 100%);
     transition: box-shadow 0.6s var(--bezier), opacity 0.2s var(--bezier);
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.24);
 }
-
 #gameDiv:hover:after {
     opacity: 1;
 }
@@ -645,20 +554,15 @@ a {
     justify-content: center;
     align-items: center;
 }
-
 #gameDiv .imageCon.partner {
     background-color: var(--dark-accent);
 }
-
 #gameDiv .imageCon img {
     object-fit: cover;
     border-radius: 20px;
-    width: 220px !important;
-    height: 120px !important;
-    width: auto;
-    height: auto;
+    width: 220px;
+    height: 120px;
 }
-
 #gameDiv .imageCon img.partner {
     object-fit: contain;
     border-radius: 20px;
@@ -670,17 +574,6 @@ a {
     width: 100%;
     height: 100%;
     border-radius: 30px;
-}
-
-#gameDiv:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    outline: 3px solid var(--accent-color);
-    z-index: 1;
-}
-
-#gameDiv {
-    position: relative;
 }
 
 #gameDiv .innerGameDiv {
@@ -699,12 +592,10 @@ a {
     margin: 0%;
     z-index: 4;
 }
-
 #gameDiv:hover .innerGameDiv {
     visibility: visible;
     opacity: 1;
 }
-
 #gameDiv #pin {
     position: absolute;
     top: -10%;
@@ -732,13 +623,10 @@ a {
     background-color: transparent;
     cursor: pointer;
 }
-
 #newbanner img {
     width: 80px;
     height: 80px;
 }
-
-/*#endregion*/
 
 .horizontalCon {
     text-align: center;
@@ -753,12 +641,10 @@ a {
     overflow-x: scroll;
     white-space: nowrap;
     width: 100vw;
-    /* background-color: aqua; */
     padding-top: 7px;
     padding-bottom: 7px;
     gap: 10px;
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
@@ -766,10 +652,8 @@ a {
 .horizontalCon .gamesCon #gameDiv:nth-child(1) {
     margin-left: 2%;
 }
-
 .horizontalCon .gamesCon::-webkit-scrollbar {
     display: none;
-    /* Safari and Chrome */
 }
 
 .horizontalCon .arrowsCon {
@@ -800,7 +684,6 @@ a {
 .arrowsCon .arrowCon .arrow {
     width: 25px;
     transition: transform 0.1s;
-    /* visibility: hidden; */
     opacity: 0;
     transition: all 0.2s;
     pointer-events: none;
@@ -816,7 +699,6 @@ a {
 }
 
 .horizontalCon:hover > .arrowsCon .arrowCon .arrow {
-    /* visibility: visible !important; */
     opacity: 1 !important;
 }
 
@@ -825,7 +707,7 @@ a {
 }
 
 #games {
-    padding: 2%;
+    padding: 0 2% 2% 2%;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -848,3 +730,4 @@ a {
     font-size: 1.1rem;
     margin-left: 10px;
 }
+/* end games */

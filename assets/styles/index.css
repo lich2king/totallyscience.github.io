@@ -134,12 +134,17 @@
 }
 
 #scisuggests {
-    margin-top: 10px;
     display: flex;
-    flex: 1.2;
+    flex: 2;
     flex-wrap: wrap;
     gap: 2vh;
-    justify-content: flex-end;
+}
+
+#scisuggests #gameDiv {
+    width: 30% !important;
+}
+#scisuggests #gameDiv .imageCon img {
+    width: 100% !important;
 }
 
 #info {
@@ -167,7 +172,7 @@
 
 #feature {
     display: flex;
-    flex: 2;
+    flex: 1.5;
     align-content: center;
     justify-content: center;
     align-self: center;
@@ -182,7 +187,7 @@
     align-items: center;
     border: 3px solid var(--accent-color);
     border-radius: 40px;
-    height: 50vh;
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -211,12 +216,14 @@
 }
 
 #feature .featureSlot .overlay .gametext {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
 }
 
 .featureButton {
     position: absolute;
-    margin-top: 30%;
+    margin-top: 175px;
+    border-radius: 15px;
+    padding: 15px 20px 15px 20px;
 }
 
 .featureButton svg {
