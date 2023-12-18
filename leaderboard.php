@@ -49,7 +49,7 @@
     #highscores {
         margin-top: 80px;
         width: 100vw;
-        margin-bottom: 20vh;
+        /* margin-bottom: 20vh; */
     }
 
     #highscore {
@@ -183,8 +183,7 @@
     <div id="highscores">
         <div id="submitB">
             <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span>
-                <img style="padding-left:0.5vw" width="16vw"
-                    src="assets/images/icons/arrow-right-white.svg">
+                <img style="padding-left:0.5vw" width="16vw" src="assets/images/icons/arrow-right-white.svg">
             </button>
         </div>
     </div>
@@ -192,37 +191,37 @@
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-        window.addEventListener('load', async () => {
-            const searchBar = document.getElementById('searchBar');
-            const scoresDiv = document.getElementById('highscores');
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const gameName = urlParams.get('class');
+    window.addEventListener('load', async () => {
+        const searchBar = document.getElementById('searchBar');
+        const scoresDiv = document.getElementById('highscores');
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const gameName = urlParams.get('class');
 
-            let response = await fetcher(`/auth/check`);
-            if (response.status == 200) {
-                // display points count in navbar
-                let json = await response.json();
-                setPointsDisplay(json.points || 0);
-            }
+        let response = await fetcher(`/auth/check`);
+        if (response.status == 200) {
+            // display points count in navbar
+            let json = await response.json();
+            setPointsDisplay(json.points || 0);
+        }
 
-            // update link in navbar
-            document.getElementById("leaderboardnav").classList.add("selected");
+        // update link in navbar
+        document.getElementById("leaderboardnav").classList.add("selected");
 
-            // fetch list of highscores
-            let highscoresRes = await fetcher(`/profile/highscores/view`);
-            let text = await highscoresRes.text();
-            let highscores = JSON.parse(text);
+        // fetch list of highscores
+        let highscoresRes = await fetcher(`/profile/highscores/view`);
+        let text = await highscoresRes.text();
+        let highscores = JSON.parse(text);
 
-            let gamesRes = await fetch(`assets/games.json`);
-            let games = await gamesRes.json();
+        let gamesRes = await fetch(`assets/games.json`);
+        let games = await gamesRes.json();
 
-            for (score in highscores) {
-                const game = highscores[score].game;
-                const name = highscores[score].name;
-                const gameScore = highscores[score].score;
-                if (game != null) {
-                    const highscoreDiv = `
+        for (score in highscores) {
+            const game = highscores[score].game;
+            const name = highscores[score].name;
+            const gameScore = highscores[score].score;
+            if (game != null) {
+                const highscoreDiv = `
                         <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game.replaceAll(' ', '-')}'">
                             <div class="text">
                                 <h1>${game}</h1>
@@ -238,48 +237,48 @@
                         </div>
                     `;
 
-                    scoresDiv.innerHTML += highscoreDiv;
-                }
+                scoresDiv.innerHTML += highscoreDiv;
             }
+        }
 
-            if (gameName) {
-                let highscored = false;
+        if (gameName) {
+            let highscored = false;
 
-                for (score in highscores) {
-                    const game = highscores[score].game;
+            for (score in highscores) {
+                const game = highscores[score].game;
 
-                    if (game == gameName) highscored = true;
-                }
-                if (highscored) {
-                    document.getElementsByName(`${gameName}`)[0].scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                        inline: "nearest"
-                    });
-                } else {
-                    document.getElementById("nohighscore").style.display = '';
-                    document.getElementById("nohighscore").innerText =
-                        `No current highscore set for ${gameName}`;
-                }
+                if (game == gameName) highscored = true;
             }
-
-
-            searchBar.addEventListener('keyup', () => {
-                document.getElementById('top').scrollIntoView({
-                    block: "start",
+            if (highscored) {
+                document.getElementsByName(`${gameName}`)[0].scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
                     inline: "nearest"
                 });
+            } else {
+                document.getElementById("nohighscore").style.display = '';
+                document.getElementById("nohighscore").innerText =
+                    `No current highscore set for ${gameName}`;
+            }
+        }
 
-                const input = searchBar.value.toUpperCase();
-                const highscoreDivs = document.getElementsByClassName("highscore");
 
-                for (highscore in highscoreDivs) {
-                    if (highscoreDivs[highscore].getAttribute('name').toUpperCase().includes(input))
-                        highscoreDivs[highscore].setAttribute('style', 'display:');
-                    else highscoreDivs[highscore].setAttribute('style', 'display:none');
-                }
+        searchBar.addEventListener('keyup', () => {
+            document.getElementById('top').scrollIntoView({
+                block: "start",
+                inline: "nearest"
             });
+
+            const input = searchBar.value.toUpperCase();
+            const highscoreDivs = document.getElementsByClassName("highscore");
+
+            for (highscore in highscoreDivs) {
+                if (highscoreDivs[highscore].getAttribute('name').toUpperCase().includes(input))
+                    highscoreDivs[highscore].setAttribute('style', 'display:');
+                else highscoreDivs[highscore].setAttribute('style', 'display:none');
+            }
         });
+    });
     </script>
 </body>
 
