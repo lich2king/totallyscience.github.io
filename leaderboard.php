@@ -15,7 +15,6 @@
         z-index: 12;
         padding-top: 10px;
         margin-bottom: 10px;
-        background-color: var(--background-color);
         top: 60px;
     }
 
@@ -56,7 +55,7 @@
         position: relative;
         z-index: 3;
         text-align: center;
-        background-color: var(--accent-color);
+        background-color: #f75dfc;
         margin: auto;
         border-radius: 30px;
         width: 35vw;
@@ -67,48 +66,47 @@
 
     #highscore:hover {
         cursor: pointer;
-        transform: scale(1.025);
+        outline: .3vw solid #69256b;
     }
 
     #highscore .text {
-        width: 50%;
         height: 100%;
-        float: left;
-        padding: 1vh 0;
+        margin-left: 2vw;
+        margin-top: 2vw;
     }
 
     #highscore h1,
     p,
     h2 {
-        color: var(--light-color);
+        color: white;
         font-family: 'Rubik';
         margin: 1vh;
+        display: flex;
+        margin-left: 12vw;
     }
 
     #highscore p {
         font-size: 1vw;
+        opacity: 90%;
     }
 
     #highscore h1 {
         font-size: 1.5vw;
+
     }
 
-    #highbcore h2 {
-        text-shadow: var(--dark-color) 1px 0 10px;
+    #highscore h2 {
+        text-shadow: #FFD700 0 1px 1vw;
+        font-size: 2.3vw;
     }
 
     #highscore .image {
-        width: 50%;
-        height: 100%;
-        float: right;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: -7.5vw;
     }
 
     #highscore .image div {
-        margin-left: 2vw;
-        border-radius: 30px;
+        margin-left: 1vw;
+        border-radius: 20px;
         height: 12vh;
         width: 12vw;
         background-position: center;
@@ -175,14 +173,14 @@
     <div id="top"></div>
 
     <div id="searchDiv">
-        <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search by game">
+        <input type="text" name="search" value="" autocomplete="off" id="searchBar" placeholder="Search highscores by game">
     </div>
 
     <h1 id="nohighscore" style="display:none"></h1>
 
     <div id="highscores">
         <div id="submitB">
-            <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit Highscore</span>
+            <button class="button" onclick="window.open('submithighscore.php', '_self')"><span>Submit A Highscore</span>
                 <img style="padding-left:0.5vw" width="16vw"
                     src="assets/images/icons/arrow-right-white.svg">
             </button>
@@ -225,11 +223,12 @@
                     const highscoreDiv = `
                         <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game.replaceAll(' ', '-')}'">
                             <div class="text">
-                                <h1>${game}</h1>
+                                <h1>🎮 ${game}</h1>
 
-                                <h2>${gameScore}</h2>
+                                <p>👤 ${name}</p>
 
-                                <p>${name}</p>
+                                <h2>🏆 ${gameScore}</h2>
+
                             </div>
 
                             <div class="image">
