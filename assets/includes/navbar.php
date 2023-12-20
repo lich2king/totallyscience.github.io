@@ -29,7 +29,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p><span id="pointsDisplay">0</span> pts</p>
         </div>
 
-        <div class="nav-button" tooltip="Press this key to return to Google Classroom! " flow="down">
+        <div class="nav-button" tooltip="Panic Key" flow="down">
             <img id="tilde-icon" style="cursor:pointer;" onclick="window.open('https:/\/classroom.google.com', '_blank')" src="../assets/images/icons/tilde-key.avif">
         </div>
 
