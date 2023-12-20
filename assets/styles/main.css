@@ -566,8 +566,6 @@ a {
 #gameDiv .imageCon img.partner {
     object-fit: contain;
     border-radius: 20px;
-    height: 10px;
-    width: 10px;
 }
 
 #gameDiv input {
