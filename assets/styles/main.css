@@ -729,3 +729,18 @@ a {
     margin-left: 10px;
 }
 /* end games */
+
+/* message */
+.message {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    z-index: 99999;
+    min-width: 150px;
+    padding: 15px;
+    color: var(--light-color);
+    font-family: Rubik;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+}

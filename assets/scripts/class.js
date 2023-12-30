@@ -146,6 +146,16 @@ window.addEventListener('load', async () => {
 
         // display user like and pin status of game
         displayUserData();
+
+        // start requesting 50 points for active playtime every 15 minutes
+        setInterval(async () => {
+            let claimRes = await fetcher(`/points/active/claim`);
+
+            if (claimRes.status == 200)
+            {
+                message('+50 pts for playing');
+            }
+        }, 1000 * 60 * 15);
     }
     else {
         const pinBtn = document.querySelector('#pin');

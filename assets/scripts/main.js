@@ -197,3 +197,16 @@ function getCookie(name) {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
+
+function message(msg)
+{
+    let msgEle = document.createElement('div');
+    msgEle.className = 'message';
+    msgEle.innerText = msg;
+
+    document.body.appendChild(msgEle);
+
+    setTimeout(() => {
+        document.body.removeChild(msgEle);
+    }, 3000);
+}
