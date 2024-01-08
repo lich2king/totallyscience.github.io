@@ -60,7 +60,7 @@
         border-radius: 30px;
         width: 70vw;
         max-width: 400px;
-        height: 15vh;
+        height: 120px;
         margin-bottom: 5vh;
         transition: 0.1s;
         overflow: hidden;
@@ -73,7 +73,7 @@
 
     #highscore .text {
         width: 50%;
-        margin-right: 10%;
+        margin-right: 8%;
         height: 100%;
         float: right;
         padding: 1vh 0;
@@ -85,7 +85,7 @@
         white-space: nowrap;
         color: var(--light-color);
         font-family: 'Rubik';
-        margin: 5px;
+        margin: 7px;
     }
 
     #highscore p {
@@ -123,7 +123,7 @@
 
     #highscore .image div {
         border-radius: 30px;
-        height: 12vh;
+        height: 80%;
         width: 100%;
         margin-left: 10px;
         background-position: center;
