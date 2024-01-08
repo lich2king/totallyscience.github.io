@@ -55,14 +55,15 @@
     #highscore {
         position: relative;
         z-index: 3;
-        text-align: center;
         background-color: var(--accent-color);
         margin: auto;
         border-radius: 30px;
-        width: 35vw;
+        width: 70vw;
+        max-width: 400px;
         height: 15vh;
         margin-bottom: 5vh;
         transition: 0.1s;
+        overflow: hidden;
     }
 
     #highscore:hover {
@@ -72,45 +73,59 @@
 
     #highscore .text {
         width: 50%;
+        margin-right: 10%;
         height: 100%;
-        float: left;
+        float: right;
         padding: 1vh 0;
     }
 
     #highscore h1,
     p,
-    h2 {
+    h3 {
+        white-space: nowrap;
         color: var(--light-color);
         font-family: 'Rubik';
-        margin: 1vh;
+        margin: 5px;
     }
 
     #highscore p {
-        font-size: 1vw;
+        vertical-align: middle;
+        
+    }
+    #highscore p img {
+        width: 25px;
+        border-radius: 8px;
+        vertical-align: middle;
     }
 
     #highscore h1 {
         font-size: 1.5vw;
     }
+    #highscore h1 svg {
+        vertical-align: middle;
+    }
+    #highscore h1 span {
+        vertical-align: middle;
+    }
 
-    #highbcore h2 {
+    #highbcore h3 {
         text-shadow: var(--dark-color) 1px 0 10px;
     }
 
     #highscore .image {
-        width: 50%;
+        width: 40%;
         height: 100%;
-        float: right;
+        float: left;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     #highscore .image div {
-        margin-left: 2vw;
         border-radius: 30px;
         height: 12vh;
-        width: 12vw;
+        width: 100%;
+        margin-left: 10px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -221,18 +236,30 @@
             const name = highscores[score].name;
             const gameScore = highscores[score].score;
             if (game != null) {
+                let userMiniRes = await fetcher(`/profile/userdata/${name}`);
+                let userMiniJson = await userMiniRes.json();
+
                 const highscoreDiv = `
                         <div class="highscore" name="${game}" id="highscore" onclick="location.href = 'class.php?class=${game.replaceAll(' ', '-')}'">
-                            <div class="text">
-                                <h1>${game}</h1>
-
-                                <h2>${gameScore}</h2>
-
-                                <p>${name}</p>
-                            </div>
-
                             <div class="image">
                                 <div style="background-image: url('${games[game].image}');"></div>
+                            </div>
+
+                            <div class="text">
+                                <h1>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD700" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+                                        <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/>
+                                    </svg>
+
+                                    <span>${game}</span>
+                                </h1>
+
+                                <h3>${gameScore}</h3>
+
+                                <p>
+                                    <img src="assets/minis/JPGs/${userMiniJson.activeMini}.avif">
+                                    ${name}
+                                </p>
                             </div>
                         </div>
                     `;
