@@ -59,8 +59,8 @@
         margin: auto;
         border-radius: 30px;
         width: 70vw;
-        max-width: 400px;
-        height: 120px;
+        max-width: 450px;
+        height: 140px;
         margin-bottom: 5vh;
         transition: 0.1s;
         overflow: hidden;
@@ -97,10 +97,6 @@
         border-radius: 8px;
         vertical-align: middle;
     }
-
-    #highscore h1 {
-        font-size: 1.5vw;
-    }
     #highscore h1 svg {
         vertical-align: middle;
     }
@@ -136,7 +132,6 @@
         text-align: center;
         color: var(--light-color);
         font-family: 'Rubik';
-        font-size: 1.5vw;
     }
 
     #verticalAds {
