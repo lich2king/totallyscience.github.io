@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // display points count in navbar
     token = await response.json();
-    setPointsDisplay(token.points || 0);
+    setPointsDisplay(token.points || 0, token.username || "");
 
     document.getElementById('usernameSpan').innerText = token.username;
     document.getElementById('emailSpan').innerText = token.email;

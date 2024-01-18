@@ -10,7 +10,7 @@ window.addEventListener('load', async() => {
     } else {
         // display points count in navbar
         token = await response.json();
-        setPointsDisplay(token.points || 0);
+        setPointsDisplay(token.points || 0, token.username || "");
     }
 });
 

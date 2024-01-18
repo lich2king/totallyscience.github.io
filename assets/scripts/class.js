@@ -142,7 +142,7 @@ window.addEventListener('load', async () => {
     if (response.status == 200) {
         // display points count in navbar
         json = await response.json();
-        setPointsDisplay(json.points || 0);
+        setPointsDisplay(json.points || 0, json.username || "");
 
         // display user like and pin status of game
         displayUserData();

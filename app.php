@@ -19,7 +19,7 @@
 
     <p style="text-align: center; color: whitesmoke; font-size: 15pt;">powered by <a target="_blank" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet,</a> a Titanium Network proxy</p>
 
-    <script src="assets/scripts/main.js?v53"></script>
+    <script src="assets/scripts/main.js?v54"></script>
     <script>
         document.getElementById("appsnav").classList.add("selected");
 
@@ -60,7 +60,7 @@
             if (response.status == 200) {
                 // display points count in navbar
                 let json = await response.json();
-                setPointsDisplay(json.points || 0);
+                setPointsDisplay(json.points || 0, json.username || "");
             }
         });
     </script>

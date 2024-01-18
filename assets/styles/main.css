@@ -89,6 +89,11 @@ label {
     margin-top: 18px;
     margin-right: 0.5vw;
 }
+#login img {
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+}
 
 .selected a {
     border-bottom: 2px solid var(--light-color);

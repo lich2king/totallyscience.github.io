@@ -121,7 +121,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/profile.js?v108"></script>
+    <script src="assets/scripts/profile.js?v109"></script>
 </body>
 
 </html>

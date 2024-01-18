@@ -121,7 +121,7 @@
             if (response.status == 200) {
                 // display points count in navbar
                 let json = await response.json();
-                setPointsDisplay(json.points || 0);
+                setPointsDisplay(json.points || 0, json.username || "");
             }
         });
     </script>
