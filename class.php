@@ -63,6 +63,9 @@
 
                     <h2>Created By</h2>
                     <p id="developer"></p>
+
+                    <h2>Highscore</h2>
+                    <p id="highscore"></p>
                 </div>
 
                 <div class="ad"></div>
@@ -97,7 +100,7 @@
 
     <?php include "assets/includes/footer.php" ?>
 
-    <script src="assets/scripts/class.js?v35"></script>
+    <script src="assets/scripts/class.js?v36"></script>
 </body>
 
 </html>
