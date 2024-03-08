@@ -1,9 +1,21 @@
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGRTD4B');</script>
+})(window,document,'script','dataLayer','GTM-KGRTD4B');</script> -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BW3SZSE47T"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'G-BW3SZSE47T');
+</script>
 <!-- End Google Tag Manager -->
 
 <title>Totally Science - Free Online Unblocked Games</title>
@@ -48,11 +60,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- WG Universal adCode -->
 <script type="text/javascript" async>
-    ! function(e, t) {
-        a = e.createElement("script"), m = e.getElementsByTagName("script")[0], a.async = 1, a.src = t, m.parentNode
-            .insertBefore(a, m)
-    }(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location
-        .pathname + "&ws=" + window.location.search);
+! function(e, t) {
+    a = e.createElement("script"), m = e.getElementsByTagName("script")[0], a.async = 1, a.src = t, m.parentNode
+        .insertBefore(a, m)
+}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location
+    .pathname + "&ws=" + window.location.search);
 </script>
 
 <script src="../assets/scripts/sweetalert.min.js"></script>
