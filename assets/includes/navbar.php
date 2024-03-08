@@ -1,6 +1,6 @@
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGRTD4B"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGRTD4B" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="navbar">
@@ -13,8 +13,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div id="middlebar">
-        <img
-            src="https://totallyscience.co/cdn-cgi/image/height=120,width=220/https:/totallyscience.co/assets/images/transparentlogo.png"></img>
+        <img src="https://totallyscience.co/assets/images/transparentlogo.png"></img>
         <h1>Totally Science</h1>
     </div>
 
@@ -30,7 +29,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="nav-button" tooltip="Panic Key" flow="down">
-            <img id="tilde-icon" style="cursor:pointer;" onclick="window.open('https:/\/classroom.google.com', '_blank')" src="../assets/images/icons/tilde-key.avif">
+            <img id="tilde-icon" style="cursor:pointer;"
+                onclick="window.open('https:/\/classroom.google.com', '_blank')"
+                src="../assets/images/icons/tilde-key.avif">
         </div>
 
         <a id="login" href="profile.php">
