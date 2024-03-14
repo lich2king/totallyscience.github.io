@@ -14,7 +14,7 @@
         <div class="backbar">
             <div id="rewardDayBar" class="bar" style="width:0%"></div>
             <div class="dayCon">
-                <p>Day 2</p>
+                <p>Day 1</p>
                 <p>Day 2</p>
                 <p>Day 3</p>
                 <p>Day 4</p>
