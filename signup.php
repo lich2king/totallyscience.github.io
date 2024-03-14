@@ -11,7 +11,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <form id="survey" action="javascript:SubmitSignUp()">
+    <!-- <form id="survey" action="javascript:SubmitSignUp()">
         <div>
             <label for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
@@ -58,71 +58,75 @@
         <p style="text-align: center;">Already have an account? <a href="login.php">Login instead</a></p>
     </form>
 
-    <p style="text-align: center; color: red;" id="errorText"></p>
-
+    <p style="text-align: center; color: red;" id="errorText"></p> -->
+    <div style="height: 20vh"></div>
+    <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
+        <h1>New signups are temporarely paused.</h1>
+    </div>
+    <div style="height: 35vh"></div>
     <?php include "assets/includes/footer.php" ?>
 
     <script>
-        let inProgress = false;
+    let inProgress = false;
 
-        window.addEventListener('load', async () => {
-            let response = await fetcher(`/auth/check`);
+    window.addEventListener('load', async () => {
+        let response = await fetcher(`/auth/check`);
 
-            if (response.status == 200) {
-                location.href = 'profile.php';
+        if (response.status == 200) {
+            location.href = 'profile.php';
+        }
+    });
+
+    async function SubmitSignUp() {
+        if (inProgress) return;
+
+        inProgress = true;
+
+        const confirmpass = document.getElementById('confirmpassword').value;
+        const user = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('password').value;
+        const grad = document.getElementById('gradSelect').value;
+        const error = document.getElementById('errorText');
+
+        error.innerText = '';
+
+        let registerRes = await fetcher(`/auth/register`, {
+            body: {
+                username: user,
+                email: email,
+                password: pass,
+                confirm_password: confirmpass,
+                grad_year: grad
             }
         });
 
-        async function SubmitSignUp() {
-            if (inProgress) return;
+        if (registerRes.status == 201) {
+            error.style.color = 'green';
+            error.innerText = 'account successfully created';
 
-            inProgress = true;
-
-            const confirmpass = document.getElementById('confirmpassword').value;
-            const user = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const pass = document.getElementById('password').value;
-            const grad = document.getElementById('gradSelect').value;
-            const error = document.getElementById('errorText');
-
-            error.innerText = '';
-
-            let registerRes = await fetcher(`/auth/register`, {
+            let loginRes = await fetcher(`/auth/login`, {
                 body: {
                     username: user,
-                    email: email,
-                    password: pass,
-                    confirm_password: confirmpass,
-                    grad_year: grad
+                    password: pass
                 }
             });
 
-            if (registerRes.status == 201) {
-                error.style.color = 'green';
-                error.innerText = 'account successfully created';
-
-                let loginRes = await fetcher(`/auth/login`, {
-                    body: {
-                        username: user,
-                        password: pass
-                    }
-                });
-
-                if (loginRes.status == 200) {
-                    location.href = 'profile.php';
-                } else if (loginRes.status == 401 || loginRes.status == 422) {
-                    let text = await loginRes.text();
-                    error.innerText = text;
-
-                    inProgress = false;
-                }
-            }  else if (registerRes.status == 409 || registerRes.status == 422) {
-                let text = await registerRes.text();
+            if (loginRes.status == 200) {
+                location.href = 'profile.php';
+            } else if (loginRes.status == 401 || loginRes.status == 422) {
+                let text = await loginRes.text();
                 error.innerText = text;
 
                 inProgress = false;
             }
+        } else if (registerRes.status == 409 || registerRes.status == 422) {
+            let text = await registerRes.text();
+            error.innerText = text;
+
+            inProgress = false;
         }
+    }
     </script>
 </body>
 
