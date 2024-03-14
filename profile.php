@@ -37,6 +37,8 @@
         <div class="accountoption">
             <a class="logout" onclick="logout();">Logout</a>
         </div>
+        <br>
+        <br>
         <div class="accountoption">
             <p style="font-size: smaller; font-weight: 100">To delete your account and personal data, please send an
                 email at
