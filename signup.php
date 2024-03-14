@@ -61,7 +61,7 @@
     <p style="text-align: center; color: red;" id="errorText"></p> -->
     <div style="height: 20vh"></div>
     <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
-        <h1>New signups are temporarely paused.</h1>
+        <h1>New signups are temporarily paused.</h1>
     </div>
     <div style="height: 35vh"></div>
     <?php include "assets/includes/footer.php" ?>
