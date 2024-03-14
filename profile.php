@@ -37,6 +37,9 @@
         <div class="accountoption">
             <a class="logout" onclick="logout();">Logout</a>
         </div>
+        <div class="accountoption">
+            <p>To delete your account and personal data, please send an email at help@totallyscience.co</p>
+        </div>
     </div>
 
     <div id="games"></div>
