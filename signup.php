@@ -62,7 +62,9 @@
     <div style="height: 20vh"></div>
     <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
         <h1>New signups are temporarily paused.</h1>
-        <br>
+    </div>
+    <br>
+    <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
         <a href="login.php">If you already made an account you can still login</a>
     </div>
     <div style="height: 35vh"></div>
