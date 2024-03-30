@@ -1,0 +1,12 @@
+{
+"companyName": "AdoLuxGames",
+"productName": "Ado Cars Drifter 2",
+"dataUrl": "game.data.unityweb",
+"asmCodeUrl": "game.asm.code.unityweb",
+"asmMemoryUrl": "game.asm.memory.unityweb",
+"asmFrameworkUrl": "game.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"dataUrl": "must-revalidate"}
+}
