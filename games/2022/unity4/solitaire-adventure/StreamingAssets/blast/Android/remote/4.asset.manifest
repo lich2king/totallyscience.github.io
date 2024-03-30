@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 683562765
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e77e982e8dd965d6523c02e37dc9d8d7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/076_74.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/065_82.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/061_70.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/079_89.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/074_78.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/069_66.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/075_64.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/062_87.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/073_71.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/071_79.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/080_85.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/064_67.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/067_65.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/068_88.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/077_83.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/078_77.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/072_86.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/063_75.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/070_73.json
+- Assets/builds/blast/worlds/world_001/chapters/4/details/levels/066_72.json
+Dependencies: []

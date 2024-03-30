@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 3687191158
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: remote/config.asset
+      Dependencies: {}
+    Info_1:
+      Name: remote/elite.asset
+      Dependencies: {}
+    Info_2:
+      Name: local/1.asset
+      Dependencies: {}
+    Info_3:
+      Name: remote/2.asset
+      Dependencies: {}
+    Info_4:
+      Name: remote/3.asset
+      Dependencies: {}
+    Info_5:
+      Name: remote/4.asset
+      Dependencies: {}
+    Info_6:
+      Name: remote/5.asset
+      Dependencies: {}
