@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "512419213727",
+    "project_id": "drift-hunters-cb647",
+    "storage_bucket": "drift-hunters-cb647.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512419213727:android:0c1af0411229046368cdaa",
+        "android_client_info": {
+          "package_name": "com.studionum43.drift_hunters_car_tuning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512419213727-fvihv96gq062d3e66bu4pu1bior798oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGgGwgNuMTJhlYACvgH5E5VsONYbtxN-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512419213727-fvihv96gq062d3e66bu4pu1bior798oa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "512419213727-rpn6umqknklhnjuru3487cbcr09e4t52.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.studionum43.drift-hunters-car-tuning"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
