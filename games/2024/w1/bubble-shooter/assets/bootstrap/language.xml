@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <language name="en">
+    <play>PLAY</play>
+    <HOW_TO_PLAY_FULL>Make combinations of 3 or more by shooting the colored bubbles. The more you pop in one shot, the higher your score will be. All rows will drop down a level when you fail to hit a combination and at higher levels in the game they will drop several rows at once. The main object of the game is to clear all the colored bubbles from the field.</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>HOW TO PLAY:</HOW_TO_PLAY>
+    <YOU_WIN>YOU WIN!</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>SCORE:</SCORE>
+    <TOTAL>TOTAL:</TOTAL>
+    <GAME_OVER>GAME OVER!</GAME_OVER>
+  </language>
+  
+  <language name="nl">
+    <play>SPEEL</play>
+    <HOW_TO_PLAY_FULL>Maak combinaties van 3 of meer door zoveel mogelijk gekleurde bubbels te poppen. Hoe meer je er in 1 keer popt, hoe hoger de score is. De rijen vallen een verdieping naar beneden als je meer dan 6 keer mis hebt geschoten en in de hogere levels worden dit steeds meer rijen. Het doel is om het hele veld weg te ruimen.</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>INSTRUCTIES:</HOW_TO_PLAY>
+    <YOU_WIN>GEFELICITEERD!</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>SCORE:</SCORE>
+    <TOTAL>TOTAAL:</TOTAL>
+    <GAME_OVER>GAME OVER!</GAME_OVER>
+  </language>
+  
+  <language name="fr">
+    <play>JOUE</play>
+    <HOW_TO_PLAY_FULL>Fais des groupes de 3 ou plus pour faire éclater un maximum de bulles de couleur. Plus tu en éclates en 1 seule fois et plus ton score est élevé. Quand tu rates plus de 6 fois, les bulles descendent d'1 rangée et dans les niveaux supérieurs, le nombre de rangées qui s’ajoutent, augmente. Le but du jeu est de vider complètement le plateau.</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>INSTRUCTIONS :</HOW_TO_PLAY>
+    <YOU_WIN>FÉLICITATIONS !</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>SCORE:</SCORE>
+    <TOTAL>TOTAL:</TOTAL>
+    <GAME_OVER>PARTIE TERMINÉE !</GAME_OVER>
+  </language>
+  
+  <language name="de">
+    <play>SPIEL</play>
+    <HOW_TO_PLAY_FULL>Erstellen Sie Kombinationen von über drei indem Sie so viele Blasen wie möglich platzen lassen. Je mehr Sie in einem Mal abschießen, desto höher ist Ihre Wertung. Die Reihen fallen eine Etage nach unten wenn Sie häufiger als 6 Mal danebengeschossen haben und in den höheren Levels werden das immer mehr Reihen. Das Ziel ist das gesamte Feld aufzuräumen.</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>SPIELANLEITUNG:</HOW_TO_PLAY>
+    <YOU_WIN>SIE HABEN GEWONNEN!!</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>ERGEBNIS:</SCORE>
+    <TOTAL>PUNKTZAHL:</TOTAL>
+    <GAME_OVER>SPIEL IST AUS!</GAME_OVER>
+  </language>
+  
+  <language name="es">
+    <play>PLAY</play>
+    <HOW_TO_PLAY_FULL>Haz combinaciones de 3 o más disparando las burbujas coloreadas. Cuantas más desaparecen en un tiro, mejor será tu puntuación. Todas las filas bajarán un nivel si no llegas a una combinación y en niveles más altos del juego se eliminarán varias filas a la vez. El objeto principal del juego es borrar todas las burbujas de color del campo.</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>INSTRUCCIONES:</HOW_TO_PLAY>
+    <YOU_WIN>¡HAS GANADO!</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>RESULTADO:</SCORE>
+    <TOTAL>PUNTUAJE:</TOTAL>
+    <GAME_OVER>JUEGO TERMINADO!</GAME_OVER>
+  </language>
+  
+  <language name="ro">
+    <play>PLAY</play>
+    <HOW_TO_PLAY_FULL>Make combinations of 3 or more by shooting the colored bubbles. The more you pop in one shot, the higher your score will be. All rows will drop down a level when you fail to hit a combination and at higher levels in the game they will drop several rows at once. The main object of the game is to clear all the colored bubbles from the field</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>HOW TO PLAY:</HOW_TO_PLAY>
+    <YOU_WIN>YOU WIN!</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>SCORE:</SCORE>
+    <TOTAL>TOTAL:</TOTAL>
+    <GAME_OVER>GAME OVER!</GAME_OVER>
+  </language>
+  
+  <language name="hr">
+    <play>PLAY</play>
+    <HOW_TO_PLAY_FULL>Make combinations of 3 or more by shooting the colored bubbles. The more you pop in one shot, the higher your score will be. All rows will drop down a level when you fail to hit a combination and at higher levels in the game they will drop several rows at once. The main object of the game is to clear all the colored bubbles from the field</HOW_TO_PLAY_FULL>
+    <HOW_TO_PLAY>HOW TO PLAY:</HOW_TO_PLAY>
+    <YOU_WIN>YOU WIN!</YOU_WIN>
+    <BONUS>BONUS:</BONUS>
+    <SCORE>SCORE:</SCORE>
+    <TOTAL>TOTAL:</TOTAL>
+    <GAME_OVER>GAME OVER!</GAME_OVER>
+  </language>
+</data>
