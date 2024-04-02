@@ -151,12 +151,9 @@
 		window.gameInstance.SendMessage('GameDistribution', 'ResumeGame');
 	}
 	
-	if (!unblockedRedirect())
-	{
-		InitApi(0);
+	InitApi(0);
 	
-		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
-	}
+	var gameInstance = UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
 	  
 	function FitScreen(){
        var w = 960;
