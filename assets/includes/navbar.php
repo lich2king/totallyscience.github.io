@@ -9,6 +9,7 @@
         <div class="nav-button" id="leaderboardnav"><a href="leaderboard.php">&#127942; Leaderboard</a></div>
         <div class="nav-button" id="appsnav"><a href="apps.php">&#127922; Proxy</a></div>
         <div class="nav-button" id="shopnav"><a href="shop.php">&#128722; Shop</a>
+		<div class="nav-button" id="gamesnav2"><a href="https://totallyscience.co">&#127918; Totally Science Games</a></div>
         </div>
     </div>
 
