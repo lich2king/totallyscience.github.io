@@ -18,10 +18,10 @@ gtag('config', 'G-BW3SZSE47T');
 </script>
 <!-- End Google Tag Manager -->
 
-<title>Totally Science - Free Online Unblocked Games</title>
+<title>Definitely Science - Free Online Unblocked Games</title>
 
-<meta property="og:title" content="Totally Science - Free Online Unblocked Games">
-<meta property="og:site_name" content="Totally Science">
+<meta property="og:title" content="Definitely Science - Free Online Unblocked Games">
+<meta property="og:site_name" content="Definitely Science">
 <meta property="og:url" content="https://totallyscience.co">
 <meta property="og:description"
     content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">

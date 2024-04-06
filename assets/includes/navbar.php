@@ -14,7 +14,7 @@
 
     <div id="middlebar">
         <img src="https://totallyscience.co/assets/images/transparentlogo.png"></img>
-        <h1>Totally Science</h1>
+        <h1>Definitely Science</h1>
     </div>
 
     <div id="rightbar">
