@@ -13,7 +13,7 @@
     </div>
 
     <div id="middlebar">
-        <img src="https://totallyscience.co/assets/images/transparentlogo.png"></img>
+        <img src="https://definitelyscience.com/assets/images/transparentlogo.png"></img>
         <h1>Definitely Science</h1>
     </div>
 

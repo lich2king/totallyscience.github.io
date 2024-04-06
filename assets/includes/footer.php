@@ -2,7 +2,7 @@
     <div class="footSections">
         <div class="footSection">
             <h1>Contact Us</h1>
-            <p><a href="mailto: help@totallyscience" target=”_blank”>help@totallyscience.co</a></p>
+            <p><a href="mailto: contact@totallyscience.io" target=”_blank”>contact@totallyscience.io</a></p>
             <p><a href="https://discord.com/invite/6kTskTSTFM" target=”_blank”>Join our Discord</a></p>
             <p><a href="https://www.tiktok.com/@totallyscience.co" target=”_blank”>Follow our Tik Tok</a></p>
         </div>
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="bottomFoot">© 2023 TotallyScience. A Zach Yadegari Production ™</div>
+    <div class="bottomFoot">© 2023 DefinitelyScience. A Zach Yadegari Production ™</div>
 </footer>
 <script src="assets/scripts/main.js?v77"></script>
 <!-- Info link code -->

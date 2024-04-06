@@ -22,37 +22,36 @@ gtag('config', 'G-BW3SZSE47T');
 
 <meta property="og:title" content="Definitely Science - Free Online Unblocked Games">
 <meta property="og:site_name" content="Definitely Science">
-<meta property="og:url" content="https://totallyscience.co">
+<meta property="og:url" content="https://definitelyscience.com">
 <meta property="og:description"
-    content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
+    content="Play free online games at Definitely Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Definitely Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://totallyscience.co/assets/images/totally-science-logo-transparent-scaled.png">
+<meta property="og:image" content="https://definitelyscience.com/assets/images/totally-science-logo-transparent-scaled.png">
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="-gcWvd6d4OTZeFW4HWaIIZTNKnnOfAx15pEw_XDAH2o" />
-<meta name="url" content="https://totallyscience.co">
+<meta name="url" content="https://definitelyscience.com">
 <meta name="owner" content="Zach Yadegari">
 <meta name="designer" content="Zach Yadegari">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="robots" content="index, follow">
-<meta name="twitter:title" content="Totally Science">
+<meta name="twitter:title" content="Definitely Science">
 <meta name="DC.format" content="text/html" scheme="DCTERMS.DCMIType">
-<meta name="DC.publisher" content="Totally Science" scheme="DCTERMS.DCMIType">
+<meta name="DC.publisher" content="Definitely Science" scheme="DCTERMS.DCMIType">
 <meta name="DC.description"
-    content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?"
+    content="Play free online games at Definitely Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Definitely Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?"
     scheme="DCTERMS.DCMIType">
-<meta name="DC.subject" content="totally science, games, gaming, online games, unblocked games"
+<meta name="DC.subject" content="Definitely Science, games, gaming, online games, unblocked games"
     scheme="DCTERMS.DCMIType">
 <meta name="DC.creator" content="Zach Yadegari">
-<meta name="subject" content="totally science, games, gaming, online games, unblocked games">
+<meta name="subject" content="Definitely Science, games, gaming, online games, unblocked games">
 <meta name="keywords"
-    content="totally science, games, gaming, online games, unblocked games, discord unblocked, minecraft online, roblox unblocked">
+    content="Definitely Science, games, gaming, online games, unblocked games, discord unblocked, minecraft online, roblox unblocked">
 <meta name="twitter:description"
-    content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
-<meta name="twitter:url" content="https://totallyscience.co">
+    content="Play free online games at Definitely Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Definitely Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
+<meta name="twitter:url" content="https://definitelyscience.com">
 <meta name="twitter:image"
-    content="https://totallyscience.co/assets/images/totally-science-logo-transparent-scaled.png">
+    content="https://definitelyscience.com/assets/images/totally-science-logo-transparent-scaled.png">
 <meta name='description'
-    content="Play free online games at Totally Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Totally Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
+    content="Play free online games at Definitely Science - your one-stop destination for free online games! io games, puzzle games, Flash games, shooting games and more. And why &quot;Definitely Science&quot;? It's our secret for bypassing school blockers. Sit back, relax, and enjoy learning...science?">
 <meta name="theme-color" content="#f75dfc">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

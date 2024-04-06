@@ -281,21 +281,21 @@
 
     <!-- description of TS and what it offers, included partially for SEO -->
     <div id="about">
-        <p class="tophead">ABOUT TOTALLY SCIENCE</p>
+        <p class="tophead">ABOUT DEFINITELY SCIENCE</p>
         <h1>
-            What is Totally Science?
+            What is Definitely Science?
         </h1>
         <p>
-            Totally Science is an unblocked games website that offers everything from Minecraft to Monkey Mart. We also
+            Definitely Science is an unblocked games website that offers everything from Minecraft to Monkey Mart. We also
             have a proxy that allows you to unblock and use any website you desire: Youtube, Tik Tok, Discord, go for
-            it! Totally Science was founded in 2021 but only found a large user base January of 2022. The goal of
-            Totally Science is to provide the most entertaining experience to bored students who need a break. We have
+            it! Definitely Science was founded in 2021 but only found a large user base January of 2022. The goal of
+            Definitely Science is to provide the most entertaining experience to bored students who need a break. We have
             hundreds of free to play games. Every month over 250 thousand gamers from all over the world play their
-            favorite games on Totally Science.
+            favorite games on Definitely Science.
         </p>
         <h1>Why are unblocked games popular?</h1>
         <p>Students love unblocked games because they get to play whatever they want, unrestricted and free. Competing
-            with other students and trying to set high scores is a great way to kill some time. All the games on Totally
+            with other students and trying to set high scores is a great way to kill some time. All the games on Definitely
             Science are fast to load and require no download.</p>
         <h1>What are unblocked games?</h1>
         <p>
@@ -310,8 +310,8 @@
         </p>
         <h1>Can I play unblocked games on a chromebook?</h1>
         <p>
-            Yes! On Totally Science you can play unblocked games on a chromebook. Chromebooks are one of the most
-            popular devices for an unblocked games site like Totally Science. Since the games require no download, you
+            Yes! On Definitely Science you can play unblocked games on a chromebook. Chromebooks are one of the most
+            popular devices for an unblocked games site like Definitely Science. Since the games require no download, you
             can play them on any device: Chromebooks, Macbooks, iPads, Dells, etc...
         </p>
         <h1>How to unblock games on computers at school</h1>
@@ -330,11 +330,11 @@
         <p>
             A proxy is a tool that allows you to bypass filters and block protocols set by your network administrators
             and go to whatever website you want. To go on any website unblocked in school or work, all you have to do is
-            go on Totally Science, click Proxy, then choose which site you want to use, unblocked.
+            go on Definitely Science, click Proxy, then choose which site you want to use, unblocked.
         </p>
         <h1>What are popular unblocked games?</h1>
         <p>
-            There are many popular games on Totally Science. Out of the hundreds of games, the top 15 games (as of
+            There are many popular games on Definitely Science. Out of the hundreds of games, the top 15 games (as of
             writing) are:
             </span>
         </p>
