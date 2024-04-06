@@ -58,13 +58,13 @@ gtag('config', 'G-BW3SZSE47T');
 <link rel="preload" href="assets/Rubik.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 <!-- WG Universal adCode -->
-<script type="text/javascript" async>
+<!--<script type="text/javascript" async>
 ! function(e, t) {
     a = e.createElement("script"), m = e.getElementsByTagName("script")[0], a.async = 1, a.src = t, m.parentNode
         .insertBefore(a, m)
 }(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location
     .pathname + "&ws=" + window.location.search);
-</script>
+</script>-->
 
 <script src="../assets/scripts/sweetalert.min.js"></script>
 
