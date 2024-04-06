@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Proxy - Totally Science - Free Online Unblocked Games</title>
+    <title>Proxy - Definitely Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
 

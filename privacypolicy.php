@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Privacy Policy - Totally Science - Free Online Unblocked Games</title>
+    <title>Privacy Policy - Definitely Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
     <style>
@@ -89,7 +89,7 @@
             If you have any questions relating to this privacy policy or concerns about the way in which we have handled
             information about you, please
             do not hesitate to send us an email at <span
-                style="color: var(--accent-color)">help@totallyscience.co</span>.</p>
+                style="color: var(--accent-color)">contact@totallyscience.io</span>.</p>
         <h2>Use of Third-Party Service Providers</h2>
         <p>From time to time, we may obtain certain information from third-party internet Service Providers who may
             collect technical information, including but not limited to browser type, internet address, pages visited,

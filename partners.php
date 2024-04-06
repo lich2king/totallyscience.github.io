@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Partners - Totally Science - Free Online Unblocked Games</title>
+    <title>Partners - Definitely Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='assets/styles/partners.css'>

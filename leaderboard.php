@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Leaderboard - Totally Science - Free Online Unblocked Games</title>
+    <title>Leaderboard - Definitely Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
 
