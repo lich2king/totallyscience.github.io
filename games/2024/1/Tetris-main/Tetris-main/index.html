@@ -10,8 +10,29 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tetris by 3kh0</title>
+	<title>Tetris</title>
 	<link rel="stylesheet" href="css/styles.css">
+	
+	<link rel="canonical" href="https://totallyscience.co/tetris/" />
+	
+	<style type="text/css">
+	html, body, canvas {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+</style>
+
+	<script>
+		window.addEventListener("keydown", function(e) {
+			if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+				e.preventDefault();
+			}
+		}, false);
+	</script>
 </head>
 <body>
 <div id="tetris">
