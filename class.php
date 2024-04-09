@@ -15,7 +15,7 @@
 
 	 <div class="ad" style="margin: 0 auto; width: 800px;">
 	  <a href="https://totallyscience.co">
-		<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Totally Science Unblocked" style="width: 100%; height: auto;">
+		<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Totally Science Unblocked" style="width: 100%; height: 100%;">
 	  </a>
 	</div>
 
