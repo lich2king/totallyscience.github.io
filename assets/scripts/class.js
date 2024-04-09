@@ -147,7 +147,9 @@ function getRandomImageUrl(urls) {
 
 function setRandomWideBanner()
 {
-	var targetElement = document.getElementById('game-title');
+	try
+	{
+		var targetElement = document.getElementById('game-title');
 	  if (!targetElement) {
 		  console.log("not found game-title");
 		return;
@@ -168,6 +170,12 @@ function setRandomWideBanner()
 	  targetElement.parentNode.insertBefore(linkel, targetElement);
 	  
 	  console.log("wide 2");
+	}
+	catch (error) {
+		// Handle errors here
+		console.log('An error occurred in setRandomWideBanner:', error.message);
+	}
+	
 }
 
 // Set the random image URL as the source of the <img> element
@@ -189,6 +197,8 @@ function setRandomAdBanner() {
 
 window.addEventListener('load', async () => {
 	
+	setRandomWideBanner();
+	setRandomAdBanner();
 	
 	
     // update navbar to underline game link
@@ -312,8 +322,7 @@ window.addEventListener('load', async () => {
     // setup action button events
     setupActionButtons();
 	
-	setRandomAdBanner();
-	setRandomWideBanner();
+	
 	
 	
 });
