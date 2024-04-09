@@ -6,7 +6,7 @@ li {
 }
 
 #game-title {
-    margin-top: 100px;
+    margin-top: 25px;
     text-align: center;
     color: var(--light-color);
 }
