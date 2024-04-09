@@ -68,7 +68,9 @@
                     <p id="highscore"></p>
                 </div>
 
-                <div class="ad"></div>
+                <div class="ad">
+				  <img id="mediumbanner" src="https://definitelyscience.com/assets/images/ad/medium-banner/1.jpg" alt="Totally Science Unblocked" width="290" height="110">
+				</div>
             </div>
         </div>
     </div>
