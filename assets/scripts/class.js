@@ -149,8 +149,11 @@ function setRandomWideBanner()
 {
 	var targetElement = document.getElementById('game-title');
 	  if (!targetElement) {
+		  console.log("not found game-title");
 		return;
 	  }
+	  
+	  console.log("wide 1");
 	  
 	var linkel = document.createElement('a');
 	  linkel.href = 'https://totallyscience.co/';
@@ -163,6 +166,8 @@ function setRandomWideBanner()
 	  linkel.appendChild(img);
 	  
 	  targetElement.parentNode.insertBefore(linkel, targetElement);
+	  
+	  console.log("wide 2");
 }
 
 // Set the random image URL as the source of the <img> element
