@@ -129,10 +129,40 @@ var imageUrlsMediumBanner = [
   'https://definitelyscience.com/assets/images/ad/medium-banner/5.jpg'
 ];
 
+var imageUrlsWideBanner = [
+  'https://definitelyscience.com/assets/images/ad/wide-banner/1.jpg',
+  'https://definitelyscience.com/assets/images/ad/wide-banner/2.jpg',
+  'https://definitelyscience.com/assets/images/ad/wide-banner/3.jpg',
+  'https://definitelyscience.com/assets/images/ad/wide-banner/4.jpg',
+  'https://definitelyscience.com/assets/images/ad/wide-banner/5.jpg',
+  'https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg',
+  'https://definitelyscience.com/assets/images/ad/wide-banner/7.jpg'
+];
+
 // Function to select a random image URL
 function getRandomImageUrl(urls) {
   var randomIndex = Math.floor(Math.random() * urls.length);
   return urls[randomIndex];
+}
+
+function setRandomWideBanner()
+{
+	var targetElement = document.getElementById('game-title');
+	  if (!targetElement) {
+		return;
+	  }
+	  
+	var linkel = document.createElement('a');
+	  linkel.href = 'https://totallyscience.co/';
+	  
+	  var img = document.createElement('img');
+	  img.src = getRandomImageUrl(imageUrlsWideBanner);
+	  img.style.width = '100%';
+	  img.style.height = 'auto';
+	  
+	  linkel.appendChild(img);
+	  
+	  targetElement.parentNode.insertBefore(linkel, targetElement);
 }
 
 // Set the random image URL as the source of the <img> element
@@ -154,7 +184,7 @@ function setRandomAdBanner() {
 
 window.addEventListener('load', async () => {
 	
-	setRandomAdBanner();
+	
 	
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
@@ -276,6 +306,9 @@ window.addEventListener('load', async () => {
 
     // setup action button events
     setupActionButtons();
+	
+	setRandomAdBanner();
+	setRandomWideBanner();
 	
 	
 });
