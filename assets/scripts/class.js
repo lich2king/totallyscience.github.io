@@ -121,6 +121,29 @@ function setupActionButtons() {
     });
 }
 
+var imageUrlsMediumBanner = [
+  'https://definitelyscience.com/assets/images/ad/medium-banner/1.jpg',
+  'https://definitelyscience.com/assets/images/ad/medium-banner/2.jpg',
+  'https://definitelyscience.com/assets/images/ad/medium-banner/3.jpg',
+  'https://definitelyscience.com/assets/images/ad/medium-banner/4.jpg',
+  'https://definitelyscience.com/assets/images/ad/medium-banner/5.jpg'
+];
+
+// Function to select a random image URL
+function getRandomImageUrl(urls) {
+  var randomIndex = Math.floor(Math.random() * urls.length);
+  return urls[randomIndex];
+}
+
+// Set the random image URL as the source of the <img> element
+function setRandomAdBanner() {
+  var imgElement = document.getElementById('mediumRandBanner');
+  if (imgElement)
+  {
+	  imgElement.src = getRandomImageUrl(imageUrlsMediumBanner);
+  }
+}
+
 window.addEventListener('load', async () => {
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
@@ -242,6 +265,10 @@ window.addEventListener('load', async () => {
 
     // setup action button events
     setupActionButtons();
+	
+	setRandomAdBanner();
+	
+	
 });
 
 function OpenHighscore() {
