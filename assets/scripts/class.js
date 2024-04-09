@@ -149,27 +149,11 @@ function setRandomWideBanner()
 {
 	try
 	{
-		var targetElement = document.getElementById('game-title');
-	  if (!targetElement) {
-		  console.log("not found game-title");
-		return;
-	  }
-	  
-	  console.log("wide 1");
-	  
-	var linkel = document.createElement('a');
-	  linkel.href = 'https://totallyscience.co/';
-	  
-	  var img = document.createElement('img');
-	  img.src = getRandomImageUrl(imageUrlsWideBanner);
-	  img.style.width = '100%';
-	  img.style.height = 'auto';
-	  
-	  linkel.appendChild(img);
-	  
-	  targetElement.parentNode.insertBefore(linkel, targetElement);
-	  
-	  console.log("wide 2");
+		var imgElement = document.getElementById('wideRandBanner');
+	   if (imgElement)
+	   {
+		  imgElement.src = getRandomImageUrl(imageUrlsWideBanner);
+	   }
 	}
 	catch (error) {
 		// Handle errors here

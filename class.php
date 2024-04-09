@@ -13,6 +13,12 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
+	 <div class="ad">
+		<a href="https://totallyscience.co">
+			<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Totally Science Unblocked" style="width: 100%; height: 100%;">
+		</a>
+	</div>
+
     <h1 id="game-title"></h1>
 
     <div id="gameframe">
@@ -69,7 +75,7 @@
                 </div>
 
                 <div class="ad">
-				  <a href="https://totallyscience.co/">
+				  <a href="https://totallyscience.co">
 					<img id="mediumRandBanner" src="https://definitelyscience.com/assets/images/ad/medium-banner/1.jpg" alt="Totally Science Unblocked" style="width: 100%; height: 100%;">
 				  </a>
 				</div>
