@@ -69,7 +69,9 @@
                 </div>
 
                 <div class="ad">
-				  <img id="mediumbanner" src="https://definitelyscience.com/assets/images/ad/medium-banner/1.jpg" alt="Totally Science Unblocked" width="290" height="110">
+				  <a href="https://totallyscience.co/">
+					<img id="mediumbanner" src="https://definitelyscience.com/assets/images/ad/medium-banner/1.jpg" alt="Totally Science Unblocked" style="width: 100%; height: auto;">
+				  </a>
 				</div>
             </div>
         </div>
