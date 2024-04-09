@@ -137,14 +137,25 @@ function getRandomImageUrl(urls) {
 
 // Set the random image URL as the source of the <img> element
 function setRandomAdBanner() {
-  var imgElement = document.getElementById('mediumRandBanner');
-  if (imgElement)
-  {
-	  imgElement.src = getRandomImageUrl(imageUrlsMediumBanner);
-  }
+	try
+	{
+		var imgElement = document.getElementById('mediumRandBanner');
+	   if (imgElement)
+	   {
+		  imgElement.src = getRandomImageUrl(imageUrlsMediumBanner);
+	   }
+	} 
+	catch (error) {
+		// Handle errors here
+		console.log('An error occurred in setRandomAdBanner:', error.message);
+	}
+  
 }
 
 window.addEventListener('load', async () => {
+	
+	setRandomAdBanner();
+	
     // update navbar to underline game link
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -265,8 +276,6 @@ window.addEventListener('load', async () => {
 
     // setup action button events
     setupActionButtons();
-	
-	setRandomAdBanner();
 	
 	
 });
