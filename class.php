@@ -13,7 +13,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-	 <div class="ad" style="margin: 0 auto; width: 800px;">
+	 <div class="ad" style="margin: 0 auto; width: 800px; height: 125px;">
 	  <a href="https://totallyscience.co">
 		<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Totally Science Unblocked" style="width: 100%; height: 100%;">
 	  </a>
