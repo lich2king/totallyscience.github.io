@@ -5,6 +5,7 @@
             <p><a href="mailto: contact@totallyscience.io" target=”_blank”>contact@totallyscience.io</a></p>
             <p><a href="https://discord.com/invite/6kTskTSTFM" target=”_blank”>Join our Discord</a></p>
             <p><a href="https://www.tiktok.com/@totallyscience.co" target=”_blank”>Follow our Tik Tok</a></p>
+			<p><a href="leaderboard.php">&#127942; Leaderboard</a></p>
 			<p><a href="https://definitelyscience.com">Definitely Science</a></p>
 			<p><a href="https://totallyscience.co">Totally Science</a></p>
         </div>
