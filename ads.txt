@@ -1,4 +1,4 @@
-google.com, pub-1197982508516078, DIRECT, f08c47fec0942fa0
+google.com, pub-1738652181497757, DIRECT, f08c47fec0942fa0
 
 #WG ADX			
 google.com, pub-4529402052683454, RESELLER, f08c47fec0942fa0	
