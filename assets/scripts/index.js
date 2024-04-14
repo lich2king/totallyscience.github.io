@@ -289,7 +289,8 @@ async function loadRewards() {
 function startTimer(endTime) {
     clearInterval(interval);
 
-    document.getElementById('timerText').innerHTML = '<span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>';
+    //document.getElementById('timerText').innerHTML = '<span class="loader"></span>Daily Reward In <span id="rewardTimer"></span>';
+	document.getElementById('timerText').innerHTML = '';
 
     interval = setInterval(() => {
         // divide by 1000 to get seconds
