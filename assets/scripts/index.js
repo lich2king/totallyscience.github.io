@@ -93,7 +93,8 @@ window.addEventListener('load', async() => {
         token = false;
 
         // user is not signed into an account
-        document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+        //document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+		document.getElementById('timerText').innerHTML = '';
 
         // suggest games without account information
         const suggestionEle = document.getElementById('scisuggests');
