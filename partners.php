@@ -5,8 +5,8 @@
     <title>Partners - Definitely Science - Free Online Unblocked Games</title>
     <?php include "assets/includes/head.php" ?>
 
-    <link rel='stylesheet' href='assets/styles/partners.css'>
-
+	<!-- <link rel='stylesheet' href='assets/styles/partners.css'> -->
+    
 
 
     <style>
