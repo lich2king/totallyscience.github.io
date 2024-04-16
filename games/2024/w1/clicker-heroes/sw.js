@@ -1,1 +1,0 @@
-No Content: https://clickerheroesunblocked.github.io/sw.js
