@@ -243,7 +243,8 @@ window.addEventListener('load', async () => {
 
     suggestGames(gameData);
 
-    if ('serviceWorker' in navigator) {
+	iframe.src = gameData.iframe_url;
+    /*if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('uv-sw.js', {
             scope: __uv$config.prefix
         }).then(() => {
@@ -260,7 +261,7 @@ window.addEventListener('load', async () => {
     } else {
         document.querySelector('.lds-dual-ring').remove();
         document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.';
-    };
+    };*/
 
     // focus on the iframe. This is necessary for certain games such as eaglercraft
     document.getElementById('iframe').focus();
