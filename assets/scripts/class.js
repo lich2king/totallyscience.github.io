@@ -252,6 +252,8 @@ window.addEventListener('load', async () => {
 
             // scratch breaks with proxy
             if (gameData.iframe_url.startsWith('https://scratch.mit.edu')) iframe.src = gameData.iframe_url;
+			
+			if (gameData.iframe_url.startsWith('https://totallyscience.co')) iframe.src = gameData.iframe_url;
        }, (err) => {
             console.log(err);
        });
