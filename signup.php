@@ -81,7 +81,7 @@
         }
     });
 
-    async function SubmitSignUp() {
+    /*async function SubmitSignUp() {
         if (inProgress) return;
 
         inProgress = true;
@@ -130,7 +130,7 @@
 
             inProgress = false;
         }
-    }
+    }*/
     </script>
 </body>
 
