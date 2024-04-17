@@ -104,7 +104,7 @@
     </div>
 	
 	
-	<div id="disqus_thread" style="margin-left: 100px; margin-right: 100px;"></div>
+	<div id="disqus_thread" style="margin-left: 200px; margin-right: 200px;"></div>
 	<script>
 		/**
 		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
