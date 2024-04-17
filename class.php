@@ -73,7 +73,7 @@
                     <h2>Highscore</h2>
                     <p id="highscore"></p>
 					
-					<div id="disqus_thread" style="margin-left: 100px; margin-right: 100px;"></div>
+					<div id="disqus_thread" style="margin-left: 10px; margin-right: 10px;"></div>
 					<script>
 						/**
 						*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
