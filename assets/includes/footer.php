@@ -41,10 +41,10 @@
     <div class="bottomFoot">© 2024 DefinitelyScience. A Zach Yadegari Production ™</div>
 </footer>
 <script src="assets/scripts/main.js?v77"></script>
-<!-- Info link code -->
+<!-- Info link code 
 <script type="text/javascript">
 var infolinks_pid = 3412985;
 var infolinks_wsid = 0;
 </script>
 <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
-<!-- END of Info link code -->
+ END of Info link code -->
