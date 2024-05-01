@@ -11,7 +11,7 @@
 			<p><a href="hide.php">&#127918; Hide</a></p>
         </div>
 
-        <!-- <div class="footSection">
+        <div class="footSection">
             <h1>Our Team</h1>
 
             <div class="teamFoot">
@@ -19,7 +19,7 @@
 
                 <div>||</div>
 
-                <div>Founder & CEO</div>
+                <div>Founder</div>
 
                 <div>Ilan</div>
 
@@ -27,7 +27,7 @@
 
                 <div>CTO</div>
             </div>
-        </div> -->
+        </div>
 
         <div class="footSection">
             <h1>Legal</h1>
