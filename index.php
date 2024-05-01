@@ -22,9 +22,9 @@
                 <p>Day 6</p>
                 <img src="assets/images/icons/chest.avif" style="pointer-events: none;">
             </div>
-        </div>
+        </div> -->
 
-        <p class='timerText' id='timerText'><span class="loader"></span><span id="rewardTimer"></span></p> -->
+        <p class='timerText' id='timerText'><span class="loader"></span><span id="rewardTimer"></span></p>
     </div>
 
     <div id="startcontent">
