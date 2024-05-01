@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="bottomFoot">© 2024 DefinitelyScience. A Zach Yadegari Production ™</div>
+    <div class="bottomFoot">© 2024 DefinitelyScience</div>
 </footer>
 <script src="assets/scripts/main.js?v77"></script>
 <!-- Info link code 
