@@ -11,7 +11,7 @@
     <?php include "assets/includes/navbar.php" ?>
 
     <div id="pointsbar">
-        <div class="backbar">
+        <!-- <div class="backbar">
             <div id="rewardDayBar" class="bar" style="width:0%"></div>
             <div class="dayCon">
                 <p>Day 1</p>
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <p class='timerText' id='timerText'><span class="loader"></span><span id="rewardTimer"></span></p>
+        <p class='timerText' id='timerText'><span class="loader"></span><span id="rewardTimer"></span></p> -->
     </div>
 
     <div id="startcontent">
