@@ -8,6 +8,7 @@
 <!-- 			<p><a href="leaderboard.php">&#127942; Leaderboard</a></p> -->
 			<p><a href="https://definitelyscience.com">Definitely Science</a></p>
 			<p><a href="https://totallyscience.co">Totally Science</a></p>
+			<p><a href="https://random-proxy.com/">Random-Proxy.com</a></p>
 			<p><a href="hide.php">&#127918; Hide</a></p>
         </div>
 
