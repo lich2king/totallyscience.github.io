@@ -12,7 +12,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-    <form id="survey" action="javascript:SubmitLogin()">
+    <!-- <form id="survey" action="javascript:SubmitLogin()">
         <div>
             <label for="username">Username</label><br>
             <input type='text' id='username' name='username' placeholder='John Doe'><br>
@@ -27,11 +27,15 @@
     </form>
 
     <p style="text-align: center; color: red;" id="errorText"></p>
-    <p style="text-align: center;">Don't have an account? <a href="signup.php">Sign up instead</a></p>
-
+    <p style="text-align: center;">Don't have an account? <a href="signup.php">Sign up instead</a></p> -->
+    <div style="height: 20vh"></div>
+    <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
+        <h1>Logins are temporarily paused.</h1>
+    </div>
+    <div style="height: 35vh"></div>
     <?php include "assets/includes/footer.php" ?>
     
-    <script>
+    <!-- <script>
         let inProgress = false;
 
         window.addEventListener('load', async () => {
@@ -66,7 +70,7 @@
                 inProgress = false;
             }
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
