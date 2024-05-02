@@ -13,7 +13,7 @@
 <body>
     <?php include "assets/includes/navbar.php" ?>
 
-	 <div class="ad" style="margin: 0 auto; max-width: 800px; max-height: 125px; padding-top:70px"">
+	 <div class="TSad" style="margin: 0 auto; max-width: 800px; max-height: 125px; padding-top:70px">
 	  <a href="https://totallyscience.co">
 		<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Totally Science Unblocked" style="width: 100%; height: 100%;">
 	  </a>
@@ -54,6 +54,10 @@
             <div class="adsrc"></div>
         </div>
     </div>
+	
+	<div class="ad">
+	  <div class="adsrc"></div>
+	</div>
 
     <div id="info">
         <div class="container">
