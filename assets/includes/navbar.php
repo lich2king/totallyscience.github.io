@@ -27,9 +27,9 @@
                     src="assets/images/magnifying-light.svg">Search...</p>
         </div>
 
-        <div class="points">
+	<!--<div class="points">
             <p><span id="pointsDisplay">0</span> pts</p>
-        </div>
+        </div> -->
 
         <div class="nav-button" tooltip="Panic Key" flow="down">
             <img id="tilde-icon" style="cursor:pointer;"
