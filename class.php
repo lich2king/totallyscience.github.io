@@ -36,9 +36,9 @@
                     <button id="like" class="text-button button-effect-a"><img
                             src="assets/images/icons/likeoutline.avif"></button>
                     <div id="likeCount">...</div>
-<!--                     <button onclick="OpenHighscore()" class="text-button"><img
+                    <button onclick="OpenHighscore()" class="text-button"><img
                             src="assets/images/icons/trophy-icon.avif"></button>
-                    <div id="currentHighscore">...</div> -->
+                    <div id="currentHighscore">...</div>
                 </div>
 
                 <div class="right">
@@ -74,8 +74,8 @@
                     <h2>Created By</h2>
                     <p id="developer"></p>
 
-<!--                     <h2>Highscore</h2>
-                    <p id="highscore"></p> -->
+                    <h2>Highscore</h2>
+                    <p id="highscore"></p>
                 </div>
 
                 <div class="ad">
