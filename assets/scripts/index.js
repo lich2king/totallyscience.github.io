@@ -109,7 +109,7 @@ window.addEventListener('load', async() => {
     } else {
         // display points count in navbar
         let json = await response.json();
-        setPointsDisplay(json.points || 0, json.username || "");
+        // setPointsDisplay(json.points || 0, json.username || "");
 
         token = true;
 
@@ -271,7 +271,7 @@ async function loadRewards() {
             points = 1000;
         }
 
-        document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
+        // document.getElementById('timerText').innerHTML = `<a onclick="claimReward()" href="javascript:void(null)">Click here</a> to collect your daily reward of ${points} pts!`;
     } else {
         startTimer(json.rewardTime);
     }
@@ -333,29 +333,29 @@ function animateBar(day) {
     }
 }
 
-async function claimReward() {
-    document.getElementById('timerText').innerHTML = '<span class="loader"></span>';
+// async function claimReward() {
+//     document.getElementById('timerText').innerHTML = '<span class="loader"></span>';
 
-    let res = await fetcher(`/points/reward/claim`);
+//     let res = await fetcher(`/points/reward/claim`);
 
-    if (res.status == 200) {
-        let text = await res.text();
-        let json = JSON.parse(text);
+//     if (res.status == 200) {
+//         let text = await res.text();
+//         let json = JSON.parse(text);
 
-        startTimer(json.rewardTime);
-        animateBar(json.rewardDay);
+//         startTimer(json.rewardTime);
+//         animateBar(json.rewardDay);
 
-        // update points display
-        let currentVal = document.getElementById('pointsDisplay').innerText;
-        counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
+//         // update points display
+//         // let currentVal = document.getElementById('pointsDisplay').innerText;
+//         // counter('pointsDisplay', parseInt(currentVal), parseInt(currentVal) + parseInt(json.points), 2000);
 
-        if (json.points == 0) {
-            document.getElementById('timerText').innerHTML = 'Oh no! Your daily reward expired.<span class="loader"></span> Next Daily Reward In <span id="rewardTimer"></span>';
-        }
-    } else {
-        location.href = 'signup.php';
-    }
-}
+//         // if (json.points == 0) {
+//             // document.getElementById('timerText').innerHTML = 'Oh no! Your daily reward expired.<span class="loader"></span> Next Daily Reward In <span id="rewardTimer"></span>';
+//         // }
+//     } else {
+//         location.href = 'signup.php';
+//     }
+// }
 
 async function suggestGames() {
     // retrieve all pinned games of user
