@@ -170,7 +170,8 @@
      <!--<a class="tn_banner" target="_blank" href="https://tnvpn.com/">Click here to check out Titanium Network's VPN and
         browse the internet without censorship.</a>-->
 	<a class="tn_banner" target="_blank" href="https://discord.com/invite/6kTskTSTFM">Join us on Definitely Science Discord server.</a><br>
-	<a class="tn_banner" target="_blank" href="https://random-proxy.com">More apps on alternative domains: Random-Proxy.com</a>
+	<a class="tn_banner" target="_blank" href="https://random-proxy.com">More apps on alternative domains: Random-Proxy.com</a><br>
+	<a class="tn_banner" target="_blank" href="https://classroom.community/apps.php">Classroom.Community</a>
 
     <div id="apps"></div>
 	
