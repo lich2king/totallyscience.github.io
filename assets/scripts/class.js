@@ -308,8 +308,8 @@ window.addEventListener('load', async () => {
     let highscoreRes = await fetcher(`/profile/highscores/retrieve`, { body: { gameName: gameName } });
     let highscoreJson = await highscoreRes.json();
 
-    // document.getElementById('currentHighscore').innerText = highscoreRes.status == 200 ? numFormatter(highscoreJson.score) : '0';
-    // document.getElementById('highscore').innerText = `${highscoreJson.name} holds the record score for 2048 for Totally Science. His score is ${highscoreJson.score}`;
+    document.getElementById('currentHighscore').innerText = highscoreRes.status == 200 ? numFormatter(highscoreJson.score) : '0';
+    document.getElementById('highscore').innerText = `${highscoreJson.name} holds the record score for 2048 for Totally Science. His score is ${highscoreJson.score}`;
 
     // update game statistics
     fetcher(`/stats/games/view`, { body: { gameName: gameName } });
@@ -322,9 +322,9 @@ window.addEventListener('load', async () => {
 	
 });
 
-// function OpenHighscore() {
-//     window.open(`/leaderboard.php?class=${gameName}`, '_self');
-// }
+function OpenHighscore() {
+    window.open(`/leaderboard.php?class=${gameName}`, '_self');
+}
 
 document.getElementById('fullscreen').addEventListener('click', () => {
     var elem = document.getElementById('iframe');
