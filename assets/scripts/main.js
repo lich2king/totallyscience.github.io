@@ -148,15 +148,15 @@ window.addEventListener('load', () => {
 });
 
 // update points in navbar
-async function setPointsDisplay(numPoints, username) {
-    document.getElementById('pointsDisplay').innerText = numPoints;
+// async function setPointsDisplay(numPoints, username) {
+//     document.getElementById('pointsDisplay').innerText = numPoints;
 
-    // this is only called if user is logged in, also display the user's mini
-    let userMiniRes = await fetcher(`/profile/userdata/${username}`);
-    let userMiniJson = await userMiniRes.json();
+//     // this is only called if user is logged in, also display the user's mini
+//     let userMiniRes = await fetcher(`/profile/userdata/${username}`);
+//     let userMiniJson = await userMiniRes.json();
 
-    document.getElementById('login').innerHTML = `<img src="assets/minis/JPGs/${userMiniJson.activeMini}.avif">`;
-}
+//     document.getElementById('login').innerHTML = `<img src="assets/minis/JPGs/${userMiniJson.activeMini}.avif">`;
+// }
 
 async function logout() {
     await fetcher(`/auth/logout`);
