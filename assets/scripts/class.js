@@ -306,8 +306,8 @@ window.addEventListener('load', async () => {
     document.getElementById('likeCount').innerText = numFormatter(parseInt(likeCount)) || '0';
 
     // update game current highscore
-    let highscoreRes = await fetcher(`/profile/highscores/retrieve`, { body: { gameName: gameName } });
-    let highscoreJson = await highscoreRes.json();
+    //let highscoreRes = await fetcher(`/profile/highscores/retrieve`, { body: { gameName: gameName } });
+    //let highscoreJson = await highscoreRes.json();
 
     // document.getElementById('currentHighscore').innerText = highscoreRes.status == 200 ? numFormatter(highscoreJson.score) : '0';
     // document.getElementById('highscore').innerText = `${highscoreJson.name} holds the record score for 2048 for Totally Science. His score is ${highscoreJson.score}`;
