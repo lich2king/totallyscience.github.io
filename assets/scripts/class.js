@@ -282,7 +282,7 @@ window.addEventListener('load', async () => {
     document.querySelector('meta[name="DC.description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[property="og:description"]').setAttribute('content', metaDesc);
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', metaDesc);
-    document.getElementsByTagName('title')[0].innerHTML = `Definitely Science - ${gameName} || Play ${gameName} unblocked on Definitely Science`;
+    //document.getElementsByTagName('title')[0].innerHTML = `Definitely Science - ${gameName} || Play ${gameName} unblocked on Definitely Science`;
     document.getElementsByTagName('iframe')[0].title = `${gameName} Unblocked`;
     document.getElementById('game-title').innerText = `${gameName} Unblocked`;
 
