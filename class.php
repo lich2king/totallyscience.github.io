@@ -125,7 +125,9 @@
 		if (document && (document.domain == "definitelyscience.com"
 						|| document.domain == "classroom.community"
 						|| document.domain == "classroomcommunity.com"
-						|| document.domain == "classroom.onl"))
+						|| document.domain == "classroom.onl"
+						|| document.domain == "mathstudyplace.com"
+						))
 		{
 			/**
 			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
