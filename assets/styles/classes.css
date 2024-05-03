@@ -74,7 +74,7 @@ input[type='text'] {
 }
 
 #topText {
-    margin-top: 80px;
+    margin-top: 180px;
     color: var(--light-color);
     text-align: center;
 }
