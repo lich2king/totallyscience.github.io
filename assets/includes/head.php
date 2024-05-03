@@ -59,11 +59,16 @@ gtag('config', 'G-BW3SZSE47T');
 
 <!-- WG Universal adCode -->
 <script type="text/javascript" async>
-! function(e, t) {
-    a = e.createElement("script"), m = e.getElementsByTagName("script")[0], a.async = 1, a.src = t, m.parentNode
-        .insertBefore(a, m)
-}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location
-    .pathname + "&ws=" + window.location.search);
+
+if (document && document.domain == "definitelyscience.com")
+{
+	! function(e, t) {
+		a = e.createElement("script"), m = e.getElementsByTagName("script")[0], a.async = 1, a.src = t, m.parentNode
+			.insertBefore(a, m)
+	}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location
+		.pathname + "&ws=" + window.location.search);
+}
+
 </script>
 
 <script src="../assets/scripts/sweetalert.min.js"></script>
