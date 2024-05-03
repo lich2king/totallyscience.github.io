@@ -14,10 +14,10 @@
             const url = window.location.href;
 
             // Use a regular expression to extract the game name
-            const gameName = url.match(/class=([^&]+)/)[1].replace(/-/g, ' ');
+            const pageTitleNewName = url.match(/class=([^&]+)/)[1].replace(/-/g, ' ');
 
             // Update the document title
-            document.title = decodeURIComponent(gameName);
+            document.title = decodeURIComponent(pageTitleNewName + ' Unblocked');
     </script>
 </head>
 
