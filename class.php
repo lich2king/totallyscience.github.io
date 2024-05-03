@@ -10,14 +10,15 @@
 	<script src="assets/scripts/uv/uv.config.js" type="text/javascript"></script>
 	
 	<script>
-        // Extract the current URL
             const url = window.location.href;
 
-            // Use a regular expression to extract the game name
-            const pageTitleNewName = url.match(/class=([^&]+)/)[1].replace(/-/g, ' ');
+            const regex = /class=([^#&?]+)/;
+            const match = url.match(regex);
+            if (match && match[1]) {
+                const pageTitleNewName = match[1].replace(/-/g, ' ');
 
-            // Update the document title
-            document.title = decodeURIComponent(pageTitleNewName + ' Unblocked');
+                 document.title = decodeURIComponent(pageTitleNewName + ' Unblocked');
+            }
     </script>
 </head>
 
