@@ -199,7 +199,7 @@ window.addEventListener('load', async () => {
     if (!gameData) window.location.href = '../classes.php';
 
     // check if user is signed in
-    let response = await fetcher(`/auth/check`);
+    /*let response = await fetcher(`/auth/check`);
     let json;
 
     if (response.status == 200) {
@@ -220,7 +220,8 @@ window.addEventListener('load', async () => {
             }
         }, 1000 * 60 * 15);
     }
-    else {
+    else*/
+	{
         const pinBtn = document.querySelector('#pin');
         const likeBtn = document.querySelector('#like');
         const pinImg = pinBtn.firstChild;
@@ -241,7 +242,7 @@ window.addEventListener('load', async () => {
     const iframe = document.getElementById('iframe');
     // TODO: reduce # of getElementById calls for performance
 
-    suggestGames(gameData);
+    //suggestGames(gameData);
 
 	if (document && document.domain == "definitelyscience.com")
 	{
@@ -317,7 +318,7 @@ window.addEventListener('load', async () => {
     // setup action button events
     setupActionButtons();
 	
-	
+	suggestGames(gameData);
 	
 	
 });
