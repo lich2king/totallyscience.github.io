@@ -338,6 +338,19 @@ document.getElementById('fullscreen').addEventListener('click', () => {
         elem.webkitRequestFullscreen();
     } else if (elem.msRequestFullscreen) {
         elem.msRequestFullscreen();
+    } else {
+        // Fallback for iOS Safari
+        if (elem.webkitEnterFullscreen) { // Check for iOS Safari fullscreen API
+            elem.webkitEnterFullscreen();
+        } else {
+            // Fallback: Use CSS to simulate fullscreen (for older iOS Safari)
+            elem.style.position = 'fixed';
+            elem.style.top = '0';
+            elem.style.left = '0';
+            elem.style.width = '100%';
+            elem.style.height = '100%';
+            elem.style.zIndex = '1000';
+        }
     }
 });
 
