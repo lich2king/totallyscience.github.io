@@ -8,6 +8,17 @@
 
 	<script src="assets/scripts/uv/uv.bundle.js" type="text/javascript"></script>
 	<script src="assets/scripts/uv/uv.config.js" type="text/javascript"></script>
+	
+	<script>
+        // Extract the current URL
+            const url = window.location.href;
+
+            // Use a regular expression to extract the game name
+            const gameName = url.match(/class=([^&]+)/)[1].replace(/-/g, ' ');
+
+            // Update the document title
+            document.title = decodeURIComponent(gameName);
+    </script>
 </head>
 
 <body>
