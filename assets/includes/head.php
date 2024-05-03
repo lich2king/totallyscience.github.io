@@ -18,9 +18,9 @@ gtag('config', 'G-BW3SZSE47T');
 </script>
 <!-- End Google Tag Manager -->
 
-<title>Definitely Science - Free Online Unblocked Games</title>
+<title>Definitely Science</title>
 
-<meta property="og:title" content="Definitely Science - Free Online Unblocked Games">
+<meta property="og:title" content="Definitely Science">
 <meta property="og:site_name" content="Definitely Science">
 <meta property="og:url" content="https://definitelyscience.com">
 <meta property="og:description"
