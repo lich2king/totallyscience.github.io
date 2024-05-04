@@ -119,7 +119,7 @@ window.addEventListener('load', async() => {
         suggestGames();
     }
 
-    loadPartners();
+    //loadPartners();
 });
 
 async function loadGames() {
