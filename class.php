@@ -17,7 +17,7 @@
             if (match && match[1]) {
                 const pageTitleNewName = match[1].replace(/-/g, ' ');
 
-                 document.title = decodeURIComponent(pageTitleNewName + ' Unblocked');
+                 document.title = decodeURIComponent(pageTitleNewName + ' - Definitely Science');
             }
     </script>
 </head>
@@ -27,7 +27,7 @@
 
 	 <div class="TSad" style="margin: 0 auto; max-width: 800px; max-height: 125px; padding-top:70px">
 	  <a href="https://totallyscience.co">
-		<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Totally Science Unblocked" style="width: 100%; height: 100%;">
+		<img id="wideRandBanner" src="https://definitelyscience.com/assets/images/ad/wide-banner/6.jpg" alt="Definitely Science" style="width: 100%; height: 100%;">
 	  </a>
 	</div>
 
