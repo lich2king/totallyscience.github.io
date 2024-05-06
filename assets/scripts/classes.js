@@ -100,7 +100,7 @@ async function loadTopic() {
             //solves the problem of doing the category parameter on url
             document.getElementsByTagName(
                 'title'
-            )[0].innerHTML = `Totally Science - ${category.toUpperCase()} Games || Play ${category} Games on Totally Science`;
+            )[0].innerHTML = `${category} on Definitely Science`;
             await displayGames();
         }
 

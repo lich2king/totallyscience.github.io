@@ -4,7 +4,8 @@
 <head>
     <?php include "assets/includes/head.php" ?>
 
-    <title>Login - Totally Science - Free Online Unblocked Games</title>
+    <title>Login - Definitely Science</title>
+	<link rel="canonical" href="/" />
 
     <link rel='stylesheet' href='./assets/styles/account.css?v1'>
 </head>

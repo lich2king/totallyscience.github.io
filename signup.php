@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Signup - Totally Science - Free Online Unblocked Games</title>
+    <title>Signup - Definitely Science</title>
+	<link rel="canonical" href="/" />
+	
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='./assets/styles/account.css?v3'>
