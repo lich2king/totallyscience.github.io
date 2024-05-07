@@ -68,6 +68,14 @@ if (document && document.domain == "definitelyscience.com")
 	}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location
 		.pathname + "&ws=" + window.location.search);
 }
+else
+{
+	var meta = document.createElement('meta');
+	meta.name = "robots";
+	meta.content = "noindex, nofollow";
+
+	document.getElementsByTagName('head')[0].appendChild(meta);
+}
 
 </script>
 
