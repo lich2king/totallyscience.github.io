@@ -11,7 +11,7 @@
         <div class="nav-button" id="appsnav"><a href="apps.php">&#127922; Proxy</a></div>
         <!--<div class="nav-button" id="shopnav"><a href="shop.php">&#128722; Shop</a>-->
 		<!--<div class="nav-button" id="shopnav"><a href="https://freezenova.wordpress.com/" target="_blank">&#127918; Subscribe</a>-->
-		<div class="nav-button" id="shopnav"><a href="https://totallyscience.co">&#127918; Totally Science</a></div>
+		<div class="nav-button" id="shopnav"><a href="https://totallyscience.co" target="_blank">&#127918; Totally Science</a></div>
 
     </div>
 
