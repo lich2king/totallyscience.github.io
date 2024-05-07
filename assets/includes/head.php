@@ -32,7 +32,7 @@ gtag('config', 'G-BW3SZSE47T');
 <meta name="owner" content="Zach Yadegari">
 <meta name="designer" content="Zach Yadegari">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="robots" content="index, follow">
+
 <meta name="twitter:title" content="Definitely Science">
 <meta name="DC.format" content="text/html" scheme="DCTERMS.DCMIType">
 <meta name="DC.publisher" content="Definitely Science" scheme="DCTERMS.DCMIType">
