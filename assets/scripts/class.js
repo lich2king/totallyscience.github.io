@@ -244,7 +244,8 @@ window.addEventListener('load', async () => {
 
     //suggestGames(gameData);
 
-	if (document && document.domain == "definitelyscience.com")
+	//if (document && document.domain == "definitelyscience.com")
+	if (document)
 	{
 		iframe.src = gameData.iframe_url;
 	}
