@@ -244,7 +244,15 @@ window.addEventListener('load', async () => {
 
     //suggestGames(gameData);
 	
-	const iframeUrl = new URL(gameData.iframe_url);
+	var iframeUrl = "";
+	try {
+		if (gameData && gameData.iframe_url) {
+			iframeUrl = new URL(gameData.iframe_url);
+		}
+	} catch (error) {
+		console.log("Error parsing iframe URL: ", error);
+	}
+	
 	const currentDomain = document.domain;
 
 	console.log("Load game");
