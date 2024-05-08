@@ -243,9 +243,12 @@ window.addEventListener('load', async () => {
     // TODO: reduce # of getElementById calls for performance
 
     //suggestGames(gameData);
+	
+	const iframeUrl = new URL(gameData.iframe_url);
+	const currentDomain = document.domain;
 
 	//if (document && document.domain == "definitelyscience.com")
-	if (document)
+	if (document && currentDomain == iframeUrl.hostname)
 	{
 		iframe.src = gameData.iframe_url;
 	}
