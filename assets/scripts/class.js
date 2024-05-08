@@ -246,7 +246,7 @@ window.addEventListener('load', async () => {
 	
 	var iframeUrl = "";
 	try {
-		if (gameData && gameData.iframe_url) {
+		if (gameData && gameData.iframe_url && gameData.iframe_url.startsWith('https://')) {
 			iframeUrl = new URL(gameData.iframe_url);
 		}
 	} catch (error) {
