@@ -247,7 +247,7 @@ window.addEventListener('load', async () => {
 	var iframeUrl = "";
 	try {
 		if (gameData && gameData.iframe_url && gameData.iframe_url.startsWith('https://')) {
-			iframeUrl = new URL(gameData.iframe_url);
+			iframeUrl = new URL(gameData.iframe_url).hostname;
 		}
 	} catch (error) {
 		console.log("Error parsing iframe URL: ", gameData.iframe_url);
@@ -257,7 +257,7 @@ window.addEventListener('load', async () => {
 
 	console.log("Load game");
 	//if (document && document.domain == "definitelyscience.com")
-	if (document && currentDomain == iframeUrl.hostname)
+	if (document && currentDomain == iframeUrl)
 	{
 		console.log("Same domain");
 		iframe.src = gameData.iframe_url;
