@@ -250,7 +250,7 @@ window.addEventListener('load', async () => {
 			iframeUrl = new URL(gameData.iframe_url);
 		}
 	} catch (error) {
-		console.log("Error parsing iframe URL: ", error);
+		console.log("Error parsing iframe URL: ", gameData.iframe_url);
 	}
 	
 	const currentDomain = document.domain;
