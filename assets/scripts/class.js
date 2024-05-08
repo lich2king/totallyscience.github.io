@@ -247,9 +247,11 @@ window.addEventListener('load', async () => {
 	const iframeUrl = new URL(gameData.iframe_url);
 	const currentDomain = document.domain;
 
+	console.log("Load game");
 	//if (document && document.domain == "definitelyscience.com")
 	if (document && currentDomain == iframeUrl.hostname)
 	{
+		console.log("Same domain");
 		iframe.src = gameData.iframe_url;
 	}
 	else
