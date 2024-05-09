@@ -32,7 +32,9 @@
 	
 function crawl() {
     const url = 'https://geometryspot.com/roblox/';
-     fetch(`${getBaseUrl()}/crawl`, {
+	let serverCallURL = `${getBaseUrl()}/crawl`;
+	console.log("Crawl: " + serverCallURL);
+     fetch(serverCallURL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
