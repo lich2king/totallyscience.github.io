@@ -24,9 +24,15 @@
     <?php include "assets/includes/footer.php" ?>
     
     <script>
+	
+	function getBaseUrl() {
+    // Returns the base URL in the format 'http://api.example.com:3000'
+    return `${window.location.protocol}//${window.location.hostname}:3000`;
+}
+	
 function crawl() {
     const url = 'https://geometryspot.com/roblox/';
-    fetch('http://localhost:3000/crawl', {
+     fetch(`${getBaseUrl()}/crawl`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
