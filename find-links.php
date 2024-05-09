@@ -22,42 +22,31 @@
     <?php include "assets/includes/footer.php" ?>
     
     <script>
-        
-		// Function to fetch the HTML content of the page
-async function fetchPage(url) {
-    try {
-        const response = await fetch(url);
-        return await response.text();
-    } catch (error) {
-        console.error("Failed to fetch page: ", error);
-    }
+function crawl() {
+    const url = document.getElementById('urlInput').value;
+    fetch('http://localhost:3000/crawl', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '<h2>Links Found:</h2>';
+        data.links.forEach(link => {
+            const elem = document.createElement('div');
+            elem.textContent = link;
+            resultsDiv.appendChild(elem);
+        });
+    })
+    .catch(error => console.error('Error:', error));
 }
+</script>
 
-// Function to extract URLs containing 'roblox'
-function extractRobloxLinks(html) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-    const links = Array.from(doc.querySelectorAll('a')).map(link => link.href);
-    const robloxLinks = links.filter(link => link.includes('roblox'));
-    return robloxLinks;
-}
 
-// Main function to run the crawler
-async function crawlPage(url) {
-    const html = await fetchPage(url);
-    if (html) {
-        const robloxLinks = extractRobloxLinks(html);
-        console.log("Found Roblox links: ", robloxLinks);
-    }
-}
 
-// URL to crawl
-const targetUrl = "https://geometryspot.com/roblox/";
-
-// Start crawling
-crawlPage(targetUrl);
-		
-    </script>
 </body>
 
 </html>
