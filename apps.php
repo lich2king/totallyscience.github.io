@@ -178,10 +178,11 @@
 
     <div id="apps"></div>
 	
-	<div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
-        <h1>Looking for links</h1>
-    </div>
-	<div id="results"></div>
+	<div style="width: 100vw; display: flex; align-items: center; justify-content: center; color: white;">
+    <h1>Looking for links</h1>
+</div>
+<div id="results" style="color: white;"></div>
+
 	
 	
 	
