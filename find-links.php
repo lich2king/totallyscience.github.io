@@ -47,9 +47,13 @@ function crawl() {
         const resultsDiv = document.getElementById('results');
         resultsDiv.innerHTML = '<h2>Links Found:</h2>';
         data.links.forEach(link => {
-            const elem = document.createElement('div');
-            elem.textContent = link;
-            resultsDiv.appendChild(elem);
+            const anchor = document.createElement('a');
+            anchor.href = link; // Set the URL as the href attribute of the anchor tag
+            anchor.textContent = link; // Use the link itself as the text
+            anchor.target = '_blank'; // Optional: Open links in a new tab/window
+            const div = document.createElement('div'); // You can still wrap the anchor in a div if needed
+            div.appendChild(anchor);
+            resultsDiv.appendChild(div);
         });
     })
     .catch(error => console.error('Error:', error));
