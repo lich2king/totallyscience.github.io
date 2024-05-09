@@ -18,12 +18,14 @@
     <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
         <h1>Looking for links</h1>
     </div>
+	<div id="results"></div>
+	
     <div style="height: 35vh"></div>
     <?php include "assets/includes/footer.php" ?>
     
     <script>
 function crawl() {
-    const url = document.getElementById('urlInput').value;
+    const url = 'https://geometryspot.com/roblox/';
     fetch('http://localhost:3000/crawl', {
         method: 'POST',
         headers: {
@@ -43,6 +45,11 @@ function crawl() {
     })
     .catch(error => console.error('Error:', error));
 }
+
+window.addEventListener('load', function() {
+    crawl(); // This will call crawl() when the page is fully loaded.
+});
+
 </script>
 
 
