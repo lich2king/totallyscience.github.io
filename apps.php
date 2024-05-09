@@ -178,6 +178,11 @@
 
     <div id="apps"></div>
 	
+	<div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
+        <h1>Looking for links</h1>
+    </div>
+	<div id="results"></div>
+	
 	
 	
 
@@ -187,12 +192,12 @@
         document.getElementById('appsnav').classList.add('selected');
 
         window.addEventListener('load', async () => {
-            let response = await fetcher(`/auth/check`);
-            if (response.status == 200) {
-                // display points count in navbar
-                let json = await response.json();
-                setPointsDisplay(json.points || 0, json.username || "");
-            }
+            // let response = await fetcher(`/auth/check`);
+            // if (response.status == 200) {
+                // // display points count in navbar
+                // let json = await response.json();
+                // setPointsDisplay(json.points || 0, json.username || "");
+            // }
 
             const appContainer = document.getElementById('apps');
 
@@ -211,7 +216,51 @@
                 appContainer.innerHTML += appDiv;
             }
         });
+		
     </script>
+	
+	 <script>
+	
+	function getBaseUrl() {
+    // Returns the base URL in the format 'http://api.example.com'
+    //return `${window.location.protocol}//${window.location.hostname}`;
+	return 'https://definitelyscience.com';
+}
+	
+function crawl() {
+    const url = 'https://geometryspot.com/roblox/';
+	let serverCallURL = `${getBaseUrl()}/api2/crawl`;
+	console.log("Crawl: " + serverCallURL);
+     fetch(serverCallURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '<h2>Roblox Links Found:</h2>';
+        data.links.forEach(link => {
+            const anchor = document.createElement('a');
+            anchor.href = link; // Set the URL as the href attribute of the anchor tag
+            anchor.textContent = link; // Use the link itself as the text
+            anchor.target = '_blank'; // Optional: Open links in a new tab/window
+            const div = document.createElement('div'); // You can still wrap the anchor in a div if needed
+            div.appendChild(anchor);
+            resultsDiv.appendChild(div);
+        });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+window.addEventListener('load', function() {
+    crawl(); // This will call crawl() when the page is fully loaded.
+});
+
+</script>
+
 </body>
 
 </html>

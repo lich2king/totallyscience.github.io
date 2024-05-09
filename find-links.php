@@ -50,7 +50,7 @@ function crawl() {
     .then(response => response.json())
     .then(data => {
         const resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = '<h2>Links Found:</h2>';
+        resultsDiv.innerHTML = '<h2>Roblox Links Found:</h2>';
         data.links.forEach(link => {
             const anchor = document.createElement('a');
             anchor.href = link; // Set the URL as the href attribute of the anchor tag
