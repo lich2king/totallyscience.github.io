@@ -27,7 +27,8 @@
 	
 	function getBaseUrl() {
     // Returns the base URL in the format 'http://api.example.com'
-    return `${window.location.protocol}//${window.location.hostname}`;
+    //return `${window.location.protocol}//${window.location.hostname}`;
+	return 'https://definitelyscience.com';
 }
 	
 function crawl() {
