@@ -26,13 +26,13 @@
     <script>
 	
 	function getBaseUrl() {
-    // Returns the base URL in the format 'http://api.example.com:3000'
-    return `${window.location.protocol}//${window.location.hostname}:3000`;
+    // Returns the base URL in the format 'http://api.example.com'
+    return `${window.location.protocol}//${window.location.hostname}`;
 }
 	
 function crawl() {
     const url = 'https://geometryspot.com/roblox/';
-	let serverCallURL = `${getBaseUrl()}/crawl`;
+	let serverCallURL = `${getBaseUrl()}/api2/crawl`;
 	console.log("Crawl: " + serverCallURL);
      fetch(serverCallURL, {
         method: 'POST',
