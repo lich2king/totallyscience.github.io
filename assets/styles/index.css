@@ -7,6 +7,12 @@
     flex-direction: column;
 }
 
+@media (max-width: 675px) {
+    #pointsbar {
+        margin-top: 20px;
+    }
+}
+
 #pointsbar .timerText {
     margin-top: 5px;
     margin-left: 4%;
