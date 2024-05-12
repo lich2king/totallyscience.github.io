@@ -7,6 +7,12 @@
     flex-direction: column;
 }
 
+@media (max-width: 675px) {
+    #pointsbar {
+        margin-top: 20px;
+    }
+}
+
 #pointsbar .timerText {
     margin-top: 5px;
     margin-left: 4%;
@@ -325,6 +331,21 @@
     font-size: 1vw;
     font-family: 'Rubik', sans-serif;
     background-color: var(--accent-color);
+}
+
+@media (max-width: 675px) {
+    #extraCategories {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #extraCategory {
+        height: auto;
+    }
+
+    #extraCategory p{
+        font-size: 2.5vw;
+    }
 }
 
 #noSearch {
