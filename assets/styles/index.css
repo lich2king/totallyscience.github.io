@@ -333,6 +333,21 @@
     background-color: var(--accent-color);
 }
 
+@media (max-width: 675px) {
+    #extraCategories {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #extraCategory {
+        height: auto;
+    }
+
+    #extraCategory p{
+        font-size: 2.5vw;
+    }
+}
+
 #noSearch {
     text-align: center;
     margin-bottom: 10vh;
