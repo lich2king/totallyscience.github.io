@@ -20,6 +20,14 @@ gtag('config', 'G-BW3SZSE47T');
 
 <title>Definitely Science</title>
 
+<script>
+	  if (window.location.hostname.startsWith('www.')) {
+		var nonWwwDomain = window.location.hostname.slice(4);
+		var newUrl = window.location.protocol + '//' + nonWwwDomain + window.location.pathname + window.location.search + window.location.hash;
+		window.location.replace(newUrl);
+	  }
+	</script>
+
 <meta property="og:title" content="Definitely Science">
 <meta property="og:site_name" content="Definitely Science">
 <meta property="og:url" content="https://definitelyscience.com">
