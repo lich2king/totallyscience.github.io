@@ -5,7 +5,7 @@
     <?php include "assets/includes/head.php" ?>
 
     <title>Login - Definitely Science</title>
-	<link rel="canonical" href="/" />
+	<link rel="canonical" href="https://definitelyscience.com/" />
 
     <link rel='stylesheet' href='./assets/styles/account.css?v1'>
 </head>

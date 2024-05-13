@@ -3,7 +3,7 @@
 
 <head>
     <title>Signup - Definitely Science</title>
-	<link rel="canonical" href="/" />
+	<link rel="canonical" href="https://definitelyscience.com/" />
 	
     <?php include "assets/includes/head.php" ?>
 

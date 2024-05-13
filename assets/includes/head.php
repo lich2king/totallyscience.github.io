@@ -68,6 +68,25 @@ gtag('config', 'G-BW3SZSE47T');
 <!-- WG Universal adCode -->
 <script type="text/javascript" async>
 
+function ensureCanonical(url) {
+    // Find any existing canonical link element
+    var canonicalLink = document.querySelector('link[rel="canonical"]');
+
+    // Check if a canonical link exists
+    if (canonicalLink) {
+        // Update the href attribute if it already exists
+        canonicalLink.href = url;
+    } else {
+        // Create a new link element for canonical
+        canonicalLink = document.createElement('link');
+        canonicalLink.rel = "canonical";
+        canonicalLink.href = url;
+
+        // Append the new canonical link to the head of the document
+        document.getElementsByTagName('head')[0].appendChild(canonicalLink);
+    }
+}
+
 if (document && document.domain == "definitelyscience.com")
 {
 	! function(e, t) {
@@ -78,11 +97,7 @@ if (document && document.domain == "definitelyscience.com")
 }
 else
 {
-	var meta = document.createElement('meta');
-	meta.name = "robots";
-	meta.content = "noindex, nofollow";
-
-	document.getElementsByTagName('head')[0].appendChild(meta);
+	ensureCanonical('https://definitelyscience.com/');
 }
 
 </script>

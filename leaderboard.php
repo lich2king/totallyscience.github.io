@@ -3,7 +3,7 @@
 
 <head>
     <title>Leaderboard - Definitely Science - Free Online Unblocked Games</title>
-	<link rel="canonical" href="/" />
+	<link rel="canonical" href="https://definitelyscience.com/" />
 	
     <?php include "assets/includes/head.php" ?>
 
