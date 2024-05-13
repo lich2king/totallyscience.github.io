@@ -171,9 +171,7 @@
         browse the internet without censorship.</a>-->
 	<a class="tn_banner" target="_blank" href="https://discord.com/invite/6kTskTSTFM">Join us on Definitely Science Discord server.</a><br>
 	<a class="tn_banner" target="_blank" href="https://random-proxy.com">More apps on alternative domains: Random-Proxy.com</a><br>
-	<a class="tn_banner" target="_blank" href="https://classroom.community/apps.php">Classroom.Community</a><br>
-	<a class="tn_banner" target="_blank" href="https://classroomcommunity.com/app.php?app=Google%20Search">Google Search</a><br>
-	<a class="tn_banner" target="_blank" href="https://classroomcommunity.com/app.php?app=Youtube">Youtube</a>
+	<a class="tn_banner" target="_blank" href="https://classroomcommunity.com/">Classroom.Community</a><br>
 	
 
     <div id="apps"></div>
