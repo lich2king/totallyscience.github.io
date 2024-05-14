@@ -102,7 +102,7 @@ if (document && document.domain == "definitelyscience.com")
 }
 else
 {
-	ensureCanonical('https://definitelyscience.com/' + getPathFromUrl(window.location.href));
+	ensureCanonical('https://definitelyscience.com' + getPathFromUrl(window.location.href));
 }
 
 </script>
