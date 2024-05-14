@@ -87,6 +87,11 @@ function ensureCanonical(url) {
     }
 }
 
+function getPathFromUrl(url) {
+    const parsedUrl = new URL(url);
+    return parsedUrl.pathname;
+}
+
 if (document && document.domain == "definitelyscience.com")
 {
 	! function(e, t) {
@@ -97,7 +102,7 @@ if (document && document.domain == "definitelyscience.com")
 }
 else
 {
-	ensureCanonical('https://definitelyscience.com/');
+	ensureCanonical('https://definitelyscience.com/' + getPathFromUrl(window.location.href));
 }
 
 </script>
