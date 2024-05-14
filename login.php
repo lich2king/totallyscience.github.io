@@ -5,9 +5,13 @@
     <?php include "assets/includes/head.php" ?>
 
     <title>Login - Definitely Science</title>
-	<link rel="canonical" href="https://definitelyscience.com/" />
+	<!--<link rel="canonical" href="https://definitelyscience.com/" />-->
 
     <link rel='stylesheet' href='./assets/styles/account.css?v1'>
+	
+	<script type="text/javascript">
+	  window.location.href = '/';
+	</script>
 </head>
 
 <body>

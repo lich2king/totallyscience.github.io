@@ -3,11 +3,15 @@
 
 <head>
     <title>Signup - Definitely Science</title>
-	<link rel="canonical" href="https://definitelyscience.com/" />
+	<!--<link rel="canonical" href="https://definitelyscience.com/" />-->
 	
     <?php include "assets/includes/head.php" ?>
 
     <link rel='stylesheet' href='./assets/styles/account.css?v3'>
+	
+	<script type="text/javascript">
+	  window.location.href = '/';
+	</script>
 </head>
 
 <body>
