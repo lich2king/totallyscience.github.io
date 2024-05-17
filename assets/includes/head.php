@@ -92,6 +92,13 @@ function getPathFromUrl(url) {
     return parsedUrl.pathname;
 }
 
+function addMetaNoIndexNoFollow() {
+    const meta = document.createElement('meta');
+    meta.name = 'robots';
+    meta.content = 'noindex, nofollow';
+    document.head.appendChild(meta);
+}
+
 if (document && document.domain == "definitelyscience.com")
 {
 	! function(e, t) {
@@ -103,6 +110,7 @@ if (document && document.domain == "definitelyscience.com")
 else
 {
 	ensureCanonical('https://definitelyscience.com' + getPathFromUrl(window.location.href));
+	addMetaNoIndexNoFollow();
 }
 
 </script>
