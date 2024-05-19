@@ -115,6 +115,12 @@ else
 
 </script>
 
+<script type="text/javascript">
+    if (window.location.protocol === 'http:') {
+        window.location.href = window.location.href.replace('http:', 'https:');
+    }
+</script>
+
 <script src="../assets/scripts/sweetalert.min.js"></script>
 
 <!-- Lazy loading -->
