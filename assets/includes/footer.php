@@ -6,6 +6,7 @@
             <p><a href="https://discord.com/invite/6kTskTSTFM" target="_blank" rel="nofollow">Join our Discord</a></p>
             <p><a href="https://www.tiktok.com/@totallyscience.co" target="_blank">Follow our Tik Tok</a></p>
 			<p><a href="https://www.youtube.com/@TotallyScienceUnblocked" target="_blank">Follow our Youtube</a></p>
+			<p><a href="https://www.reddit.com/r/TotallyScience/" target="_blank">Follow our Reddit</a></p>
 <!-- 			<p><a href="leaderboard.php">&#127942; Leaderboard</a></p> -->
 			<p><a href="https://classroomcommunity.com/">Classroom Community</a></p>
 			<p><a href="https://totallyscience.co">Totally Science</a></p>
