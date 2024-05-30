@@ -44,7 +44,7 @@
         
         <script>
             function Go() {
-                let url = document.location.hostname + "/apps.php";
+                let url = document.location.hostname + "/";
                 maskedWindow = window.open();
 
                 const doc = maskedWindow.document;
