@@ -83,10 +83,12 @@ window.addEventListener('load', async() => {
         featureEle.children[1].onclick = () => { window.open(feature.url, '_self') };
         featureEle.style.backgroundImage = `url(${feature.image})`;
     }
+	
+	loadPartners();
 
     loadGames();
 	
-	loadPartners();
+	
 
     // check if user is authenticated
     let response = await fetcher(`/auth/check`);
