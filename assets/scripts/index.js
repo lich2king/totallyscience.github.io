@@ -85,6 +85,8 @@ window.addEventListener('load', async() => {
     }
 
     loadGames();
+	
+	loadPartners();
 
     // check if user is authenticated
     let response = await fetcher(`/auth/check`);
@@ -119,7 +121,7 @@ window.addEventListener('load', async() => {
         suggestGames();
     }
 
-    loadPartners();
+    
 });
 
 async function loadGames() {
