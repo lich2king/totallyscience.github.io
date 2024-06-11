@@ -163,7 +163,7 @@ async function loadGames() {
     }
 
     loadPopularGames();
-    loadLikedGames();
+    //loadLikedGames();
     addArrowListeners();
     findLazyImages();
 }
