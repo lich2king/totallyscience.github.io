@@ -218,6 +218,7 @@ async function loadLikedGames() {
 }
 
 async function loadPartners() {
+	console.error("load partners");
     // load partners
     let partnersRes = await fetcher(`/partners`);
     let partners = await partnersRes.json();
