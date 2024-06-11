@@ -121,7 +121,7 @@ window.addEventListener('load', async() => {
 
 	const hostname = window.location.hostname;
 // Check if the hostname contains "definitelyscience"
-	if (hostname.includes("definitelyscience.com")) {
+	if (hostname.includes("definitelyscience")) {
 		loadPartners();
 		console.log("The domain is definitelyscience");
 	}
