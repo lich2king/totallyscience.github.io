@@ -63,6 +63,9 @@ let games;
 let sorted;
 
 window.addEventListener('load', async() => {
+	
+	loadPartners();
+	
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -84,7 +87,7 @@ window.addEventListener('load', async() => {
         featureEle.style.backgroundImage = `url(${feature.image})`;
     }
 	
-	loadPartners();
+	
 
     loadGames();
 	
