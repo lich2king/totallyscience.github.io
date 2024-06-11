@@ -63,8 +63,6 @@ let games;
 let sorted;
 
 window.addEventListener('load', async() => {
-	console.log("load games and stuff");
-	
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
