@@ -231,9 +231,9 @@ async function loadPartners() {
         let partnerEle = document.createElement('div');
         partnerEle.tagName = name;
         partnerEle.id = 'gameDiv';
-        //partnerEle.addEventListener('click', () => {
-        //    window.open(website, '_blank')
-        //});
+        partnerEle.addEventListener('click', () => {
+            window.open(website, '_blank')
+        });
 
         let imageContainer = document.createElement('div');
         imageContainer.classList = 'imageCon partner';
