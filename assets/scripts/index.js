@@ -87,37 +87,37 @@ window.addEventListener('load', async() => {
     loadGames();
 
     // check if user is authenticated
-    let response = await fetcher(`/auth/check`);
+    // let response = await fetcher(`/auth/check`);
 
-    if (response.status == 401 || response.status == 403) {
-        token = false;
+    // if (response.status == 401 || response.status == 403) {
+        // token = false;
 
-        // user is not signed into an account
-        //document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
-		document.getElementById('timerText').innerHTML = '';
+        // // user is not signed into an account
+        // //document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
+		// document.getElementById('timerText').innerHTML = '';
 
-        // suggest games without account information
-        const suggestionEle = document.getElementById('scisuggests');
-        // clear suggested games placeholders
-        suggestionEle.textContent = '';
-        // display 6 random games as suggestions
-        for (let x = 0; x < 6; x++) {
-            let randGame = randomProperty(games);
-            let gameBtn = createGameButton(randGame, 'suggested', false);
-            suggestionEle.appendChild(gameBtn);
-        }
-    } else {
-        // display points count in navbar
-        let json = await response.json();
-        // setPointsDisplay(json.points || 0, json.username || "");
+        // // suggest games without account information
+        // const suggestionEle = document.getElementById('scisuggests');
+        // // clear suggested games placeholders
+        // suggestionEle.textContent = '';
+        // // display 6 random games as suggestions
+        // for (let x = 0; x < 6; x++) {
+            // let randGame = randomProperty(games);
+            // let gameBtn = createGameButton(randGame, 'suggested', false);
+            // suggestionEle.appendChild(gameBtn);
+        // }
+    // } else {
+        // // display points count in navbar
+        // let json = await response.json();
+        // // setPointsDisplay(json.points || 0, json.username || "");
 
-        token = true;
+        // token = true;
 
-        loadRewards();
+        // loadRewards();
 
-        // suggest games with account information
-        suggestGames();
-    }
+        // // suggest games with account information
+        // suggestGames();
+    // }
 
     loadPartners();
 });
@@ -161,7 +161,7 @@ async function loadGames() {
     }
 
     loadPopularGames();
-    loadLikedGames();
+    //loadLikedGames();
     addArrowListeners();
     findLazyImages();
 }
