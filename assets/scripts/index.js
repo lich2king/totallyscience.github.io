@@ -90,22 +90,22 @@ window.addEventListener('load', async() => {
     // let response = await fetcher(`/auth/check`);
 
     // if (response.status == 401 || response.status == 403) {
-        // token = false;
+         token = false;
 
         // // user is not signed into an account
         // //document.getElementById('timerText').innerHTML = '<a href="/signup.php">Sign up</a> to collect your daily reward!';
-		// document.getElementById('timerText').innerHTML = '';
+		 document.getElementById('timerText').innerHTML = '';
 
-        // // suggest games without account information
-        // const suggestionEle = document.getElementById('scisuggests');
-        // // clear suggested games placeholders
-        // suggestionEle.textContent = '';
-        // // display 6 random games as suggestions
-        // for (let x = 0; x < 6; x++) {
-            // let randGame = randomProperty(games);
-            // let gameBtn = createGameButton(randGame, 'suggested', false);
-            // suggestionEle.appendChild(gameBtn);
-        // }
+         // suggest games without account information
+         const suggestionEle = document.getElementById('scisuggests');
+         // clear suggested games placeholders
+         suggestionEle.textContent = '';
+         // display 6 random games as suggestions
+         for (let x = 0; x < 6; x++) {
+             let randGame = randomProperty(games);
+             let gameBtn = createGameButton(randGame, 'suggested', false);
+             suggestionEle.appendChild(gameBtn);
+         }
     // } else {
         // // display points count in navbar
         // let json = await response.json();
@@ -116,7 +116,7 @@ window.addEventListener('load', async() => {
         // loadRewards();
 
         // // suggest games with account information
-        // suggestGames();
+         //suggestGames();
     // }
 
 	const hostname = window.location.hostname;
