@@ -63,9 +63,6 @@ let games;
 let sorted;
 
 window.addEventListener('load', async() => {
-	
-	loadPartners();
-	
     // update underline link in navbar
     document.getElementById('gamesnav').classList.add('selected');
 
@@ -86,12 +83,8 @@ window.addEventListener('load', async() => {
         featureEle.children[1].onclick = () => { window.open(feature.url, '_self') };
         featureEle.style.backgroundImage = `url(${feature.image})`;
     }
-	
-	
 
     loadGames();
-	
-	
 
     // check if user is authenticated
     let response = await fetcher(`/auth/check`);
@@ -126,7 +119,7 @@ window.addEventListener('load', async() => {
         suggestGames();
     }
 
-    
+    loadPartners();
 });
 
 async function loadGames() {
@@ -168,7 +161,7 @@ async function loadGames() {
     }
 
     loadPopularGames();
-    //loadLikedGames();
+    loadLikedGames();
     addArrowListeners();
     findLazyImages();
 }
@@ -225,14 +218,9 @@ async function loadLikedGames() {
 }
 
 async function loadPartners() {
-	
-	console.log("load partners");
-	
     // load partners
     let partnersRes = await fetcher(`/partners`);
     let partners = await partnersRes.json();
-
-	
 
     for (let x = 0; x < partners.length; x++) {
         const backgroundImg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='100%25' height='100%25' fill='%23340060'/%3E%3C/svg%3E`;
@@ -266,7 +254,6 @@ async function loadPartners() {
         partnerEle.appendChild(nameEle);
 
         document.getElementById(`PartnersCon`).appendChild(partnerEle);
-		console.log("add partner " + name);
     }
     findLazyImages();
 }
