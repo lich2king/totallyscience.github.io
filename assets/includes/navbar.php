@@ -7,7 +7,7 @@
     <div id="leftbar">
         <!--<div class="nav-button" id="gamesnav"><a href="/">&#127918; Games</a></div>-->
 		<div class="nav-button" id="gamesnav"><a href="https://definitelyscience.com">&#127918; Games</a></div>
-        <div class="nav-button" id="leaderboardnav"><a href="https://unblocked-games.s3.amazonaws.com/index.html" target="_blank">&#127942; FreezeNova</a></div>
+        <div class="nav-button" id="leaderboardnav"><a href="https://www.onlinegames.io" target="_blank">&#127942; Online Games</a></div>
         <div class="nav-button" id="appsnav"><a href="apps.php">&#127922; Proxy</a></div>
         <!--<div class="nav-button" id="shopnav"><a href="shop.php">&#128722; Shop</a>-->
 		<!--<div class="nav-button" id="shopnav"><a href="https://freezenova.wordpress.com/" target="_blank">&#127918; Subscribe</a>-->
